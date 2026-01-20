@@ -1,20 +1,37 @@
-<script setup>
-const { data, pending, error } = await useFetch("/api/surahs");
-console.log(data);
-</script>
 <template>
   <v-container>
-    <main>
-      <h1>Qur’an Surahs</h1>
+    <v-row dense>
+      <v-col v-for="(surah, i) in data" :key="surah.id" cols="12" sm="6" md="4" lg="3" xl="2">
+        <v-card outlined hover @click="goto(i + 1)">
+          <v-card-item>
+            <v-card-title>
+              <div class="d-flex justify-end">
+                <span class="font-weight-black">{{ surah.surahNameArabicLong }}</span>
+              </div>
+            </v-card-title>
 
-      <p v-if="pending">Loading Surahs...</p>
-      <p v-else-if="error">Failed to load data</p>
-
-      <ul v-else>
-        <li v-for="surah in data" :key="surah.id">
-          {{ surah.surahName }}
-        </li>
-      </ul>
-    </main>
+            <v-card-subtitle>
+              Quran Aya {{ i + 1 }}
+            </v-card-subtitle>
+          </v-card-item>
+          <v-card-text class="bg-surface-light pt-4">
+            <div>
+              English Name:({{ surah?.surahNameTranslation }})
+            </div>
+            <div>
+              Revelation Place: {{ surah?.revelationPlace }}
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
+
+<script setup>
+const router = useRouter();
+const { data, pending, error } = await useFetch("/api/surahs");
+const goto = (path) => {
+  router.push("surah/" + path);
+};
+</script>

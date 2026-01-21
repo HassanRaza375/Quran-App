@@ -3,11 +3,19 @@
     <v-row dense>
       <!-- Translation Selector -->
       <v-col cols="12">
-        <v-sheet elevation="1" rounded="lg" class="pa-3 mb-6 d-flex justify-end ga-2 translation-bar">
-          <v-chip v-for="item in Object.keys(typeObject)" :key="item"
+        <v-sheet
+          elevation="1"
+          rounded="lg"
+          class="pa-3 mb-6 d-flex justify-end ga-2 translation-bar"
+        >
+          <v-chip
+            v-for="item in translations"
+            :key="item"
             :color="selectedType === item ? 'teal-darken-2' : 'grey-3'"
-            :variant="selectedType === item ? 'flat' : 'outlined'" class="text-uppercase font-weight-medium"
-            @click="setTranslation(item)">
+            :variant="selectedType === item ? 'flat' : 'outlined'"
+            class="text-uppercase font-weight-medium"
+            @click="setTranslation(item)"
+          >
             {{ item }}
           </v-chip>
         </v-sheet>
@@ -25,65 +33,76 @@
             ·
             <span><strong>Ayahs:</strong> {{ data?.totalAyah }}</span>
             ·
-            <span><strong>Revelation:</strong> {{ data?.revelationPlace }}</span>
+            <span
+              ><strong>Revelation:</strong> {{ data?.revelationPlace }}</span
+            >
           </div>
         </v-sheet>
       </v-col>
 
       <!-- Verses -->
       <v-col cols="12">
-        <v-sheet elevation="1" rounded="lg" class="pa-6 verses-sheet">
-          <transition-group name="fade" tag="div">
-            <p v-for="(item, index) in verses" :key="index" class="verse-text text-end mb-6">
-              {{ item }}
-            </p>
-          </transition-group>
+        <v-sheet v-if="pending" class="pa-6">
+          <v-skeleton-loader type="heading, paragraph, paragraph, paragraph" />
+        </v-sheet>
+
+        <v-sheet v-else elevation="1" rounded="lg" class="pa-6 verses-sheet">
+          <p
+            v-for="(item, index) in verses"
+            :key="index"
+            align="end"
+            class="verse-text"
+          >
+            {{ item }}
+          </p>
         </v-sheet>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
-
 <script setup>
 definePageMeta({
   layout: "reader",
 });
-const route = useRoute()
-const chapterNo = route.params.id
-const { data, pending, error } = await useFetch('/api/chapters', {
+const route = useRoute();
+const chapterNo = route.params.id;
+const { data, pending, error } = useFetch("/api/chapters", {
   query: {
-    chapterNo
-  }
-})
-const selectedType = ref('arabic1')
+    chapterNo,
+  },
+  key: `chapter-${chapterNo}`, // cache per surah
+  lazy: true, // don't block navigation
+  cache: true,
+});
+const translations = ref(["arabic1", "arabic2", "english", "bengali", "urdu"]);
+const selectedType = ref("arabic1");
 const typeObject = computed(() => ({
   arabic1: data.value?.arabic1 ?? [],
   arabic2: data.value?.arabic2 ?? [],
   english: data.value?.english ?? [],
   bengali: data.value?.bengali ?? [],
   urdu: data.value?.urdu ?? [],
-}))
+}));
 
 const verses = computed(() => {
-  return typeObject.value[selectedType.value]
-})
+  return typeObject.value[selectedType.value];
+});
 const setTranslation = (type) => {
-  selectedType.value = type
-}
-
+  selectedType.value = type;
+};
 </script>
 <style scoped>
 /* Arabic Surah Title */
 .arabic-title {
-  font-family: 'Amiri', 'Scheherazade New', serif;
+  font-family: "Amiri", "Scheherazade New", serif;
   font-size: 2.5rem;
   line-height: 1.4;
 }
 
 /* Verse styling */
 .verse-text {
-  font-family: 'Amiri', 'Scheherazade New', serif;
+  font-family: "Amiri", "Scheherazade New", serif;
   font-size: 2rem;
   line-height: 2.8rem;
   color: #1b1b1b;
@@ -91,20 +110,9 @@ const setTranslation = (type) => {
 
 /* Non-Arabic translations */
 .translation {
-  font-family: 'Inter', 'Roboto', sans-serif;
+  font-family: "Inter", "Roboto", sans-serif;
   font-size: 1.05rem;
   line-height: 1.9rem;
   color: #424242;
-}
-
-/* Fade transition when switching translations */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.25s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

@@ -1,14 +1,16 @@
 <template>
   <v-app-bar app flat>
-    <v-btn icon @click="goto('/')">
-      <v-icon>mdi-arrow-left</v-icon>
-    </v-btn>
-
+    <NuxtLink to="/">
+      <v-btn icon>
+        <v-icon>mdi-arrow-left</v-icon>
+      </v-btn>
+    </NuxtLink>
     <v-app-bar-title>Reader</v-app-bar-title>
   </v-app-bar>
 </template>
-<script setup>
-const goto = (path) => {
-  router.push(path)
-}
-</script>
+<style scoped>
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+</style>

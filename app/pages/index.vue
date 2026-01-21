@@ -1,5 +1,11 @@
 <template>
   <v-container>
+    <v-row>
+      <v-col cols="12">
+        <v-text-field v-model="searchText" append-inner-icon="mdi-magnify" label="Search Surah" variant="outlined"
+          clearable hide-details />
+      </v-col>
+    </v-row>
     <v-row dense>
       <!-- Loading skeleton -->
       <template v-if="pending">
@@ -9,19 +15,8 @@
       </template>
 
       <!-- Surah list -->
-      <v-col
-        v-for="(surah, i) in data"
-        :key="surah.surahNo"
-        cols="12"
-        sm="6"
-        md="4"
-        lg="3"
-        xl="2"
-      >
-        <NuxtLink
-          :to="`/surah/${i + 1}`"
-          @mouseenter="prefetch(surah.surahNo)"
-        >
+      <v-col v-for="(surah, i) in filteredSurahs" :key="surah.surahNo" cols="12" sm="6" md="4" lg="3" xl="2">
+        <NuxtLink :to="`/surah/${surah.surahNo}`" @mouseenter="prefetch(surah.surahNo)">
           <v-card outlined hover>
             <v-card-item>
               <v-card-title>
@@ -32,7 +27,7 @@
                 </div>
               </v-card-title>
 
-              <v-card-subtitle> Quran Aya {{ i + 1 }} </v-card-subtitle>
+              <v-card-subtitle> Quran Aya {{ surah.surahNo }} </v-card-subtitle>
             </v-card-item>
 
             <v-card-text class="bg-surface-light pt-4">
@@ -46,17 +41,43 @@
   </v-container>
 </template>
 <script setup>
-const { data, pending, error } = useFetch("/api/surahs", {
-  key: "surah-list",
+import { ref, computed } from 'vue'
+
+const searchText = ref('')
+
+const { data, pending, error } = useFetch('/api/surahs', {
+  key: 'surah-list',
   lazy: true,
   cache: true,
-});
-const prefetch = (id) => {
-  useFetch("/api/chapters", {
-    query: { chapterNo: id },
-    key: `chapter-${id}`,
-  });
-};
+})
+
+const surahsWithNumber = computed(() => {
+  if (!data.value) return []
+
+  return data.value.map((surah, index) => ({
+    ...surah,
+    surahNo: index + 1,
+  }))
+})
+
+const filteredSurahs = computed(() => {
+  if (!searchText.value) return surahsWithNumber.value
+
+  const q = searchText.value.toLowerCase()
+
+  return surahsWithNumber.value.filter((surah) =>
+    surah.surahName.includes(q) ||
+    surah.surahNameTranslation.toLowerCase().includes(q) ||
+    surah.surahNameArabicLong.includes(searchText.value) ||
+    surah.revelationPlace.toLowerCase().includes(q)
+  )
+})
+const prefetch = (surahNo) => {
+  useFetch('/api/chapters', {
+    query: { chapterNo: surahNo },
+    key: `chapter-${surahNo}`,
+  })
+}
 </script>
 <style scoped>
 a {

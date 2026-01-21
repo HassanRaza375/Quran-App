@@ -3,21 +3,15 @@
     <v-row dense>
       <!-- Translation Selector -->
       <v-col cols="12">
-        <v-sheet
-          elevation="1"
-          rounded="lg"
-          class="pa-3 mb-6 d-flex justify-end ga-2 translation-bar"
-        >
-          <v-chip
-            v-for="item in translations"
-            :key="item"
-            :color="selectedType === item ? 'teal-darken-2' : 'grey-3'"
-            :variant="selectedType === item ? 'flat' : 'outlined'"
-            class="text-uppercase font-weight-medium"
-            @click="setTranslation(item)"
-          >
+        <v-sheet elevation="1" rounded="lg" class="pa-3 mb-6 d-flex justify-end ga-2 translation-bar">
+          <v-chip v-for="item in translations" :key="item" :color="selectedType === item ? 'teal-darken-2' : 'grey-3'"
+            :variant="selectedType === item ? 'flat' : 'outlined'" class="text-uppercase font-weight-medium"
+            @click="setTranslation(item)">
             {{ item }}
           </v-chip>
+          <v-btn append-icon="mdi-plus" rounded="xl" color="primary" outlined variant="tonal" @click="dialog = true">
+            Audio
+          </v-btn>
         </v-sheet>
       </v-col>
 
@@ -33,9 +27,7 @@
             ·
             <span><strong>Ayahs:</strong> {{ data?.totalAyah }}</span>
             ·
-            <span
-              ><strong>Revelation:</strong> {{ data?.revelationPlace }}</span
-            >
+            <span><strong>Revelation:</strong> {{ data?.revelationPlace }}</span>
           </div>
         </v-sheet>
       </v-col>
@@ -47,17 +39,29 @@
         </v-sheet>
 
         <v-sheet v-else elevation="1" rounded="lg" class="pa-6 verses-sheet">
-          <p
-            v-for="(item, index) in verses"
-            :key="index"
-            align="end"
-            class="verse-text"
-          >
+          <p v-for="(item, index) in verses" :key="index" align="end" class="verse-text">
             {{ item }}
           </p>
         </v-sheet>
       </v-col>
     </v-row>
+    <!-- dialog -->
+    <v-dialog v-model="dialog" width="auto">
+      <v-card min-width="500">
+        <v-card-title>
+          <div class="d-flex items-center justify-space-between">
+            Audio Player
+            <v-btn size="small" icon="mdi-close" @click="dialog = false"></v-btn>
+          </div>
+          <h2 class="text-h5 font-weight-black">Reciter:{{ data?.audio[1]?.reciter }}</h2>
+        </v-card-title>
+        <v-card-text>
+          <audio controls class="w-100">
+            <source :src="data?.audio[1]?.url" type="audio/mpeg" />
+          </audio>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -66,6 +70,7 @@ definePageMeta({
   layout: "reader",
 });
 const route = useRoute();
+const dialog = ref(false)
 const chapterNo = route.params.id;
 const { data, pending, error } = useFetch("/api/chapters", {
   query: {

@@ -19,6 +19,6 @@ export default defineNuxtConfig({
   // runtime config
   runtimeConfig: {
     // quranApiBase: process.env.QURAN_API_BASE,
-    public: { quranApiBase: process.env.QURAN_API_BASE },
+    public: { quranApiBase: process.env.QURAN_API_BASE, quranApiBase2: process.env.QURAN_API_BASE2 },
   },
 });

@@ -3,13 +3,29 @@
     <v-row dense>
       <!-- Translation Selector -->
       <v-col cols="12">
-        <v-sheet elevation="1" rounded="lg" class="pa-3 mb-6 d-flex justify-end ga-2 translation-bar">
-          <v-chip v-for="item in translations" :key="item" :color="selectedType === item ? 'teal-darken-2' : 'grey-3'"
-            :variant="selectedType === item ? 'flat' : 'outlined'" class="text-uppercase font-weight-medium"
-            @click="setTranslation(item)">
+        <v-sheet
+          elevation="1"
+          rounded="lg"
+          class="pa-3 mb-6 d-flex justify-end ga-2 translation-bar"
+        >
+          <v-chip
+            v-for="item in translations"
+            :key="item"
+            :color="selectedType === item ? 'teal-darken-2' : 'grey-3'"
+            :variant="selectedType === item ? 'flat' : 'outlined'"
+            class="text-uppercase font-weight-medium"
+            @click="setTranslation(item)"
+          >
             {{ item }}
           </v-chip>
-          <v-btn append-icon="mdi-plus" rounded="xl" color="primary" outlined variant="tonal" @click="dialog = true">
+          <v-btn
+            append-icon="mdi-plus"
+            rounded="xl"
+            color="primary"
+            outlined
+            variant="tonal"
+            @click="dialog = true"
+          >
             Audio
           </v-btn>
         </v-sheet>
@@ -27,7 +43,9 @@
             ·
             <span><strong>Ayahs:</strong> {{ data?.totalAyah }}</span>
             ·
-            <span><strong>Revelation:</strong> {{ data?.revelationPlace }}</span>
+            <span
+              ><strong>Revelation:</strong> {{ data?.revelationPlace }}</span
+            >
           </div>
         </v-sheet>
       </v-col>
@@ -39,7 +57,12 @@
         </v-sheet>
 
         <v-sheet v-else elevation="1" rounded="lg" class="pa-6 verses-sheet">
-          <p v-for="(item, index) in verses" :key="index" align="end" class="verse-text">
+          <p
+            v-for="(item, index) in verses"
+            :key="index"
+            align="end"
+            class="verse-text"
+          >
             {{ item }}
           </p>
         </v-sheet>
@@ -51,9 +74,15 @@
         <v-card-title>
           <div class="d-flex items-center justify-space-between">
             Audio Player
-            <v-btn size="small" icon="mdi-close" @click="dialog = false"></v-btn>
+            <v-btn
+              size="small"
+              icon="mdi-close"
+              @click="dialog = false"
+            ></v-btn>
           </div>
-          <h2 class="text-h5 font-weight-black">Reciter:{{ data?.audio[1]?.reciter }}</h2>
+          <h2 class="text-h5 font-weight-black">
+            Reciter:{{ data?.audio[1]?.reciter }}
+          </h2>
         </v-card-title>
         <v-card-text>
           <audio controls class="w-100">
@@ -70,7 +99,7 @@ definePageMeta({
   layout: "reader",
 });
 const route = useRoute();
-const dialog = ref(false)
+const dialog = ref(false);
 const chapterNo = route.params.id;
 const { data, pending, error } = useFetch("/api/chapters", {
   query: {
@@ -100,24 +129,15 @@ const setTranslation = (type) => {
 <style scoped>
 /* Arabic Surah Title */
 .arabic-title {
-  font-family: "Amiri", "Scheherazade New", serif;
+  font-family: "Amiri Quran", serif;
   font-size: 2.5rem;
   line-height: 1.4;
 }
-
 /* Verse styling */
 .verse-text {
-  font-family: "Amiri", "Scheherazade New", serif;
+  font-family: "Amiri Quran", serif;
   font-size: 2rem;
-  line-height: 2.8rem;
   color: #1b1b1b;
-}
-
-/* Non-Arabic translations */
-.translation {
-  font-family: "Inter", "Roboto", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.9rem;
-  color: #424242;
+  line-height: 2.1;
 }
 </style>

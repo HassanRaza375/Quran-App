@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app flat>
+  <v-app-bar app flat class="d-flex align-center">
     <NuxtLink to="/">
       <v-btn icon>
         <v-icon>mdi-arrow-left</v-icon>
@@ -9,8 +9,11 @@
   </v-app-bar>
 </template>
 <style scoped>
-  a{
-    text-decoration: none;
-    color: #000;
-  }
+body {
+  font-family: serif !important;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
 </style>

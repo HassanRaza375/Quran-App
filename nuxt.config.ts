@@ -3,9 +3,27 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   // modules
-  modules: ["@nuxt/eslint", "@nuxt/hints", "@nuxt/image"],
+  modules: ["@nuxt/eslint", "@nuxt/hints", "@nuxt/image", "@nuxt/fonts"],
   // css
-  css: ["vuetify/styles", "@mdi/font/css/materialdesignicons.css"],
+  css: [
+    "vuetify/styles",
+    "@mdi/font/css/materialdesignicons.css",
+    "~/assets/css/main.css",
+  ],
+  fonts: {
+    families: [
+      {
+        name: "Amiri Quran",
+        provider: "google",
+        weights: [400],
+      },
+      {
+        name: "Sansation",
+        provider: "google",
+        weights: [400],
+      },
+    ],
+  },
   // build
   build: {
     transpile: ["vuetify"],
@@ -19,6 +37,9 @@ export default defineNuxtConfig({
   // runtime config
   runtimeConfig: {
     // quranApiBase: process.env.QURAN_API_BASE,
-    public: { quranApiBase: process.env.QURAN_API_BASE, quranApiBase2: process.env.QURAN_API_BASE2 },
+    public: {
+      quranApiBase: process.env.QURAN_API_BASE,
+      quranApiBase2: process.env.QURAN_API_BASE2,
+    },
   },
 });

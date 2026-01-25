@@ -1,17 +1,13 @@
 <template>
   <v-container>
+    <!-- Search -->
     <v-row>
       <v-col cols="12">
-        <v-text-field
-          v-model="searchText"
-          append-inner-icon="mdi-magnify"
-          label="Search Surah"
-          variant="outlined"
-          clearable
-          hide-details
-        />
+        <v-text-field v-model="searchText" append-inner-icon="mdi-magnify" label="Search Surah" variant="outlined"
+          clearable hide-details />
       </v-col>
     </v-row>
+
     <v-row dense>
       <!-- Loading skeleton -->
       <template v-if="pending">
@@ -20,84 +16,132 @@
         </v-col>
       </template>
 
-      <!-- Surah list -->
-      <v-col
-        v-for="surah in filteredSurahs"
-        :key="surah.surahNo"
-        cols="12"
-        sm="6"
-        md="4"
-        lg="3"
-        xl="2"
-      >
-        <NuxtLink :to="`/surah/${surah.surahNo}`">
-          <v-card outlined hover @mouseenter="prefetch(surah.surahNo)">
-            <v-card-item>
-              <v-card-title>
-                <div class="d-flex justify-end">
-                  <span class="font-weight-black">
-                    {{ surah.surahNameArabicLong }}
-                  </span>
-                </div>
-              </v-card-title>
+      <!-- Surah cards -->
+      <v-col v-for="surah in filteredSurahs" :key="surah.surahNo" cols="12" sm="6" md="4" lg="3" xl="2">
+        <v-card class="surah-card" elevation="1" rounded="lg" hover @mouseenter="prefetch(surah.surahNo)">
+          <!-- Favorite button -->
+          <v-btn icon size="small" variant="text" class="fav-btn" @click.stop="toggleFav(surah.surahNo)">
+            <v-icon :color="isFav(surah.surahNo) ? 'amber' : 'grey'">
+              {{ isFav(surah.surahNo) ? 'mdi-star' : 'mdi-star-outline' }}
+            </v-icon>
+          </v-btn>
 
-              <v-card-subtitle> Quran Aya {{ surah.surahNo }} </v-card-subtitle>
-            </v-card-item>
+          <NuxtLink :to="`/surah/${surah.surahNo}`" class="card-link">
+            <v-card-text class="pt-8">
 
-            <v-card-text class="bg-surface-light pt-4">
-              <div>English Name: ({{ surah.surahNameTranslation }})</div>
-              <div>Revelation Place: {{ surah.revelationPlace }}</div>
+              <!-- Arabic name -->
+              <div class="arabic-name">
+                {{ surah.surahNameArabicLong }}
+              </div>
+
+              <!-- English name -->
+              <div class="english-name">
+                {{ surah.surahNameTranslation }}
+              </div>
+
+              <!-- Meta -->
+              <div class="meta mt-3">
+                <v-chip size="x-small" variant="tonal">
+                  #{{ surah.surahNo }}
+                </v-chip>
+
+                <v-chip size="x-small" variant="outlined"
+                  :color="surah.revelationPlace === 'Meccan' ? 'indigo' : 'teal'">
+                  {{ surah.revelationPlace }}
+                </v-chip>
+
+                <v-chip size="x-small" variant="outlined">
+                  {{ surah.totalAyah }} Ayahs
+                </v-chip>
+              </div>
+
             </v-card-text>
-          </v-card>
-        </NuxtLink>
+          </NuxtLink>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
 </template>
+
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue'
 
-const searchText = ref("");
+const searchText = ref('')
 
-const { data, pending, error } = useFetch("/api/surahs", {
-  key: "surah-list",
+const { data, pending } = useFetch('/api/surahs', {
+  key: 'surah-list',
   lazy: true,
   cache: true,
-});
+})
 
+
+const isFav = (surahNo) => false
+const toggleFav = (surahNo) => {} 
+
+/* ----- Data shaping ----- */
 const surahsWithNumber = computed(() => {
-  if (!data.value) return [];
-
+  if (!data.value) return []
   return data.value.map((surah, index) => ({
     ...surah,
     surahNo: index + 1,
-  }));
-});
+  }))
+})
 
 const filteredSurahs = computed(() => {
-  if (!searchText.value) return surahsWithNumber.value;
-
-  const q = searchText.value.toLowerCase();
+  if (!searchText.value) return surahsWithNumber.value
+  const q = searchText.value.toLowerCase()
 
   return surahsWithNumber.value.filter(
-    (surah) =>
-      surah.surahName.includes(q) ||
-      surah.surahNameTranslation.toLowerCase().includes(q) ||
-      surah.surahNameArabicLong.includes(searchText.value) ||
-      surah.revelationPlace.toLowerCase().includes(q),
-  );
-});
-const prefetch = (surahNo) => {
-  useFetch("/api/chapters", {
-    query: { chapterNo: surahNo },
-    key: `chapter-${surahNo}`,
-    cache: true,
-  });
-};
+    s =>
+      s.surahName.toLowerCase().includes(q) ||
+      s.surahNameTranslation.toLowerCase().includes(q) ||
+      s.surahNameArabicLong.includes(searchText.value) ||
+      s.revelationPlace.toLowerCase().includes(q),
+  )
+})
+
+// const prefetch = (surahNo) => {
+//   useFetch('/api/chapters', {
+//     query: { chapterNo: surahNo },
+//     key: `chapter-${surahNo}`,
+//     cache: true,
+//   })
+// }
 </script>
+
 <style scoped>
-a {
+.card-link {
   text-decoration: none;
-  color: #000;
+  color: inherit;
+}
+
+.surah-card {
+  position: relative;
+}
+
+
+.fav-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+}
+
+.arabic-name {
+  font-family: "Amiri Quran", serif;
+  font-size: 1.6rem;
+  text-align: right;
+  direction: rtl;
+}
+
+.english-name {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 </style>

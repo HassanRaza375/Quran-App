@@ -25,7 +25,11 @@
       <v-col cols="12" v-for="ayah in data.data.ayahs" :key="ayah.number">
         <v-card elevation="1" rounded="lg" class="pa-4 sajda-card">
           <!-- Sajda badge -->
-          <v-chip :color="ayah.sajda.obligatory ? 'red' : 'primary'" variant="flat" class="mb-2">
+          <v-chip
+            :color="ayah.sajda.obligatory ? 'red' : 'primary'"
+            variant="flat"
+            class="mb-2"
+          >
             {{
               ayah.sajda.obligatory ? "Obligatory Sajda" : "Recommended Sajda"
             }}
@@ -58,7 +62,7 @@
 
 <script setup>
 const { getAll } = useSajda();
-const { data, pending, error } = useAsyncData("sajda", () => getAll(), { server: false });
+const { data, pending, error } = useAsyncData("sajda", () => getAll());
 </script>
 
 <style scoped>

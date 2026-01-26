@@ -32,12 +32,12 @@
         lg="3"
         xl="2"
       >
+      <!-- @mouseenter="prefetch(surah.surahNo)" -->
         <v-card
           class="surah-card"
           elevation="1"
           rounded="lg"
           hover
-          @mouseenter="prefetch(surah.surahNo)"
         >
           <!-- Favorite button -->
           <v-btn

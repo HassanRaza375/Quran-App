@@ -10,8 +10,8 @@
 
     <v-app-bar-title>Title</v-app-bar-title>
 
-    <v-btn icon><v-icon>mdi-magnify</v-icon></v-btn>
-    <v-btn icon><v-icon>mdi-heart</v-icon></v-btn>
+    <v-btn icon @click="goto('/search')"><v-icon>mdi-magnify</v-icon></v-btn>
+    <v-btn icon @click="goto('/bookmarks')"><v-icon>mdi-heart</v-icon></v-btn>
     <v-btn icon><v-icon>mdi-dots-vertical</v-icon></v-btn>
   </v-app-bar>
 </template>
@@ -26,4 +26,7 @@ const images = ref([
 ])
 
 const emit = defineEmits(['toggle-drawer'])
+const goto = (path) => {
+  useRouter().push(path)
+}
 </script>

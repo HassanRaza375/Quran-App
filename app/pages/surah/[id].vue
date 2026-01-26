@@ -3,32 +3,16 @@
     <!-- Translation & Audio Bar -->
     <v-row>
       <v-col cols="12">
-        <v-sheet
-          elevation="0"
-          rounded="lg"
-          class="pa-3 mb-6 d-flex justify-space-between align-center translation-bar"
-        >
-          <div class="items-chips">
-            <v-chip
-              v-for="item in translations"
-              :key="item"
-              :color="selectedType === item ? 'primary' : undefined"
-              :variant="selectedType === item ? 'flat' : 'outlined'"
-              size="small"
-              class="text-uppercase"
-              @click="setTranslation(item)"
-            >
+        <v-sheet elevation="0" rounded="lg" class="pa-3 mb-6 d-flex justify-space-between align-center translation-bar">
+          <div class="d-flex ga-2">
+            <v-chip v-for="item in translations" :key="item" :color="selectedType === item ? 'primary' : undefined"
+              :variant="selectedType === item ? 'flat' : 'outlined'" size="small" class="text-uppercase"
+              @click="setTranslation(item)">
               {{ item }}
             </v-chip>
           </div>
 
-          <v-btn
-            prepend-icon="mdi-volume-high"
-            rounded="xl"
-            variant="tonal"
-            color="primary"
-            @click="dialog = true"
-          >
+          <v-btn prepend-icon="mdi-volume-high" rounded="xl" variant="tonal" color="primary" @click="dialog = true">
             Audio
           </v-btn>
         </v-sheet>
@@ -85,12 +69,7 @@
             </div>
           </div>
 
-          <v-btn
-            icon="mdi-close"
-            size="small"
-            variant="text"
-            @click="dialog = false"
-          />
+          <v-btn icon="mdi-close" size="small" variant="text" @click="dialog = false" />
         </v-card-title>
 
         <v-divider />
@@ -134,12 +113,11 @@ const setTranslation = (type) => {
 };
 </script>
 <style scoped>
-.items-chips{
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-  gap: 8px;
+.v-chip.v-chip--density-default {
+  min-width: 70px;
+  justify-content: center;
 }
+
 /* Surah title */
 .arabic-title {
   font-family: "Amiri Quran", serif;
@@ -182,5 +160,9 @@ const setTranslation = (type) => {
 /* Translation bar */
 .translation-bar {
   background: rgba(0, 0, 0, 0.02);
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 8px;
 }
 </style>

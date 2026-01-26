@@ -8,7 +8,7 @@
           rounded="lg"
           class="pa-3 mb-6 d-flex justify-space-between align-center translation-bar"
         >
-          <div class="d-flex ga-2">
+          <div class="items-chips">
             <v-chip
               v-for="item in translations"
               :key="item"
@@ -134,6 +134,12 @@ const setTranslation = (type) => {
 };
 </script>
 <style scoped>
+.items-chips{
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 8px;
+}
 /* Surah title */
 .arabic-title {
   font-family: "Amiri Quran", serif;

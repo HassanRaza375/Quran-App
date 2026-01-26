@@ -1,4 +1,15 @@
 export default defineEventHandler(async () => {
-    const config = useRuntimeConfig();
-    return await $fetch(`${config.public.quranApiBase2}/sajda/quran-uthmani`);
+  const config = useRuntimeConfig();
+  let response;
+  try {
+    response = await $fetch(
+      `${config.public.quranApiBase2}/sajda/quran-uthmani`,
+    );
+  } catch (e) {
+    throw createError({
+      statusCode: 502,
+      statusMessage: "Failed to fetch Sajda data",
+    });
+  }
+  return response;
 });

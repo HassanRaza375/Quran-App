@@ -1,16 +1,22 @@
 export default defineEventHandler(async (event) => {
-    const config = useRuntimeConfig()
+  const config = useRuntimeConfig();
 
-    const { chapterNo } = getQuery(event)
+  const { chapterNo } = getQuery(event);
 
-    if (!chapterNo) {
-        throw createError({
-            statusCode: 400,
-            statusMessage: 'chapterNo is required',
-        })
-    }
-
-    return await $fetch(
-        `${config.public.quranApiBase}/${chapterNo}.json`
-    )
-})
+  if (!chapterNo) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: "chapterNo is required",
+    });
+  }
+  let response;
+  try {
+    response = $fetch(`${config.public.quranApiBase}/${chapterNo}.json`);
+  } catch (e) {
+    throw createError({
+      statusCode: 502,
+      statusMessage: "Failed to fetch Chapter data",
+    });
+  }
+  return response;
+});

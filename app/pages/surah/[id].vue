@@ -1,19 +1,34 @@
 <template>
   <v-container class="reader-container">
-
     <!-- Translation & Audio Bar -->
     <v-row>
       <v-col cols="12">
-        <v-sheet elevation="0" rounded="lg" class="pa-3 mb-6 d-flex justify-space-between align-center translation-bar">
+        <v-sheet
+          elevation="0"
+          rounded="lg"
+          class="pa-3 mb-6 d-flex justify-space-between align-center translation-bar"
+        >
           <div class="d-flex ga-2">
-            <v-chip v-for="item in translations" :key="item" :color="selectedType === item ? 'primary' : undefined"
-              :variant="selectedType === item ? 'flat' : 'outlined'" size="small" class="text-uppercase"
-              @click="setTranslation(item)">
+            <v-chip
+              v-for="item in translations"
+              :key="item"
+              :color="selectedType === item ? 'primary' : undefined"
+              :variant="selectedType === item ? 'flat' : 'outlined'"
+              size="small"
+              class="text-uppercase"
+              @click="setTranslation(item)"
+            >
               {{ item }}
             </v-chip>
           </div>
 
-          <v-btn prepend-icon="mdi-volume-high" rounded="xl" variant="tonal" color="primary" @click="dialog = true">
+          <v-btn
+            prepend-icon="mdi-volume-high"
+            rounded="xl"
+            variant="tonal"
+            color="primary"
+            @click="dialog = true"
+          >
             Audio
           </v-btn>
         </v-sheet>
@@ -42,7 +57,6 @@
     <!-- Verses -->
     <v-row>
       <v-col cols="12">
-
         <!-- Loader -->
         <v-sheet v-if="pending" class="pa-6">
           <v-skeleton-loader type="heading, paragraph, paragraph, paragraph" />
@@ -57,7 +71,6 @@
             </p>
           </div>
         </v-sheet>
-
       </v-col>
     </v-row>
 
@@ -66,15 +79,18 @@
       <v-card rounded="lg">
         <v-card-title class="d-flex justify-space-between align-center">
           <div>
-            <div class="text-subtitle-2 text-medium-emphasis">
-              Recitation
-            </div>
+            <div class="text-subtitle-2 text-medium-emphasis">Recitation</div>
             <div class="text-h6 font-weight-bold">
               {{ data?.audio[1]?.reciter }}
             </div>
           </div>
 
-          <v-btn icon="mdi-close" size="small" variant="text" @click="dialog = false" />
+          <v-btn
+            icon="mdi-close"
+            size="small"
+            variant="text"
+            @click="dialog = false"
+          />
         </v-card-title>
 
         <v-divider />
@@ -86,7 +102,6 @@
         </v-card-text>
       </v-card>
     </v-dialog>
-
   </v-container>
 </template>
 
@@ -97,14 +112,10 @@ definePageMeta({
 const route = useRoute();
 const dialog = ref(false);
 const chapterNo = route.params.id;
-const { data, pending, error } = useFetch("/api/chapters", {
-  query: {
-    chapterNo,
-  },
-  key: `chapter-${chapterNo}`, // cache per surah
-  lazy: true, // don't block navigation
-  cache: true,
-});
+const { getChapter } = useChapters();
+const { data, pending, error } = useAsyncData("chapters", () =>
+  getChapter(chapterNo),
+);
 const translations = ref(["arabic1", "arabic2", "english", "bengali", "urdu"]);
 const selectedType = ref("arabic1");
 const typeObject = computed(() => ({

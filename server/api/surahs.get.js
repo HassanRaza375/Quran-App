@@ -1,4 +1,13 @@
 export default defineEventHandler(async () => {
   const config = useRuntimeConfig();
-  return await $fetch(`${config.public.quranApiBase}/surah.json`);
+  let response;
+  try {
+    response = await $fetch(`${config.public.quranApiBase}/surah.json`);
+  } catch (e) {
+    throw createError({
+      statusCode: 502,
+      statusMessage: "Failed to fetch Surah data",
+    });
+  }
+  return response;
 });

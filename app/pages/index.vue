@@ -3,8 +3,14 @@
     <!-- Search -->
     <v-row>
       <v-col cols="12">
-        <v-text-field v-model="searchText" append-inner-icon="mdi-magnify" label="Search Surah" variant="outlined"
-          clearable hide-details />
+        <v-text-field
+          v-model="searchText"
+          append-inner-icon="mdi-magnify"
+          label="Search Surah"
+          variant="outlined"
+          clearable
+          hide-details
+        />
       </v-col>
     </v-row>
 
@@ -17,18 +23,37 @@
       </template>
 
       <!-- Surah cards -->
-      <v-col v-for="surah in filteredSurahs" :key="surah.surahNo" cols="12" sm="6" md="4" lg="3" xl="2">
-        <v-card class="surah-card" elevation="1" rounded="lg" hover @mouseenter="prefetch(surah.surahNo)">
+      <v-col
+        v-for="surah in filteredSurahs"
+        :key="surah.surahNo"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        xl="2"
+      >
+        <v-card
+          class="surah-card"
+          elevation="1"
+          rounded="lg"
+          hover
+          @mouseenter="prefetch(surah.surahNo)"
+        >
           <!-- Favorite button -->
-          <v-btn icon size="small" variant="text" class="fav-btn" @click.stop="toggleFav(surah.surahNo)">
+          <v-btn
+            icon
+            size="small"
+            variant="text"
+            class="fav-btn"
+            @click.stop="toggleFav(surah.surahNo)"
+          >
             <v-icon :color="isFav(surah.surahNo) ? 'amber' : 'grey'">
-              {{ isFav(surah.surahNo) ? 'mdi-star' : 'mdi-star-outline' }}
+              {{ isFav(surah.surahNo) ? "mdi-star" : "mdi-star-outline" }}
             </v-icon>
           </v-btn>
 
           <NuxtLink :to="`/surah/${surah.surahNo}`" class="card-link">
             <v-card-text class="pt-8">
-
               <!-- Arabic name -->
               <div class="arabic-name">
                 {{ surah.surahNameArabicLong }}
@@ -45,8 +70,13 @@
                   #{{ surah.surahNo }}
                 </v-chip>
 
-                <v-chip size="x-small" variant="outlined"
-                  :color="surah.revelationPlace === 'Meccan' ? 'indigo' : 'teal'">
+                <v-chip
+                  size="x-small"
+                  variant="outlined"
+                  :color="
+                    surah.revelationPlace === 'Meccan' ? 'indigo' : 'teal'
+                  "
+                >
                   {{ surah.revelationPlace }}
                 </v-chip>
 
@@ -54,7 +84,6 @@
                   {{ surah.totalAyah }} Ayahs
                 </v-chip>
               </div>
-
             </v-card-text>
           </NuxtLink>
         </v-card>
@@ -64,41 +93,40 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+const searchText = ref("");
+// const { data, pending } = useFetch("/api/surahs", {
+//   key: "surah-list",
+//   lazy: true,
+//   cache: true,
+// });
 
-const searchText = ref('')
+const { getAll } = useSurahs();
+const { data, pending } = useAsyncData('surahs', () => getAll())
 
-const { data, pending } = useFetch('/api/surahs', {
-  key: 'surah-list',
-  lazy: true,
-  cache: true,
-})
-
-
-const isFav = (surahNo) => false
-const toggleFav = (surahNo) => {} 
+const isFav = (surahNo) => false;
+const toggleFav = (surahNo) => {};
 
 /* ----- Data shaping ----- */
 const surahsWithNumber = computed(() => {
-  if (!data.value) return []
+  if (!data.value) return [];
   return data.value.map((surah, index) => ({
     ...surah,
     surahNo: index + 1,
-  }))
-})
+  }));
+});
 
 const filteredSurahs = computed(() => {
-  if (!searchText.value) return surahsWithNumber.value
-  const q = searchText.value.toLowerCase()
+  if (!searchText.value) return surahsWithNumber.value;
+  const q = searchText.value.toLowerCase();
 
   return surahsWithNumber.value.filter(
-    s =>
+    (s) =>
       s.surahName.toLowerCase().includes(q) ||
       s.surahNameTranslation.toLowerCase().includes(q) ||
       s.surahNameArabicLong.includes(searchText.value) ||
       s.revelationPlace.toLowerCase().includes(q),
-  )
-})
+  );
+});
 
 // const prefetch = (surahNo) => {
 //   useFetch('/api/chapters', {
@@ -118,7 +146,6 @@ const filteredSurahs = computed(() => {
 .surah-card {
   position: relative;
 }
-
 
 .fav-btn {
   position: absolute;

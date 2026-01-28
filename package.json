@@ -16,6 +16,7 @@
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/hints": "^1.0.0-alpha.5",
     "@nuxt/image": "^2.0.0",
+    "@vueuse/core": "^14.1.0",
     "eslint": "^9.39.2",
     "nuxt": "^4.2.2",
     "sass": "^1.97.1",

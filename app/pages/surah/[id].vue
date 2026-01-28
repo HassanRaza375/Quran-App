@@ -49,10 +49,10 @@
         <!-- Verses -->
         <v-sheet v-else elevation="0" rounded="lg" class="pa-6 verses-sheet">
           <div v-for="(item, index) in verses" :key="index" class="verse-block">
-            <p class="verse-text">
+            <section :id="`ayah-${index + 1}`" class="verse-text">
               {{ item }}
               <span class="ayah-number">﴿{{ index + 1 }}﴾</span>
-            </p>
+            </section>
           </div>
         </v-sheet>
       </v-col>

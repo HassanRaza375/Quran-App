@@ -76,7 +76,7 @@
 
         <v-card-text class="pt-4">
           <audio controls class="w-100">
-            <source :src="data?.audio[1]?.url" type="audio/mpeg" />
+            <source :src="data?.audio[1]?.url" preload="auto" type="audio/mpeg" />
           </audio>
         </v-card-text>
       </v-card>

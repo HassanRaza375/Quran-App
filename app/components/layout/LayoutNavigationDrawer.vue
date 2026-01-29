@@ -29,6 +29,7 @@ const sidebarList = ref([
   { title: 'Bookmarks', icon: 'mdi-bookmark', path: '/bookmarks' },
   { title: 'Sajda', icon: 'mdi-airbag', path: '/sajda' },
   { title: 'Per Page', icon: 'mdi-note-multiple', path: '/per-page-read' },
+  { title: 'Prayer Times', icon: 'mdi-clock-outline', path: '/prayerTime' },
 
   {
     title: 'Juz',

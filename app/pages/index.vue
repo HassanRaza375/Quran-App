@@ -22,7 +22,7 @@
         <v-lazy :min-height="137" :options="{ 'threshold': 0.5 }" transition="fade-transition">
           <v-card class="surah-card" elevation="1" rounded="lg" hover>
             <!-- Favorite button -->
-            <v-btn icon size="small" variant="text" class="fav-btn" @click.stop="toggleFav(surah.surahNo)">
+            <v-btn icon size="small" variant="text" class="fav-btn" @click.stop="toggleFav(surah, surah.surahNo)">
               <v-icon :color="isFav(surah.surahNo) ? 'amber' : 'grey'">
                 {{ isFav(surah.surahNo) ? "mdi-star" : "mdi-star-outline" }}
               </v-icon>

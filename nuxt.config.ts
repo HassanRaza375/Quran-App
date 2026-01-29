@@ -2,13 +2,13 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Quran App', 
+      title: "Quran App",
       htmlAttrs: {
-        lang: 'en',
+        lang: "en",
       },
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon2.png' },
-      ],
+      charset: "utf-16",
+      viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon2.png" }],
     },
   },
   compatibilityDate: "2025-07-15",

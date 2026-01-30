@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      charset: "utf-16",
+      charset: "utf-8",
       viewport: "width=device-width, initial-scale=1, maximum-scale=1",
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon2.png" }],
     },
@@ -43,42 +43,58 @@ export default defineNuxtConfig({
   },
   // pwa
   pwa: {
-    registerType: "autoUpdate",
+    registerType: 'autoUpdate',
+    strategies: 'generateSW',   // 🔴 VERY IMPORTANT
 
     manifest: {
-      name: "My Quran App",
-      short_name: "Quran",
-      theme_color: "#ffffff",
-      background_color: "#ffffff",
-      display: "standalone",
-
+      id: '/',
+      name: 'Quran App',
+      short_name: 'Quran',
+      description: 'A beautiful Holy Quran app with translation and audio',
+      start_url: '/',
+      scope: '/',
+      display: 'standalone',
+      theme_color: '#13547a',
+      background_color: '#80d0c7',
       icons: [
         {
-          src: "/pwa-192x192.png",
-          sizes: "192x192",
-          type: "image/png",
+          src: '/pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
         },
         {
-          src: "/pwa-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
+          src: '/pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
         },
-      ],
+        {
+          src: '/pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        }
+      ]
     },
 
     workbox: {
-      navigateFallback: "/",
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,woff2}'],
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/api\.alquran\.cloud/,
-          handler: "NetworkFirst",
+          handler: 'NetworkFirst',
           options: {
-            cacheName: "quran-api",
+            cacheName: 'quran-api',
+            expiration: {
+              maxEntries: 200,
+              maxAgeSeconds: 60 * 60 * 24 * 7,
+            },
           },
         },
       ],
     },
-  },
+  }
+  ,
   // build
   build: {
     transpile: ["vuetify"],

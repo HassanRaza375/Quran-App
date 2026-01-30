@@ -1,126 +1,124 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12" md="6" sm="6">
-        <v-autocomplete v-model="page" label="Pages" :items="pages" item-title="title" item-value="value"
-          variant="outlined"></v-autocomplete>
+    <!-- Controls -->
+    <v-row align="center">
+      <v-col cols="12" md="4">
+        <v-autocomplete
+          v-model="page"
+          :items="pages"
+          item-title="title"
+          item-value="value"
+          label="Pages"
+          variant="outlined"
+          :loading="isLoading"
+          :disabled="isLoading"
+        />
+      </v-col>
+
+      <v-col cols="12" md="8" class="d-flex justify-end gap">
+        <v-btn
+          variant="outlined"
+          :disabled="page === 1 || isLoading"
+          :loading="isLoading && navDir === 'prev'"
+          @click="prevPage"
+        >
+          Prev
+        </v-btn>
+
+        <v-btn
+          color="primary"
+          :disabled="page === 604 || isLoading"
+          :loading="isLoading && navDir === 'next'"
+          @click="nextPage"
+        >
+          Next
+        </v-btn>
       </v-col>
     </v-row>
+
+    <!-- Skeleton Loader -->
+    <v-row v-if="isLoading">
+      <v-col cols="12" v-for="i in 6" :key="i">
+        <v-skeleton-loader type="paragraph" />
+      </v-col>
+    </v-row>
+
     <!-- Verses -->
-    <v-row>
+    <v-row v-else>
       <v-col cols="12">
-        <!-- mode="manual" -->
-        <v-infinite-scroll color="secondary" :key="page"  @load="loadMore">
+        <div v-for="(item, index) in ayahs" :key="index" class="verse-block">
+          <section class="verse-text">
+            <span class="ayah-number"> ﴿{{ item.surah.name }}﴾ </span>
 
-          <!-- YOUR LIST -->
-          <div v-for="(item, index) in ayahs" :key="index" class="verse-block">
-            <section :id="`ayah-${item.numberInSurah}`" class="verse-text">
-              <span class="ayah-number">
-                ﴿{{ item.surah.name }}﴾
-              </span>
-              {{ item.text }}
-              <span class="ayah-number">
-                ﴿{{ item.numberInSurah }}﴾
-              </span>
-            </section>
-          </div>
-          <template #empty>
-            <div class="text-center pa-6 text-grey">
-              End of Mushaf
-            </div>
-          </template>
-        </v-infinite-scroll>
+            {{ item.text }}
+
+            <span class="ayah-number"> ﴿{{ item.numberInSurah }}﴾ </span>
+          </section>
+        </div>
       </v-col>
     </v-row>
-
   </v-container>
 </template>
 
 <script setup>
-const { getPage } = usePage()
+const { getPage } = usePage();
 
-// Page selected from autocomplete
-const page = ref(1)
+const page = ref(1);
+const ayahs = ref([]);
+const isLoading = ref(false);
+const navDir = ref(null);
 
-// Internal page pointer for infinite loading
-const currentPage = ref(1)
+const TOTAL_PAGES = 604;
 
-// Data
-const ayahs = ref([])
-const hasMore = ref(true)
-
-// Load next page
-const loadMore = async ({ done }) => {
-  if (!hasMore.value) {
-    done('empty')
-    return
-  }
+const fetchPage = async () => {
+  isLoading.value = true;
 
   try {
-    const res = await getPage(currentPage.value)
-    const newAyahs = res?.data?.ayahs || []
+    const res = await getPage(page.value);
+    ayahs.value = res?.data?.ayahs || [];
 
-    if (!newAyahs.length || currentPage.value >= 604) {
-      hasMore.value = false
-      done('empty')
-      return
-    }
-
-    ayahs.value.push(...newAyahs)
-    currentPage.value++
-
-    done('ok')
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (e) {
-    console.error(e)
-    done('error')
+    console.error(e);
+  } finally {
+    isLoading.value = false;
+    navDir.value = null;
   }
-}
+};
 
+const nextPage = () => {
+  if (page.value < TOTAL_PAGES) {
+    navDir.value = "next";
+    page.value++;
+  }
+};
 
-// Initial load
-onMounted(() => {
-  currentPage.value = page.value
-  loadMore()
-})
+const prevPage = () => {
+  if (page.value > 1) {
+    navDir.value = "prev";
+    page.value--;
+  }
+};
 
-// Reset when user jumps to a page
-watch(page, async (newPage) => {
-  ayahs.value = []
-  hasMore.value = true
-  currentPage.value = newPage
-  await loadMore()
+watch(page, fetchPage);
 
-  // optional: scroll to top
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-})
+onMounted(fetchPage);
 
-// Autocomplete items
-const pages = Array.from({ length: 604 }, (_, i) => ({
+const pages = Array.from({ length: TOTAL_PAGES }, (_, i) => ({
   title: `Page - ${i + 1}`,
   value: i + 1,
-}))
+}));
 </script>
 
-
 <style scoped>
-/* Surah title */
-.arabic-title {
-  font-family: "Amiri Quran", serif;
-  font-size: 3rem;
-  line-height: 1.5;
+.gap {
+  gap: 12px;
 }
 
-/* Verse container */
-.verses-sheet {
-  background: transparent;
-}
-
-/* Verse block spacing */
 .verse-block {
   margin-bottom: 2.5rem;
 }
 
-/* Arabic verse */
 .verse-text {
   font-family: "Amiri Quran", serif;
   font-size: 2.1rem;
@@ -130,7 +128,6 @@ const pages = Array.from({ length: 604 }, (_, i) => ({
   color: #1b1b1b;
 }
 
-/* Ayah number */
 .ayah-number {
   font-size: 1rem;
   margin-inline-start: 8px;

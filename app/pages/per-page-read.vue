@@ -10,16 +10,16 @@
           item-value="value"
           label="Pages"
           variant="outlined"
-          :loading="isLoading"
-          :disabled="isLoading"
+          :loading="pending"
+          :disabled="pending"
         />
       </v-col>
 
       <v-col cols="12" md="8" class="d-flex justify-end gap">
         <v-btn
           variant="outlined"
-          :disabled="page === 1 || isLoading"
-          :loading="isLoading && navDir === 'prev'"
+          :disabled="page === 1 || pending"
+          :loading="pending && navDir === 'prev'"
           @click="prevPage"
         >
           Prev
@@ -27,8 +27,8 @@
 
         <v-btn
           color="primary"
-          :disabled="page === 604 || isLoading"
-          :loading="isLoading && navDir === 'next'"
+          :disabled="page === 604 || pending"
+          :loading="pending && navDir === 'next'"
           @click="nextPage"
         >
           Next
@@ -37,7 +37,7 @@
     </v-row>
 
     <!-- Skeleton Loader -->
-    <v-row v-if="isLoading">
+    <v-row v-if="pending">
       <v-col cols="12" v-for="i in 6" :key="i">
         <v-skeleton-loader type="paragraph" />
       </v-col>
@@ -45,9 +45,9 @@
 
     <!-- Verses -->
     <v-row v-else>
-      {{ ayahs.length }}
+      ({{ ayahs }})
       <v-col cols="12">
-        <div v-for="(item, index) in ayahs" :key="index" class="verse-block">
+        <div v-for="item in ayahs" :key="item.number" class="verse-block">
           <section class="verse-text">
             <span class="ayah-number"> ﴿{{ item.surah.name }}﴾ </span>
 
@@ -62,30 +62,17 @@
 </template>
 
 <script setup>
-const { getPage } = usePage();
-
 const page = ref(1);
-const ayahs = ref([]);
-const isLoading = ref(false);
 const navDir = ref(null);
 
 const TOTAL_PAGES = 604;
 
-const fetchPage = async () => {
-  isLoading.value = true;
+const { data, pending, refresh } = useFetch(
+  () => `https://api.alquran.cloud/v1/page/${page.value}/quran-uthmani`,
+  { watch: [page] },
+);
 
-  try {
-    const res = await getPage(page.value);
-    ayahs.value = res?.data?.ayahs || [];
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } catch (e) {
-    console.error(e);
-  } finally {
-    isLoading.value = false;
-    navDir.value = null;
-  }
-};
+const ayahs = computed(() => data.value?.data?.ayahs || []);
 
 const nextPage = () => {
   if (page.value < TOTAL_PAGES) {
@@ -100,10 +87,6 @@ const prevPage = () => {
     page.value--;
   }
 };
-
-watch(page, fetchPage);
-
-onMounted(fetchPage);
 
 const pages = Array.from({ length: TOTAL_PAGES }, (_, i) => ({
   title: `Page - ${i + 1}`,

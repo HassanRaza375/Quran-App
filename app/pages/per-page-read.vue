@@ -45,6 +45,7 @@
 
     <!-- Verses -->
     <v-row v-else>
+      {{ ayahs.length }}
       <v-col cols="12">
         <div v-for="(item, index) in ayahs" :key="index" class="verse-block">
           <section class="verse-text">

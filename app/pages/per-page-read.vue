@@ -45,7 +45,6 @@
 
     <!-- Verses -->
     <v-row v-else>
-      ({{ ayahs }})
       <v-col cols="12">
         <div v-for="item in ayahs" :key="item.number" class="verse-block">
           <section class="verse-text">

@@ -14,7 +14,13 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   // modules
-  modules: ["@nuxt/eslint", "@nuxt/hints", "@nuxt/image", "@nuxt/fonts"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/hints",
+    "@nuxt/image",
+    "@nuxt/fonts",
+    "@vite-pwa/nuxt",
+  ],
   // css
   css: [
     "vuetify/styles",
@@ -34,6 +40,44 @@ export default defineNuxtConfig({
         weights: [400],
       },
     ],
+  },
+  // pwa
+  pwa: {
+    registerType: "autoUpdate",
+
+    manifest: {
+      name: "My Quran App",
+      short_name: "Quran",
+      theme_color: "#ffffff",
+      background_color: "#ffffff",
+      display: "standalone",
+
+      icons: [
+        {
+          src: "/pwa-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "/pwa-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+
+    workbox: {
+      navigateFallback: "/",
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/api\.alquran\.cloud/,
+          handler: "NetworkFirst",
+          options: {
+            cacheName: "quran-api",
+          },
+        },
+      ],
+    },
   },
   // build
   build: {

@@ -76,14 +76,14 @@
     </v-card>
 
     <!-- Quick Actions -->
-    <v-row class="quick-actions" dense>
+    <!-- <v-row class="quick-actions" dense>
       <v-col cols="6" v-for="i in 4" :key="i">
         <v-card class="action-card" rounded="lg">
           <v-icon size="32">mdi-book-open-page-variant</v-icon>
           <div class="action-label">Surahs</div>
         </v-card>
       </v-col>
-    </v-row>
+    </v-row> -->
 
     <!-- Ayah of the Day -->
     <v-card class="ayah-card" rounded="xl" variant="tonal">
@@ -103,7 +103,7 @@
     </v-card>
 
     <!-- Mini Audio Player -->
-    <v-card class="audio-card" rounded="lg">
+    <!-- <v-card class="audio-card" rounded="lg">
       <div class="audio-content">
         <v-btn icon="mdi-play" />
         <div class="audio-info">
@@ -112,7 +112,7 @@
         </div>
         <v-btn icon="mdi-chevron-up" />
       </div>
-    </v-card>
+    </v-card> -->
 
   </v-container>
 </template>

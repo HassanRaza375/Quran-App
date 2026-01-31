@@ -25,11 +25,13 @@
 <script setup>
 const sidebarList = ref([
   { title: 'Home', icon: 'mdi-home', path: '/' },
+  { title: 'Surah Listing', icon: 'mdi-view-list', path: '/surah-listing' },
   { title: 'Search', icon: 'mdi-magnify', path: '/search' },
   { title: 'Bookmarks', icon: 'mdi-bookmark', path: '/bookmarks' },
   { title: 'Sajda', icon: 'mdi-airbag', path: '/sajda' },
   { title: 'Per Page', icon: 'mdi-note-multiple', path: '/per-page-read' },
   { title: 'Prayer Times', icon: 'mdi-clock-outline', path: '/prayerTime' },
+  { title: 'Qibla Direction', icon: 'mdi-compass-outline', path: '/qibla-direction' },
 
   {
     title: 'Juz',

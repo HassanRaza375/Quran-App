@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "@vite-pwa/nuxt",
+    '@pinia/nuxt',
   ],
   // css
   css: [

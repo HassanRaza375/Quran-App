@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app flat class="d-flex align-center">
-    <NuxtLink to="/">
+    <NuxtLink to="/surah-listing">
       <v-btn icon>
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>

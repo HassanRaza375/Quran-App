@@ -19,7 +19,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
+const prayer = usePrayerStore()
 const drawer = ref(false)
+
+onMounted(() => {
+  prayer.init()
+})
 </script>

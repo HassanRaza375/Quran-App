@@ -1,79 +1,186 @@
 <template>
   <v-container class="home-container">
     <!-- Prayer Summary -->
-    <v-card rounded="xl" class="mb-4 prayer-summary" variant="tonal">
-      <v-card-text class="text-center">
+    <v-row justify="center" class="mb-6">
+      <v-col cols="12" md="10" lg="8">
+        <v-card elevation="8" rounded="xl" class="pa-6 prayer-header">
+          <v-row align="center" justify="space-between">
 
-        <!-- Hijri Date -->
-        <template v-if="!pending && data">
-          <div class="hijri-date">
-            {{ data.data.date.hijri.date }}
-            · {{ data.data.date.hijri.month.en }}
-          </div>
+            <!-- LEFT -->
+            <v-col cols="12" md="6">
+              <div class="text-overline text-grey-lighten-1 mb-1">
+                Prayer Times
+              </div>
 
-          <div class="current-prayer">
-            Next Prayer: <strong>{{ nextPrayer }}</strong>
-          </div>
+              <div class="text-h4 font-weight-bold mb-2 gradient-text">
+                🕌 {{ prayer.data?.data?.date?.hijri?.date }}
+                {{ prayer.data?.data?.date?.hijri?.month?.en }}
+              </div>
 
-          <div class="countdown">
-            ⏳ {{ countdown }}
-          </div>
-        </template>
+              <div class="text-subtitle-2 text-grey">
+                {{ prayer.data?.data?.date?.readable }}
+              </div>
+            </v-col>
 
-        <!-- Skeleton -->
-        <template v-else>
-          <v-skeleton-loader type="text" width="60%" class="mx-auto mb-2" />
-          <v-skeleton-loader type="text" width="50%" class="mx-auto mb-2" />
-          <v-skeleton-loader type="text" width="40%" class="mx-auto" />
-        </template>
+            <!-- RIGHT -->
+            <v-col cols="12" md="6">
+              <v-row dense>
 
-      </v-card-text>
-    </v-card>
+                <!-- COUNTDOWN -->
+                <v-col cols="12" sm="6">
+                  <v-card class="glass pa-3 text-center" rounded="lg" elevation="2">
+                    <v-icon size="28" color="success">mdi-timer-outline</v-icon>
+                    <div class="text-caption mt-1">Next Prayer In</div>
+                    <div class="text-h6 font-weight-bold">
+                      {{ prayer.countdown }}
+                    </div>
+                  </v-card>
+                </v-col>
+
+                <!-- QIBLA -->
+                <v-col cols="12" sm="6">
+                  <v-card class="glass pa-3 text-center" rounded="lg" elevation="2">
+                    <v-icon size="28" color="deep-purple">mdi-compass-outline</v-icon>
+                    <div class="text-caption mt-1">Qibla Direction</div>
+                    <div class="text-h6 font-weight-bold">
+                      {{ prayer.qibla?.toFixed(1) }}°
+                    </div>
+                  </v-card>
+                </v-col>
+
+              </v-row>
+            </v-col>
+
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
 
     <!-- Prayer Times -->
-    <v-card rounded="xl" class="prayer-times-card">
-      <v-card-title class="text-subtitle-1">
-        Prayer Times
-      </v-card-title>
-
-      <v-card-text>
-        <div class="prayer-scroll">
-
-          <!-- Loaded -->
-          <template v-if="!pending && data">
-            <div v-for="prayer in prayerOrder" :key="prayer" class="prayer-pill"
-              :class="{ active: prayer === nextPrayer }">
-              <div class="prayer-name">
-                {{ prayer }}
-              </div>
-
-              <div class="prayer-time">
-                {{ format12h(data.data.timings[prayer]) }}
+    <v-row class="mb-3">
+      <v-col cols="12">
+        <v-card rounded="xl" elevation="8" class="prayer-times-card-modern pa-4">
+          <div class="d-flex align-center justify-space-between mb-4">
+            <div>
+              <div class="text-overline text-grey-lighten-1">Today</div>
+              <div class="text-h6 font-weight-bold">
+                Prayer Schedule
               </div>
             </div>
-          </template>
 
-          <!-- Skeleton -->
-          <template v-else>
-            <v-skeleton-loader v-for="n in 5" :key="n" type="card" width="90" height="60" class="mr-3" />
-          </template>
+            <v-chip class="text-white" color="primary" variant="tonal" size="small">
+              Next: {{ prayer.nextPrayer }}
+            </v-chip>
+          </div>
 
-        </div>
-      </v-card-text>
-    </v-card>
+          <div class="prayer-scroll-modern">
+
+            <!-- Loaded -->
+            <template v-if="!prayer.pending">
+              <div v-for="p in prayer.prayerOrder" :key="p" class="prayer-card"
+                :class="{ active: p === prayer.nextPrayer }">
+                <v-icon size="26" class="mb-1">
+                  {{ prayer.icons[p] }}
+                </v-icon>
+
+                <div class="prayer-name">
+                  {{ p }}
+                </div>
+
+                <div class="prayer-time">
+                  {{ format12h(prayer.data.data.timings[p]) }}
+                </div>
+              </div>
+            </template>
+
+            <!-- Skeleton -->
+            <template v-else>
+              <v-skeleton-loader v-for="n in 5" :key="n" type="card" width="110" height="90" class="mr-3 rounded-lg" />
+            </template>
+
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Ayah of the Day -->
+    <v-row>
+      <v-col cols="12">
+        <v-card rounded="xl" elevation="10" class="ayah-card-modern pa-5">
+          <div class="d-flex align-center justify-space-between mb-3">
+            <div>
+              <div class="text-overline text-grey-lighten-1">Daily Reflection</div>
+              <div class="text-h6 font-weight-bold">
+                Ayah of the Day
+              </div>
+            </div>
+
+            <v-chip class="text-white" size="small" variant="tonal">
+              Quran
+            </v-chip>
+          </div>
+
+          <div class="ayah-arabic-modern mb-3">
+            ﴿ إِنَّ مَعَ الْعُسْرِ يُسْرًا ﴾
+          </div>
+
+          <div class="ayah-translation-modern">
+            “Indeed, with hardship comes ease.”
+          </div>
+
+          <v-divider class="my-4" opacity="0.2" />
+
+          <div class="d-flex justify-space-between align-center">
+            <div class="ayah-meta">
+              Surah Ash-Sharh • 94:6
+            </div>
+
+            <div>
+              <v-btn icon="mdi-play-circle-outline" variant="text" />
+              <v-btn icon="mdi-share-variant-outline" variant="text" />
+              <v-btn icon="mdi-bookmark-outline" variant="text" />
+            </div>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
 
     <!-- Resume Reading -->
-    <v-card class="resume-card" rounded="xl">
-      <v-card-title>Continue Reading</v-card-title>
-      <v-card-text>
-        <div class="surah-name">Surah Al-Baqarah</div>
-        <div class="ayah-info">Ayah 153</div>
-        <v-progress-linear height="6" model-value="45" rounded />
-      </v-card-text>
-      <v-card-actions>
-        <v-btn block color="primary" rounded="lg">Continue</v-btn>
-      </v-card-actions>
-    </v-card>
+    <v-row>
+      <v-col cols="12">
+        <v-card rounded="xl" elevation="10" class="resume-card-modern pa-5">
+          <div class="d-flex align-center justify-space-between mb-4">
+            <div>
+              <div class="text-overline text-grey-lighten-1">
+                Continue Reading
+              </div>
+              <div class="text-h6 font-weight-bold">
+                Surah Al-Baqarah
+              </div>
+            </div>
+
+            <v-icon size="36" color="teal">
+              mdi-book-open-page-variant
+            </v-icon>
+          </div>
+
+          <div class="ayah-info-modern mb-3">
+            Last Read: Ayah <strong>153</strong>
+          </div>
+
+          <v-progress-linear height="8" model-value="45" rounded color="teal" class="mb-2" />
+
+          <div class="progress-text mb-4">
+            45% completed
+          </div>
+
+          <v-btn block rounded="xl" size="large" color="teal" class="resume-btn">
+            Continue Reading
+          </v-btn>
+        </v-card>
+
+      </v-col>
+    </v-row>
 
     <!-- Quick Actions -->
     <!-- <v-row class="quick-actions" dense>
@@ -85,22 +192,6 @@
       </v-col>
     </v-row> -->
 
-    <!-- Ayah of the Day -->
-    <v-card class="ayah-card" rounded="xl" variant="tonal">
-      <v-card-title>Ayah of the Day</v-card-title>
-      <v-card-text class="ayah-content">
-        <div class="ayah-arabic">
-          ﴿ إِنَّ مَعَ الْعُسْرِ يُسْرًا ﴾
-        </div>
-        <div class="ayah-translation">
-          Indeed, with hardship comes ease.
-        </div>
-      </v-card-text>
-      <v-card-actions class="ayah-actions">
-        <v-btn icon="mdi-play-circle-outline" />
-        <v-btn icon="mdi-share-variant-outline" />
-      </v-card-actions>
-    </v-card>
 
     <!-- Mini Audio Player -->
     <!-- <v-card class="audio-card" rounded="lg">
@@ -119,154 +210,7 @@
 
 
 <script setup>
-/* ---------------- STATE ---------------- */
-
-const data = ref(null)
-const pending = ref(true)
-const countdown = ref('')
-
-const latitude = ref(null)
-const longitude = ref(null)
-
-const prayerOrder = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha']
-
-let countdownTimer
-
-const today = new Date().toLocaleDateString('en-GB').replace(/\//g, '-')
-
-/* ---------------- LIFECYCLE ---------------- */
-
-onMounted(() => {
-  getLocation()
-  countdownTimer = setInterval(updateCountdown, 1000)
-})
-
-onUnmounted(() => {
-  clearInterval(countdownTimer)
-})
-
-/* ---------------- LOCATION ---------------- */
-
-function getLocation() {
-  if (!navigator.geolocation) {
-    fallbackLocation()
-    fetchPrayerTimes()
-    return
-  }
-
-  navigator.geolocation.getCurrentPosition(
-    pos => {
-      latitude.value = pos.coords.latitude
-      longitude.value = pos.coords.longitude
-      fetchPrayerTimes()
-    },
-    () => {
-      fallbackLocation()
-      fetchPrayerTimes()
-    }
-  )
-}
-
-function fallbackLocation() {
-  // Makkah fallback
-  latitude.value = 21.4225
-  longitude.value = 39.8262
-}
-
-/* ---------------- FETCH PRAYER TIMES ---------------- */
-
-async function fetchPrayerTimes() {
-  try {
-    pending.value = true
-
-    const cacheKey = `home_prayer_${latitude.value}_${longitude.value}_${today}`
-    const cached = localStorage.getItem(cacheKey)
-
-    if (cached) {
-      data.value = JSON.parse(cached)
-      pending.value = false
-      return
-    }
-
-    const response = await $fetch(
-      `https://api.aladhan.com/v1/timings/${today}`,
-      {
-        params: {
-          latitude: latitude.value,
-          longitude: longitude.value,
-          method: 2,
-        },
-      }
-    )
-
-    data.value = response
-    localStorage.setItem(cacheKey, JSON.stringify(response))
-  } catch (e) {
-    console.error('Failed to fetch prayer times', e)
-  } finally {
-    pending.value = false
-  }
-}
-
-/* ---------------- NEXT PRAYER ---------------- */
-
-const nextPrayer = computed(() => {
-  if (!data.value) return null
-
-  const now = new Date()
-
-  const upcoming = prayerOrder
-    .map(prayer => {
-      const [h, m] = data.value.data.timings[prayer].split(':').map(Number)
-      const d = new Date()
-      d.setHours(h, m, 0, 0)
-      return { prayer, time: d }
-    })
-    .filter(p => p.time > now)
-    .sort((a, b) => a.time - b.time)
-
-  return upcoming[0]?.prayer || 'Fajr'
-})
-
-/* ---------------- COUNTDOWN ---------------- */
-
-function updateCountdown() {
-  if (!data.value || !nextPrayer.value) return
-
-  const now = new Date()
-  const [h, m] =
-    data.value.data.timings[nextPrayer.value].split(':').map(Number)
-
-  const target = new Date()
-  target.setHours(h, m, 0, 0)
-
-  if (target < now) target.setDate(target.getDate() + 1)
-
-  const diff = target - now
-
-  const hrs = Math.floor(diff / 3600000)
-  const mins = Math.floor((diff % 3600000) / 60000)
-  const secs = Math.floor((diff % 60000) / 1000)
-
-  countdown.value = `${hrs}h ${mins}m ${secs}s`
-}
-
-/* ---------------- FORMAT ---------------- */
-
-function format12h(time) {
-  if (!time) return ''
-  const [h, m] = time.split(':').map(Number)
-
-  const d = new Date()
-  d.setHours(h, m, 0, 0)
-
-  return d.toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-    hour12: true,
-  })
-}
-
+const prayer = usePrayerStore()
 </script>
 <style scoped>
 .v-skeleton-loader {
@@ -310,28 +254,41 @@ function format12h(time) {
 }
 
 /* Ayah Card */
-.ayah-card {
-  margin-bottom: 20px;
+.ayah-card-modern {
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 
-.ayah-content {
+.ayah-arabic-modern {
+  font-size: 28px;
+  font-weight: 600;
   text-align: center;
+  line-height: 1.9;
+  letter-spacing: 1px;
+  font-family: 'Scheherazade New', 'Amiri', serif;
 }
 
-.ayah-arabic {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  font-family: 'Amiri', serif;
+.ayah-translation-modern {
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.9;
+  font-style: italic;
 }
 
-.ayah-translation {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  opacity: 0.75;
+.ayah-meta {
+  font-size: 12px;
+  opacity: 0.7;
 }
 
-.ayah-actions {
-  justify-content: center;
+.ayah-card-modern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(0, 255, 200, 0.08), transparent 45%);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 /* Audio Player */
@@ -378,42 +335,104 @@ function format12h(time) {
 }
 
 /* Prayer Times */
-.prayer-times-card {
-  margin-bottom: 20px;
+.prayer-times-card-modern {
+  background: linear-gradient(135deg, #0f2027, #203a43d6, #2c5364b0);
+  color: white;
 }
 
-.prayer-scroll {
+.prayer-scroll-modern {
   display: flex;
-  gap: 12px;
+  gap: 14px;
+  scrollbar-width: none;
   overflow-x: auto;
-  padding-bottom: 6px;
+  padding-inline: 14px;
 }
 
-.prayer-pill {
-  min-width: 90px;
-  padding: 10px;
-  border-radius: 14px;
+.prayer-card {
+  min-width: 110px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
   text-align: center;
-  background: rgba(0, 0, 0, 0.04);
-  flex-shrink: 0;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.prayer-pill.active {
-  background: linear-gradient(135deg, #1f7a63, #145a4a);
-  color: #ffffff;
+.prayer-card:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.prayer-card.active {
+  background: linear-gradient(135deg, #00f5a0, #00d9f5);
+  color: black;
 }
 
 .prayer-name {
-  font-size: 0.85rem;
-  opacity: 0.8;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 6px;
 }
 
 .prayer-time {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
 }
 
 .v-theme--dark .prayer-pill {
   background: rgba(255, 255, 255, 0.08);
+}
+
+.prayer-header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  backdrop-filter: blur(12px);
+}
+
+.glass {
+  background: rgb(255 255 255);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #00f5a0, #00d9f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resume-card-modern {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-card-modern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(0, 255, 200, 0.12), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 45%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.ayah-info-modern {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.progress-text {
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: right;
+}
+
+.resume-btn {
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 </style>

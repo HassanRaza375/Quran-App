@@ -38,10 +38,8 @@
               align="end"
               class="verse-text"
             >
-              <p>
-                {{ ayah.text }}
-                <span class="ayah-number">﴿{{ ayah.numberInSurah }}﴾</span>
-              </p>
+              {{ ayah.text }}
+              <span class="ayah-number">﴿{{ ayah.numberInSurah }}﴾</span>
             </div>
           </div>
         </v-sheet>
@@ -51,7 +49,7 @@
 </template>
 
 <script setup>
-const { id } = useRoute().params
+const { id } = useRoute().params;
 const { getJuz } = useJuz();
 const { data, pending, error } = useAsyncData("juz", () => getJuz(id));
 </script>
@@ -62,13 +60,19 @@ const { data, pending, error } = useAsyncData("juz", () => getJuz(id));
   font-size: 2.5rem;
   line-height: 1.4;
 }
+.ayah-number {
+  margin-inline-start: 12px;
+  font-size: 1rem;
+  color: rgba(var(--v-theme-on-surface), 0.5);
+}
 
 /* Verse styling */
 .verse-text {
   font-family: "Amiri Quran", serif;
   font-size: 2rem;
-  color: #1b1b1b;
-  line-height: 2.1;
+  color: rgb(var(--v-theme-on-surface));
+  line-height: 2.6;
+  margin-bottom: 1.6rem;
 }
 
 .rtl {
@@ -77,5 +81,11 @@ const { data, pending, error } = useAsyncData("juz", () => getJuz(id));
 
 .skeleton-rtl .v-skeleton-loader__text {
   margin-left: auto;
+}
+@media (max-width: 600px) {
+  .verse-text {
+    font-size: 1.7rem;
+    line-height: 2.4;
+  }
 }
 </style>

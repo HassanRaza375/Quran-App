@@ -3,16 +3,33 @@
     <!-- Translation & Audio Bar -->
     <v-row>
       <v-col cols="12">
-        <v-sheet elevation="0" rounded="lg" class="pa-3 mb-6 d-flex justify-space-between align-center translation-bar">
+        <v-sheet
+          elevation="0"
+          rounded="lg"
+          class="pa-3 mb-6 d-flex justify-space-between align-center translation-bar"
+          color="surface"
+        >
           <div class="d-flex ga-2">
-            <v-chip v-for="item in translations" :key="item" :color="selectedType === item ? 'primary' : undefined"
-              :variant="selectedType === item ? 'flat' : 'outlined'" size="small" class="text-uppercase"
-              @click="setTranslation(item)">
+            <v-chip
+              v-for="item in translations"
+              :key="item"
+              :color="selectedType === item ? 'primary' : undefined"
+              :variant="selectedType === item ? 'flat' : 'outlined'"
+              size="small"
+              class="text-uppercase"
+              @click="setTranslation(item)"
+            >
               {{ item }}
             </v-chip>
           </div>
 
-          <v-btn prepend-icon="mdi-volume-high" rounded="xl" variant="tonal" color="primary" @click="dialog = true">
+          <v-btn
+            prepend-icon="mdi-volume-high"
+            rounded="xl"
+            variant="tonal"
+            color="primary"
+            @click="dialog = true"
+          >
             Audio
           </v-btn>
         </v-sheet>
@@ -22,7 +39,12 @@
     <!-- Surah Header -->
     <v-row>
       <v-col cols="12">
-        <v-sheet elevation="1" rounded="lg" class="pa-6 mb-8 surah-header">
+        <v-sheet
+          elevation="1"
+          rounded="lg"
+          class="pa-6 mb-8 surah-header"
+          color="surface"
+        >
           <h1 class="arabic-title text-center mb-3">
             {{ data?.surahNameArabicLong }}
           </h1>
@@ -42,12 +64,18 @@
     <v-row>
       <v-col cols="12">
         <!-- Loader -->
-        <v-sheet v-if="pending" class="pa-6">
+        <v-sheet v-if="pending" class="pa-6" color="surface">
           <v-skeleton-loader type="heading, paragraph, paragraph, paragraph" />
         </v-sheet>
 
         <!-- Verses -->
-        <v-sheet v-else elevation="0" rounded="lg" class="pa-6 verses-sheet">
+        <v-sheet
+          v-else
+          elevation="0"
+          rounded="lg"
+          class="pa-6 verses-sheet"
+          color="surface"
+        >
           <div v-for="(item, index) in verses" :key="index" class="verse-block">
             <section :id="`ayah-${index + 1}`" class="verse-text">
               {{ item }}
@@ -69,14 +97,23 @@
             </div>
           </div>
 
-          <v-btn icon="mdi-close" size="small" variant="text" @click="dialog = false" />
+          <v-btn
+            icon="mdi-close"
+            size="small"
+            variant="text"
+            @click="dialog = false"
+          />
         </v-card-title>
 
         <v-divider />
 
         <v-card-text class="pt-4">
           <audio controls class="w-100">
-            <source :src="data?.audio[1]?.url" preload="auto" type="audio/mpeg" />
+            <source
+              :src="data?.audio[1]?.url"
+              preload="auto"
+              type="audio/mpeg"
+            />
           </audio>
         </v-card-text>
       </v-card>
@@ -130,11 +167,6 @@ const setTranslation = (type) => {
   font-size: 0.95rem;
 }
 
-/* Verse container */
-.verses-sheet {
-  background: transparent;
-}
-
 /* Verse block spacing */
 .verse-block {
   margin-bottom: 2.5rem;
@@ -147,19 +179,19 @@ const setTranslation = (type) => {
   line-height: 2.4;
   direction: rtl;
   text-align: right;
-  color: #1b1b1b;
+  color: rgb(var(--v-theme-on-surface));
 }
 
 /* Ayah number */
 .ayah-number {
   font-size: 1rem;
   margin-inline-start: 8px;
-  color: #777;
+  color: rgba(var(--v-theme-on-surface), 0.5);
 }
 
 /* Translation bar */
 .translation-bar {
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(var(--v-theme-surface), 0.8);
   display: flex;
   overflow-x: auto;
   scrollbar-width: none;

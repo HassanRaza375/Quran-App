@@ -2,7 +2,7 @@
   <v-container class="home-container">
     <!-- Prayer Summary -->
     <v-row justify="center" class="mb-6">
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12">
         <v-card elevation="8" rounded="xl" class="pa-6 prayer-header">
           <v-row align="center" justify="space-between">
 
@@ -391,7 +391,7 @@ const prayer = usePrayerStore()
 }
 
 .glass {
-  background: rgb(255 255 255);
+  background: rgba(var(--v-theme-surface), 0.85);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -401,7 +401,6 @@ const prayer = usePrayerStore()
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .resume-card-modern {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;

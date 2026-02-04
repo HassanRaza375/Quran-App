@@ -1,14 +1,8 @@
 function canNotify(prayer) {
-  const saved = localStorage.getItem("prayerSettings");
-  if (!saved) return true;
+  const settings = JSON.parse(localStorage.getItem("prayerSettings") || "{}");
 
-  const settings = JSON.parse(saved);
+  if (!settings.notificationsEnabled) return false;
+  if (!settings.enabledPrayers?.[prayer]) return false;
 
-  // Master switch
-  if (settings.notificationsEnabled === false) return false;
-
-  // Per-prayer toggle
-  if (settings.enabledPrayers?.[prayer] === false) return false;
-
-  return true;
+  return Notification.permission === "granted";
 }

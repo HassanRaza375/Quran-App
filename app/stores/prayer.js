@@ -13,6 +13,7 @@ export const usePrayerStore = defineStore("prayer", () => {
 
   const today = new Date().toLocaleDateString("en-GB").replace(/\//g, "-");
   const prayerOrder = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
+
   const icons = {
     Fajr: "mdi-weather-sunset-up",
     Dhuhr: "mdi-weather-sunny",
@@ -20,8 +21,29 @@ export const usePrayerStore = defineStore("prayer", () => {
     Maghrib: "mdi-weather-sunset-down",
     Isha: "mdi-weather-night",
   };
+
   let countdownTimer;
   let autoRefreshTimer;
+
+  /* ---------------- SETTINGS ---------------- */
+
+  function getSettings() {
+    return JSON.parse(localStorage.getItem("prayerSettings") || "{}");
+  }
+
+  function canNotify(prayer) {
+    const s = getSettings();
+
+    if (!s.notificationsEnabled) return false;
+    if (!s.enabledPrayers?.[prayer]) return false;
+
+    return Notification.permission === "granted";
+  }
+
+  function getOffset() {
+    const s = getSettings();
+    return s.reminderOffset || 0;
+  }
 
   /* ---------------- LOCATION ---------------- */
 
@@ -42,7 +64,7 @@ export const usePrayerStore = defineStore("prayer", () => {
       () => {
         fallbackLocation();
         fetchPrayerTimes();
-      },
+      }
     );
   }
 
@@ -54,7 +76,7 @@ export const usePrayerStore = defineStore("prayer", () => {
   /* ---------------- FETCH ---------------- */
 
   const cacheKey = computed(
-    () => `prayer_${latitude.value}_${longitude.value}_${today}`,
+    () => `prayer_${latitude.value}_${longitude.value}_${today}`
   );
 
   async function fetchPrayerTimes() {
@@ -65,18 +87,20 @@ export const usePrayerStore = defineStore("prayer", () => {
       const cached = localStorage.getItem(cacheKey.value);
       if (cached) {
         data.value = JSON.parse(cached);
-        pending.value = false;
         scheduleAutoRefresh();
         return;
       }
 
-      data.value = await $fetch(`https://api.aladhan.com/v1/timings/${today}`, {
-        params: {
-          latitude: latitude.value,
-          longitude: longitude.value,
-          method: 2,
-        },
-      });
+      data.value = await $fetch(
+        `https://api.aladhan.com/v1/timings/${today}`,
+        {
+          params: {
+            latitude: latitude.value,
+            longitude: longitude.value,
+            method: 2,
+          },
+        }
+      );
 
       localStorage.setItem(cacheKey.value, JSON.stringify(data.value));
       scheduleAutoRefresh();
@@ -107,9 +131,8 @@ export const usePrayerStore = defineStore("prayer", () => {
 
     return upcoming[0]?.prayer || "Fajr";
   });
-  watch(nextPrayer, () => {
-    lastNotified = null;
-  });
+
+  watch(nextPrayer, () => (lastNotified = null));
 
   /* ---------------- COUNTDOWN ---------------- */
 
@@ -117,22 +140,20 @@ export const usePrayerStore = defineStore("prayer", () => {
     if (!data.value || !nextPrayer.value) return;
 
     const now = new Date();
+    const offset = getOffset();
 
     const [h, m] = data.value.data.timings[nextPrayer.value]
       .split(":")
       .map(Number);
 
     const target = new Date();
-    target.setHours(h, m, 0, 0);
+    target.setHours(h, m - offset, 0, 0);
 
-    // Handle next-day Fajr
     if (target < now) target.setDate(target.getDate() + 1);
 
     const diff = target - now;
 
-    // 🔔 Fire notification exactly at prayer time
     if (diff <= 1000 && lastNotified !== nextPrayer.value) {
-      // ✅ Settings gate
       if (!canNotify(nextPrayer.value)) return;
 
       showPrayerNotification(nextPrayer.value);
@@ -183,36 +204,26 @@ export const usePrayerStore = defineStore("prayer", () => {
     qibla.value = (angle + 360) % 360;
   }
 
-  /* ---------------- Notification ---------------- */
-  function requestNotificationPermission() {
-    if (!("Notification" in window)) return;
-
-    if (Notification.permission === "default") {
-      Notification.requestPermission();
-    }
-  }
+  /* ---------------- NOTIFICATION ---------------- */
 
   function showPrayerNotification(prayer) {
-    if (Notification.permission !== "granted") return;
+    if (!("serviceWorker" in navigator)) return;
 
-    new Notification(`🕌 ${prayer} time`, {
-      body: `It’s time for ${prayer} prayer.`,
-      icon: "/icon.png", // optional
-      vibrate: [200, 100, 200], // works on Android
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.showNotification(`🕌 ${prayer} time`, {
+        body: `It’s time for ${prayer} prayer.`,
+        icon: "/pwa-192x192.png",
+        badge: "/pwa-192x192.png",
+        vibrate: [200, 100, 200],
+        tag: prayer,
+        renotify: true,
+      });
     });
   }
-  function runOnce() {
-    new Notification(`🕌 Dhuhar time`, {
-      body: `Testing For Notification`,
-      icon: "/pwa-192x192.png", // optional
-      vibrate: [200, 100, 200], // works on Android
-    });
-  }
+
   function init() {
     if (process.client && !data.value) {
-      requestNotificationPermission();
       getLocation();
-      runOnce()
       countdownTimer = setInterval(updateCountdown, 1000);
     }
   }

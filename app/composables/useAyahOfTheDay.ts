@@ -8,7 +8,6 @@ export const useAyahOfTheDay = () => {
     try {
       const today = new Date().toISOString().slice(0, 10);
       const saved = localStorage.getItem("ayah-of-day");
-        debugger
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed.date === today) {
@@ -27,9 +26,10 @@ export const useAyahOfTheDay = () => {
 
       ayah.value = {
         arabic: data.arabic1,
-        translation: data.translation,
-        surah_name: data.surah_name,
-        ayah_number: `${surah}:${ayahNo}`,
+        translation: data.english,
+        surah_name: data.surahNameArabicLong,
+        ayah_number: ayahNo,
+        surah_number: surah,
         urdu: data.urdu,
       };
 

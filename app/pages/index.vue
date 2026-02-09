@@ -5,7 +5,6 @@
       <v-col cols="12">
         <v-card elevation="8" rounded="xl" class="pa-6 prayer-header">
           <v-row align="center" justify="space-between">
-
             <!-- LEFT -->
             <v-col cols="12" md="6">
               <div class="text-overline text-grey-lighten-1 mb-1">
@@ -25,10 +24,13 @@
             <!-- RIGHT -->
             <v-col cols="12" md="6">
               <v-row dense>
-
                 <!-- COUNTDOWN -->
                 <v-col cols="12" sm="6">
-                  <v-card class="glass pa-3 text-center" rounded="lg" elevation="2">
+                  <v-card
+                    class="glass pa-3 text-center"
+                    rounded="lg"
+                    elevation="2"
+                  >
                     <v-icon size="28" color="success">mdi-timer-outline</v-icon>
                     <div class="text-caption mt-1">Next Prayer In</div>
                     <div class="text-h6 font-weight-bold">
@@ -39,18 +41,22 @@
 
                 <!-- QIBLA -->
                 <v-col cols="12" sm="6">
-                  <v-card class="glass pa-3 text-center" rounded="lg" elevation="2">
-                    <v-icon size="28" color="deep-purple">mdi-compass-outline</v-icon>
+                  <v-card
+                    class="glass pa-3 text-center"
+                    rounded="lg"
+                    elevation="2"
+                  >
+                    <v-icon size="28" color="deep-purple"
+                      >mdi-compass-outline</v-icon
+                    >
                     <div class="text-caption mt-1">Qibla Direction</div>
                     <div class="text-h6 font-weight-bold">
                       {{ prayer.qibla?.toFixed(1) }}°
                     </div>
                   </v-card>
                 </v-col>
-
               </v-row>
             </v-col>
-
           </v-row>
         </v-card>
       </v-col>
@@ -59,26 +65,36 @@
     <!-- Prayer Times -->
     <v-row class="mb-3">
       <v-col cols="12">
-        <v-card rounded="xl" elevation="8" class="prayer-times-card-modern pa-4">
+        <v-card
+          rounded="xl"
+          elevation="8"
+          class="prayer-times-card-modern pa-4"
+        >
           <div class="d-flex align-center justify-space-between mb-4">
             <div>
               <div class="text-overline text-grey-lighten-1">Today</div>
-              <div class="text-h6 font-weight-bold">
-                Prayer Schedule
-              </div>
+              <div class="text-h6 font-weight-bold">Prayer Schedule</div>
             </div>
 
-            <v-chip class="text-white" color="primary" variant="tonal" size="small">
+            <v-chip
+              class="text-white"
+              color="primary"
+              variant="tonal"
+              size="small"
+            >
               Next: {{ prayer.nextPrayer }}
             </v-chip>
           </div>
 
           <div class="prayer-scroll-modern">
-
             <!-- Loaded -->
             <template v-if="!prayer.pending">
-              <div v-for="p in prayer.prayerOrder" :key="p" class="prayer-card"
-                :class="{ active: p === prayer.nextPrayer }">
+              <div
+                v-for="p in prayer.prayerOrder"
+                :key="p"
+                class="prayer-card"
+                :class="{ active: p === prayer.nextPrayer }"
+              >
                 <v-icon size="26" class="mb-1">
                   {{ prayer.icons[p] }}
                 </v-icon>
@@ -95,55 +111,21 @@
 
             <!-- Skeleton -->
             <template v-else>
-              <v-skeleton-loader v-for="n in 5" :key="n" type="card" width="110" height="90" class="mr-3 rounded-lg" />
+              <v-skeleton-loader
+                v-for="n in 5"
+                :key="n"
+                type="card"
+                width="110"
+                height="90"
+                class="mr-3 rounded-lg"
+              />
             </template>
-
           </div>
         </v-card>
       </v-col>
     </v-row>
 
-    <!-- Ayah of the Day -->
-    <v-row>
-      <v-col cols="12">
-        <v-card rounded="xl" elevation="10" class="ayah-card-modern pa-5">
-          <div class="d-flex align-center justify-space-between mb-3">
-            <div>
-              <div class="text-overline text-grey-lighten-1">Daily Reflection</div>
-              <div class="text-h6 font-weight-bold">
-                Ayah of the Day
-              </div>
-            </div>
-
-            <v-chip class="text-white" size="small" variant="tonal">
-              Quran
-            </v-chip>
-          </div>
-
-          <div class="ayah-arabic-modern mb-3">
-            ﴿ إِنَّ مَعَ الْعُسْرِ يُسْرًا ﴾
-          </div>
-
-          <div class="ayah-translation-modern">
-            “Indeed, with hardship comes ease.”
-          </div>
-
-          <v-divider class="my-4" opacity="0.2" />
-
-          <div class="d-flex justify-space-between align-center">
-            <div class="ayah-meta">
-              Surah Ash-Sharh • 94:6
-            </div>
-
-            <div>
-              <v-btn icon="mdi-play-circle-outline" variant="text" />
-              <v-btn icon="mdi-share-variant-outline" variant="text" />
-              <v-btn icon="mdi-bookmark-outline" variant="text" />
-            </div>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
+    <lazy-services-ayah-of-day />
 
     <!-- Resume Reading -->
     <v-row>
@@ -154,31 +136,36 @@
               <div class="text-overline text-grey-lighten-1">
                 Continue Reading
               </div>
-              <div class="text-h6 font-weight-bold">
-                Surah Al-Baqarah
-              </div>
+              <div class="text-h6 font-weight-bold">Surah Al-Baqarah</div>
             </div>
 
-            <v-icon size="36" color="teal">
-              mdi-book-open-page-variant
-            </v-icon>
+            <v-icon size="36" color="teal"> mdi-book-open-page-variant </v-icon>
           </div>
 
           <div class="ayah-info-modern mb-3">
             Last Read: Ayah <strong>153</strong>
           </div>
 
-          <v-progress-linear height="8" model-value="45" rounded color="teal" class="mb-2" />
+          <v-progress-linear
+            height="8"
+            model-value="45"
+            rounded
+            color="teal"
+            class="mb-2"
+          />
 
-          <div class="progress-text mb-4">
-            45% completed
-          </div>
+          <div class="progress-text mb-4">45% completed</div>
 
-          <v-btn block rounded="xl" size="large" color="teal" class="resume-btn">
+          <v-btn
+            block
+            rounded="xl"
+            size="large"
+            color="teal"
+            class="resume-btn"
+          >
             Continue Reading
           </v-btn>
         </v-card>
-
       </v-col>
     </v-row>
 
@@ -192,7 +179,6 @@
       </v-col>
     </v-row> -->
 
-
     <!-- Mini Audio Player -->
     <!-- <v-card class="audio-card" rounded="lg">
       <div class="audio-content">
@@ -204,13 +190,11 @@
         <v-btn icon="mdi-chevron-up" />
       </div>
     </v-card> -->
-
   </v-container>
 </template>
 
-
 <script setup>
-const prayer = usePrayerStore()
+const prayer = usePrayerStore();
 </script>
 <style scoped>
 .v-skeleton-loader {
@@ -265,7 +249,7 @@ const prayer = usePrayerStore()
   text-align: center;
   line-height: 1.9;
   letter-spacing: 1px;
-  font-family: 'Scheherazade New', 'Amiri', serif;
+  font-family: "Scheherazade New", "Amiri", serif;
 }
 
 .ayah-translation-modern {
@@ -281,12 +265,20 @@ const prayer = usePrayerStore()
 }
 
 .ayah-card-modern::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(0, 255, 200, 0.08), transparent 45%);
+    radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(0, 255, 200, 0.08),
+      transparent 45%
+    );
   border-radius: inherit;
   pointer-events: none;
 }
@@ -409,12 +401,20 @@ const prayer = usePrayerStore()
 }
 
 .resume-card-modern::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top right, rgba(0, 255, 200, 0.12), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 45%);
+    radial-gradient(
+      circle at top right,
+      rgba(0, 255, 200, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(255, 255, 255, 0.08),
+      transparent 45%
+    );
   border-radius: inherit;
   pointer-events: none;
 }

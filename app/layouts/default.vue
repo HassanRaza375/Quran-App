@@ -22,13 +22,17 @@
 </template>
 
 <script setup>
-import { useTheme } from 'vuetify'
+import { useTheme } from "vuetify";
 
-const theme = useTheme()
+const theme = useTheme();
 const prayer = usePrayerStore();
 const drawer = ref(false);
+const { load } = useBookmarks();
 
+// load favorites once on client
 onMounted(() => {
+  console.log("storage?", useNuxtApp().$storage)
   prayer.init();
+  load();
 });
 </script>

@@ -77,10 +77,26 @@
           color="surface"
         >
           <div v-for="(item, index) in verses" :key="index" class="verse-block">
-            <section :id="`ayah-${index + 1}`" class="verse-text">
-              {{ item }}
-              <span class="ayah-number">﴿{{ index + 1 }}﴾</span>
-            </section>
+            <div class="d-flex align-start justify-end align-center ga-3">
+              <!-- Verse text -->
+              <section :id="`ayah-${index + 1}`" class="verse-text flex-1">
+                {{ item }}
+                <span class="ayah-number">﴿{{ index + 1 }}﴾</span>
+              </section>
+
+              <!-- Bookmark (Ayah favorite) -->
+              <v-btn
+                icon
+                size="small"
+                variant="text"
+                class="ayah-fav-btn"
+                @click.stop="toggleAyahBookmark(index + 1)"
+              >
+                <v-icon :color="isAyahFav(index + 1) ? 'amber' : 'grey'">
+                  {{ isAyahFav(index + 1) ? "mdi-star" : "mdi-star-outline" }}
+                </v-icon>
+              </v-btn>
+            </div>
           </div>
         </v-sheet>
       </v-col>
@@ -122,18 +138,21 @@
 </template>
 
 <script setup>
-definePageMeta({
-  layout: "reader",
-});
+definePageMeta({ layout: "reader" });
+
 const route = useRoute();
 const dialog = ref(false);
-const chapterNo = route.params.id;
+
+const chapterNo = computed(() => Number(route.params.id));
+
 const { getChapter } = useChapters();
 const { data, pending, error } = useAsyncData("chapters", () =>
-  getChapter(chapterNo),
+  getChapter(chapterNo.value),
 );
+
 const translations = ref(["arabic1", "arabic2", "english", "bengali", "urdu"]);
 const selectedType = ref("arabic1");
+
 const typeObject = computed(() => ({
   arabic1: data.value?.arabic1 ?? [],
   arabic2: data.value?.arabic2 ?? [],
@@ -142,13 +161,29 @@ const typeObject = computed(() => ({
   urdu: data.value?.urdu ?? [],
 }));
 
-const verses = computed(() => {
-  return typeObject.value[selectedType.value];
-});
+const verses = computed(() => typeObject.value[selectedType.value]);
+
 const setTranslation = (type) => {
   selectedType.value = type;
 };
+
+/* ---------- Ayah bookmarks ---------- */
+const { load, isAyahBookmarked, toggleAyah } = useBookmarks();
+
+onMounted(() => {
+  load(); // safe even if you already load in layout
+});
+
+const isAyahFav = (ayahNo) => {
+  return isAyahBookmarked(chapterNo.value, ayahNo);
+};
+
+const toggleAyahBookmark = (ayahNo) => {
+  toggleAyah(chapterNo.value, ayahNo);
+};
+/* ----------------------------------- */
 </script>
+
 <style scoped>
 .v-chip.v-chip--density-default {
   min-width: 70px;
@@ -197,4 +232,9 @@ const setTranslation = (type) => {
   scrollbar-width: none;
   gap: 8px;
 }
+.ayah-fav-btn {
+  margin-top: 6px;
+  flex: 0 0 auto;
+}
+
 </style>

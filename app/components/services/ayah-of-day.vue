@@ -1,7 +1,35 @@
 <script setup lang="ts">
 const { ayah, loading, fetchAyahOfTheDay } = useAyahOfTheDay();
-
+const { load, isAyahBookmarked, toggleAyah } = useBookmarks();
+onMounted(() => {
+  load(); // safe even if you already load in layout
+});
+const { toast } = useToast()
+const textToCopy: any = computed(() => {
+  if (!ayah.value) return ''
+  return `${ayah.value.arabic}\n\n“${ayah.value.urdu}”\n\nSurah ${ayah.value.surah_name} • ${ayah.value.surah_number}:${ayah.value.ayah_number}`
+})
 onMounted(fetchAyahOfTheDay);
+const copyText = async () => {
+  if (!process.client || !textToCopy.value) return
+
+  try {
+    await navigator.clipboard.writeText(textToCopy.value)
+    toast('Copied to clipboard!', { color: 'success' })
+  } catch (err) {
+    toast('Failed to copy', { color: 'error' })
+  }
+}
+
+const isAyahFav = (ayahNo: number) => {
+  console.log(ayah.value);
+
+  return isAyahBookmarked(ayah.value.surah_number, ayahNo);
+};
+
+const toggleAyahBookmark = (ayahNo: number) => {
+  toggleAyah(ayah.value.surah_number, ayahNo);
+};
 </script>
 
 <template>
@@ -38,13 +66,12 @@ onMounted(fetchAyahOfTheDay);
             </div>
 
             <div>
-              <v-btn
-                icon="mdi-refresh"
-                variant="text"
-                @click="fetchAyahOfTheDay"
-              />
-              <v-btn icon="mdi-share-variant-outline" variant="text" />
-              <v-btn icon="mdi-bookmark-outline" variant="text" />
+              <v-btn icon="mdi-refresh" variant="text" @click="fetchAyahOfTheDay" />
+              <v-btn icon="mdi-share-variant-outline" variant="text" @click="copyText" />
+              <v-btn v-if="ayah" :icon="isAyahFav(ayah.ayah_number) ? 'mdi-bookmark' : 'mdi-bookmark-outline'"
+                :color="isAyahFav(ayah.ayah_number) ? 'amber' : 'grey'" variant="text"
+                @click.stop="toggleAyahBookmark(ayah.ayah_number)" />
+
             </div>
           </div>
         </template>

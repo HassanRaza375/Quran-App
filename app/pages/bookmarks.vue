@@ -177,7 +177,7 @@ const ayahBookmarks = computed(() => {
 
       const s = surahMap.value.get(surahNo)
       const surahName =
-        s?.surahNameTranslation || s?.surahName || `Surah ${surahNo}`
+        s?.surahNameArabicLong || s?.surahName || `Surah ${surahNo}`
 
       return {
         id: k,

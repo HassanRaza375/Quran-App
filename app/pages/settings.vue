@@ -116,8 +116,11 @@ watch(
 
 watch(themeMode, (val) => {
   localStorage.setItem("themeMode", val);
-  applyTheme(val);
+  theme.global.name.value = val === "system"
+    ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    : val;
 });
+
 
 function applyTheme(mode) {
   if (mode === "system") {

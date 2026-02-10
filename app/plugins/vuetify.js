@@ -52,33 +52,25 @@ export default defineNuxtPlugin((nuxtApp) => {
   if (process.client) {
     const theme = vuetify.theme.global;
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem("themeMode");
+    const apply = () => {
+      const saved = localStorage.getItem("themeMode") || "system";
 
-    if (savedTheme) {
-      if (savedTheme === "system") {
-        const isDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
+      if (saved === "system") {
+        const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         theme.name.value = isDark ? "dark" : "light";
       } else {
-        theme.name.value = savedTheme;
+        theme.name.value = saved;
       }
-    } else {
-      // fallback to system
-      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      theme.name.value = isDark ? "dark" : "light";
-    }
+    };
 
-    // React to OS changes IF system selected
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        const current = localStorage.getItem("themeMode") || "system";
-        if (current === "system") {
-          theme.name.value = e.matches ? "dark" : "light";
-        }
-      });
+    apply();
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+      const current = localStorage.getItem("themeMode") || "system";
+      if (current === "system") {
+        theme.name.value = e.matches ? "dark" : "light";
+      }
+    });
   }
 
   nuxtApp.vueApp.use(vuetify);

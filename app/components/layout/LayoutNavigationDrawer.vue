@@ -32,7 +32,7 @@ const sidebarList = ref([
   { title: 'Per Page', icon: 'mdi-note-multiple', path: '/per-page-read' },
   { title: 'Prayer Times', icon: 'mdi-clock-outline', path: '/prayerTime' },
   { title: 'Qibla Direction', icon: 'mdi-compass-outline', path: '/qibla-direction' },
-
+  { title: 'Calender', icon: 'mdi-calendar', path: '/calender' },
   {
     title: 'Juz',
     icon: 'mdi-book',

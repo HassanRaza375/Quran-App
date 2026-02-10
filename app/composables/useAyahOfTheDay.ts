@@ -8,7 +8,6 @@ export const useAyahOfTheDay = () => {
     try {
       const today = new Date().toISOString().slice(0, 10);
       const saved = localStorage.getItem("ayah-of-day");
-        debugger
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed.date === today) {

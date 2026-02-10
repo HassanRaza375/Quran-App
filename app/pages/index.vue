@@ -62,6 +62,58 @@
       </v-col>
     </v-row>
 
+    <!-- 🌙 Ramadan Timings -->
+    <v-row v-if="prayer.isRamadan && !prayer.pending" class="mb-6">
+      <v-col cols="12">
+        <v-card rounded="xl" elevation="10" class="ramadan-card pa-5">
+          <div class="d-flex align-center justify-space-between mb-4">
+            <div>
+              <div class="text-overline">Ramadan</div>
+              <div class="text-h6 font-weight-bold">
+                🌙 Day {{ prayer.ramadanDay }}
+              </div>
+            </div>
+
+            <v-chip color="deep-purple" variant="tonal"> Blessed Month </v-chip>
+          </div>
+
+          <v-row dense>
+            <!-- Suhoor -->
+            <v-col cols="6">
+              <v-card class="glass pa-3 text-center" rounded="lg">
+                <v-icon size="26" color="teal">mdi-weather-night</v-icon>
+                <div class="text-caption mt-1">Suhoor Ends</div>
+                <div class="text-h6 font-weight-bold">
+                  {{ format12h(prayer.suhoorTime) }}
+                </div>
+              </v-card>
+            </v-col>
+
+            <!-- Iftar -->
+            <v-col cols="6">
+              <v-card class="glass pa-3 text-center" rounded="lg">
+                <v-icon size="26" color="orange"
+                  >mdi-weather-sunset-down</v-icon
+                >
+                <div class="text-caption mt-1">Iftar</div>
+                <div class="text-h6 font-weight-bold">
+                  {{ format12h(prayer.iftarTime) }}
+                </div>
+              </v-card>
+            </v-col>
+          </v-row>
+
+          <!-- Countdown -->
+          <div class="text-center mt-4">
+            <div class="text-caption">Iftar In</div>
+            <div class="text-h5 font-weight-bold gradient-text">
+              {{ prayer.iftarCountdown }}
+            </div>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
     <!-- Prayer Times -->
     <v-row class="mb-3">
       <v-col cols="12">
@@ -195,6 +247,9 @@
 
 <script setup>
 const prayer = usePrayerStore();
+onMounted(() => {
+  prayer.init();
+});
 </script>
 <style scoped>
 .v-skeleton-loader {
@@ -433,5 +488,29 @@ const prayer = usePrayerStore();
 .resume-btn {
   font-weight: 600;
   letter-spacing: 0.4px;
+}
+.ramadan-card {
+  background: linear-gradient(135deg, #1a2a3a, #203a43, #2c5364);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ramadan-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 215, 0, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(0, 255, 200, 0.1),
+      transparent 45%
+    );
+  pointer-events: none;
 }
 </style>

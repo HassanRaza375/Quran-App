@@ -64,7 +64,7 @@ export const usePrayerStore = defineStore("prayer", () => {
       () => {
         fallbackLocation();
         fetchPrayerTimes();
-      }
+      },
     );
   }
 
@@ -76,7 +76,7 @@ export const usePrayerStore = defineStore("prayer", () => {
   /* ---------------- FETCH ---------------- */
 
   const cacheKey = computed(
-    () => `prayer_${latitude.value}_${longitude.value}_${today}`
+    () => `prayer_${latitude.value}_${longitude.value}_${today}`,
   );
 
   async function fetchPrayerTimes() {
@@ -91,16 +91,13 @@ export const usePrayerStore = defineStore("prayer", () => {
         return;
       }
 
-      data.value = await $fetch(
-        `https://api.aladhan.com/v1/timings/${today}`,
-        {
-          params: {
-            latitude: latitude.value,
-            longitude: longitude.value,
-            method: 2,
-          },
-        }
-      );
+      data.value = await $fetch(`https://api.aladhan.com/v1/timings/${today}`, {
+        params: {
+          latitude: latitude.value,
+          longitude: longitude.value,
+          method: 2,
+        },
+      });
 
       localStorage.setItem(cacheKey.value, JSON.stringify(data.value));
       scheduleAutoRefresh();
@@ -221,22 +218,86 @@ export const usePrayerStore = defineStore("prayer", () => {
     });
   }
 
+  /* ---------------- RAMADAN ---------------- */
+
+  const isRamadan = computed(() => {
+    const hijriMonth = data.value?.data?.date?.hijri?.month?.number;
+    return hijriMonth === 9;
+  });
+
+  const ramadanDay = computed(() => {
+    return data.value?.data?.date?.hijri?.day;
+  });
+
+  const suhoorTime = computed(() => {
+    return data.value?.data?.timings?.Fajr;
+  });
+
+  const iftarTime = computed(() => {
+    return data.value?.data?.timings?.Maghrib;
+  });
+
+  const iftarCountdown = ref("");
+
+  function updateIftarCountdown() {
+    if (!isRamadan.value || !iftarTime.value) return;
+
+    const now = new Date();
+    const [h, m] = iftarTime.value.split(":").map(Number);
+
+    const iftar = new Date();
+    iftar.setHours(h, m, 0, 0);
+
+    if (iftar < now) {
+      iftarCountdown.value = "Iftar time passed 🌙";
+      return;
+    }
+
+    const diff = iftar - now;
+    const hrs = Math.floor(diff / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+
+    iftarCountdown.value = `${hrs}h ${mins}m ${secs}s`;
+  }
+
   function init() {
     if (process.client && !data.value) {
       getLocation();
-      countdownTimer = setInterval(updateCountdown, 1000);
+      countdownTimer = setInterval(() => {
+        updateCountdown();
+        updateIftarCountdown();
+      }, 1000);
     }
   }
 
   return {
+    /* core */
     data,
     pending,
     error,
+
+    /* location */
+    latitude,
+    longitude,
+
+    /* prayer */
     countdown,
-    qibla,
+    nextPrayer,
     prayerOrder,
     icons,
-    nextPrayer,
+
+    /* qibla */
+    qibla,
+
+    /* ramadan */
+    isRamadan,
+    ramadanDay,
+    suhoorTime,
+    iftarTime,
+    iftarCountdown,
+
+    /* actions */
     fetchPrayerTimes,
     init,
   };

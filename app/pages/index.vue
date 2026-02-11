@@ -26,11 +26,7 @@
               <v-row dense>
                 <!-- COUNTDOWN -->
                 <v-col cols="12" sm="6">
-                  <v-card
-                    class="glass pa-3 text-center"
-                    rounded="lg"
-                    elevation="2"
-                  >
+                  <v-card class="glass pa-3 text-center" rounded="lg" elevation="2" style="height: 110px;">
                     <v-icon size="28" color="success">mdi-timer-outline</v-icon>
                     <div class="text-caption mt-1">Next Prayer In</div>
                     <div class="text-h6 font-weight-bold">
@@ -41,14 +37,8 @@
 
                 <!-- QIBLA -->
                 <v-col cols="12" sm="6">
-                  <v-card
-                    class="glass pa-3 text-center"
-                    rounded="lg"
-                    elevation="2"
-                  >
-                    <v-icon size="28" color="deep-purple"
-                      >mdi-compass-outline</v-icon
-                    >
+                  <v-card class="glass pa-3 text-center" rounded="lg" elevation="2" style="height: 110px;">
+                    <v-icon size="28" color="deep-purple">mdi-compass-outline</v-icon>
                     <div class="text-caption mt-1">Qibla Direction</div>
                     <div class="text-h6 font-weight-bold">
                       {{ prayer.qibla?.toFixed(1) }}°
@@ -92,9 +82,7 @@
             <!-- Iftar -->
             <v-col cols="6">
               <v-card class="glass pa-3 text-center" rounded="lg">
-                <v-icon size="26" color="orange"
-                  >mdi-weather-sunset-down</v-icon
-                >
+                <v-icon size="26" color="orange">mdi-weather-sunset-down</v-icon>
                 <div class="text-caption mt-1">Iftar</div>
                 <div class="text-h6 font-weight-bold">
                   {{ format12h(prayer.iftarTime) }}
@@ -117,36 +105,23 @@
     <!-- Prayer Times -->
     <v-row class="mb-3">
       <v-col cols="12">
-        <v-card
-          rounded="xl"
-          elevation="8"
-          class="prayer-times-card-modern pa-4"
-        >
+        <v-card rounded="xl" elevation="8" class="prayer-times-card-modern pa-4">
           <div class="d-flex align-center justify-space-between mb-4">
             <div>
               <div class="text-overline text-grey-lighten-1">Today</div>
               <div class="text-h6 font-weight-bold">Prayer Schedule</div>
             </div>
 
-            <v-chip
-              class="text-white"
-              color="primary"
-              variant="tonal"
-              size="small"
-            >
-              Next: {{ prayer.nextPrayer }}
+            <v-chip class="text-white" color="primary" variant="tonal" size="small">
+              Next: {{ prayer.nextPrayer }}/{{ format12h(prayer.data.data.timings[prayer.nextPrayer]) }}
             </v-chip>
           </div>
 
           <div class="prayer-scroll-modern">
             <!-- Loaded -->
             <template v-if="!prayer.pending">
-              <div
-                v-for="p in prayer.prayerOrder"
-                :key="p"
-                class="prayer-card"
-                :class="{ active: p === prayer.nextPrayer }"
-              >
+              <div v-for="p in prayer.prayerOrder" :key="p" class="prayer-card"
+                :class="{ active: p === prayer.nextPrayer }">
                 <v-icon size="26" class="mb-1">
                   {{ prayer.icons[p] }}
                 </v-icon>
@@ -163,14 +138,7 @@
 
             <!-- Skeleton -->
             <template v-else>
-              <v-skeleton-loader
-                v-for="n in 5"
-                :key="n"
-                type="card"
-                width="110"
-                height="90"
-                class="mr-3 rounded-lg"
-              />
+              <v-skeleton-loader v-for="n in 5" :key="n" type="card" width="110" height="107" class="mr-3 rounded-lg" />
             </template>
           </div>
         </v-card>
@@ -198,23 +166,11 @@
             Last Read: Ayah <strong>153</strong>
           </div>
 
-          <v-progress-linear
-            height="8"
-            model-value="45"
-            rounded
-            color="teal"
-            class="mb-2"
-          />
+          <v-progress-linear height="8" model-value="45" rounded color="teal" class="mb-2" />
 
           <div class="progress-text mb-4">45% completed</div>
 
-          <v-btn
-            block
-            rounded="xl"
-            size="large"
-            color="teal"
-            class="resume-btn"
-          >
+          <v-btn block rounded="xl" size="large" color="teal" class="resume-btn">
             Continue Reading
           </v-btn>
         </v-card>
@@ -324,16 +280,12 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      circle at top right,
+    radial-gradient(circle at top right,
       rgba(255, 255, 255, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at bottom left,
+      transparent 40%),
+    radial-gradient(circle at bottom left,
       rgba(0, 255, 200, 0.08),
-      transparent 45%
-    );
+      transparent 45%);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -448,6 +400,7 @@ onMounted(() => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .resume-card-modern {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
@@ -460,16 +413,12 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      circle at top right,
+    radial-gradient(circle at top right,
       rgba(0, 255, 200, 0.12),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at bottom left,
+      transparent 40%),
+    radial-gradient(circle at bottom left,
       rgba(255, 255, 255, 0.08),
-      transparent 45%
-    );
+      transparent 45%);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -489,6 +438,7 @@ onMounted(() => {
   font-weight: 600;
   letter-spacing: 0.4px;
 }
+
 .ramadan-card {
   background: linear-gradient(135deg, #1a2a3a, #203a43, #2c5364);
   color: white;
@@ -501,16 +451,12 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      circle at top right,
+    radial-gradient(circle at top right,
       rgba(255, 215, 0, 0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at bottom left,
+      transparent 40%),
+    radial-gradient(circle at bottom left,
       rgba(0, 255, 200, 0.1),
-      transparent 45%
-    );
+      transparent 45%);
   pointer-events: none;
 }
 </style>

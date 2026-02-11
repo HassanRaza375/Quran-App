@@ -125,7 +125,6 @@ export const usePrayerStore = defineStore("prayer", () => {
       })
       .filter((p) => p.time > now)
       .sort((a, b) => a.time - b.time);
-
     return upcoming[0]?.prayer || "Fajr";
   });
 

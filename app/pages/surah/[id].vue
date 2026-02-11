@@ -70,7 +70,7 @@
 
         <!-- Verses -->
         <v-sheet
-          v-else
+        v-else
           elevation="0"
           rounded="lg"
           class="pa-6 verses-sheet"
@@ -185,56 +185,155 @@ const toggleAyahBookmark = (ayahNo) => {
 </script>
 
 <style scoped>
-.v-chip.v-chip--density-default {
-  min-width: 70px;
-  justify-content: center;
+/* ===============================
+   Reader Container
+================================= */
+
+.reader-container {
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 80px;
 }
 
-/* Surah title */
-.arabic-title {
-  font-family: "Amiri Quran", serif;
-  font-size: 3rem;
-  line-height: 1.5;
-}
+/* ===============================
+   Translation Bar
+================================= */
 
-/* Meta info */
-.meta {
-  font-size: 0.95rem;
-}
-
-/* Verse block spacing */
-.verse-block {
-  margin-bottom: 2.5rem;
-}
-
-/* Arabic verse */
-.verse-text {
-  font-family: "Amiri Quran", serif;
-  font-size: 2.1rem;
-  line-height: 2.4;
-  direction: rtl;
-  text-align: right;
-  color: rgb(var(--v-theme-on-surface));
-}
-
-/* Ayah number */
-.ayah-number {
-  font-size: 1rem;
-  margin-inline-start: 8px;
-  color: rgba(var(--v-theme-on-surface), 0.5);
-}
-
-/* Translation bar */
 .translation-bar {
-  background: rgba(var(--v-theme-surface), 0.8);
+  backdrop-filter: blur(6px);
+  background: rgba(var(--v-theme-surface), 0.85);
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.06);
   display: flex;
   overflow-x: auto;
   scrollbar-width: none;
   gap: 8px;
 }
+
+/* ===============================
+   Surah Header
+================================= */
+
+.surah-header {
+  border: 1px solid rgba(var(--v-theme-primary), 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--v-theme-primary), 0.05),
+    rgba(var(--v-theme-secondary), 0.05)
+  );
+}
+
+.arabic-title {
+  font-family: "Amiri Quran", serif;
+  font-size: 3rem;
+  line-height: 1.6;
+  color: rgb(var(--v-theme-primary));
+}
+
+.meta {
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* ===============================
+   Verses Sheet
+================================= */
+
+.verses-sheet {
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.05);
+  background: rgba(var(--v-theme-surface), 1);
+}
+
+/* ===============================
+   Verse Block
+================================= */
+
+.verse-block {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.05);
+}
+
+.verse-block:last-child {
+  border-bottom: none;
+}
+
+/* ===============================
+   Arabic Verse Text
+================================= */
+
+.verse-text {
+  font-family: "Amiri Quran", serif;
+  font-size: 2.2rem;
+  line-height: 2.6;
+  direction: rtl;
+  text-align: justify;
+  color: rgb(var(--v-theme-on-surface));
+  transition: color 0.2s ease;
+}
+
+/* Light mode tuning */
+.v-theme--light .verse-text {
+  color: #1c2b33;
+}
+
+/* Dark mode tuning */
+.v-theme--dark .verse-text {
+  color: #e6f3f5;
+}
+
+/* ===============================
+   Ayah Number
+================================= */
+
+.ayah-number {
+  font-size: 1rem;
+  margin-inline-start: 8px;
+  color: rgba(var(--v-theme-primary), 0.7);
+}
+
+/* ===============================
+   Bookmark Button
+================================= */
+
 .ayah-fav-btn {
   margin-top: 6px;
   flex: 0 0 auto;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
 }
+
+.ayah-fav-btn:hover {
+  opacity: 1;
+}
+
+/* ===============================
+   Chips Styling
+================================= */
+
+.v-chip.v-chip--density-default {
+  min-width: 70px;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* ===============================
+   Responsive Improvements
+================================= */
+
+@media (max-width: 600px) {
+  .arabic-title {
+    font-size: 2.2rem;
+  }
+
+  .verse-text {
+    font-size: 1.8rem;
+    line-height: 2.4;
+  }
+
+  .reader-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
 
 </style>

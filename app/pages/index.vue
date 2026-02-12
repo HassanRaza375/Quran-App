@@ -113,7 +113,7 @@
             </div>
 
             <v-chip class="text-white" color="primary" variant="tonal" size="small">
-              Next: {{ prayer.nextPrayer }}/{{ format12h(prayer.data.data.timings[prayer.nextPrayer]) }}
+              Next: {{ prayer.nextPrayer }}/{{ format12h(prayer?.data?.data?.timings[prayer.nextPrayer]) }}
             </v-chip>
           </div>
 

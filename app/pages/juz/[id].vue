@@ -1,31 +1,53 @@
 <template>
   <v-container class="reader-container">
-    <v-row v-if="!pending && data">
+    <!-- Loading Skeleton -->
+    <v-row v-if="pending">
+      <v-col cols="12">
+        <v-card class="pa-6" rounded="xl">
+          <v-skeleton-loader type="heading" class="mb-4" />
+          <v-skeleton-loader type="text@12" />
+          <div class="mt-6 d-flex align-end justify-end">
+            <v-skeleton-loader type="paragraph@10" />
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Error State -->
+    <v-row v-else-if="error">
+      <v-col cols="12" class="text-center text-red">
+        Failed to load Juz.
+      </v-col>
+    </v-row>
+
+    <v-row v-else>
       <v-col cols="12">
         <div class="mushaf-wrap">
           <div class="mushaf-page">
-
             <!-- Juz Marker -->
             <div class="juz-marker">
-              <span>Juz {{ data.number }}</span>
+              <span>Juz {{ data.juz }}</span>
             </div>
 
             <!-- Surah Marker (First Surah on Juz) -->
             <div class="surah-marker">
               <span class="surah-marker-text">
-                {{ Object.values(data.surahs)[0]?.name }}
+                {{ Object.keys(data.surahs) }}
               </span>
             </div>
 
             <!-- Quran Text (Continuous) -->
             <div class="mushaf-text">
-              <template v-for="surahBlock in Object.values(data.surahs)">
-                <!-- Surah Name Marker inside page -->
+              <template v-for="([name, surahBlock], i) in surahs" :key="i">
                 <span class="surah-inline">
-                  {{ surahBlock.name }}
+                  {{ name }}
                 </span>
 
-                <span v-for="ayah in surahBlock.ayahs" :key="ayah.number" class="ayah-span">
+                <span
+                  v-for="ayah in surahBlock.ayahs"
+                  :key="ayah.number"
+                  class="ayah-span"
+                >
                   {{ ayah.text }}
                   <span v-if="ayah.sajda" class="sajda-marker"> ۩ </span>
                   <span class="ayah-number">﴿{{ ayah.numberInSurah }}﴾</span>
@@ -34,21 +56,25 @@
             </div>
 
             <!-- Page Number Footer (Optional, remove if not needed) -->
-            <div class="page-number">
-              Juz {{ data.number }}
-            </div>
+            <div class="page-number">Juz {{ data.juz }}</div>
           </div>
         </div>
       </v-col>
     </v-row>
-
   </v-container>
 </template>
 
 <script setup>
-const { id } = useRoute().params;
+const route = useRoute();
 const { getJuz } = useJuz();
-const { data, pending, error } = useAsyncData("juz", () => getJuz(id));
+const { data, pending, error } = useAsyncData(
+  () => `juz-${route.params.id}`,
+  () => getJuz(route.params.id),
+  { watch: [() => route.params.id] },
+);
+const surahs = computed(() => Object.entries(data.value?.surahs || {}));
+
+console.log("juz", data);
 </script>
 <style scoped>
 /* ===============================

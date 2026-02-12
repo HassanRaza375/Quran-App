@@ -21,9 +21,6 @@
 
 
 <script setup>
-import { useTheme } from "vuetify";
-
-const theme = useTheme();
 const prayer = usePrayerStore();
 const drawer = ref(false);
 const { load } = useBookmarks();

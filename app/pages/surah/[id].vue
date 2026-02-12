@@ -70,7 +70,7 @@
 
         <!-- Verses -->
         <v-sheet
-        v-else
+          v-else
           elevation="0"
           rounded="lg"
           class="pa-6 verses-sheet"
@@ -124,12 +124,8 @@
         <v-divider />
 
         <v-card-text class="pt-4">
-          <audio controls class="w-100">
-            <source
-              :src="data?.audio[1]?.url"
-              preload="auto"
-              type="audio/mpeg"
-            />
+          <audio ref="audioRef" controls preload="metadata" class="w-100">
+            <source :src="data?.audio[1]?.url" type="audio/mpeg" />
           </audio>
         </v-card-text>
       </v-card>
@@ -181,6 +177,12 @@ const isAyahFav = (ayahNo) => {
 const toggleAyahBookmark = (ayahNo) => {
   toggleAyah(chapterNo.value, ayahNo);
 };
+watch(dialog, (v) => {
+  if (v) {
+    const audio = new Audio(data.value.audio[1].url);
+    audio.preload = "auto";
+  }
+});
 /* ----------------------------------- */
 </script>
 
@@ -334,6 +336,4 @@ const toggleAyahBookmark = (ayahNo) => {
     padding-right: 12px;
   }
 }
-
-
 </style>

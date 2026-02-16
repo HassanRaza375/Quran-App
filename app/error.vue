@@ -5,6 +5,7 @@ const props = defineProps<{
     message?: string;
   };
 }>();
+console.error(props.error);
 
 const handleClearError = () => clearError({ redirect: "/" });
 </script>

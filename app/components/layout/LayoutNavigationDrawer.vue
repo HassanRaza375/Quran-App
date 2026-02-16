@@ -34,6 +34,14 @@ const sidebarList = ref([
   { title: 'Qibla Direction', icon: 'mdi-compass-outline', path: '/qibla-direction' },
   { title: 'Calender', icon: 'mdi-calendar', path: '/calender' },
   {
+    title: 'Audio',
+    icon: 'mdi-book',
+    children: Array.from({ length: 114 }, (_, i) => ({
+      title: `Surah ${i + 1}`,
+      path: `/surah-audios/${i + 1}`,
+    })),
+  },
+  {
     title: 'Juz',
     icon: 'mdi-book',
     children: Array.from({ length: 30 }, (_, i) => ({

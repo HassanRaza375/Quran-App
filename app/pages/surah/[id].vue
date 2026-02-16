@@ -23,15 +23,29 @@
             </v-chip>
           </div>
 
-          <v-btn
-            prepend-icon="mdi-volume-high"
-            rounded="xl"
-            variant="tonal"
-            color="primary"
-            @click="dialog = true"
-          >
-            Audio
-          </v-btn>
+          <v-menu>
+            <template #activator="{ props }">
+              <v-btn
+                v-bind="props"
+                prepend-icon="mdi-account-voice"
+                rounded="xl"
+                variant="tonal"
+                color="primary"
+              >
+                {{ selected?.reciter || "Choose Reciter" }}
+              </v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item
+                v-for="rec in reciters"
+                :key="rec.url"
+                @click="setReciter(rec)"
+              >
+                <v-list-item-title>{{ rec.reciter }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-sheet>
       </v-col>
     </v-row>
@@ -99,37 +113,36 @@
             </div>
           </div>
         </v-sheet>
+        <v-slide-y-transition>
+          <v-sheet v-if="activeReciter" class="reader-player" elevation="10">
+            <div class="d-flex align-center px-4 py-2">
+              <div class="flex-grow-1">
+                <div class="text-caption">
+                  Surah {{ data?.surahNameTranslation }}
+                </div>
+                <div class="font-weight-medium">
+                  {{ activeReciter?.reciter }}
+                </div>
+              </div>
+
+              <v-btn icon @click="toggleAudio">
+                <v-icon>
+                  {{ isThisSurahPlaying  ? "mdi-pause" : "mdi-play" }}
+                </v-icon>
+              </v-btn>
+            </div>
+
+            <v-slider
+              :model-value="progress"
+              :max="duration || 0"
+              step="1"
+              hide-details
+              @update:model-value="seek"
+            />
+          </v-sheet>
+        </v-slide-y-transition>
       </v-col>
     </v-row>
-
-    <!-- Audio Dialog -->
-    <v-dialog v-model="dialog" width="420">
-      <v-card rounded="lg">
-        <v-card-title class="d-flex justify-space-between align-center">
-          <div>
-            <div class="text-subtitle-2 text-medium-emphasis">Recitation</div>
-            <div class="text-h6 font-weight-bold">
-              {{ data?.audio[1]?.reciter }}
-            </div>
-          </div>
-
-          <v-btn
-            icon="mdi-close"
-            size="small"
-            variant="text"
-            @click="dialog = false"
-          />
-        </v-card-title>
-
-        <v-divider />
-
-        <v-card-text class="pt-4">
-          <audio ref="audioRef" controls preload="metadata" class="w-100">
-            <source :src="data?.audio[1]?.url" type="audio/mpeg" />
-          </audio>
-        </v-card-text>
-      </v-card>
-    </v-dialog>
   </v-container>
 </template>
 
@@ -137,11 +150,14 @@
 definePageMeta({ layout: "reader" });
 
 const route = useRoute();
-const dialog = ref(false);
+const { getChapter } = useChapters();
+const { selected, setReciter } = useReciter();
 
 const chapterNo = computed(() => Number(route.params.id));
 
-const { getChapter } = useChapters();
+const { play, pause, seek, playing, progress, duration, currentUrl } =
+  useAudioPlayer();
+
 const { data, pending, error } = useAsyncData("chapters", () =>
   getChapter(chapterNo.value),
 );
@@ -158,16 +174,31 @@ const typeObject = computed(() => ({
 }));
 
 const verses = computed(() => typeObject.value[selectedType.value]);
+const reciters = computed(() =>
+  data.value?.audio ? Object.values(data.value.audio) : [],
+);
 
 const setTranslation = (type) => {
   selectedType.value = type;
+};
+
+// audio playing
+const activeReciter = computed(() => selected.value);
+const isThisSurahPlaying = computed(() => {
+  return currentUrl.value === activeReciter.value?.url && playing.value;
+});
+const toggleAudio = () => {
+  if (!activeReciter.value) return;
+  
+  if (isThisSurahPlaying.value) pause();
+  else play(activeReciter.value.url);
 };
 
 /* ---------- Ayah bookmarks ---------- */
 const { load, isAyahBookmarked, toggleAyah } = useBookmarks();
 
 onMounted(() => {
-  load(); // safe even if you already load in layout
+  load();
 });
 
 const isAyahFav = (ayahNo) => {
@@ -177,13 +208,11 @@ const isAyahFav = (ayahNo) => {
 const toggleAyahBookmark = (ayahNo) => {
   toggleAyah(chapterNo.value, ayahNo);
 };
-watch(dialog, (v) => {
-  if (v) {
-    const audio = new Audio(data.value.audio[1].url);
-    audio.preload = "auto";
+watch(reciters, (list) => {
+  if (!selected.value && list.length) {
+    setReciter(list[0]); // default
   }
 });
-/* ----------------------------------- */
 </script>
 
 <style scoped>
@@ -243,6 +272,7 @@ watch(dialog, (v) => {
 .verses-sheet {
   border: 1px solid rgba(var(--v-theme-on-surface), 0.05);
   background: rgba(var(--v-theme-surface), 1);
+  margin-bottom: 97px;
 }
 
 /* ===============================
@@ -335,5 +365,15 @@ watch(dialog, (v) => {
     padding-left: 12px;
     padding-right: 12px;
   }
+}
+.reader-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(var(--v-theme-surface), 0.98);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(var(--v-theme-on-surface), 0.08);
+  z-index: 999999;
 }
 </style>

@@ -6,7 +6,7 @@ export const useAudioPlayer = () => {
   const progress = useState<number>("progress", () => 0);
   const duration = useState<number>("duration", () => 0);
 
-  //  prevent SSR crash
+  /* ------------------ create audio once (client only) ------------------ */
   if (process.client && !audio.value) {
     audio.value = new Audio();
 
@@ -24,6 +24,33 @@ export const useAudioPlayer = () => {
     });
   }
 
+  /* ------------------ time formatter ------------------ */
+  const formatTime = (sec: number) => {
+    if (!sec || isNaN(sec)) return "00:00";
+
+    const hours = Math.floor(sec / 3600);
+    const minutes = Math.floor((sec % 3600) / 60);
+    const seconds = Math.floor(sec % 60);
+
+    if (hours > 0) {
+      return `${hours}:${minutes.toString().padStart(2, "0")}:${seconds
+        .toString()
+        .padStart(2, "0")}`;
+    }
+
+    return `${minutes.toString().padStart(2, "0")}:${seconds
+      .toString()
+      .padStart(2, "0")}`;
+  };
+
+  /* ------------------ computed timers ------------------ */
+  const currentTimeLabel = computed(() => formatTime(progress.value));
+  const durationLabel = computed(() => formatTime(duration.value));
+  const remainingLabel = computed(() =>
+    formatTime(duration.value - progress.value),
+  );
+
+  /* ------------------ controls ------------------ */
   const play = async (url: string) => {
     if (!audio.value) return;
 
@@ -55,5 +82,9 @@ export const useAudioPlayer = () => {
     progress,
     duration,
     currentUrl,
+    // timers
+    currentTimeLabel,
+    durationLabel,
+    remainingLabel,
   };
 };

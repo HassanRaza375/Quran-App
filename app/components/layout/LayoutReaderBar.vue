@@ -14,6 +14,6 @@ body {
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: rgb(var(--v-theme-on-surface));
 }
 </style>

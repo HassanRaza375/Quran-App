@@ -1,11 +1,12 @@
 export const useReciter = () => {
   const selected = useState<any | null>("selectedReciter", () => null);
 
-  // load saved reciter once (client only)
-  if (process.client && !selected.value) {
-    const saved = localStorage.getItem("reciter");
-    if (saved) selected.value = JSON.parse(saved);
-  }
+  const loadSaved = () => {
+    if (process.client) {
+      const saved = localStorage.getItem("reciter");
+      if (saved) selected.value = JSON.parse(saved);
+    }
+  };
 
   const setReciter = (reciter: any) => {
     selected.value = reciter;
@@ -15,5 +16,5 @@ export const useReciter = () => {
     }
   };
 
-  return { selected, setReciter };
+  return { selected, setReciter, loadSaved };
 };

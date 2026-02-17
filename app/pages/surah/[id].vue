@@ -31,6 +31,7 @@
                 rounded="xl"
                 variant="tonal"
                 color="primary"
+                :loading="loading"
               >
                 {{ selected?.reciter || "Choose Reciter" }}
               </v-btn>
@@ -119,17 +120,21 @@
               <div class="flex-grow-1">
                 <div class="text-caption">
                   Surah {{ data?.surahNameTranslation }}
+                  <span>{{ durationLabel }}</span>
                 </div>
                 <div class="font-weight-medium">
                   {{ activeReciter?.reciter }}
                 </div>
               </div>
-
-              <v-btn icon @click="toggleAudio">
-                <v-icon>
-                  {{ isThisSurahPlaying  ? "mdi-pause" : "mdi-play" }}
-                </v-icon>
-              </v-btn>
+              <div class="d-flex align-center">
+                <!-- {{ remainingLabel }} -->
+                <span class="d-flex align-center me-2">{{ currentTimeLabel }}</span>
+                <v-btn icon @click="toggleAudio" :loading="loading">
+                  <v-icon>
+                    {{ isThisSurahPlaying ? "mdi-pause" : "mdi-play" }}
+                  </v-icon>
+                </v-btn>
+              </div>
             </div>
 
             <v-slider
@@ -151,15 +156,28 @@ definePageMeta({ layout: "reader" });
 
 const route = useRoute();
 const { getChapter } = useChapters();
-const { selected, setReciter } = useReciter();
+const { selected, setReciter, loadSaved } = useReciter();
 
 const chapterNo = computed(() => Number(route.params.id));
 
-const { play, pause, seek, playing, progress, duration, currentUrl } =
-  useAudioPlayer();
+const {
+  play,
+  pause,
+  seek,
+  playing,
+  progress,
+  duration,
+  currentUrl,
+  loading,
+  currentTimeLabel,
+  durationLabel,
+  remainingLabel,
+} = useAudioPlayer();
 
-const { data, pending, error } = useAsyncData("chapters", () =>
-  getChapter(chapterNo.value),
+const { data, pending, error } = useAsyncData(
+  () => `chapter-${chapterNo.value}`,
+  () => getChapter(chapterNo.value),
+  { watch: [chapterNo] },
 );
 
 const translations = ref(["arabic1", "arabic2", "english", "bengali", "urdu"]);
@@ -189,7 +207,7 @@ const isThisSurahPlaying = computed(() => {
 });
 const toggleAudio = () => {
   if (!activeReciter.value) return;
-  
+
   if (isThisSurahPlaying.value) pause();
   else play(activeReciter.value.url);
 };
@@ -199,6 +217,7 @@ const { load, isAyahBookmarked, toggleAyah } = useBookmarks();
 
 onMounted(() => {
   load();
+  loadSaved();
 });
 
 const isAyahFav = (ayahNo) => {
@@ -208,10 +227,17 @@ const isAyahFav = (ayahNo) => {
 const toggleAyahBookmark = (ayahNo) => {
   toggleAyah(chapterNo.value, ayahNo);
 };
-watch(reciters, (list) => {
-  if (!selected.value && list.length) {
-    setReciter(list[0]); // default
-  }
+watch(
+  reciters,
+  (list) => {
+    if (list?.length) {
+      setReciter(list[0]);
+    }
+  },
+  { immediate: true },
+);
+watch(chapterNo, () => {
+  selected.value = null; // reset when navigating
 });
 </script>
 

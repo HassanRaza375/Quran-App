@@ -18,9 +18,8 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/hints",
     "@nuxt/image",
-    "@nuxt/fonts",
     "@vite-pwa/nuxt",
-    '@pinia/nuxt',
+    "@pinia/nuxt",
   ],
   // css
   css: [
@@ -28,20 +27,6 @@ export default defineNuxtConfig({
     "@mdi/font/css/materialdesignicons.css",
     "~/assets/css/main.css",
   ],
-  fonts: {
-    families: [
-      {
-        name: "Amiri Quran",
-        provider: "google",
-        weights: [400],
-      },
-      {
-        name: "Sansation",
-        provider: "google",
-        weights: [400],
-      },
-    ],
-  },
   // build
   build: {
     transpile: ["vuetify"],

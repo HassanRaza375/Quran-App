@@ -36,7 +36,9 @@
             </div>
 
             <div v-if="currentReciter" class="text-right">
-              <div class="text-caption text-medium-emphasis">Now Playing</div>
+              <div class="text-caption text-medium-emphasis">
+                Now Playing {{ currentTimeLabel }} / {{ durationLabel }}
+              </div>
               <div class="font-weight-medium">
                 {{ currentReciter.reciter }}
               </div>
@@ -77,7 +79,7 @@
 </template>
 
 <script setup>
-const { playing, progress, duration, seek, pause, play, currentUrl } =
+const { playing, pause, play, currentUrl, durationLabel, currentTimeLabel } =
   useAudioPlayer();
 const route = useRoute();
 const surahNo = computed(() => route.params.id || 1);
@@ -94,14 +96,14 @@ watchEffect(async () => {
   surah.value = await $fetch(`https://quranapi.pages.dev/api/${id}.json`);
 
   const audioRes = await $fetch(
-    `https://quranapi.pages.dev/api/audio/${id}.json`,
+    `https://quranapi.pages.dev/api/audio/${id}.json`
   );
 
   reciters.value = Object.values(audioRes);
   loading.value = false;
 });
 const currentReciter = computed(() =>
-  reciters.value.find((r) => r.url === currentUrl.value),
+  reciters.value.find((r) => r.url === currentUrl.value)
 );
 
 const toggle = () => {

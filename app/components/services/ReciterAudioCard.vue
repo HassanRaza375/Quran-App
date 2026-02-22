@@ -1,9 +1,5 @@
 <template>
-  <v-card
-    rounded="lg"
-    elevation="1"
-    class="pa-4"
-  >
+  <v-card rounded="lg" elevation="1" class="pa-4">
     <div class="d-flex align-center justify-space-between">
       <div>
         <div class="text-subtitle-1 font-weight-medium">
@@ -37,12 +33,12 @@ const { play, pause, seek, playing, loading, currentUrl, progress, duration } =
   useAudioPlayer();
 
 const isPlaying = computed(
-  () => playing.value && currentUrl.value === props.reciter.url,
+  () => playing.value && currentUrl.value === props.reciter.url
 );
 const isActive = computed(() => currentUrl.value === props.reciter.url);
 
 const isLoading = computed(
-  () => loading.value && currentUrl.value === props.reciter.url,
+  () => loading.value && currentUrl.value === props.reciter.url
 );
 const onSeek = (val) => {
   if (!isActive.value) return;
@@ -57,5 +53,10 @@ const toggle = () => {
 <style scoped>
 .inactive {
   opacity: 0.6;
+}
+.time-label {
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+  color: rgba(var(--v-theme-on-surface), 0.6);
 }
 </style>

@@ -8,7 +8,6 @@ export default defineNuxtPlugin(() => {
   const api2 = $fetch.create({
     baseURL: config.public.quranApiBase2,
   });
-
   return {
     provide: {
       api,

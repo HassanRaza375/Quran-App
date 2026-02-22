@@ -62,7 +62,9 @@
 
 <script setup>
 const { getAll } = useSajda();
-const { data, pending, error } = useAsyncData("sajda", () => getAll());
+const { data, pending, error } = await useAsyncData("sajda", () => getAll(), {
+  cache: true,
+});
 </script>
 
 <style scoped>

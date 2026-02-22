@@ -173,10 +173,9 @@ const {
   loading,
   currentTimeLabel,
   durationLabel,
-  remainingLabel,
 } = useAudioPlayer();
 
-const { data, pending, error } = useAsyncData(
+const { data, pending, error } = await useAsyncData(
   () => `chapter-${chapterNo.value}`,
   () => getChapter(chapterNo.value),
   { watch: [chapterNo] }

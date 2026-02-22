@@ -3,18 +3,34 @@
     <!-- Controls -->
     <v-row align="center">
       <v-col cols="12" md="4">
-        <v-autocomplete v-model="page" :items="pages" item-title="title" item-value="value" label="Pages"
-          variant="outlined" :loading="pending" :disabled="pending" />
+        <v-autocomplete
+          v-model="page"
+          :items="pages"
+          item-title="title"
+          item-value="value"
+          label="Pages"
+          variant="outlined"
+          :loading="pending"
+          :disabled="pending"
+        />
       </v-col>
 
-      <v-col cols="12" md="8" class="d-flex justify-end"style="gap: 12px;">
-        <v-btn variant="outlined" :disabled="page === 1 || pending" :loading="pending && navDir === 'prev'"
-          @click="prevPage">
+      <v-col cols="12" md="8" class="d-flex justify-end" style="gap: 12px">
+        <v-btn
+          variant="outlined"
+          :disabled="page === 1 || pending"
+          :loading="pending && navDir === 'prev'"
+          @click="prevPage"
+        >
           Prev
         </v-btn>
 
-        <v-btn color="primary" :disabled="page === 604 || pending" :loading="pending && navDir === 'next'"
-          @click="nextPage">
+        <v-btn
+          color="primary"
+          :disabled="page === 604 || pending"
+          :loading="pending && navDir === 'next'"
+          @click="nextPage"
+        >
           Next
         </v-btn>
       </v-col>
@@ -37,16 +53,16 @@
               {{ ayahs[0]?.surah?.name }}
             </span>
           </div>
-  
+
           <!-- Juz / Hizb Markers -->
           <div class="juz-marker">
             <span>Juz {{ ayahs[0]?.juz }}</span>
           </div>
-  
+
           <div class="hizb-marker">
             <span>Hizb {{ ayahs[0]?.hizbQuarter }}</span>
           </div>
-  
+
           <!-- Quran Text (Continuous) -->
           <div class="mushaf-text">
             <span v-for="item in ayahs" :key="item.number" class="ayah-span">
@@ -55,7 +71,7 @@
               <span class="ayah-number">﴿{{ item.numberInSurah }}﴾</span>
             </span>
           </div>
-  
+
           <!-- Page Number Footer -->
           <div class="page-number">
             {{ page }}
@@ -63,7 +79,6 @@
         </div>
       </v-col>
     </v-row>
-
   </v-container>
 </template>
 
@@ -73,9 +88,9 @@ const navDir = ref(null);
 
 const TOTAL_PAGES = 604;
 
-const { data, pending, refresh } = useFetch(
+const { data, pending, refresh } = await useFetch(
   () => `https://api.alquran.cloud/v1/page/${page.value}/quran-uthmani`,
-  { watch: [page] },
+  { watch: [page] }
 );
 
 const ayahs = computed(() => data.value?.data?.ayahs || []);

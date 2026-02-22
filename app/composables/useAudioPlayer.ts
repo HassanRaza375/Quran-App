@@ -7,22 +7,24 @@ export const useAudioPlayer = () => {
   const duration = useState<number>("duration", () => 0);
 
   /* ------------------ create audio once (client only) ------------------ */
-  if (process.client && !audio.value) {
-    audio.value = new Audio();
+  onMounted(() => {
+    if (!audio.value) {
+      audio.value = new Audio();
 
-    audio.value.addEventListener("timeupdate", () => {
-      progress.value = audio.value!.currentTime;
-    });
+      audio.value.addEventListener("timeupdate", () => {
+        progress.value = audio.value!.currentTime;
+      });
 
-    audio.value.addEventListener("loadedmetadata", () => {
-      duration.value = audio.value!.duration;
-      loading.value = false;
-    });
+      audio.value.addEventListener("loadedmetadata", () => {
+        duration.value = audio.value!.duration;
+        loading.value = false;
+      });
 
-    audio.value.addEventListener("ended", () => {
-      playing.value = false;
-    });
-  }
+      audio.value.addEventListener("ended", () => {
+        playing.value = false;
+      });
+    }
+  });
 
   /* ------------------ time formatter ------------------ */
   const formatTime = (sec: number) => {
@@ -53,6 +55,9 @@ export const useAudioPlayer = () => {
   /* ------------------ controls ------------------ */
   const play = async (url: string) => {
     if (!audio.value) return;
+
+    // If already playing same surah, do nothing
+    if (currentUrl.value === url && playing.value) return;
 
     if (currentUrl.value !== url) {
       loading.value = true;

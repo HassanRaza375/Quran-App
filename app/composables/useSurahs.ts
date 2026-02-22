@@ -10,17 +10,17 @@ export const useSurahs = () => {
   };
 
   const surahs = surahsJson;
-  
+
   // search function
   const search = (query: string) => {
     if (!query) return surahs;
 
     const q = query.toLowerCase();
-    
+
     return surahs.filter(
       (s: any) =>
         s.surahName.toLowerCase().includes(q) ||
-      s.surahNameTranslation.toLowerCase().includes(q) ||
+        s.surahNameTranslation.toLowerCase().includes(q) ||
         s.surahNameArabicLong.includes(query) ||
         s.revelationPlace.toLowerCase().includes(q),
     );

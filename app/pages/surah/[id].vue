@@ -120,7 +120,7 @@
               <div class="flex-grow-1">
                 <div class="text-caption">
                   Surah {{ data?.surahNameTranslation }}
-                  <span>{{ durationLabel }}</span>
+                  <span>{{ currentTimeLabel }} / {{ durationLabel }}</span>
                 </div>
                 <div class="font-weight-medium">
                   {{ activeReciter?.reciter }}
@@ -128,7 +128,9 @@
               </div>
               <div class="d-flex align-center">
                 <!-- {{ remainingLabel }} -->
-                <span class="d-flex align-center me-2">{{ currentTimeLabel }}</span>
+                <span class="d-flex align-center me-2">{{
+                  currentTimeLabel
+                }}</span>
                 <v-btn icon @click="toggleAudio" :loading="loading">
                   <v-icon>
                     {{ isThisSurahPlaying ? "mdi-pause" : "mdi-play" }}
@@ -177,7 +179,7 @@ const {
 const { data, pending, error } = useAsyncData(
   () => `chapter-${chapterNo.value}`,
   () => getChapter(chapterNo.value),
-  { watch: [chapterNo] },
+  { watch: [chapterNo] }
 );
 
 const translations = ref(["arabic1", "arabic2", "english", "bengali", "urdu"]);
@@ -193,7 +195,7 @@ const typeObject = computed(() => ({
 
 const verses = computed(() => typeObject.value[selectedType.value]);
 const reciters = computed(() =>
-  data.value?.audio ? Object.values(data.value.audio) : [],
+  data.value?.audio ? Object.values(data.value.audio) : []
 );
 
 const setTranslation = (type) => {
@@ -230,14 +232,18 @@ const toggleAyahBookmark = (ayahNo) => {
 watch(
   reciters,
   (list) => {
-    if (list?.length) {
+    if (!list?.length) return;
+
+    if (!selected.value) {
       setReciter(list[0]);
     }
   },
-  { immediate: true },
+  { immediate: true }
 );
 watch(chapterNo, () => {
-  selected.value = null; // reset when navigating
+  pause();
+  seek(0);
+  selected.value = null;
 });
 </script>
 

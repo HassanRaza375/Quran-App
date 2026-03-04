@@ -38,9 +38,10 @@
 </template>
 
 <script setup>
-const { surahs } = useSurahs();
+const { rawSurahs } = useSurahs();
 const sidebarList = ref([
   { title: "Home", icon: "mdi-home", path: "/" },
+  { title: "Asma-ul-Husna", icon: "mdi-book", path: "/asma-ul-husna" },
   { title: "Surah Listing", icon: "mdi-view-list", path: "/surah-listing" },
   { title: "Search", icon: "mdi-magnify", path: "/search" },
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
@@ -56,7 +57,7 @@ const sidebarList = ref([
   {
     title: "Audio",
     icon: "mdi-book",
-    children: surahs.map((surah, i) => ({
+    children: rawSurahs.value.map((surah, i) => ({
       title: surah.surahNameArabicLong,
       path: `/surah-audios/${i + 1}`,
     })),

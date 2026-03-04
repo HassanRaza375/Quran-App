@@ -12,32 +12,59 @@
           hide-details
         />
       </v-col>
-      <v-col cols="12">
-        <v-menu>
-          <template #activator="{ props }">
-            <v-btn
-              v-bind="props"
-              prepend-icon="mdi-account-voice"
-              rounded="xl"
-              variant="tonal"
-              color="primary"
-            >
-              {{ selected?.reciter || "Choose Reciter" }}
-            </v-btn>
-          </template>
+      <v-col cols="6" col-sm="4" md="3">
+        <div class="d-flex align-center" style="gap: 10px">
+          <v-menu>
+            <template #activator="{ props }">
+              <v-btn
+                v-bind="props"
+                prepend-icon="mdi-account-voice"
+                rounded="xl"
+                variant="tonal"
+                color="primary"
+              >
+                {{ selected?.reciter || "Choose Reciter" }}
+              </v-btn>
+            </template>
 
-          <v-list>
-            <v-list-item
-              v-for="rec in globalReciters"
-              :key="rec.id"
-              @click="setReciter(rec)"
-            >
-              <v-list-item-title>
-                {{ rec.reciter }}
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
+            <v-list>
+              <v-list-item
+                v-for="rec in globalReciters"
+                :key="rec.id"
+                @click="setReciter(rec)"
+              >
+                <v-list-item-title>
+                  {{ rec.reciter }}
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+          <v-menu>
+            <template #activator="{ props }">
+              <v-btn
+                v-bind="props"
+                prepend-icon="mdi-account-voice"
+                rounded="xl"
+                variant="tonal"
+                color="primary"
+              >
+                {{ selectedSort || "Choose Sort Option" }}
+              </v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item
+                v-for="sort in sortSurahs"
+                :key="sort"
+                @click="setSort(sort)"
+              >
+                <v-list-item-title>
+                  {{ sort }}
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </div>
       </v-col>
     </v-row>
 
@@ -128,7 +155,12 @@
             <!-- PLAYER SECTION (Only when active) -->
             <v-expand-transition>
               <div
-                v-if="currentUrl === surah.audio?.[1]?.url"
+                v-if="
+                  currentUrl === surah.audio?.[1]?.url ||
+                  currentUrl === surah.audio?.[2]?.url ||
+                  currentUrl === surah.audio?.[3]?.url ||
+                  currentUrl === surah.audio?.[4]?.url
+                "
                 class="card-player"
               >
                 <div class="time-label">
@@ -154,7 +186,7 @@
 <script setup>
 const searchText = ref("");
 
-const { surahs, search } = useSurahs();
+const { surahs, search, setSort, selectedSort } = useSurahs();
 const {
   play,
   pause,
@@ -195,18 +227,21 @@ const getSurahUrl = (surah) => {
 
   return reciterMatch?.url || null;
 };
-const filteredSurahs = computed(() =>
-  !searchText.value ? surahs : search(searchText.value)
-);
-const globalReciters = computed(() => {
-  if (!surahs?.length) return [];
-  return Object.values(surahs[0].audio || {});
-});
+const filteredSurahs = computed(() => {
+  if (!searchText.value) {
+    return surahs.value;
+  }
 
+  return search(searchText.value);
+});
+const globalReciters = computed(() => {
+  if (!surahs.value?.length) return [];
+  return Object.values(surahs.value[0].audio || {});
+});
 watch(selected, (newReciter) => {
   if (!newReciter || !currentUrl.value) return;
 
-  const currentSurah = surahs.find((s) =>
+  const currentSurah = surahs.value.find((s) =>
     Object.values(s.audio || {}).some((r) => r.url === currentUrl.value)
   );
 
@@ -218,6 +253,14 @@ watch(selected, (newReciter) => {
     play(newUrl);
   }
 });
+let sortSurahs = ref([
+  "Surah No",
+  "Name",
+  "Revelation Place",
+  "Favourites",
+  "Acending",
+  "Descending",
+]);
 //
 /* Favorites */
 const { has, toggle } = useBookmarks();
@@ -225,6 +268,9 @@ const { has, toggle } = useBookmarks();
 const favKey = (surahNo) => `surah:${surahNo}`;
 const isFav = (surahNo) => has(favKey(surahNo));
 const toggleFav = (surahNo) => toggle(favKey(surahNo));
+onMounted(() => {
+  if (process.client) setSort("Surah No");
+});
 </script>
 
 <style scoped>

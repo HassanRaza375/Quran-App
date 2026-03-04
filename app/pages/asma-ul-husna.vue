@@ -64,9 +64,14 @@
               <div class="arabic-name">
                 {{ name.arabic }}
               </div>
-
+              <div class="english-name">
+                {{ name.transliteration }}
+              </div>
               <div class="english-name">
                 {{ name.english }}
+              </div>
+              <div class="english-name">
+                {{ name.urdu }}
               </div>
 
               <div class="meta mt-3">

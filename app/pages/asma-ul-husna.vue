@@ -124,7 +124,7 @@ const videoSrc = `https://www.youtube.com/embed/${videoId}?si=gv5AX6IPEI7pfMYo`;
 }
 .youtube-embed-container {
   position: relative;
-  padding-bottom: 20%; /* Aspect Ratio 16:9 */
+  padding-bottom: 30%; /* Aspect Ratio 16:9 */
   height: 0;
   overflow: hidden;
   max-width: 100%;

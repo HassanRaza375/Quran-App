@@ -1,31 +1,17 @@
-<script setup lang="ts">
+<script setup>
 const { ayah, loading, fetchAyahOfTheDay } = useAyahOfTheDay();
 const { load, isAyahBookmarked, toggleAyah } = useBookmarks();
+const { copyText } = useCopyAyah();
 onMounted(() => {
   load(); // safe even if you already load in layout
   fetchAyahOfTheDay();
 });
-const { toast } = useToast()
-const textToCopy: any = computed(() => {
-  if (!ayah.value) return ''
-  return `${ayah.value.arabic}\n\n“${ayah.value.urdu}”\n\nSurah ${ayah.value.surah_name} • ${ayah.value.surah_number}:${ayah.value.ayah_number}`
-})
-const copyText = async () => {
-  if (!process.client || !textToCopy.value) return
 
-  try {
-    await navigator.clipboard.writeText(textToCopy.value)
-    toast('Copied to clipboard!', { color: 'success' })
-  } catch (err) {
-    toast('Failed to copy', { color: 'error' })
-  }
-}
-
-const isAyahFav = (ayahNo: number) => {
+const isAyahFav = (ayahNo) => {
   return isAyahBookmarked(ayah.value.surah_number, ayahNo);
 };
 
-const toggleAyahBookmark = (ayahNo: number) => {
+const toggleAyahBookmark = (ayahNo) => {
   toggleAyah(ayah.value.surah_number, ayahNo);
 };
 </script>
@@ -50,7 +36,7 @@ const toggleAyahBookmark = (ayahNo: number) => {
         <v-progress-linear v-if="loading" indeterminate />
 
         <template v-if="ayah && !loading">
-          <div class="ayah-arabic-modern mb-3"> ﴾{{ ayah.arabic }}﴿ </div>
+          <div class="ayah-arabic-modern mb-3">﴾{{ ayah.arabic }}﴿</div>
 
           <div class="ayah-translation-modern">“{{ ayah.urdu }}”</div>
 
@@ -64,12 +50,31 @@ const toggleAyahBookmark = (ayahNo: number) => {
             </div>
 
             <div class="d-flex align-center justify-end flex-grow-1">
-              <v-btn icon="mdi-refresh" variant="text" @click="fetchAyahOfTheDay" />
-              <v-btn icon="mdi-share-variant-outline" variant="text" @click="copyText" />
-              <v-btn v-if="ayah" :icon="isAyahFav(ayah.ayah_number) ? 'mdi-bookmark' : 'mdi-bookmark-outline'"
-                :color="isAyahFav(ayah.ayah_number) ? 'amber' : 'grey'" variant="text"
-                @click.stop="toggleAyahBookmark(ayah.ayah_number)" />
-
+              <v-btn
+                icon="mdi-refresh"
+                variant="text"
+                @click="fetchAyahOfTheDay"
+              />
+              <v-btn
+                icon="mdi-share-variant-outline"
+                variant="text"
+                @click="
+                  copyText(
+                    `${ayah.arabic}\n\n“${ayah.urdu}”\n\nSurah ${ayah.surah_name} • ${ayah.surah_number}:${ayah.ayah_number}`
+                  )
+                "
+              />
+              <v-btn
+                v-if="ayah"
+                :icon="
+                  isAyahFav(ayah.ayah_number)
+                    ? 'mdi-bookmark'
+                    : 'mdi-bookmark-outline'
+                "
+                :color="isAyahFav(ayah.ayah_number) ? 'amber' : 'grey'"
+                variant="text"
+                @click.stop="toggleAyahBookmark(ayah.ayah_number)"
+              />
             </div>
           </div>
         </template>

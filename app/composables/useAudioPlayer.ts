@@ -77,7 +77,18 @@ export const useAudioPlayer = () => {
   const seek = (time: number) => {
     if (audio.value) audio.value.currentTime = time;
   };
+  const reset = () => {
+    if (!audio.value) return;
 
+    audio.value.pause();
+    audio.value.src = "";
+
+    progress.value = 0;
+    duration.value = 0;
+    playing.value = false;
+    loading.value = false;
+    currentUrl.value = null;
+  };
   return {
     play,
     pause,
@@ -91,5 +102,6 @@ export const useAudioPlayer = () => {
     currentTimeLabel,
     durationLabel,
     remainingLabel,
+    reset,
   };
 };

@@ -57,7 +57,7 @@
         <v-sheet
           elevation="1"
           rounded="lg"
-          class="pa-6 mb-8 surah-header"
+          class="pa-4 mb-8 surah-header"
           color="surface"
         >
           <h1 class="arabic-title text-center mb-3">
@@ -79,7 +79,7 @@
     <v-row>
       <v-col cols="12">
         <!-- Loader -->
-        <v-sheet v-if="pending" class="pa-6" color="surface">
+        <v-sheet v-if="pending" class="pa-2" color="surface">
           <v-skeleton-loader type="heading, paragraph, paragraph, paragraph" />
         </v-sheet>
 
@@ -88,7 +88,7 @@
           v-else
           elevation="0"
           rounded="lg"
-          class="pa-6 verses-sheet"
+          class="pa-2 verses-sheet"
           color="surface"
         >
           <div v-for="(item, index) in verses" :key="index" class="verse-block">
@@ -111,6 +111,27 @@
                   {{ isAyahFav(index + 1) ? "mdi-star" : "mdi-star-outline" }}
                 </v-icon>
               </v-btn>
+              <v-btn
+                icon="mdi-share-variant-outline"
+                variant="text"
+                class="share--btn"
+                @click="
+                  copyText(
+                    `${item}”\n\nSurah ${data?.surahNameTranslation} • ${
+                      data?.surahNo
+                    }:${index + 1}`
+                  )
+                "
+              />
+              <v-btn
+                class="verse--play"
+                :icon="
+                  playing && playingAyah === index + 1
+                    ? 'mdi-pause'
+                    : 'mdi-play'
+                "
+                @click="playAyah(index + 1)"
+              />
             </div>
           </div>
         </v-sheet>
@@ -155,10 +176,10 @@
 
 <script setup>
 definePageMeta({ layout: "reader" });
-
-const route = useRoute();
+const { copyText } = useCopyAyah();
 const { getChapter } = useChapters();
-const { selected, setReciter, loadSaved } = useReciter();
+const { selected, setReciter } = useReciter();
+const route = useRoute();
 
 const chapterNo = computed(() => Number(route.params.id));
 
@@ -173,6 +194,7 @@ const {
   loading,
   currentTimeLabel,
   durationLabel,
+  reset,
 } = useAudioPlayer();
 
 const { data, pending, error } = await useAsyncData(
@@ -218,7 +240,6 @@ const { load, isAyahBookmarked, toggleAyah } = useBookmarks();
 
 onMounted(() => {
   load();
-  loadSaved();
 });
 
 const isAyahFav = (ayahNo) => {
@@ -240,9 +261,39 @@ watch(
   { immediate: true }
 );
 watch(chapterNo, () => {
-  pause();
-  seek(0);
+  reset();
   selected.value = null;
+});
+onBeforeRouteLeave(() => {
+  reset();
+});
+
+// verse play
+const { getVerse } = useVerse();
+
+const playingAyah = ref(null);
+
+const playAyah = async (ayahNo) => {
+  try {
+    const verse = await getVerse(chapterNo.value, ayahNo);
+
+    const audioUrl = verse.audio?.["1"]?.url; // always first reciter
+    if (!audioUrl) return;
+
+    if (playing.value && playingAyah.value === ayahNo) {
+      pause();
+      playingAyah.value = null;
+      return;
+    }
+
+    await play(audioUrl);
+    playingAyah.value = ayahNo;
+  } catch (e) {
+    console.error(e);
+  }
+};
+watch(playing, (v) => {
+  if (!v) playingAyah.value = null;
 });
 </script>
 
@@ -250,7 +301,16 @@ watch(chapterNo, () => {
 /* ===============================
    Reader Container
 ================================= */
-
+.share--btn {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+.verse--play {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
 .reader-container {
   max-width: 900px;
   margin: auto;
@@ -313,6 +373,7 @@ watch(chapterNo, () => {
 .verse-block {
   padding: 20px 0;
   border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.05);
+  position: relative;
 }
 
 .verse-block:last-child {

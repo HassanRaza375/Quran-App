@@ -12,7 +12,7 @@
           hide-details
         />
       </v-col>
-      <v-col cols="6" col-sm="4" md="3">
+      <v-col cols="12">
         <div class="d-flex align-center" style="gap: 10px">
           <v-menu>
             <template #activator="{ props }">
@@ -198,6 +198,7 @@ const {
   loading,
   currentTimeLabel,
   durationLabel,
+  reset,
 } = useAudioPlayer();
 
 const { selected, setReciter, loadSaved } = useReciter();
@@ -253,6 +254,10 @@ watch(selected, (newReciter) => {
     play(newUrl);
   }
 });
+onBeforeRouteLeave(() => {
+  reset();
+});
+
 let sortSurahs = ref([
   "Surah No",
   "Name",
@@ -292,14 +297,15 @@ onMounted(() => {
 
 .arabic-name {
   font-family: "Amiri Quran", serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-align: right;
   direction: rtl;
+  margin-bottom: 20px;
 }
 
 .english-name {
   font-size: 0.9rem;
-  color: #666;
+  color: #e9e9e9;
 }
 
 .meta {

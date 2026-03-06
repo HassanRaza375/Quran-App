@@ -1,5 +1,5 @@
 export const VerseService = {
-  getVerseByNumber(ayahNo: number, surahNo: number) {
+  getVerseByNumber(surahNo: number, ayahNo: number) {
     const { $api } = useNuxtApp();
     return $api(`/${surahNo}/${ayahNo}.json`);
   },

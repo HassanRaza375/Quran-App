@@ -64,14 +64,14 @@
               <div class="arabic-name">
                 {{ name.arabic }}
               </div>
-              <div class="english-name">
+              <div class="english-name pt-2">
+                {{ name.urdu }}
+              </div>
+              <div class="english-name pt-2">
                 {{ name.transliteration }}
               </div>
-              <div class="english-name">
+              <div class="english-name pt-2">
                 {{ name.english }}
-              </div>
-              <div class="english-name">
-                {{ name.urdu }}
               </div>
 
               <div class="meta mt-3">
@@ -112,20 +112,26 @@ const videoSrc = `https://www.youtube.com/embed/${videoId}?si=gv5AX6IPEI7pfMYo`;
 
 .arabic-name {
   font-family: "Amiri Quran", serif;
-  font-size: 2rem;
-  text-align: right;
+  font-size: 3rem;
+  text-align: center;
   direction: rtl;
+  margin-bottom: 20px;
 }
 
 .english-name {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 1.5rem;
+  color: #e9e9e9;
+  text-align: center;
 }
 
 .meta {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
+  position: absolute;
+  top: -1px;
+  left: 6px;
+  z-index: 2;
 }
 .youtube-embed-container {
   position: relative;
@@ -142,5 +148,11 @@ const videoSrc = `https://www.youtube.com/embed/${videoId}?si=gv5AX6IPEI7pfMYo`;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 767px) {
+  .youtube-embed-container {
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  }
 }
 </style>

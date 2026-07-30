@@ -101,6 +101,18 @@
                       />
                     </v-card-title>
 
+                    <v-card-text v-if="item.textLoading" class="pt-0">
+                      <v-skeleton-loader type="text@2" />
+                    </v-card-text>
+                    <v-card-text v-else-if="item.arabic || item.urdu" class="pt-0">
+                      <div v-if="item.arabic" class="bm-arabic mb-2">
+                        {{ item.arabic }}
+                      </div>
+                      <div v-if="item.urdu" class="bm-urdu">
+                        {{ item.urdu }}
+                      </div>
+                    </v-card-text>
+
                     <v-card-actions>
                       <NuxtLink :to="item.to" class="text-decoration-none">
                         <v-btn variant="tonal">Open</v-btn>
@@ -214,6 +226,27 @@ function parseKey(k) {
   return { type: parts[0], parts }
 }
 
+/* ---------------- Ayah text (Arabic + Urdu) ---------------- */
+const { getVerse } = useVerse()
+const verseTexts = ref({}) // "surahNo:ayahNo" -> { arabic, urdu, loading }
+
+async function loadVerseText(surahNo, ayahNo) {
+  const key = `${surahNo}:${ayahNo}`
+  if (verseTexts.value[key]) return
+
+  verseTexts.value[key] = { arabic: "", urdu: "", loading: true }
+  try {
+    const verse = await getVerse(surahNo, ayahNo)
+    verseTexts.value[key] = {
+      arabic: verse?.arabic1 || "",
+      urdu: verse?.urdu || "",
+      loading: false,
+    }
+  } catch {
+    verseTexts.value[key] = { arabic: "", urdu: "", loading: false }
+  }
+}
+
 /* ---------------- Ayah bookmarks ---------------- */
 const ayahBookmarks = computed(() => {
   return list.value
@@ -227,6 +260,8 @@ const ayahBookmarks = computed(() => {
       const surahName =
         s?.surahNameArabicLong || s?.surahName || `Surah ${surahNo}`
 
+      const text = verseTexts.value[`${surahNo}:${ayahNo}`]
+
       return {
         id: k,
         type: "ayah",
@@ -235,10 +270,21 @@ const ayahBookmarks = computed(() => {
         title: `${surahName} • Ayah ${ayahNo}`,
         subtitle: `Surah #${surahNo}`,
         to: `/surah/${surahNo}#ayah-${ayahNo}`,
+        arabic: text?.arabic || "",
+        urdu: text?.urdu || "",
+        textLoading: text?.loading ?? true,
       }
     })
     .sort((a, b) => a.surahNo - b.surahNo || a.ayahNo - b.ayahNo)
 })
+
+watch(
+  ayahBookmarks,
+  (items) => {
+    items.forEach((item) => loadVerseText(item.surahNo, item.ayahNo))
+  },
+  { immediate: true }
+)
 
 /* ---------------- Surah bookmarks ---------------- */
 const surahBookmarks = computed(() => {
@@ -377,3 +423,21 @@ const removeBookmark = (item) => {
   if (item.type === "page") removePage(item.pageNo)
 }
 </script>
+
+<style scoped>
+.bm-arabic {
+  direction: rtl;
+  text-align: right;
+  font-family: "Amiri Quran", serif;
+  font-size: 1.35rem;
+  line-height: 2;
+}
+
+.bm-urdu {
+  direction: rtl;
+  text-align: right;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+</style>

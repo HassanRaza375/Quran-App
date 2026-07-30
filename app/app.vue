@@ -5,6 +5,7 @@
     <NuxtPage />
   </NuxtLayout>
   <AppToast />
+  <VitePwaManifest />
 </template>
 
 <script setup>

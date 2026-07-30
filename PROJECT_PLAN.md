@@ -8,7 +8,8 @@ Ayah of the Day features, and cleaning up bugs/design debt found during the audi
 
 **Status:** Pass 1 (PWA, perf, Tasbeeh) ✅ shipped. Pass 2 (Continue Reading, Ayah of the Day
 refresh, wider bug sweep, Bookmarks completion) ✅ shipped — see §4. Pass 3 (prayer notification
-scheduling) ✅ shipped — see §5.
+scheduling) ✅ shipped — see §5. Pass 4 (Arabic + Urdu text on saved ayah bookmarks) ✅ shipped —
+see §6. Pass 5 (PWA installability was actually broken since Pass 1 — fixed) ✅ shipped — see §7.
 
 ---
 
@@ -207,3 +208,68 @@ Verified via `npm run build` (clean) and `npm run dev` (`/`, `/settings`, `/pray
 notifications while the app/browser is fully closed. Needs VAPID keys, a server endpoint to store
 each user's push subscription + location, and a scheduled job (Vercel Cron or similar) to send at
 the right minute. Revisit once there's a data store and cron actually provisioned.
+
+---
+
+## 6. Pass 4 — Arabic + Urdu text on saved ayah bookmarks
+
+Ayah bookmarks (`bookmarks.vue`, Ayahs tab) only ever stored/showed a key (`ayah:surahNo:ayahNo`)
+resolved to a title like *"Al-Baqarah • Ayah 255"* — no verse content, so you couldn't tell what
+you'd actually bookmarked without opening it.
+
+**Shipped:** each ayah bookmark card now fetches and displays the verse's Arabic text and Urdu
+translation (via the existing `useVerse()`/`VerseService` composable — same `/api/{surah}/{ayah}.json`
+endpoint already used elsewhere, confirmed it returns `arabic1` and `urdu` fields). Fetched lazily
+per-card into a local cache (`verseTexts`) keyed by `surahNo:ayahNo` when the Ayahs tab's bookmark
+list changes, with a skeleton shown while loading. Text is right-to-left styled for both fields
+(Urdu uses Arabic script, so it needs `direction: rtl` too, not just the Arabic verse).
+
+Deliberately kept as a fetch-on-view rather than storing the verse text in the bookmark itself —
+`useBookmarks` stores bookmarks as plain keys with no metadata for any type, and duplicating verse
+text into local storage would only save a network round-trip that Pass 1's PWA runtime caching
+(`StaleWhileRevalidate` on `quranapi.pages.dev`) already makes cheap after the first view.
+
+Verified via `npm run build` (clean), `npm run dev` (`/bookmarks`, `/surah/2` both 200, no console
+errors), and a direct check of the quranapi endpoint confirming the `arabic1`/`urdu` field shape.
+
+---
+
+## 7. Pass 5 — The PWA from Pass 1 wasn't actually installable
+
+Asked to confirm the PWA setup was real, so it got checked properly this time instead of taking
+the Pass-1 config at face value. First attempt used `curl`/headless-Chrome-dump-dom against
+`http://localhost:3000` and found **no `<link rel="manifest">` anywhere** — worrying, since Pass 1
+had confirmed `manifest.webmanifest` and `sw.js` were being generated and served. (First check was
+also briefly confused by a leftover dev-mode server still bound to `[::1]:3000` from an earlier
+session — Windows resolves `localhost` to `::1` first, so `curl localhost:3000` was silently
+hitting the stale dev process, which has PWA disabled by design via `devOptions.enabled: false`.
+Killed it and confirmed the same result against the real rebuilt production server.)
+
+**Root cause:** `@vite-pwa/nuxt` does not auto-inject the manifest `<link>` tag. It ships a
+`<VitePwaManifest />` component that has to be placed somewhere in the app (typically `app.vue`)
+— its whole job is calling `useHead()` to add that link. Pass 1 wrote the `pwa: {...}` config in
+`nuxt.config.ts` but never added the component, so the manifest was generated and servable but
+literally undiscoverable by a browser. Fixed by adding `<VitePwaManifest />` to `app.vue`.
+
+**What was and wasn't actually broken**, confirmed with a real headless-Chrome session (Puppeteer
+driving the installed Chrome) rather than static HTML inspection, since service worker
+registration is a JS side effect with no DOM footprint `curl`/`--dump-dom` could ever see:
+- Manifest link: broken → now `/manifest.webmanifest`, present after the fix.
+- Service worker: was actually fine already — confirmed active and controlling the page even
+  before this fix (`navigator.serviceWorker.controller` set, registration active). Pass 1's
+  Workbox/SW setup itself was correct; only the manifest discovery was missing.
+- After the fix, Chrome's own `beforeinstallprompt` event fires on load (intercepted on purpose,
+  since `pwa.client.installPrompt: true` defers it for a custom install button rather than the
+  native mini-infobar) — that event only fires when Chrome's installability criteria are actually
+  met, which is the real confirmation this is now a genuinely installable PWA, not just "files
+  exist on disk."
+
+Lighthouse was tried first but Lighthouse 12.x dropped the scored PWA category entirely, so it
+produced nothing usable here — verification had to be done directly against the manifest/service
+worker APIs instead.
+
+Verified via `npm run build` (clean) + a full production `node .output/server/index.mjs` session
+driven by Puppeteer/Chrome, checking `document.querySelector('link[rel="manifest"]')`,
+`navigator.serviceWorker.getRegistrations()`, and `navigator.serviceWorker.controller` directly —
+not just that the files 200'd. Puppeteer was installed with `--no-save` for this check only and
+removed afterward; no dependency changes were left behind.

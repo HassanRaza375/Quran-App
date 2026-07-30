@@ -102,7 +102,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 
 const prayer = usePrayerStore();
 
@@ -111,7 +111,6 @@ const currentYear = ref(new Date().getFullYear());
 
 const calendarDays = ref([]);
 const selectedDay = ref(null);
-const loading = ref(true);
 
 const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -135,19 +134,20 @@ function selectDay(day) {
 
 /* ---------- FETCH CALENDAR ---------- */
 
+let locationCheckInterval = null;
+
+const waitForLocation = () =>
+  new Promise((resolve) => {
+    locationCheckInterval = setInterval(() => {
+      if (prayer.latitude && prayer.longitude) {
+        clearInterval(locationCheckInterval);
+        locationCheckInterval = null;
+        resolve();
+      }
+    }, 100);
+  });
+
 async function fetchCalendar() {
-  loading.value = false;
-
-  const waitForLocation = () =>
-    new Promise((resolve) => {
-      const check = setInterval(() => {
-        if (prayer.latitude && prayer.longitude) {
-          clearInterval(check);
-          resolve();
-        }
-      }, 100);
-    });
-
   await waitForLocation();
 
   const cacheKey = `calendar_${prayer.latitude}_${prayer.longitude}_${currentMonth.value}_${currentYear.value}`;
@@ -189,6 +189,10 @@ onMounted(() => {
   }
 
   fetchCalendar();
+});
+
+onBeforeUnmount(() => {
+  if (locationCheckInterval) clearInterval(locationCheckInterval);
 });
 </script>
 

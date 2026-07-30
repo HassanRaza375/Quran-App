@@ -17,8 +17,15 @@
         <v-card rounded="xl" elevation="0" class="pa-6 surah-header">
           <div class="d-flex flex-wrap align-center justify-space-between">
             <div>
-              <div class="arabic-name">
-                {{ surah?.surahNameArabicLong }}
+              <div class="d-flex align-center ga-2">
+                <div class="arabic-name">
+                  {{ surah?.surahNameArabicLong }}
+                </div>
+                <v-btn icon size="small" variant="text" @click="toggleAudio(surahNo)">
+                  <v-icon :color="isAudioBookmarked(surahNo) ? 'amber' : 'grey'">
+                    {{ isAudioBookmarked(surahNo) ? "mdi-bookmark" : "mdi-bookmark-outline" }}
+                  </v-icon>
+                </v-btn>
               </div>
 
               <div class="text-subtitle-1 text-medium-emphasis">
@@ -35,13 +42,19 @@
               </div>
             </div>
 
-            <div v-if="currentReciter" class="text-right">
-              <div class="text-caption text-medium-emphasis">
-                Now Playing {{ currentTimeLabel }} / {{ durationLabel }}
+            <div v-if="currentReciter" class="d-flex align-center ga-2">
+              <div class="text-right">
+                <div class="text-caption text-medium-emphasis">
+                  Now Playing {{ currentTimeLabel }} / {{ durationLabel }}
+                </div>
+                <div class="font-weight-medium">
+                  {{ currentReciter.reciter }}
+                </div>
               </div>
-              <div class="font-weight-medium">
-                {{ currentReciter.reciter }}
-              </div>
+
+              <v-btn icon variant="tonal" color="primary" @click="toggle">
+                <v-icon>{{ playing ? "mdi-pause" : "mdi-play" }}</v-icon>
+              </v-btn>
             </div>
           </div>
         </v-card>
@@ -81,27 +94,28 @@
 <script setup>
 const { playing, pause, play, currentUrl, durationLabel, currentTimeLabel } =
   useAudioPlayer();
+const { getChapter } = useChapters();
 const route = useRoute();
-const surahNo = computed(() => route.params.id || 1);
+const surahNo = computed(() => Number(route.params.id) || 1);
 
-const surah = ref(null);
-const reciters = ref([]);
+const { load, isAudioBookmarked, toggleAudio } = useBookmarks();
+onMounted(() => {
+  load(); // safe even if you already load in layout
+});
 
+const chapterData = ref(null);
 const loading = ref(true);
 
 watchEffect(async () => {
   loading.value = true;
-  const id = surahNo.value;
-
-  surah.value = await $fetch(`https://quranapi.pages.dev/api/${id}.json`);
-
-  const audioRes = await $fetch(
-    `https://quranapi.pages.dev/api/audio/${id}.json`
-  );
-
-  reciters.value = Object.values(audioRes);
+  chapterData.value = await getChapter(surahNo.value);
   loading.value = false;
 });
+
+const surah = computed(() => chapterData.value);
+const reciters = computed(() =>
+  chapterData.value?.audio ? Object.values(chapterData.value.audio) : []
+);
 const currentReciter = computed(() =>
   reciters.value.find((r) => r.url === currentUrl.value)
 );

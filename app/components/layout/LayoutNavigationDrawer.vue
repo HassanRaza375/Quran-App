@@ -38,13 +38,24 @@
 </template>
 
 <script setup>
-const { rawSurahs } = useSurahs();
-const sidebarList = ref([
+// Loaded lazily (not at layout-bundle scope) so the ~170KB surah list only
+// downloads once the drawer actually needs it, instead of on every page load.
+const audioChildren = ref([]);
+onMounted(async () => {
+  const { default: surahsJson } = await import("~/assets/data/surah.json");
+  audioChildren.value = surahsJson.map((surah, i) => ({
+    title: surah.surahNameArabicLong,
+    path: `/surah-audios/${i + 1}`,
+  }));
+});
+
+const sidebarList = computed(() => [
   { title: "Home", icon: "mdi-home", path: "/" },
   { title: "Asma-ul-Husna", icon: "mdi-book", path: "/asma-ul-husna" },
   { title: "Surah Listing", icon: "mdi-view-list", path: "/surah-listing" },
   { title: "Search", icon: "mdi-magnify", path: "/search" },
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
+  { title: "Tasbeeh", icon: "mdi-counter", path: "/tasbeeh" },
   { title: "Sajda", icon: "mdi-airbag", path: "/sajda" },
   { title: "Per Page", icon: "mdi-note-multiple", path: "/per-page-read" },
   { title: "Prayer Times", icon: "mdi-clock-outline", path: "/prayerTime" },
@@ -57,10 +68,7 @@ const sidebarList = ref([
   {
     title: "Audio",
     icon: "mdi-book",
-    children: rawSurahs.value.map((surah, i) => ({
-      title: surah.surahNameArabicLong,
-      path: `/surah-audios/${i + 1}`,
-    })),
+    children: audioChildren.value,
   },
   {
     title: "Juz",

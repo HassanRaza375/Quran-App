@@ -29,6 +29,16 @@
 
           <v-select class="mt-4" label="Reminder Time" :items="reminderOptions" v-model="reminderOffset"
             item-title="title" item-value="value" />
+
+          <v-alert v-if="notificationsEnabled" type="info" variant="tonal" density="compact" class="mt-4">
+            Notifications fire while the app is open (foreground or a background tab) — they won't
+            arrive if the app or browser is fully closed.
+          </v-alert>
+
+          <v-btn class="mt-4" variant="tonal" prepend-icon="mdi-bell-ring-outline"
+            :disabled="!notificationsEnabled" :loading="sendingTest" @click="sendTestNotification">
+            Send Test Notification
+          </v-btn>
         </v-card>
       </v-col>
     </v-row>
@@ -40,6 +50,8 @@ import { useTheme } from "vuetify";
 
 const theme = useTheme();
 const themeMode = ref("system");
+const prayer = usePrayerStore();
+const sendingTest = ref(false);
 
 const prayerOrder = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
 
@@ -84,7 +96,41 @@ watch(notificationsEnabled, async (val) => {
       alert("Please allow notifications to receive prayer alerts.");
     }
   }
+
+  prayer.refreshNotificationSchedule();
 });
+
+async function sendTestNotification() {
+  if (!("Notification" in window)) {
+    alert("This browser doesn't support notifications.");
+    return;
+  }
+
+  if (Notification.permission !== "granted") {
+    const granted = await requestNotificationPermission();
+    if (!granted) return;
+  }
+
+  sendingTest.value = true;
+  try {
+    const options = {
+      body: "Prayer notifications are working correctly.",
+      icon: "/pwa-192x192.png",
+      badge: "/pwa-192x192.png",
+      vibrate: [200, 100, 200],
+      tag: "test-notification",
+    };
+
+    if ("serviceWorker" in navigator) {
+      const registration = await navigator.serviceWorker.ready;
+      await registration.showNotification("🕌 Test Notification", options);
+    } else {
+      new Notification("🕌 Test Notification", options);
+    }
+  } finally {
+    sendingTest.value = false;
+  }
+}
 
 onMounted(() => {
   const saved = localStorage.getItem("prayerSettings");
@@ -110,6 +156,7 @@ watch(
         reminderOffset: reminderOffset.value,
       })
     );
+    prayer.refreshNotificationSchedule();
   },
   { deep: true }
 );

@@ -117,11 +117,51 @@
               </v-row>
             </template>
 
-            <!-- OTHER TABS -->
+            <!-- AUDIO / SAJDA / PAGE / JUZ TABS -->
             <template v-else>
-              <v-alert type="info" variant="tonal">
-                {{ c.label }} bookmarks will appear here once you implement them.
-              </v-alert>
+              <v-row>
+                <v-col
+                  v-for="item in categoryItems[c.value]"
+                  :key="item.id"
+                  cols="12"
+                  md="6"
+                  lg="4"
+                >
+                  <v-card rounded="lg" hover>
+                    <v-card-title class="d-flex justify-space-between align-center">
+                      <div>
+                        <div class="font-weight-bold">
+                          {{ item.title }}
+                        </div>
+                        <div v-if="item.subtitle" class="text-caption text-medium-emphasis">
+                          {{ item.subtitle }}
+                        </div>
+                      </div>
+
+                      <v-btn
+                        class="align-self-start"
+                        icon="mdi-bookmark-remove"
+                        variant="text"
+                        color="error"
+                        size="small"
+                        @click.stop="removeBookmark(item)"
+                      />
+                    </v-card-title>
+
+                    <v-card-actions>
+                      <NuxtLink :to="item.to" class="text-decoration-none">
+                        <v-btn variant="tonal">Open</v-btn>
+                      </NuxtLink>
+                    </v-card-actions>
+                  </v-card>
+                </v-col>
+
+                <v-col cols="12" v-if="!categoryItems[c.value]?.length">
+                  <v-alert type="info" variant="tonal">
+                    No {{ c.label.toLowerCase() }} bookmarks yet
+                  </v-alert>
+                </v-col>
+              </v-row>
             </template>
           </v-window-item>
         </v-window>
@@ -145,16 +185,24 @@ const categories = [
 const tabValue = computed(() => categories[tab.value]?.value || "surah")
 
 /* ---------------- Bookmarks storage ---------------- */
-const { list, load, removeAyah, removeSurah } = useBookmarks()
+const {
+  list,
+  load,
+  removeAyah,
+  removeSurah,
+  removeSajda,
+  removeAudio,
+  removeJuz,
+  removePage,
+} = useBookmarks()
 onMounted(() => load())
 
 /* ---------------- Surah data for names ---------------- */
-const { getAll } = useSurahs()
-const { data: surahData } = useAsyncData("surahs", () => getAll())
+const { rawSurahs } = useSurahs()
 
 const surahsWithNumber = computed(() => {
-  if (!surahData.value) return []
-  return surahData.value.map((s, i) => ({ ...s, surahNo: i + 1 }))
+  if (!rawSurahs.value?.length) return []
+  return rawSurahs.value.map((s, i) => ({ ...s, surahNo: i + 1 }))
 })
 
 const surahMap = computed(() => {
@@ -218,16 +266,114 @@ const surahBookmarks = computed(() => {
     .sort((a, b) => a.surahNo - b.surahNo)
 })
 
-/* ---------------- Top chip count ---------------- */
-const currentCount = computed(() => {
-  if (tabValue.value === "surah") return surahBookmarks.value.length
-  if (tabValue.value === "ayah") return ayahBookmarks.value.length
-  return 0
+/* ---------------- Sajda bookmarks ---------------- */
+const sajdaBookmarks = computed(() => {
+  return list.value
+    .filter((k) => String(k).startsWith("sajda:"))
+    .map((k) => {
+      const { parts } = parseKey(k)
+      const surahNo = Number(parts[1])
+      const ayahNo = Number(parts[2])
+      const s = surahMap.value.get(surahNo)
+      const surahName =
+        s?.surahNameArabicLong || s?.surahName || `Surah ${surahNo}`
+
+      return {
+        id: k,
+        type: "sajda",
+        surahNo,
+        ayahNo,
+        title: `${surahName} • Ayah ${ayahNo}`,
+        subtitle: "Sajda verse",
+        to: `/surah/${surahNo}#ayah-${ayahNo}`,
+      }
+    })
+    .sort((a, b) => a.surahNo - b.surahNo || a.ayahNo - b.ayahNo)
 })
+
+/* ---------------- Audio bookmarks (per-surah reciters) ---------------- */
+const audioBookmarks = computed(() => {
+  return list.value
+    .filter((k) => String(k).startsWith("audio:"))
+    .map((k) => {
+      const { parts } = parseKey(k)
+      const surahNo = Number(parts[1])
+      const s = surahMap.value.get(surahNo)
+      const title = s?.surahNameTranslation || s?.surahName || `Surah ${surahNo}`
+
+      return {
+        id: k,
+        type: "audio",
+        surahNo,
+        title,
+        subtitle: `Reciters • Surah #${surahNo}`,
+        to: `/surah-audios/${surahNo}`,
+      }
+    })
+    .sort((a, b) => a.surahNo - b.surahNo)
+})
+
+/* ---------------- Juz bookmarks ---------------- */
+const juzBookmarks = computed(() => {
+  return list.value
+    .filter((k) => String(k).startsWith("juz:"))
+    .map((k) => {
+      const { parts } = parseKey(k)
+      const juzNo = Number(parts[1])
+
+      return {
+        id: k,
+        type: "juz",
+        juzNo,
+        title: `Juz ${juzNo}`,
+        subtitle: "",
+        to: `/juz/${juzNo}`,
+      }
+    })
+    .sort((a, b) => a.juzNo - b.juzNo)
+})
+
+/* ---------------- Page (mushaf) bookmarks ---------------- */
+const pageBookmarks = computed(() => {
+  return list.value
+    .filter((k) => String(k).startsWith("page:"))
+    .map((k) => {
+      const { parts } = parseKey(k)
+      const pageNo = Number(parts[1])
+
+      return {
+        id: k,
+        type: "page",
+        pageNo,
+        title: `Page ${pageNo}`,
+        subtitle: "",
+        to: `/per-page-read?page=${pageNo}`,
+      }
+    })
+    .sort((a, b) => a.pageNo - b.pageNo)
+})
+
+/* ---------------- Category lookup + top chip count ---------------- */
+const categoryItems = computed(() => ({
+  surah: surahBookmarks.value,
+  ayah: ayahBookmarks.value,
+  audio: audioBookmarks.value,
+  sajda: sajdaBookmarks.value,
+  page: pageBookmarks.value,
+  juz: juzBookmarks.value,
+}))
+
+const currentCount = computed(
+  () => categoryItems.value[tabValue.value]?.length || 0
+)
 
 /* ---------------- Remove logic ---------------- */
 const removeBookmark = (item) => {
   if (item.type === "ayah") removeAyah(item.surahNo, item.ayahNo)
   if (item.type === "surah") removeSurah(item.surahNo)
+  if (item.type === "sajda") removeSajda(item.surahNo, item.ayahNo)
+  if (item.type === "audio") removeAudio(item.surahNo)
+  if (item.type === "juz") removeJuz(item.juzNo)
+  if (item.type === "page") removePage(item.pageNo)
 }
 </script>

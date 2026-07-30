@@ -15,7 +15,7 @@
         />
       </v-col>
 
-      <v-col cols="12" md="8" class="d-flex justify-end" style="gap: 12px">
+      <v-col cols="12" md="8" class="d-flex justify-end align-center" style="gap: 12px">
         <v-btn
           variant="outlined"
           :disabled="page === 1 || pending"
@@ -32,6 +32,12 @@
           @click="nextPage"
         >
           Next
+        </v-btn>
+
+        <v-btn icon variant="text" @click="togglePage(page)">
+          <v-icon :color="isPageBookmarked(page) ? 'amber' : 'grey'">
+            {{ isPageBookmarked(page) ? "mdi-bookmark" : "mdi-bookmark-outline" }}
+          </v-icon>
         </v-btn>
       </v-col>
     </v-row>
@@ -83,7 +89,9 @@
 </template>
 
 <script setup>
-const page = ref(1);
+const route = useRoute();
+const initialPage = Number(route.query.page) || 1;
+const page = ref(initialPage >= 1 && initialPage <= 604 ? initialPage : 1);
 const navDir = ref(null);
 
 const TOTAL_PAGES = 604;
@@ -92,6 +100,11 @@ const { data, pending, refresh } = await useFetch(
   () => `https://api.alquran.cloud/v1/page/${page.value}/quran-uthmani`,
   { watch: [page] }
 );
+
+const { load, isPageBookmarked, togglePage } = useBookmarks();
+onMounted(() => {
+  load(); // safe even if you already load in layout
+});
 
 const ayahs = computed(() => data.value?.data?.ayahs || []);
 

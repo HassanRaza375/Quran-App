@@ -24,16 +24,29 @@
     <v-row v-else>
       <v-col cols="12" v-for="ayah in data.data.ayahs" :key="ayah.number">
         <v-card elevation="1" rounded="lg" class="pa-4 sajda-card">
-          <!-- Sajda badge -->
-          <v-chip
-            :color="ayah.sajda.obligatory ? 'red' : 'primary'"
-            variant="flat"
-            class="mb-2"
-          >
-            {{
-              ayah.sajda.obligatory ? "Obligatory Sajda" : "Recommended Sajda"
-            }}
-          </v-chip>
+          <div class="d-flex justify-space-between align-start">
+            <!-- Sajda badge -->
+            <v-chip
+              :color="ayah.sajda.obligatory ? 'red' : 'primary'"
+              variant="flat"
+              class="mb-2"
+            >
+              {{
+                ayah.sajda.obligatory ? "Obligatory Sajda" : "Recommended Sajda"
+              }}
+            </v-chip>
+
+            <v-btn
+              icon
+              size="small"
+              variant="text"
+              @click="toggleSajda(ayah.surah.number, ayah.numberInSurah)"
+            >
+              <v-icon :color="isSajdaBookmarked(ayah.surah.number, ayah.numberInSurah) ? 'amber' : 'grey'">
+                {{ isSajdaBookmarked(ayah.surah.number, ayah.numberInSurah) ? "mdi-bookmark" : "mdi-bookmark-outline" }}
+              </v-icon>
+            </v-btn>
+          </div>
 
           <!-- Ayah text -->
           <p class="ayah-text mb-4">
@@ -64,6 +77,11 @@
 const { getAll } = useSajda();
 const { data, pending, error } = await useAsyncData("sajda", () => getAll(), {
   cache: true,
+});
+
+const { load, isSajdaBookmarked, toggleSajda } = useBookmarks();
+onMounted(() => {
+  load(); // safe even if you already load in layout
 });
 </script>
 

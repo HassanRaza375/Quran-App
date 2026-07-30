@@ -32,7 +32,7 @@
             <!-- Surah Marker (First Surah on Juz) -->
             <div class="surah-marker">
               <span class="surah-marker-text">
-                {{ Object.keys(data.surahs) }}
+                {{ surahNamesInJuz }}
               </span>
             </div>
 
@@ -73,8 +73,9 @@ const { data, pending, error } = useAsyncData(
   { watch: [() => route.params.id] },
 );
 const surahs = computed(() => Object.entries(data.value?.surahs || {}));
-
-console.log("juz", data);
+const surahNamesInJuz = computed(() =>
+  Object.keys(data.value?.surahs || {}).join(" · ")
+);
 </script>
 <style scoped>
 /* ===============================

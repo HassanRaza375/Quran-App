@@ -156,22 +156,28 @@
               <div class="text-overline text-grey-lighten-1">
                 Continue Reading
               </div>
-              <div class="text-h6 font-weight-bold">Surah Al-Baqarah</div>
+              <div class="text-h6 font-weight-bold">
+                {{ readingProgress ? `Surah ${readingProgress.surahName}` : "Start Reading" }}
+              </div>
             </div>
 
             <v-icon size="36" color="teal"> mdi-book-open-page-variant </v-icon>
           </div>
 
           <div class="ayah-info-modern mb-3">
-            Last Read: Ayah <strong>153</strong>
+            <template v-if="readingProgress">
+              Last Read: Ayah <strong>{{ readingProgress.ayahNo }}</strong>
+              <span v-if="readingProgress.totalAyah"> / {{ readingProgress.totalAyah }}</span>
+            </template>
+            <template v-else> You haven't started reading yet — begin with Al-Fatihah. </template>
           </div>
 
-          <v-progress-linear height="8" model-value="45" rounded color="teal" class="mb-2" />
+          <v-progress-linear height="8" :model-value="readingPercent" rounded color="teal" class="mb-2" />
 
-          <div class="progress-text mb-4">45% completed</div>
+          <div class="progress-text mb-4">{{ readingPercent }}% of the Quran completed</div>
 
-          <v-btn block rounded="xl" size="large" color="teal" class="resume-btn">
-            Continue Reading
+          <v-btn block rounded="xl" size="large" color="teal" class="resume-btn" @click="continueReading">
+            {{ readingProgress ? "Continue Reading" : "Start Reading" }}
           </v-btn>
         </v-card>
       </v-col>
@@ -203,9 +209,21 @@
 
 <script setup>
 const prayer = usePrayerStore();
+const { progress: readingProgress, percent: readingPercent, load: loadReadingProgress } = useReadingProgress();
+const router = useRouter();
+
 onMounted(() => {
   prayer.init();
+  loadReadingProgress();
 });
+
+const continueReading = () => {
+  if (readingProgress.value) {
+    router.push(`/surah/${readingProgress.value.surahNo}#ayah-${readingProgress.value.ayahNo}`);
+  } else {
+    router.push("/surah/1");
+  }
+};
 </script>
 <style scoped>
 .v-skeleton-loader {

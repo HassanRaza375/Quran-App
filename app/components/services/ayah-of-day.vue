@@ -53,7 +53,8 @@ const toggleAyahBookmark = (ayahNo) => {
               <v-btn
                 icon="mdi-refresh"
                 variant="text"
-                @click="fetchAyahOfTheDay"
+                :loading="loading"
+                @click="fetchAyahOfTheDay(true)"
               />
               <v-btn
                 icon="mdi-share-variant-outline"

@@ -203,6 +203,60 @@ const { data, pending, error } = await useAsyncData(
   { watch: [chapterNo] }
 );
 
+/* ---------- Reading progress ---------- */
+const { setProgress, load: loadProgress } = useReadingProgress();
+let lastTrackedAyah = 1;
+let scrollTimeout;
+
+const trackProgress = (ayahNo) => {
+  if (!data.value || ayahNo === lastTrackedAyah) return;
+  lastTrackedAyah = ayahNo;
+  setProgress(chapterNo.value, ayahNo, {
+    surahName: data.value.surahNameTranslation,
+    surahNameArabic: data.value.surahNameArabicLong,
+    totalAyah: data.value.totalAyah,
+  });
+};
+
+const handleScroll = () => {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    const sections = document.querySelectorAll('[id^="ayah-"]');
+    const threshold = window.innerHeight * 0.35;
+    let current = 1;
+
+    for (const el of sections) {
+      if (el.getBoundingClientRect().top <= threshold) {
+        current = Number(el.id.replace("ayah-", ""));
+      } else {
+        break;
+      }
+    }
+
+    trackProgress(current);
+  }, 400);
+};
+
+watch(
+  data,
+  (val) => {
+    if (!val) return;
+    lastTrackedAyah = 1;
+    trackProgress(1);
+  },
+  { immediate: true }
+);
+
+onMounted(() => {
+  loadProgress();
+  window.addEventListener("scroll", handleScroll, { passive: true });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+  clearTimeout(scrollTimeout);
+});
+
 const translations = ref(["arabic1", "arabic2", "english", "bengali", "urdu"]);
 const selectedType = ref("arabic1");
 

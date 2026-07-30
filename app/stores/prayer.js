@@ -9,9 +9,9 @@ export const usePrayerStore = defineStore("prayer", () => {
   const error = ref(null);
   const countdown = ref("");
   const qibla = ref(null);
-  let lastNotified = null;
 
-  const today = new Date().toLocaleDateString("en-GB").replace(/\//g, "-");
+  const getTodayKey = () =>
+    new Date().toLocaleDateString("en-GB").replace(/\//g, "-");
   const prayerOrder = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
 
   const icons = {
@@ -24,20 +24,12 @@ export const usePrayerStore = defineStore("prayer", () => {
 
   let countdownTimer;
   let autoRefreshTimer;
+  let notificationTimers = [];
 
   /* ---------------- SETTINGS ---------------- */
 
   function getSettings() {
     return JSON.parse(localStorage.getItem("prayerSettings") || "{}");
-  }
-
-  function canNotify(prayer) {
-    const s = getSettings();
-
-    if (!s.notificationsEnabled) return false;
-    if (!s.enabledPrayers?.[prayer]) return false;
-
-    return Notification.permission === "granted";
   }
 
   function getOffset() {
@@ -75,31 +67,38 @@ export const usePrayerStore = defineStore("prayer", () => {
 
   /* ---------------- FETCH ---------------- */
 
-  const cacheKey = computed(
-    () => `prayer_${latitude.value}_${longitude.value}_${today}`,
-  );
+  // Plain function (not `computed`) so it re-reads the real calendar date on
+  // every call — a memoized computed would freeze on whatever day the store
+  // was created, breaking the daily auto-refresh for any session left open
+  // past midnight.
+  const getCacheKey = () =>
+    `prayer_${latitude.value}_${longitude.value}_${getTodayKey()}`;
 
   async function fetchPrayerTimes() {
     try {
       pending.value = true;
       error.value = null;
 
-      const cached = localStorage.getItem(cacheKey.value);
+      const cacheKey = getCacheKey();
+      const cached = localStorage.getItem(cacheKey);
       if (cached) {
         data.value = JSON.parse(cached);
         scheduleAutoRefresh();
         return;
       }
 
-      data.value = await $fetch(`https://api.aladhan.com/v1/timings/${today}`, {
-        params: {
-          latitude: latitude.value,
-          longitude: longitude.value,
-          method: 2,
+      data.value = await $fetch(
+        `https://api.aladhan.com/v1/timings/${getTodayKey()}`,
+        {
+          params: {
+            latitude: latitude.value,
+            longitude: longitude.value,
+            method: 2,
+          },
         },
-      });
+      );
 
-      localStorage.setItem(cacheKey.value, JSON.stringify(data.value));
+      localStorage.setItem(cacheKey, JSON.stringify(data.value));
       scheduleAutoRefresh();
     } catch (err) {
       error.value = "Failed to load prayer times";
@@ -128,33 +127,23 @@ export const usePrayerStore = defineStore("prayer", () => {
     return upcoming[0]?.prayer || "Fajr";
   });
 
-  watch(nextPrayer, () => (lastNotified = null));
-
-  /* ---------------- COUNTDOWN ---------------- */
+  /* ---------------- COUNTDOWN (display only) ---------------- */
 
   function updateCountdown() {
     if (!data.value || !nextPrayer.value) return;
 
     const now = new Date();
-    const offset = getOffset();
 
     const [h, m] = data.value.data.timings[nextPrayer.value]
       .split(":")
       .map(Number);
 
     const target = new Date();
-    target.setHours(h, m - offset, 0, 0);
+    target.setHours(h, m, 0, 0);
 
     if (target < now) target.setDate(target.getDate() + 1);
 
     const diff = target - now;
-
-    if (diff <= 1000 && lastNotified !== nextPrayer.value) {
-      if (!canNotify(nextPrayer.value)) return;
-
-      showPrayerNotification(nextPrayer.value);
-      lastNotified = nextPrayer.value;
-    }
 
     const hrs = Math.floor(diff / 3600000);
     const mins = Math.floor((diff % 3600000) / 60000);
@@ -200,22 +189,87 @@ export const usePrayerStore = defineStore("prayer", () => {
     qibla.value = (angle + 360) % 360;
   }
 
-  /* ---------------- NOTIFICATION ---------------- */
+  /* ---------------- NOTIFICATION SCHEDULING ----------------
+   * Fires via precise setTimeout per prayer instead of polling every
+   * second, so it isn't relying on the 1s countdown tick to catch the
+   * exact moment. Only works while the app/PWA stays open (foreground or
+   * a backgrounded tab) — there's no push backend, so nothing fires once
+   * the app is fully closed.
+   */
 
-  function showPrayerNotification(prayer) {
-    if (!("serviceWorker" in navigator)) return;
+  function showPrayerNotification(prayer, offsetMinutes = 0) {
+    const title = offsetMinutes > 0 ? `🕌 ${prayer} soon` : `🕌 ${prayer} time`;
+    const body =
+      offsetMinutes > 0
+        ? `${prayer} begins in ${offsetMinutes} minute${offsetMinutes === 1 ? "" : "s"}.`
+        : `It's time for ${prayer} prayer.`;
 
-    navigator.serviceWorker.ready.then((registration) => {
-      registration.showNotification(`🕌 ${prayer} time`, {
-        body: `It’s time for ${prayer} prayer.`,
-        icon: "/pwa-192x192.png",
-        badge: "/pwa-192x192.png",
-        vibrate: [200, 100, 200],
-        tag: prayer,
-        renotify: true,
+    const options = {
+      body,
+      icon: "/pwa-192x192.png",
+      badge: "/pwa-192x192.png",
+      vibrate: [200, 100, 200],
+      tag: `${prayer}-${offsetMinutes > 0 ? "reminder" : "time"}`,
+      renotify: true,
+    };
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.ready.then((registration) => {
+        registration.showNotification(title, options);
       });
+    } else if (typeof Notification !== "undefined") {
+      new Notification(title, options);
+    }
+  }
+
+  function clearNotificationTimers() {
+    notificationTimers.forEach(clearTimeout);
+    notificationTimers = [];
+  }
+
+  function scheduleNotifications() {
+    clearNotificationTimers();
+
+    if (!import.meta.client || !data.value) return;
+
+    const settings = getSettings();
+    if (!settings.notificationsEnabled) return;
+    if (typeof Notification === "undefined" || Notification.permission !== "granted") return;
+
+    const offset = getOffset();
+    const now = new Date();
+
+    prayerOrder.forEach((prayer) => {
+      if (!settings.enabledPrayers?.[prayer]) return;
+
+      const [h, m] = data.value.data.timings[prayer].split(":").map(Number);
+      const target = new Date();
+      target.setHours(h, m - offset, 0, 0);
+
+      // Already passed today — this prayer's next occurrence is tomorrow.
+      if (target <= now) target.setDate(target.getDate() + 1);
+
+      const delay = target - now;
+      // setTimeout delays are capped at ~24.8 days; a day+ out is safe here.
+      const timer = setTimeout(() => {
+        showPrayerNotification(prayer, offset);
+        scheduleNotifications(); // roll this prayer forward to its next occurrence
+      }, delay);
+
+      notificationTimers.push(timer);
     });
   }
+
+  /**
+   * Call after changing notification settings (enable toggle, per-prayer
+   * toggle, reminder offset) so the schedule updates immediately instead of
+   * waiting for the next prayer-times fetch.
+   */
+  function refreshNotificationSchedule() {
+    scheduleNotifications();
+  }
+
+  watch(data, scheduleNotifications);
 
   /* ---------------- RAMADAN ---------------- */
 
@@ -299,5 +353,6 @@ export const usePrayerStore = defineStore("prayer", () => {
     /* actions */
     fetchPrayerTimes,
     init,
+    refreshNotificationSchedule,
   };
 });

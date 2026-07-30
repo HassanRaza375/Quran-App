@@ -13,6 +13,14 @@
             @click="goto(`/juz/${n}`)"
           >
             Juz# {{ n }}
+            <v-icon
+              class="ml-2"
+              size="16"
+              :color="isJuzBookmarked(n) ? 'amber' : undefined"
+              @click.stop="toggleJuz(n)"
+            >
+              {{ isJuzBookmarked(n) ? "mdi-bookmark" : "mdi-bookmark-outline" }}
+            </v-icon>
           </v-chip>
         </v-card>
       </v-col>
@@ -24,5 +32,10 @@ const router = useRouter();
 const goto = (path) => {
   router.push(path);
 };
+
+const { load, isJuzBookmarked, toggleJuz } = useBookmarks();
+onMounted(() => {
+  load(); // safe even if you already load in layout
+});
 </script>
 <style scoped></style>

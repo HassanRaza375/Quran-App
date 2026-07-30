@@ -74,7 +74,7 @@
 
           <div class="text-h6 font-weight-bold">
             {{ p }}
-            <!-- <span v-if="p === prayer.nextPrayer">(Next)</span> -->
+            <span v-if="p === prayer.nextPrayer" class="text-caption font-weight-regular">(Next)</span>
           </div>
 
           <div class="text-h5">

@@ -10,6 +10,9 @@ const makeSurahKey = (surahNo) => `surah:${surahNo}`;
 const makeAyahKey = (surahNo, ayahNo) => `ayah:${surahNo}:${ayahNo}`;
 const makeNameKey = (id) => `name:${id}`;
 const makeSajdaKey = (surahNo, ayahNo) => `sajda:${surahNo}:${ayahNo}`;
+const makeJuzKey = (juzNo) => `juz:${juzNo}`;
+const makeAudioKey = (surahNo) => `audio:${surahNo}`;
+const makePageKey = (pageNo) => `page:${pageNo}`;
 
 export function useBookmarks() {
   const items = useState("bookmarks", () => new Set());
@@ -85,6 +88,21 @@ export function useBookmarks() {
   const removeSajda = (surahNo, ayahNo) =>
     remove(makeSajdaKey(surahNo, ayahNo));
 
+  // ----- Juz helpers -----
+  const isJuzBookmarked = (juzNo) => has(makeJuzKey(juzNo));
+  const toggleJuz = (juzNo) => toggle(makeJuzKey(juzNo));
+  const removeJuz = (juzNo) => remove(makeJuzKey(juzNo));
+
+  // ----- Audio (per-surah reciter page) helpers -----
+  const isAudioBookmarked = (surahNo) => has(makeAudioKey(surahNo));
+  const toggleAudio = (surahNo) => toggle(makeAudioKey(surahNo));
+  const removeAudio = (surahNo) => remove(makeAudioKey(surahNo));
+
+  // ----- Page (mushaf page) helpers -----
+  const isPageBookmarked = (pageNo) => has(makePageKey(pageNo));
+  const togglePage = (pageNo) => toggle(makePageKey(pageNo));
+  const removePage = (pageNo) => remove(makePageKey(pageNo));
+
   const list = computed(() => Array.from(items.value));
 
   return {
@@ -102,6 +120,9 @@ export function useBookmarks() {
     makeAyahKey,
     makeNameKey,
     makeSajdaKey,
+    makeJuzKey,
+    makeAudioKey,
+    makePageKey,
 
     // surah
     isSurahBookmarked,
@@ -122,5 +143,20 @@ export function useBookmarks() {
     isSajdaBookmarked,
     toggleSajda,
     removeSajda,
+
+    // juz
+    isJuzBookmarked,
+    toggleJuz,
+    removeJuz,
+
+    // audio
+    isAudioBookmarked,
+    toggleAudio,
+    removeAudio,
+
+    // page
+    isPageBookmarked,
+    togglePage,
+    removePage,
   };
 }

@@ -9,6 +9,8 @@ export const usePrayerStore = defineStore("prayer", () => {
   const error = ref(null);
   const countdown = ref("");
   const qibla = ref(null);
+  const locationSource = ref(null); // "gps" | "fallback"
+  const fiqh = ref("sunni"); // "sunni" | "jafari"
 
   const getTodayKey = () =>
     new Date().toLocaleDateString("en-GB").replace(/\//g, "-");
@@ -37,6 +39,22 @@ export const usePrayerStore = defineStore("prayer", () => {
     return s.reminderOffset || 0;
   }
 
+  function loadFiqh() {
+    const saved = localStorage.getItem("prayerFiqh");
+    fiqh.value = saved === "jafari" ? "jafari" : "sunni";
+  }
+
+  /**
+   * Switch calculation method (Sunni/ISNA vs Shia Ja'fari) and refetch
+   * prayer times immediately with the new method instead of waiting for
+   * the next scheduled refresh.
+   */
+  function setFiqh(value) {
+    fiqh.value = value === "jafari" ? "jafari" : "sunni";
+    localStorage.setItem("prayerFiqh", fiqh.value);
+    if (import.meta.client && latitude.value != null) fetchPrayerTimes();
+  }
+
   /* ---------------- LOCATION ---------------- */
 
   function getLocation() {
@@ -50,6 +68,7 @@ export const usePrayerStore = defineStore("prayer", () => {
       (pos) => {
         latitude.value = pos.coords.latitude;
         longitude.value = pos.coords.longitude;
+        locationSource.value = "gps";
         calculateQibla(latitude.value, longitude.value);
         fetchPrayerTimes();
       },
@@ -60,9 +79,18 @@ export const usePrayerStore = defineStore("prayer", () => {
     );
   }
 
+  // Lahore, Pakistan — used whenever geolocation is unavailable or denied.
   function fallbackLocation() {
-    latitude.value = 21.4225;
-    longitude.value = 39.8262;
+    latitude.value = 31.5204;
+    longitude.value = 74.3587;
+    locationSource.value = "fallback";
+    calculateQibla(latitude.value, longitude.value);
+  }
+
+  /** Re-request device location (e.g. after the user changes permission). */
+  function refreshLocation() {
+    if (!import.meta.client) return;
+    getLocation();
   }
 
   /* ---------------- FETCH ---------------- */
@@ -70,9 +98,10 @@ export const usePrayerStore = defineStore("prayer", () => {
   // Plain function (not `computed`) so it re-reads the real calendar date on
   // every call — a memoized computed would freeze on whatever day the store
   // was created, breaking the daily auto-refresh for any session left open
-  // past midnight.
+  // past midnight. Includes fiqh so switching calculation method doesn't
+  // silently reuse a cached result computed with the other method.
   const getCacheKey = () =>
-    `prayer_${latitude.value}_${longitude.value}_${getTodayKey()}`;
+    `prayer_${latitude.value}_${longitude.value}_${fiqh.value}_${getTodayKey()}`;
 
   async function fetchPrayerTimes() {
     try {
@@ -93,7 +122,7 @@ export const usePrayerStore = defineStore("prayer", () => {
           params: {
             latitude: latitude.value,
             longitude: longitude.value,
-            method: 2,
+            ...FIQH_PARAMS[fiqh.value],
           },
         },
       );
@@ -316,6 +345,7 @@ export const usePrayerStore = defineStore("prayer", () => {
 
   function init() {
     if (process.client && !data.value) {
+      loadFiqh();
       getLocation();
       countdownTimer = setInterval(() => {
         updateCountdown();
@@ -333,6 +363,12 @@ export const usePrayerStore = defineStore("prayer", () => {
     /* location */
     latitude,
     longitude,
+    locationSource,
+    refreshLocation,
+
+    /* fiqh (calculation method) */
+    fiqh,
+    setFiqh,
 
     /* prayer */
     countdown,

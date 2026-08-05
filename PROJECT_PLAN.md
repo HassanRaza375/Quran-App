@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-07-30 (Pass 2)._
+_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 6)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -10,6 +10,7 @@ Ayah of the Day features, and cleaning up bugs/design debt found during the audi
 refresh, wider bug sweep, Bookmarks completion) ✅ shipped — see §4. Pass 3 (prayer notification
 scheduling) ✅ shipped — see §5. Pass 4 (Arabic + Urdu text on saved ayah bookmarks) ✅ shipped —
 see §6. Pass 5 (PWA installability was actually broken since Pass 1 — fixed) ✅ shipped — see §7.
+Pass 6 (Jafari/Shia calculation method + fiqh selector) ✅ shipped — see §8.
 
 ---
 
@@ -273,3 +274,52 @@ driven by Puppeteer/Chrome, checking `document.querySelector('link[rel="manifest
 `navigator.serviceWorker.getRegistrations()`, and `navigator.serviceWorker.controller` directly —
 not just that the files 200'd. Puppeteer was installed with `--no-save` for this check only and
 removed afterward; no dependency changes were left behind.
+
+---
+
+## 8. Pass 6 — Jafari/Shia calculation method + fiqh selector
+
+Requested: add AlAdhan's Fiqh Ja'fari (Shia Ithna-Ashari) calculation method (`method=0`,
+`school=0`, `midnightMode=1`), Lahore coordinates (`31.5204`, `74.3587`), no manual buffer on the
+returned times, exposed in Settings so the user can pick either fiqh.
+
+**Shipped:**
+- New shared `app/utils/prayerFiqh.js` (`FIQH_PARAMS`, `FIQH_OPTIONS`) — one source of truth for
+  the AlAdhan params per method, used by both `stores/prayer.js` (daily timings) and
+  `calender.vue` (monthly calendar), so they can't drift out of sync with each other.
+- `sunni` (unchanged default, `method: 2` / ISNA) vs `jafari` (`method: 0, school: 0,
+  midnightMode: 1`), persisted to `localStorage` (`prayerFiqh`), selectable in Settings via a
+  segmented `v-btn-toggle` that shows both options side by side rather than hidden in a dropdown
+  ("show both fiqhs, user can select one"). Switching refetches prayer times immediately.
+- API responses are used exactly as returned — no client-side buffer/offset applied to
+  Fajr/Dhuhr/Asr/Maghrib/Isha (the existing "reminder offset" setting only affects *when the
+  notification fires*, never the displayed/stored time itself — confirmed this wasn't already
+  happening anywhere before wiring the new method in).
+- Cache keys (`stores/prayer.js` prayer-times cache, `calender.vue` monthly calendar cache) now
+  include the fiqh, so switching methods can't silently keep serving a cached result computed with
+  the other one.
+- Home, Prayer Times, and the Islamic Calendar's Ramadan Suhoor/Iftar all read from the same
+  `usePrayerStore` data, so they update automatically with no page-specific changes needed —
+  only the calendar page's own separate API call (for its day-by-day grid) needed touching directly.
+
+**Requested improvements, added alongside:**
+- **Fallback location changed from Mecca to Lahore** (`31.5204, 74.3587`) — the old fallback
+  (`21.4225, 39.8262`, the Kaaba's coordinates) wasn't a meaningful "nearest guess" for prayer
+  times, it was just the qibla-calculation constant reused as a location placeholder. Lahore fits
+  this app's evident audience (Urdu translations shown throughout) far better as a default when
+  geolocation is denied or unavailable. The Kaaba coordinates used for the actual qibla-bearing
+  math (`calculateQibla()`, both in the store and `qibla-direction.vue`) were **not** touched —
+  those are correct on their own terms and unrelated to location fallback.
+- **Real bug found and fixed in the process:** `calculateQibla()` was only ever called after a
+  successful GPS fix — if geolocation was denied, `qibla.value` stayed `null` forever and the
+  Qibla Direction page silently never worked, even though a fallback location already existed.
+  `fallbackLocation()` now also computes qibla, so it degrades to "approximate, from Lahore"
+  instead of "broken."
+- Added a location line + "Use My Location" button in Settings so it's visible whether the app is
+  using real device location or the fallback, instead of silently guessing with no way to retry
+  after granting permission later.
+
+Verified via `npm run build` (clean), `npm run dev` (`/`, `/settings`, `/prayerTime`, `/calender`,
+`/qibla-direction` all 200, no console errors), and a direct AlAdhan API call with the exact
+requested params confirming the response: `meta.method.name: "Shia Ithna-Ashari, Leva Institute,
+Qum"`, `meta.midnightMode: "JAFARI"`, full Fajr–Isha timings returned for Lahore.

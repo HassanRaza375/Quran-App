@@ -150,7 +150,7 @@ const waitForLocation = () =>
 async function fetchCalendar() {
   await waitForLocation();
 
-  const cacheKey = `calendar_${prayer.latitude}_${prayer.longitude}_${currentMonth.value}_${currentYear.value}`;
+  const cacheKey = `calendar_${prayer.latitude}_${prayer.longitude}_${prayer.fiqh}_${currentMonth.value}_${currentYear.value}`;
   const cached = localStorage.getItem(cacheKey);
 
   if (cached) {
@@ -162,9 +162,9 @@ async function fetchCalendar() {
     params: {
       latitude: prayer.latitude,
       longitude: prayer.longitude,
-      method: 2,
       month: currentMonth.value,
       year: currentYear.value,
+      ...FIQH_PARAMS[prayer.fiqh],
     },
   });
 

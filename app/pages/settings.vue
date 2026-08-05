@@ -20,6 +20,51 @@
     <v-row>
       <v-col cols="12">
         <v-card class="pa-4">
+          <div class="text-subtitle-1 font-weight-bold mb-1">
+            Prayer Calculation Method (Fiqh)
+          </div>
+          <div class="text-caption text-medium-emphasis mb-3">
+            Changes how Fajr, Dhuhr, Asr, Maghrib and Isha are calculated. Applied instantly and
+            used everywhere prayer times appear — Home, Prayer Times and the Islamic Calendar.
+          </div>
+
+          <v-btn-toggle v-model="fiqhModel" mandatory divided color="primary" class="d-flex w-100 mb-2">
+            <v-btn v-for="opt in fiqhOptions" :key="opt.value" :value="opt.value" class="flex-grow-1">
+              {{ opt.title }}
+            </v-btn>
+          </v-btn-toggle>
+
+          <div class="text-caption text-medium-emphasis">
+            {{ selectedFiqhOption?.subtitle }}
+          </div>
+
+          <v-divider class="my-4" />
+
+          <div class="d-flex align-center justify-space-between flex-wrap ga-2">
+            <div class="text-caption text-medium-emphasis">
+              <template v-if="prayer.locationSource === 'gps'">
+                Using your device location.
+              </template>
+              <template v-else-if="prayer.locationSource === 'fallback'">
+                Using default location (Lahore, Pakistan) — device location wasn't available.
+              </template>
+              <template v-else> Detecting location… </template>
+              <span v-if="prayer.latitude">
+                ({{ prayer.latitude.toFixed(3) }}, {{ prayer.longitude.toFixed(3) }})
+              </span>
+            </div>
+
+            <v-btn size="small" variant="text" prepend-icon="mdi-crosshairs-gps" @click="prayer.refreshLocation">
+              Use My Location
+            </v-btn>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
           <v-switch v-model="notificationsEnabled" label="Enable Prayer Notifications" inset color="warning" />
 
           <v-divider class="my-4" />
@@ -54,6 +99,16 @@ const prayer = usePrayerStore();
 const sendingTest = ref(false);
 
 const prayerOrder = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
+
+/* ---------------- Fiqh (calculation method) ---------------- */
+const fiqhOptions = FIQH_OPTIONS;
+const fiqhModel = computed({
+  get: () => prayer.fiqh,
+  set: (val) => prayer.setFiqh(val),
+});
+const selectedFiqhOption = computed(() =>
+  fiqhOptions.find((o) => o.value === fiqhModel.value)
+);
 
 const notificationsEnabled = ref(false);
 const reminderOffset = ref(0);

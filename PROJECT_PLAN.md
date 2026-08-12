@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 6)._
+_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 7)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -10,7 +10,8 @@ Ayah of the Day features, and cleaning up bugs/design debt found during the audi
 refresh, wider bug sweep, Bookmarks completion) ✅ shipped — see §4. Pass 3 (prayer notification
 scheduling) ✅ shipped — see §5. Pass 4 (Arabic + Urdu text on saved ayah bookmarks) ✅ shipped —
 see §6. Pass 5 (PWA installability was actually broken since Pass 1 — fixed) ✅ shipped — see §7.
-Pass 6 (Jafari/Shia calculation method + fiqh selector) ✅ shipped — see §8.
+Pass 6 (Jafari/Shia calculation method + fiqh selector) ✅ shipped — see §8. Pass 7 (per-ayah
+Tafsir on the Surah page) ✅ shipped — see §9.
 
 ---
 
@@ -323,3 +324,54 @@ Verified via `npm run build` (clean), `npm run dev` (`/`, `/settings`, `/prayerT
 `/qibla-direction` all 200, no console errors), and a direct AlAdhan API call with the exact
 requested params confirming the response: `meta.method.name: "Shia Ithna-Ashari, Leva Institute,
 Qum"`, `meta.midnightMode: "JAFARI"`, full Fajr–Isha timings returned for Lahore.
+
+---
+
+## 9. Pass 7 — Per-ayah Tafsir on the Surah page
+
+Asked to check whether either API this app already talks to has tafsir (commentary/exegesis), and
+if so wire it into the surah reader per ayah.
+
+**API check:**
+- `quranapi.pages.dev` (the app's primary source) has a real per-ayah tafsir endpoint —
+  `/tafsir/{surah}_{ayah}.json` — returning **3 English tafsirs**: Ibn Kathir (the classical
+  standard, longest), Maarif-ul-Quran (Mufti Shafi Usmani — fits this app's Urdu-heavy audience),
+  and Tazkirul Quran (shorter). Content is markdown-formatted; some entries (mainly Tazkirul Quran)
+  cover a *range* of consecutive ayahs and the API flags this via a `groupVerse` string.
+- `alquran.cloud` (used elsewhere for search/per-page-read) also has 6 tafsir editions, but all
+  Arabic-only with no translation — skipped rather than bolting on a second, inconsistent tafsir
+  source that doesn't fit this app's English/Urdu presentation.
+
+Asked the user two UX questions before building rather than guessing: (1) can multiple ayahs have
+their tafsir open simultaneously, or should opening one close any other — went with **multiple open
+at once**, matching the existing per-ayah bookmark/audio buttons; (2) should the author choice be
+remembered as a default for the next ayah — went with **yes, remember last pick**, with the
+author-picker menu still available any time to change it.
+
+**Shipped**, scoped to `surah/[id].vue` per the request:
+- `app/services/tafsir.service.ts` + `app/composables/useTafsir.ts` — fetch by `surah_ayah`, with
+  a module-scope in-memory cache so re-opening a panel never refetches (on top of the PWA's
+  existing `StaleWhileRevalidate` caching on this API from Pass 1).
+- `app/utils/renderTafsirMarkdown.js` — a small dependency-free markdown-lite renderer (headings,
+  bold, italic, paragraphs) instead of pulling in a markdown library. Escapes the raw API text
+  *first*, then only ever inserts a fixed set of known-safe tags via regex — the tafsir content is
+  third-party and rendered with `v-html`, so unescaped injection would have been a real XSS hole.
+- Per-ayah "Tafsir" button below each verse → tapping it for the first time ever opens a menu of
+  the 3 authors; picking one fetches and expands a panel at the bottom of that ayah
+  (`v-expand-transition`) showing the rendered content, the `groupVerse` note when present, and a
+  close (×) button. Tapping the button on any *other* ayah afterward opens directly with the
+  remembered author — no menu needed — and a small author chip inside each open panel lets you
+  swap tafsir source for that specific ayah without affecting others.
+- Panels reset when navigating to a different surah (`watch(chapterNo, ...)` clears the panel map).
+
+Verified interactively with a real headless-Chrome/Puppeteer session against the production build
+(curl/static-HTML checks can't exercise a fetch-and-expand interaction) — confirmed: menu opens on
+first tap with all 3 authors listed; selecting one fetches and renders content (~51K chars for
+Ibn Kathir on 1:1, matching the direct API check); a second ayah's tafsir button opens directly
+with the remembered author (no menu shown) while the first ayah's panel stays open; closing one
+panel leaves the other open. `npm run build` clean. Puppeteer was installed with `--no-save` for
+this check only and removed afterward.
+
+**Not done (flagged, not requested this pass):** tafsir on `juz/[id].vue` or
+`per-page-read.vue` — the ask was specifically the surah page; the same service/composable would
+extend to those pages fairly directly if wanted later.

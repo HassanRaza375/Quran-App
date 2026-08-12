@@ -133,6 +133,110 @@
                 @click="playAyah(index + 1)"
               />
             </div>
+
+            <!-- Tafsir -->
+            <div class="verse-actions-row">
+              <div class="tafsir-anchor">
+                <v-btn
+                  size="small"
+                  variant="text"
+                  class="tafsir-toggle-btn"
+                  :color="getTafsirPanel(index + 1).open ? 'primary' : undefined"
+                  prepend-icon="mdi-book-open-page-variant-outline"
+                  @click="onTafsirButtonClick(index + 1)"
+                >
+                  Tafsir
+                </v-btn>
+
+                <v-menu
+                  :model-value="menuAyah === index + 1"
+                  activator="parent"
+                  location="bottom start"
+                  @update:model-value="(v) => { if (!v) menuAyah = null }"
+                >
+                  <v-list density="compact" min-width="220">
+                    <v-list-subheader>Choose Tafsir</v-list-subheader>
+                    <v-list-item
+                      v-for="author in tafsirAuthors"
+                      :key="author"
+                      :active="getTafsirPanel(index + 1).author === author"
+                      @click="selectTafsirAuthor(index + 1, author)"
+                    >
+                      <v-list-item-title>{{ author }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </div>
+            </div>
+
+            <v-expand-transition>
+              <div v-if="getTafsirPanel(index + 1).open" class="tafsir-panel">
+                <div class="d-flex align-center justify-space-between mb-2 ga-2 flex-wrap">
+                  <div class="tafsir-author-anchor">
+                    <v-chip
+                      size="small"
+                      variant="tonal"
+                      color="primary"
+                      append-icon="mdi-menu-down"
+                      class="tafsir-author-chip"
+                      @click="menuAyah = index + 1"
+                    >
+                      {{ getTafsirPanel(index + 1).author }}
+                    </v-chip>
+
+                    <v-menu
+                      :model-value="menuAyah === index + 1"
+                      activator="parent"
+                      location="bottom start"
+                      @update:model-value="(v) => { if (!v) menuAyah = null }"
+                    >
+                      <v-list density="compact" min-width="220">
+                        <v-list-subheader>Choose Tafsir</v-list-subheader>
+                        <v-list-item
+                          v-for="author in tafsirAuthors"
+                          :key="author"
+                          :active="getTafsirPanel(index + 1).author === author"
+                          @click="selectTafsirAuthor(index + 1, author)"
+                        >
+                          <v-list-item-title>{{ author }}</v-list-item-title>
+                        </v-list-item>
+                      </v-list>
+                    </v-menu>
+                  </div>
+
+                  <v-btn
+                    icon="mdi-close"
+                    size="x-small"
+                    variant="text"
+                    @click="closeTafsirPanel(index + 1)"
+                  />
+                </div>
+
+                <div v-if="getTafsirPanel(index + 1).groupVerse" class="tafsir-group-note">
+                  {{ getTafsirPanel(index + 1).groupVerse }}
+                </div>
+
+                <div v-if="getTafsirPanel(index + 1).loading" class="d-flex justify-center py-4">
+                  <v-progress-circular indeterminate size="24" color="primary" />
+                </div>
+
+                <v-alert
+                  v-else-if="getTafsirPanel(index + 1).error"
+                  type="error"
+                  variant="tonal"
+                  density="compact"
+                  class="mt-2"
+                >
+                  Failed to load tafsir. Please try again.
+                </v-alert>
+
+                <div
+                  v-else
+                  class="tafsir-content"
+                  v-html="renderTafsirMarkdown(getTafsirPanel(index + 1).content)"
+                />
+              </div>
+            </v-expand-transition>
           </div>
         </v-sheet>
         <v-slide-y-transition>
@@ -349,6 +453,86 @@ const playAyah = async (ayahNo) => {
 watch(playing, (v) => {
   if (!v) playingAyah.value = null;
 });
+
+/* ---------- Tafsir ---------- */
+const { getTafsir } = useTafsir();
+
+const tafsirAuthors = ["Ibn Kathir", "Maarif Ul Quran", "Tazkirul Quran"];
+const tafsirPanels = reactive({}); // ayahNo -> { open, author, content, groupVerse, loading, error }
+const menuAyah = ref(null); // which ayah's author-picker menu is currently open
+const defaultTafsirAuthor = ref(null); // last author picked anywhere, remembered for the next fresh ayah
+
+onMounted(() => {
+  defaultTafsirAuthor.value = localStorage.getItem("tafsirDefaultAuthor") || null;
+});
+
+const getTafsirPanel = (ayahNo) => {
+  if (!tafsirPanels[ayahNo]) {
+    tafsirPanels[ayahNo] = {
+      open: false,
+      author: null,
+      content: "",
+      groupVerse: null,
+      loading: false,
+      error: false,
+    };
+  }
+  return tafsirPanels[ayahNo];
+};
+
+const selectTafsirAuthor = async (ayahNo, author) => {
+  const panel = getTafsirPanel(ayahNo);
+  panel.author = author;
+  panel.open = true;
+  menuAyah.value = null;
+
+  defaultTafsirAuthor.value = author;
+  localStorage.setItem("tafsirDefaultAuthor", author);
+
+  panel.loading = true;
+  panel.error = false;
+  try {
+    const tafsirs = await getTafsir(chapterNo.value, ayahNo);
+    const match = tafsirs.find((t) => t.author === author);
+    if (!match) throw new Error("Tafsir not found");
+    panel.content = match.content;
+    panel.groupVerse = match.groupVerse;
+  } catch (e) {
+    console.error(e);
+    panel.error = true;
+  } finally {
+    panel.loading = false;
+  }
+};
+
+const onTafsirButtonClick = (ayahNo) => {
+  const panel = getTafsirPanel(ayahNo);
+  if (panel.open) {
+    panel.open = false;
+    return;
+  }
+
+  const author = panel.author || defaultTafsirAuthor.value;
+  if (author) {
+    // Already fetched for this exact ayah + author before? Just reopen, no refetch.
+    if (panel.author === author && panel.content) {
+      panel.open = true;
+    } else {
+      selectTafsirAuthor(ayahNo, author);
+    }
+  } else {
+    menuAyah.value = ayahNo;
+  }
+};
+
+const closeTafsirPanel = (ayahNo) => {
+  getTafsirPanel(ayahNo).open = false;
+};
+
+watch(chapterNo, () => {
+  Object.keys(tafsirPanels).forEach((k) => delete tafsirPanels[k]);
+  menuAyah.value = null;
+});
 </script>
 
 <style scoped>
@@ -481,6 +665,79 @@ watch(playing, (v) => {
 
 .ayah-fav-btn:hover {
   opacity: 1;
+}
+
+/* ===============================
+   Tafsir
+================================= */
+
+.verse-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.tafsir-anchor,
+.tafsir-author-anchor {
+  display: inline-block;
+  position: relative;
+}
+
+.tafsir-toggle-btn {
+  opacity: 0.75;
+  font-family: var(--font-ui);
+}
+
+.tafsir-toggle-btn:hover {
+  opacity: 1;
+}
+
+.tafsir-author-chip {
+  cursor: pointer;
+}
+
+.tafsir-panel {
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(var(--v-theme-primary), 0.05);
+  border: 1px solid rgba(var(--v-theme-primary), 0.15);
+  border-inline-start: 3px solid rgb(var(--v-theme-primary));
+}
+
+.tafsir-group-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.tafsir-content {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  direction: ltr;
+  text-align: start;
+  color: rgb(var(--v-theme-on-surface));
+}
+
+.tafsir-content :deep(p) {
+  margin: 0 0 12px;
+}
+
+.tafsir-content :deep(p:last-child) {
+  margin-bottom: 0;
+}
+
+.tafsir-content :deep(.tafsir-heading) {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(var(--v-theme-primary));
+  margin: 16px 0 8px;
+}
+
+.tafsir-content :deep(.tafsir-heading:first-child) {
+  margin-top: 0;
 }
 
 /* ===============================

@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 7)._
+_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 9)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -11,7 +11,9 @@ refresh, wider bug sweep, Bookmarks completion) ✅ shipped — see §4. Pass 3 
 scheduling) ✅ shipped — see §5. Pass 4 (Arabic + Urdu text on saved ayah bookmarks) ✅ shipped —
 see §6. Pass 5 (PWA installability was actually broken since Pass 1 — fixed) ✅ shipped — see §7.
 Pass 6 (Jafari/Shia calculation method + fiqh selector) ✅ shipped — see §8. Pass 7 (per-ayah
-Tafsir on the Surah page) ✅ shipped — see §9.
+Tafsir on the Surah page) ✅ shipped — see §9. Pass 8 (tafsir-didn't-open bug fix + an unrelated
+theme hydration-mismatch bug found along the way) ✅ shipped — see §10. Pass 9 (checked for a
+Shia/Ja'fari tafsir source — none exists; labeled the tafsir picker accordingly) ✅ shipped — see §11.
 
 ---
 
@@ -375,3 +377,77 @@ this check only and removed afterward.
 **Not done (flagged, not requested this pass):** tafsir on `juz/[id].vue` or
 `per-page-read.vue` — the ask was specifically the surah page; the same service/composable would
 extend to those pages fairly directly if wanted later.
+
+---
+
+## 10. Pass 8 — Tafsir button didn't open (bug report + fix)
+
+Reported: the tafsir icon didn't open anything. Root cause was in the Pass 7 implementation, and
+finding it surfaced a second, unrelated pre-existing bug along the way.
+
+**Bug 1 — the actual report:** the per-ayah author picker used a `v-menu` with
+`activator="parent"`, which auto-wires Vuetify's *own* click-to-open handling onto the button's
+parent element, running independently of (and racing against) the custom `@click` handler on the
+button that was also trying to control the same open state. My Pass 7 "interactive test" used
+`element.click()` (a synthetic DOM call), which doesn't dispatch the same pointer-event sequence a
+real mouse click does — so it happened to pass without ever exercising the actual conflict. Fixed
+by dropping the floating `v-menu` entirely: the author picker is now inline — a `v-chip` group
+that expands in the same `v-expand-transition` panel used for the tafsir content itself, no
+overlay/activator machinery at all. Simpler code, and there's no longer a class of bug where two
+independent click handlers can fight over the same state.
+
+**Bug 2 — found while debugging, unrelated to tafsir:** re-testing with Puppeteer using *real*
+mouse-dispatched clicks (not `element.click()`) surfaced a genuine hydration mismatch on every
+page: `plugins/vuetify.js` detects the OS/localStorage theme and applies it **synchronously**
+during plugin setup, before the app mounts. The server has no way to know the client's theme
+preference and always renders the `light` default, so if a visitor's system is in dark mode, the
+client's first reactive render already says `dark` while the just-received server HTML says
+`light` — a hydration class mismatch on every single themed element on the page (buttons, icons,
+the app bar, all of it). This class of mismatch doesn't usually break click handlers (Vue still
+attaches listeners to the existing DOM nodes; only structural mismatches — different tag/child
+counts — force a node replacement that could lose them), so it's very unlikely to have been the
+actual reported bug, but it's a real correctness issue and pure upside to fix: theme application
+now happens in the `app:mounted` hook (after hydration finishes) instead of before, trading a
+hydration-mismatch warning for a much more standard brief flash-to-correct-theme on first load for
+dark-mode users — the usual trade-off apps without a cookie-based SSR theme make.
+
+Verified with `npm run build` (clean) and a Puppeteer session using **real** `ElementHandle.click()`
+mouse dispatch (not synthetic DOM clicks, to avoid repeating Pass 7's blind spot) against the
+production build: tafsir button → picker opens → selecting an author fetches and shows content
+(50,947 chars for Ibn Kathir on 1:1, matching the direct API check) → a second ayah's button opens
+directly with the remembered author, no picker → hydration-mismatch console error is gone, only
+the expected local-only Vercel Analytics 404 remains. `/`, `/settings`, `/surah/2`, `/tasbeeh`,
+`/bookmarks` all still 200. Puppeteer installed with `--no-save` for this check only and removed
+afterward.
+
+---
+
+## 11. Pass 9 — Is there a Shia/Ja'fari tafsir source?
+
+Asked directly, so checked properly rather than assuming. Queried all three tafsir-capable APIs
+available (the app's two existing sources, plus `quran.com`'s — the largest catalog of the three,
+checked for completeness even though the app doesn't otherwise use it):
+
+| API | Tafsirs | Shia/Ja'fari? |
+|---|---|---|
+| `quranapi.pages.dev` (used by the app) | Ibn Kathir, Ma'arif-ul-Quran, Tazkirul Quran | No |
+| `alquran.cloud` | 6 Arabic-only (Muyassar, Jalalayn, Qurtubi, Tanwir al-Miqbas, Waseet, Baghawi) | No |
+| `quran.com` (checked, not used by the app) | 20 across languages (Ibn Kathir, Tabari, Qurtubi, Sa'di, Baghawi, Fi Zilal al-Quran, Bayan-ul-Quran, etc.) | No |
+
+**Every single tafsir across all three is classical Sunni scholarship.** No Al-Mizan
+(Tabatabai), Majma al-Bayan (Tabarsi), Tafsir Nemooneh (Makarem Shirazi), or any other Ja'fari
+commentary in any of them, and none expose a school/madhab filter. Shia tafsir text does exist
+online (Al-Mizan is fully translated) but lives on sites like al-islam.org as rendered HTML with
+no documented public API — pulling from it would mean scraping/parsing pages that can change
+without notice, a materially different and more fragile undertaking than calling a stable JSON
+endpoint. Flagged to the user rather than attempted, since this app's tafsir feature (and its
+Pass 6 fiqh selector) shouldn't imply Shia coverage it doesn't have.
+
+**Shipped:** since a Ja'fari-fiqh user (from the Pass 6 prayer-calculation setting) might
+reasonably expect the tafsir picker to include something aligned with their fiqh, and it silently
+didn't, the picker in `surah/[id].vue` now labels the three options explicitly: *"Choose a tafsir
+(Sunni sources — no Shia/Ja'fari tafsir is available from this app's data provider)."* Quick,
+low-risk, no new data source — the fix the user asked for over investigating a scraping-based
+integration.
+
+Verified with `npm run build` (clean).

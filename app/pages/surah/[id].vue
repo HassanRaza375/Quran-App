@@ -136,105 +136,88 @@
 
             <!-- Tafsir -->
             <div class="verse-actions-row">
-              <div class="tafsir-anchor">
-                <v-btn
-                  size="small"
-                  variant="text"
-                  class="tafsir-toggle-btn"
-                  :color="getTafsirPanel(index + 1).open ? 'primary' : undefined"
-                  prepend-icon="mdi-book-open-page-variant-outline"
-                  @click="onTafsirButtonClick(index + 1)"
-                >
-                  Tafsir
-                </v-btn>
-
-                <v-menu
-                  :model-value="menuAyah === index + 1"
-                  activator="parent"
-                  location="bottom start"
-                  @update:model-value="(v) => { if (!v) menuAyah = null }"
-                >
-                  <v-list density="compact" min-width="220">
-                    <v-list-subheader>Choose Tafsir</v-list-subheader>
-                    <v-list-item
-                      v-for="author in tafsirAuthors"
-                      :key="author"
-                      :active="getTafsirPanel(index + 1).author === author"
-                      @click="selectTafsirAuthor(index + 1, author)"
-                    >
-                      <v-list-item-title>{{ author }}</v-list-item-title>
-                    </v-list-item>
-                  </v-list>
-                </v-menu>
-              </div>
+              <v-btn
+                size="small"
+                variant="text"
+                class="tafsir-toggle-btn"
+                :color="getTafsirPanel(index + 1).open ? 'primary' : undefined"
+                prepend-icon="mdi-book-open-page-variant-outline"
+                @click="onTafsirButtonClick(index + 1)"
+              >
+                Tafsir
+              </v-btn>
             </div>
 
             <v-expand-transition>
               <div v-if="getTafsirPanel(index + 1).open" class="tafsir-panel">
-                <div class="d-flex align-center justify-space-between mb-2 ga-2 flex-wrap">
-                  <div class="tafsir-author-anchor">
+                <!-- Author picker: shown until an author is chosen for this ayah,
+                     or when the user taps the author chip to switch it -->
+                <div
+                  v-if="!getTafsirPanel(index + 1).author || tafsirPickerFor === index + 1"
+                  class="tafsir-picker"
+                >
+                  <div class="text-caption text-medium-emphasis mb-2">
+                    Choose a tafsir (Sunni sources — no Shia/Ja'fari tafsir is available from
+                    this app's data provider):
+                  </div>
+                  <div class="d-flex flex-wrap ga-2">
+                    <v-chip
+                      v-for="author in tafsirAuthors"
+                      :key="author"
+                      :color="getTafsirPanel(index + 1).author === author ? 'primary' : undefined"
+                      :variant="getTafsirPanel(index + 1).author === author ? 'flat' : 'outlined'"
+                      @click="selectTafsirAuthor(index + 1, author)"
+                    >
+                      {{ author }}
+                    </v-chip>
+                  </div>
+                </div>
+
+                <template v-else>
+                  <div class="d-flex align-center justify-space-between mb-2 ga-2 flex-wrap">
                     <v-chip
                       size="small"
                       variant="tonal"
                       color="primary"
                       append-icon="mdi-menu-down"
                       class="tafsir-author-chip"
-                      @click="menuAyah = index + 1"
+                      @click="tafsirPickerFor = index + 1"
                     >
                       {{ getTafsirPanel(index + 1).author }}
                     </v-chip>
 
-                    <v-menu
-                      :model-value="menuAyah === index + 1"
-                      activator="parent"
-                      location="bottom start"
-                      @update:model-value="(v) => { if (!v) menuAyah = null }"
-                    >
-                      <v-list density="compact" min-width="220">
-                        <v-list-subheader>Choose Tafsir</v-list-subheader>
-                        <v-list-item
-                          v-for="author in tafsirAuthors"
-                          :key="author"
-                          :active="getTafsirPanel(index + 1).author === author"
-                          @click="selectTafsirAuthor(index + 1, author)"
-                        >
-                          <v-list-item-title>{{ author }}</v-list-item-title>
-                        </v-list-item>
-                      </v-list>
-                    </v-menu>
+                    <v-btn
+                      icon="mdi-close"
+                      size="x-small"
+                      variant="text"
+                      @click="closeTafsirPanel(index + 1)"
+                    />
                   </div>
 
-                  <v-btn
-                    icon="mdi-close"
-                    size="x-small"
-                    variant="text"
-                    @click="closeTafsirPanel(index + 1)"
+                  <div v-if="getTafsirPanel(index + 1).groupVerse" class="tafsir-group-note">
+                    {{ getTafsirPanel(index + 1).groupVerse }}
+                  </div>
+
+                  <div v-if="getTafsirPanel(index + 1).loading" class="d-flex justify-center py-4">
+                    <v-progress-circular indeterminate size="24" color="primary" />
+                  </div>
+
+                  <v-alert
+                    v-else-if="getTafsirPanel(index + 1).error"
+                    type="error"
+                    variant="tonal"
+                    density="compact"
+                    class="mt-2"
+                  >
+                    Failed to load tafsir. Please try again.
+                  </v-alert>
+
+                  <div
+                    v-else
+                    class="tafsir-content"
+                    v-html="renderTafsirMarkdown(getTafsirPanel(index + 1).content)"
                   />
-                </div>
-
-                <div v-if="getTafsirPanel(index + 1).groupVerse" class="tafsir-group-note">
-                  {{ getTafsirPanel(index + 1).groupVerse }}
-                </div>
-
-                <div v-if="getTafsirPanel(index + 1).loading" class="d-flex justify-center py-4">
-                  <v-progress-circular indeterminate size="24" color="primary" />
-                </div>
-
-                <v-alert
-                  v-else-if="getTafsirPanel(index + 1).error"
-                  type="error"
-                  variant="tonal"
-                  density="compact"
-                  class="mt-2"
-                >
-                  Failed to load tafsir. Please try again.
-                </v-alert>
-
-                <div
-                  v-else
-                  class="tafsir-content"
-                  v-html="renderTafsirMarkdown(getTafsirPanel(index + 1).content)"
-                />
+                </template>
               </div>
             </v-expand-transition>
           </div>
@@ -459,7 +442,7 @@ const { getTafsir } = useTafsir();
 
 const tafsirAuthors = ["Ibn Kathir", "Maarif Ul Quran", "Tazkirul Quran"];
 const tafsirPanels = reactive({}); // ayahNo -> { open, author, content, groupVerse, loading, error }
-const menuAyah = ref(null); // which ayah's author-picker menu is currently open
+const tafsirPickerFor = ref(null); // which ayah's inline author-picker is currently showing
 const defaultTafsirAuthor = ref(null); // last author picked anywhere, remembered for the next fresh ayah
 
 onMounted(() => {
@@ -482,12 +465,16 @@ const getTafsirPanel = (ayahNo) => {
 
 const selectTafsirAuthor = async (ayahNo, author) => {
   const panel = getTafsirPanel(ayahNo);
+  const alreadyLoaded = panel.author === author && panel.content && !panel.error;
+
   panel.author = author;
   panel.open = true;
-  menuAyah.value = null;
+  if (tafsirPickerFor.value === ayahNo) tafsirPickerFor.value = null;
 
   defaultTafsirAuthor.value = author;
   localStorage.setItem("tafsirDefaultAuthor", author);
+
+  if (alreadyLoaded) return; // switching back to an author already fetched for this ayah
 
   panel.loading = true;
   panel.error = false;
@@ -512,17 +499,10 @@ const onTafsirButtonClick = (ayahNo) => {
     return;
   }
 
+  panel.open = true;
   const author = panel.author || defaultTafsirAuthor.value;
-  if (author) {
-    // Already fetched for this exact ayah + author before? Just reopen, no refetch.
-    if (panel.author === author && panel.content) {
-      panel.open = true;
-    } else {
-      selectTafsirAuthor(ayahNo, author);
-    }
-  } else {
-    menuAyah.value = ayahNo;
-  }
+  if (author) selectTafsirAuthor(ayahNo, author);
+  // else: panel is open with no author yet, so the template shows the inline picker.
 };
 
 const closeTafsirPanel = (ayahNo) => {
@@ -531,7 +511,7 @@ const closeTafsirPanel = (ayahNo) => {
 
 watch(chapterNo, () => {
   Object.keys(tafsirPanels).forEach((k) => delete tafsirPanels[k]);
-  menuAyah.value = null;
+  tafsirPickerFor.value = null;
 });
 </script>
 
@@ -677,12 +657,6 @@ watch(chapterNo, () => {
   margin-top: 8px;
 }
 
-.tafsir-anchor,
-.tafsir-author-anchor {
-  display: inline-block;
-  position: relative;
-}
-
 .tafsir-toggle-btn {
   opacity: 0.75;
   font-family: var(--font-ui);
@@ -703,6 +677,10 @@ watch(chapterNo, () => {
   background: rgba(var(--v-theme-primary), 0.05);
   border: 1px solid rgba(var(--v-theme-primary), 0.15);
   border-inline-start: 3px solid rgb(var(--v-theme-primary));
+}
+
+.tafsir-picker {
+  font-family: var(--font-ui);
 }
 
 .tafsir-group-note {

@@ -58,7 +58,15 @@ export default defineNuxtPlugin((nuxtApp) => {
       }
     };
 
-    apply();
+    // Applied after mount, not synchronously here: the server always renders
+    // the "light" default (it has no way to know the client's OS preference
+    // or localStorage), so switching the theme before hydration finishes
+    // causes every themed class on the page to hydration-mismatch against
+    // the server HTML. Deferring to `app:mounted` means the first paint
+    // matches the server, then swaps to the real theme right after — a
+    // brief flash for dark-mode users instead of a hydration warning +
+    // fighting the DOM Vue just hydrated.
+    nuxtApp.hook("app:mounted", apply);
 
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
       const current = localStorage.getItem("themeMode") || "system";

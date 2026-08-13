@@ -1,4 +1,5 @@
 const STORAGE_KEY = "quran:bookmarks:v1";
+const ADDED_AT_KEY = "quran:bookmarks:added-at:v1";
 
 // key formats:
 // surah:2
@@ -16,6 +17,10 @@ const makePageKey = (pageNo) => `page:${pageNo}`;
 
 export function useBookmarks() {
   const items = useState("bookmarks", () => new Set());
+  // Separate side-map of when each key was first bookmarked — additive,
+  // doesn't touch the existing Set-based storage at all, so it can't
+  // regress the many pages that already call add/remove/toggle.
+  const addedAt = useState("bookmarks-added-at", () => ({}));
 
   function getStorage() {
     return useNuxtApp().$storage;
@@ -28,6 +33,7 @@ export function useBookmarks() {
 
     const arr = $storage.get(STORAGE_KEY, []);
     items.value = new Set(arr);
+    addedAt.value = $storage.get(ADDED_AT_KEY, {});
 
     // ---- optional migration from old surah-only key ----
     const legacy = $storage.get("quran:favorites:surah:v1", []);
@@ -43,6 +49,7 @@ export function useBookmarks() {
     const $storage = getStorage();
     if (!$storage) return;
     $storage.set(STORAGE_KEY, Array.from(items.value));
+    $storage.set(ADDED_AT_KEY, addedAt.value);
   }
 
   function has(key) {
@@ -51,11 +58,18 @@ export function useBookmarks() {
 
   function add(key) {
     items.value.add(key);
+    if (!addedAt.value[key]) {
+      addedAt.value = { ...addedAt.value, [key]: Date.now() };
+    }
     persist();
   }
 
   function remove(key) {
     items.value.delete(key);
+    if (key in addedAt.value) {
+      const { [key]: _removed, ...rest } = addedAt.value;
+      addedAt.value = rest;
+    }
     persist();
   }
 
@@ -108,6 +122,7 @@ export function useBookmarks() {
   return {
     load,
     list,
+    addedAt,
 
     // generic
     has,

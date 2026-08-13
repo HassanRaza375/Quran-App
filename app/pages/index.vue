@@ -145,6 +145,34 @@
       </v-col>
     </v-row>
 
+    <!-- Today's Quran Goal (only shown once a goal exists — no empty analytics) -->
+    <v-row v-if="activeGoal" class="mb-6">
+      <v-col cols="12">
+        <v-card rounded="xl" elevation="10" class="pa-5 goal-card-modern" @click="router.push('/goals')" style="cursor: pointer">
+          <div class="d-flex align-center justify-space-between mb-3">
+            <div>
+              <div class="text-overline text-grey-lighten-1">Today's Quran Goal</div>
+              <div class="text-h6 font-weight-bold">{{ activeGoal.label }}</div>
+            </div>
+            <v-icon size="32" color="orange" v-if="goalStreak > 0">mdi-fire</v-icon>
+          </div>
+
+          <div class="d-flex align-center ga-4">
+            <v-progress-circular :model-value="goalProgressPercent" size="64" width="7" color="teal">
+              <span class="text-caption font-weight-bold">{{ goalProgressPercent }}%</span>
+            </v-progress-circular>
+            <div class="flex-grow-1">
+              <div class="text-h6 font-weight-bold">{{ goalTodayCount }} / {{ goalDailyTarget }} ayahs today</div>
+              <div class="text-caption text-grey-lighten-1">
+                {{ goalStreak }} day{{ goalStreak === 1 ? "" : "s" }} streak
+                <span v-if="goalIsBehindPace"> · catching up</span>
+              </div>
+            </div>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
     <lazy-services-ayah-of-day />
 
     <!-- Resume Reading -->
@@ -210,11 +238,16 @@
 <script setup>
 const prayer = usePrayerStore();
 const { progress: readingProgress, percent: readingPercent, load: loadReadingProgress } = useReadingProgress();
+const { activeGoal, todayCount: goalTodayCount, streak: goalStreak, load: loadGoals, useGoalStats } = useReadingGoals();
 const router = useRouter();
+
+const { progressPercent: goalProgressPercent, adjustedDailyTarget: goalDailyTarget, isBehindPace: goalIsBehindPace } =
+  useGoalStats(activeGoal);
 
 onMounted(() => {
   prayer.init();
   loadReadingProgress();
+  loadGoals();
 });
 
 const continueReading = () => {

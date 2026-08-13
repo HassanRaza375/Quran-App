@@ -358,6 +358,12 @@ const { data, pending, error } = await useAsyncData(
 
 /* ---------- Reading progress ---------- */
 const { setProgress, load: loadProgress } = useReadingProgress();
+const { recordAyahRead, load: loadGoals } = useReadingGoals();
+// Must run before the immediate `watch(data, ...)` below can fire
+// `trackProgress` — otherwise the goals store would persist with whatever
+// is currently in memory (empty on a fresh page load) and silently wipe
+// any goals/daily-log data already saved from a previous session.
+loadGoals();
 let lastTrackedAyah = 1;
 let scrollTimeout;
 
@@ -369,6 +375,7 @@ const trackProgress = (ayahNo) => {
     surahNameArabic: data.value.surahNameArabicLong,
     totalAyah: data.value.totalAyah,
   });
+  recordAyahRead(chapterNo.value, ayahNo);
 };
 
 const handleScroll = () => {

@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 11)._
+_Living document, updated after each work pass. Last updated: 2026-08-13 (Pass 13)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -16,7 +16,19 @@ theme hydration-mismatch bug found along the way) ✅ shipped — see §10. Pass
 Shia/Ja'fari tafsir source — none exists; labeled the tafsir picker accordingly) ✅ shipped — see §11.
 Pass 10 (IndexedDB caching layer for surah text/tafsir) ✅ shipped — see §12. Pass 11 (inline
 per-ayah translation, like tafsir; a critical SSR crash found and fixed; a real fixed-player
-overlap bug found and partially mitigated) ✅ shipped — see §13.
+overlap bug found and partially mitigated) ✅ shipped — see §13. Pass 12 (Reading Goals & Khatmah
+Planner — first module from the new feature roadmap doc) ✅ shipped — see §14. Pass 13 (Notes,
+Collections & Study Library — §4.4, second module) ✅ shipped — see §15. Account/Cloud Sync (§4.1)
+and True Background Push (§4.3) are explicitly deferred at the user's direction — both need
+server-side infrastructure (a database for user data / push subscriptions, in Push's case also a
+cron scheduler) that hasn't been committed to yet.
+
+**New source document as of Pass 12:** `Quran_WebApp_Feature_Roadmap_and_Module_Specification.md`
+(repo root) — a 12-module, 8-phase roadmap (account sync, reading goals, true background push,
+notes/collections, offline downloads, search, Ramadan mode, Hifz mode, audio experience, calendar,
+share cards, settings consolidation) plus a homepage/navigation redesign and a full Supabase
+schema. Modules are being built one at a time, confirmed with the user before each one, starting
+with §4.2 Reading Goals. See §14 for what building it against this document surfaced.
 
 ---
 
@@ -557,3 +569,130 @@ afterward.
 **Not done (flagged for later, out of this pass's scope):** a real fix for the fixed player bar
 covering ayah content at arbitrary scroll positions — would need the player's actual rendered
 height reserved in the scrollable layout continuously, not just as end-of-page padding.
+
+---
+
+## 14. Pass 12 — Reading Goals & Khatmah Planner (§4.2 of the new roadmap doc)
+
+A large new planning document landed
+(`Quran_WebApp_Feature_Roadmap_and_Module_Specification.md`) proposing 12 modules across 8 phases.
+Before touching any code, checked what infrastructure actually exists: `.env` turns out to already
+have `NUXT_PUBLIC_SUPABASE_URL`/`NUXT_PUBLIC_SUPABASE_ANON_KEY` set (earlier passes had assumed
+Supabase was fully uncredentialed) — but the plugin is still fully commented out and those two
+keys aren't even declared in `nuxt.config.ts`'s `runtimeConfig`, so they're currently inert. Given
+the size of the roadmap, asked the user which module to start with rather than assuming the
+document's own Phase-1-is-Account-Sync ordering — they picked §4.2 Reading Goals & Khatmah
+Planner: fully local-first, no new infrastructure decisions needed, builds directly on the
+existing `useReadingProgress` tracker.
+
+**Shipped:**
+- `app/utils/quranAyahCounts.js` — pulled the cumulative-ayah-position math out of
+  `useReadingProgress.ts` into a shared util (`getAbsoluteAyahPosition`, `TOTAL_QURAN_AYAHS`,
+  page/juz conversion constants) so the new goals module and the existing progress tracker can't
+  drift apart on how "how far through the Quran" is computed. `useReadingProgress.ts` now uses it
+  too instead of its own private copy.
+- `app/composables/useReadingGoals.ts` — goal CRUD (5 types: finish-by-date, ayahs/day, pages/day,
+  Juz/week, custom), a daily reading log keyed by unique `surah:ayah` pairs (deduped via the key
+  itself, so re-scrolling past the same ayah doesn't inflate the count), streak calculation,
+  pace/catch-up math, and a manual "log reading" fallback for offline/physical-mushaf reading —
+  matching the spec's "should use actual reading progress where possible, not only a manual
+  checkbox" (manual entry exists as a supplement, not the primary mechanism).
+- `app/pages/goals/index.vue` — the Khatmah creation wizard (goal type, daily amount or target
+  date, preferred reading days) plus the active goal's progress ring, today's target/streak, and a
+  list of other paused/completed goals.
+- Hooked into the *existing* scroll-based ayah tracking in `surah/[id].vue` (from Pass 2's
+  Continue Reading work) — opening/scrolling through a surah now also feeds the goals daily log,
+  with no new tracking mechanism needed.
+- A compact "Today's Quran Goal" card on Home, positioned above Continue Reading per the roadmap
+  doc's suggested hierarchy — but only rendered once a goal actually exists, per the doc's own
+  "do not show empty analytics" principle for first-time users.
+
+**Two real bugs found and fixed during verification** (both caught by actually testing, not by
+inspection):
+- **Data-loss risk, would have shipped broken:** `recordAyahRead()` (called from the surah
+  reader's *existing* immediate-on-load progress watcher) can fire before the goals composable's
+  own `load()` has read prior state from `localStorage` back into memory. Since `persist()` writes
+  the *entire* `{goals, activeGoalId, dailyLog}` blob, an unloaded `goals.value` (empty on a fresh
+  page setup) being persisted would have **silently wiped any previously created goals** the first
+  time a user opened a surah page in a new session. Fixed by calling `load()` synchronously before
+  the existing immediate watcher can run, not inside `onMounted` (which fires too late — after
+  Vue's immediate watch already executed during setup).
+- **Wrong pacing on day one:** a goal created *today*, before any time has elapsed, immediately
+  showed "behind pace — catching up" with an inflated target. Root cause: `countPreferredDays()`
+  floored its result to a minimum of 1 "to be safe", but it feeds "expected progress by now" — a
+  same-day goal has had zero elapsed days to fall behind on, so flooring to 1 fabricated an
+  artificial deficit for every single new goal. Fixed by removing the floor (0 elapsed days → 0
+  expected progress, correctly no catch-up shown); the *actually* divide-by-zero-prone call sites
+  elsewhere in the file (`daysUntilTarget`, `projectedFinishDate`'s pace calc) already have their
+  own separate `Math.max(1, ...)` guards and were unaffected.
+- **Also fixed in passing, same root cause as Pass 6's prayer-time bug:** used a
+  `toISOString().slice(0,10)`-based "today" key initially, which shifts the calendar date for any
+  non-UTC timezone — wrong in the *opposite* direction for this app's likely Pakistan-based
+  audience (UTC+5) than the AlAdhan cache-key bug from Pass 6 was. Written correctly from the
+  start once caught in review, using local `getFullYear()/getMonth()/getDate()` instead, with a
+  matching `parseDateKey()` that avoids `new Date(dateOnlyString)` (which itself parses as UTC
+  midnight, reintroducing the same class of skew from the other direction).
+
+Verified with `npm run build` (clean), direct SSR `curl` checks of `/goals`, `/surah/1`, `/surah/2`
+(the exact failure mode from Pass 11 — confirmed not reintroduced), and a full Puppeteer session
+against the production build: create a goal via the wizard → confirmed correct shape in
+`localStorage` → Home page card renders with the right numbers → reading a surah with real
+scrolling increases the daily count (0 → 2) *and* leaves the goal itself intact in storage
+afterward (confirming the load-before-persist fix holds under real use, not just in theory).
+Puppeteer installed with `--no-save` for this check only and removed afterward.
+
+**Not done (deferred, later modules in the roadmap doc, not this pass):** sharing a goal as a
+progress image/link (doc explicitly marks this "later"); the doc's full homepage hierarchy
+redesign (Next Prayer Hero / Today's Goal / Continue Reading / Ayah of Day / contextual card /
+Quick Actions / Recent Saves, in that exact order with a bottom nav on mobile) — only the Today's
+Goal card was added to the existing Home layout, not a full restructure.
+
+---
+
+## 15. Pass 13 — Notes, Collections & Study Library (§4.4 of the roadmap doc)
+
+Told to skip §4.1 (Account/Sync) and move to the next module. §4.3 (True Background Push) was
+also skipped without being asked, for the same reason as §4.1 — it needs a subscription-storage
+database and a cron scheduler, the same category of infrastructure commitment the user just said
+to leave. Went to §4.4 Notes/Collections instead: upgrades the existing Bookmarks page (Surah,
+Ayah, Audio, Sajda, Page, Juz tabs) into a real study library, fully local-first like Reading
+Goals.
+
+**Shipped:**
+- `app/composables/useLibrary.ts` — collections (folders) and per-item metadata (note, tags,
+  collection assignments), keyed by the *same* stable bookmark key strings `useBookmarks` already
+  uses (`surah:2`, `ayah:2:255`, etc.) — a purely additive metadata layer, not a replacement for
+  the existing bookmark storage.
+- `app/components/library/BookmarkMetaChips.vue` — one reusable component (note editor with
+  debounced autosave + explicit "Saving…"/"Saved" state, a tag combobox, collection-assignment
+  chips) dropped into all three bookmark card templates (bespoke Surah, bespoke Ayah, and the
+  shared Audio/Sajda/Page/Juz block) instead of tripling the dialog logic across each.
+- `bookmarks.vue` gained: a search box (matches title/subtitle/note/tags), a sort dropdown (Surah
+  order / Recently saved / Tag / Collection), and a collections filter chip row — all three
+  compose together (e.g. searching *within* a selected collection).
+- Extended `useBookmarks.js` with a parallel `addedAt` timestamp map (when each key was first
+  bookmarked) so "Recently saved" sorting is based on real bookmark-creation order — additive
+  only, doesn't touch the existing `Set`-based storage or any of the 8+ files that already call
+  its `add`/`remove`/`toggle` helpers, so nothing that already depended on that composable's
+  behavior could regress.
+- Deleting a bookmark now also cleans up its library metadata (`removeItemMeta`) so notes/tags
+  don't orphan themselves under a key nothing points to anymore.
+
+Scoped down from the full spec for a local-only pass: tags/collections are stored denormalized per
+item rather than as separate normalized tables (no benefit to that without a real database yet;
+the Postgres schema in the roadmap doc is still the target once Account/Sync happens), and search
+is scoped to the current tab rather than a global cross-tab search — both reasonable simplifications
+for a `localStorage`-backed implementation, not different from what a synced version would need
+architecturally later.
+
+Verified with `npm run build` (clean), direct SSR `curl` checks of `/bookmarks`, `/surah/2`,
+`/sajda` (no regressions from the Pass 11/12 SSR-crash class of bug), and a full Puppeteer session
+against the production build: created a collection, opened the note/tag editor on a seeded
+bookmark, typed a note (confirmed the debounced "Saved" state fires), added a tag, assigned it to
+the collection, confirmed the resulting `localStorage` shape exactly matches what was entered, and
+confirmed "Recently saved" sort correctly orders a bookmark added a few seconds later ahead of an
+older one. Puppeteer installed with `--no-save` for this check only and removed afterward.
+
+**Not done (out of scope for a local-only pass, matches the doc's own note that "Collections sync
+across devices" is an acceptance criterion tied to §4.1):** cross-device sync of collections/notes
+— inherently blocked on Account/Cloud Sync, which is deferred.

@@ -8,25 +8,6 @@ export interface ReadingProgress {
 }
 
 const STORAGE_KEY = "quran:reading-progress:v1";
-const TOTAL_QURAN_AYAHS = 6236;
-
-// Cached across the whole app lifetime — surah.json only needs to be
-// fetched once to compute cumulative ayah counts for the progress bar.
-let prefixSumsPromise: Promise<number[]> | null = null;
-const getPrefixSums = () => {
-  if (!prefixSumsPromise) {
-    prefixSumsPromise = import("~/assets/data/surah.json").then(
-      ({ default: list }) => {
-        const sums = [0];
-        for (const s of list as { totalAyah: number }[]) {
-          sums.push(sums[sums.length - 1] + s.totalAyah);
-        }
-        return sums; // sums[n] = total ayahs across surahs 1..n
-      }
-    );
-  }
-  return prefixSumsPromise;
-};
 
 export const useReadingProgress = () => {
   const progress = useState<ReadingProgress | null>(
@@ -42,8 +23,7 @@ export const useReadingProgress = () => {
       percent.value = 0;
       return;
     }
-    const sums = await getPrefixSums();
-    const readSoFar = (sums[progress.value.surahNo - 1] ?? 0) + progress.value.ayahNo;
+    const readSoFar = await getAbsoluteAyahPosition(progress.value.surahNo, progress.value.ayahNo);
     percent.value = Math.min(100, Math.round((readSoFar / TOTAL_QURAN_AYAHS) * 100));
   };
 

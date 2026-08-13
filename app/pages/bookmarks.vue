@@ -11,6 +11,53 @@
           </v-chip>
         </div>
 
+        <!-- Search / sort / new collection -->
+        <v-row dense class="mb-2">
+          <v-col cols="12" md="6">
+            <v-text-field
+              v-model="searchQuery"
+              prepend-inner-icon="mdi-magnify"
+              label="Search saved items"
+              clearable
+              density="comfortable"
+              hide-details
+            />
+          </v-col>
+          <v-col cols="7" md="4">
+            <v-select
+              v-model="sortBy"
+              :items="sortOptions"
+              item-title="title"
+              item-value="value"
+              label="Sort by"
+              density="comfortable"
+              hide-details
+            />
+          </v-col>
+          <v-col cols="5" md="2">
+            <v-btn block variant="tonal" prepend-icon="mdi-folder-plus-outline" @click="newCollectionDialog = true">
+              New
+            </v-btn>
+          </v-col>
+        </v-row>
+
+        <!-- Collections filter -->
+        <div v-if="collections.length" class="d-flex flex-wrap ga-2 align-center mb-4">
+          <span class="text-caption text-medium-emphasis mr-1">Collections:</span>
+          <v-chip
+            v-for="c in collections"
+            :key="c.id"
+            size="small"
+            :color="collectionFilter === c.id ? 'primary' : undefined"
+            :variant="collectionFilter === c.id ? 'flat' : 'outlined'"
+            closable
+            @click="collectionFilter = collectionFilter === c.id ? null : c.id"
+            @click:close="deleteCollectionId = c.id"
+          >
+            {{ c.name }}
+          </v-chip>
+        </div>
+
         <v-tabs v-model="tab" grow>
           <v-tab v-for="c in categories" :key="c.value">
             {{ c.label }}
@@ -23,7 +70,7 @@
             <template v-if="c.value === 'surah'">
               <v-row>
                 <v-col
-                  v-for="item in surahBookmarks"
+                  v-for="item in applyFilters(surahBookmarks)"
                   :key="item.id"
                   cols="12"
                   md="6"
@@ -54,6 +101,10 @@
                       />
                     </v-card-title>
 
+                    <v-card-text class="pt-0">
+                      <LibraryBookmarkMetaChips :item-key="item.id" />
+                    </v-card-text>
+
                     <v-card-actions>
                       <NuxtLink :to="item.to" class="text-decoration-none">
                         <v-btn variant="tonal">Open</v-btn>
@@ -62,9 +113,9 @@
                   </v-card>
                 </v-col>
 
-                <v-col cols="12" v-if="!surahBookmarks.length">
+                <v-col cols="12" v-if="!applyFilters(surahBookmarks).length">
                   <v-alert type="info" variant="tonal">
-                    No surah bookmarks yet
+                    {{ surahBookmarks.length ? "No matches" : "No surah bookmarks yet" }}
                   </v-alert>
                 </v-col>
               </v-row>
@@ -74,7 +125,7 @@
             <template v-else-if="c.value === 'ayah'">
               <v-row>
                 <v-col
-                  v-for="item in ayahBookmarks"
+                  v-for="item in applyFilters(ayahBookmarks)"
                   :key="item.id"
                   cols="12"
                   md="6"
@@ -113,6 +164,10 @@
                       </div>
                     </v-card-text>
 
+                    <v-card-text class="pt-0">
+                      <LibraryBookmarkMetaChips :item-key="item.id" />
+                    </v-card-text>
+
                     <v-card-actions>
                       <NuxtLink :to="item.to" class="text-decoration-none">
                         <v-btn variant="tonal">Open</v-btn>
@@ -121,9 +176,9 @@
                   </v-card>
                 </v-col>
 
-                <v-col cols="12" v-if="!ayahBookmarks.length">
+                <v-col cols="12" v-if="!applyFilters(ayahBookmarks).length">
                   <v-alert type="info" variant="tonal">
-                    No ayah bookmarks yet
+                    {{ ayahBookmarks.length ? "No matches" : "No ayah bookmarks yet" }}
                   </v-alert>
                 </v-col>
               </v-row>
@@ -133,7 +188,7 @@
             <template v-else>
               <v-row>
                 <v-col
-                  v-for="item in categoryItems[c.value]"
+                  v-for="item in applyFilters(categoryItems[c.value])"
                   :key="item.id"
                   cols="12"
                   md="6"
@@ -160,6 +215,10 @@
                       />
                     </v-card-title>
 
+                    <v-card-text class="pt-0">
+                      <LibraryBookmarkMetaChips :item-key="item.id" />
+                    </v-card-text>
+
                     <v-card-actions>
                       <NuxtLink :to="item.to" class="text-decoration-none">
                         <v-btn variant="tonal">Open</v-btn>
@@ -168,9 +227,9 @@
                   </v-card>
                 </v-col>
 
-                <v-col cols="12" v-if="!categoryItems[c.value]?.length">
+                <v-col cols="12" v-if="!applyFilters(categoryItems[c.value]).length">
                   <v-alert type="info" variant="tonal">
-                    No {{ c.label.toLowerCase() }} bookmarks yet
+                    {{ categoryItems[c.value]?.length ? "No matches" : `No ${c.label.toLowerCase()} bookmarks yet` }}
                   </v-alert>
                 </v-col>
               </v-row>
@@ -179,6 +238,48 @@
         </v-window>
       </v-col>
     </v-row>
+
+    <!-- New collection dialog -->
+    <v-dialog v-model="newCollectionDialog" max-width="360">
+      <v-card rounded="lg">
+        <v-card-title>New Collection</v-card-title>
+        <v-card-text>
+          <v-text-field
+            v-model="newCollectionName"
+            label="Name"
+            placeholder="e.g. Dua, Patience, Ramadan"
+            autofocus
+            @keyup.enter="submitNewCollection"
+          />
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn variant="text" @click="newCollectionDialog = false">Cancel</v-btn>
+          <v-btn color="primary" variant="flat" :disabled="!newCollectionName.trim()" @click="submitNewCollection">
+            Create
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <!-- Delete collection confirm -->
+    <v-dialog
+      :model-value="!!deleteCollectionId"
+      max-width="360"
+      @update:model-value="(v) => { if (!v) deleteCollectionId = null }"
+    >
+      <v-card rounded="lg">
+        <v-card-title>Delete this collection?</v-card-title>
+        <v-card-text>
+          Saved items stay bookmarked — this only removes the collection and un-assigns items from it.
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn variant="text" @click="deleteCollectionId = null">Cancel</v-btn>
+          <v-btn color="error" variant="flat" @click="confirmDeleteCollection">Delete</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -199,6 +300,7 @@ const tabValue = computed(() => categories[tab.value]?.value || "surah")
 /* ---------------- Bookmarks storage ---------------- */
 const {
   list,
+  addedAt,
   load,
   removeAyah,
   removeSurah,
@@ -208,6 +310,77 @@ const {
   removePage,
 } = useBookmarks()
 onMounted(() => load())
+
+/* ---------------- Library: collections + notes/tags ---------------- */
+const { collections, getMeta, removeItemMeta, createCollection, deleteCollection, load: loadLibrary } = useLibrary()
+onMounted(() => loadLibrary())
+
+const searchQuery = ref("")
+const sortBy = ref("surah")
+const collectionFilter = ref(null)
+const sortOptions = [
+  { title: "Surah order", value: "surah" },
+  { title: "Recently saved", value: "recent" },
+  { title: "Tag", value: "tag" },
+  { title: "Collection", value: "collection" },
+]
+
+const collectionName = (id) => collections.value.find((c) => c.id === id)?.name || ""
+
+const applyFilters = (rawItems) => {
+  let items = rawItems || []
+
+  if (collectionFilter.value) {
+    items = items.filter((item) => getMeta(item.id).collectionIds.includes(collectionFilter.value))
+  }
+
+  if (searchQuery.value?.trim()) {
+    const q = searchQuery.value.trim().toLowerCase()
+    items = items.filter((item) => {
+      const meta = getMeta(item.id)
+      const haystack = [item.title, item.subtitle, item.arabicName, meta.note, ...meta.tags]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase()
+      return haystack.includes(q)
+    })
+  }
+
+  if (sortBy.value === "recent") {
+    items = [...items].sort((a, b) => (addedAt.value[b.id] || 0) - (addedAt.value[a.id] || 0))
+  } else if (sortBy.value === "tag") {
+    items = [...items].sort((a, b) => {
+      const at = getMeta(a.id).tags[0] || "￿"
+      const bt = getMeta(b.id).tags[0] || "￿"
+      return at.localeCompare(bt)
+    })
+  } else if (sortBy.value === "collection") {
+    items = [...items].sort((a, b) => {
+      const ac = collectionName(getMeta(a.id).collectionIds[0]) || "￿"
+      const bc = collectionName(getMeta(b.id).collectionIds[0]) || "￿"
+      return ac.localeCompare(bc)
+    })
+  }
+  // sortBy === "surah": items already come pre-sorted by surah/ayah number
+
+  return items
+}
+
+/* ---------------- New / delete collection ---------------- */
+const newCollectionDialog = ref(false)
+const newCollectionName = ref("")
+const submitNewCollection = () => {
+  createCollection(newCollectionName.value)
+  newCollectionName.value = ""
+  newCollectionDialog.value = false
+}
+
+const deleteCollectionId = ref(null)
+const confirmDeleteCollection = () => {
+  if (collectionFilter.value === deleteCollectionId.value) collectionFilter.value = null
+  deleteCollection(deleteCollectionId.value)
+  deleteCollectionId.value = null
+}
 
 /* ---------------- Surah data for names ---------------- */
 const { rawSurahs } = useSurahs()
@@ -410,7 +583,7 @@ const categoryItems = computed(() => ({
 }))
 
 const currentCount = computed(
-  () => categoryItems.value[tabValue.value]?.length || 0
+  () => applyFilters(categoryItems.value[tabValue.value]).length || 0
 )
 
 /* ---------------- Remove logic ---------------- */
@@ -421,6 +594,7 @@ const removeBookmark = (item) => {
   if (item.type === "audio") removeAudio(item.surahNo)
   if (item.type === "juz") removeJuz(item.juzNo)
   if (item.type === "page") removePage(item.pageNo)
+  removeItemMeta(item.id)
 }
 </script>
 

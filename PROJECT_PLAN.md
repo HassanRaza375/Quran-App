@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 9)._
+_Living document, updated after each work pass. Last updated: 2026-08-05 (Pass 11)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -14,6 +14,9 @@ Pass 6 (Jafari/Shia calculation method + fiqh selector) ✅ shipped — see §8.
 Tafsir on the Surah page) ✅ shipped — see §9. Pass 8 (tafsir-didn't-open bug fix + an unrelated
 theme hydration-mismatch bug found along the way) ✅ shipped — see §10. Pass 9 (checked for a
 Shia/Ja'fari tafsir source — none exists; labeled the tafsir picker accordingly) ✅ shipped — see §11.
+Pass 10 (IndexedDB caching layer for surah text/tafsir) ✅ shipped — see §12. Pass 11 (inline
+per-ayah translation, like tafsir; a critical SSR crash found and fixed; a real fixed-player
+overlap bug found and partially mitigated) ✅ shipped — see §13.
 
 ---
 
@@ -451,3 +454,106 @@ low-risk, no new data source — the fix the user asked for over investigating a
 integration.
 
 Verified with `npm run build` (clean).
+
+---
+
+## 12. Pass 10 — IndexedDB caching (surah text and tafsir never change)
+
+Asked for a plan first, given the architectural nature of the change; presented a two-tier design
+and asked two scoping questions before building — both went with the lighter-weight recommended
+option: **progressive/cache-as-you-go** (only cache a surah once actually opened, no background
+pre-fetch of the whole Quran) and **no new "download for offline" UI** for audio (leave it lazy,
+just relax the existing limits).
+
+**The two tiers:**
+1. **Service worker HTTP cache (tuned, not new)** — `quranapi.pages.dev` (text/tafsir) switched
+   from `StaleWhileRevalidate` to `CacheFirst`: the old setting re-fetched in the background on
+   every single visit purely to "refresh" a cache that never needed refreshing, since this content
+   is immutable. Expiration relaxed from 30 days/300 entries to 1 year/1000 entries. Audio's
+   `CacheFirst` limits relaxed similarly (14 days → 1 year, 60 → 300 entries) — still only ever
+   caches what's actually played, just stops evicting it needlessly soon.
+2. **New: IndexedDB structured cache (`useQuranDB.ts`)** — two object stores, `chapters` (keyed by
+   surah number) and `tafsirs` (keyed by `surah_ayah`), wrapped with the `idb` library. `useChapters`
+   and `useTafsir` now check IndexedDB *before* any network call and write through after a network
+   fetch. This is a meaningfully different (and faster) layer than the SW cache: no `fetch()`/
+   `Response` overhead, survives independently of Cache Storage eviction, and — the actual point of
+   asking for this — persists across full reloads, unlike Pass 7's tafsir cache which was only an
+   in-memory `Map` that reset on every page load.
+3. **Also added:** `navigator.storage.persist()` requested on client init (`storage.client.js`) —
+   without it, a browser under disk pressure can silently evict this cache with no warning, which
+   would defeat the entire point of building it.
+
+Every read still has the network as a fallback — IndexedDB failures (private browsing, quota,
+unsupported) are swallowed and just result in a normal network fetch, never a broken page.
+
+Verified with a real Puppeteer session against the production build, using **client-side (SPA)
+navigation** specifically (not full page reloads, since SSR always re-fetches server-side and
+can't touch IndexedDB — that distinction matters here): first visit to Surah 1 makes exactly one
+API call and populates IndexedDB (confirmed by reading the object store directly); navigating away
+to Surah 2 and back to Surah 1 makes **zero** further API calls while still rendering the correct
+content from cache. `npm run build` clean. Puppeteer installed with `--no-save` for this check
+only and removed afterward.
+
+---
+
+## 13. Pass 11 — Inline per-ayah translation (like Tafsir), plus two real bugs found along the way
+
+Requested: an inline per-ayah translation toggle mirroring the Tafsir UX from Pass 7/8. Simpler
+than tafsir in one respect — the translation text (`arabic1/arabic2/english/bengali/urdu`) is
+already part of the chapter payload `useChapters` fetches, so no separate endpoint or fetch state
+was needed, just per-ayah panel state.
+
+**Shipped:**
+- A "Translation" button next to "Tafsir" under each ayah, same interaction pattern as tafsir:
+  tap opens an inline language picker (English / Urdu / Bengali / Arabic-Alt — `arabic1` excluded
+  since that's always the main displayed verse text already), picking one shows it in an
+  `v-expand-transition` panel, the choice is remembered as the default for the next ayah, and
+  multiple ayahs' panels can be open at once (all matching the precedents already established for
+  tafsir). Styled with a `secondary`-color accent so the two panel types are visually distinct at
+  a glance. Urdu and the alternate Arabic script get `direction: rtl` styling; English/Bengali stay
+  LTR — plain text, no markdown, so no `v-html`/XSS concern here at all.
+
+**Bug found — critical, unrelated to the new feature, introduced by Pass 10:** verifying this with
+a *direct* fresh visit to `/surah/1` (not client-side navigation, which is what Pass 10's own
+verification used) returned a full page crash — `"[nuxt] instance unavailable"`, HTTP 500, no ayah
+content, no `<ayah-N>` sections rendered at all. Root cause: Pass 10's `useChapters`/`useTafsir`
+added `await getCachedChapter(id)` (an IndexedDB check) *before* the network call, which itself
+reads `useNuxtApp()` internally. Any `await` at all before a `useNuxtApp()`-dependent call loses
+Nuxt's synchronous per-request SSR context — even an already-resolved promise crosses a microtask
+boundary, which is enough to break it. This meant **every direct visit, refresh, or shared link to
+any `/surah/[id]` page was silently broken** since Pass 10 shipped; Pass 10's own verification
+only ever used SPA (client-side) navigation to `/surah/N`, which doesn't touch SSR at all, so it
+never exercised this path. Fixed by gating the whole IndexedDB pre-check behind
+`import.meta.client` in both composables — IndexedDB doesn't exist server-side anyway, so this is
+correct on its own terms, not just a workaround. Verified with a *direct* `curl`/SSR fetch of
+`/surah/1`, `/surah/2` (286 ayahs), `/surah/36` (83 ayahs), `/surah/112` (4 ayahs) — all render
+the correct ayah count now, no error markers.
+
+**Bug found — real, pre-existing, unrelated to Pass 10 or 11:** while testing the new translation
+buttons with real mouse clicks (per the Pass 8 lesson — synthetic `element.click()` isn't
+representative), a click on ayah 2's translation button landed on the fixed bottom audio player
+bar instead (`document.elementFromPoint` confirmed the player bar, not the button, was
+actually at that screen position). The reader's audio player (`.reader-player`) auto-appears as
+soon as a reciter is auto-selected — which happens as soon as any chapter loads, regardless of
+whether audio is playing — and is `position: fixed` with `z-index: 999999`. Any ayah whose
+controls scroll into that bottom viewport band gets visually and interactively covered, on *any*
+surah, not just short ones — this isn't a corner case, it's inherent to how the bar is positioned
+today. **Partially mitigated, not fully fixed:** normalized the arbitrary `z-index: 999999` down
+to `1000` (no reason for it to outrank dialogs/menus) and increased `.reader-container`'s
+bottom padding from 80px to 120px for extra clearance at the end of a surah. Confirmed via
+`document.elementFromPoint` this does **not** fully solve the underlying issue — a proper fix
+needs the scrollable content to reserve real space for the player's actual height at all scroll
+positions (not just the end), which is a bigger layout change than this pass's scope. Logged here
+rather than silently claimed as fixed.
+
+Verified with `npm run build` (clean) and a real-mouse-click Puppeteer session against the
+production build: language picker opens, English/Urdu render correctly (Urdu right-to-left
+confirmed via class check), switching an already-open panel's language works, multiple panels
+open simultaneously (confirmed both via a native-click path, working around the player-bar issue
+above, and via a taller test viewport where the real click didn't hit the overlay). Tafsir panels
+confirmed unaffected. Puppeteer installed with `--no-save` for this check only and removed
+afterward.
+
+**Not done (flagged for later, out of this pass's scope):** a real fix for the fixed player bar
+covering ayah content at arbitrary scroll positions — would need the player's actual rendered
+height reserved in the scrollable layout continuously, not just as end-of-page padding.

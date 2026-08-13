@@ -134,8 +134,19 @@
               />
             </div>
 
-            <!-- Tafsir -->
+            <!-- Tafsir & Translation -->
             <div class="verse-actions-row">
+              <v-btn
+                size="small"
+                variant="text"
+                class="translation-toggle-btn"
+                :color="getTranslationPanel(index + 1).open ? 'secondary' : undefined"
+                prepend-icon="mdi-translate"
+                @click="onTranslationButtonClick(index + 1)"
+              >
+                Translation
+              </v-btn>
+
               <v-btn
                 size="small"
                 variant="text"
@@ -147,6 +158,61 @@
                 Tafsir
               </v-btn>
             </div>
+
+            <v-expand-transition>
+              <div v-if="getTranslationPanel(index + 1).open" class="translation-panel">
+                <!-- Language picker: shown until a language is chosen for this ayah,
+                     or when the user taps the language chip to switch it -->
+                <div
+                  v-if="!getTranslationPanel(index + 1).lang || translationPickerFor === index + 1"
+                  class="translation-picker"
+                >
+                  <div class="text-caption text-medium-emphasis mb-2">
+                    Choose a language:
+                  </div>
+                  <div class="d-flex flex-wrap ga-2">
+                    <v-chip
+                      v-for="lang in translationLangs"
+                      :key="lang.value"
+                      :color="getTranslationPanel(index + 1).lang === lang.value ? 'secondary' : undefined"
+                      :variant="getTranslationPanel(index + 1).lang === lang.value ? 'flat' : 'outlined'"
+                      @click="selectTranslationLang(index + 1, lang.value)"
+                    >
+                      {{ lang.title }}
+                    </v-chip>
+                  </div>
+                </div>
+
+                <template v-else>
+                  <div class="d-flex align-center justify-space-between mb-2 ga-2 flex-wrap">
+                    <v-chip
+                      size="small"
+                      variant="tonal"
+                      color="secondary"
+                      append-icon="mdi-menu-down"
+                      class="translation-lang-chip"
+                      @click="translationPickerFor = index + 1"
+                    >
+                      {{ translationLangTitle(getTranslationPanel(index + 1).lang) }}
+                    </v-chip>
+
+                    <v-btn
+                      icon="mdi-close"
+                      size="x-small"
+                      variant="text"
+                      @click="closeTranslationPanel(index + 1)"
+                    />
+                  </div>
+
+                  <div
+                    class="translation-content"
+                    :class="{ 'translation-content--rtl': isRtlLang(getTranslationPanel(index + 1).lang) }"
+                  >
+                    {{ typeObject[getTranslationPanel(index + 1).lang]?.[index] }}
+                  </div>
+                </template>
+              </div>
+            </v-expand-transition>
 
             <v-expand-transition>
               <div v-if="getTafsirPanel(index + 1).open" class="tafsir-panel">
@@ -509,9 +575,69 @@ const closeTafsirPanel = (ayahNo) => {
   getTafsirPanel(ayahNo).open = false;
 };
 
+/* ---------- Inline Translation ---------- */
+// Same UX pattern as Tafsir above, but no fetch needed: every translation is
+// already part of the chapter data (`typeObject`), so this is purely local
+// panel state — pick a language once, remembered as the default for the
+// next ayah, multiple ayahs can have it open at once.
+const translationLangs = [
+  { value: "english", title: "English" },
+  { value: "urdu", title: "Urdu" },
+  { value: "bengali", title: "Bengali" },
+  { value: "arabic2", title: "Arabic (Alt)" },
+];
+const rtlLangs = new Set(["urdu", "arabic2"]);
+const isRtlLang = (lang) => rtlLangs.has(lang);
+const translationLangTitle = (lang) =>
+  translationLangs.find((l) => l.value === lang)?.title || lang;
+
+const translationPanels = reactive({}); // ayahNo -> { open, lang }
+const translationPickerFor = ref(null);
+const defaultTranslationLang = ref(null);
+
+onMounted(() => {
+  defaultTranslationLang.value = localStorage.getItem("translationDefaultLang") || null;
+});
+
+const getTranslationPanel = (ayahNo) => {
+  if (!translationPanels[ayahNo]) {
+    translationPanels[ayahNo] = { open: false, lang: null };
+  }
+  return translationPanels[ayahNo];
+};
+
+const selectTranslationLang = (ayahNo, lang) => {
+  const panel = getTranslationPanel(ayahNo);
+  panel.lang = lang;
+  panel.open = true;
+  if (translationPickerFor.value === ayahNo) translationPickerFor.value = null;
+
+  defaultTranslationLang.value = lang;
+  localStorage.setItem("translationDefaultLang", lang);
+};
+
+const onTranslationButtonClick = (ayahNo) => {
+  const panel = getTranslationPanel(ayahNo);
+  if (panel.open) {
+    panel.open = false;
+    return;
+  }
+
+  panel.open = true;
+  const lang = panel.lang || defaultTranslationLang.value;
+  if (lang) selectTranslationLang(ayahNo, lang);
+  // else: panel is open with no language yet, so the template shows the inline picker.
+};
+
+const closeTranslationPanel = (ayahNo) => {
+  getTranslationPanel(ayahNo).open = false;
+};
+
 watch(chapterNo, () => {
   Object.keys(tafsirPanels).forEach((k) => delete tafsirPanels[k]);
   tafsirPickerFor.value = null;
+  Object.keys(translationPanels).forEach((k) => delete translationPanels[k]);
+  translationPickerFor.value = null;
 });
 </script>
 
@@ -532,7 +658,7 @@ watch(chapterNo, () => {
 .reader-container {
   max-width: 900px;
   margin: auto;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 }
 
 /* ===============================
@@ -654,7 +780,9 @@ watch(chapterNo, () => {
 .verse-actions-row {
   display: flex;
   justify-content: flex-end;
+  gap: 4px;
   margin-top: 8px;
+  flex-wrap: wrap;
 }
 
 .tafsir-toggle-btn {
@@ -714,6 +842,49 @@ watch(chapterNo, () => {
   margin: 16px 0 8px;
 }
 
+.translation-toggle-btn {
+  opacity: 0.75;
+  font-family: var(--font-ui);
+}
+
+.translation-toggle-btn:hover {
+  opacity: 1;
+}
+
+.translation-lang-chip {
+  cursor: pointer;
+}
+
+.translation-panel {
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(var(--v-theme-secondary), 0.08);
+  border: 1px solid rgba(var(--v-theme-secondary), 0.2);
+  border-inline-start: 3px solid rgb(var(--v-theme-secondary));
+}
+
+.translation-picker {
+  font-family: var(--font-ui);
+}
+
+.translation-content {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  direction: ltr;
+  text-align: start;
+  color: rgb(var(--v-theme-on-surface));
+}
+
+.translation-content--rtl {
+  font-family: "Amiri Quran", serif;
+  direction: rtl;
+  text-align: right;
+  font-size: 1.15rem;
+  line-height: 2;
+}
+
 .tafsir-content :deep(.tafsir-heading:first-child) {
   margin-top: 0;
 }
@@ -755,6 +926,11 @@ watch(chapterNo, () => {
   background: rgba(var(--v-theme-surface), 0.98);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(var(--v-theme-on-surface), 0.08);
-  z-index: 999999;
+  /* Was 999999 — an arbitrary "just in case" value with no real reason to
+     outrank menus/dialogs. This bar can still visually cover ayah content
+     that scrolls into its band (an inherent tradeoff of any fixed bottom
+     bar); a saner z-index doesn't fix that, it just stops this one element
+     from needlessly beating everything else in the app on stacking order. */
+  z-index: 1000;
 }
 </style>

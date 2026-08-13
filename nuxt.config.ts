@@ -86,29 +86,37 @@ export default defineNuxtConfig({
       navigateFallback: "/",
       runtimeCaching: [
         {
-          // Quran text/translation/reciter API
+          // Quran text/translation/tafsir/reciter-list API — this content is
+          // immutable (surah text and tafsir never change), so CacheFirst
+          // (fetch once, ever) instead of StaleWhileRevalidate, which would
+          // otherwise re-fetch on every visit purely to refresh a cache that
+          // never needed refreshing. The app also mirrors this into
+          // IndexedDB via useQuranDB for instant, no-network reads on repeat
+          // visits — this SW-level cache is the fallback/backstop layer.
           urlPattern: ({ url }) =>
             url.hostname.includes("quranapi.pages.dev"),
-          handler: "StaleWhileRevalidate",
+          handler: "CacheFirst",
           options: {
             cacheName: "quran-api-cache",
             expiration: {
-              maxEntries: 300,
-              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              maxEntries: 1000,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
             },
             cacheableResponse: { statuses: [0, 200] },
           },
         },
         {
-          // reciter audio files
+          // reciter audio files — also immutable, and only ever cached
+          // lazily (whatever's actually played), so a generous cap here
+          // just avoids evicting recently-played recitations too eagerly.
           urlPattern: ({ request, url }) =>
             request.destination === "audio" || /\.(mp3|ogg|wav)$/i.test(url.pathname),
           handler: "CacheFirst",
           options: {
             cacheName: "quran-audio-cache",
             expiration: {
-              maxEntries: 60,
-              maxAgeSeconds: 60 * 60 * 24 * 14, // 14 days
+              maxEntries: 300,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
             },
             cacheableResponse: { statuses: [0, 200] },
           },

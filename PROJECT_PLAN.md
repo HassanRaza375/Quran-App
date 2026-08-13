@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-13 (Pass 14)._
+_Living document, updated after each work pass. Last updated: 2026-08-13 (Pass 15)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -19,10 +19,19 @@ per-ayah translation, like tafsir; a critical SSR crash found and fixed; a real 
 overlap bug found and partially mitigated) ✅ shipped — see §13. Pass 12 (Reading Goals & Khatmah
 Planner — first module from the new feature roadmap doc) ✅ shipped — see §14. Pass 13 (Notes,
 Collections & Study Library — §4.4, second module) ✅ shipped — see §15. Pass 14 (Offline &
-Download Manager — §4.5, third module) ✅ shipped — see §16. Account/Cloud Sync (§4.1)
+Download Manager — §4.5, third module) ✅ shipped — see §16. Pass 15 (Advanced Search &
+Discovery — §4.6, fourth module; also fixed a real pre-existing CORS bug affecting the Juz
+feature) ✅ shipped — see §17. Account/Cloud Sync (§4.1)
 and True Background Push (§4.3) are explicitly deferred at the user's direction — both need
 server-side infrastructure (a database for user data / push subscriptions, in Push's case also a
 cron scheduler) that hasn't been committed to yet.
+
+**Correction to Pass 12's record:** Pass 12 stated `.env` "already has real Supabase credentials
+set." That was wrong — only checked that the *keys* `NUXT_PUBLIC_SUPABASE_URL`/`_ANON_KEY` were
+present, never read the actual values. They're placeholders (`https://xxxxx.supabase.co`,
+`public-anon-key`), not real credentials. Doesn't change anything given Account/Sync is deferred
+anyway, but the record should be accurate: Supabase is *not* one step from working, it still needs
+a real project.
 
 **New source document as of Pass 12:** `Quran_WebApp_Feature_Roadmap_and_Module_Specification.md`
 (repo root) — a 12-module, 8-phase roadmap (account sync, reading goals, true background push,
@@ -763,3 +772,64 @@ only and removed afterward.
 **Not done (flagged, not required by this pass):** a UI for browsing/selecting *which* Tafsir
 authors to download (currently always downloads all 3, since a single tafsir fetch already returns
 all of them together — matches Pass 7's endpoint shape); download cancellation mid-progress.
+
+---
+
+## 17. Pass 15 — Advanced Search & Discovery (§4.6), and a real CORS bug found along the way
+
+Continued through the roadmap doc in order. Unlike the last three modules, this one already had a
+real, working page (`search.vue`) from before this whole roadmap started — debounced search
+against `alquran.cloud`, but English-only ("Search Quran (translations only)"), 3 hardcoded
+editions, no Juz/tafsir/bookmarked filters, no highlighting, no history, no URL persistence, and
+the raw provider response shape (`ayah.surah.englishName`, `ayah.edition.name`) used directly in
+the template. This pass upgraded it in place rather than building something parallel.
+
+**Checked directly, not assumed:** whether `alquran.cloud`'s search endpoint actually supports
+Arabic/Urdu, since the old UI's "(translations only)" label implied it might not. It does — a
+plain `curl` test without proper URL-encoding of the Arabic/Urdu query 404'd and briefly looked
+like a real API limitation, but with correct percent-encoding, Urdu (`ur.jalandhry`, `ur.maududi`)
+and Arabic Quran text (`quran-simple`) both return real matches. Also confirmed the API has no
+real "exact vs. loose phrase" distinction (it's inherently substring matching — a quoted phrase
+just fails to match anything, since quote characters aren't literally in the text) — so no fake
+toggle was built for that; it would have been UI that didn't actually do anything different.
+
+**Shipped:**
+- `useSearch.ts` — normalizes the provider response into a clean `SearchResult` shape so no
+  `alquran.cloud`-specific field names leak past this composable, with an editions catalog spanning
+  English (3), Urdu (2), Arabic Quran text (1), and Arabic Tafsir (4 of Pass 9's 6 known editions)
+  — grouped so the UI can offer "Search in: English / Urdu / Arabic / Arabic Tafsir" instead of a
+  flat list of unfamiliar identifiers.
+- `useSearchHistory.ts` — persisted recent searches (deduped, capped, clear-all).
+- `app/utils/searchHighlight.js` — same escape-first-then-insert-safe-markup pattern as Pass 7's
+  tafsir renderer, used to `<mark>` the matched substring in results.
+- `search.vue` rewritten: Juz filter (client-side, using the *existing* `useJuz()` — the API has no
+  server-side Juz scope, so this fetches the juz's ayah membership once and filters results
+  against it), a "bookmarked ayahs only" toggle (reusing `useBookmarks`), suggested-search chips,
+  recent-search chips, results reordered so Surah+ayah number leads the excerpt (not the other way
+  around, matching the doc's explicit ask), and the whole filter state (query, edition
+  group/edition, surah, juz, bookmarked-only) synced to the URL so results are shareable/bookmarkable.
+
+**Real bug found and fixed, unrelated to this module's own code:** verifying the new Juz filter
+surfaced that `useJuz()` — used by `juz/[id].vue` since Pass 2 — throws a CORS error for *any*
+client-side-only invocation. Root cause: `.env`'s `QURAN_API_BASE2` was set to `http://` instead of
+`https://`; the API 301-redirects HTTP to HTTPS, and the redirect response itself doesn't carry a
+usable CORS header, so a browser fetch is rejected outright even though the final HTTPS destination
+is fully CORS-enabled — the same *class* of bug as Pass 14's GitHub-audio-redirect CORS issue, just
+via a different mechanism (a misconfigured env var instead of a third-party host quirk). This had
+been invisible for the entire project because every prior check of `useJuz()`/the Juz page was only
+ever verified via SSR `curl` (Node's fetch doesn't enforce CORS at all — only browsers do), so a
+bug that only manifests client-side never got caught. Fixed by correcting the `.env` value to
+`https://`.
+
+Verified with `npm run build` (clean), direct SSR `curl` checks, and a real Puppeteer session
+against the production build — including working around several of my *own* test-script timing
+issues along the way (results legitimately take 1–2s to arrive over the real network; a couple of
+runs also chased what looked like failures but were actually correct behavior, e.g. searching the
+English word "patience" against an Urdu edition correctly returns zero matches). Final clean runs
+confirmed: English search returns real highlighted results; switching to Urdu with an actual Urdu
+query term returns 60 real RTL-styled highlighted results; the Juz filter correctly narrows results
+to only ayahs within that juz on a fresh, direct URL load (the real "shared link" scenario); search
+history persists. Puppeteer installed with `--no-save` for this check only and removed afterward.
+
+**Not done (flagged, not required by this pass):** cloud-indexed search across personal notes
+(doc's own note: "if cloud search is implemented" — blocked on the deferred Account/Sync module).

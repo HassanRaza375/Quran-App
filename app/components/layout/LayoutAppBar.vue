@@ -6,6 +6,10 @@
 
     <v-app-bar-title>Quran Pak</v-app-bar-title>
 
+    <v-chip v-if="!isOnline" class="mr-2" size="small" color="warning" prepend-icon="mdi-cloud-off-outline">
+      Offline
+    </v-chip>
+
     <v-chip class="mr-2 text-white" size="small" outlined style="min-width: 145px;">
       🕌 {{ prayer.nextPrayer }} in {{ prayer.countdown }}
     </v-chip>
@@ -17,6 +21,11 @@
 
 <script setup>
 const prayer = usePrayerStore()
+const { isOnline, init: initOnlineStatus } = useOnlineStatus()
+
+onMounted(() => {
+  initOnlineStatus()
+})
 
 const emit = defineEmits(['toggle-drawer'])
 const goto = (path) => {

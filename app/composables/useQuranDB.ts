@@ -72,5 +72,37 @@ export const useQuranDB = () => {
     }
   };
 
-  return { getChapter, setChapter, getTafsir, setTafsir };
+  const deleteChapter = async (surahNo: number) => {
+    const db = getDB();
+    if (!db) return;
+    try {
+      await (await db).delete(CHAPTERS_STORE, surahNo);
+    } catch {
+      // best-effort; ignore
+    }
+  };
+
+  const deleteTafsirsForSurah = async (surahNo: number, totalAyah: number) => {
+    const db = getDB();
+    if (!db) return;
+    try {
+      const conn = await db;
+      const tx = conn.transaction(TAFSIRS_STORE, "readwrite");
+      for (let ayah = 1; ayah <= totalAyah; ayah++) {
+        tx.store.delete(`${surahNo}_${ayah}`);
+      }
+      await tx.done;
+    } catch {
+      // best-effort; ignore
+    }
+  };
+
+  return {
+    getChapter,
+    setChapter,
+    getTafsir,
+    setTafsir,
+    deleteChapter,
+    deleteTafsirsForSurah,
+  };
 };

@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-13 (Pass 13)._
+_Living document, updated after each work pass. Last updated: 2026-08-13 (Pass 14)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -18,7 +18,8 @@ Pass 10 (IndexedDB caching layer for surah text/tafsir) ✅ shipped — see §12
 per-ayah translation, like tafsir; a critical SSR crash found and fixed; a real fixed-player
 overlap bug found and partially mitigated) ✅ shipped — see §13. Pass 12 (Reading Goals & Khatmah
 Planner — first module from the new feature roadmap doc) ✅ shipped — see §14. Pass 13 (Notes,
-Collections & Study Library — §4.4, second module) ✅ shipped — see §15. Account/Cloud Sync (§4.1)
+Collections & Study Library — §4.4, second module) ✅ shipped — see §15. Pass 14 (Offline &
+Download Manager — §4.5, third module) ✅ shipped — see §16. Account/Cloud Sync (§4.1)
 and True Background Push (§4.3) are explicitly deferred at the user's direction — both need
 server-side infrastructure (a database for user data / push subscriptions, in Push's case also a
 cron scheduler) that hasn't been committed to yet.
@@ -696,3 +697,69 @@ older one. Puppeteer installed with `--no-save` for this check only and removed 
 **Not done (out of scope for a local-only pass, matches the doc's own note that "Collections sync
 across devices" is an acceptance criterion tied to §4.1):** cross-device sync of collections/notes
 — inherently blocked on Account/Cloud Sync, which is deferred.
+
+---
+
+## 16. Pass 14 — Offline & Download Manager (§4.5 of the roadmap doc)
+
+Told to keep going after Notes/Collections; picked §4.5 next in document order (§4.1/§4.3 already
+skipped for infra reasons). Builds directly on Pass 1's PWA/Workbox setup and Pass 10's IndexedDB
+caching — this module makes that existing, opportunistic caching *visible and controllable*
+instead of hidden behind implementation details, per the doc's own framing.
+
+**Shipped:**
+- `useQuranDB.ts` extended with `deleteChapter`/`deleteTafsirsForSurah` — Pass 10 only ever added
+  to the IndexedDB cache, this module needed real removal for "users can see and remove downloaded
+  content."
+- `useDownloads.ts` — a download manifest (`localStorage`, small metadata only — the actual
+  content still lives in Pass 10's IndexedDB stores) tracking what's been *explicitly* downloaded,
+  distinct from Pass 10's opportunistic "whatever you happened to browse" caching. `downloadSurah`
+  fetches chapter text (all translations come back in one API response already), optionally loops
+  through every ayah fetching tafsir with limited concurrency (6 at a time — sequential would be
+  slow for long surahs, unlimited-parallel risks hammering the API) with progress reporting, and
+  optionally caches one reciter's full-surah audio file. Every step is wrapped so a failure in one
+  (e.g. audio) never blocks or aborts the rest — matches the doc's "never block reading if a
+  download fails."
+- `useOnlineStatus.ts` + a small offline badge in the app bar (only visible when actually offline)
+  — the doc is explicit that the homepage should get "an offline badge, not a download dashboard."
+- `/downloads` page: storage usage meter (`navigator.storage.estimate()`), the download form
+  (surah picker, tafsir toggle with a warning about request volume, optional reciter), the list of
+  downloaded surahs with size/contents and per-item removal, and a separate "clear temporary
+  cache" action.
+- **The temporary-vs-downloaded cache distinction the spec asks for** ("separate 'clear temporary
+  cache' and 'delete downloads' controls") needed a real design decision: downloaded audio is
+  cached into its own `quran-downloads-audio-cache` (`Cache Storage` API, opened directly), kept
+  separate from Pass 1/10's opportunistic `quran-audio-cache`. "Clear temporary cache" only ever
+  deletes the SW's opportunistic caches — it cannot touch anything a user explicitly downloaded,
+  which was the actual point of asking for the distinction.
+
+**Two real bugs found during verification, both through actually driving the download end-to-end,
+not by inspection:**
+- **CORS bug, would have silently produced empty "downloads":** the chapter-audio URL scheme is
+  `github.com/.../raw/...`, which 302-redirects to `raw.githubusercontent.com`. The *redirect
+  response itself* sends a malformed empty `Access-Control-Allow-Origin` header — even though the
+  final destination is properly CORS-enabled, a browser fetch in default `cors` mode is rejected
+  outright by the broken intermediate header, so `cache.add(audioUrl)` failed for every single
+  audio download. Fixed by fetching with `{ mode: "no-cors" }` instead: the resulting opaque
+  response can still be cached and played back via `<audio>` (which doesn't need CORS-readable
+  bytes, unlike `fetch()`-then-read use cases), which is exactly what this needs.
+- **Silent lie in the manifest:** the original code recorded `reciterName`/`audioUrl` in the
+  downloaded-surah entry *unconditionally* whenever a reciter was selected — including when the
+  `cache.add()` call above was failing (caught by a defensive try/catch that swallowed the error,
+  so the download "succeeded" from the manifest's point of view while the audio silently wasn't
+  actually cached). Fixed alongside the CORS fix: those fields are now only set after the cache
+  write genuinely succeeds, so the UI can't claim audio is available offline when it isn't.
+
+Verified with `npm run build` (clean), direct SSR `curl` checks of `/downloads`, `/surah/1`, `/`
+(no regression of the Pass 11 SSR-crash class), and a full Puppeteer session against the
+production build: downloaded Surah 1 with tafsir and audio both enabled, confirmed via direct
+IndexedDB/Cache Storage inspection that the chapter, all 7 ayahs of tafsir, and the audio file
+(post-fix: cache entry count 1, ~9.4MB, matching a real audio file — pre-fix it was ~230KB with
+zero cache entries, i.e. the CORS failure) were genuinely present; confirmed the storage meter
+reflected real usage; removed the download and confirmed all three (manifest, IndexedDB, Cache
+Storage) were fully and correctly cleaned up. Puppeteer installed with `--no-save` for this check
+only and removed afterward.
+
+**Not done (flagged, not required by this pass):** a UI for browsing/selecting *which* Tafsir
+authors to download (currently always downloads all 3, since a single tafsir fetch already returns
+all of them together — matches Pass 7's endpoint shape); download cancellation mid-progress.

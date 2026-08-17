@@ -315,6 +315,10 @@ export const usePrayerStore = defineStore("prayer", () => {
     return data.value?.data?.timings?.Fajr;
   });
 
+  const imsakTime = computed(() => {
+    return data.value?.data?.timings?.Imsak;
+  });
+
   const iftarTime = computed(() => {
     return data.value?.data?.timings?.Maghrib;
   });
@@ -383,6 +387,7 @@ export const usePrayerStore = defineStore("prayer", () => {
     isRamadan,
     ramadanDay,
     suhoorTime,
+    imsakTime,
     iftarTime,
     iftarCountdown,
 

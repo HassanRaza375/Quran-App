@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-13 (Pass 15)._
+_Living document, updated after each work pass. Last updated: 2026-08-17 (Pass 16)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -21,7 +21,8 @@ Planner — first module from the new feature roadmap doc) ✅ shipped — see �
 Collections & Study Library — §4.4, second module) ✅ shipped — see §15. Pass 14 (Offline &
 Download Manager — §4.5, third module) ✅ shipped — see §16. Pass 15 (Advanced Search &
 Discovery — §4.6, fourth module; also fixed a real pre-existing CORS bug affecting the Juz
-feature) ✅ shipped — see §17. Account/Cloud Sync (§4.1)
+feature) ✅ shipped — see §17. Pass 16 (Ramadan Mode — §4.7, fifth module) ✅ shipped — see §18.
+Account/Cloud Sync (§4.1)
 and True Background Push (§4.3) are explicitly deferred at the user's direction — both need
 server-side infrastructure (a database for user data / push subscriptions, in Push's case also a
 cron scheduler) that hasn't been committed to yet.
@@ -833,3 +834,95 @@ history persists. Puppeteer installed with `--no-save` for this check only and r
 
 **Not done (flagged, not required by this pass):** cloud-indexed search across personal notes
 (doc's own note: "if cloud search is implemented" — blocked on the deferred Account/Sync module).
+
+---
+
+## 18. Pass 16 — Ramadan Mode (§4.7), the fifth roadmap module
+
+Continued through the roadmap doc in document order (§4.1/§4.3 already skipped for infra reasons).
+The app already had a bare-bones "Ramadan panel" on Home since Pass 1 (day counter, Suhoor/Iftar,
+Iftar countdown, gated on `prayer.isRamadan`) — this pass upgraded that into the full module the
+spec describes: fasting tracker, a Ramadan Khatmah goal, daily Dua/Ayah reflection, a Laylat
+al-Qadr reminder area, and a manual start-date override, while keeping Home itself lightweight per
+the doc's "contextual hero card, not a dashboard" rule.
+
+**Investigated first, not assumed:** how Hijri/Ramadan detection already worked. `prayer.js`'s
+`isRamadan`/`ramadanDay` computeds (from the AlAdhan API's `date.hijri.month.number === 9`) already
+correctly detect Ramadan — no new detection logic was needed. Suhoor/Iftar were already just Fajr/
+Maghrib read off the same timings object the main prayer schedule uses (no duplicate fetch);
+`Imsak` was available in the same API response but never read, so that was added as its own field
+rather than continuing to imply Suhoor-end and Imsak are the same instant. `useReadingGoals`'s
+existing `"finish-by-date"` goal type needed no special-casing for a Khatmah — creating one with
+`targetDate` = estimated end of Ramadan and a `"Ramadan Khatmah"` label reuses the whole
+CRUD/streak/pace system as-is.
+
+**Shipped:**
+- `app/composables/useRamadan.ts` — new composable, `$storage`-backed (`quran:ramadan:v1`,
+  following the same `load()`/`persist()` pattern as `useReadingGoals`/`useBookmarks`/`useLibrary`):
+  - **Start-date override**: `isRamadan` from the prayer store is calculated, not locally
+    announced — some users' mosque/authority will differ by a day. `setStartOverride(dateKey)` lets
+    a user say "Ramadan actually started on X for me," active for a 30-day window so it doesn't
+    expire a day early on a 30-day month. `isRamadanActive`/`ramadanDay` prefer the override when
+    set, falling back to the AlAdhan-calculated values otherwise — used everywhere instead of
+    reading `prayer.isRamadan`/`prayer.ramadanDay` directly, so both Home and the new hub page stay
+    in sync with whichever source is authoritative.
+  - **Fasting tracker**: per-day status (`fasted`/`missed`/`planned`) keyed by local date (not
+    UTC — same `toDateKey`/`parseDateKey` convention as `useReadingGoals`, avoiding the exact class
+    of timezone bug fixed in Pass 6/12), a streak computed the same way as the reading streak, and
+    stats (fasted/missed/planned counts for the current Ramadan). Deliberately local-only with no
+    server sync — matches the spec's "optional and private."
+  - `createRamadanKhatmah()` — thin wrapper around `useReadingGoals().createGoal()` with
+    `type: "finish-by-date"`, target date = estimated end of Ramadan (assumes a 30-day month since
+    the real length isn't knowable in advance; labeled "estimated" everywhere it's shown in the UI).
+- `app/utils/ramadanContent.js` — a small static, non-authoritative content set: 5 short duas
+  (Arabic + translation + hadith/Qur'an reference) rotated one-per-day by Ramadan day number, and
+  the 5 odd-numbered last-ten-nights dates for Laylat al-Qadr with an explicit disclaimer that the
+  exact night isn't specified and the shown day is calculated, not locally announced — matching the
+  doc's "do not present religious/legal rulings as authoritative app-generated advice" principle.
+- `app/pages/ramadan/index.vue` — new module hub: day-counter hero (Imsak/Suhoor/Iftar), the
+  fasting tracker (tap-to-cycle 7-day strip + "plan tomorrow" action), the Khatmah card (create, or
+  show live progress via the same `useGoalStats` the Goals page uses), today's Dua card, the
+  existing `<LazyServicesAyahOfDay>` component reused for the "daily Ayah" half of the spec's
+  "Daily Dua/Ayah card" requirement, a Laylat al-Qadr card that highlights itself on a matching
+  night, a link to the full Islamic Calendar, and the start-date-override control (always visible,
+  not just during Ramadan, so it can be set in advance). Shows an honest "It isn't Ramadan right
+  now" state (with the override control still available) outside the month, instead of an empty
+  page.
+- `prayer.js` gained `imsakTime` (was fetched but unused); nav drawer gained a "Ramadan Mode" entry.
+- **Home**: the existing Ramadan panel was enriched in place (same conditional slot, per the doc's
+  "contextual card, don't add a permanent new row") rather than replaced — added the Imsak card
+  alongside Suhoor/Iftar, switched its `v-if` from `prayer.isRamadan` to `useRamadan()`'s
+  override-aware `isRamadanActive`/`ramadanDay`, and made the whole card clickable through to
+  `/ramadan` for the fuller experience (fasting tracker, Khatmah, Dua, Laylat al-Qadr) — kept
+  deliberately compact on Home itself, per the spec's explicit "do not put a giant calendar on the
+  homepage."
+
+**Real bug found in verification, environment-specific (not app code):** this sandbox's outbound
+network cannot reach `api.aladhan.com` (confirmed directly with `curl --max-time 8`, connection
+timeout) — so in every Puppeteer session run here, `prayer.pending` never resolves, and Home's
+Ramadan card (gated on `!prayer.pending`, the same pre-existing gate the original Pass-1 panel
+already had) never renders even once `isRamadanActive` correctly flips true from a manually-set
+override. Confirmed this is a network artifact and not a regression by checking the `/ramadan` hub
+page, which has no such gate — it rendered `isRamadanActive`-driven content correctly and
+immediately. In a normal deployment with real network access, `prayer.pending` resolves in a
+second or two as it always has.
+
+Verified with `npm run build` (clean), direct SSR `curl` checks of `/`, `/ramadan`, `/goals`,
+`/surah/1`, `/calender`, `/bookmarks`, `/downloads`, `/search` (all 200, no regression of the Pass
+11 SSR-crash class), and a real Puppeteer/Chrome session against the production build: confirmed
+the honest "not Ramadan right now" state before any override; set a start-date override via the
+native date input (dispatching real `input`/`change` events, not synthetic value assignment on a
+Vue-bound element) and confirmed the hub page immediately showed the correct day count, fasting
+tracker, and Khatmah card; tapped a fasting-day cell through a full fasted → missed → clear cycle,
+confirmed via the rendered icon class at each step; created a Ramadan Khatmah and confirmed via
+direct `localStorage` inspection that it landed in `useReadingGoals`' own store under the
+`"Ramadan Khatmah"` label (i.e. genuinely reusing that system, not a parallel one); reloaded the
+page and confirmed the override and fasting log both survive a real navigation, not just SPA state.
+Puppeteer's full Chromium download failed in this sandbox (network-restricted), so verification
+used `puppeteer-core` driving the machine's already-installed Chrome instead — installed with
+`--no-save` and removed afterward, same as every prior pass's Puppeteer usage.
+
+**Not done (flagged, not required by this pass):** exporting fasting/Khatmah history anywhere
+outside this device (blocked on the deferred Account/Sync module, same as Notes/Collections in
+Pass 13); a full "sharing a Khatmah as a progress image" per the roadmap doc's own "later" note on
+that feature.

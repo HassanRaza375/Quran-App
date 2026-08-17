@@ -53,14 +53,14 @@
     </v-row>
 
     <!-- 🌙 Ramadan Timings -->
-    <v-row v-if="prayer.isRamadan && !prayer.pending" class="mb-6">
+    <v-row v-if="isRamadanActive && !prayer.pending" class="mb-6">
       <v-col cols="12">
-        <v-card rounded="xl" elevation="10" class="ramadan-card pa-5">
+        <v-card rounded="xl" elevation="10" class="ramadan-card pa-5" @click="router.push('/ramadan')" style="cursor: pointer">
           <div class="d-flex align-center justify-space-between mb-4">
             <div>
               <div class="text-overline">Ramadan</div>
               <div class="text-h6 font-weight-bold">
-                🌙 Day {{ prayer.ramadanDay }}
+                🌙 Day {{ ramadanDay }}
               </div>
             </div>
 
@@ -68,23 +68,34 @@
           </div>
 
           <v-row dense>
-            <!-- Suhoor -->
-            <v-col cols="6">
+            <!-- Imsak -->
+            <v-col cols="4">
               <v-card class="glass pa-3 text-center" rounded="lg">
-                <v-icon size="26" color="teal">mdi-weather-night</v-icon>
+                <v-icon size="24" color="indigo">mdi-weather-night-partly-cloudy</v-icon>
+                <div class="text-caption mt-1">Imsak</div>
+                <div class="text-subtitle-1 font-weight-bold">
+                  {{ format12h(prayer.imsakTime) }}
+                </div>
+              </v-card>
+            </v-col>
+
+            <!-- Suhoor -->
+            <v-col cols="4">
+              <v-card class="glass pa-3 text-center" rounded="lg">
+                <v-icon size="24" color="teal">mdi-weather-night</v-icon>
                 <div class="text-caption mt-1">Suhoor Ends</div>
-                <div class="text-h6 font-weight-bold">
+                <div class="text-subtitle-1 font-weight-bold">
                   {{ format12h(prayer.suhoorTime) }}
                 </div>
               </v-card>
             </v-col>
 
             <!-- Iftar -->
-            <v-col cols="6">
+            <v-col cols="4">
               <v-card class="glass pa-3 text-center" rounded="lg">
-                <v-icon size="26" color="orange">mdi-weather-sunset-down</v-icon>
+                <v-icon size="24" color="orange">mdi-weather-sunset-down</v-icon>
                 <div class="text-caption mt-1">Iftar</div>
-                <div class="text-h6 font-weight-bold">
+                <div class="text-subtitle-1 font-weight-bold">
                   {{ format12h(prayer.iftarTime) }}
                 </div>
               </v-card>
@@ -97,6 +108,10 @@
             <div class="text-h5 font-weight-bold gradient-text">
               {{ prayer.iftarCountdown }}
             </div>
+          </div>
+
+          <div class="text-caption text-center mt-3 text-grey-lighten-1">
+            Tap for fasting tracker, Khatmah goal & more →
           </div>
         </v-card>
       </v-col>
@@ -239,6 +254,7 @@
 const prayer = usePrayerStore();
 const { progress: readingProgress, percent: readingPercent, load: loadReadingProgress } = useReadingProgress();
 const { activeGoal, todayCount: goalTodayCount, streak: goalStreak, load: loadGoals, useGoalStats } = useReadingGoals();
+const { isRamadanActive, ramadanDay, load: loadRamadan } = useRamadan();
 const router = useRouter();
 
 const { progressPercent: goalProgressPercent, adjustedDailyTarget: goalDailyTarget, isBehindPace: goalIsBehindPace } =
@@ -248,6 +264,7 @@ onMounted(() => {
   prayer.init();
   loadReadingProgress();
   loadGoals();
+  loadRamadan();
 });
 
 const continueReading = () => {

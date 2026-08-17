@@ -72,3 +72,35 @@ body {
 .v-theme--dark .translation-text {
   opacity: 0.9;
 }
+
+/* ===============================
+   Accessibility preferences (Settings → Accessibility)
+   Applied via data-* attributes set on <html> by useAccessibilityPrefs,
+   client-side only — same after-mount pattern used for theme in Pass 8,
+   to avoid an SSR/client class mismatch.
+================================= */
+
+:root[data-reduced-motion="true"] *,
+:root[data-reduced-motion="true"] *::before,
+:root[data-reduced-motion="true"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+:root[data-large-touch="true"] .v-btn {
+  min-height: 44px !important;
+  min-width: 44px !important;
+}
+
+:root[data-high-contrast="true"] .v-card {
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.35) !important;
+}
+
+:root[data-high-contrast="true"] .text-medium-emphasis,
+:root[data-high-contrast="true"] .text-caption,
+:root[data-high-contrast="true"] .text-grey,
+:root[data-high-contrast="true"] .text-grey-lighten-1 {
+  opacity: 1 !important;
+}

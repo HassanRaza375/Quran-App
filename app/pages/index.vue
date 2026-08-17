@@ -19,6 +19,11 @@
               <div class="text-subtitle-2 text-grey">
                 {{ prayer.data?.data?.date?.readable }}
               </div>
+
+              <v-chip v-if="todaysIslamicEvent" size="small" color="amber" variant="tonal" class="mt-2">
+                <v-icon start size="16">{{ todaysIslamicEvent.icon }}</v-icon>
+                {{ todaysIslamicEvent.name }}
+              </v-chip>
             </v-col>
 
             <!-- RIGHT -->
@@ -188,6 +193,22 @@
       </v-col>
     </v-row>
 
+    <!-- Next Hifz review (only shown when something's actually due) -->
+    <v-row v-if="nextHifzDue" class="mb-6">
+      <v-col cols="12">
+        <v-card rounded="xl" elevation="10" class="pa-5 hifz-card-modern" @click="router.push('/hifz')" style="cursor: pointer">
+          <div class="d-flex align-center justify-space-between">
+            <div>
+              <div class="text-overline text-grey-lighten-1">Hifz</div>
+              <div class="text-h6 font-weight-bold">Next review: {{ nextHifzDue.title }}</div>
+              <div class="text-caption text-grey-lighten-1">{{ hifzDueCount }} plan{{ hifzDueCount === 1 ? "" : "s" }} due</div>
+            </div>
+            <v-icon size="32" color="teal">mdi-brain</v-icon>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
     <lazy-services-ayah-of-day />
 
     <!-- Resume Reading -->
@@ -255,7 +276,17 @@ const prayer = usePrayerStore();
 const { progress: readingProgress, percent: readingPercent, load: loadReadingProgress } = useReadingProgress();
 const { activeGoal, todayCount: goalTodayCount, streak: goalStreak, load: loadGoals, useGoalStats } = useReadingGoals();
 const { isRamadanActive, ramadanDay, load: loadRamadan } = useRamadan();
+const { dueQueue: hifzDueQueue, load: loadHifz } = useHifz();
 const router = useRouter();
+
+const nextHifzDue = computed(() => hifzDueQueue.value[0] ?? null);
+const hifzDueCount = computed(() => hifzDueQueue.value.length);
+
+const todaysIslamicEvent = computed(() => {
+  const hijri = prayer.data?.data?.date?.hijri;
+  if (!hijri) return null;
+  return getIslamicEvent(hijri.month?.number, Number(hijri.day));
+});
 
 const { progressPercent: goalProgressPercent, adjustedDailyTarget: goalDailyTarget, isBehindPace: goalIsBehindPace } =
   useGoalStats(activeGoal);
@@ -265,6 +296,7 @@ onMounted(() => {
   loadReadingProgress();
   loadGoals();
   loadRamadan();
+  loadHifz();
 });
 
 const continueReading = () => {
@@ -505,6 +537,11 @@ const continueReading = () => {
 .resume-btn {
   font-weight: 600;
   letter-spacing: 0.4px;
+}
+
+.hifz-card-modern {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 
 .ramadan-card {

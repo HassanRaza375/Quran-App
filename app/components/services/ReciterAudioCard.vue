@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-const props = defineProps({ reciter: Object });
+const props = defineProps({ reciter: Object, surahNo: Number, surahName: String });
 
 const { play, pause, seek, playing, loading, currentUrl, progress, duration } =
   useAudioPlayer();
@@ -47,7 +47,13 @@ const onSeek = (val) => {
 
 const toggle = () => {
   if (isPlaying.value) pause();
-  else play(props.reciter.url);
+  else
+    play(props.reciter.url, {
+      type: "surah",
+      surahNo: props.surahNo,
+      title: props.surahName ?? (props.surahNo ? `Surah ${props.surahNo}` : "Quran Audio"),
+      subtitle: props.reciter.reciter,
+    });
 };
 </script>
 <style scoped>

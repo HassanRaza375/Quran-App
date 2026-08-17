@@ -1,7 +1,7 @@
 <script setup>
 const { ayah, loading, fetchAyahOfTheDay } = useAyahOfTheDay();
 const { load, isAyahBookmarked, toggleAyah } = useBookmarks();
-const { copyText } = useCopyAyah();
+const shareOpen = ref(false);
 onMounted(() => {
   load(); // safe even if you already load in layout
   fetchAyahOfTheDay();
@@ -56,15 +56,7 @@ const toggleAyahBookmark = (ayahNo) => {
                 :loading="loading"
                 @click="fetchAyahOfTheDay(true)"
               />
-              <v-btn
-                icon="mdi-share-variant-outline"
-                variant="text"
-                @click="
-                  copyText(
-                    `${ayah.arabic}\n\n“${ayah.urdu}”\n\nSurah ${ayah.surah_name} • ${ayah.surah_number}:${ayah.ayah_number}`
-                  )
-                "
-              />
+              <v-btn icon="mdi-share-variant-outline" variant="text" @click="shareOpen = true" />
               <v-btn
                 v-if="ayah"
                 :icon="
@@ -82,6 +74,17 @@ const toggleAyahBookmark = (ayahNo) => {
       </v-card>
     </v-col>
   </v-row>
+
+  <AyahShareCard
+    v-if="ayah"
+    v-model="shareOpen"
+    :arabic="ayah.arabic"
+    :translation="ayah.urdu"
+    translation-label="Urdu"
+    :surah-name="ayah.surah_name"
+    :surah-no="ayah.surah_number"
+    :ayah-no="ayah.ayah_number"
+  />
 </template>
 <style scoped>
 .ayah-arabic-modern {

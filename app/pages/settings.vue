@@ -87,6 +87,125 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <!-- Reading Preferences -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4" rounded="xl">
+          <div class="text-subtitle-1 font-weight-bold mb-3">Reading Preferences</div>
+
+          <v-select
+            label="Default verse display"
+            :items="verseDisplayOptions"
+            v-model="preferredVerseDisplay"
+            item-title="title"
+            item-value="value"
+            class="mb-2"
+          />
+          <v-select
+            label="Default tafsir source"
+            :items="tafsirAuthorOptions"
+            v-model="preferredTafsirAuthor"
+            clearable
+            hint="Used the first time you open a tafsir panel on a fresh ayah"
+            persistent-hint
+          />
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Audio Defaults -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4" rounded="xl">
+          <div class="text-subtitle-1 font-weight-bold mb-3">Audio Defaults</div>
+
+          <v-select
+            label="Preferred reciter"
+            :items="reciters"
+            v-model="preferredReciter"
+            item-title="reciter"
+            item-value="id"
+            class="mb-2"
+            return-object
+          />
+
+          <div class="d-flex align-center justify-space-between flex-wrap ga-2 mb-2">
+            <span class="text-body-2">Playback speed</span>
+            <v-btn-toggle v-model="playbackRate" mandatory density="comfortable" color="primary">
+              <v-btn v-for="r in [0.75, 1, 1.25, 1.5, 2]" :key="r" :value="r" size="small">{{ r }}x</v-btn>
+            </v-btn-toggle>
+          </div>
+
+          <v-switch
+            v-model="autoAdvance"
+            label="Auto-play the next surah when one finishes"
+            inset
+            color="primary"
+            hide-details
+          />
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Accessibility -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4" rounded="xl">
+          <div class="text-subtitle-1 font-weight-bold mb-3">Accessibility</div>
+
+          <v-switch v-model="reducedMotion" label="Reduce motion" inset color="primary" hide-details class="mb-2" />
+          <v-switch v-model="highContrast" label="High contrast text & borders" inset color="primary" hide-details class="mb-2" />
+          <v-switch v-model="largeTouchTargets" label="Larger touch targets" inset color="primary" hide-details class="mb-4" />
+
+          <div class="text-body-2 mb-1">Arabic text size (Surah reader)</div>
+          <v-slider
+            v-model="arabicFontScale"
+            :min="0.8"
+            :max="1.5"
+            :step="0.1"
+            thumb-label
+            color="primary"
+          />
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Data & Privacy -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4" rounded="xl">
+          <div class="text-subtitle-1 font-weight-bold mb-1">Data & Privacy</div>
+          <div class="text-caption text-medium-emphasis mb-3">
+            Everything in this app is stored locally on this device — nothing is uploaded anywhere.
+          </div>
+
+          <div class="d-flex flex-wrap ga-2">
+            <v-btn variant="tonal" prepend-icon="mdi-download-outline" @click="exportData">
+              Export my data
+            </v-btn>
+            <v-btn variant="tonal" color="error" prepend-icon="mdi-delete-outline" @click="clearDataDialog = true">
+              Clear all local data
+            </v-btn>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-dialog v-model="clearDataDialog" max-width="400">
+      <v-card rounded="lg">
+        <v-card-title>Clear all local data?</v-card-title>
+        <v-card-text>
+          This removes bookmarks, notes, reading goals, downloads, Ramadan tracking, and every other
+          preference stored by this app on this device. This can't be undone.
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn variant="text" @click="clearDataDialog = false">Cancel</v-btn>
+          <v-btn color="error" variant="flat" @click="clearAllData">Clear everything</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -232,4 +351,105 @@ function applyTheme(mode) {
     theme.global.name.value = mode;
   }
 }
+
+/* ---------------- Reading preferences ---------------- */
+const verseDisplayOptions = [
+  { title: "Arabic (primary)", value: "arabic1" },
+  { title: "Arabic (alternate script)", value: "arabic2" },
+  { title: "English", value: "english" },
+  { title: "Urdu", value: "urdu" },
+  { title: "Bengali", value: "bengali" },
+];
+const tafsirAuthorOptions = ["Ibn Kathir", "Maarif Ul Quran", "Tazkirul Quran"];
+
+const preferredVerseDisplay = ref("arabic1");
+const preferredTafsirAuthor = ref(null);
+
+watch(preferredVerseDisplay, (v) => localStorage.setItem("preferredVerseDisplay", v));
+watch(preferredTafsirAuthor, (v) => {
+  if (v) localStorage.setItem("tafsirDefaultAuthor", v);
+  else localStorage.removeItem("tafsirDefaultAuthor");
+});
+
+/* ---------------- Audio defaults ---------------- */
+const { reciters } = useReciters();
+const { selected: selectedReciter, setReciter, loadSaved: loadSavedReciter } = useReciter();
+const { playbackRate: playerPlaybackRate, setPlaybackRate, autoAdvance: playerAutoAdvance, toggleAutoAdvance } =
+  useAudioPlayer();
+
+// Only the name is meaningful as a stored "preference" — actual playback
+// URLs are per-surah and get re-resolved by name wherever audio is played
+// (see the matching comment in surah/[id].vue's reciter watcher).
+const preferredReciter = computed({
+  get: () => reciters.find((r) => r.reciter === selectedReciter.value?.reciter) ?? null,
+  set: (val) => setReciter({ reciter: val.reciter }),
+});
+const playbackRate = computed({
+  get: () => playerPlaybackRate.value,
+  set: (val) => setPlaybackRate(val),
+});
+const autoAdvance = computed({
+  get: () => playerAutoAdvance.value,
+  set: (val) => {
+    if (val !== playerAutoAdvance.value) toggleAutoAdvance();
+  },
+});
+
+/* ---------------- Accessibility ---------------- */
+const { prefs: accessibilityPrefs, load: loadAccessibilityPrefs, setPref: setAccessibilityPref } =
+  useAccessibilityPrefs();
+
+const reducedMotion = computed({
+  get: () => accessibilityPrefs.value.reducedMotion,
+  set: (v) => setAccessibilityPref("reducedMotion", v),
+});
+const highContrast = computed({
+  get: () => accessibilityPrefs.value.highContrast,
+  set: (v) => setAccessibilityPref("highContrast", v),
+});
+const largeTouchTargets = computed({
+  get: () => accessibilityPrefs.value.largeTouchTargets,
+  set: (v) => setAccessibilityPref("largeTouchTargets", v),
+});
+const arabicFontScale = computed({
+  get: () => accessibilityPrefs.value.arabicFontScale,
+  set: (v) => setAccessibilityPref("arabicFontScale", v),
+});
+
+/* ---------------- Data & privacy ---------------- */
+const clearDataDialog = ref(false);
+
+function exportData() {
+  const dump = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    try {
+      dump[key] = JSON.parse(localStorage.getItem(key));
+    } catch {
+      dump[key] = localStorage.getItem(key);
+    }
+  }
+  const blob = new Blob([JSON.stringify(dump, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `quran-app-data-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function clearAllData() {
+  localStorage.clear();
+  clearDataDialog.value = false;
+  location.reload();
+}
+
+onMounted(() => {
+  preferredVerseDisplay.value = localStorage.getItem("preferredVerseDisplay") || "arabic1";
+  preferredTafsirAuthor.value = localStorage.getItem("tafsirDefaultAuthor") || null;
+  loadSavedReciter();
+  loadAccessibilityPrefs();
+});
 </script>

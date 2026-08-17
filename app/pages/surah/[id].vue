@@ -23,30 +23,43 @@
             </v-chip>
           </div>
 
-          <v-menu>
-            <template #activator="{ props }">
-              <v-btn
-                v-bind="props"
-                prepend-icon="mdi-account-voice"
-                rounded="xl"
-                variant="tonal"
-                color="primary"
-                :loading="loading"
-              >
-                {{ selected?.reciter || "Choose Reciter" }}
-              </v-btn>
-            </template>
+          <div class="d-flex align-center ga-2">
+            <v-btn
+              v-if="activeReciter"
+              icon
+              size="small"
+              variant="tonal"
+              color="primary"
+              :loading="loading"
+              @click="toggleAudio"
+            >
+              <v-icon>{{ isThisSurahPlaying ? "mdi-pause" : "mdi-play" }}</v-icon>
+            </v-btn>
 
-            <v-list>
-              <v-list-item
-                v-for="rec in reciters"
-                :key="rec.url"
-                @click="setReciter(rec)"
-              >
-                <v-list-item-title>{{ rec.reciter }}</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
+            <v-menu>
+              <template #activator="{ props }">
+                <v-btn
+                  v-bind="props"
+                  prepend-icon="mdi-account-voice"
+                  rounded="xl"
+                  variant="tonal"
+                  color="primary"
+                >
+                  {{ selected?.reciter || "Choose Reciter" }}
+                </v-btn>
+              </template>
+
+              <v-list>
+                <v-list-item
+                  v-for="rec in reciters"
+                  :key="rec.url"
+                  @click="setReciter(rec)"
+                >
+                  <v-list-item-title>{{ rec.reciter }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </div>
         </v-sheet>
       </v-col>
     </v-row>
@@ -115,13 +128,7 @@
                 icon="mdi-share-variant-outline"
                 variant="text"
                 class="share--btn"
-                @click="
-                  copyText(
-                    `${item}”\n\nSurah ${data?.surahNameTranslation} • ${
-                      data?.surahNo
-                    }:${index + 1}`
-                  )
-                "
+                @click="shareAyahNo = index + 1"
               />
               <v-btn
                 class="verse--play"
@@ -288,48 +295,25 @@
             </v-expand-transition>
           </div>
         </v-sheet>
-        <v-slide-y-transition>
-          <v-sheet v-if="activeReciter" class="reader-player" elevation="10">
-            <div class="d-flex align-center px-4 py-2">
-              <div class="flex-grow-1">
-                <div class="text-caption">
-                  Surah {{ data?.surahNameTranslation }}
-                  <span>{{ currentTimeLabel }} / {{ durationLabel }}</span>
-                </div>
-                <div class="font-weight-medium">
-                  {{ activeReciter?.reciter }}
-                </div>
-              </div>
-              <div class="d-flex align-center">
-                <!-- {{ remainingLabel }} -->
-                <span class="d-flex align-center me-2">{{
-                  currentTimeLabel
-                }}</span>
-                <v-btn icon @click="toggleAudio" :loading="loading">
-                  <v-icon>
-                    {{ isThisSurahPlaying ? "mdi-pause" : "mdi-play" }}
-                  </v-icon>
-                </v-btn>
-              </div>
-            </div>
-
-            <v-slider
-              :model-value="progress"
-              :max="duration || 0"
-              step="1"
-              hide-details
-              @update:model-value="seek"
-            />
-          </v-sheet>
-        </v-slide-y-transition>
       </v-col>
     </v-row>
+
+    <AyahShareCard
+      v-if="shareAyahNo && data"
+      :model-value="!!shareAyahNo"
+      @update:model-value="(v) => { if (!v) shareAyahNo = null }"
+      :arabic="data.arabic1?.[shareAyahNo - 1]"
+      :translation="data.english?.[shareAyahNo - 1]"
+      translation-label="English"
+      :surah-name="data.surahNameTranslation"
+      :surah-no="chapterNo"
+      :ayah-no="shareAyahNo"
+    />
   </v-container>
 </template>
 
 <script setup>
 definePageMeta({ layout: "reader" });
-const { copyText } = useCopyAyah();
 const { getChapter } = useChapters();
 const { selected, setReciter } = useReciter();
 const route = useRoute();
@@ -420,6 +404,11 @@ onBeforeUnmount(() => {
 const translations = ref(["arabic1", "arabic2", "english", "bengali", "urdu"]);
 const selectedType = ref("arabic1");
 
+onMounted(() => {
+  const preferred = localStorage.getItem("preferredVerseDisplay");
+  if (preferred && translations.value.includes(preferred)) selectedType.value = preferred;
+});
+
 const typeObject = computed(() => ({
   arabic1: data.value?.arabic1 ?? [],
   arabic2: data.value?.arabic2 ?? [],
@@ -435,6 +424,7 @@ const reciters = computed(() =>
 
 const setTranslation = (type) => {
   selectedType.value = type;
+  localStorage.setItem("preferredVerseDisplay", type);
 };
 
 // audio playing
@@ -446,7 +436,13 @@ const toggleAudio = () => {
   if (!activeReciter.value) return;
 
   if (isThisSurahPlaying.value) pause();
-  else play(activeReciter.value.url);
+  else
+    play(activeReciter.value.url, {
+      type: "surah",
+      surahNo: chapterNo.value,
+      title: data.value?.surahNameTranslation ?? `Surah ${chapterNo.value}`,
+      subtitle: activeReciter.value.reciter,
+    });
 };
 
 /* ---------- Ayah bookmarks ---------- */
@@ -463,24 +459,30 @@ const isAyahFav = (ayahNo) => {
 const toggleAyahBookmark = (ayahNo) => {
   toggleAyah(chapterNo.value, ayahNo);
 };
+// Re-resolve the picked reciter to *this* surah's audio URL by name every
+// time the reciter list changes (new surah, or data just finished loading).
+// `selected` only carries a URL that's meaningful for whichever surah it
+// was last picked on — reusing it as-is on a different surah would silently
+// play the wrong track. Falls back to the first reciter if there's no
+// remembered pick yet, or the remembered name isn't available here.
 watch(
   reciters,
   (list) => {
     if (!list?.length) return;
-
-    if (!selected.value) {
-      setReciter(list[0]);
-    }
+    const match = selected.value ? list.find((r) => r.reciter === selected.value.reciter) : null;
+    setReciter(match ?? list[0]);
   },
   { immediate: true }
 );
 watch(chapterNo, () => {
   reset();
-  selected.value = null;
 });
-onBeforeRouteLeave(() => {
-  reset();
-});
+// Deliberately no onBeforeRouteLeave reset — audio now persists across
+// navigation via the global AudioMiniPlayer (§4.9), instead of always
+// stopping the moment you leave this page.
+
+// share card
+const shareAyahNo = ref(null);
 
 // verse play
 const { getVerse } = useVerse();
@@ -500,7 +502,12 @@ const playAyah = async (ayahNo) => {
       return;
     }
 
-    await play(audioUrl);
+    await play(audioUrl, {
+      type: "ayah",
+      surahNo: chapterNo.value,
+      title: `${data.value?.surahNameTranslation ?? "Surah " + chapterNo.value} — Ayah ${ayahNo}`,
+      subtitle: "Recitation",
+    });
     playingAyah.value = ayahNo;
   } catch (e) {
     console.error(e);
@@ -737,7 +744,7 @@ watch(chapterNo, () => {
 
 .verse-text {
   font-family: "Amiri Quran", serif;
-  font-size: 2.2rem;
+  font-size: calc(2.2rem * var(--arabic-font-scale, 1));
   line-height: 2.6;
   direction: rtl;
   text-align: justify;
@@ -916,7 +923,7 @@ watch(chapterNo, () => {
   }
 
   .verse-text {
-    font-size: 1.8rem;
+    font-size: calc(1.8rem * var(--arabic-font-scale, 1));
     line-height: 2.4;
   }
 
@@ -924,20 +931,5 @@ watch(chapterNo, () => {
     padding-left: 12px;
     padding-right: 12px;
   }
-}
-.reader-player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(var(--v-theme-surface), 0.98);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(var(--v-theme-on-surface), 0.08);
-  /* Was 999999 — an arbitrary "just in case" value with no real reason to
-     outrank menus/dialogs. This bar can still visually cover ayah content
-     that scrolls into its band (an inherent tradeoff of any fixed bottom
-     bar); a saner z-index doesn't fix that, it just stops this one element
-     from needlessly beating everything else in the app on stacking order. */
-  z-index: 1000;
 }
 </style>

@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-17 (Pass 16)._
+_Living document, updated after each work pass. Last updated: 2026-08-17 (Pass 17)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -21,11 +21,14 @@ Planner — first module from the new feature roadmap doc) ✅ shipped — see �
 Collections & Study Library — §4.4, second module) ✅ shipped — see §15. Pass 14 (Offline &
 Download Manager — §4.5, third module) ✅ shipped — see §16. Pass 15 (Advanced Search &
 Discovery — §4.6, fourth module; also fixed a real pre-existing CORS bug affecting the Juz
-feature) ✅ shipped — see §17. Pass 16 (Ramadan Mode — §4.7, fifth module) ✅ shipped — see §18.
-Account/Cloud Sync (§4.1)
-and True Background Push (§4.3) are explicitly deferred at the user's direction — both need
-server-side infrastructure (a database for user data / push subscriptions, in Push's case also a
-cron scheduler) that hasn't been committed to yet.
+feature) ✅ shipped — see §17. Pass 16 (Ramadan Mode — §4.7, fifth module) ✅ shipped — see §18. Pass 17 (all five remaining
+modules that don't need a server — §4.9 Audio & Reciter Experience, §4.12 Settings/Accessibility,
+§4.8 Hifz Mode, §4.10 Islamic Calendar Events & Personal Reminders, §4.11 Shareable Ayah Cards,
+done together in one pass at the user's request) ✅ shipped — see §19. That leaves only
+Account/Cloud Sync (§4.1) and True Background Push (§4.3) unbuilt — both explicitly deferred at the
+user's direction, both need server-side infrastructure (a database for user data / push
+subscriptions, in Push's case also a cron scheduler) that hasn't been committed to yet. Every other
+module in the roadmap doc is now shipped.
 
 **Correction to Pass 12's record:** Pass 12 stated `.env` "already has real Supabase credentials
 set." That was wrong — only checked that the *keys* `NUXT_PUBLIC_SUPABASE_URL`/`_ANON_KEY` were

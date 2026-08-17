@@ -57,6 +57,7 @@ const sidebarList = computed(() => [
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
   { title: "Reading Goals", icon: "mdi-target", path: "/goals" },
   { title: "Ramadan Mode", icon: "mdi-moon-waning-crescent", path: "/ramadan" },
+  { title: "Hifz Mode", icon: "mdi-brain", path: "/hifz" },
   { title: "Downloads", icon: "mdi-download-outline", path: "/downloads" },
   { title: "Tasbeeh", icon: "mdi-counter", path: "/tasbeeh" },
   { title: "Sajda", icon: "mdi-airbag", path: "/sajda" },

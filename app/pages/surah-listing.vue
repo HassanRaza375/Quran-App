@@ -217,7 +217,13 @@ const toggleSurahAudio = (surah) => {
   if (!url) return;
 
   if (isPlaying(surah)) pause();
-  else play(url);
+  else
+    play(url, {
+      type: "surah",
+      surahNo: surah.surahNo,
+      title: surah.surahNameTranslation ?? `Surah ${surah.surahNo}`,
+      subtitle: selected.value?.reciter,
+    });
 };
 const getSurahUrl = (surah) => {
   if (!selected.value || !surah.audio) return null;

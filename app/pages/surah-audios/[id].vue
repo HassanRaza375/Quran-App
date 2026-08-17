@@ -85,7 +85,11 @@
         v-for="rec in reciters"
         :key="rec.url"
       >
-        <LazyServicesReciterAudioCard :reciter="rec" />
+        <LazyServicesReciterAudioCard
+          :reciter="rec"
+          :surah-no="surahNo"
+          :surah-name="surah?.surahNameTranslation"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -122,6 +126,12 @@ const currentReciter = computed(() =>
 
 const toggle = () => {
   if (playing.value) pause();
-  else if (currentReciter.value) play(currentReciter.value.url);
+  else if (currentReciter.value)
+    play(currentReciter.value.url, {
+      type: "surah",
+      surahNo: surahNo.value,
+      title: surah.value?.surahNameTranslation ?? `Surah ${surahNo.value}`,
+      subtitle: currentReciter.value.reciter,
+    });
 };
 </script>

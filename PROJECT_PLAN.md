@@ -1,6 +1,6 @@
 # Quran App — Project Plan
 
-_Living document, updated after each work pass. Last updated: 2026-08-17 (Pass 17)._
+_Living document, updated after each work pass. Last updated: 2026-08-20 (Pass 18)._
 
 This document is the working plan for turning the app into an installable PWA, fixing first-load
 performance, shipping a real Tasbeeh (dhikr counter) module, completing the Continue Reading /
@@ -28,7 +28,9 @@ done together in one pass at the user's request) ✅ shipped — see §19. That 
 Account/Cloud Sync (§4.1) and True Background Push (§4.3) unbuilt — both explicitly deferred at the
 user's direction, both need server-side infrastructure (a database for user data / push
 subscriptions, in Push's case also a cron scheduler) that hasn't been committed to yet. Every other
-module in the roadmap doc is now shipped.
+module in the original roadmap doc is now shipped. Pass 18 (full Hifz Mode redesign into an
+adaptive practice engine, driven by a separate, much more detailed spec —
+`Hifz_Module_Specification.md`) ✅ shipped — see §20.
 
 **Correction to Pass 12's record:** Pass 12 stated `.env` "already has real Supabase credentials
 set." That was wrong — only checked that the *keys* `NUXT_PUBLIC_SUPABASE_URL`/`_ANON_KEY` were
@@ -929,3 +931,347 @@ used `puppeteer-core` driving the machine's already-installed Chrome instead —
 outside this device (blocked on the deferred Account/Sync module, same as Notes/Collections in
 Pass 13); a full "sharing a Khatmah as a progress image" per the roadmap doc's own "later" note on
 that feature.
+
+---
+
+## 19. Pass 17 — every remaining local-first module, done together (§4.8, §4.9, §4.10, §4.11, §4.12)
+
+Asked to check what was left, then "do the ones which don't need backend." That's five modules:
+§4.9 Audio & Reciter Experience, §4.12 Settings/Personalization/Accessibility, §4.8 Hifz
+(Memorization) Mode, §4.10 Islamic Calendar Events & Personal Reminders, and §4.11 Shareable Ayah
+Cards. Account/Cloud Sync (§4.1) and True Background Push (§4.3) remain the only two modules in
+the whole roadmap doc still unbuilt, both still blocked on server infrastructure that hasn't been
+committed to. Built as one pass instead of five separate ones at the user's explicit request, but
+each module below is scoped and verified independently.
+
+### 19.1 §4.9 Audio & Reciter Experience — ✅ shipped
+
+The core gap: `useAudioPlayer.ts`'s `audio`/`playing`/`currentUrl` state was already global
+(`useState`), but every page that *used* it stopped playback on navigation —
+`surah/[id].vue` had an `onBeforeRouteLeave(() => reset())` specifically to kill it, and no other
+page rendered any player UI at all, so audio was invisible and dead the moment you left whichever
+page started it.
+
+**Shipped:**
+- `useAudioPlayer.ts` extended with: a shared `nowPlaying` metadata ref (`{type, surahNo, title,
+  subtitle}`) so a player UI can show *what's* playing regardless of which page started it;
+  persisted `playbackRate`/`repeatOne`/`autoAdvance` preferences (`quran:audio-prefs:v1`); a
+  `resumeInfo` snapshot written on every `pause` (`quran:audio-resume:v1`) so a full reload doesn't
+  lose the position (in-memory `useState` doesn't survive a real page reload, only client-side
+  route changes — same distinction Pass 10/11 already ran into with IndexedDB/SSR); Media Session
+  API wiring (`navigator.mediaSession.metadata`/`playbackState`, play/pause/seek handlers) so lock
+  screens and hardware media keys work; `playNextInQueue()` for auto-advancing into the next surah
+  when a full-surah track ends and `autoAdvance` is on.
+- New `app/components/audio/AudioMiniPlayer.vue` — a global fixed-bottom mini-player (title,
+  scrubber, time, speed menu, repeat-one, auto-advance, play/pause, close), mounted once in both
+  `default.vue` and `reader.vue` layouts so it's present on every page, not just the surah reader.
+- **Removed** `surah/[id].vue`'s `onBeforeRouteLeave` reset — that was the actual bug; audio now
+  survives client-side navigation like the rest of the app's state does, and the mini-player is
+  what lets you see and control it away from the page that started it. Its old bottom-of-page
+  player bar (the one Pass 11 already knew covered ayah content at some scroll positions) is gone
+  entirely, replaced by the global one.
+- Every existing playback entry point — `surah/[id].vue`'s full-surah toggle, `surah-audios/[id].vue`,
+  `ReciterAudioCard.vue`, `surah-listing.vue`'s per-row play button — now passes `nowPlaying` metadata
+  into `play()` so the mini-player always has a real title, not just a URL.
+- `useReciter().loadSaved()` is now called from both layouts' `onMounted`, so the picked reciter
+  survives across the whole session instead of only within whichever single page called it before.
+
+**Real, pre-existing bug found and fixed in the process:** `surah/[id].vue`'s reciter-list watcher
+only auto-picked a reciter *if none was already selected* (`if (!selected.value) setReciter(list[0])`).
+Combined with `loadSaved()` now restoring a previously-picked reciter *before* this watcher runs, the
+restored `selected.value` — whose `.url` only ever belonged to whatever surah it was picked on
+originally — was being reused as-is on an unrelated surah, meaning the play button would have
+silently tried to play the *wrong surah's* audio file under the right reciter's name. Fixed by
+always re-resolving the reciter by *name* against the current surah's own audio list
+(`list.find(r => r.reciter === selected.value?.reciter) ?? list[0]`) every time the surah changes —
+the name is the durable "preference," the URL is only ever meaningful per-surah. This also made the
+Settings module's "preferred reciter" picker (§19.2) correct by construction, since it only ever
+needs to store the name.
+
+Verified with `npm run build` (clean), SSR `curl` checks of every touched route, and a Puppeteer
+session against the production build: started playback from `/surah-audios/1` (confirmed mini-player
+appears there immediately with correct title/reciter), then triggered a **real Vue Router SPA
+navigation** (clicked the nav-drawer's Home link, not `page.goto` — a full reload would trivially and
+uninterestingly reset in-memory state, same distinction noted in Pass 11/16) and confirmed the
+mini-player persisted on Home with the same metadata. Puppeteer installed with `--no-save` for this
+check only and removed afterward.
+
+### 19.2 §4.12 Settings, Personalization & Accessibility — ✅ shipped
+
+Scoped to genuinely new, additive controls rather than a full migration of every existing
+`localStorage` key into one schema (the spec's "central preferences schema" — real churn risk across
+many files for no functional gain, since every existing key already works correctly where it's read).
+
+**Shipped, all in `settings.vue`, all following the app's existing `localStorage`-per-composable
+conventions:**
+- **Reading Preferences**: a "default verse display" picker was net-new — `selectedType` in
+  `surah/[id].vue` (which of arabic1/arabic2/english/urdu/bengali shows as the main verse text) was
+  never persisted at all before this pass, silently resetting to `arabic1` on every visit even
+  though the *inline per-ayah* translation/tafsir pickers (Pass 7/11) already remembered their last
+  pick. Now persisted under `preferredVerseDisplay`, read on mount, written on every tab change. The
+  default tafsir author picker exposes the same `tafsirDefaultAuthor` key Pass 7 already reads/writes
+  from the surah page, just without requiring a visit there first.
+- **Audio Defaults**: preferred reciter (name-only, per the §19.1 fix above), default playback speed,
+  and an auto-advance-next-surah toggle — all backed directly by `useAudioPlayer`'s own persisted
+  prefs and `useReciter`, so Settings and the mini-player can never disagree about the current state.
+- **Accessibility** (new `useAccessibilityPrefs.ts`, `quran:accessibility:v1`): reduced motion, high
+  contrast, larger touch targets, and an Arabic-text size slider. Applied via `data-*` attributes on
+  `<html>` set client-side *after mount* — the same pattern Pass 8 already established for theme,
+  for the same reason (the server can't know a client's saved preference, so rendering with a guess
+  would just trade one hydration mismatch for another). The reduced-motion toggle also respects the
+  OS-level `prefers-reduced-motion` media query even if the user never touched the in-app switch.
+  Global CSS rules live in `app/assets/css/main.css`; the Arabic font-size control is intentionally
+  scoped to the Surah reader's `.verse-text` (via a `--arabic-font-scale` CSS custom property) rather
+  than attempting to resize every Arabic-script element app-wide, which would have meant touching
+  many unrelated hardcoded font sizes for a much larger, riskier diff.
+- **Data & Privacy**: "Export my data" dumps every `localStorage` key as a downloadable JSON file
+  (client-side `Blob`/`<a download>`, nothing uploaded anywhere); "Clear all local data" wipes
+  `localStorage` after an explicit confirmation dialog and reloads. Both scoped to local-only,
+  matching every other module in this app — there's no account to delete server-side.
+
+Verified with `npm run build` (clean), SSR `curl` of `/settings`, and a Puppeteer session: toggled
+"Reduce motion," confirmed `document.documentElement.dataset.reducedMotion` and the persisted
+`quran:accessibility:v1` blob both updated correctly.
+
+### 19.3 §4.8 Memorization / Hifz Mode — ✅ shipped, new module
+
+Entirely new — no prior Hifz-related code existed anywhere in the repo.
+
+**Shipped:**
+- `useHifz.ts` (`quran:hifz:v1`) — a memorization plan is a Surah + ayah range with its own
+  lightweight SM-2-style spaced-repetition state (`interval`, `ease`, `nextReviewAt`,
+  `lastReviewedAt`, `reviewCount`) flattened onto the plan itself, rather than a separate
+  plans/ranges/review-events table split — reasonable for a `localStorage`-backed local-only
+  implementation, matching the same simplification call Pass 13 made for Notes/Collections. Grading
+  a review "Again" drops the interval back to 1 day and lowers the ease factor (capped); "Good"/"Easy"
+  grow it, and a plan graduates from `learning` to `memorized` once its interval crosses 21 days — a
+  manual "Mark memorized" / "Needs review" override is also available, matching the spec's literal
+  three states.
+- `app/pages/hifz/index.vue` — stats row (due today / memorized / total), a Review Queue (overdue
+  sorted first) where each plan expands to show its ayah range fetched via the *existing*
+  `useChapters()` (so it benefits from Pass 10's IndexedDB cache like everywhere else), with
+  independent show/hide toggles for Arabic and translation (for self-testing recall), a per-ayah
+  "repeat audio" button via `useVerse()` + the shared `useAudioPlayer`, an optional "loop range"
+  toggle that auto-advances through the range's ayahs on natural playback completion (detected via
+  `progress ≈ duration`, not just "playback stopped," so a manual pause doesn't trigger the
+  auto-advance), a debounced mistake-notes field, and the three grading buttons; a plan wizard
+  (Surah picker from `surah.json`, start/end ayah with range validation against that Surah's real
+  ayah count); and an all-plans list with pause/resume/delete.
+- Home gets a "Next review: {plan title}" contextual card, shown only when something is actually
+  due — matching the doc's own suggested homepage copy and its "don't show empty analytics"
+  principle, same conditional pattern as the Goals and Ramadan cards.
+
+Verified with `npm run build` (clean), SSR `curl` checks, and a Puppeteer session against the
+production build: created a plan with the wizard (Surah 1, ayahs 1–5), confirmed it appeared in both
+the Review Queue and All Plans with the correct default state; expanded it and confirmed the Arabic
+and English text rendered from the real chapter fetch; graded it "Good" and confirmed via direct
+`localStorage` inspection that `interval` grew 1→2, `nextReviewAt` advanced by two real days,
+`reviewCount` incremented, and `lastReviewedAt` was set — the SRS math runs correctly end-to-end, not
+just in isolation.
+
+### 19.4 §4.10 Islamic Calendar, Events & Personal Reminders — ✅ shipped
+
+Built on the existing `calender.vue` (Hijri/Gregorian month grid, AlAdhan-backed) rather than a
+parallel page.
+
+**Shipped:**
+- `app/utils/islamicEvents.js` — a static lookup of widely-observed Hijri-calendar dates (Islamic New
+  Year, Ashura, Mawlid, Isra and Mi'raj, the five commonly-cited Laylat al-Qadr nights, start of
+  Ramadan, Eid al-Fitr, start of Hajj, Day of Arafah, Eid al-Adha), matched against each day's
+  already-fetched Hijri month/day — explicitly documented as a calculated reference, not a ruling,
+  since exact observance can differ by local moon-sighting authority (the same caveat Pass 16 already
+  built a real override mechanism for on the Ramadan-start case specifically).
+- `useReminders.ts` (`quran:reminders:v1`) — plain local CRUD for personal reminders (title, date,
+  note, optional yearly recurrence, done flag), following the same `$storage`/`useState` pattern as
+  every other module.
+- `calender.vue` gained: month prev/next navigation (there was previously no way to view any month
+  but the current one at all — a real, if minor, missing feature, not a bug in existing code); an
+  event marker dot on matching day cells plus an "Events This Month" list; a "Personal Reminders"
+  section (add/toggle-done/delete) with a dialog pre-filled from a selected day's date; an
+  "Add reminder for this day" shortcut in the day-detail card.
+- Home shows a small event chip next to the Hijri date **only on a day that actually matches** a
+  known event (e.g. "Day of Ashura") — deliberately not a forward-looking "N days until X" countdown,
+  since accurately projecting a future Hijri date across month boundaries (months alternate 29/30
+  days unpredictably) would need real Hijri calendar data for months not yet fetched, not just
+  arithmetic on today's date; this keeps the homepage claim honest rather than approximating.
+
+**Two real, pre-existing bugs found and fixed while touching this page:** (1) `calendarDays` items
+never had a `date` field at all, yet the template used `:key="day.date"` for the `v-for` and compared
+`selectedDay?.date === day.date` for the "active" highlight — every day silently keyed as `undefined`,
+so Vue could not reliably track day identity and the "selected" highlight was comparing `undefined ===
+undefined` for every cell rather than the clicked one specifically. (2) the `today` CSS class was
+bound to `day.isToday`, a field the mapping function never actually set — today's cell never got its
+outline highlight, ever. Both fixed by adding a real per-day `date` (the Gregorian date string AlAdhan
+already returns) and computing `isToday` by comparing each day's Gregorian date to the real current
+date.
+
+Verified with `npm run build` (clean) and SSR `curl` checks of `/`, `/calender`. The calendar grid
+itself and its month-by-month AlAdhan fetch could not be exercised live in this sandbox (`api.aladhan.com`
+is unreachable from here, the same environment-specific gap noted in Pass 16 — confirmed via direct
+`curl --max-time 8` timeout, not a code issue). The **Personal Reminders** feature has no such
+dependency (it's local-only) and was verified live end-to-end with Puppeteer: added a reminder via
+the dialog, confirmed it rendered in the list and landed correctly in `quran:reminders:v1`.
+
+### 19.5 §4.11 Shareable Ayah / Quote Cards — ✅ shipped
+
+**Shipped:**
+- `useAyahCardImage.ts` — a dependency-free Canvas renderer (1080×1350, four gradient themes matching
+  the app's existing visual language — teal, night-gold, Ramadan purple, light) that draws the Arabic
+  verse (RTL, word-wrapped against measured text width), the translation, and a Surah:ayah reference
+  with attribution. Waits on `document.fonts.ready` first so the custom Amiri Quran/Sansation fonts
+  are actually loaded before text is measured and drawn — skipping that would silently wrap text
+  against fallback-font metrics and mismeasure every line.
+- `app/components/ayah/AyahShareCard.vue` — a dialog with a live canvas preview, theme picker chips,
+  and three actions: Copy Text (verse + translation + reference + a deep link to
+  `/surah/{n}#ayah-{n}`, the same stable link format Pass 4/16 already established), Download Image,
+  and Share — which uses the Web Share API with a real image file when `navigator.canShare({files})`
+  supports it, falls back to a text-only `navigator.share`, and falls back to copy if neither exists.
+  No generated image is ever stored unless the user explicitly downloads/shares it, per the spec.
+- Wired into two places: the Ayah of the Day card's existing share icon (previously copy-text-only,
+  now opens the real card) and every per-ayah share button on the Surah reader (previously also
+  copy-text-only, and — a small correctness fix alongside — used to copy whatever `selectedType`
+  happened to be showing, meaning "share" could silently copy the *English* translation as if it were
+  the Arabic verse if that tab was selected; now always pulls real `arabic1` + `english` regardless of
+  which tab is currently displayed).
+
+**Real bug found and fixed in verification:** the dialog's canvas-drawing `watch()` had no
+`{ immediate: true }`. Because `AyahShareCard` is mounted fresh (`v-if`) each time it's opened, its
+`open` prop starts at `true` from the very first render — a non-immediate watcher never fires on that
+initial state since nothing "changed" from the watcher's point of view, so the canvas was silently
+never drawn on first open (confirmed via `getImageData`: a blank default 300×150 canvas, zero
+non-transparent sampled pixels). Fixed by adding `{ immediate: true }`; confirmed via the same pixel
+check afterward: a real 1080×1350 canvas with drawn content.
+
+Verified with `npm run build` (clean) and a Puppeteer session against the production build: opened
+the share dialog from a Surah-page ayah, confirmed the canvas rendered real (non-blank) pixel data at
+the correct dimensions after the fix.
+
+---
+
+All five modules' `npm run build`s are clean individually and as a final combined build. Every route
+touched across this pass — `/`, `/hifz`, `/calender`, `/settings`, `/surah/1`, `/surah/2`,
+`/surah-audios/1`, `/surah-listing`, plus every previously-existing route — returns 200 via SSR
+`curl` with no `[nuxt] instance unavailable`/hydration-crash markers (the Pass 11 SSR-crash class
+checked for every pass since). Puppeteer (`puppeteer-core`, driving the machine's installed Chrome)
+was installed with `--no-save` for this pass's verification and removed afterward, same as every
+prior pass.
+
+**Not done (out of scope for this pass, both still genuinely blocked on infrastructure, not
+forgotten):** §4.1 Account/Cloud Sync and §4.3 True Background Prayer Push — both need a real
+Supabase project and, for Push specifically, a server-side subscription store, VAPID keys, and a
+cron scheduler. These are now the *only* two unbuilt modules in the entire roadmap document.
+
+---
+
+## 20. Pass 18 — Hifz Mode redesign into an adaptive practice engine (`Hifz_Module_Specification.md`)
+
+A second, much more detailed spec document landed specifically for Hifz — not part of the original
+12-module roadmap doc, and substantially deeper than what Pass 17 shipped. Pass 17's Hifz Mode
+tracked state per **plan** (a whole Surah/ayah range shared one SRS interval); this spec asks for
+state per **individual ayah** and per **ayah-to-ayah transition**, a real Practice/Test distinction,
+progressive hints, weak-item recovery, adaptive daily sessions with resume, and Mastery/Health/
+Activity reporting — effectively a full local-first spaced-repetition practice app for memorization,
+built on top of (not replacing) the shipped foundation.
+
+**Data model (`useHifz.ts`, `quran:hifz:v2`) — rewritten:**
+- `HifzTarget` (Surah + range + daily new-ayah target + daily time goal + `lastPosition`, the
+  progression cursor) replaces the old flat `HifzPlan`.
+- `HifzAyahState` — one record per introduced ayah: `strength` (`not-started → learning → memorized
+  → strong`, with `strong → memorized → weak` regression on retention loss), its own SM-2-lite
+  `interval`/`ease`/`nextReviewAt`, `historicalMistakes` (never decremented — the spec is explicit
+  that history isn't rewritten) alongside a `recentResults` rolling window that drives *current*
+  weakness independently, plus `hintsUsed`/`lastHintLevel` (hint-assisted recall is recorded as
+  weaker evidence than a clean one).
+- `HifzTransitionState` — the same idea one level up: "the user knows ayah 10 and ayah 11
+  individually but can't connect them" is a distinct, separately-tracked failure mode from either
+  ayah's own strength.
+- `HifzActivityDay` — new/revision/recovered-ayah/recovered-transition/assessment counts per day,
+  feeding both the Activity list and the heatmap.
+- **Migration from Pass 17's `quran:hifz:v1`**: runs once, expands each old plan into a target plus
+  per-ayah state across its whole range (seeded from the plan's own interval/ease/`nextReviewAt`,
+  since v1 only tracked at plan granularity — an approximation, not a lossless upgrade, but a
+  reasonable one). **Bug caught in verification and fixed:** the first version derived the migrated
+  `surahName` by regex-stripping the plan's stored title (`"Surah 67: 1-10"` → strip `"Surah 67: "`
+  → whatever's left) — except the *default* title Pass 17 generated for every plan without a custom
+  name was exactly that numbers-only format, so the "surah name" for nearly every real migrated plan
+  would have come out as garbage like `"1-10"` instead of an actual name. Fixed by looking the name
+  up from `surah.json` by `surahNo` instead of parsing the title string at all; confirmed via a
+  seeded-localStorage migration test that it now correctly renders as e.g. "The Sovereignty" for a
+  migrated Surah 67 plan.
+- **Revision-first backoff**, per the spec's §28: new-ayah introduction pressure for a target
+  automatically drops (half rate at 1-2 weak items, zero at 3+) rather than always introducing the
+  full daily quota regardless of how much existing material is already struggling.
+
+**Session engine (`useHifzSession.ts`, `quran:hifz-session:v1`) — new:** one item-queue builder per
+entry point (`buildDailyItems`, `buildWeakItems`, `buildQuickTestItems`, `buildFreePracticeItems`,
+`buildAssessmentItems`), all producing the same `SessionItem[]` shape consumed by one runner — so
+"Practice Weak Ayahs," "Full Range Test," and "Today's Hifz" are all just different queues through
+the identical practice/test/grade/resume machinery instead of parallel implementations. The daily
+queue follows the spec's order (warm-up → weak ayahs/transitions → due/overdue revision,
+round-robined across active targets → new memorization → a final mixed-mode retest of a random
+sample of what was just covered). The active session is persisted after every single grade/skip, so
+a real interruption (closing the tab mid-session) resumes exactly where it left off — confirmed via
+a full page reload between grading one item and returning to `/hifz`, which correctly showed "Resume
+Session, 1/6" rather than losing progress or restarting.
+
+**Practice vs. Test, per the spec's core distinction:**
+- `HifzPractice.vue` — the learning environment: progressive prefix practice for new ayahs (ayah 1,
+  then 1→2, then 1→2→3, explicitly drilling the connections, not just isolated recall), show/hide
+  Arabic and translation, a lightweight Mushaf-context strip (nearby ayahs, tap to preview), repeat
+  controls (1×/3×/5×/10×/"until confident") driving Listen→Recite→Listen through the shared
+  `useAudioPlayer`, and an "I'm Ready" button that hands off to testing without touching SRS itself.
+- `HifzTest.vue` — the measurement environment: Arabic/translation hidden by default across all six
+  modes (Full Ayah, Continue, Previous, Next, Random, Transition), a 4-level progressive hint ladder
+  (first word → first few words → beginning portion → full reveal, with hint usage recorded against
+  the ayah), and Again/Good/Easy grading. **Mistake recovery** (spec §19): tapping "Again" doesn't
+  immediately grade-and-advance — it opens an inline "listen again, retry, then continue" affordance
+  first, and only calls back into `useHifzSession`'s grading once the user explicitly continues,
+  matching the "record → replay → retry → continue" flow rather than just recording a miss and
+  moving on.
+- Both reuse the app's *existing* global audio system (`useAudioPlayer`, the persistent mini-player
+  from Pass 17) rather than a second Hifz-specific player, per the spec's explicit instruction not
+  to duplicate that infrastructure.
+
+**Daily dashboard and reporting (`app/pages/hifz/index.vue`):** a "Today's Hifz" card showing one
+workload number and a time estimate (not a priority breakdown) with a single "Start Today's Hifz"
+action, or "Resume Session" when one's in progress, or "You're caught up" + Quick Test when nothing's
+due; a Weak Areas section with one-tap "Practice All"; per-target Mastery cards (coverage, strength
+breakdown, a transparent Hifz Health score shown *with* its three underlying signals — coverage/
+recall/consistency — never as a bare unexplained number, per the spec's explicit instruction — plus
+"weakest ayah" with its own explained reason, and Full Range Test); a Quick Test dialog (duration →
+adaptive weak/overdue/random mix sized to roughly fit the time budget); and an Activity section
+(28-day heatmap, this-month stats broken into new/revision/recovered/assessment counts, and a recent
+daily log) — all computed from the `activity[]`/`ayahStates[]`/`transitionStates[]` arrays already
+being maintained by grading, not a separate tracked metric.
+
+**Explicitly consolidated from the spec's suggested component list**, for a real, working v1 rather
+than fourteen thin files: `HifzTestPrompt`/`HifzHint` live inside `HifzTest.vue`;
+`HifzSessionSummary`/`HifzWeakAyahs`/`HifzWeakTransitions`/`HifzMastery`/`HifzProgressMap`/
+`HifzQuickTest`/`HifzActivity` are sections of `app/pages/hifz/index.vue` and
+`app/pages/hifz/session.vue` rather than separate component files, since each is a small, mostly
+read-only view with a couple of buttons — splitting them further would have meant prop-plumbing
+overhead without a real reuse benefit. `HifzTargetWizard.vue`, `HifzPractice.vue`, and
+`HifzTest.vue` are kept as real standalone components since those *are* independently substantial
+and reused across entry points.
+
+Home's existing Hifz card (from Pass 17) was updated to match the new model — it now shows the
+daily session's real item count and time estimate rather than a single "next plan" title, since a
+"plan" is no longer the right unit.
+
+Verified with `npm run build` (clean), SSR `curl` checks of `/`, `/hifz`, `/hifz/session` and every
+other existing route (no regressions), and a full Puppeteer session against the production build
+covering the acceptance-criteria core loop end-to-end: seeded a fake Pass-17 `quran:hifz:v1` plan
+and confirmed it migrated into a real named target with per-ayah state (10 ayah states from a
+10-ayah plan); created a fresh target through all five wizard steps; started Today's Hifz; completed
+a new-ayah item's progressive Practice phase via "I'm Ready," landed in Test phase, revealed, and
+graded "Good" — confirmed via direct `localStorage` inspection that the per-ayah SRS state updated
+correctly (`interval` 1→2, `reviewCount` 0→1, `nextReviewAt` advanced, `recentResults: ["good"]`);
+confirmed the session's `currentIndex` advanced and persisted; reloaded the app fully and confirmed
+the hub correctly offered "Resume Session" instead of losing the in-progress queue. Puppeteer
+(`puppeteer-core`, driving the machine's installed Chrome) installed with `--no-save` for this
+pass's verification and removed afterward, same as every prior pass.
+
+**Not done (flagged, matches the spec's own explicit non-goals in §51):** voice-recognition/
+speech-to-text recitation grading, teacher/parent collaboration, backend sync, Juz/Hizb/page-level
+target creation, and any XP/points/badges/leaderboards — all deliberately out of scope for this
+version, per the spec itself.

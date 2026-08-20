@@ -6,209 +6,176 @@
           <div class="text-overline text-grey-lighten-1 mb-1">Memorization</div>
           <div class="text-h4 font-weight-bold gradient-text mb-1">📗 Hifz Mode</div>
           <div class="text-subtitle-2 text-grey-lighten-1">
-            Build a memorization plan and review it before you forget
+            Learn → Practice → Recall → Test → Review — every day
           </div>
         </v-card>
       </v-col>
     </v-row>
 
-    <!-- Stats -->
-    <v-row dense class="mb-6">
-      <v-col cols="4">
-        <v-card class="glass pa-3 text-center" rounded="lg">
-          <div class="text-h5 font-weight-bold">{{ stats.dueToday }}</div>
-          <div class="text-caption">Due today</div>
-        </v-card>
-      </v-col>
-      <v-col cols="4">
-        <v-card class="glass pa-3 text-center" rounded="lg">
-          <div class="text-h5 font-weight-bold">{{ stats.memorized }}</div>
-          <div class="text-caption">Memorized</div>
-        </v-card>
-      </v-col>
-      <v-col cols="4">
-        <v-card class="glass pa-3 text-center" rounded="lg">
-          <div class="text-h5 font-weight-bold">{{ stats.total }}</div>
-          <div class="text-caption">Total plans</div>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- Review queue -->
-    <v-row class="mb-4">
+    <!-- Today's Hifz -->
+    <v-row class="mb-6">
       <v-col cols="12">
-        <div class="text-h6 font-weight-bold mb-3">Review Queue</div>
-
-        <v-alert v-if="!dueQueue.length" type="success" variant="tonal" density="comfortable">
-          Nothing due right now — nice work staying on top of it.
-        </v-alert>
-
-        <v-card
-          v-for="plan in dueQueue"
-          :key="plan.id"
-          rounded="xl"
-          elevation="6"
-          class="pa-4 mb-3"
-        >
-          <div class="d-flex align-center justify-space-between mb-2 flex-wrap ga-2">
-            <div>
-              <div class="font-weight-bold">{{ plan.title }}</div>
-              <v-chip size="small" :color="overdueDays(plan) > 0 ? 'error' : 'warning'" variant="tonal">
-                {{ overdueDays(plan) > 0 ? `Overdue by ${overdueDays(plan)}d` : "Due today" }}
-              </v-chip>
-            </div>
-            <v-btn size="small" variant="text" @click="toggleExpand(plan.id)">
-              {{ expanded === plan.id ? "Hide" : "Review" }}
+        <v-card rounded="xl" elevation="10" class="pa-5 today-card">
+          <template v-if="resumeAvailable">
+            <div class="text-overline">In progress</div>
+            <div class="text-h6 font-weight-bold mb-3">{{ progress.done }} / {{ progress.total }} completed</div>
+            <v-btn block rounded="xl" size="large" color="primary" to="/hifz/session">Resume Session</v-btn>
+          </template>
+          <template v-else-if="todayItemCount > 0">
+            <div class="text-overline">Today's Hifz</div>
+            <div class="text-h5 font-weight-bold mb-1">{{ todayItemCount }} items to practice</div>
+            <div class="text-caption text-grey-lighten-1 mb-4">~{{ todayEstimateMinutes }} minutes</div>
+            <v-btn block rounded="xl" size="large" color="primary" @click="startToday">Start Today's Hifz</v-btn>
+          </template>
+          <template v-else-if="activeTargets.length">
+            <div class="text-h6 font-weight-bold mb-3">You're caught up</div>
+            <v-btn block rounded="xl" size="large" variant="tonal" color="primary" @click="quickTestOpen = true">
+              Quick Test
             </v-btn>
-          </div>
-
-          <v-expand-transition>
-            <div v-if="expanded === plan.id">
-              <v-divider class="mb-3" />
-
-              <div class="d-flex ga-2 mb-3 flex-wrap">
-                <v-chip size="small" :color="showArabic ? 'primary' : undefined" @click="showArabic = !showArabic">
-                  {{ showArabic ? "Hide" : "Show" }} Arabic
-                </v-chip>
-                <v-chip
-                  size="small"
-                  :color="showTranslation ? 'primary' : undefined"
-                  @click="showTranslation = !showTranslation"
-                >
-                  {{ showTranslation ? "Hide" : "Show" }} Translation
-                </v-chip>
-                <v-chip size="small" :color="loopRange ? 'primary' : undefined" @click="loopRange = !loopRange">
-                  <v-icon start size="16">mdi-repeat</v-icon> Loop range
-                </v-chip>
-              </div>
-
-              <div v-if="rangeLoading" class="text-center py-4">
-                <v-progress-circular indeterminate size="28" />
-              </div>
-              <template v-else>
-                <div v-for="(ayahNo, i) in ayahNumbers(plan)" :key="ayahNo" class="hifz-ayah mb-3">
-                  <div class="d-flex align-start ga-2">
-                    <v-btn
-                      icon="mdi-volume-high"
-                      size="small"
-                      variant="text"
-                      :loading="playingAyahKey === `${plan.surahNo}:${ayahNo}`"
-                      @click="playRangeAyah(plan, ayahNo)"
-                    />
-                    <div class="flex-grow-1">
-                      <div v-if="showArabic" class="hifz-arabic">{{ rangeText.arabic[i] }}</div>
-                      <div v-if="showTranslation" class="text-caption text-medium-emphasis mt-1">
-                        {{ rangeText.english[i] }}
-                      </div>
-                      <div v-if="!showArabic && !showTranslation" class="text-caption text-medium-emphasis">
-                        Ayah {{ ayahNo }} — hidden for recall practice
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </template>
-
-              <v-textarea
-                :model-value="plan.mistakeNotes"
-                label="Mistake notes"
-                rows="2"
-                auto-grow
-                density="compact"
-                class="mt-2"
-                @update:model-value="onNotesInput(plan.id, $event)"
-              />
-
-              <div class="d-flex ga-2 mt-2 flex-wrap">
-                <v-btn color="error" variant="tonal" @click="reviewPlan(plan.id, 'again')">Needs Review</v-btn>
-                <v-btn color="primary" variant="tonal" @click="reviewPlan(plan.id, 'good')">Good</v-btn>
-                <v-btn color="success" variant="tonal" @click="reviewPlan(plan.id, 'easy')">Easy</v-btn>
-              </div>
-            </div>
-          </v-expand-transition>
+          </template>
+          <template v-else>
+            <div class="text-h6 font-weight-bold mb-1">No active targets yet</div>
+            <div class="text-caption text-grey-lighten-1">Create one below to start memorizing.</div>
+          </template>
         </v-card>
       </v-col>
     </v-row>
 
-    <!-- New plan -->
-    <v-row class="mb-4">
+    <!-- Weak areas -->
+    <v-row v-if="weakAyahs.length || weakTransitions.length" class="mb-6">
       <v-col cols="12">
         <v-card rounded="xl" elevation="6" class="pa-5">
-          <div class="text-h6 font-weight-bold mb-1">New Memorization Plan</div>
-          <div class="text-caption text-medium-emphasis mb-4">Pick a Surah and ayah range</div>
-
-          <v-select
-            label="Surah"
-            :items="surahOptions"
-            item-title="label"
-            item-value="surahNo"
-            v-model="wizardSurahNo"
-            class="mb-2"
-          />
-          <v-row dense>
-            <v-col cols="6">
-              <v-text-field type="number" label="Start ayah" v-model.number="wizardStart" :min="1" :max="wizardMaxAyah" />
-            </v-col>
-            <v-col cols="6">
-              <v-text-field type="number" label="End ayah" v-model.number="wizardEnd" :min="1" :max="wizardMaxAyah" />
-            </v-col>
-          </v-row>
-          <v-text-field label="Title (optional)" v-model="wizardTitle" class="mb-2" />
-
-          <v-alert v-if="wizardError" type="warning" variant="tonal" density="compact" class="mb-2">
-            {{ wizardError }}
-          </v-alert>
-
-          <v-btn block rounded="xl" color="primary" size="large" :disabled="!canCreate" @click="submitWizard">
-            Create Plan
-          </v-btn>
+          <div class="d-flex align-center justify-space-between mb-3">
+            <div class="text-h6 font-weight-bold">Weak Areas — {{ weakAyahs.length + weakTransitions.length }}</div>
+            <v-btn size="small" color="error" variant="tonal" @click="practiceAllWeak">Practice All</v-btn>
+          </div>
+          <div v-for="a in weakAyahs" :key="a.key" class="text-body-2 mb-1">
+            {{ targetLabel(a.targetId) }} — Ayah {{ a.ayahNo }}
+          </div>
+          <div v-for="t in weakTransitions" :key="t.key" class="text-body-2 mb-1">
+            {{ targetLabel(t.targetId) }} — Transition {{ t.fromAyah }} → {{ t.toAyah }}
+          </div>
         </v-card>
       </v-col>
     </v-row>
 
-    <!-- All plans -->
-    <v-row v-if="plans.length">
+    <!-- Targets / Mastery -->
+    <v-row v-if="targets.length" class="mb-6">
       <v-col cols="12">
-        <div class="text-h6 font-weight-bold mb-3">All Plans</div>
-        <v-card v-for="p in sortedPlans" :key="p.id" rounded="lg" class="pa-4 mb-3">
-          <div class="d-flex align-center justify-space-between flex-wrap ga-2">
+        <div class="text-h6 font-weight-bold mb-3">Targets</div>
+        <v-card v-for="t in targets" :key="t.id" rounded="xl" elevation="6" class="pa-4 mb-3">
+          <div class="d-flex align-center justify-space-between flex-wrap ga-2 mb-2">
             <div>
-              <div class="font-weight-bold">{{ p.title }}</div>
+              <div class="font-weight-bold">{{ t.surahName }} {{ t.startAyah }}–{{ t.endAyah }}</div>
               <div class="text-caption text-medium-emphasis">
-                <v-chip size="x-small" :color="p.status === 'memorized' ? 'success' : 'info'" variant="tonal">
-                  {{ p.status }}
-                </v-chip>
-                <span class="ml-1">Next review {{ p.nextReviewAt }}</span>
-                <span v-if="p.planStatus === 'paused'"> · paused</span>
+                Coverage {{ coverage(t.id).introduced }}/{{ coverage(t.id).total }}
+                <span v-if="t.status === 'paused'"> · paused</span>
               </div>
             </div>
             <div class="d-flex ga-1">
-              <v-btn
-                v-if="p.status !== 'memorized'"
-                size="small"
-                variant="text"
-                @click="markMemorized(p.id)"
-              >
-                Mark memorized
+              <v-btn size="small" variant="text" @click="setStatus(t.id, t.status === 'active' ? 'paused' : 'active')">
+                {{ t.status === "active" ? "Pause" : "Resume" }}
               </v-btn>
-              <v-btn v-else size="small" variant="text" @click="resetToLearning(p.id)">Needs review</v-btn>
-              <v-btn
-                size="small"
-                variant="text"
-                @click="setPlanStatus(p.id, p.planStatus === 'active' ? 'paused' : 'active')"
-              >
-                {{ p.planStatus === "active" ? "Pause" : "Resume" }}
-              </v-btn>
-              <v-btn size="small" variant="text" color="error" icon="mdi-delete-outline" @click="confirmDeleteId = p.id" />
+              <v-btn size="small" variant="text" color="error" icon="mdi-delete-outline" @click="confirmDeleteId = t.id" />
             </div>
+          </div>
+
+          <v-row dense class="mb-2">
+            <v-col cols="3"><div class="text-caption text-medium-emphasis">Strong</div><div class="font-weight-bold">{{ coverage(t.id).strong }}</div></v-col>
+            <v-col cols="3"><div class="text-caption text-medium-emphasis">Memorized</div><div class="font-weight-bold">{{ coverage(t.id).memorized }}</div></v-col>
+            <v-col cols="3"><div class="text-caption text-medium-emphasis">Learning</div><div class="font-weight-bold">{{ coverage(t.id).learning }}</div></v-col>
+            <v-col cols="3"><div class="text-caption text-medium-emphasis">Weak</div><div class="font-weight-bold text-error">{{ coverage(t.id).weak }}</div></v-col>
+          </v-row>
+
+          <div class="d-flex align-center ga-2 mb-2">
+            <v-progress-linear :model-value="health(t.id).score" height="8" rounded color="teal" class="flex-grow-1" />
+            <span class="text-caption font-weight-bold">{{ health(t.id).score }}</span>
+          </div>
+          <div class="text-caption text-medium-emphasis mb-3">
+            Coverage {{ health(t.id).signals.coverage }}% · Recall {{ health(t.id).signals.recall }}% · Consistency {{ health(t.id).signals.consistency }}%
+          </div>
+
+          <div v-if="weakestAyah(t.id)" class="text-caption text-error mb-2">
+            Weakest: Ayah {{ weakestAyah(t.id).ayahNo }} — {{ whyWeak(t.id, weakestAyah(t.id).ayahNo)?.reason }}
+          </div>
+
+          <div class="d-flex ga-2 flex-wrap">
+            <v-btn v-if="weakestAyah(t.id)" size="small" variant="tonal" color="error" @click="practiceWeakest(t.id)">
+              Practice Weakest
+            </v-btn>
+            <v-btn size="small" variant="tonal" :disabled="coverage(t.id).introduced === 0" @click="fullRangeTest(t.id)">
+              Full Range Test
+            </v-btn>
           </div>
         </v-card>
       </v-col>
     </v-row>
 
+    <!-- New target -->
+    <v-row class="mb-6">
+      <v-col cols="12">
+        <v-btn v-if="!wizardOpen" block variant="tonal" prepend-icon="mdi-plus" @click="wizardOpen = true">
+          New Memorization Target
+        </v-btn>
+        <HifzTargetWizard v-else @created="onTargetCreated" />
+      </v-col>
+    </v-row>
+
+    <!-- Activity -->
+    <v-row v-if="activity.length" class="mb-6">
+      <v-col cols="12">
+        <v-card rounded="xl" elevation="6" class="pa-5">
+          <div class="text-h6 font-weight-bold mb-3">Activity</div>
+
+          <div class="heatmap mb-4">
+            <div
+              v-for="d in heatmapDays"
+              :key="d.date"
+              class="heatmap-cell"
+              :class="d.level"
+              :title="`${d.date}: ${d.total} activity`"
+            />
+          </div>
+
+          <div class="text-caption text-medium-emphasis mb-2">This month</div>
+          <div class="text-body-2 mb-3">
+            New: {{ monthStats.newAyahs }} · Revision: {{ monthStats.revisions }} ·
+            Weak recovered: {{ monthStats.recoveredAyahs }} · Transitions recovered: {{ monthStats.recoveredTransitions }} ·
+            Assessments: {{ monthStats.assessments }}
+          </div>
+
+          <div v-for="d in recentActivity" :key="d.date" class="text-caption mb-1">
+            {{ d.date }} — {{ d.newAyahs }} new · {{ d.revisions }} revision
+            <span v-if="d.recoveredAyahs">· {{ d.recoveredAyahs }} weak recovered</span>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Quick Test -->
+    <v-dialog v-model="quickTestOpen" max-width="420">
+      <v-card rounded="lg">
+        <v-card-title>Quick Test</v-card-title>
+        <v-card-text>
+          <div class="text-caption text-medium-emphasis mb-2">Duration</div>
+          <div class="d-flex ga-2 flex-wrap mb-4">
+            <v-chip v-for="n in [2, 5, 10]" :key="n" :color="quickMinutes === n ? 'primary' : undefined" @click="quickMinutes = n">
+              {{ n }} min
+            </v-chip>
+          </div>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn variant="text" @click="quickTestOpen = false">Cancel</v-btn>
+          <v-btn color="primary" variant="flat" @click="launchQuickTest">Start</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
     <v-dialog :model-value="!!confirmDeleteId" max-width="360" @update:model-value="(v) => { if (!v) confirmDeleteId = null }">
       <v-card rounded="lg">
-        <v-card-title>Delete this plan?</v-card-title>
-        <v-card-text>This removes the plan and its review history. This can't be undone.</v-card-text>
+        <v-card-title>Delete this target?</v-card-title>
+        <v-card-text>This removes the target and all of its ayah/transition progress. This can't be undone.</v-card-text>
         <v-card-actions>
           <v-spacer />
           <v-btn variant="text" @click="confirmDeleteId = null">Cancel</v-btn>
@@ -220,155 +187,128 @@
 </template>
 
 <script setup>
-import surahList from "~/assets/data/surah.json";
-
 const {
-  plans,
-  dueQueue,
-  stats,
-  load,
-  createPlan,
-  deletePlan,
-  setPlanStatus,
-  setMistakeNotes,
-  markMemorized,
-  resetToLearning,
-  reviewPlan: reviewPlanAction,
-  overdueDays,
+  targets,
+  activeTargets,
+  activity,
+  load: loadHifz,
+  deleteTarget,
+  updateTarget,
+  weakAyahs,
+  weakTransitions,
+  targetCoverage,
+  weakestAyah: weakestAyahFn,
+  targetHealth,
+  whyWeak: whyWeakFn,
 } = useHifz();
 
-const { getChapter } = useChapters();
-const { getVerse } = useVerse();
-const { play, playing, currentUrl, progress, duration } = useAudioPlayer();
+const {
+  session,
+  loadSession,
+  resumeAvailable,
+  progress,
+  buildDailyItems,
+  startDailySession,
+  startWeakSession,
+  startQuickTest,
+  startAssessment,
+} = useHifzSession();
+
+const router = useRouter();
 
 onMounted(() => {
-  load();
+  loadHifz();
+  loadSession();
 });
 
-const sortedPlans = computed(() => [...plans.value].sort((a, b) => b.createdAt - a.createdAt));
+const todayItemCount = computed(() => buildDailyItems().length);
+const todayEstimateMinutes = computed(() => estimateSessionMinutes(todayItemCount.value));
 
-/* ---------- Review expand/collapse ---------- */
-const expanded = ref(null);
-const showArabic = ref(true);
-const showTranslation = ref(true);
-const loopRange = ref(false);
-const rangeLoading = ref(false);
-const rangeText = reactive({ arabic: [], english: [] });
-
-const ayahNumbers = (plan) =>
-  Array.from({ length: plan.endAyah - plan.startAyah + 1 }, (_, i) => plan.startAyah + i);
-
-const toggleExpand = async (planId) => {
-  if (expanded.value === planId) {
-    expanded.value = null;
-    return;
-  }
-  expanded.value = planId;
-  const plan = plans.value.find((p) => p.id === planId);
-  if (!plan) return;
-
-  rangeLoading.value = true;
-  try {
-    const chapter = await getChapter(plan.surahNo);
-    rangeText.arabic = ayahNumbers(plan).map((n) => chapter.arabic1?.[n - 1] ?? "");
-    rangeText.english = ayahNumbers(plan).map((n) => chapter.english?.[n - 1] ?? "");
-  } finally {
-    rangeLoading.value = false;
-  }
+const startToday = () => {
+  startDailySession();
+  router.push("/hifz/session");
 };
 
-const reviewPlan = (id, grade) => {
-  reviewPlanAction(id, grade);
-  expanded.value = null;
+const practiceAllWeak = () => {
+  startWeakSession();
+  router.push("/hifz/session");
 };
 
-/* ---------- Per-ayah repeat audio + optional range loop ---------- */
-const playingAyahKey = ref(null);
-let expectedNextAyah = null;
-let expectedPlan = null;
-
-const playRangeAyah = async (plan, ayahNo, chain = false) => {
-  const verse = await getVerse(plan.surahNo, ayahNo);
-  const audioUrl = verse.audio?.["1"]?.url;
-  if (!audioUrl) return;
-
-  playingAyahKey.value = `${plan.surahNo}:${ayahNo}`;
-  const isLast = ayahNo >= plan.endAyah;
-  expectedNextAyah = !isLast ? ayahNo + 1 : loopRange.value ? plan.startAyah : null;
-  expectedPlan = expectedNextAyah ? plan : null;
-
-  await play(audioUrl, {
-    type: "ayah",
-    surahNo: plan.surahNo,
-    title: `${plan.title} — Ayah ${ayahNo}`,
-    subtitle: "Hifz review",
-  });
+const practiceWeakest = (targetId) => {
+  startWeakSession([targetId]);
+  router.push("/hifz/session");
 };
 
-watch(playing, (isPlaying) => {
-  if (isPlaying || !playingAyahKey.value) return;
-  // Only auto-advance if the track actually finished (near full duration),
-  // not if the user paused partway through.
-  const finished = duration.value > 0 && progress.value >= duration.value - 0.4;
-  playingAyahKey.value = null;
-  if (finished && expectedPlan && expectedNextAyah) {
-    playRangeAyah(expectedPlan, expectedNextAyah, true);
-  } else {
-    expectedPlan = null;
-    expectedNextAyah = null;
-  }
-});
-
-/* ---------- Notes (debounced) ---------- */
-let notesTimeout;
-const onNotesInput = (planId, value) => {
-  clearTimeout(notesTimeout);
-  notesTimeout = setTimeout(() => setMistakeNotes(planId, value), 500);
+const fullRangeTest = (targetId) => {
+  startAssessment(targetId);
+  router.push("/hifz/session");
 };
 
-/* ---------- New plan wizard ---------- */
-const surahOptions = surahList.map((s) => ({
-  surahNo: s.surahNo,
-  label: `${s.surahNo}. ${s.surahNameTranslation} (${s.totalAyah} ayahs)`,
-  totalAyah: s.totalAyah,
-}));
-
-const wizardSurahNo = ref(1);
-const wizardStart = ref(1);
-const wizardEnd = ref(5);
-const wizardTitle = ref("");
-
-const wizardMaxAyah = computed(
-  () => surahOptions.find((s) => s.surahNo === wizardSurahNo.value)?.totalAyah ?? 286
-);
-
-const wizardError = computed(() => {
-  if (!wizardStart.value || !wizardEnd.value) return "";
-  if (wizardStart.value > wizardEnd.value) return "Start ayah must come before end ayah.";
-  if (wizardEnd.value > wizardMaxAyah.value) return `This Surah only has ${wizardMaxAyah.value} ayahs.`;
-  return "";
-});
-
-const canCreate = computed(
-  () => wizardStart.value > 0 && wizardEnd.value >= wizardStart.value && !wizardError.value
-);
-
-const submitWizard = () => {
-  createPlan({
-    surahNo: wizardSurahNo.value,
-    startAyah: wizardStart.value,
-    endAyah: wizardEnd.value,
-    title: wizardTitle.value,
-  });
-  wizardTitle.value = "";
+const targetLabel = (targetId) => {
+  const t = targets.value.find((x) => x.id === targetId);
+  return t ? `${t.surahName} ${t.startAyah}-${t.endAyah}` : "Target";
 };
 
-/* ---------- Delete ---------- */
+const coverage = (targetId) => targetCoverage(targetId);
+const health = (targetId) => targetHealth(targetId);
+const weakestAyah = (targetId) => weakestAyahFn(targetId);
+const whyWeak = (targetId, ayahNo) => whyWeakFn(targetId, ayahNo);
+
+const setStatus = (id, status) => updateTarget(id, { status });
+
+const wizardOpen = ref(false);
+const onTargetCreated = () => {
+  wizardOpen.value = false;
+};
+
+/* Quick Test */
+const quickTestOpen = ref(false);
+const quickMinutes = ref(5);
+const launchQuickTest = () => {
+  startQuickTest(quickMinutes.value);
+  quickTestOpen.value = false;
+  router.push("/hifz/session");
+};
+
+/* Delete */
 const confirmDeleteId = ref(null);
 const doDelete = () => {
-  deletePlan(confirmDeleteId.value);
+  deleteTarget(confirmDeleteId.value);
   confirmDeleteId.value = null;
 };
+
+/* Activity / heatmap */
+const recentActivity = computed(() => [...activity.value].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 10));
+
+const heatmapDays = computed(() => {
+  const days = [];
+  const today = new Date();
+  for (let i = 27; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const entry = activity.value.find((a) => a.date === key);
+    const total = entry ? entry.newAyahs + entry.revisions + entry.recoveredAyahs + entry.recoveredTransitions : 0;
+    days.push({ date: key, total, level: total === 0 ? "none" : total < 5 ? "light" : "strong" });
+  }
+  return days;
+});
+
+const monthStats = computed(() => {
+  const now = new Date();
+  const prefix = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+  const monthEntries = activity.value.filter((a) => a.date.startsWith(prefix));
+  return monthEntries.reduce(
+    (acc, a) => ({
+      newAyahs: acc.newAyahs + a.newAyahs,
+      revisions: acc.revisions + a.revisions,
+      recoveredAyahs: acc.recoveredAyahs + a.recoveredAyahs,
+      recoveredTransitions: acc.recoveredTransitions + a.recoveredTransitions,
+      assessments: acc.assessments + a.assessments,
+    }),
+    { newAyahs: 0, revisions: 0, recoveredAyahs: 0, recoveredTransitions: 0, assessments: 0 }
+  );
+});
 </script>
 
 <style scoped>
@@ -387,21 +327,28 @@ const doDelete = () => {
   -webkit-text-fill-color: transparent;
 }
 
-.glass {
-  background: rgba(var(--v-theme-on-surface), 0.06);
-  border: 1px solid rgba(var(--v-theme-on-surface), 0.1);
+.today-card {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 
-.hifz-arabic {
-  font-family: "Amiri Quran", serif;
-  font-size: 1.6rem;
-  line-height: 2.2;
-  direction: rtl;
-  text-align: right;
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 4px;
 }
 
-.hifz-ayah {
-  border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.08);
-  padding-bottom: 8px;
+.heatmap-cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: rgba(var(--v-theme-on-surface), 0.08);
+}
+
+.heatmap-cell.light {
+  background: #ffd54f;
+}
+
+.heatmap-cell.strong {
+  background: #00c853;
 }
 </style>

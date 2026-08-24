@@ -20,7 +20,14 @@
                 {{ prayer.data?.data?.date?.readable }}
               </div>
 
-              <v-chip v-if="todaysIslamicEvent" size="small" color="amber" variant="tonal" class="mt-2">
+              <v-chip
+                v-if="todaysIslamicEvent"
+                size="small"
+                color="amber"
+                variant="tonal"
+                class="mt-2"
+                :title="todaysIslamicEvent.dateNote"
+              >
                 <v-icon start size="16">{{ todaysIslamicEvent.icon }}</v-icon>
                 {{ todaysIslamicEvent.name }}
               </v-chip>
@@ -286,7 +293,9 @@ const hifzEstimateMinutes = computed(() => estimateSessionMinutes(hifzTodayCount
 const todaysIslamicEvent = computed(() => {
   const hijri = prayer.data?.data?.date?.hijri;
   if (!hijri) return null;
-  return getIslamicEvent(hijri.month?.number, Number(hijri.day));
+  // "shared" events always show; fiqh-specific ones only show for a
+  // matching fiqh setting — same filtering the Calendar page uses.
+  return getPrimaryIslamicEvent(hijri.month?.number, Number(hijri.day), prayer.fiqh);
 });
 
 const { progressPercent: goalProgressPercent, adjustedDailyTarget: goalDailyTarget, isBehindPace: goalIsBehindPace } =

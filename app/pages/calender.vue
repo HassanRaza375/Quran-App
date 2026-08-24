@@ -53,7 +53,7 @@
             >
               <div class="gregorian">{{ day.day }}</div>
               <div class="hijri">{{ day.hijriDay }}</div>
-              <div v-if="day.event" class="event-dot" :title="day.event.name" />
+              <div v-if="day.events.length" class="event-dot" :title="day.events.map((e) => e.name).join(', ')" />
             </div>
           </div>
         </v-card>
@@ -64,12 +64,15 @@
     <v-row v-if="eventsThisMonth.length" class="mt-6">
       <v-col cols="12">
         <div class="text-h6 font-weight-bold mb-3">Events This Month</div>
-        <v-card v-for="e in eventsThisMonth" :key="e.date" rounded="lg" class="pa-3 mb-2 d-flex align-center ga-3">
-          <v-icon color="amber">{{ e.event.icon }}</v-icon>
-          <div>
-            <div class="font-weight-medium">{{ e.event.name }}</div>
-            <div class="text-caption text-medium-emphasis">{{ e.readable }}</div>
+        <v-card v-for="e in eventsThisMonth" :key="e.date + e.event.name" rounded="lg" class="pa-3 mb-2">
+          <div class="d-flex align-center ga-3">
+            <v-icon color="amber">{{ e.event.icon }}</v-icon>
+            <div>
+              <div class="font-weight-medium">{{ e.event.name }}</div>
+              <div class="text-caption text-medium-emphasis">{{ e.readable }}</div>
+            </div>
           </div>
+          <div v-if="e.event.dateNote" class="text-caption text-medium-emphasis mt-2">{{ e.event.dateNote }}</div>
         </v-card>
       </v-col>
     </v-row>
@@ -94,10 +97,14 @@
               >
                 🌙 Ramadan {{ selectedDay.hijriDay }}
               </v-chip>
-              <v-chip v-if="selectedDay.event" color="amber" variant="tonal">
-                {{ selectedDay.event.name }}
+              <v-chip v-for="e in selectedDay.events" :key="e.name" color="amber" variant="tonal">
+                {{ e.name }}
               </v-chip>
             </div>
+          </div>
+
+          <div v-for="e in selectedDay.events.filter((ev) => ev.dateNote)" :key="e.name + '-note'" class="text-caption text-medium-emphasis mb-3">
+            <strong>{{ e.name }}:</strong> {{ e.dateNote }}
           </div>
 
           <v-row dense>
@@ -237,7 +244,9 @@ const waitForLocation = () =>
 async function fetchCalendar() {
   await waitForLocation();
 
-  const cacheKey = `calendar_${prayer.latitude}_${prayer.longitude}_${prayer.fiqh}_${currentMonth.value}_${currentYear.value}`;
+  // v2: cache shape changed from a single `event` to an `events[]` array —
+  // bump the key so any pre-existing cached blob (old shape) isn't reused.
+  const cacheKey = `calendar_v2_${prayer.latitude}_${prayer.longitude}_${prayer.fiqh}_${currentMonth.value}_${currentYear.value}`;
   const cached = localStorage.getItem(cacheKey);
 
   if (cached) {
@@ -264,7 +273,7 @@ async function fetchCalendar() {
     hijriMonthName: d.date.hijri.month.en,
     isRamadan: d.date.hijri.month.number === 9,
     isToday: d.date.gregorian.day === todayDDMMYYYY().day && d.date.gregorian.month.number === todayDDMMYYYY().month && d.date.gregorian.year === todayDDMMYYYY().year,
-    event: getIslamicEvent(d.date.hijri.month.number, Number(d.date.hijri.day)),
+    events: getIslamicEvents(d.date.hijri.month.number, Number(d.date.hijri.day), prayer.fiqh),
     timings: d.timings,
   }));
 
@@ -277,7 +286,7 @@ const todayDDMMYYYY = () => {
 };
 
 const eventsThisMonth = computed(() =>
-  calendarDays.value.filter((d) => d.event).map((d) => ({ date: d.date, readable: d.readable, event: d.event }))
+  calendarDays.value.flatMap((d) => d.events.map((event) => ({ date: d.date, readable: d.readable, event })))
 );
 
 function changeMonth(delta) {
@@ -309,7 +318,7 @@ const reminderNote = ref("");
 function openReminderFor(day) {
   const [d, m, y] = day.date.split("-");
   reminderDate.value = `${y}-${m}-${d}`;
-  reminderTitle.value = day.event?.name ?? "";
+  reminderTitle.value = day.events[0]?.name ?? "";
   reminderDialog.value = true;
 }
 

@@ -15,8 +15,19 @@ describe("QURAN_PERSONS dataset integrity", () => {
     expect(issues).toEqual([]);
   });
 
-  it("has at least the small curated set of persons (Phase 1+2 scope)", () => {
-    expect(QURAN_PERSONS.length).toBeGreaterThanOrEqual(8);
+  it("has all 34 people: the 25 traditional named prophets + 9 other named/title-based figures", () => {
+    expect(QURAN_PERSONS.length).toBe(34);
+    expect(QURAN_PERSONS.filter((p) => p.primaryCategory === "prophet")).toHaveLength(25);
+  });
+
+  it("includes every one of the 25 traditionally named prophets by id", () => {
+    const expected = [
+      "adam", "idris", "nuh", "hud", "salih", "ibrahim", "lut", "ismail", "ishaq",
+      "yaqub", "yusuf", "ayyub", "shuayb", "musa", "harun", "dhulkifl", "dawud",
+      "sulaiman", "ilyas", "alyasa", "yunus", "zakariyya", "yahya", "isa", "muhammad",
+    ];
+    const ids = new Set(QURAN_PERSONS.map((p) => p.id));
+    for (const id of expected) expect(ids.has(id)).toBe(true);
   });
 
   it("every person has a unique, non-empty id", () => {
@@ -78,5 +89,45 @@ describe("QURAN_PERSONS dataset integrity", () => {
     const dup = [...QURAN_PERSONS, { ...QURAN_PERSONS[0] }];
     const issues = validateDataset(dup, surahs);
     expect(issues.some((i) => i.message.includes("duplicate person id"))).toBe(true);
+  });
+
+  it("Bilqis has zero Direct Mentions — her name is not in the Qur'an text, verified against the live search API", () => {
+    // A deliberate, documented exception, not a data-entry gap: see her
+    // statusNotes. Still must have at least a Related Passage (the story),
+    // which validatePerson requires when directMentions is empty.
+    const bilqis = getPersonById("bilqis");
+    expect(bilqis?.directMentions).toEqual([]);
+    expect(bilqis?.relatedPassages.length).toBeGreaterThan(0);
+    expect(bilqis?.statusNotes?.some((n) => n.includes("does NOT appear"))).toBe(true);
+  });
+
+  it("every relationship's sourceType/verificationStatus is one of the defined values", () => {
+    const validSource = new Set(["quran", "authentic_hadith", "traditional_account"]);
+    const validVerification = new Set(["verified", "traditional", "uncertain"]);
+    for (const person of QURAN_PERSONS) {
+      for (const rel of person.relationships ?? []) {
+        expect(validSource.has(rel.sourceType)).toBe(true);
+        expect(validVerification.has(rel.verificationStatus)).toBe(true);
+      }
+    }
+  });
+
+  it("now that Isma'il, Ishaq, and Harun are full entries, no relationship still needs a STUB_PERSON_LABELS fallback for them", () => {
+    // Regression guard for the specific stub->full-entry migration this
+    // expansion performed — Ibrahim's/Musa's relationships should resolve
+    // to real dataset entries now, not the UI's stub-name fallback map.
+    const ids = new Set(QURAN_PERSONS.map((p) => p.id));
+    const ibrahim = getPersonById("ibrahim")!;
+    const musa = getPersonById("musa")!;
+    for (const rel of [...(ibrahim.relationships ?? []), ...(musa.relationships ?? [])]) {
+      expect(ids.has(rel.personId)).toBe(true);
+    }
+  });
+
+  it("has no duplicate direct-mention references within any single person", () => {
+    for (const person of QURAN_PERSONS) {
+      const keys = person.directMentions.map((r) => `${r.surahNumber}:${r.ayahNumber}`);
+      expect(new Set(keys).size).toBe(keys.length);
+    }
   });
 });

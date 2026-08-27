@@ -8,14 +8,14 @@ describe("buildTimeline (against the real seed dataset)", () => {
   it("orders the mainline by chronology.order ascending", () => {
     const orders = timeline.mainline.map((n) => n.person.chronology?.order);
     expect(orders).toEqual([...orders].sort((a, b) => (a ?? 0) - (b ?? 0)));
+    // 25 traditional prophets minus Dhul-Kifl and Al-Yasa (chronology.status
+    // "unknown", deliberately no order — the Qur'an gives no placement for
+    // either) = 23 mainline nodes.
+    expect(timeline.mainline).toHaveLength(23);
     expect(timeline.mainline.map((n) => n.person.id)).toEqual([
-      "adam",
-      "nuh",
-      "ibrahim",
-      "yusuf",
-      "musa",
-      "isa",
-      "muhammad",
+      "adam", "idris", "nuh", "hud", "salih", "ibrahim", "lut", "ismail",
+      "ishaq", "yaqub", "yusuf", "ayyub", "shuayb", "musa", "harun", "dawud",
+      "sulaiman", "ilyas", "yunus", "zakariyya", "yahya", "isa", "muhammad",
     ]);
   });
 
@@ -37,11 +37,24 @@ describe("buildTimeline (against the real seed dataset)", () => {
     expect(isa.branches.map((b) => b.personId)).toContain("maryam");
   });
 
-  it("attaches stub relationship targets (not full dataset entries) as branches too", () => {
+  it("does not branch a prophet off relationships that are now full mainline entries themselves", () => {
+    // Ibrahim's relationships (Isma'il, Ishaq, Nuh, Lut) are ALL mainline
+    // prophets in the full 25-prophet dataset, so Ibrahim ends up with zero
+    // branches — the correct outcome once a "stub" relationship target gets
+    // promoted to a full entry, not a bug.
     const ibrahim = timeline.mainline.find((n) => n.person.id === "ibrahim")!;
+    expect(ibrahim.branches).toEqual([]);
+
+    // Harun is himself a mainline prophet now too, so he no longer appears
+    // as one of Musa's branches — but Fir'aun (not a prophet) still does.
     const musa = timeline.mainline.find((n) => n.person.id === "musa")!;
-    expect(ibrahim.branches.map((b) => b.personId)).toEqual(expect.arrayContaining(["ismail", "ishaq"]));
-    expect(musa.branches.map((b) => b.personId)).toContain("harun");
+    expect(musa.branches.map((b) => b.personId)).not.toContain("harun");
+    expect(musa.branches.map((b) => b.personId)).toContain("firaun");
+  });
+
+  it("attaches non-prophet figures (Bilqis, Fir'aun) as branches of the mainline prophet they relate to", () => {
+    const sulaiman = timeline.mainline.find((n) => n.person.id === "sulaiman")!;
+    expect(sulaiman.branches.map((b) => b.personId)).toContain("bilqis");
   });
 
   it("does not list Maryam as unlinked, since she's a branch of Isa", () => {

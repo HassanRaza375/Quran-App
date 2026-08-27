@@ -767,16 +767,85 @@ deep links back into Module 2's reader and reuse of Modules 4 (audio) and 9 (boo
 Notes as a distinct section), Phase 4 (Prophetic Timeline), and Phase 5 (an accessibility/mobile/
 performance polish pass — see below).
 
-### Seed dataset — explicitly not exhaustive
-This ships with **9 curated persons** (Adam, Nuh, Ibrahim, Yusuf, Musa, Isa, Muhammad, Maryam,
-Luqman), not the full 25-prophet-plus-others scope the spec envisions. Every `directMentions`
-entry was cross-checked against a live Qur'an search API at authoring time (Arabic
-`quran-simple` edition — the same content approach as Module 3), but each person's list is a
-**representative subset**, not a claim of every occurrence of their name. A card's "N direct
-mentions" count is accurate to its own curated array, not to the true total occurrence count in
-the Qur'an — extending the dataset is expected before treating it as authoritative (per the
-spec's own §27 "must be verified against the actual Qur'an content" rule, §64 note in the app's UI
-links back to this caveat).
+### Dataset — 34 people, Direct Mentions are EXHAUSTIVE, not curated
+This ships with **34 people**: all 25 traditionally named prophets, plus 9 other named/
+title-based figures (Maryam, Luqman, Fir'aun, Haman, Qarun, Talut, Jalut, Abu Lahab, Bilqis).
+Unnamed-but-identifiable persons (spec §2 future expansion) remain out of scope.
+
+Unlike the original 9-person seed (which used a *representative, non-exhaustive* subset of each
+person's mentions), `directMentions` here is **exhaustive per person** — every ayah where that
+name is explicitly present, not a curated sample. That required a materially different
+verification method than a single API search, because the search endpoint does root/substring
+matching, not whole-word matching:
+
+1. Every raw search result was passed through a whole-word normalizer (strip tashkeel; unify
+   alef/ya/ta-marbuta forms; strip common single-letter prefixes وفلبك and multi-letter ones like
+   لل/بال; account for the accusative-case tanwin fatha, which is orthographically a trailing alef
+   letter, not just a diacritic — e.g. "نُوحًا" normalizes to "نوحا," one letter longer than the
+   bare name "نوح," and naively comparing them would produce false *negatives* on genuine
+   "We sent [Prophet]" mentions, which is exactly what happened on a first pass before the fix).
+2. For any name that is *also* a common Arabic word — a true homograph the whole-word filter
+   cannot resolve — every remaining match was read in full and hand-classified. Three names
+   proved genuinely contaminated this way: **Hud** (هود, also the word for "Jewish" — 3 of 10
+   whole-word matches were false positives), **Salih** (صالح, also the ordinary adjective
+   "righteous," used constantly in "believed and did righteous deeds" — only 9 of ~43 matches were
+   genuinely the prophet), and **Yahya** (يحيى, spelled identically to the common verb "gives
+   life" — only 5 of 28 matches were the proper name; 23 were verb forms like "Allah gives life
+   and causes death"). Every other name in the dataset is an unambiguous foreign proper noun with
+   no such collision risk, confirmed by reading a sample of each, not assumed.
+3. **Bilqis is the one deliberate exception, not a gap**: the live search API returns zero matches
+   for "بلقيس" — her name literally does not appear in the Qur'an text (only pronouns and titles
+   like "a woman ruling them" are used). `directMentions: []` for her is therefore correct, not
+   incomplete; she still has a full Related Passage. Her card is the first concrete illustration
+   in this dataset of the spec's own direct-mention-vs-related-passage distinction being load-
+   bearing, not decorative.
+
+A card's "N direct mentions" count is now the true, exhaustive count of verified name-occurrences
+for that person — not a sample size. See the full audit report (before/after counts, every
+correction made, every disputed/uncertain entry) delivered as this expansion's final report;
+worth reproducing here for anyone extending the dataset further:
+
+**Verification pipeline, for reuse when adding more people:**
+`quranapi.pages.dev`/`api.alquran.cloud` search → whole-word normalize+filter (catches most
+substring noise for free) → for any name that could double as ordinary vocabulary, read every
+remaining match's full ayah text by hand before trusting it. Skipping step 3 for a homograph-prone
+name is exactly how Hud/Salih/Yahya would have shipped with dozens of false positives.
+
+### Final content-audit pass (post-expansion)
+After the 34-person expansion above (which focused on `directMentions` accuracy), a separate pass
+independently re-checked every entry's *qualitative* fields — `keyLessons`, `relationships`,
+`chronology`, `statusNotes` — against the actual text of every cited ayah (fetched fresh from
+`quranapi.pages.dev`, not recalled from memory), specifically hunting for two failure modes: a Key
+Lesson claiming something its cited ayah doesn't actually say, and a `relationships` entry marked
+`sourceType: "quran"` without a specific ayah that actually states it (as opposed to a broader
+inference). Five corrections came out of it, all narrow — no schema changes, no UI changes, no
+entries added/removed:
+- **Adam** — keyLesson 2 dropped "in contrast to Adam's humility"; the cited ayahs (2:34, 7:12)
+  describe only Iblis's refusal, not Adam's response, so the contrast wasn't something those two
+  ayahs actually state.
+- **Ishaq** — keyLesson's citation moved from 37:113 (which is about mixed outcomes among
+  descendants, not continuity of prophethood) to 29:27, which explicitly says prophethood/
+  revelation was "reserved for his descendants."
+- **Isa** — removed the `{ personId: "adam", relationshipType: "ancestor", sourceType: "quran" }`
+  relationship. Its likely textual basis, 3:59, compares Isa's *creation* to Adam's (both directly
+  created, no father) as a rebuttal to divinity claims — not a lineage statement — and the claim
+  would in any case be trivially true of every person in the dataset, so singling it out only for
+  Isa was an inconsistent, unsupported addition. A `statusNotes` entry now records why.
+- **Fir'aun** — keyLesson 2's citation moved from 44:31 (a bare "tyrant, transgressor" label) to
+  44:25 + 44:29, the ayahs that actually state the "no protection" claim (gardens/wealth left
+  behind; "neither heaven nor earth wept... nor was their fate delayed").
+- **Haman** — keyLesson's citation moved from 28:8 (a generic "was sinful" mention inside the
+  unrelated Musa-infancy narrative) to 28:38, an already-verified direct mention where Pharaoh
+  orders Haman by name to bake bricks and build the tower — the actual textual basis for the
+  "administrative role, shared culpability" claim.
+
+Every other Key Lesson, relationship, chronology label, and the special-case entries (Bilqis's
+empty `directMentions`, Shu'ayb's excluded father-in-law claim, Dhul-Kifl/Al-Yasa's `"unknown"`
+chronology, Abu Lahab's split quran/traditional_account relationship pair, Talut/Jalut's hedged
+Saul/Goliath identification) were checked against the same fetched ayah text and found accurate
+as written — confirmed, not changed. This pass was content-audited against the Qur'an and the
+dataset's own cited source classifications; it was **not** independently reviewed by a qualified
+scholar, and should not be represented as such.
 
 ### Data model (`app/data/quranPersons.ts` in the reference implementation)
 ```
@@ -847,6 +916,47 @@ already used internally for surah-to-surah auto-advance, not a parallel playback
   primitive with a `person:{id}` namespace — not a separate bookmark store.
 - "Read in Quran" / "Read Passage" deep-link to Module 2's reader as `/surah/{surahNo}#ayah-{n}`,
   the same anchor convention Module 3 (Search) already uses.
+
+### Translation language + Tafsir source now match the main reader exactly (closed gaps)
+An earlier version of this module hardcoded English-only translation text and only the first
+available Tafsir source in `AyahReferenceCard` — a real gap against spec §10/§33's "user's selected
+translation... additional translations available through an expand/selection mechanism" and
+"existing Tafsir functionality is reused" acceptance criteria, caught by re-reading the shipped
+code against the spec's own checklist rather than assuming it was covered. Fixed by extracting the
+main Surah reader's (`app/pages/surah/[id].vue`) own pre-existing, previously page-local logic into
+two shared composables, then pointing **both** the reader and `AyahReferenceCard` at them — not by
+inventing a second preference system:
+- **`useTranslationPreference.ts`** — `TRANSLATION_LANGS` (english/urdu/bengali/arabic2),
+  `isRtlTranslationLang`, `translationLangTitle`, and a `preferredLang` `useState` backed by the
+  *same* raw `localStorage["translationDefaultLang"]` key the reader already wrote to. Raw
+  (non-`$storage`) on purpose — switching wrappers would silently break reading back a value
+  already saved by a user under the pre-refactor code.
+- **`useTafsirPreference.ts`** — `TAFSIR_AUTHORS` (Ibn Kathir / Maarif Ul Quran / Tazkirul Quran)
+  and a `preferredAuthor` `useState` backed by the existing raw `localStorage["tafsirDefaultAuthor"]`
+  key, same rationale.
+- `AyahReferenceCard` seeds its local selection from these on mount (same "freshly-opened panel
+  defaults to the last pick anywhere" behavior the reader's own per-ayah panels already had), lets
+  the user switch via the same chip-picker interaction pattern as the reader, and writes back
+  through the shared setter — so a change in either surface is instantly reflected in the other
+  within the session and persists identically for the next one. Tafsir sources are fetched **once**
+  per ayah (`getTafsir` already returns all sources in one call) and cached locally; switching
+  author re-reads the cached array instead of re-fetching — verified with a request-count check
+  (0 network calls while switching sources on an already-open card).
+- Graceful fallback: if a selected language's array entry is empty/missing for a given ayah, the
+  card shows "Translation not available in {Language} for this ayah." instead of blank text,
+  without silently switching the user's stored preference just because one ayah lacks that field.
+- **A second instance of the exact same TDZ bug from Phase 2** (a ref referenced inside an
+  `immediate: true` watcher before its own `ref()` declaration later in the file) crept back in
+  while rewriting this component — caught again by driving the actual page in a browser, not by
+  code review alone. Fixed the same way: every ref a watcher assigns must be declared above it.
+  Two-for-two on this exact class of bug in this file is worth remembering as a standing risk when
+  editing it further — read the whole file's declaration order before adding a new `watch(...)`.
+- Verified: main reader still shows/switches translation and Tafsir correctly after the refactor
+  (`/surah/11`, `/surah/12`); a preference set in the main reader is picked up by
+  `AyahReferenceCard` and vice versa (checked with a properly shared browser context — an initial
+  false negative came from each Playwright `newPage()` call getting its own isolated
+  context/localStorage, a test-harness mistake, not a product one); Arabic rendering, bookmarking,
+  and "Read in Quran" all still work; no new lint errors; no mobile overflow.
 
 ### Person-level bookmarking + resume study state (spec §17)
 - **Bookmarking**: Module 9's `useBookmarks` gained `makePersonKey(id) → "person:{id}"` and the
@@ -962,11 +1072,11 @@ them hypothetical:
   `aria-hidden="true"` since adjacent text already fully labels them.
 
 ### Unnamed-but-identifiable Qur'anic persons (spec §2 future expansion)
-Not built — out of scope by design for this seed dataset's size, not a gap in the shipped phases.
+Not built — out of scope by design at this dataset size, not a gap in the shipped phases.
 
 ### Rebuild notes
 - Treat the dataset (`quranPersons.ts`-equivalent) as content, not code — in a rebuild, prefer
-  storing it as versioned structured data (JSON/CMS-backed) so it can grow past the seed 9 without
+  storing it as versioned structured data (JSON/CMS-backed) so it can grow past these 34 without
   a code change, and so the verification workflow (spec §28) can run against it independently of
   app releases.
 - The exact-reference search behavior (`"11:25"` typed into the search box) is a small but
@@ -976,8 +1086,15 @@ Not built — out of scope by design for this seed dataset's size, not a gap in 
   with a person id) rather than relying on it.
 - Resist the temptation to auto-infer the reverse of a directional relationship (son ↔ father,
   etc.) — require it to be entered explicitly on both sides instead, per the Timeline note above.
+  Symmetric relationship types (opponent/supporter/contemporary) are the one exception worth
+  recording on both people's sides deliberately — Musa's own entry lists Fir'aun/Haman/Qarun as
+  opponents specifically so the Timeline can surface them as his branches; recording the fact only
+  on the *other* person's side (Qarun→Musa) left Qarun stranded as "unlinked" until this was fixed.
 - Keep resume-state's pure update logic separate from its persistence wrapper (as done here) —
   it's what made the section-tracking behavior actually testable without standing up a DOM.
+- When exhaustiveness matters (as it now does for Direct Mentions), budget for the homograph check
+  as a real, separate step — see the dataset section above. A whole-word filter alone is not
+  enough for any name that doubles as ordinary vocabulary.
 - **Never trust a component library's default accessibility.** Every accessibility fix in Phase 5
   came from inspecting real rendered DOM/ARIA output, not from assuming Vuetify (or whatever UI
   kit a rebuild uses) handles it. Budget time to actually check.

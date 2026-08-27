@@ -179,7 +179,7 @@
                   </div>
                   <div class="d-flex flex-wrap ga-2">
                     <v-chip
-                      v-for="lang in translationLangs"
+                      v-for="lang in TRANSLATION_LANGS"
                       :key="lang.value"
                       :color="getTranslationPanel(index + 1).lang === lang.value ? 'secondary' : undefined"
                       :variant="getTranslationPanel(index + 1).lang === lang.value ? 'flat' : 'outlined'"
@@ -213,7 +213,7 @@
 
                   <div
                     class="translation-content"
-                    :class="{ 'translation-content--rtl': isRtlLang(getTranslationPanel(index + 1).lang) }"
+                    :class="{ 'translation-content--rtl': isRtlTranslationLang(getTranslationPanel(index + 1).lang) }"
                   >
                     {{ typeObject[getTranslationPanel(index + 1).lang]?.[index] }}
                   </div>
@@ -235,7 +235,7 @@
                   </div>
                   <div class="d-flex flex-wrap ga-2">
                     <v-chip
-                      v-for="author in tafsirAuthors"
+                      v-for="author in TAFSIR_AUTHORS"
                       :key="author"
                       :color="getTafsirPanel(index + 1).author === author ? 'primary' : undefined"
                       :variant="getTafsirPanel(index + 1).author === author ? 'flat' : 'outlined'"
@@ -520,13 +520,14 @@ watch(playing, (v) => {
 /* ---------- Tafsir ---------- */
 const { getTafsir } = useTafsir();
 
-const tafsirAuthors = ["Ibn Kathir", "Maarif Ul Quran", "Tazkirul Quran"];
+// Shared across the app (see useTafsirPreference.ts) so the source picked
+// here is the same one Module 17's AyahReferenceCard defaults to, and vice versa.
+const { preferredAuthor: defaultTafsirAuthor, load: loadTafsirPreference, setPreferredAuthor } = useTafsirPreference();
 const tafsirPanels = reactive({}); // ayahNo -> { open, author, content, groupVerse, loading, error }
 const tafsirPickerFor = ref(null); // which ayah's inline author-picker is currently showing
-const defaultTafsirAuthor = ref(null); // last author picked anywhere, remembered for the next fresh ayah
 
 onMounted(() => {
-  defaultTafsirAuthor.value = localStorage.getItem("tafsirDefaultAuthor") || null;
+  loadTafsirPreference();
 });
 
 const getTafsirPanel = (ayahNo) => {
@@ -551,8 +552,7 @@ const selectTafsirAuthor = async (ayahNo, author) => {
   panel.open = true;
   if (tafsirPickerFor.value === ayahNo) tafsirPickerFor.value = null;
 
-  defaultTafsirAuthor.value = author;
-  localStorage.setItem("tafsirDefaultAuthor", author);
+  setPreferredAuthor(author);
 
   if (alreadyLoaded) return; // switching back to an author already fetched for this ayah
 
@@ -594,24 +594,21 @@ const closeTafsirPanel = (ayahNo) => {
 // already part of the chapter data (`typeObject`), so this is purely local
 // panel state — pick a language once, remembered as the default for the
 // next ayah, multiple ayahs can have it open at once.
-const translationLangs = [
-  { value: "english", title: "English" },
-  { value: "urdu", title: "Urdu" },
-  { value: "bengali", title: "Bengali" },
-  { value: "arabic2", title: "Arabic (Alt)" },
-];
-const rtlLangs = new Set(["urdu", "arabic2"]);
-const isRtlLang = (lang) => rtlLangs.has(lang);
-const translationLangTitle = (lang) =>
-  translationLangs.find((l) => l.value === lang)?.title || lang;
+//
+// The language list/RTL-set/title-lookup and the "last picked" preference
+// itself are shared with Module 17's AyahReferenceCard (see
+// useTranslationPreference.ts) — TRANSLATION_LANGS/isRtlTranslationLang/
+// translationLangTitle are auto-imported from that composable file, same as
+// any other app/composables export.
+const { preferredLang: defaultTranslationLang, load: loadTranslationPreference, setPreferredLang } =
+  useTranslationPreference();
+
+onMounted(() => {
+  loadTranslationPreference();
+});
 
 const translationPanels = reactive({}); // ayahNo -> { open, lang }
 const translationPickerFor = ref(null);
-const defaultTranslationLang = ref(null);
-
-onMounted(() => {
-  defaultTranslationLang.value = localStorage.getItem("translationDefaultLang") || null;
-});
 
 const getTranslationPanel = (ayahNo) => {
   if (!translationPanels[ayahNo]) {
@@ -626,8 +623,7 @@ const selectTranslationLang = (ayahNo, lang) => {
   panel.open = true;
   if (translationPickerFor.value === ayahNo) translationPickerFor.value = null;
 
-  defaultTranslationLang.value = lang;
-  localStorage.setItem("translationDefaultLang", lang);
+  setPreferredLang(lang);
 };
 
 const onTranslationButtonClick = (ayahNo) => {

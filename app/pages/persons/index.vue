@@ -7,6 +7,13 @@
       </p>
     </v-sheet>
 
+    <div class="d-flex justify-center mb-6">
+      <v-btn-toggle color="primary" variant="outlined" divided :model-value="'browse'">
+        <v-btn value="browse" to="/persons">Browse People</v-btn>
+        <v-btn value="timeline" to="/persons/timeline">Timeline</v-btn>
+      </v-btn-toggle>
+    </div>
+
     <v-row align="center">
       <v-col cols="12" md="9">
         <v-text-field

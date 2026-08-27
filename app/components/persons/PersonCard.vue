@@ -38,8 +38,8 @@
           </v-chip>
         </div>
 
-        <div v-if="chronologyText" class="chronology mt-2">
-          <v-icon size="14" class="mr-1">mdi-clock-outline</v-icon>{{ chronologyText }}
+        <div v-if="chronologyLabel" class="chronology mt-2">
+          <v-icon size="14" class="mr-1">mdi-clock-outline</v-icon>{{ chronologyLabel }}
         </div>
 
         <div v-if="person.themes?.length" class="themes mt-3">
@@ -60,6 +60,7 @@
 
 <script setup>
 import { CATEGORY_FILTERS } from "~/utils/personsSearch";
+import { chronologyText } from "~/utils/personsChronology";
 
 const props = defineProps({
   person: { type: Object, required: true },
@@ -73,21 +74,7 @@ const categoryLabel = computed(
   () => CATEGORY_FILTERS.find((c) => c.value === props.person.primaryCategory)?.label ?? props.person.primaryCategory
 );
 
-const chronologyStatusLabel = {
-  strong: null, // established enough to not need a qualifier badge
-  traditional: "Traditional chronology",
-  uncertain: "Chronology uncertain",
-  unknown: "Chronology unknown",
-};
-
-const chronologyText = computed(() => {
-  const chronology = props.person.chronology;
-  if (!chronology) return "";
-  if (chronology.label && chronology.status === "strong") return chronology.label;
-  const statusLabel = chronologyStatusLabel[chronology.status];
-  if (chronology.label && statusLabel) return `${chronology.label} — ${statusLabel}`;
-  return statusLabel ?? chronology.label ?? "";
-});
+const chronologyLabel = computed(() => chronologyText(props.person.chronology));
 </script>
 
 <style scoped>

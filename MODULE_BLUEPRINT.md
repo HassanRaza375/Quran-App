@@ -755,12 +755,11 @@ deep links back into Module 2's reader and reuse of Modules 4 (audio) and 9 (boo
 
 **Full product spec:** [`prophets-quran-feature.md`](./prophets-quran-feature.md) (34 sections,
 5 implementation phases). **Phase 1 (directory/search/filter), Phase 2 (Qur'an integration:
-Direct Mentions, Related Passages, reader/audio/tafsir/bookmark reuse), and Phase 3 (bookmark-a-
+Direct Mentions, Related Passages, reader/audio/tafsir/bookmark reuse), Phase 3 (bookmark-a-
 person + resume study state, Family Tree, Related People, Scholarly/Traditional Notes as a
-distinct section) are built.** Phase 4 (Prophetic Timeline) and Phase 5 (dedicated
-accessibility/RTL/performance polish pass) are **not implemented** — the "Browse People /
-Timeline" view toggle on the landing page is intentionally omitted rather than shipping a dead
-button.
+distinct section), and Phase 4 (Prophetic Timeline) are built.** Only Phase 5 (a dedicated
+accessibility/RTL/performance polish pass beyond what fell out naturally from following the app's
+existing patterns) remains open.
 
 ### Seed dataset — explicitly not exhaustive
 This ships with **9 curated persons** (Adam, Nuh, Ibrahim, Yusuf, Musa, Isa, Muhammad, Maryam,
@@ -893,9 +892,35 @@ entries yet) it falls back to a small `STUB_PERSON_LABELS` map so the UI still s
 not a hypothetical. No separate "Related People" list was built alongside the tree; the tree *is*
 the related-people list, just laid out with connector styling.
 
+### Prophetic Timeline (spec §15)
+A dedicated route (`app/pages/persons/timeline.vue`, Nuxt's static-route-beats-dynamic-segment
+resolution keeps it from colliding with `[id].vue`'s catch-all — verified directly, not assumed),
+built on a pure `buildTimeline(persons)` function (`app/utils/personsTimeline.ts`):
+- **Mainline** = persons with `primaryCategory: "prophet"` *and* a `chronology.order`, sorted
+  ascending — everyone else is either a branch or "unlinked," never silently dropped.
+- **Branches** are read **only from a mainline prophet's own outgoing `relationships[]`**, not
+  inferred from the other person's relationships pointing back. A caught bug during
+  implementation: an earlier version also scanned the reverse direction, which broke two ways at
+  once — it mislabeled *which* person the branch was (reusing the raw relationship's `personId`,
+  which names the prophet, not the branch person) and would have required inverting directional
+  relationship types (father → son) to be correct, which is exactly the kind of unverified
+  inference the feature spec prohibits (§3, §14). The fix: read forward-only, and when a
+  relationship matters from both sides (Isa ↔ Maryam in the seed data), record it explicitly on
+  *both* people — same authored-not-inferred discipline as the rest of the dataset.
+- **Chronology display** was extracted into a shared `chronologyText()` helper
+  (`app/utils/personsChronology.ts`) used by the timeline, `PersonCard`, and the detail page, so a
+  `status: "strong"` chronology (only Muhammad's, in the seed data) renders with no qualifier while
+  every other status gets an explicit "Traditional/uncertain/unknown chronology" suffix — one
+  place to keep spec §30's "never let uncertain look as authoritative as verified" rule correct,
+  instead of three copies that could drift.
+- **Unlinked persons** (no `chronology.order` and not named in any mainline prophet's
+  relationships — Luqman, in the seed data) get their own clearly-labeled tray below the main
+  sequence rather than being omitted or force-fit into the chronology.
+- Branches are collapsed by default per-node (spec §15 "prevents the main timeline from becoming
+  visually overloaded") and reuse the same `resolveRelated`/`STUB_PERSON_LABELS` fallback as
+  `FamilyTree.vue` for resolving relationship targets not in the dataset.
+
 ### Not yet built (tracked here so a rebuild doesn't have to rediscover the gap)
-- **Prophetic Timeline** (spec §15) — main chronological sequence, expandable related-person
-  branches, strong-vs-traditional chronology layers. Not started.
 - **Phase 5 polish pass** — dedicated Arabic/RTL review, accessibility audit, and performance pass
   beyond what fell out naturally from following the app's existing patterns.
 - **Unnamed-but-identifiable Qur'anic persons** (spec §2 future expansion) — out of scope by design
@@ -908,6 +933,11 @@ the related-people list, just laid out with connector styling.
   app releases.
 - The exact-reference search behavior (`"11:25"` typed into the search box) is a small but
   high-value detail from spec §16 — don't drop it when reimplementing search.
+- If a rebuild's router doesn't guarantee static-beats-dynamic route resolution the way this app's
+  does, give the Timeline an unambiguous path (a static segment, not something that could collide
+  with a person id) rather than relying on it.
+- Resist the temptation to auto-infer the reverse of a directional relationship (son ↔ father,
+  etc.) — require it to be entered explicitly on both sides instead, per the note above.
 - Keep resume-state's pure update logic separate from its persistence wrapper (as done here) —
   it's what made the section-tracking behavior actually testable without standing up a DOM.
 

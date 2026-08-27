@@ -54,8 +54,8 @@
         <v-chip size="small" variant="outlined" prepend-icon="mdi-book-open-page-variant">
           {{ person.relatedPassages.length }} related passages
         </v-chip>
-        <v-chip v-if="chronologyText" size="small" variant="outlined" prepend-icon="mdi-clock-outline">
-          {{ chronologyText }}
+        <v-chip v-if="chronologyLabel" size="small" variant="outlined" prepend-icon="mdi-clock-outline">
+          {{ chronologyLabel }}
         </v-chip>
       </div>
     </v-sheet>
@@ -217,6 +217,7 @@ import SurahReferenceGroup from "~/components/persons/SurahReferenceGroup.vue";
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
 import FamilyTree from "~/components/persons/FamilyTree.vue";
 import { SECTION_LABELS } from "~/utils/personStudy";
+import { chronologyText } from "~/utils/personsChronology";
 
 const route = useRoute();
 const { getPersonById, groupDirectMentionsBySurah, groupRelatedPassagesBySurah, sortRelatedPassagesForStoryView } =
@@ -254,20 +255,7 @@ const propheticStatusLabels = {
 };
 const propheticStatusLabel = computed(() => person.value ? propheticStatusLabels[person.value.personType] ?? null : null);
 
-const chronologyStatusLabel = {
-  strong: null,
-  traditional: "Traditional chronology",
-  uncertain: "Chronology uncertain",
-  unknown: "Chronology unknown",
-};
-const chronologyText = computed(() => {
-  const chronology = person.value?.chronology;
-  if (!chronology) return "";
-  if (chronology.label && chronology.status === "strong") return chronology.label;
-  const statusLabel = chronologyStatusLabel[chronology.status];
-  if (chronology.label && statusLabel) return `${chronology.label} — ${statusLabel}`;
-  return statusLabel ?? chronology.label ?? "";
-});
+const chronologyLabel = computed(() => chronologyText(person.value?.chronology));
 
 const sourceTypeLabel = (type) =>
   ({ quran: "Qur'an", authentic_hadith: "Authentic Hadith", traditional_account: "Traditional account" })[type] ?? type;

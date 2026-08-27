@@ -32,7 +32,7 @@
     <v-sheet elevation="1" rounded="lg" class="pa-4 mb-6 header-sheet">
       <div class="d-flex justify-space-between align-start flex-wrap ga-3">
         <div>
-          <div class="arabic-name">{{ person.arabicName }}</div>
+          <div class="arabic-name mt-4">{{ person.arabicName }}</div>
           <h1 class="display-name">
             {{ person.name }}
             <span v-if="person.honorific?.arabic" class="honorific-arabic">{{ person.honorific.arabic }}</span>

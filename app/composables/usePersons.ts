@@ -44,15 +44,28 @@ export const usePersons = () => {
     category.value = "all";
   };
 
+  /** Display names for relationship targets referenced by id but not yet
+   * given a full profile in this seed dataset (see personsValidate.ts note on
+   * why this is allowed) — avoids showing a raw lowercase id like "ismail" in
+   * the Family & Relationships UI just because the person isn't built out yet. */
+  const STUB_PERSON_LABELS: Record<string, string> = {
+    ismail: "Isma'il (AS)",
+    ishaq: "Ishaq (AS)",
+    harun: "Harun (AS)",
+  };
+
   /** Resolves a relationship's personId to a display name — falsy `href` when
    * the target isn't in this seed dataset yet (see personsValidate.ts note):
    * the caller should render those as plain text, not a link. */
   const resolveRelated = (personId: string) => {
     const target = getPersonById(personId);
-    return {
-      name: target?.name ?? personId,
-      href: target ? `/persons/${target.id}` : null,
-    };
+    if (target) {
+      return {
+        name: target.honorific?.short ? `${target.name} (${target.honorific.short})` : target.name,
+        href: `/persons/${target.id}`,
+      };
+    }
+    return { name: STUB_PERSON_LABELS[personId] ?? personId, href: null };
   };
 
   return {

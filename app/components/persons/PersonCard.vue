@@ -1,17 +1,30 @@
 <template>
   <v-card class="person-card" elevation="1" rounded="lg" hover>
+    <v-btn
+      icon
+      size="small"
+      variant="text"
+      class="bookmark-btn"
+      :aria-label="isBookmarked ? `Remove ${person.name} from saved persons` : `Save ${person.name}`"
+      @click.stop="toggleBookmark"
+    >
+      <v-icon :color="isBookmarked ? 'amber' : 'grey'">
+        {{ isBookmarked ? "mdi-bookmark" : "mdi-bookmark-outline" }}
+      </v-icon>
+    </v-btn>
+
     <NuxtLink :to="`/persons/${person.id}`" class="card-link">
       <v-card-text class="pt-4">
-        <div class="d-flex justify-space-between align-start ga-2">
-          <div class="arabic-name">{{ person.arabicName }}</div>
+        <div class="arabic-name">{{ person.arabicName }}</div>
+
+        <div class="d-flex align-center flex-wrap ga-2 mt-1">
+          <div class="display-name">
+            {{ person.name }}
+            <span v-if="person.honorific?.short" class="honorific">({{ person.honorific.short }})</span>
+          </div>
           <v-chip size="x-small" variant="tonal" color="primary" class="category-chip">
             {{ categoryLabel }}
           </v-chip>
-        </div>
-
-        <div class="display-name mt-1">
-          {{ person.name }}
-          <span v-if="person.honorific?.short" class="honorific">({{ person.honorific.short }})</span>
         </div>
 
         <p class="short-description mt-2">{{ person.shortDescription }}</p>
@@ -52,6 +65,10 @@ const props = defineProps({
   person: { type: Object, required: true },
 });
 
+const { isPersonBookmarked, togglePerson } = useBookmarks();
+const isBookmarked = computed(() => isPersonBookmarked(props.person.id));
+const toggleBookmark = () => togglePerson(props.person.id);
+
 const categoryLabel = computed(
   () => CATEGORY_FILTERS.find((c) => c.value === props.person.primaryCategory)?.label ?? props.person.primaryCategory
 );
@@ -82,6 +99,14 @@ const chronologyText = computed(() => {
 
 .person-card {
   height: 100%;
+  position: relative;
+}
+
+.bookmark-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
 }
 
 .arabic-name {
@@ -98,6 +123,10 @@ const chronologyText = computed(() => {
 .honorific {
   font-weight: 400;
   color: rgba(var(--v-theme-on-surface), 0.6);
+}
+
+.category-chip {
+  flex: 0 0 auto;
 }
 
 .short-description {

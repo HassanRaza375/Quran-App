@@ -7,8 +7,8 @@
       </p>
     </v-sheet>
 
-    <v-row>
-      <v-col cols="12" md="8">
+    <v-row align="center">
+      <v-col cols="12" md="9">
         <v-text-field
           :model-value="query"
           append-inner-icon="mdi-magnify"
@@ -19,9 +19,17 @@
           @update:model-value="setQuery($event ?? '')"
         />
       </v-col>
-      <v-col cols="12" md="4" class="d-flex align-center">
-        <v-btn v-if="query || category !== 'all'" variant="text" prepend-icon="mdi-close" @click="resetFilters">
-          Reset filters
+      <v-col cols="12" md="3" class="d-flex align-center justify-md-end ga-2">
+        <v-chip
+          :color="savedOnly ? 'amber' : undefined"
+          :variant="savedOnly ? 'flat' : 'outlined'"
+          :prepend-icon="savedOnly ? 'mdi-bookmark' : 'mdi-bookmark-outline'"
+          @click="savedOnly = !savedOnly"
+        >
+          Saved
+        </v-chip>
+        <v-btn v-if="query || category !== 'all' || savedOnly" variant="text" prepend-icon="mdi-close" @click="resetFilters(); savedOnly = false">
+          Reset
         </v-btn>
       </v-col>
     </v-row>
@@ -39,16 +47,19 @@
       </v-chip>
     </div>
 
-    <v-row v-if="filteredPersons.length" dense>
-      <v-col v-for="person in filteredPersons" :key="person.id" cols="12" sm="6" md="4" lg="3">
+    <v-row v-if="visiblePersons.length" dense>
+      <v-col v-for="person in visiblePersons" :key="person.id" cols="12" sm="6" md="4" lg="3">
         <PersonCard :person="person" />
       </v-col>
     </v-row>
 
     <v-sheet v-else elevation="0" rounded="lg" class="pa-8 text-center empty-state">
       <v-icon size="36" class="mb-2">mdi-book-search-outline</v-icon>
-      <p>No Qur'anic persons found{{ query ? ` for "${query}"` : "" }}.</p>
-      <v-btn variant="tonal" color="primary" class="mt-2" @click="resetFilters">Reset search &amp; filters</v-btn>
+      <p v-if="savedOnly">You haven't saved any persons yet.</p>
+      <p v-else>No Qur'anic persons found{{ query ? ` for "${query}"` : "" }}.</p>
+      <v-btn variant="tonal" color="primary" class="mt-2" @click="resetFilters(); savedOnly = false">
+        Reset search &amp; filters
+      </v-btn>
     </v-sheet>
   </v-container>
 </template>
@@ -58,6 +69,14 @@ import { CATEGORY_FILTERS } from "~/utils/personsSearch";
 import PersonCard from "~/components/persons/PersonCard.vue";
 
 const { query, category, filteredPersons, setQuery, setCategory, resetFilters } = usePersons();
+
+const { load: loadBookmarks, isPersonBookmarked } = useBookmarks();
+onMounted(() => loadBookmarks());
+
+const savedOnly = ref(false);
+const visiblePersons = computed(() =>
+  savedOnly.value ? filteredPersons.value.filter((p) => isPersonBookmarked(p.id)) : filteredPersons.value
+);
 </script>
 
 <style scoped>

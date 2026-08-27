@@ -28,6 +28,7 @@
         color="primary"
         append-icon="mdi-arrow-right"
         :to="`/surah/${passage.surahNumber}#ayah-${passage.ayahStart}`"
+        @click="$emit('open', passage)"
       >
         Read Passage
       </v-btn>
@@ -40,7 +41,7 @@ defineProps({
   passage: { type: Object, required: true },
   isThisPassagePlaying: { type: Boolean, default: false },
 });
-defineEmits(["play"]);
+defineEmits(["play", "open"]);
 </script>
 
 <style scoped>

@@ -1,6 +1,32 @@
 <template>
   <v-container v-if="person" class="person-detail-container">
-    <v-btn variant="text" prepend-icon="mdi-arrow-left" to="/persons" class="mb-3">Back to directory</v-btn>
+    <div class="d-flex justify-space-between align-center mb-3">
+      <v-btn variant="text" prepend-icon="mdi-arrow-left" to="/persons">Back to directory</v-btn>
+      <v-btn
+        variant="tonal"
+        :color="isBookmarked ? 'amber' : undefined"
+        :prepend-icon="isBookmarked ? 'mdi-bookmark' : 'mdi-bookmark-outline'"
+        @click="toggleBookmark"
+      >
+        {{ isBookmarked ? "Saved" : "Save Person" }}
+      </v-btn>
+    </div>
+
+    <v-alert
+      v-if="resumeTarget"
+      type="info"
+      variant="tonal"
+      density="comfortable"
+      icon="mdi-history"
+      closable
+      class="mb-4"
+      @click:close="dismissResume"
+    >
+      <div class="d-flex align-center justify-space-between flex-wrap ga-2">
+        <span>Resume where you left off — {{ resumeTarget.label }}</span>
+        <v-btn size="small" variant="flat" color="primary" @click="jumpToResume">Resume</v-btn>
+      </div>
+    </v-alert>
 
     <!-- 1. Header / identity -->
     <v-sheet elevation="1" rounded="lg" class="pa-4 mb-6 header-sheet">
@@ -35,7 +61,7 @@
     </v-sheet>
 
     <!-- 2. Overview + 3. Expandable detail -->
-    <v-sheet elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+    <v-sheet id="section-overview" ref="sectionOverview" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
       <p class="overview-text">{{ person.shortDescription }}</p>
 
       <v-expansion-panels v-if="person.detailedDescription" variant="accordion" class="mt-3">
@@ -52,7 +78,14 @@
     </v-sheet>
 
     <!-- 4. Key Lessons -->
-    <v-sheet v-if="person.keyLessons?.length" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+    <v-sheet
+      v-if="person.keyLessons?.length"
+      id="section-key-lessons"
+      ref="sectionKeyLessons"
+      elevation="0"
+      rounded="lg"
+      class="pa-4 mb-6 section-sheet"
+    >
       <h2 class="section-title">Key Lessons</h2>
       <v-list density="compact">
         <v-list-item v-for="(lesson, i) in person.keyLessons" :key="i" class="lesson-item">
@@ -66,21 +99,21 @@
     </v-sheet>
 
     <!-- 5. Direct Mentions -->
-    <v-sheet elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+    <v-sheet id="section-direct-mentions" ref="sectionDirectMentions" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
       <h2 class="section-title">Direct Mentions</h2>
       <p class="section-hint">
         Ayahs where {{ person.name }}'s name is explicitly mentioned (a curated, non-exhaustive subset — see
         <NuxtLink to="/about">About</NuxtLink> for dataset notes).
       </p>
-      <SurahReferenceGroup v-if="directMentionGroups.length" :groups="directMentionGroups" />
+      <SurahReferenceGroup v-if="directMentionGroups.length" :groups="directMentionGroups" @open="onOpenReference" />
       <p v-else class="text-medium-emphasis">No direct name mentions are catalogued for this person yet.</p>
     </v-sheet>
 
     <!-- 6. Related Passages -->
-    <v-sheet elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+    <v-sheet id="section-related-passages" ref="sectionRelatedPassages" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
       <div class="d-flex justify-space-between align-center flex-wrap ga-2">
         <h2 class="section-title mb-0">Related Passages</h2>
-        <div class="d-flex align-center ga-2">
+        <div class="d-flex align-center flex-wrap ga-2">
           <v-btn-toggle v-model="passageView" density="compact" mandatory color="primary" variant="outlined">
             <v-btn value="surah" size="small">Grouped by Surah</v-btn>
             <v-btn value="story" size="small">Story View</v-btn>
@@ -113,6 +146,7 @@
                 :passage="p"
                 :is-this-passage-playing="isThisPassagePlaying(p)"
                 @play="playSinglePassage"
+                @open="onOpenPassage"
               />
             </div>
           </div>
@@ -125,6 +159,7 @@
               :passage="p"
               :is-this-passage-playing="isThisPassagePlaying(p)"
               @play="playSinglePassage"
+              @open="onOpenPassage"
             />
           </div>
         </template>
@@ -132,9 +167,33 @@
       <p v-else class="text-medium-emphasis">No related passages are catalogued for this person yet.</p>
     </v-sheet>
 
-    <!-- Sources & notes (source-separation is a core principle of this feature) -->
-    <v-sheet v-if="person.sources?.length || person.statusNotes?.length" elevation="0" rounded="lg" class="pa-4 mb-10 section-sheet">
-      <h2 class="section-title">Sources &amp; Notes</h2>
+    <!-- 7. Family & Relationships -->
+    <v-sheet
+      v-if="person.relationships?.length"
+      id="section-family"
+      ref="sectionFamily"
+      elevation="0"
+      rounded="lg"
+      class="pa-4 mb-6 section-sheet"
+    >
+      <h2 class="section-title">Family &amp; Relationships</h2>
+      <p class="section-hint">
+        Relationship type and source/status are shown for each entry — a name in tradition, not the Qur'an, is
+        never presented with the same weight as a direct Qur'anic relationship.
+      </p>
+      <FamilyTree :person="person" />
+    </v-sheet>
+
+    <!-- 8. Scholarly / Traditional Notes -->
+    <v-sheet
+      v-if="person.sources?.length || person.statusNotes?.length"
+      id="section-notes"
+      ref="sectionNotes"
+      elevation="0"
+      rounded="lg"
+      class="pa-4 mb-10 section-sheet"
+    >
+      <h2 class="section-title">Scholarly &amp; Traditional Notes</h2>
       <ul v-if="person.sources?.length" class="sources-list">
         <li v-for="(s, i) in person.sources" :key="i">
           <v-chip size="x-small" variant="outlined" class="mr-2">{{ sourceTypeLabel(s.type) }}</v-chip>{{ s.citation }}
@@ -156,17 +215,32 @@
 <script setup>
 import SurahReferenceGroup from "~/components/persons/SurahReferenceGroup.vue";
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
+import FamilyTree from "~/components/persons/FamilyTree.vue";
+import { SECTION_LABELS } from "~/utils/personStudy";
 
 const route = useRoute();
 const { getPersonById, groupDirectMentionsBySurah, groupRelatedPassagesBySurah, sortRelatedPassagesForStoryView } =
   usePersons();
 const { playAllPassages, isQueuePlaying, queue, queueIndex } = usePersonPassageQueue();
+const { load: loadBookmarks, isPersonBookmarked, togglePerson } = useBookmarks();
+const { load: loadStudy, getFor, recordSection, recordPassageView, recordReference } = usePersonStudy();
 
 const person = computed(() => getPersonById(String(route.params.id)));
 
 useHead(() => ({
   title: person.value ? `${person.value.name} — Prophets & People of the Qur'an` : "Person not found",
 }));
+
+onMounted(() => {
+  loadBookmarks();
+  loadStudy();
+});
+
+/* ---------------- Bookmark ---------------- */
+const isBookmarked = computed(() => (person.value ? isPersonBookmarked(person.value.id) : false));
+const toggleBookmark = () => {
+  if (person.value) togglePerson(person.value.id);
+};
 
 const categoryLabel = computed(() => {
   if (!person.value) return "";
@@ -202,7 +276,19 @@ const directMentionGroups = computed(() => (person.value ? groupDirectMentionsBy
 const relatedPassageGroups = computed(() => (person.value ? groupRelatedPassagesBySurah(person.value) : []));
 const storyOrderedPassages = computed(() => (person.value ? sortRelatedPassagesForStoryView(person.value) : []));
 
+/* ---------------- Related Passages view mode (persisted per-person) ---------------- */
 const passageView = ref("surah");
+watch(
+  person,
+  (p) => {
+    if (!p) return;
+    passageView.value = getFor(p.id)?.passageView ?? "surah";
+  },
+  { immediate: true }
+);
+watch(passageView, (view) => {
+  if (person.value) recordPassageView(person.value.id, view);
+});
 
 const onPlayAll = () => {
   if (!person.value) return;
@@ -218,6 +304,96 @@ const isThisPassagePlaying = (passage) => {
   if (!isQueuePlaying.value) return false;
   const current = queue.value[queueIndex.value];
   return !!current && current.surahNo === passage.surahNumber && current.ayahNo >= passage.ayahStart && current.ayahNo <= passage.ayahEnd;
+};
+
+/* ---------------- Last-viewed reference tracking ---------------- */
+const onOpenReference = ({ surahNo, ayahNo }) => {
+  if (person.value) recordReference(person.value.id, surahNo, ayahNo);
+};
+const onOpenPassage = (passage) => {
+  if (person.value) recordReference(person.value.id, passage.surahNumber, passage.ayahStart);
+};
+
+/* ---------------- Section-visibility tracking (resume study state) ---------------- */
+const sectionOverview = ref(null);
+const sectionKeyLessons = ref(null);
+const sectionDirectMentions = ref(null);
+const sectionRelatedPassages = ref(null);
+const sectionFamily = ref(null);
+const sectionNotes = ref(null);
+
+let observer = null;
+
+const unwrapEl = (r) => r?.value?.$el ?? r?.value ?? null;
+
+const setupObserver = () => {
+  observer?.disconnect();
+  if (!import.meta.client || !person.value) return;
+
+  const sections = [
+    ["overview", sectionOverview],
+    ["key-lessons", sectionKeyLessons],
+    ["direct-mentions", sectionDirectMentions],
+    ["related-passages", sectionRelatedPassages],
+    ["family", sectionFamily],
+    ["notes", sectionNotes],
+  ];
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries.find((e) => e.isIntersecting);
+      if (!visible || !person.value) return;
+      const match = sections.find(([, r]) => unwrapEl(r) === visible.target);
+      if (match) recordSection(person.value.id, match[0]);
+    },
+    { rootMargin: "-15% 0px -70% 0px", threshold: 0 }
+  );
+
+  for (const [, r] of sections) {
+    const el = unwrapEl(r);
+    if (el) observer.observe(el);
+  }
+};
+
+onMounted(() => nextTick(setupObserver));
+watch(person, () => nextTick(setupObserver));
+onBeforeUnmount(() => observer?.disconnect());
+
+/* ---------------- Resume banner ---------------- */
+const resumeDismissed = ref(false);
+watch(person, () => (resumeDismissed.value = false));
+
+const studyState = computed(() => (person.value ? getFor(person.value.id) : null));
+
+const resumeTarget = computed(() => {
+  if (resumeDismissed.value || !isBookmarked.value || !studyState.value) return null;
+  const s = studyState.value;
+  if (s.lastSection === "overview" && !s.lastSurahNo) return null; // nothing meaningful to resume yet
+  const sectionLabel = SECTION_LABELS[s.lastSection] ?? s.lastSection;
+  return {
+    section: s.lastSection,
+    label: s.lastSurahNo ? `${sectionLabel} — ${surahLabel(s.lastSurahNo)}:${s.lastAyahNo}` : sectionLabel,
+  };
+});
+
+const sectionRefMap = {
+  overview: sectionOverview,
+  "key-lessons": sectionKeyLessons,
+  "direct-mentions": sectionDirectMentions,
+  "related-passages": sectionRelatedPassages,
+  family: sectionFamily,
+  notes: sectionNotes,
+};
+
+const jumpToResume = () => {
+  if (!resumeTarget.value) return;
+  const el = unwrapEl(sectionRefMap[resumeTarget.value.section]);
+  el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  resumeDismissed.value = true;
+};
+
+const dismissResume = () => {
+  resumeDismissed.value = true;
 };
 </script>
 
@@ -265,6 +441,7 @@ const isThisPassagePlaying = (passage) => {
 
 .section-sheet {
   border: 1px solid rgba(var(--v-theme-on-surface), 0.06);
+  scroll-margin-top: 76px;
 }
 
 .section-title {

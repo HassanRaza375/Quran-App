@@ -4,8 +4,9 @@ const ADDED_AT_KEY = "quran:bookmarks:added-at:v1";
 // key formats:
 // surah:2
 // ayah:2:255
-// name:1
+// name:1        (Asma-ul-Husna — NOT the same namespace as person:, see below)
 // sajda:2:206
+// person:nuh    (Prophets & Qur'anic Persons — Module 17)
 
 const makeSurahKey = (surahNo) => `surah:${surahNo}`;
 const makeAyahKey = (surahNo, ayahNo) => `ayah:${surahNo}:${ayahNo}`;
@@ -14,6 +15,7 @@ const makeSajdaKey = (surahNo, ayahNo) => `sajda:${surahNo}:${ayahNo}`;
 const makeJuzKey = (juzNo) => `juz:${juzNo}`;
 const makeAudioKey = (surahNo) => `audio:${surahNo}`;
 const makePageKey = (pageNo) => `page:${pageNo}`;
+const makePersonKey = (personId) => `person:${personId}`;
 
 export function useBookmarks() {
   const items = useState("bookmarks", () => new Set());
@@ -117,6 +119,11 @@ export function useBookmarks() {
   const togglePage = (pageNo) => toggle(makePageKey(pageNo));
   const removePage = (pageNo) => remove(makePageKey(pageNo));
 
+  // ----- Person (Prophets & Qur'anic Persons) helpers -----
+  const isPersonBookmarked = (personId) => has(makePersonKey(personId));
+  const togglePerson = (personId) => toggle(makePersonKey(personId));
+  const removePerson = (personId) => remove(makePersonKey(personId));
+
   const list = computed(() => Array.from(items.value));
 
   return {
@@ -138,6 +145,7 @@ export function useBookmarks() {
     makeJuzKey,
     makeAudioKey,
     makePageKey,
+    makePersonKey,
 
     // surah
     isSurahBookmarked,
@@ -173,5 +181,10 @@ export function useBookmarks() {
     isPageBookmarked,
     togglePage,
     removePage,
+
+    // person
+    isPersonBookmarked,
+    togglePerson,
+    removePerson,
   };
 }

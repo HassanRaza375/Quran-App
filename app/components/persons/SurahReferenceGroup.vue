@@ -12,6 +12,7 @@
             :key="`${ref.surahNumber}:${ref.ayahNumber}`"
             :surah-no="ref.surahNumber"
             :ayah-no="ref.ayahNumber"
+            @open="$emit('open', $event)"
           />
         </div>
       </v-expansion-panel-text>
@@ -25,6 +26,7 @@ import AyahReferenceCard from "~/components/persons/AyahReferenceCard.vue";
 defineProps({
   groups: { type: Array, required: true },
 });
+defineEmits(["open"]);
 </script>
 
 <style scoped>

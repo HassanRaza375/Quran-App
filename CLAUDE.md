@@ -31,10 +31,10 @@ npm test           # vitest run — unit tests for dependency-free logic in app/
 ```
 
 Vitest covers pure, Nuxt-free logic only (currently: the Prophets & Qur'anic Persons search/filter/
-validation helpers in `app/utils/personsSearch.ts` / `personsValidate.ts` — see
-`MODULE_BLUEPRINT.md` Module 17). There is no component/e2e test setup — composables and `.vue`
-files that rely on Nuxt auto-imports or SSR context aren't unit-tested; verify those by running the
-dev server and driving the feature in a real browser instead.
+validation/resume-state helpers in `app/utils/personsSearch.ts` / `personsValidate.ts` /
+`personStudy.ts` — see `MODULE_BLUEPRINT.md` Module 17). There is no component/e2e test setup —
+composables and `.vue` files that rely on Nuxt auto-imports or SSR context aren't unit-tested;
+verify those by running the dev server and driving the feature in a real browser instead.
 
 `postinstall` runs `nuxt prepare` automatically after `npm install` (regenerates `.nuxt/`).
 

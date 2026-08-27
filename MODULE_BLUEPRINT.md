@@ -754,12 +754,13 @@ manually-curated Related Passages (their story context, even where the name isn'
 deep links back into Module 2's reader and reuse of Modules 4 (audio) and 9 (bookmarks).
 
 **Full product spec:** [`prophets-quran-feature.md`](./prophets-quran-feature.md) (34 sections,
-5 implementation phases). **Only Phase 1 (directory/search/filter) and Phase 2 (Qur'an
-integration: Direct Mentions, Related Passages, reader/audio/tafsir/bookmark reuse) are built.**
-Phase 3 (bookmark-a-person + resume study state, Family Tree, Related People, Scholarly/
-Traditional Notes as a distinct UI) and Phase 4 (Prophetic Timeline) are **not implemented** —
-the data schema already carries `relationships` so Phase 3 doesn't require a schema change, only
-new UI.
+5 implementation phases). **Phase 1 (directory/search/filter), Phase 2 (Qur'an integration:
+Direct Mentions, Related Passages, reader/audio/tafsir/bookmark reuse), and Phase 3 (bookmark-a-
+person + resume study state, Family Tree, Related People, Scholarly/Traditional Notes as a
+distinct section) are built.** Phase 4 (Prophetic Timeline) and Phase 5 (dedicated
+accessibility/RTL/performance polish pass) are **not implemented** — the "Browse People /
+Timeline" view toggle on the landing page is intentionally omitted rather than shipping a dead
+button.
 
 ### Seed dataset — explicitly not exhaustive
 This ships with **9 curated persons** (Adam, Nuh, Ibrahim, Yusuf, Musa, Isa, Muhammad, Maryam,
@@ -837,22 +838,68 @@ already used internally for surah-to-surah auto-advance, not a parallel playback
   per-ayah audio resolution (by reciter *name*, same caveat as Module 2) — never hardcoded.
 - Tafsir panel reuses Module 1's `useTafsir` cache-through fetch.
 - Ayah-level bookmarking on every reference card reuses Module 9's `ayah:{surahNo}:{ayahNo}` key
-  directly — no person-feature-specific bookmark storage.
+  directly. **Person-level bookmarking** (below) extends Module 9's *same* flat key-set/`toggle`
+  primitive with a `person:{id}` namespace — not a separate bookmark store.
 - "Read in Quran" / "Read Passage" deep-link to Module 2's reader as `/surah/{surahNo}#ayah-{n}`,
   the same anchor convention Module 3 (Search) already uses.
 
+### Person-level bookmarking + resume study state (spec §17)
+- **Bookmarking**: Module 9's `useBookmarks` gained `makePersonKey(id) → "person:{id}"` and the
+  matching `isPersonBookmarked`/`togglePerson`/`removePerson` helpers — same flat `Set<string>`,
+  same `add/remove/toggle` primitives as every other content type, just a new namespace. Surfaced
+  as a toggle button in the person-card corner (mirrors the existing surah-card favorite-button
+  placement) and in the detail-page header.
+- **Resume state** is a *new* small persisted record, deliberately modeled after every other
+  module's `useState`+`$storage` shape rather than folded into Module 9 itself (Module 9 only
+  knows "bookmarked or not," not "which section was I reading"):
+  ```
+  PersonStudyState {
+    personId, lastSection: "overview"|"key-lessons"|"direct-mentions"|"related-passages"|"family"|"notes",
+    passageView: "surah"|"story",       // remembers which Related Passages view mode was active
+    lastSurahNo?, lastAyahNo?,          // last ayah/passage opened via "Read in Quran"/"Read Passage"
+    updatedAt
+  }
+  ```
+  Storage key: `quran:persons-study:v1`, shape `Record<personId, PersonStudyState>`. Pure update
+  functions (`updateSection`/`updatePassageView`/`updateReference`/`clearStudyState`) live in
+  `app/utils/personStudy.ts`, unit-tested in isolation (`tests/personStudy.test.ts`); the
+  composable (`usePersonStudy.ts`) is a thin `useState`+`$storage` wrapper, same pattern as
+  `useReminders`/`useTasbeeh`.
+- **Section detection** uses one `IntersectionObserver` per detail-page visit (rootMargin biased
+  toward the upper third of the viewport, so a section only counts as "current" once meaningfully
+  scrolled into view — not on a bare one-pixel peek), watching each section's DOM element and
+  calling `recordSection` on every section change. Reference tracking (`lastSurahNo`/`lastAyahNo`)
+  is driven separately, from an `open` event each reference/passage card emits on "Read in
+  Quran"/"Read Passage" click — not from the scroll observer, since a jump-to-reader click is a
+  much stronger "this is what they were studying" signal than scroll position alone.
+- **Resume banner**: shown only when the person is bookmarked *and* has saved state past the
+  overview (spec's "when a person is saved, retain..." — resume is a saved-person feature, not
+  tracked-for-everyone), with a one-tap scroll-to-section action and a dismiss control.
+- **Surfacing bookmarked persons**: the directory page (`/persons`) gained a "Saved" filter chip;
+  the existing `/bookmarks` page (Module 9's UI) gained a "People" tab reusing its generic
+  category-tab template, enriched with a "Resume: {section label}" subtitle sourced from the same
+  `usePersonStudy` state.
+
+### Family & Relationships (spec §14)
+`FamilyTree.vue` renders the current person as a root node with each `relationships[]` entry as a
+branch: relationship-type chip + a source/status chip whose color/variant is the load-bearing
+signal (`verified` → filled primary; `traditional`/`uncertain` → outlined, non-primary) so a
+traditional-source relationship is never visually equal to a Qur'an-sourced one — the spec's
+source-separation principle applied to this specific section. A relationship's `personId` is
+resolved through `usePersons().resolveRelated`: if the target exists in the dataset it becomes a
+link; if not (e.g. this seed's Ibrahim → "ismail"/"ishaq", Musa → "harun" — none of whom have full
+entries yet) it falls back to a small `STUB_PERSON_LABELS` map so the UI still shows a proper name
+("Isma'il (AS)") instead of a raw lowercase id — a real bug caught during browser verification,
+not a hypothetical. No separate "Related People" list was built alongside the tree; the tree *is*
+the related-people list, just laid out with connector styling.
+
 ### Not yet built (tracked here so a rebuild doesn't have to rediscover the gap)
-- **Person-level bookmarking + resume study state** (spec §17) — the natural extension is Module
-  9's bookmark key namespace (`person:{id}`) plus a small additive per-person "last viewed
-  section" record, following the same `useState`+`$storage` shape as every other module; not
-  wired up yet.
-- **Family Tree visualization / Related People UI** (spec §14) — `relationships` data exists;
-  no rendering yet.
-- **Scholarly/Traditional Notes as a distinct UI section** — `sources`/`statusNotes` are rendered
-  today as a single flat "Sources & Notes" block on the detail page, not the richer structure the
-  spec envisions.
-- **Prophetic Timeline** (spec §15) — not built; the "Browse People / Timeline" view toggle on the
-  landing page is intentionally omitted rather than shipping a dead button.
+- **Prophetic Timeline** (spec §15) — main chronological sequence, expandable related-person
+  branches, strong-vs-traditional chronology layers. Not started.
+- **Phase 5 polish pass** — dedicated Arabic/RTL review, accessibility audit, and performance pass
+  beyond what fell out naturally from following the app's existing patterns.
+- **Unnamed-but-identifiable Qur'anic persons** (spec §2 future expansion) — out of scope by design
+  for this dataset size.
 
 ### Rebuild notes
 - Treat the dataset (`quranPersons.ts`-equivalent) as content, not code — in a rebuild, prefer
@@ -861,6 +908,8 @@ already used internally for surah-to-surah auto-advance, not a parallel playback
   app releases.
 - The exact-reference search behavior (`"11:25"` typed into the search box) is a small but
   high-value detail from spec §16 — don't drop it when reimplementing search.
+- Keep resume-state's pure update logic separate from its persistence wrapper (as done here) —
+  it's what made the section-tracking behavior actually testable without standing up a DOM.
 
 ---
 

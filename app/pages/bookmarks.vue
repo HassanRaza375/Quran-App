@@ -197,6 +197,7 @@
                   <v-card rounded="lg" hover>
                     <v-card-title class="d-flex justify-space-between align-center">
                       <div>
+                        <div v-if="item.arabicName" class="bm-person-arabic">{{ item.arabicName }}</div>
                         <div class="font-weight-bold">
                           {{ item.title }}
                         </div>
@@ -284,11 +285,14 @@
 </template>
 
 <script setup>
+import { SECTION_LABELS } from "~/utils/personStudy"
+
 const tab = ref(0)
 
 const categories = [
   { label: "Surahs", value: "surah" },
   { label: "Ayahs", value: "ayah" },
+  { label: "People", value: "person" },
   { label: "Audios", value: "audio" },
   { label: "Sajdas", value: "sajda" },
   { label: "Pages", value: "page" },
@@ -308,8 +312,14 @@ const {
   removeAudio,
   removeJuz,
   removePage,
+  removePerson,
 } = useBookmarks()
 onMounted(() => load())
+
+/* ---------------- Persons (Prophets & Qur'anic Persons) ---------------- */
+const { getPersonById } = usePersons()
+const { load: loadPersonStudy, getFor: getPersonStudy } = usePersonStudy()
+onMounted(() => loadPersonStudy())
 
 /* ---------------- Library: collections + notes/tags ---------------- */
 const { collections, getMeta, removeItemMeta, createCollection, deleteCollection, load: loadLibrary } = useLibrary()
@@ -572,10 +582,36 @@ const pageBookmarks = computed(() => {
     .sort((a, b) => a.pageNo - b.pageNo)
 })
 
+/* ---------------- Person bookmarks (Module 17) ---------------- */
+const personBookmarks = computed(() => {
+  return list.value
+    .filter((k) => String(k).startsWith("person:"))
+    .map((k) => {
+      const personId = String(k).split(":")[1]
+      const person = getPersonById(personId)
+      const study = getPersonStudy(personId)
+      const resumeHint = study?.lastSection && study.lastSection !== "overview"
+        ? `Resume: ${SECTION_LABELS[study.lastSection] ?? study.lastSection}`
+        : "Prophets & People of the Qur'an"
+
+      return {
+        id: k,
+        type: "person",
+        personId,
+        title: person ? `${person.name}${person.honorific?.short ? ` (${person.honorific.short})` : ""}` : personId,
+        subtitle: resumeHint,
+        arabicName: person?.arabicName || "",
+        to: `/persons/${personId}`,
+      }
+    })
+    .sort((a, b) => a.title.localeCompare(b.title))
+})
+
 /* ---------------- Category lookup + top chip count ---------------- */
 const categoryItems = computed(() => ({
   surah: surahBookmarks.value,
   ayah: ayahBookmarks.value,
+  person: personBookmarks.value,
   audio: audioBookmarks.value,
   sajda: sajdaBookmarks.value,
   page: pageBookmarks.value,
@@ -594,6 +630,7 @@ const removeBookmark = (item) => {
   if (item.type === "audio") removeAudio(item.surahNo)
   if (item.type === "juz") removeJuz(item.juzNo)
   if (item.type === "page") removePage(item.pageNo)
+  if (item.type === "person") removePerson(item.personId)
   removeItemMeta(item.id)
 }
 </script>
@@ -613,5 +650,13 @@ const removeBookmark = (item) => {
   font-size: 0.95rem;
   opacity: 0.85;
   line-height: 1.8;
+}
+
+.bm-person-arabic {
+  direction: rtl;
+  text-align: right;
+  font-family: "Amiri Quran", serif;
+  font-size: 1.15rem;
+  line-height: 1.4;
 }
 </style>

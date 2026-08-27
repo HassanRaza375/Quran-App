@@ -44,6 +44,7 @@
           color="primary"
           append-icon="mdi-arrow-right"
           :to="`/surah/${surahNo}#ayah-${ayahNo}`"
+          @click="$emit('open', { surahNo, ayahNo })"
         >
           Read in Quran
         </v-btn>
@@ -71,6 +72,7 @@ const props = defineProps({
   surahNo: { type: Number, required: true },
   ayahNo: { type: Number, required: true },
 });
+defineEmits(["open"]);
 
 const { getChapter } = useChapters();
 const { getVerse } = useVerse();

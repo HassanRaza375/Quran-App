@@ -19,6 +19,7 @@
           size="small"
           variant="text"
           :icon="isThisPlaying ? 'mdi-pause' : 'mdi-play'"
+          :aria-label="isThisPlaying ? `Pause recitation of ${surahLabel(surahNo)} ayah ${ayahNo}` : `Play recitation of ${surahLabel(surahNo)} ayah ${ayahNo}`"
           @click="togglePlay"
         />
         <v-btn
@@ -26,6 +27,7 @@
           variant="text"
           :icon="isBookmarked ? 'mdi-star' : 'mdi-star-outline'"
           :color="isBookmarked ? 'amber' : undefined"
+          :aria-label="isBookmarked ? `Remove ${surahLabel(surahNo)} ayah ${ayahNo} bookmark` : `Bookmark ${surahLabel(surahNo)} ayah ${ayahNo}`"
           @click="toggleBookmark"
         />
         <v-btn

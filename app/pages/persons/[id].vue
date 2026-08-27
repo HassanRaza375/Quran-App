@@ -1,6 +1,6 @@
 <template>
   <v-container v-if="person" class="person-detail-container">
-    <div class="d-flex justify-space-between align-center mb-3">
+    <div class="d-flex justify-space-between align-center flex-wrap ga-2 mb-3">
       <v-btn variant="text" prepend-icon="mdi-arrow-left" to="/persons">Back to directory</v-btn>
       <v-btn
         variant="tonal"

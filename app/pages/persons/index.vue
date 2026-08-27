@@ -28,6 +28,8 @@
       </v-col>
       <v-col cols="12" md="3" class="d-flex align-center justify-md-end ga-2">
         <v-chip
+          role="button"
+          :aria-pressed="savedOnly ? 'true' : 'false'"
           :color="savedOnly ? 'amber' : undefined"
           :variant="savedOnly ? 'flat' : 'outlined'"
           :prepend-icon="savedOnly ? 'mdi-bookmark' : 'mdi-bookmark-outline'"
@@ -45,6 +47,8 @@
       <v-chip
         v-for="c in CATEGORY_FILTERS"
         :key="c.value"
+        role="button"
+        :aria-pressed="category === c.value ? 'true' : 'false'"
         :color="category === c.value ? 'primary' : undefined"
         :variant="category === c.value ? 'flat' : 'outlined'"
         class="mr-2 mb-2"

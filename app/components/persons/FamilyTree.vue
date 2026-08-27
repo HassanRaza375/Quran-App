@@ -7,7 +7,7 @@
 
     <ul class="tree-branches">
       <li v-for="rel in person.relationships" :key="`${rel.relationshipType}-${rel.personId}`" class="tree-branch">
-        <v-icon size="16" class="branch-icon">{{ relationshipIcon(rel.relationshipType) }}</v-icon>
+        <v-icon size="16" class="branch-icon" aria-hidden="true">{{ relationshipIcon(rel.relationshipType) }}</v-icon>
 
         <component
           :is="resolveRelated(rel.personId).href ? 'NuxtLink' : 'span'"

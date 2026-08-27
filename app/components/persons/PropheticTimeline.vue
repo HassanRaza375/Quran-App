@@ -5,7 +5,12 @@
       <span class="legend-item"><span class="legend-dot legend-dot--traditional" /> Traditional / uncertain chronology</span>
     </div>
 
-    <ol class="mainline">
+    <v-alert v-if="!timeline.mainline.length" type="info" variant="tonal">
+      No prophets with a known chronological order are in the dataset yet, so a main sequence can't
+      be shown. See <NuxtLink to="/persons">Browse People</NuxtLink> instead.
+    </v-alert>
+
+    <ol v-else class="mainline">
       <li v-for="(node, i) in timeline.mainline" :key="node.person.id" class="mainline-node">
         <NuxtLink :to="`/persons/${node.person.id}`" class="node-card">
           <span class="node-arabic">{{ node.person.arabicName }}</span>
@@ -29,13 +34,13 @@
           :aria-controls="`branches-${node.person.id}`"
           @click="toggleExpanded(node.person.id)"
         >
-          <v-icon size="16">{{ expanded[node.person.id] ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
+          <v-icon size="16" aria-hidden="true">{{ expanded[node.person.id] ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
           {{ node.branches.length }} related {{ node.branches.length === 1 ? "person" : "people" }}
         </button>
 
         <ul v-if="node.branches.length" v-show="expanded[node.person.id]" :id="`branches-${node.person.id}`" class="branches">
           <li v-for="rel in node.branches" :key="rel.personId" class="branch-item">
-            <v-icon size="14" class="branch-icon">mdi-source-branch</v-icon>
+            <v-icon size="14" class="branch-icon" aria-hidden="true">mdi-source-branch</v-icon>
             <component
               :is="resolveRelated(rel.personId).href ? 'NuxtLink' : 'span'"
               :to="resolveRelated(rel.personId).href ?? undefined"
@@ -54,7 +59,7 @@
           </li>
         </ul>
 
-        <div v-if="i < timeline.mainline.length - 1" class="connector"><v-icon size="20">mdi-arrow-down</v-icon></div>
+        <div v-if="i < timeline.mainline.length - 1" class="connector"><v-icon size="20" aria-hidden="true">mdi-arrow-down</v-icon></div>
       </li>
     </ol>
 

@@ -84,6 +84,13 @@ feature is a view over this layer.
   never break the read.
 - Pair with an HTTP-level cache (service worker `CacheFirst`, or platform-native persistent HTTP
   cache) as a second fallback layer, with a ~1 year TTL and no revalidation (content is immutable).
+- **Dedupe concurrent in-flight requests for the same not-yet-cached id.** A cache-then-fetch
+  layer alone doesn't prevent N components mounting simultaneously (a list/grid of items that all
+  need the same parent chapter, e.g. Module 17's Direct Mentions) from each missing the cache and
+  firing N redundant network requests — the first write hasn't landed by the time the others
+  check. Share one in-flight promise per id (module-scope map, resolved/cleared once) so
+  concurrent callers collapse into a single real request. Found and fixed as a real 7-requests-
+  became-1 bug during Module 17's Phase 5 polish, not a hypothetical.
 
 ### Rebuild notes
 - Any local structured store works: SQLite, Realm, Core Data, IndexedDB, or even flat files.
@@ -754,12 +761,11 @@ manually-curated Related Passages (their story context, even where the name isn'
 deep links back into Module 2's reader and reuse of Modules 4 (audio) and 9 (bookmarks).
 
 **Full product spec:** [`prophets-quran-feature.md`](./prophets-quran-feature.md) (34 sections,
-5 implementation phases). **Phase 1 (directory/search/filter), Phase 2 (Qur'an integration:
-Direct Mentions, Related Passages, reader/audio/tafsir/bookmark reuse), Phase 3 (bookmark-a-
-person + resume study state, Family Tree, Related People, Scholarly/Traditional Notes as a
-distinct section), and Phase 4 (Prophetic Timeline) are built.** Only Phase 5 (a dedicated
-accessibility/RTL/performance polish pass beyond what fell out naturally from following the app's
-existing patterns) remains open.
+5 implementation phases). **All 5 phases are built**: Phase 1 (directory/search/filter), Phase 2
+(Qur'an integration: Direct Mentions, Related Passages, reader/audio/tafsir/bookmark reuse), Phase
+3 (bookmark-a-person + resume study state, Family Tree, Related People, Scholarly/Traditional
+Notes as a distinct section), Phase 4 (Prophetic Timeline), and Phase 5 (an accessibility/mobile/
+performance polish pass — see below).
 
 ### Seed dataset — explicitly not exhaustive
 This ships with **9 curated persons** (Adam, Nuh, Ibrahim, Yusuf, Musa, Isa, Muhammad, Maryam,
@@ -920,11 +926,43 @@ built on a pure `buildTimeline(persons)` function (`app/utils/personsTimeline.ts
   visually overloaded") and reuse the same `resolveRelated`/`STUB_PERSON_LABELS` fallback as
   `FamilyTree.vue` for resolving relationship targets not in the dataset.
 
-### Not yet built (tracked here so a rebuild doesn't have to rediscover the gap)
-- **Phase 5 polish pass** — dedicated Arabic/RTL review, accessibility audit, and performance pass
-  beyond what fell out naturally from following the app's existing patterns.
-- **Unnamed-but-identifiable Qur'anic persons** (spec §2 future expansion) — out of scope by design
-  for this dataset size.
+### Phase 5 — polish pass (accessibility, mobile, performance)
+Verified in a real browser, not assumed — this pass found and fixed three genuine bugs, none of
+them hypothetical:
+- **Icon-only buttons had no accessible name.** `AyahReferenceCard`'s play/bookmark buttons
+  rendered as bare icons with no `aria-label` — a screen reader would announce nothing meaningful.
+  Fixed with instance-specific labels (e.g. "Play recitation of Hud (11) ayah 25").
+- **Category-filter and "Saved" chips were keyboard-reachable but had no `role="button"` or
+  pressed-state.** Confirmed by inspecting Vuetify's actual rendered output: a clickable `v-chip`
+  gets `tabindex="0"` automatically but **not** `role`/`aria-pressed` — so a sighted user sees the
+  active filter via color, but a screen reader user got no non-visual equivalent (the exact
+  failure mode spec §24's "do not rely on color alone" warns about, just for a different kind of
+  sensory channel than the chronology chips it was written for). Fixed by adding
+  `role="button"` + `:aria-pressed` explicitly; **don't assume a Vuetify interactive component is
+  fully accessible by default — check the rendered DOM.**
+- **Horizontal overflow on mobile.** The detail page's `Back to directory` / `Save Person` header
+  row didn't wrap at narrow widths, pushing "Save Person" 27px past a 375px viewport. Root-caused
+  with a DOM script measuring every element's bounding rect against the viewport (not guessed from
+  a screenshot) — fixed with `flex-wrap`. The Timeline and directory pages had no overflow;
+  the bug was specific to that one un-wrapped flex row.
+- **7 redundant identical network requests** for one Surah's chapter data, confirmed by capturing
+  actual request URLs (not just a request count): every `AyahReferenceCard` in an expanded Direct
+  Mentions group independently calls `useChapters().getChapter(surahNo)`, and since
+  Module 1's cache-through only checks IndexedDB (no in-flight-request dedup), 7 concurrent cards
+  all miss the not-yet-written cache and each fire their own fetch. Fixed at the source — Module 1
+  itself (`useChapters.ts`) gained a module-level in-flight-promise map, the same "module-scope
+  cache" convention `useTafsir.ts`/`useQuranDB.ts` already use — collapsing 7 requests into 1.
+  This benefits **any** future concurrent-same-chapter caller app-wide, not just this feature;
+  verified the existing Surah reader (`/surah/11`, `/surah/12`) still renders correctly afterward.
+- Confirmed clean (no fix needed): Arabic renders correctly in its own RTL context throughout
+  (mixed Arabic/English layouts, chip content, timeline node labels); lazy-loading already worked
+  as designed (zero chapter requests before a Direct Mentions group is expanded — the redundancy
+  above was *within* one expand, not a missing-laziness problem); the directory and Timeline pages
+  had no mobile overflow; decorative icons (timeline connectors, branch-type icons) got
+  `aria-hidden="true"` since adjacent text already fully labels them.
+
+### Unnamed-but-identifiable Qur'anic persons (spec §2 future expansion)
+Not built — out of scope by design for this seed dataset's size, not a gap in the shipped phases.
 
 ### Rebuild notes
 - Treat the dataset (`quranPersons.ts`-equivalent) as content, not code — in a rebuild, prefer
@@ -937,9 +975,16 @@ built on a pure `buildTimeline(persons)` function (`app/utils/personsTimeline.ts
   does, give the Timeline an unambiguous path (a static segment, not something that could collide
   with a person id) rather than relying on it.
 - Resist the temptation to auto-infer the reverse of a directional relationship (son ↔ father,
-  etc.) — require it to be entered explicitly on both sides instead, per the note above.
+  etc.) — require it to be entered explicitly on both sides instead, per the Timeline note above.
 - Keep resume-state's pure update logic separate from its persistence wrapper (as done here) —
   it's what made the section-tracking behavior actually testable without standing up a DOM.
+- **Never trust a component library's default accessibility.** Every accessibility fix in Phase 5
+  came from inspecting real rendered DOM/ARIA output, not from assuming Vuetify (or whatever UI
+  kit a rebuild uses) handles it. Budget time to actually check.
+- If any content-fetching composable can be called by several component instances that might mount
+  concurrently for the *same* underlying resource (this feature's Direct Mentions groups; likely
+  true of list/grid UIs generally), give the fetch layer in-flight-request dedup, not just a
+  post-hoc cache — the cache alone doesn't help until the first write has actually landed.
 
 ---
 

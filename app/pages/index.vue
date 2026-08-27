@@ -254,6 +254,9 @@
       </v-col>
     </v-row>
 
+    <!-- Continue Studying (Prophets & Qur'anic Persons) -->
+    <lazy-services-continue-studying-person />
+
     <!-- Quick Actions -->
     <!-- <v-row class="quick-actions" dense>
       <v-col cols="6" v-for="i in 4" :key="i">

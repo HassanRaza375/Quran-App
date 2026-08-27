@@ -77,3 +77,19 @@ export const clearStudyState = (record: PersonStudyRecord, personId: string): Pe
   const { [personId]: _removed, ...rest } = record;
   return rest;
 };
+
+/** Finds the study record with the most recent `updatedAt`, or null if there
+ * are none. Ignores any entry whose `updatedAt` is missing or not a finite
+ * number (e.g. hand-edited or corrupted storage) rather than letting it win
+ * a comparison via `undefined`/`NaN`, which would otherwise silently produce
+ * the wrong "most recent" person. Deliberately dataset-agnostic — whether
+ * the person that record points to still exists is the caller's concern
+ * (this file has no dependency on the person dataset by design). */
+export const getMostRecentlyStudied = (record: PersonStudyRecord): PersonStudyState | null => {
+  let best: PersonStudyState | null = null;
+  for (const state of Object.values(record)) {
+    if (!state || typeof state.updatedAt !== "number" || !Number.isFinite(state.updatedAt)) continue;
+    if (!best || state.updatedAt > best.updatedAt) best = state;
+  }
+  return best;
+};

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   clearStudyState,
+  getMostRecentlyStudied,
   getStudyState,
   updatePassageView,
   updateReference,
@@ -87,5 +88,40 @@ describe("clearStudyState", () => {
     record = clearStudyState(record, "nuh");
     expect(record.musa).toBeDefined();
     expect(record.nuh).toBeUndefined();
+  });
+});
+
+describe("getMostRecentlyStudied", () => {
+  it("returns null when there are no study records", () => {
+    expect(getMostRecentlyStudied({})).toBeNull();
+  });
+
+  it("returns the single record when there is only one", () => {
+    const record = updateSection({}, "nuh", "overview", 1000);
+    expect(getMostRecentlyStudied(record)?.personId).toBe("nuh");
+  });
+
+  it("returns the newest of several records, not insertion order", () => {
+    let record: PersonStudyRecord = updateSection({}, "nuh", "overview", 1000);
+    record = updateSection(record, "musa", "family", 3000);
+    record = updateSection(record, "isa", "key-lessons", 2000);
+    expect(getMostRecentlyStudied(record)?.personId).toBe("musa");
+  });
+
+  it("ignores entries with a missing or non-finite updatedAt, picking the newest valid one", () => {
+    const record: PersonStudyRecord = {
+      nuh: { personId: "nuh", lastSection: "overview", passageView: "surah", updatedAt: undefined as unknown as number },
+      musa: { personId: "musa", lastSection: "family", passageView: "surah", updatedAt: NaN },
+      isa: { personId: "isa", lastSection: "key-lessons", passageView: "surah", updatedAt: 500 },
+    };
+    expect(getMostRecentlyStudied(record)?.personId).toBe("isa");
+  });
+
+  it("returns null when every entry has a malformed timestamp", () => {
+    const record: PersonStudyRecord = {
+      nuh: { personId: "nuh", lastSection: "overview", passageView: "surah", updatedAt: NaN },
+      musa: { personId: "musa", lastSection: "family", passageView: "surah", updatedAt: undefined as unknown as number },
+    };
+    expect(getMostRecentlyStudied(record)).toBeNull();
   });
 });

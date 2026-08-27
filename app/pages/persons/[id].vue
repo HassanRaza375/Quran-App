@@ -102,8 +102,8 @@
     <v-sheet id="section-direct-mentions" ref="sectionDirectMentions" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
       <h2 class="section-title">Direct Mentions</h2>
       <p class="section-hint">
-        Ayahs where {{ person.name }}'s name is explicitly mentioned (a curated, non-exhaustive subset — see
-        <NuxtLink to="/about">About</NuxtLink> for dataset notes).
+        Every ayah where {{ person.name }}'s name or title is explicitly mentioned, verified against
+        this app's Qur'an data — not a curated sample.
       </p>
       <SurahReferenceGroup v-if="directMentionGroups.length" :groups="directMentionGroups" @open="onOpenReference" />
       <p v-else class="text-medium-emphasis">No direct name mentions are catalogued for this person yet.</p>

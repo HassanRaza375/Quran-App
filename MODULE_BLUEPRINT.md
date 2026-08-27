@@ -767,10 +767,35 @@ deep links back into Module 2's reader and reuse of Modules 4 (audio) and 9 (boo
 Notes as a distinct section), Phase 4 (Prophetic Timeline), and Phase 5 (an accessibility/mobile/
 performance polish pass — see below).
 
-### Dataset — 34 people, Direct Mentions are EXHAUSTIVE, not curated
-This ships with **34 people**: all 25 traditionally named prophets, plus 9 other named/
-title-based figures (Maryam, Luqman, Fir'aun, Haman, Qarun, Talut, Jalut, Abu Lahab, Bilqis).
-Unnamed-but-identifiable persons (spec §2 future expansion) remain out of scope.
+### Dataset — 38 people, Direct Mentions are EXHAUSTIVE, not curated
+This ships with **prophets and selected named/title-based HUMAN figures mentioned in the
+Qur'an** — **38 people**: all 25 traditionally named prophets, plus 13 other named/title-based
+figures (Maryam, Luqman, Fir'aun, Haman, Qarun, Talut, Jalut, Abu Lahab, Bilqis, As-Samiri, Zayd,
+Dhul-Qarnayn, Uzair). This is a curated selection, **not a claim of covering every individual
+mentioned in the Qur'an** — see the "Known, deliberate exclusions" list below.
+
+A coverage audit (separate from the content-accuracy audit two sections up) checked the original
+34 against their own stated inclusion criterion — "a personal name or Qur'an-given title, not a
+prophet" — using the app's own search API rather than memory, and found 4 material gaps meeting
+that exact bar: **As-Samiri** (20:85, 87, 95 — the one named as leading the Israelites astray with
+the golden calf), **Zayd** (33:37 — the only Companion of Muhammad ﷺ named by personal name
+anywhere in the Qur'an), **Dhul-Qarnayn** (18:83, 86, 94 — a Qur'an-given title, "the Two-Horned
+One," with a full dedicated narrative, 18:83-98), and **Uzair** (9:30 — named once, in the context
+of a claim of divine sonship the Qur'an rejects). All 4 were added using the identical
+verification pipeline described below (including catching a homograph risk for Zayd: زيد the name
+vs. the common verb root "to increase" — 24 of 25 raw substring matches were verb forms, only
+33:37 is the proper name).
+
+**Known, deliberate exclusions** (documented in the dataset file's own header comment, so future
+maintainers don't mistake them for oversights):
+- **'Imran** — his name occurs only in genitive/possessive constructions ("family of 'Imran,"
+  "wife of 'Imran," "Maryam, daughter of 'Imran") with no independent narrative or action
+  attributed to him — no person-focused profile to build.
+- **Harut, Marut** (2:102, named angels) **and Iblis** (named, but a jinn) — named, but not
+  human; this feature is scoped to human Qur'anic persons.
+- **Unnamed-but-identifiable individuals** (Pharaoh's wife, the believing man of Pharaoh's family,
+  Al-Khidr, Habil/Qabil — note the last two are commonly *misremembered* as Qur'an-named but are
+  not) remain future scope, unchanged from the original spec's §2 exclusion.
 
 Unlike the original 9-person seed (which used a *representative, non-exhaustive* subset of each
 person's mentions), `directMentions` here is **exhaustive per person** — every ayah where that
@@ -1074,9 +1099,47 @@ them hypothetical:
 ### Unnamed-but-identifiable Qur'anic persons (spec §2 future expansion)
 Not built — out of scope by design at this dataset size, not a gap in the shipped phases.
 
+### Final QA / release-readiness pass (38-person dataset)
+A pre-release pass covering lint, dataset structure, navigation, Qur'an-reference rendering,
+uncertainty-visibility, and responsive behavior (desktop/tablet/mobile) found and fixed two real,
+pre-existing defects — neither introduced by the 34→38 expansion, both now fixed:
+
+1. **Family Tree and Timeline relationship links were dead** (`FamilyTree.vue`, `PropheticTimeline.vue`).
+   Both used `<component :is="hasHref ? 'NuxtLink' : 'span'">` — passing the *string* `'NuxtLink'`
+   to a dynamic `:is` doesn't resolve to the actual component in this setup (Vue's dynamic-component
+   resolution needs a component reference or a template-statically-detected tag, not an
+   auto-imported component referenced only by name string), so it silently rendered as a literal,
+   non-functional `<nuxtlink>` custom element — visible as normal text, but produced zero clicks. No
+   automated test caught this because the existing tests check the *data* `buildTimeline` produces,
+   not that the rendered link is clickable — a gap worth remembering for any rebuild: **click-test
+   at least one dynamic-component link, don't just assert on its `innerText`.** Fixed by replacing
+   the dynamic `:is` with a plain `v-if`/`v-else` `<NuxtLink>`/`<span>` pair in both files.
+2. **The Direct Mentions section's hint text was stale.** It read "a curated, non-exhaustive subset
+   — see About for dataset notes" — accurate for the original 9-person seed, but never updated when
+   the 34-person expansion made Direct Mentions exhaustive (see the dataset section above), and the
+   linked About page never actually contained the referenced "dataset notes" in the first place.
+   Fixed to accurately describe the exhaustive-verification methodology, with the dangling link
+   removed. **Any product-wording claim about the dataset's completeness needs to be re-checked
+   whenever the underlying verification standard changes — it won't be caught by tests.**
+
+Also fixed as a minor content-consistency issue: one of Dhul-Qarnayn's `themes` entries was a full
+clause (61 characters) rather than a short tag like every other entry's themes — `v-chip` doesn't
+wrap or cap its own width, so on a narrow (mobile) viewport it visually clipped past the screen
+edge without tripping a page-level horizontal-overflow check (the chip clipped *within* its own
+box, not the page). Shortened to match the dataset's established short-tag convention; **this is
+a reminder that a page-level overflow check is not sufficient for catching clipped individual
+elements — screenshot review at each breakpoint is still necessary.**
+
+Everything else checked (dataset composition, all 25 prophets + 13 named/title-based figures
+present, directory/search/deep-link/back navigation, all category filters including the
+newly-populated Companions filter, Qur'an reference rendering — Arabic/translation/tafsir
+picker/Read in Quran/audio/bookmark — on both new and previously-corrected entries, uncertainty
+visibility in Scholarly & Traditional Notes for every flagged disputed/traditional entry, and
+responsive layout at 1280/768/390px) passed without defects.
+
 ### Rebuild notes
 - Treat the dataset (`quranPersons.ts`-equivalent) as content, not code — in a rebuild, prefer
-  storing it as versioned structured data (JSON/CMS-backed) so it can grow past these 34 without
+  storing it as versioned structured data (JSON/CMS-backed) so it can grow past these 38 without
   a code change, and so the verification workflow (spec §28) can run against it independently of
   app releases.
 - The exact-reference search behavior (`"11:25"` typed into the search box) is a small but

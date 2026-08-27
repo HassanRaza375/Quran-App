@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { QURAN_PERSONS } from "../app/data/quranPersons";
+import type { PersonRelationship } from "../app/data/quranPersons";
 import { buildTimeline } from "../app/utils/personsTimeline";
 
 describe("buildTimeline (against the real seed dataset)", () => {
@@ -76,7 +77,7 @@ describe("buildTimeline (against the real seed dataset)", () => {
 });
 
 describe("buildTimeline (synthetic edge cases)", () => {
-  const prophet = (id: string, order: number, relationships: any[] = []) => ({
+  const prophet = (id: string, order: number, relationships: PersonRelationship[] = []) => ({
     id,
     name: id,
     arabicName: id,
@@ -89,7 +90,7 @@ describe("buildTimeline (synthetic edge cases)", () => {
     relationships,
   });
 
-  const nonProphet = (id: string, relationships: any[] = []) => ({
+  const nonProphet = (id: string, relationships: PersonRelationship[] = []) => ({
     id,
     name: id,
     arabicName: id,

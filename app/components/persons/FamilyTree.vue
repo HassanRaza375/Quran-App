@@ -9,13 +9,10 @@
       <li v-for="rel in person.relationships" :key="`${rel.relationshipType}-${rel.personId}`" class="tree-branch">
         <v-icon size="16" class="branch-icon" aria-hidden="true">{{ relationshipIcon(rel.relationshipType) }}</v-icon>
 
-        <component
-          :is="resolveRelated(rel.personId).href ? 'NuxtLink' : 'span'"
-          :to="resolveRelated(rel.personId).href ?? undefined"
-          class="branch-name"
-        >
+        <NuxtLink v-if="resolveRelated(rel.personId).href" :to="resolveRelated(rel.personId).href" class="branch-name">
           {{ resolveRelated(rel.personId).name }}
-        </component>
+        </NuxtLink>
+        <span v-else class="branch-name">{{ resolveRelated(rel.personId).name }}</span>
 
         <v-chip size="x-small" variant="tonal" class="branch-type">{{ relationshipLabel(rel.relationshipType) }}</v-chip>
         <v-chip size="x-small" :variant="statusVariant(rel.verificationStatus)" :color="statusColor(rel.verificationStatus)">

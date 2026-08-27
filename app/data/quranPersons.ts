@@ -1,10 +1,24 @@
 // Prophets & Qur'anic Persons — dataset types + data.
 // See prophets-quran-feature.md for the full product spec this implements
 // (Phase 1-5 UI/integration work is complete — see MODULE_BLUEPRINT.md
-// Module 17). This file is the CONTENT layer: 34 people (the 25 traditional
-// named prophets + 9 other named/title-based Qur'anic figures), each
+// Module 17). This file is the CONTENT layer: prophets and selected named/
+// title-based HUMAN figures mentioned in the Qur'an — 38 people (the 25
+// traditionally named prophets + 13 other named/title-based figures), each
 // verified against this app's own live Quran search API
 // (alquran.cloud, Arabic `quran-simple` edition) at authoring time.
+//
+// This is NOT a claim of covering every individual mentioned in the Qur'an.
+// Known, deliberate exclusions:
+//   - Unnamed-but-identifiable individuals (e.g. Pharaoh's wife, the
+//     believing man of Pharaoh's family, Al-Khidr) are out of scope for this
+//     release — a candidate list for future expansion exists separately.
+//   - Named NON-HUMAN beings (the angels Harut and Marut, 2:102; Iblis) are
+//     out of scope — this feature is scoped to human Qur'anic persons.
+//   - 'Imran is a deliberate omission, not an oversight: his name occurs
+//     only in genitive/possessive constructions ("family of 'Imran," "wife
+//     of 'Imran," "Maryam, daughter of 'Imran") with no independent
+//     narrative or action attributed to him, so he has no person-focused
+//     role for this feature to build a profile around.
 //
 // Verification method (see MODULE_BLUEPRINT.md for the full write-up):
 // the search API does root/substring matching, not whole-word matching, so
@@ -13,12 +27,13 @@
 // single-letter prefixes and the accusative-case trailing alef) and then,
 // for any name that could also be a common Arabic word — "Hud" (also
 // "Jewish"), "Salih" (also the adjective "righteous"), "Yahya" (also the
-// verb "gives life") — every remaining match was read in full and
-// hand-classified, since automated whole-word matching cannot distinguish
-// true homographs. `directMentions` below reflects the verified result:
-// EVERY ayah where the person's name/title is explicitly present, not a
-// curated subset — see MODULE_BLUEPRINT.md Module 17 for the full audit
-// report (counts before/after, rejected false positives, etc.).
+// verb "gives life"), "Zayd" (also a common verb root meaning "increase")
+// — every remaining match was read in full and hand-classified, since
+// automated whole-word matching cannot distinguish true homographs.
+// `directMentions` below reflects the verified result: EVERY ayah where the
+// person's name/title is explicitly present, not a curated subset — see
+// MODULE_BLUEPRINT.md Module 17 for the full audit report (counts
+// before/after, rejected false positives, etc.).
 
 export type PrimaryCategory =
   | "prophet"
@@ -864,6 +879,7 @@ export const QURAN_PERSONS: QuranPerson[] = [
       { personId: "firaun", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
       { personId: "haman", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
       { personId: "qarun", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "samiri", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Allah's help can arrive at the point of complete apparent hopelessness ('Indeed, with me is my Lord; He will guide me').", quranReferences: [asRef(26, 62)], status: "quran_derived" },
@@ -1706,6 +1722,155 @@ export const QURAN_PERSONS: QuranPerson[] = [
     sources: [{ type: "quran", citation: "An-Naml 27:22-44" }],
     statusNotes: [
       "IMPORTANT: The name 'Bilqis' does NOT appear anywhere in the Qur'an — verified directly against this app's live search API, which returned zero matches. The Qur'an refers to her only via pronouns and titles ('a woman ruling them,' 'she who has a great throne'). The name comes from traditional/tafsir literature, not the Qur'an text. Because of this, `directMentions` is correctly empty for her — she has a Related Passage (her story) but no Direct Mentions (her name/title as such is never used), which is exactly the distinction this feature is built to preserve, not a data-entry gap.",
+      "The alternate name 'Queen of Sheba' is a hybrid: 'Sheba' (Saba') IS a place the Qur'an itself names — the hoopoe reports coming 'from Sheba with certain news' (27:22, using the app's own translation wording), and Saba' is also the name of Surah 34 — but the Qur'an never pairs that place-name with a ruler's personal name or the title 'Queen of Sheba' itself; it only describes 'a woman ruling them' (27:23). So 'Sheba' as a place is Qur'an-supported, while 'Queen of Sheba' as her specific title/epithet, like 'Bilqis,' is a traditional convention (also found in the Bible, 1 Kings 10) layered onto that place-name, not a Qur'anic statement.",
+    ],
+  },
+
+  // ============================================================
+  // Coverage-audit additions — 4 more named/title-based human
+  // figures meeting the same inclusion bar already used above
+  // (a personal name or a Qur'an-given title, not a scholarly
+  // gloss). See MODULE_BLUEPRINT.md Module 17 for the audit that
+  // identified these as material gaps against the existing 34.
+  // ============================================================
+  {
+    id: "samiri",
+    name: "As-Samiri",
+    arabicName: "السامري",
+    primaryCategory: "other",
+    secondaryCategories: ["man"],
+    personType: "quranic_person",
+    shortDescription:
+      "The individual the Qur'an names as having led the Israelites astray with the golden calf during Musa's absence at the mountain.",
+    detailedDescription:
+      "While Musa is at the mountain receiving the Torah, Allah tells him his people have been tested and 'As-Samiri has led them astray' (20:85). The people explain they were carrying the community's jewellery and 'so did As-Samiri' — casting it in (20:87) — producing a calf that lowed. On his return, Musa confronts As-Samiri directly; his reply is 'I saw what they did not see, so I took a handful from the trace of the messenger, then I cast it — so did my soul entice me' (20:96). Musa exiles him with the sentence 'there is no touching' (lā misās) and a promise of a reckoning to come (20:97).",
+    themes: ["Leading others astray", "Deception", "Exile as consequence"],
+    chronology: { label: "Contemporary of Musa and Harun, during the wilderness period", status: "traditional" },
+    directMentions: [asRef(20, 85), asRef(20, 87), asRef(20, 95)],
+    relatedPassages: [
+      {
+        id: "samiri-taha-calf",
+        surahNumber: 20, ayahStart: 85, ayahEnd: 97,
+        title: "As-Samiri and the Golden Calf",
+        description: "His introduction as the one who misled the people, the people's account of the jewellery and the calf, and Musa's direct confrontation and sentence.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "musa", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Even within a community following a true prophet, a single deceptive individual can lead many astray once a leader's back is turned.", quranReferences: [asRef(20, 85)], status: "quran_derived" },
+      { text: "When confronted, he offers only his own reasoning and impulse as justification, not any claim of divine sanction.", quranReferences: [asRef(20, 96)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Ta-Ha 20:83-98" }],
+    statusNotes: [
+      "'As-Samiri' (السامري) is the Qur'an's own designation for this individual — most commentators read it as denoting his tribe or place of origin (a form meaning roughly 'the Samaritan') rather than a personal given name. The Qur'an provides no other name for him, and none is invented here.",
+      "Traditional tafsir offers further accounts of his background, the exact nature of what he 'took from the trace of the messenger' (20:96), and his fate beyond the lā misās exile stated in 20:97 — those extra-Qur'anic details are not included here.",
+    ],
+  },
+
+  {
+    id: "zayd",
+    name: "Zayd",
+    arabicName: "زيد",
+    primaryCategory: "companion",
+    personType: "quranic_person",
+    honorific: { short: "RA", arabic: "رضي الله عنه" },
+    shortDescription:
+      "A companion of Muhammad ﷺ named directly in the Qur'an — the only Companion referred to by personal name anywhere in the text — in the context of the ruling that adopted sons are not treated as biological sons.",
+    detailedDescription:
+      "The Qur'an names Zayd once (33:37): Muhammad ﷺ tells him 'keep your wife,' Zayd nonetheless divorces her, and Muhammad ﷺ then marries her — establishing in a concrete case the general ruling, stated just before it in the same surah (33:4-5), that 'adopted sons' are not real sons and do not carry a real son's legal restrictions. Zayd's fuller identity — 'Zayd ibn Harithah,' a freed slave and adopted son of Muhammad ﷺ, later a prominent companion and military commander killed at the Battle of Mu'tah — comes from hadith and seerah (historical biography) literature, not the Qur'an text itself.",
+    themes: ["Abolition of adoption's legal fiction", "Obedience in a personally difficult matter", "The only Companion named in the Qur'an"],
+    chronology: { label: "Contemporary of Muhammad ﷺ, Madinan period", status: "strong" },
+    directMentions: [asRef(33, 37)],
+    relatedPassages: [
+      {
+        id: "zayd-ahzab-ruling",
+        surahNumber: 33, ayahStart: 36, ayahEnd: 40,
+        title: "The Ruling on Adopted Sons and Zayd's Marriage",
+        description: "The general ruling that adopted sons are not real sons, the specific episode of Zayd's marriage and divorce, and Muhammad ﷺ's marriage to his former wife establishing the ruling in practice.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "muhammad", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "muhammad", relationshipType: "other", sourceType: "traditional_account", verificationStatus: "traditional" },
+    ],
+    keyLessons: [
+      { text: "The Qur'an dismantles adoption's legal fiction through this very episode — an 'adopted son' is not treated as a biological son for a matter like marriage eligibility.", quranReferences: [asRef(33, 4), asRef(33, 37)], status: "quran_derived" },
+      { text: "He is described as someone Allah and the Prophet had both shown favor to — his standing is affirmed directly in the text, not left to inference.", quranReferences: [asRef(33, 37)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Al-Ahzab 33:36-40" },
+      { type: "traditional_account", citation: "Seerah and hadith literature (e.g. Ibn Ishaq, Sahih al-Bukhari)", note: "His fuller name 'Zayd ibn Harithah,' his status as a freed slave and adopted son of Muhammad ﷺ, and his later life and death at the Battle of Mu'tah are historical/traditional record, not stated in the Qur'an text." },
+    ],
+    statusNotes: [
+      "The Qur'an names him only as 'Zayd' (33:37) — it does not give his father's name, tribal lineage, or state outright that he was Muhammad ﷺ's adopted son; those details come from hadith and seerah literature, not the Qur'an text itself.",
+      "By the same verified whole-word search used throughout this dataset, he is the only Companion of Muhammad ﷺ referred to by personal name anywhere in the Qur'an — every other companion is referenced only by pronoun, title, or group description ('those with him,' 'the Ansar,' etc.).",
+    ],
+  },
+
+  {
+    id: "dhulqarnayn",
+    name: "Dhul-Qarnayn",
+    arabicName: "ذو القرنين",
+    primaryCategory: "ruler_leader",
+    personType: "title_based_person",
+    shortDescription:
+      "A righteous, divinely empowered ruler given the Qur'anic title 'Dhul-Qarnayn' ('the Two-Horned One'), whose journeys to the setting and rising points of the sun and building of a barrier against Gog and Magog are told as one complete account in Surah Al-Kahf.",
+    detailedDescription:
+      "Asked about by name, the Prophet ﷺ is told to relate his account (18:83). Established with power and means on earth (18:84), Dhul-Qarnayn journeys to where the sun sets among a people he is told to either punish or treat well (18:86), then to where it rises upon a people with no shelter from it (18:90), then to a place between two mountains where a people threatened by Gog and Magog ask for a barrier (18:93-94). He builds it from iron and molten copper, declines their offered payment, and attributes the achievement to his Lord's mercy, foretelling that it will eventually be leveled (18:95-98).",
+    themes: ["Divinely granted power used justly", "Journeys to the ends of the earth", "Protecting the vulnerable", "Attributing success to Allah's mercy"],
+    chronology: { status: "uncertain" },
+    directMentions: [asRef(18, 83), asRef(18, 86), asRef(18, 94)],
+    relatedPassages: [
+      {
+        id: "dhulqarnayn-kahf-narrative",
+        surahNumber: 18, ayahStart: 83, ayahEnd: 98,
+        title: "The Complete Account of Dhul-Qarnayn",
+        description: "The full narrative: being asked about him, his journeys to the setting- and rising-places of the sun, his encounter with a people threatened by Gog and Magog, and his building of the barrier.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    keyLessons: [
+      { text: "Given extraordinary means and power on earth, he uses it to protect a vulnerable people and explicitly declines their offered payment, rather than to exploit them.", quranReferences: [asRef(18, 94), asRef(18, 95)], status: "quran_derived" },
+      { text: "The finished barrier's success is attributed explicitly to his Lord's mercy, not his own skill or resources, and he foretells its eventual end rather than claiming permanence.", quranReferences: [asRef(18, 98)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Al-Kahf 18:83-98" }],
+    statusNotes: [
+      "Whether Dhul-Qarnayn was a prophet is not established in the Qur'an. The predominant scholarly view holds he was a righteous ruler granted extraordinary means, not a prophet, though the question has not been treated as fully settled by all scholars — that uncertainty is preserved here rather than resolved, which is also why personType is 'title_based_person' rather than 'prophet.'",
+      "'Dhul-Qarnayn' ('the Two-Horned One') is the Qur'an's own title for him (18:83); the Qur'an does not give him a personal name. Historical and traditional scholarship has proposed identifying him with figures such as Cyrus the Great of Persia or Alexander the Great — these are disputed scholarly/historical identifications, not stated in the Qur'an text, and are not treated as settled fact here; no single identification is asserted.",
+      "The places and peoples in his journeys are described in the Qur'an's own phenomenological language (where the sun 'appeared to set,' where it 'rose upon' a people) and are not mapped here onto any specific modern geography.",
+    ],
+  },
+
+  {
+    id: "uzair",
+    name: "Uzair",
+    arabicName: "عزير",
+    alternateNames: ["Ezra"],
+    primaryCategory: "other",
+    secondaryCategories: ["man"],
+    personType: "quranic_person",
+    shortDescription:
+      "A figure named once in the Qur'an in the context of a specific theological claim: that some Jews called him 'the son of Allah' — a claim the Qur'an firmly rejects, alongside the parallel Christian claim about Isa.",
+    detailedDescription:
+      "The Qur'an names Uzair exactly once, reporting and rejecting the claim that he was 'the son of Allah,' set directly alongside the equivalent Christian claim about al-Masih (9:30). No narrative, era, or role is given for him beyond this single theological statement. Uzair is traditionally identified with the Biblical Ezra; a minority of scholars have held he may have been a prophet, though this is not the majority position and is not itself a Qur'anic statement.",
+    themes: ["Rejection of divine-sonship claims", "Tawhid"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(9, 30)],
+    relatedPassages: [],
+    keyLessons: [
+      { text: "The Qur'an rejects the divine-sonship claim attached to him with the same firmness applied to the parallel claim about Isa — a consistent principle of Tawhid, not directed at one group alone.", quranReferences: [asRef(9, 30)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "At-Tawbah 9:30" },
+      { type: "traditional_account", citation: "Later tafsir generally identifies him with the Biblical Ezra; a minority opinion holds he was a prophet.", note: "Neither the identification nor the prophetic-status claim is stated in the Qur'an text." },
+    ],
+    statusNotes: [
+      "The Qur'an does not call Uzair a prophet, and this entry does not present him as one. The majority scholarly position holds he was not a prophet; a minority opinion has argued he may have been — that is a labeled scholarly discussion, not a Qur'anic statement.",
+      "The Qur'an gives no biography, era, or narrative for Uzair beyond the single statement at 9:30. His identification with the Biblical Ezra and any biographical detail beyond 9:30 are extra-Qur'anic.",
     ],
   },
 ];

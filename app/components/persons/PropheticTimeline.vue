@@ -41,13 +41,10 @@
         <ul v-if="node.branches.length" v-show="expanded[node.person.id]" :id="`branches-${node.person.id}`" class="branches">
           <li v-for="rel in node.branches" :key="rel.personId" class="branch-item">
             <v-icon size="14" class="branch-icon" aria-hidden="true">mdi-source-branch</v-icon>
-            <component
-              :is="resolveRelated(rel.personId).href ? 'NuxtLink' : 'span'"
-              :to="resolveRelated(rel.personId).href ?? undefined"
-              class="branch-name"
-            >
+            <NuxtLink v-if="resolveRelated(rel.personId).href" :to="resolveRelated(rel.personId).href" class="branch-name">
               {{ resolveRelated(rel.personId).name }}
-            </component>
+            </NuxtLink>
+            <span v-else class="branch-name">{{ resolveRelated(rel.personId).name }}</span>
             <v-chip size="x-small" variant="tonal" class="ml-1">{{ relationshipLabel(rel.relationshipType) }}</v-chip>
             <v-chip
               size="x-small"

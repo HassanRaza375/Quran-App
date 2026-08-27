@@ -7,7 +7,7 @@ import surahList from "../app/assets/data/surah.json";
 import { QURAN_PERSONS, getPersonById } from "../app/data/quranPersons";
 import { validateDataset, validatePerson } from "../app/utils/personsValidate";
 
-const surahs = surahList.map((s: any) => ({ surahNo: s.surahNo, totalAyah: s.totalAyah }));
+const surahs = surahList.map((s: { surahNo: number; totalAyah: number }) => ({ surahNo: s.surahNo, totalAyah: s.totalAyah }));
 
 describe("QURAN_PERSONS dataset integrity", () => {
   it("has no validation issues against real surah/ayah bounds", () => {
@@ -15,8 +15,8 @@ describe("QURAN_PERSONS dataset integrity", () => {
     expect(issues).toEqual([]);
   });
 
-  it("has all 34 people: the 25 traditional named prophets + 9 other named/title-based figures", () => {
-    expect(QURAN_PERSONS.length).toBe(34);
+  it("has all 38 people: the 25 traditional named prophets + 13 other named/title-based figures", () => {
+    expect(QURAN_PERSONS.length).toBe(38);
     expect(QURAN_PERSONS.filter((p) => p.primaryCategory === "prophet")).toHaveLength(25);
   });
 

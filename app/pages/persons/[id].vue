@@ -1,0 +1,311 @@
+<template>
+  <v-container v-if="person" class="person-detail-container">
+    <v-btn variant="text" prepend-icon="mdi-arrow-left" to="/persons" class="mb-3">Back to directory</v-btn>
+
+    <!-- 1. Header / identity -->
+    <v-sheet elevation="1" rounded="lg" class="pa-4 mb-6 header-sheet">
+      <div class="d-flex justify-space-between align-start flex-wrap ga-3">
+        <div>
+          <div class="arabic-name">{{ person.arabicName }}</div>
+          <h1 class="display-name">
+            {{ person.name }}
+            <span v-if="person.honorific?.arabic" class="honorific-arabic">{{ person.honorific.arabic }}</span>
+          </h1>
+          <div v-if="person.alternateNames?.length" class="alternate-names">
+            Also known as: {{ person.alternateNames.join(", ") }}
+          </div>
+        </div>
+        <div class="d-flex flex-column align-end ga-1">
+          <v-chip color="primary" variant="tonal">{{ categoryLabel }}</v-chip>
+          <v-chip v-if="propheticStatusLabel" size="small" variant="outlined">{{ propheticStatusLabel }}</v-chip>
+        </div>
+      </div>
+
+      <div class="meta-row mt-3">
+        <v-chip size="small" variant="outlined" prepend-icon="mdi-book-open-variant">
+          {{ person.directMentions.length }} direct mentions
+        </v-chip>
+        <v-chip size="small" variant="outlined" prepend-icon="mdi-book-open-page-variant">
+          {{ person.relatedPassages.length }} related passages
+        </v-chip>
+        <v-chip v-if="chronologyText" size="small" variant="outlined" prepend-icon="mdi-clock-outline">
+          {{ chronologyText }}
+        </v-chip>
+      </div>
+    </v-sheet>
+
+    <!-- 2. Overview + 3. Expandable detail -->
+    <v-sheet elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+      <p class="overview-text">{{ person.shortDescription }}</p>
+
+      <v-expansion-panels v-if="person.detailedDescription" variant="accordion" class="mt-3">
+        <v-expansion-panel title="More detail">
+          <v-expansion-panel-text>{{ person.detailedDescription }}</v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
+
+      <div v-if="person.themes?.length" class="themes mt-3">
+        <v-chip v-for="theme in person.themes" :key="theme" size="small" variant="tonal" class="mr-2 mb-2">
+          {{ theme }}
+        </v-chip>
+      </div>
+    </v-sheet>
+
+    <!-- 4. Key Lessons -->
+    <v-sheet v-if="person.keyLessons?.length" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+      <h2 class="section-title">Key Lessons</h2>
+      <v-list density="compact">
+        <v-list-item v-for="(lesson, i) in person.keyLessons" :key="i" class="lesson-item">
+          <template #prepend><v-icon size="18" color="primary">mdi-lightbulb-on-outline</v-icon></template>
+          <v-list-item-title class="lesson-text">{{ lesson.text }}</v-list-item-title>
+          <v-list-item-subtitle v-if="lesson.quranReferences?.length" class="lesson-refs">
+            {{ lesson.quranReferences.map((r) => `${surahLabel(r.surahNumber)}:${r.ayahNumber}`).join(", ") }}
+          </v-list-item-subtitle>
+        </v-list-item>
+      </v-list>
+    </v-sheet>
+
+    <!-- 5. Direct Mentions -->
+    <v-sheet elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+      <h2 class="section-title">Direct Mentions</h2>
+      <p class="section-hint">
+        Ayahs where {{ person.name }}'s name is explicitly mentioned (a curated, non-exhaustive subset — see
+        <NuxtLink to="/about">About</NuxtLink> for dataset notes).
+      </p>
+      <SurahReferenceGroup v-if="directMentionGroups.length" :groups="directMentionGroups" />
+      <p v-else class="text-medium-emphasis">No direct name mentions are catalogued for this person yet.</p>
+    </v-sheet>
+
+    <!-- 6. Related Passages -->
+    <v-sheet elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+      <div class="d-flex justify-space-between align-center flex-wrap ga-2">
+        <h2 class="section-title mb-0">Related Passages</h2>
+        <div class="d-flex align-center ga-2">
+          <v-btn-toggle v-model="passageView" density="compact" mandatory color="primary" variant="outlined">
+            <v-btn value="surah" size="small">Grouped by Surah</v-btn>
+            <v-btn value="story" size="small">Story View</v-btn>
+          </v-btn-toggle>
+          <v-btn
+            size="small"
+            variant="tonal"
+            color="primary"
+            :prepend-icon="isQueuePlaying ? 'mdi-pause' : 'mdi-play'"
+            @click="onPlayAll"
+          >
+            {{ isQueuePlaying ? "Playing all…" : "Play all passages" }}
+          </v-btn>
+        </div>
+      </div>
+
+      <p class="section-hint">
+        Manually curated passages relevant to {{ person.name }}'s story, including verses where the name isn't
+        repeated. Story View presents them as a study sequence, not one continuous revealed passage.
+      </p>
+
+      <template v-if="person.relatedPassages.length">
+        <template v-if="passageView === 'surah'">
+          <div v-for="group in relatedPassageGroups" :key="group.surahNumber" class="passage-group mb-4">
+            <div class="passage-group-title">{{ surahLabel(group.surahNumber) }}</div>
+            <div class="d-flex flex-column ga-2 mt-2">
+              <RelatedPassageCard
+                v-for="p in group.references"
+                :key="p.id"
+                :passage="p"
+                :is-this-passage-playing="isThisPassagePlaying(p)"
+                @play="playSinglePassage"
+              />
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <div class="d-flex flex-column ga-2 mt-3">
+            <RelatedPassageCard
+              v-for="p in storyOrderedPassages"
+              :key="p.id"
+              :passage="p"
+              :is-this-passage-playing="isThisPassagePlaying(p)"
+              @play="playSinglePassage"
+            />
+          </div>
+        </template>
+      </template>
+      <p v-else class="text-medium-emphasis">No related passages are catalogued for this person yet.</p>
+    </v-sheet>
+
+    <!-- Sources & notes (source-separation is a core principle of this feature) -->
+    <v-sheet v-if="person.sources?.length || person.statusNotes?.length" elevation="0" rounded="lg" class="pa-4 mb-10 section-sheet">
+      <h2 class="section-title">Sources &amp; Notes</h2>
+      <ul v-if="person.sources?.length" class="sources-list">
+        <li v-for="(s, i) in person.sources" :key="i">
+          <v-chip size="x-small" variant="outlined" class="mr-2">{{ sourceTypeLabel(s.type) }}</v-chip>{{ s.citation }}
+        </li>
+      </ul>
+      <ul v-if="person.statusNotes?.length" class="status-notes-list mt-2">
+        <li v-for="(note, i) in person.statusNotes" :key="i">{{ note }}</li>
+      </ul>
+    </v-sheet>
+  </v-container>
+
+  <v-container v-else class="text-center py-12">
+    <v-icon size="40" class="mb-2">mdi-account-question-outline</v-icon>
+    <p>Person not found.</p>
+    <v-btn to="/persons" variant="tonal" color="primary">Back to directory</v-btn>
+  </v-container>
+</template>
+
+<script setup>
+import SurahReferenceGroup from "~/components/persons/SurahReferenceGroup.vue";
+import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
+
+const route = useRoute();
+const { getPersonById, groupDirectMentionsBySurah, groupRelatedPassagesBySurah, sortRelatedPassagesForStoryView } =
+  usePersons();
+const { playAllPassages, isQueuePlaying, queue, queueIndex } = usePersonPassageQueue();
+
+const person = computed(() => getPersonById(String(route.params.id)));
+
+useHead(() => ({
+  title: person.value ? `${person.value.name} — Prophets & People of the Qur'an` : "Person not found",
+}));
+
+const categoryLabel = computed(() => {
+  if (!person.value) return "";
+  return CATEGORY_FILTERS.find((c) => c.value === person.value.primaryCategory)?.label ?? person.value.primaryCategory;
+});
+
+const propheticStatusLabels = {
+  prophet: "Prophet",
+  messenger: "Messenger",
+  prophet_and_messenger: "Prophet · Messenger",
+};
+const propheticStatusLabel = computed(() => person.value ? propheticStatusLabels[person.value.personType] ?? null : null);
+
+const chronologyStatusLabel = {
+  strong: null,
+  traditional: "Traditional chronology",
+  uncertain: "Chronology uncertain",
+  unknown: "Chronology unknown",
+};
+const chronologyText = computed(() => {
+  const chronology = person.value?.chronology;
+  if (!chronology) return "";
+  if (chronology.label && chronology.status === "strong") return chronology.label;
+  const statusLabel = chronologyStatusLabel[chronology.status];
+  if (chronology.label && statusLabel) return `${chronology.label} — ${statusLabel}`;
+  return statusLabel ?? chronology.label ?? "";
+});
+
+const sourceTypeLabel = (type) =>
+  ({ quran: "Qur'an", authentic_hadith: "Authentic Hadith", traditional_account: "Traditional account" })[type] ?? type;
+
+const directMentionGroups = computed(() => (person.value ? groupDirectMentionsBySurah(person.value) : []));
+const relatedPassageGroups = computed(() => (person.value ? groupRelatedPassagesBySurah(person.value) : []));
+const storyOrderedPassages = computed(() => (person.value ? sortRelatedPassagesForStoryView(person.value) : []));
+
+const passageView = ref("surah");
+
+const onPlayAll = () => {
+  if (!person.value) return;
+  playAllPassages(person.value.name, person.value.relatedPassages);
+};
+
+const playSinglePassage = (passage) => {
+  if (!person.value) return;
+  playAllPassages(person.value.name, [passage]);
+};
+
+const isThisPassagePlaying = (passage) => {
+  if (!isQueuePlaying.value) return false;
+  const current = queue.value[queueIndex.value];
+  return !!current && current.surahNo === passage.surahNumber && current.ayahNo >= passage.ayahStart && current.ayahNo <= passage.ayahEnd;
+};
+</script>
+
+<style scoped>
+.person-detail-container {
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 60px;
+}
+
+.header-sheet {
+  border: 1px solid rgba(var(--v-theme-primary), 0.15);
+  background: linear-gradient(135deg, rgba(var(--v-theme-primary), 0.05), rgba(var(--v-theme-secondary), 0.05));
+}
+
+.arabic-name {
+  font-family: "Amiri Quran", serif;
+  font-size: 2rem;
+  direction: rtl;
+}
+
+.display-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2px 0;
+}
+
+.honorific-arabic {
+  font-family: "Amiri Quran", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(var(--v-theme-on-surface), 0.7);
+}
+
+.alternate-names {
+  font-size: 0.8rem;
+  color: rgba(var(--v-theme-on-surface), 0.6);
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section-sheet {
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.06);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-hint {
+  font-size: 0.8rem;
+  color: rgba(var(--v-theme-on-surface), 0.6);
+  margin-bottom: 10px;
+}
+
+.overview-text {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.lesson-item {
+  padding-block: 6px;
+}
+
+.lesson-text {
+  white-space: normal;
+}
+
+.lesson-refs {
+  font-size: 0.75rem;
+}
+
+.passage-group-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.sources-list,
+.status-notes-list {
+  font-size: 0.82rem;
+  color: rgba(var(--v-theme-on-surface), 0.75);
+  line-height: 1.6;
+  padding-inline-start: 18px;
+}
+</style>

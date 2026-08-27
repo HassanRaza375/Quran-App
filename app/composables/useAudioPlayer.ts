@@ -27,6 +27,12 @@ export const useAudioPlayer = () => {
     () => null
   );
 
+  // Ticks (via Date.now()) on every *natural* end of playback — distinct from
+  // a user-initiated pause, which only flips `playing` to false. Lets a
+  // caller drive its own sequential queue (e.g. Prophets & Persons "Play all
+  // passages") without building a second audio element/player.
+  const endedAt = useState<number>("audio-ended-at", () => 0);
+
   const getStorage = () => useNuxtApp().$storage;
 
   const loadPrefs = () => {
@@ -84,6 +90,7 @@ export const useAudioPlayer = () => {
           return;
         }
         playing.value = false;
+        endedAt.value = Date.now();
         if (autoAdvance.value && nowPlaying.value?.type === "surah") {
           playNextInQueue();
         }
@@ -248,6 +255,7 @@ export const useAudioPlayer = () => {
     // now-playing metadata (for the global mini-player / Media Session)
     nowPlaying,
     setNowPlaying,
+    endedAt,
     // preferences
     playbackRate,
     setPlaybackRate,

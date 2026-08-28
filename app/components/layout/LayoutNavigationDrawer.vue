@@ -56,6 +56,7 @@ const sidebarList = computed(() => [
   { title: "Search", icon: "mdi-magnify", path: "/search" },
   { title: "Prophets & People", icon: "mdi-account-group-outline", path: "/persons" },
   { title: "Peoples & Nations", icon: "mdi-map-marker-radius-outline", path: "/peoples" },
+  { title: "Places", icon: "mdi-map-outline", path: "/places" },
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
   { title: "Reading Goals", icon: "mdi-target", path: "/goals" },
   { title: "Ramadan Mode", icon: "mdi-moon-waning-crescent", path: "/ramadan" },

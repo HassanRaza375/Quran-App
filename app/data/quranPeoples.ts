@@ -20,6 +20,15 @@
 // its own independent identity across the Qur'an — the defining trait of
 // every entity below. No overlap, no duplication.
 //
+// Phase 3 (Places) migration: audited every `associatedPlaces` free-text
+// value below and converted 2 of 5 to structured `relatedPlaceIds` links
+// (Al-Ahqaf for 'Ad, Al-Hijr for Thamud) where a dedicated, adequately-
+// supported Place entity was justified — the other 3 (Saba's "South
+// Arabia," People of Lut's "Dead Sea region," People of Yunus's "Nineveh")
+// were deliberately left as free text, since no Qur'an-named location
+// exists to anchor a real entity to. See each entity's own statusNotes for
+// the specific reasoning, and app/data/quranPlaces.ts for the Place side.
+//
 // Verification: every entity's core Qur'anic term was checked against this
 // app's live Quran search API (alquran.cloud) at authoring time. Several
 // short/common Arabic roots used for these terms (e.g. "عاد," "سبأ,"
@@ -36,8 +45,10 @@
 // substantive narrative citation either way, per this app's established
 // Direct-Mentions-vs-Related-Passages discipline.
 import { asRef } from "~/utils/quranReference";
-import type { QuranReference, RelatedPassage, SourceReference } from "~/utils/quranReference";
+import type { QuranReference, RelatedPassage, SourceReference, IdentificationBasis } from "~/utils/quranReference";
 import type { PersonRelationship } from "~/data/quranPersons";
+
+export type { IdentificationBasis } from "~/utils/quranReference";
 
 export type CommunityType =
   | "nation"
@@ -46,17 +57,6 @@ export type CommunityType =
   | "religious_community"
   | "historical_population"
   | "narrative_group";
-
-/** How this entity's identity/designation is established — distinct from
- * (and does not replace) `PersonRelationship.sourceType`/`verificationStatus`,
- * which separately grade individual relationship claims. This field grades
- * the ENTITY'S OWN identification, per Phase 2's explicit requirement to
- * distinguish these four levels for every entity, not just for names. */
-export type IdentificationBasis =
-  | "quran_explicit" // the Qur'an itself names/designates this collective directly
-  | "quran_context" // identity established by the Qur'an's own surrounding context, not a direct label
-  | "traditional" // a later tafsir/historical identification, not stated in the Qur'an text
-  | "disputed"; // scholars differ and the Qur'an does not settle the matter
 
 export type QuranCommunity = {
   id: string;
@@ -87,12 +87,20 @@ export type QuranCommunity = {
    * Phase 10 flag on typed cross-module references. */
   relationships?: PersonRelationship[];
 
-  /** Free-text place names, not structured Place-entity ids — Phase 3
-   * (Places) doesn't exist yet, so there is nothing to link to. Upgrade to
-   * real relationships once it does; do not treat this as a citation of
-   * Qur'anic fact by itself (see each entity's own statusNotes for the
-   * actual source basis of any place named here). */
+  /** Free-text place names — kept for entities where no Place entity is (yet)
+   * defensible (see each entity's own statusNotes for the source basis).
+   * Phase 3 (Places) migration: where a real, adequately-supported Place
+   * entity now exists, prefer `relatedPlaceIds` below and either trim or
+   * keep this array only for the human-readable label — see this file's
+   * Phase 3 migration note near the top for which of the 5 original
+   * entries were upgraded and which were deliberately left as free text. */
   associatedPlaces?: string[];
+
+  /** Added in Phase 3 — ids into QURAN_PLACES (app/data/quranPlaces.ts).
+   * Optional and only set where the Place↔Community connection is actually
+   * textually supported, not for every place name ever mentioned near this
+   * entity. */
+  relatedPlaceIds?: string[];
 
   sources?: SourceReference[];
   statusNotes?: string[];
@@ -140,10 +148,11 @@ export const QURAN_COMMUNITIES: QuranCommunity[] = [
     relationships: [
       { personId: "hud", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
     ],
-    associatedPlaces: ["Al-Ahqaf (traditional identification only — see statusNotes)"],
+    relatedPlaceIds: ["alahqaf", "iram"],
     sources: [{ type: "quran", citation: "Al-A'raf 7:65-72; Hud 11:50-60; Al-Haqqah 69:4-8" }],
     statusNotes: [
-      "'Ad's precise geographic location and era are not established by the Qur'an text itself. 'Al-Ahqaf' (46:21, 'the sandy tracts') is where the Qur'an places a warning to 'the brothers of 'Ad,' and later tradition/geography commonly identifies this with a region of southern Arabia — that geographic identification is traditional, not a Qur'an-stated coordinate.",
+      "Phase 3 migration: the free-text 'Al-Ahqaf' place note from this entity's original Phase 2 version was upgraded to a real, structured link (`relatedPlaceIds`) once a dedicated Al-Ahqaf entity was created — 46:21 directly names Al-Ahqaf as where 'Ad was warned, a strong enough textual link to justify the entity. 'Iram' (89:7) is also linked — see its own entry for the disputed question of whether it names 'Ad's city specifically or is a broader description.",
+      "'Ad's precise present-day geographic location is still not established by the Qur'an text itself — see Al-Ahqaf's own entry for the traditional-vs-modern identification distinction; this entry does not assert a specific location beyond the Qur'an-named 'Al-Ahqaf.'",
       "`directMentions` here is a manually-verified anchor set, not an exhaustive whole-word count like Module 17's — the root 'ع-و-د' is common enough (e.g. 'return,' 'promise') that this app's search API returns heavy false-positive contamination for the bare word 'عاد,' so an exhaustive count was not attempted for this entry. See this file's own header comment.",
     ],
   },
@@ -192,10 +201,10 @@ export const QURAN_COMMUNITIES: QuranCommunity[] = [
     relationships: [
       { personId: "salih", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
     ],
-    associatedPlaces: ["Al-Hijr (traditional identification only — see statusNotes)"],
+    relatedPlaceIds: ["alhijr"],
     sources: [{ type: "quran", citation: "Al-A'raf 7:73-79; Hud 11:61-68; Ash-Shams 91:11-15" }],
     statusNotes: [
-      "Thamud's territory is not named with a place-word inside the passages cited above; 'Al-Hijr' (also the name of Surah 15) is the standard later/geographic identification for their dwellings, not a claim this entry treats as established purely from these ayahs alone.",
+      "Phase 3 migration: the free-text 'Al-Hijr' note from this entity's original Phase 2 version was upgraded to a structured link (`relatedPlaceIds`), but with a documented caveat carried onto Al-Hijr's own entry: 15:80 ('Ashab al-Hijr denied the messengers') does not itself name Thamud — the identification of 'Ashab al-Hijr' as Thamud is contextual/traditional (matching Thamud's own description elsewhere as carving homes from mountains, e.g. 7:74, 89:9), not a direct Qur'an-stated equation. `identificationBasis: 'quran_context'` on that link reflects this, not 'quran_explicit.'",
       "`directMentions` here is the full result of a live search for the distinctive term 'ثمود,' which — unlike 'عاد' — showed no evident false-positive contamination on inspection (no common unrelated Arabic word shares this root), so this list is treated as reliable, though it was not independently re-verified ayah-by-ayah the way Module 17's exhaustive standard requires.",
     ],
   },
@@ -238,6 +247,7 @@ export const QURAN_COMMUNITIES: QuranCommunity[] = [
     statusNotes: [
       "This app's search API returns heavy false-positive contamination for 'مدين' (it is literally a substring of 'المدينة,' 'the city'/Madinah), so `directMentions` here is a manually-verified anchor set from established knowledge of these passages, not an API-exhaustive count — see this file's own header comment.",
       "Madyan's relationship to 'Ashab al-Aykah' (the separate entry below, also associated with Shu'ayb) is a genuine, unresolved scholarly question — see that entry's own statusNotes; this entry does not assert they are the same community.",
+      "Phase 3 boundary decision: 'Madyan' is both a people-name and a place-name in Arabic (the same word functions both ways across different ayahs, e.g. 28:22 'Musa oriented himself toward Madyan' uses it as a destination/place). No separate Place entity was created for it — that would duplicate this entry for no added content — this entity is deliberately understood to cover both senses.",
     ],
   },
 
@@ -269,6 +279,7 @@ export const QURAN_COMMUNITIES: QuranCommunity[] = [
     sources: [{ type: "quran", citation: "Ash-Shu'ara 26:176-191; Al-Hijr 15:78-79; Sad 38:13; Qaf 50:14" }],
     statusNotes: [
       "IMPORTANT: The Qur'an does not explicitly equate 'Ashab al-Aykah' with 'Madyan' anywhere in the text — they are addressed by the same prophet (Shu'ayb) with closely parallel warnings, but under two different collective names in different passages. Exegetes are genuinely divided: some hold they are the same community described two ways, others that they are two related but distinct communities Shu'ayb was sent to. This entry does not assert either resolution — kept as a separate entity from Madyan for that reason, with this note on both entries.",
+      "Phase 3: no separate 'Al-Aykah' Place entity was created for the same reason given on Madyan's entry — 'الأيكة' ('the thicket/wood') functions as this community's designation, not a distinct additional location to catalog.",
     ],
   },
 
@@ -311,6 +322,7 @@ export const QURAN_COMMUNITIES: QuranCommunity[] = [
     statusNotes: [
       "This entity is deliberately distinct from the Bilqis entry in People & Groups: Bilqis is the individual queen (whose very name is a traditional, not Qur'anic, identification — see her own statusNotes); this entry is the nation/kingdom of Saba' itself, including the later, separate narrative of its people's own turning away and the flood — a passage that does not involve Bilqis or Sulaiman at all.",
       "The Qur'an does not date the flood of the dam or connect it explicitly to any specific ruler; the well-known 'Ma'rib Dam' identification is a later historical/archaeological association, not stated in these ayahs.",
+      "Phase 3 migration note: 'South Arabia (Yemen)' remains free text, not a structured `relatedPlaceIds` link — no dedicated Place entity was created for it in Phase 3, since the identification is a broad modern/historical regional association rather than a specific Qur'an-named location the way Al-Ahqaf or Al-Hijr are.",
     ],
   },
 
@@ -431,6 +443,7 @@ export const QURAN_COMMUNITIES: QuranCommunity[] = [
     sources: [{ type: "quran", citation: "Hud 11:69-83; Al-A'raf 7:80-84" }],
     statusNotes: [
       "This entry is the town/population collectively; the individual fate of Lut's wife specifically is already covered on her own People & Groups entry and is not restated in full here beyond the outcome summary.",
+      "Phase 3 migration note: 'the Dead Sea region' remains free text — no dedicated Place entity was created for it, since the identification is a broad modern geographic hypothesis about an unnamed town, not a specific Qur'an-named location.",
     ],
   },
 
@@ -645,6 +658,7 @@ export const QURAN_COMMUNITIES: QuranCommunity[] = [
     sources: [{ type: "quran", citation: "Yunus 10:98; As-Saffat 37:139-148" }],
     statusNotes: [
       "The Qur'an does not name this town; 'Nineveh' is the standard traditional/historical identification (also reflected in the Biblical account of Jonah), not stated in the Arabic text of either passage cited here.",
+      "Phase 3 migration note: 'Nineveh' remains free text — no dedicated Place entity was created for it, since it would carry no Qur'anic textual content beyond what this entry already states (the town is never named in the text).",
     ],
   },
 ];

@@ -123,7 +123,18 @@
       </div>
     </v-sheet>
 
-    <!-- 7. Associated places -->
+    <!-- 6b. Related Places (Phase 3 — structured links, distinct from the free-text Associated Places below) -->
+    <v-sheet v-if="community.relatedPlaceIds?.length" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
+      <h2 class="section-title">Related Places</h2>
+      <p class="section-hint">Places module (Phase 3) entries with a documented, structured connection to this entity.</p>
+      <div class="d-flex flex-wrap ga-2">
+        <v-chip v-for="pid in community.relatedPlaceIds" :key="pid" :to="resolveRelatedPlace(pid).href ?? undefined" variant="outlined" prepend-icon="mdi-map-marker-outline">
+          {{ resolveRelatedPlace(pid).name }}
+        </v-chip>
+      </div>
+    </v-sheet>
+
+    <!-- 7. Associated places (free text, kept where no structured Place entity was created — see quranPeoples.ts's own Phase 3 migration notes) -->
     <v-sheet v-if="community.associatedPlaces?.length" elevation="0" rounded="lg" class="pa-4 mb-6 section-sheet">
       <h2 class="section-title">Associated Places</h2>
       <p class="section-hint">
@@ -162,10 +173,20 @@
 import SurahReferenceGroup from "~/components/persons/SurahReferenceGroup.vue";
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
 import { COMMUNITY_TYPE_FILTERS } from "~/utils/peoplesSearch";
+import { getPlaceById } from "~/data/quranPlaces";
 
 const route = useRoute();
 const { getCommunityById, groupDirectMentionsBySurah, groupRelatedPassagesBySurah, resolveAssociatedPerson } =
   usePeoples();
+
+/** Added in Phase 3 — resolves a community's `relatedPlaceIds` against the
+ * Places module. A small, direct lookup here (not a full `usePlaces()`
+ * import) since this is the only Places-related thing this page needs. */
+const resolveRelatedPlace = (placeId) => {
+  const target = getPlaceById(placeId);
+  if (target) return { name: target.name, href: `/places/${target.id}` };
+  return { name: placeId, href: null };
+};
 const { playPassages, isQueuePlaying, queue, queueIndex } = useCommunityPassageQueue();
 const { load: loadBookmarks, has, toggle } = useBookmarks();
 

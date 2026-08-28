@@ -38,3 +38,17 @@ export type SourceReference = {
 };
 
 export const asRef = (surahNumber: number, ayahNumber: number): QuranReference => ({ surahNumber, ayahNumber });
+
+// Added in Phase 3 (Places) — originally a 4-level `IdentificationBasis` was
+// defined locally in app/data/quranPeoples.ts (Phase 2). Phase 3 needs a
+// 5th level ("modern_identification" — a proposed present-day geographic
+// identification, distinct from a classical/traditional exegetical one) and
+// is the second consumer, so it moves here per this file's own established
+// pattern. Phase 2's four original values are unchanged; no existing
+// QuranCommunity entry uses the new 5th value, so this is purely additive.
+export type IdentificationBasis =
+  | "quran_explicit" // the Qur'an itself names/designates this directly
+  | "quran_context" // identity established by the Qur'an's own surrounding context, not a direct label
+  | "traditional" // a later tafsir/historical identification, not stated in the Qur'an text
+  | "modern_identification" // a proposed present-day/archaeological identification, distinct from classical tafsir
+  | "disputed"; // scholars differ and the Qur'an does not settle the matter

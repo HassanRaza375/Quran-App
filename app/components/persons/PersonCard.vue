@@ -25,6 +25,9 @@
           <v-chip size="x-small" variant="tonal" color="primary" class="category-chip">
             {{ categoryLabel }}
           </v-chip>
+          <v-chip v-if="person.entityType === 'group'" size="x-small" variant="outlined" prepend-icon="mdi-account-group">
+            Group
+          </v-chip>
         </div>
 
         <p class="short-description mt-2">{{ person.shortDescription }}</p>

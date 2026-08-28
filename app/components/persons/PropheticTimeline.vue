@@ -61,7 +61,7 @@
     </ol>
 
     <div v-if="timeline.unlinked.length" class="unlinked-section">
-      <h3 class="unlinked-title">Other Qur'anic Persons</h3>
+      <h3 class="unlinked-title">Other Qur'anic People &amp; Groups</h3>
       <p class="unlinked-hint">
         Not yet placed in the chronological sequence above — no established relationship to a mainline prophet is
         recorded for them in this dataset.

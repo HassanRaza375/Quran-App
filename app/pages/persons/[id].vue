@@ -8,7 +8,7 @@
         :prepend-icon="isBookmarked ? 'mdi-bookmark' : 'mdi-bookmark-outline'"
         @click="toggleBookmark"
       >
-        {{ isBookmarked ? "Saved" : "Save Person" }}
+        {{ isBookmarked ? "Saved" : "Save" }}
       </v-btn>
     </div>
 
@@ -43,6 +43,7 @@
         </div>
         <div class="d-flex flex-column align-end ga-1">
           <v-chip color="primary" variant="tonal">{{ categoryLabel }}</v-chip>
+          <v-chip v-if="person.entityType === 'group'" size="small" variant="outlined" prepend-icon="mdi-account-group">Group — not individually named</v-chip>
           <v-chip v-if="propheticStatusLabel" size="small" variant="outlined">{{ propheticStatusLabel }}</v-chip>
         </div>
       </div>

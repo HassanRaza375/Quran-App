@@ -1,24 +1,44 @@
 // Prophets & Qur'anic Persons — dataset types + data.
 // See prophets-quran-feature.md for the full product spec this implements
 // (Phase 1-5 UI/integration work is complete — see MODULE_BLUEPRINT.md
-// Module 17). This file is the CONTENT layer: prophets and selected named/
-// title-based HUMAN figures mentioned in the Qur'an — 38 people (the 25
-// traditionally named prophets + 13 other named/title-based figures), each
-// verified against this app's own live Quran search API
-// (alquran.cloud, Arabic `quran-simple` edition) at authoring time.
+// Module 17). This file is the CONTENT layer: prophets, named/title-based
+// HUMAN figures, and significant HUMAN groups mentioned in the Qur'an — 56
+// entries (the 25 traditionally named prophets, 24 other named/title-based
+// individuals, and 7 collectively-significant groups), each verified
+// against this app's own live Quran search API (alquran.cloud, Arabic
+// `quran-simple` edition) at authoring time.
 //
-// This is NOT a claim of covering every individual mentioned in the Qur'an.
-// Known, deliberate exclusions:
-//   - Unnamed-but-identifiable individuals (e.g. Pharaoh's wife, the
-//     believing man of Pharaoh's family, Al-Khidr) are out of scope for this
-//     release — a candidate list for future expansion exists separately.
+// Coverage-audit expansion (56th entry onward from the original 38): a
+// systematic pass identified individuals the Qur'an clearly identifies by
+// role even without a personal name (Al-Khidr, Pharaoh's wife, the
+// believing man of Pharaoh's family, etc. — `personType: "title_based_person"`,
+// same convention already used for Dhul-Qarnayn/Bilqis/Uzair) and
+// collectively-named groups where the Qur'an itself does not give
+// individual members' names (People of the Cave, People of the Trench,
+// etc. — `entityType: "group"`, `personType: "quranic_group"`). See this
+// file's own additions below for the per-entry source-separation notes, and
+// the "Qur'anic Persons — Comprehensive Coverage Audit & Dataset Expansion"
+// report for the full candidate table (entries added, and — just as
+// deliberately — entries considered and excluded).
+//
+// This is still NOT a claim of covering every individual or group mentioned
+// in the Qur'an. Known, deliberate exclusions (see the audit report for the
+// full reasoning on each):
+//   - Generic/incidental unnamed people with no distinct individual role,
+//     and whole peoples/nations (e.g. 'Ad, Thamud, the People of Saba' as a
+//     nation) — the latter belong to a possible future "Peoples &
+//     Communities" taxonomy, not this Persons/Figures & Groups feature.
 //   - Named NON-HUMAN beings (the angels Harut and Marut, 2:102; Iblis) are
 //     out of scope — this feature is scoped to human Qur'anic persons.
 //   - 'Imran is a deliberate omission, not an oversight: his name occurs
 //     only in genitive/possessive constructions ("family of 'Imran," "wife
 //     of 'Imran," "Maryam, daughter of 'Imran") with no independent
 //     narrative or action attributed to him, so he has no person-focused
-//     role for this feature to build a profile around.
+//     role for this feature to build a profile around. The same reasoning
+//     is why Al-'Aziz of Egypt and his wife (Surah Yusuf) are not
+//     included in this pass — significant to Yusuf's narrative, but a
+//     secondary supporting role rather than a distinct arc of their own;
+//     flagged as a future-candidate, not silently dropped.
 //
 // Verification method (see MODULE_BLUEPRINT.md for the full write-up):
 // the search API does root/substring matching, not whole-word matching, so
@@ -49,7 +69,21 @@ export type PersonType =
   | "messenger"
   | "prophet_and_messenger"
   | "quranic_person"
-  | "title_based_person";
+  | "title_based_person"
+  | "quranic_group";
+
+/** Structural distinction between an individual and a collectively-named
+ * group (e.g. "People of the Cave") — orthogonal to `PersonType`, which
+ * still separately captures prophetic status. Optional and defaults to an
+ * individual: every entry from the original 38 predates this field and is
+ * implicitly `"person"`; only new group entries set `entityType: "group"`
+ * explicitly. Kept as a lightweight flag rather than a parallel data
+ * shape/directory so the existing directory, search, bookmarks, and
+ * Continue Studying integration all keep working unmodified — a group is
+ * still a `QuranPerson` record, just one the UI labels as a group (see
+ * PersonCard.vue / [id].vue's "Group" chip) instead of implying named
+ * individual membership. */
+export type EntityType = "person" | "group";
 
 export type ChronologyStatus = "strong" | "traditional" | "uncertain" | "unknown";
 
@@ -100,6 +134,9 @@ export type QuranPerson = {
   name: string;
   arabicName: string;
   alternateNames?: string[];
+
+  /** Defaults to "person" when omitted — see EntityType's own doc comment. */
+  entityType?: EntityType;
 
   primaryCategory: PrimaryCategory;
   secondaryCategories?: PrimaryCategory[];
@@ -268,6 +305,7 @@ export const QURAN_PERSONS: QuranPerson[] = [
     ],
     relationships: [
       { personId: "ibrahim", relationshipType: "ancestor", sourceType: "traditional_account", verificationStatus: "traditional" },
+      { personId: "nuhwife", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Patience in calling people to Allah, even across a very long span of time.", quranReferences: [asRef(29, 14)], status: "quran_derived" },
@@ -434,6 +472,9 @@ export const QURAN_PERSONS: QuranPerson[] = [
       { personId: "ishaq", relationshipType: "father", sourceType: "quran", verificationStatus: "verified" },
       { personId: "nuh", relationshipType: "descendant", sourceType: "traditional_account", verificationStatus: "traditional" },
       { personId: "lut", relationshipType: "contemporary", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "azar", relationshipType: "son", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "ibrahimwife", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "namrud", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Willingness to stand alone against inherited falsehood, even from one's own father.", quranReferences: [asRef(19, 42), asRef(19, 46)], status: "quran_derived" },
@@ -492,6 +533,7 @@ export const QURAN_PERSONS: QuranPerson[] = [
     ],
     relationships: [
       { personId: "ibrahim", relationshipType: "contemporary", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "lutwife", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "A spouse's unbelief, even within a prophet's own household, does not itself grant salvation.", quranReferences: [asRef(66, 10)], status: "quran_derived" },
@@ -590,6 +632,7 @@ export const QURAN_PERSONS: QuranPerson[] = [
     relationships: [
       { personId: "ibrahim", relationshipType: "son", sourceType: "quran", verificationStatus: "verified" },
       { personId: "yaqub", relationshipType: "father", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "ibrahimwife", relationshipType: "son", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Prophethood is described as continuing through his descendants, not ending with him.", quranReferences: [asRef(29, 27)], status: "quran_derived" },
@@ -706,6 +749,10 @@ export const QURAN_PERSONS: QuranPerson[] = [
     relationships: [
       { personId: "yaqub", relationshipType: "son", sourceType: "quran", verificationStatus: "verified" },
       { personId: "ibrahim", relationshipType: "descendant", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "yusufbrothers", relationshipType: "brother", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "alaziz", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "alazizwife", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "kingofegypt", relationshipType: "supporter", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Trials endured with patience can be followed by a position of great responsibility and mercy toward those who wronged you.", quranReferences: [asRef(12, 90), asRef(12, 92)], status: "quran_derived" },
@@ -880,6 +927,9 @@ export const QURAN_PERSONS: QuranPerson[] = [
       { personId: "haman", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
       { personId: "qarun", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
       { personId: "samiri", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "khidr", relationshipType: "teacher_student", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "musawarner", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "sahara", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Allah's help can arrive at the point of complete apparent hopelessness ('Indeed, with me is my Lord; He will guide me').", quranReferences: [asRef(26, 62)], status: "quran_derived" },
@@ -1292,6 +1342,7 @@ export const QURAN_PERSONS: QuranPerson[] = [
     ],
     relationships: [
       { personId: "maryam", relationshipType: "mother", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "hawariyyun", relationshipType: "teacher_student", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Every miracle performed is explicitly attributed to Allah's permission, not to Isa's own power.", quranReferences: [asRef(3, 49), asRef(5, 110)], status: "quran_derived" },
@@ -1401,6 +1452,7 @@ export const QURAN_PERSONS: QuranPerson[] = [
     relationships: [
       { personId: "isa", relationshipType: "son", sourceType: "quran", verificationStatus: "verified" },
       { personId: "zakariyya", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "maryammother", relationshipType: "mother", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "Complete trust in Allah's provision in a moment of extreme difficulty and isolation.", quranReferences: [asRef(19, 24), asRef(19, 25)], status: "quran_derived" },
@@ -1500,6 +1552,9 @@ export const QURAN_PERSONS: QuranPerson[] = [
     relationships: [
       { personId: "musa", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
       { personId: "haman", relationshipType: "supporter", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "firaunwife", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "believingman", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "sahara", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
     ],
     keyLessons: [
       { text: "A last-minute declaration of belief made only once punishment is unavoidable is explicitly rejected as too late.", quranReferences: [asRef(10, 90), asRef(10, 91)], status: "quran_derived" },
@@ -1871,6 +1926,924 @@ export const QURAN_PERSONS: QuranPerson[] = [
     statusNotes: [
       "The Qur'an does not call Uzair a prophet, and this entry does not present him as one. The majority scholarly position holds he was not a prophet; a minority opinion has argued he may have been — that is a labeled scholarly discussion, not a Qur'anic statement.",
       "The Qur'an gives no biography, era, or narrative for Uzair beyond the single statement at 9:30. His identification with the Biblical Ezra and any biographical detail beyond 9:30 are extra-Qur'anic.",
+    ],
+  },
+
+  // ============================================================
+  // Comprehensive coverage-audit expansion — Qur'anically identified
+  // individuals the Qur'an does not personally name, plus significant
+  // Qur'anic human GROUPS (`entityType: "group"`, `personType:
+  // "quranic_group"`). Every group name/phrase and the name "Azar" below
+  // was re-verified against this app's live Quran search API at authoring
+  // time, the same whole-word method documented at the top of this file.
+  // Individuals with no independent verifiable Qur'anic phrase (e.g. Al-
+  // Khidr, described only as "a servant among Our servants," 18:65 — a
+  // phrase reused elsewhere for unrelated people) correctly carry an empty
+  // `directMentions`, per this file's existing convention for Bilqis.
+  // ============================================================
+  {
+    id: "azar",
+    name: "Azar",
+    arabicName: "آزر",
+    primaryCategory: "family_relative",
+    personType: "quranic_person",
+    shortDescription:
+      "Named once in the Qur'an as the father Ibrahim publicly confronted over idol worship — a rare case of a named human individual outside the prophets whose relationship to a prophet is stated directly in the text.",
+    detailedDescription:
+      "6:74 has Ibrahim ask his father Azar, by name, 'Do you take idols as gods?' The Qur'an goes on to narrate Ibrahim's repeated attempts to turn him from idolatry (19:41-48, 26:69-82), his prayer for his father's forgiveness, and — once it became clear Azar remained 'an enemy of Allah' — Ibrahim disowning that prayer (9:113-114, 60:4).",
+    themes: ["Da'wah to one's own family", "Rejection of idolatry", "The limits of interceding for a disbeliever"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(6, 74)],
+    relatedPassages: [
+      {
+        id: "azar-maryam-dialogue",
+        surahNumber: 19, ayahStart: 41, ayahEnd: 48,
+        title: "Ibrahim's Appeal to His Father",
+        description: "Ibrahim's gentle, repeated appeal to his father to abandon idol worship, and his father's refusal and threat.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "azar-shuara-prayer",
+        surahNumber: 26, ayahStart: 69, ayahEnd: 82,
+        title: "Ibrahim's Public Reasoning and Prayer",
+        description: "Ibrahim's public case against idolatry before his father and people, and his prayer for his father's forgiveness.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "azar-tawbah-disowning",
+        surahNumber: 9, ayahStart: 113, ayahEnd: 114,
+        title: "Disowning the Prayer",
+        description: "Ibrahim's prayer for his father is described as only a promise, withdrawn once it became clear he was an enemy of Allah.",
+        storyOrder: 3, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "ibrahim", relationshipType: "father", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Standing for truth applies even within one's own family, delivered with respect ('O my father') rather than contempt.", quranReferences: [asRef(19, 42), asRef(19, 45)], status: "quran_derived" },
+      { text: "A prophet's prayer for a disbelieving relative is not unconditional — it is withdrawn once their opposition to Allah is clear.", quranReferences: [asRef(9, 114)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Al-An'am 6:74; Maryam 19:41-48; Ash-Shu'ara 26:69-82; At-Tawbah 9:113-114" }],
+    statusNotes: [
+      "The Qur'an calls Azar Ibrahim's 'ab' (6:74), a word that in Qur'anic Arabic usage can denote a biological father, grandfather, or a father-figure/guardian. The majority of exegetes read this as Ibrahim's biological father; a minority tradition, seeking to reconcile this with pre-Islamic Arab genealogies naming Ibrahim's father differently, has proposed Azar was an uncle or step-father instead. This entry presents the direct Qur'anic relationship (Ibrahim's 'ab') without resolving that secondary scholarly dispute.",
+    ],
+  },
+
+  {
+    id: "khidr",
+    name: "Al-Khidr",
+    arabicName: "الخضر",
+    primaryCategory: "other",
+    secondaryCategories: ["man"],
+    personType: "title_based_person",
+    shortDescription:
+      "A righteous servant of Allah, granted knowledge 'from Our own presence,' who Musa travels to learn from — the Qur'an never uses the name 'Al-Khidr' for him; it is a traditional identification.",
+    detailedDescription:
+      "18:65 introduces him only as 'one of Our servants, whom We had given mercy from Us and had taught him knowledge from Our own presence.' Musa asks to follow him to learn; he agrees on condition Musa not question his actions until he explains them. Across three episodes — damaging a boat, killing a young man, and repairing a wall for no apparent reward — he acts in ways Musa cannot reconcile until each is explained by unseen knowledge Musa did not have.",
+    themes: ["Unseen wisdom", "Patience with what cannot yet be understood", "The limits of apparent knowledge"],
+    chronology: { status: "uncertain" },
+    directMentions: [],
+    relatedPassages: [
+      {
+        id: "khidr-kahf-journey",
+        surahNumber: 18, ayahStart: 65, ayahEnd: 82,
+        title: "The Journey with Musa",
+        description: "Musa's request to accompany him, the condition set, the three episodes, and the explanation given at the end.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "musa", relationshipType: "teacher_student", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Outward appearances can conceal a deeper wisdom not yet visible — patience is asked of Musa before, not after, understanding.", quranReferences: [asRef(18, 68), asRef(18, 82)], status: "quran_derived" },
+      { text: "Even a prophet is shown here as a learner, explicitly asking to follow another for knowledge.", quranReferences: [asRef(18, 66)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Al-Kahf 18:65-82" },
+      { type: "traditional_account", citation: "Later tradition names him 'Al-Khidr' ('the Green One') and, in some accounts, holds him to still be living.", note: "Neither the name nor that claim is stated in the Qur'an." },
+    ],
+    statusNotes: [
+      "IMPORTANT: The Qur'an does not name this servant 'Al-Khidr' anywhere in the text — he is referred to only as 'one of Our servants' (18:65), a phrase used elsewhere in the Qur'an for other people and not unique to him, which is why `directMentions` is correctly empty here rather than listing that generic phrase as if it were his name. 'Al-Khidr' is the near-universal traditional identification (found in hadith literature discussing this Al-Kahf passage), used here as this entry's name for recognizability, not as a claim that the Qur'an itself uses it.",
+      "Whether he was a prophet, an angel, or a righteous non-prophet is a matter of scholarly disagreement; the Qur'an states only that he was given mercy and taught knowledge 'from Our own presence' (18:65). This entry does not assert prophetic status — hence `personType: 'title_based_person'` rather than 'prophet,' the same convention used for Dhul-Qarnayn.",
+    ],
+  },
+
+  {
+    id: "firaunwife",
+    name: "Pharaoh's Wife",
+    arabicName: "امرأة فرعون",
+    alternateNames: ["Asiyah"],
+    primaryCategory: "woman",
+    secondaryCategories: ["family_relative"],
+    personType: "title_based_person",
+    shortDescription:
+      "Pharaoh's wife, who pleaded to keep the infant Musa alive rather than have him killed, and whom the Qur'an holds up directly as an example of faith for all believers.",
+    detailedDescription:
+      "When Musa's basket is found, 28:9 has her say 'a comfort of the eye for me and for you; do not kill him' — the reason he survives Pharaoh's household. 66:11 sets her, by name of relation only ('the wife of Fir'aun'), directly alongside Maryam as an example Allah gives 'for those who believe': her prayer for a house near Allah in Paradise, and to be saved 'from Fir'aun and his deeds, and from the wrongdoing people' — a believer inside the household of the Qur'an's foremost tyrant.",
+    themes: ["Faith within an unbelieving household", "Mercy", "An example held up for all believers"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(28, 9), asRef(66, 11)],
+    relatedPassages: [
+      {
+        id: "firaunwife-qasas-finding",
+        surahNumber: 28, ayahStart: 7, ayahEnd: 13,
+        title: "The Finding of Baby Musa",
+        description: "Musa's mother sets him adrift; he is found by Pharaoh's household, and his wife pleads to keep him.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "firaunwife-tahrim-example",
+        surahNumber: 66, ayahStart: 11, ayahEnd: 11,
+        title: "Held Up as an Example for Believers",
+        description: "Her prayer for a house near Allah and to be saved from Fir'aun and his deeds, given as an example for the believers.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "firaun", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Faith is possible even inside a household defined by the opposite of faith — she is not judged by her husband's disbelief.", quranReferences: [asRef(66, 11)], status: "quran_derived" },
+      { text: "She is named directly alongside Maryam as one of two women held up as an example for all believers, not only for women.", quranReferences: [asRef(66, 11), asRef(66, 12)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Al-Qasas 28:7-13; At-Tahrim 66:11" },
+      { type: "traditional_account", citation: "Widely identified in tradition as 'Asiyah bint Muzahim.'", note: "This name is not stated in the Qur'an text; it is a traditional identification, also referenced in some hadith literature discussing this passage." },
+    ],
+    statusNotes: [
+      "The Qur'an refers to her only as 'the wife of Fir'aun' (28:9, 66:11) — that descriptive phrase, not a personal name, is what `directMentions` reflects here. 'Asiyah' is the standard traditional identification, listed as an alternate name for recognizability, not as a Qur'anic statement.",
+    ],
+  },
+
+  {
+    id: "believingman",
+    name: "The Believing Man of Pharaoh's Family",
+    arabicName: "رجل مؤمن من آل فرعون",
+    primaryCategory: "man",
+    personType: "title_based_person",
+    shortDescription:
+      "A man from Pharaoh's own family or court who concealed his faith, and speaks at length in Surah Ghafir to argue against killing Musa and to warn his people of the Day of Judgment.",
+    detailedDescription:
+      "40:28 introduces him as 'a believing man from the family of Fir'aun, concealing his faith,' who argues that Pharaoh should not kill a man merely for saying 'my Lord is Allah,' especially if he might be telling the truth. His speech continues for most of Surah Ghafir (40:28-45), warning his people of the fate of earlier disbelieving nations and calling them to the path of guidance, before the surah records that Allah protected him from the evil plots made against him.",
+    themes: ["Concealed faith under pressure", "Speaking truth to power", "Warning one's own people"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(40, 28)],
+    relatedPassages: [
+      {
+        id: "believingman-ghafir-speech",
+        surahNumber: 40, ayahStart: 28, ayahEnd: 45,
+        title: "His Speech in Defense of Musa",
+        description: "His argument against killing Musa, his warning to his people, and his protection from their plotting.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "firaun", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Faith can be held and defended even while concealed under real danger, within the household of power itself.", quranReferences: [asRef(40, 28)], status: "quran_derived" },
+      { text: "He reasons rather than simply asserts — inviting his people to weigh the possibility that Musa is telling the truth.", quranReferences: [asRef(40, 28), asRef(40, 29)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Ghafir 40:28-45" }],
+    statusNotes: [
+      "The Qur'an does not name him; tradition offers several candidate names (e.g. Habib, Hizqil) with no strong consensus, so no traditional name is asserted here — 'the believing man of Pharaoh's family,' the Qur'an's own description, is used as this entry's name rather than a disputed traditional one.",
+    ],
+  },
+
+  {
+    id: "maryammother",
+    name: "Maryam's Mother",
+    arabicName: "امرأة عمران",
+    primaryCategory: "woman",
+    secondaryCategories: ["family_relative"],
+    personType: "title_based_person",
+    shortDescription:
+      "'Imran's wife, who vowed her unborn child to the Temple's service expecting a son, and — on Maryam's birth — asked Allah's protection for her and her offspring 'from Satan, the outcast.'",
+    detailedDescription:
+      "3:35-36 records her vow while pregnant to dedicate the child to Allah's service, her surprise at bearing a daughter rather than the son she expected, her naming the child Maryam, and her prayer for Allah's protection over her and 'her offspring' — a prayer the Qur'an itself later connects to Maryam and Isa being kept from Satan's touch.",
+    themes: ["A vow kept despite the unexpected", "A mother's prayer of protection"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(3, 35)],
+    relatedPassages: [
+      {
+        id: "maryammother-imran-vow",
+        surahNumber: 3, ayahStart: 35, ayahEnd: 37,
+        title: "Her Vow and Maryam's Birth",
+        description: "Her vow to dedicate her child to Allah's service, the birth of Maryam, and her prayer of protection.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "maryam", relationshipType: "mother", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "A vow made in one expectation ('a son') is honored even when the outcome is different ('and the male is not like the female,' 3:36) rather than treated as void.", quranReferences: [asRef(3, 35), asRef(3, 36)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Aal-i-Imran 3:35-37" }],
+    statusNotes: [
+      "The Qur'an refers to her only as 'the wife of 'Imran' (3:35); `directMentions` reflects that descriptive phrase, not a personal name. Tradition commonly identifies her as 'Hannah,' a name not found in the Qur'an text and not asserted here as this entry's primary name.",
+    ],
+  },
+
+  {
+    id: "ibrahimwife",
+    name: "Sarah",
+    arabicName: "سارة",
+    primaryCategory: "woman",
+    secondaryCategories: ["family_relative"],
+    personType: "title_based_person",
+    shortDescription:
+      "Ibrahim's wife, given glad tidings of a son, Ishaq, by the angelic visitors who had just told Ibrahim of the coming judgment on Lut's people — the Qur'an never actually gives her this name.",
+    detailedDescription:
+      "11:71-73 has her react with laughter (or distress, in some readings) on hearing the angels' news, and exclaim in astonishment at bearing a child in old age; the same episode recurs in 51:29-30, where she strikes her face and calls herself 'a barren old woman.' Ishaq's own entry cites the same passage as his glad-tidings account.",
+    themes: ["Astonishment answered with reassurance", "Glad tidings"],
+    chronology: { label: "Contemporary of Ibrahim, mother of Ishaq", status: "traditional" },
+    directMentions: [],
+    relatedPassages: [
+      {
+        id: "ibrahimwife-hud-tidings",
+        surahNumber: 11, ayahStart: 69, ayahEnd: 73,
+        title: "Glad Tidings of Ishaq",
+        description: "The angelic messengers, at Ibrahim's household, give her glad tidings of Ishaq and, after him, Ya'qub.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "ibrahimwife-dhariyat-tidings",
+        surahNumber: 51, ayahStart: 24, ayahEnd: 30,
+        title: "The Same Account in Adh-Dhariyat",
+        description: "A parallel telling of the same visit and glad tidings, with her own words of astonishment recorded directly.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "ibrahim", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "ishaq", relationshipType: "mother", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Her own astonishment at the news ('shall I bear a child while I am an old woman?,' 11:72) is met with 'Do you wonder at the decree of Allah?' — a direct answer to doubt met with reassurance, not rebuke.", quranReferences: [asRef(11, 72), asRef(11, 73)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Hud 11:69-73; Adh-Dhariyat 51:24-30" }],
+    statusNotes: [
+      "IMPORTANT: The Qur'an never names Ibrahim's wife — she is referred to only as 'his wife' ('امرأته,' 11:71, 51:29), which is why `directMentions` is correctly empty here (that pronoun phrase is used for many different men's wives across the Qur'an and is not a unique designation for her). 'Sarah' is the near-universal, essentially uncontested traditional identification, used here as this entry's name for recognizability — not a claim that the Qur'an itself names her.",
+    ],
+  },
+
+  {
+    id: "nuhwife",
+    name: "Nuh's Wife",
+    arabicName: "امرأة نوح",
+    primaryCategory: "woman",
+    secondaryCategories: ["family_relative"],
+    personType: "title_based_person",
+    shortDescription:
+      "Named by relation only, alongside Lut's wife, as one of two examples the Qur'an gives of women whose closeness to a righteous prophet did not save them, because they did not believe.",
+    detailedDescription:
+      "66:10 sets 'the wife of Nuh and the wife of Lut' side by side as a single example for the disbelievers: both 'were under two of Our righteous servants but betrayed them,' and were told to 'enter the Fire with those who enter.' The Qur'an gives no other detail about her individually beyond this pairing.",
+    themes: ["Closeness to righteousness does not itself save", "Individual accountability"],
+    chronology: { label: "Contemporary of Nuh", status: "traditional" },
+    directMentions: [asRef(66, 10)],
+    relatedPassages: [
+      {
+        id: "nuhwife-tahrim-example",
+        surahNumber: 66, ayahStart: 10, ayahEnd: 10,
+        title: "Held Up as a Warning Example",
+        description: "Paired with Lut's wife as an example of betrayal from within a righteous household.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "nuh", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Marriage to a prophet is not itself salvation — belief and conduct are what the Qur'an weighs, stated here in the same breath as Fir'aun's wife's faith is praised despite her circumstances.", quranReferences: [asRef(66, 10)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "At-Tahrim 66:10" }],
+    statusNotes: [
+      "The Qur'an gives no narrative for her beyond 66:10 — unlike Lut's wife, who also appears (unnamed, as 'his wife') in the account of the town's destruction, no equivalent independent scene is given for Nuh's wife, so no further related passages are listed. No traditional personal name for her carries the same near-consensus as 'Sarah' or 'Asiyah' do for other unnamed wives in this dataset, so none is asserted here.",
+    ],
+  },
+
+  {
+    id: "lutwife",
+    name: "Lut's Wife",
+    arabicName: "امرأة لوط",
+    primaryCategory: "woman",
+    secondaryCategories: ["family_relative"],
+    personType: "title_based_person",
+    shortDescription:
+      "Lut's wife, who — unlike the rest of his believing household — was left behind and destroyed with the disbelieving town, referenced across more Qur'anic retellings of the account than almost any other unnamed figure.",
+    detailedDescription:
+      "Across the Qur'an's several retellings of Lut's story (7:83, 11:81, 15:60, 26:171, 27:57, 29:32-33, 37:135), she is consistently the one exception among Lut's household who is 'destined to remain behind' with the punished town, referred to as 'his wife.' 66:10 sets her directly alongside Nuh's wife as the paired example of a prophet's wife who did not believe.",
+    themes: ["Family relation does not itself save", "Consequence tied to belief, not proximity"],
+    chronology: { label: "Contemporary of Lut", status: "traditional" },
+    directMentions: [asRef(66, 10)],
+    relatedPassages: [
+      {
+        id: "lutwife-hud-messengers",
+        surahNumber: 11, ayahStart: 77, ayahEnd: 83,
+        title: "Left Behind in the Town's Destruction",
+        description: "The angelic messengers' visit, the command to leave with his family by night, and she alone told to remain.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "lutwife-shuara-destruction",
+        surahNumber: 26, ayahStart: 169, ayahEnd: 175,
+        title: "Lut's Prayer and the Town's Destruction",
+        description: "Lut's prayer for deliverance, his family's rescue except 'an old woman among those who remained behind,' and the destruction of the rest.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "lutwife-tahrim-example",
+        surahNumber: 66, ayahStart: 10, ayahEnd: 10,
+        title: "Held Up as a Warning Example",
+        description: "Paired with Nuh's wife as an example of betrayal from within a righteous household.",
+        storyOrder: 3, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "lut", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Even within a prophet's own household, rescue is tied to belief and conduct, not to the relationship itself.", quranReferences: [asRef(66, 10)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Hud 11:77-83; Ash-Shu'ara 26:169-175; At-Tahrim 66:10" }],
+    statusNotes: [
+      "`directMentions` lists only 66:10, where she is uniquely identified by name of relation ('امرأت لوط,' the wife of Lut). Her other appearances across the Qur'an's several retellings of the account use only the generic pronoun 'his wife' ('امرأته') — accurate to the narrative and included in Related Passages, but not independently verifiable via text search as uniquely about her the way the 66:10 pairing is, so they are not listed as separate Direct Mentions.",
+    ],
+  },
+
+  {
+    id: "musawarner",
+    name: "The Man Who Warned Musa",
+    arabicName: "رجل جاء من أقصى المدينة يسعى",
+    primaryCategory: "man",
+    personType: "title_based_person",
+    shortDescription:
+      "An unnamed man who ran from the far side of the city to warn Musa that Pharaoh's council was plotting to kill him — the direct reason Musa flees to Madyan.",
+    detailedDescription:
+      "28:20 introduces him only as 'a man' who 'came from the farthest part of the city, running,' urging Musa: 'the notables are conspiring to kill you, so leave — I am among your advisors.' Musa leaves immediately, and the very next verses describe his journey to Madyan. Not to be confused with the similarly-described man in Surah Ya-Sin (see the separate entry for that figure) — the two are distinct, unrelated individuals in different narratives, despite the Qur'an describing both in nearly identical wording.",
+    themes: ["Timely warning", "Sincere counsel"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(28, 20)],
+    relatedPassages: [
+      {
+        id: "musawarner-qasas-warning",
+        surahNumber: 28, ayahStart: 18, ayahEnd: 22,
+        title: "The Warning and Musa's Flight",
+        description: "His warning that Pharaoh's council plans to kill Musa, and Musa's immediate departure for Madyan.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "musa", relationshipType: "supporter", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Sincere warning, offered without being asked, is described in the Qur'an as genuine advice ('I am among your advisors,' 28:20).", quranReferences: [asRef(28, 20)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Al-Qasas 28:18-22" }],
+    statusNotes: [
+      "The Qur'an gives him no name, and tradition offers no strong consensus identification either, so none is asserted here.",
+      "See also the entry for the man in Surah Ya-Sin (36:20) — a different unnamed individual described in almost the same words ('a man came from the farthest part of the city, running'), kept as two separate entries so they are not read as the same person.",
+    ],
+  },
+
+  {
+    id: "yasinman",
+    name: "The Man of Ya-Sin",
+    arabicName: "رجل من أقصى المدينة",
+    primaryCategory: "man",
+    personType: "title_based_person",
+    shortDescription:
+      "An unnamed man in Surah Ya-Sin who ran to urge his people to follow the messengers sent to their town, was killed for it, and was told 'Enter Paradise' — traditionally called 'Habib the Carpenter,' a name not in the Qur'an.",
+    detailedDescription:
+      "36:13-27 tells of a town sent three messengers whom the people rejected. 36:20 introduces this man, running from the edge of the city, urging his people: 'follow those who ask no reward of you and are rightly guided.' He is killed by his people for it (traditionally understood from the passage's flow, though the act itself is not narrated in detail); Allah's response is immediate: 'Enter Paradise,' after which he is shown wishing his people knew how he had been honored. Not to be confused with the similarly-described man who warns Musa in Surah Al-Qasas (see the separate entry) — the two are distinct, unrelated individuals.",
+    themes: ["Courage in calling one's own people", "A reward beyond this life"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(36, 20)],
+    relatedPassages: [
+      {
+        id: "yasinman-yasin-town",
+        surahNumber: 36, ayahStart: 13, ayahEnd: 27,
+        title: "The Messengers to the Town, and His Support for Them",
+        description: "The town's rejection of the three messengers, his running to urge the people to follow them, and his fate.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [],
+    keyLessons: [
+      { text: "He asks nothing for himself in urging his people to believe — a marker the Qur'an itself gives as a sign of sincere guidance.", quranReferences: [asRef(36, 21)], status: "quran_derived" },
+      { text: "His reward ('Enter Paradise') is granted immediately and directly, regardless of his people's rejection of him.", quranReferences: [asRef(36, 26), asRef(36, 27)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Ya-Sin 36:13-27" },
+      { type: "traditional_account", citation: "Widely known in tradition as 'Habib the Carpenter' (Habib al-Najjar).", note: "This name is not stated anywhere in the Qur'an text." },
+    ],
+    statusNotes: [
+      "The Qur'an does not name this man, the town, or the three messengers sent to it. 'Habib the Carpenter' is a traditional identification from tafsir literature, not used as this entry's primary name for that reason.",
+      "See also the entry for the man who warns Musa (28:20) — a different unnamed individual described in almost the same words ('a man came from the farthest part of the city, running'), kept as two separate entries so they are not read as the same person.",
+    ],
+  },
+
+  {
+    id: "namrud",
+    name: "The King Who Disputed with Ibrahim",
+    arabicName: "الذي حاجّ إبراهيم في ربه",
+    alternateNames: ["Nimrod"],
+    primaryCategory: "ruler_leader",
+    personType: "title_based_person",
+    shortDescription:
+      "An unnamed king, 'given dominion' and emboldened by it, who argued with Ibrahim about Allah and was left speechless when Ibrahim asked him to reverse the sun's rising.",
+    detailedDescription:
+      "2:258 introduces him only as 'the one who disputed with Ibrahim about his Lord, because Allah had given him kingship.' He claims the power of life and death himself; Ibrahim then asks him to bring the sun from the west (since Allah brings it from the east) — and 'the one who disbelieved was struck dumb.' No name, era, or kingdom is given in the text.",
+    themes: ["The hollowness of worldly power against a decisive proof", "Arrogance emboldened by rule"],
+    chronology: { label: "Traditionally contemporary with Ibrahim", status: "traditional" },
+    directMentions: [asRef(2, 258)],
+    relatedPassages: [
+      {
+        id: "namrud-baqarah-dispute",
+        surahNumber: 2, ayahStart: 258, ayahEnd: 258,
+        title: "The Dispute About Ibrahim's Lord",
+        description: "His claim to power over life and death, and his silence when Ibrahim asks him to reverse the sun's rising.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "ibrahim", relationshipType: "opponent", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "A decisive, simple proof can leave even a powerful ruler with no answer at all.", quranReferences: [asRef(2, 258)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Al-Baqarah 2:258" },
+      { type: "traditional_account", citation: "Widely identified in tradition as 'Namrud' (Nimrod).", note: "This name is not stated anywhere in the Qur'an text; it is a traditional/historical identification." },
+    ],
+    statusNotes: [
+      "IMPORTANT: The Qur'an does not name this king. 'Namrud'/'Nimrod' is a traditional identification (also found in Biblical and other Near Eastern literature) layered onto the Qur'an's unnamed description, not a Qur'anic statement — listed here as an alternate name for recognizability only.",
+    ],
+  },
+
+  {
+    id: "ashabalkahf",
+    name: "People of the Cave",
+    arabicName: "أصحاب الكهف",
+    entityType: "group",
+    primaryCategory: "other",
+    personType: "quranic_group",
+    shortDescription:
+      "A group of young believers who fled persecution for their faith, took refuge in a cave, and were made to sleep for a long span of years as 'a sign' — the Qur'an gives none of their individual names and explicitly declines to settle their exact number.",
+    detailedDescription:
+      "18:9-26 tells of young men who believed in their Lord and withdrew from their people to a cave for safety, along with a dog that lay at its entrance. Allah 'sealed their ears' (caused them to sleep) for years, then raised them; on waking, believing only a day had passed, they send one of their number into the town for food, cautiously, fearing discovery. After their story becomes known, 18:22 describes people disputing their number — 'three, a dog being the fourth… five, a dog being the sixth… seven, and a dog being the eighth' — and directs: 'say, my Lord knows best their number; none knows them except a few,' explicitly instructing not to argue over it further.",
+    themes: ["Refuge in faith under persecution", "Allah's power over time", "The Qur'an's own caution against speculation"],
+    chronology: { status: "uncertain" },
+    directMentions: [asRef(18, 9)],
+    relatedPassages: [
+      {
+        id: "ashabalkahf-refuge",
+        surahNumber: 18, ayahStart: 9, ayahEnd: 12,
+        title: "Taking Refuge in the Cave",
+        description: "The young men's flight to the cave and the sleep placed upon them.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "ashabalkahf-waking",
+        surahNumber: 18, ayahStart: 13, ayahEnd: 20,
+        title: "Their Faith and Waking",
+        description: "Their youth and firm belief, and their waking and cautious return of one among them to the town for food.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "ashabalkahf-number",
+        surahNumber: 18, ayahStart: 21, ayahEnd: 26,
+        title: "The Sign, and the Qur'an's Caution About Their Number",
+        description: "Their story becoming known as a sign of the resurrection, and the Qur'an's own instruction not to speculate over their exact number.",
+        storyOrder: 3, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [],
+    keyLessons: [
+      { text: "Withdrawing from a persecuting society to preserve one's faith is presented as a valid, praised response, not a failure of courage.", quranReferences: [asRef(18, 16)], status: "quran_derived" },
+      { text: "The Qur'an itself models restraint about a detail it does not resolve — instructing believers not to argue over their exact number.", quranReferences: [asRef(18, 22)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Al-Kahf 18:9-26" },
+      { type: "traditional_account", citation: "Later tradition supplies individual names and a specific number (commonly seven) for the youths and their dog.", note: "None of these names or the specific number are stated in the Qur'an text — 18:22 explicitly declines to settle the number." },
+    ],
+    statusNotes: [
+      "This entry deliberately represents them as one group, not as separate individual profiles, because the Qur'an gives no personal names for any of them — inventing individual profiles under traditional names would overstate what the text itself establishes. `entityType: 'group'` reflects that structural fact.",
+      "Their era, precise location, and religious background before the cave are not established in the Qur'an; various traditional and historical proposals exist but are not adjudicated here.",
+    ],
+  },
+
+  {
+    id: "ashabalukhdud",
+    name: "People of the Trench",
+    arabicName: "أصحاب الأخدود",
+    entityType: "group",
+    primaryCategory: "other",
+    personType: "quranic_group",
+    shortDescription:
+      "Believers burned alive in a trench of fire by a persecuting people for no reason other than their faith in Allah — named directly by the Qur'an as a stated example of persecution met with unwavering belief.",
+    detailedDescription:
+      "Surah Al-Buruj opens with an oath, then 85:4-8 describes 'the companions of the trench' — the fire, its fuel, and a persecuting people sitting to watch as believers were burned, whose only offense the Qur'an states directly was believing in 'Allah, the Exalted in Might, the Praiseworthy.' No names, location, or era are given.",
+    themes: ["Steadfastness under the ultimate persecution", "Faith valued over life itself"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(85, 4)],
+    relatedPassages: [
+      {
+        id: "ashabalukhdud-buruj-account",
+        surahNumber: 85, ayahStart: 4, ayahEnd: 8,
+        title: "The Trench of Fire",
+        description: "The persecuting people, the fire, and the believers' only stated offense: belief in Allah.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [],
+    keyLessons: [
+      { text: "The Qur'an states their only offense was belief in Allah — persecution here is shown with no other cause offered.", quranReferences: [asRef(85, 8)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Al-Buruj 85:4-8" }],
+    statusNotes: [
+      "The Qur'an does not identify the persecuting people, the era, or the location. Various historical proposals exist in tafsir literature (commonly associated with pre-Islamic South Arabia) but are not adjudicated or asserted here — the entry stays with what the text itself establishes.",
+      "Represented as a group, not individual profiles, since the Qur'an gives no personal names for any of the believers described.",
+    ],
+  },
+
+  {
+    id: "ashabalfil",
+    name: "Companions of the Elephant",
+    arabicName: "أصحاب الفيل",
+    entityType: "group",
+    primaryCategory: "other",
+    personType: "quranic_group",
+    shortDescription:
+      "An army that marched with elephants to attack the Ka'bah and was destroyed by flocks of birds throwing stones of baked clay — the whole of the short Surah Al-Fil is devoted to this one event.",
+    detailedDescription:
+      "105:1-5 asks rhetorically whether the listener has considered 'how your Lord dealt with the companions of the elephant' — their plan is 'made into misguided efforts,' and birds are sent against them 'striking them with stones of hard clay,' leaving them 'like eaten straw.' No attacker, commander, or precise date is named in the text.",
+    themes: ["Divine protection of the sacred House", "The failure of worldly military power against Allah's decree"],
+    chronology: { label: "Traditionally the year of Prophet Muhammad's ﷺ birth ('the Year of the Elephant')", status: "traditional" },
+    directMentions: [asRef(105, 1)],
+    relatedPassages: [
+      {
+        id: "ashabalfil-fil-surah",
+        surahNumber: 105, ayahStart: 1, ayahEnd: 5,
+        title: "Surah Al-Fil",
+        description: "The full account: their plan, and their destruction by birds and stones of baked clay.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [],
+    keyLessons: [
+      { text: "A materially overwhelming force ('the elephant') is shown as no match at all for Allah's decree.", quranReferences: [asRef(105, 1), asRef(105, 2)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Al-Fil 105:1-5" },
+      { type: "traditional_account", citation: "Islamic historical tradition (sira literature) places this event in the same year as Prophet Muhammad's ﷺ birth, commonly dated around 570 CE, and identifies the commander as Abrahah, viceroy of Yemen.", note: "Neither the year, the connection to the Prophet's ﷺ birth, nor the commander's name is stated in the Qur'an text itself." },
+    ],
+    statusNotes: [
+      "The Qur'an narrates the event itself without dating it or naming an attacking commander. The 'Year of the Elephant' dating and its link to the Prophet's ﷺ birth year come from Islamic historical tradition (sira), not the Qur'an text, and are presented here as clearly traditional.",
+    ],
+  },
+
+  {
+    id: "hawariyyun",
+    name: "The Disciples of Isa",
+    arabicName: "الحواريون",
+    alternateNames: ["Hawariyyun", "Apostles"],
+    entityType: "group",
+    primaryCategory: "companion",
+    personType: "quranic_group",
+    shortDescription:
+      "Isa's close followers, who declare themselves 'helpers of Allah' when he asks who will support him, and who — in one account — ask him to call down a table of food from heaven as a sign for their hearts.",
+    detailedDescription:
+      "3:52 has Isa ask, on sensing his people's disbelief, 'who are my helpers for Allah?' — the disciples answer 'we are the helpers of Allah; we have believed in Allah, so bear witness that we are Muslims.' 5:111-115 records Allah's inspiration to them to believe, and their request to Isa for a table (ma'idah) sent down from heaven so their hearts would be at rest and they would know his message was true; it is granted, with a warning attached for anyone who disbelieves afterward. 61:14 later invokes them as a model for believers to be 'helpers of Allah,' as the disciples were.",
+    themes: ["Declared, active support for a messenger's mission", "A sign requested and granted, with responsibility attached"],
+    chronology: { label: "Contemporaries of Isa", status: "traditional" },
+    directMentions: [asRef(3, 52), asRef(5, 111), asRef(5, 112), asRef(61, 14)],
+    relatedPassages: [
+      {
+        id: "hawariyyun-imran-declaration",
+        surahNumber: 3, ayahStart: 52, ayahEnd: 53,
+        title: "Their Declaration of Support",
+        description: "Isa's question and the disciples' answer declaring themselves helpers of Allah and believers.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "hawariyyun-maidah-table",
+        surahNumber: 5, ayahStart: 111, ayahEnd: 115,
+        title: "The Request for the Table",
+        description: "Their request for a table sent down from heaven as a sign, and Isa's prayer for it, with the condition attached.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "isa", relationshipType: "teacher_student", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Declared support for a messenger's mission is described here in the disciples' own direct words, not left implicit.", quranReferences: [asRef(3, 52)], status: "quran_derived" },
+      { text: "A sign granted in answer to sincere request carries responsibility with it — disbelief after receiving it is met with a stated warning.", quranReferences: [asRef(5, 115)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Aal-i-Imran 3:52-53; Al-Ma'idah 5:111-115; As-Saff 61:14" }],
+    statusNotes: [
+      "The Qur'an gives 'Al-Hawariyyun' as their collective title but does not name any of them individually — represented here as one group entry rather than invented individual profiles for that reason.",
+      "Whether the 'table' (ma'idah) request/episode is historical narrative or presented parabolically is a matter of interpretation among commentators; this entry follows the plain sense of the text (a request granted) without adjudicating that discussion.",
+    ],
+  },
+
+  {
+    id: "sahara",
+    name: "Pharaoh's Magicians",
+    arabicName: "السحرة",
+    entityType: "group",
+    primaryCategory: "other",
+    personType: "quranic_group",
+    shortDescription:
+      "The magicians Pharaoh summoned to defeat Musa in a public contest, who fell prostrate in belief the moment they saw the truth — and stood by that belief even under Pharaoh's threat of crucifixion.",
+    detailedDescription:
+      "Assembled by Pharaoh to discredit Musa (7:113-126, 20:70-73, 26:38-51), the magicians first ask for a reward if they win, then cast down their ropes and staffs; when Musa's staff overtakes what they had produced, they immediately fall down prostrate, declaring belief in 'the Lord of Musa and Harun.' Pharaoh threatens to cut off their hands and feet and crucify them; they answer that they will be patient, since 'we will return to our Lord' regardless — one of the most immediate, complete reversals recorded in the Qur'an.",
+    themes: ["Recognizing truth the instant it is seen", "Steadfastness under threat, right after conversion"],
+    chronology: { label: "Contemporaries of Musa and Fir'aun", status: "traditional" },
+    directMentions: [
+      asRef(7, 113), asRef(7, 120), asRef(10, 80), asRef(20, 70),
+      asRef(26, 38), asRef(26, 40), asRef(26, 41), asRef(26, 46),
+    ],
+    relatedPassages: [
+      {
+        id: "sahara-araf-contest",
+        surahNumber: 7, ayahStart: 113, ayahEnd: 126,
+        title: "The Contest and Their Belief",
+        description: "Their request for a reward, the contest with Musa, their immediate belief, and Pharaoh's threat.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "sahara-taha-contest",
+        surahNumber: 20, ayahStart: 70, ayahEnd: 73,
+        title: "The Same Account in Ta-Ha",
+        description: "A parallel telling of the contest and their prostration in belief before Pharaoh.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "sahara-shuara-contest",
+        surahNumber: 26, ayahStart: 38, ayahEnd: 51,
+        title: "The Same Account in Ash-Shu'ara",
+        description: "A third telling, including their own words of steadfastness after Pharaoh's threat.",
+        storyOrder: 3, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "musa", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "firaun", relationshipType: "supporter", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Recognizing and accepting truth can happen instantly, even for those first assembled to oppose it.", quranReferences: [asRef(7, 120), asRef(7, 121)], status: "quran_derived" },
+      { text: "Their steadfastness under Pharaoh's threat comes immediately after their conversion — belief is shown tested at once, not after a period of comfort.", quranReferences: [asRef(26, 49), asRef(26, 51)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Al-A'raf 7:113-126; Ta-Ha 20:70-73; Ash-Shu'ara 26:38-51" }],
+    statusNotes: [
+      "The Qur'an gives no individual names or exact number for the magicians — represented as one group for that reason. Their relationship to Fir'aun is recorded here as 'supporter,' reflecting their role at his court prior to the contest, without implying that label still applied after their conversion.",
+    ],
+  },
+
+  {
+    id: "yusufbrothers",
+    name: "Yusuf's Brothers",
+    arabicName: "إخوة يوسف",
+    entityType: "group",
+    primaryCategory: "family_relative",
+    personType: "quranic_group",
+    shortDescription:
+      "Ya'qub's other sons, whose jealousy over Yusuf's dream leads them to cast him into a well and deceive their father — and whose eventual return to Egypt, and reconciliation with Yusuf, closes the surah named for him.",
+    detailedDescription:
+      "Surah Yusuf gives them collective speech and action throughout without naming any of them individually: their plot against Yusuf and deception of their father (12:8-18), their later journeys to Egypt for grain, the scheme involving their youngest brother, and Yusuf's eventual revelation of his identity and forgiveness of them (12:58-93), ending in the full family's reunion in Egypt (12:100).",
+    themes: ["Jealousy and its consequences", "Deception unraveling over time", "Forgiveness offered directly by the one wronged"],
+    chronology: { label: "Sons of Ya'qub, brothers of Yusuf", status: "traditional" },
+    directMentions: [],
+    relatedPassages: [
+      {
+        id: "yusufbrothers-plot",
+        surahNumber: 12, ayahStart: 7, ayahEnd: 18,
+        title: "The Plot Against Yusuf",
+        description: "Their jealousy over his dream, the plot to cast him into a well, and the deception of their father.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "yusufbrothers-return",
+        surahNumber: 12, ayahStart: 58, ayahEnd: 93,
+        title: "Return to Egypt and Reconciliation",
+        description: "Their journeys to Egypt for grain, the scheme involving Bin-yamin, and Yusuf revealing his identity and forgiving them.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "yusufbrothers-reunion",
+        surahNumber: 12, ayahStart: 99, ayahEnd: 100,
+        title: "The Family's Reunion",
+        description: "The full family's reunion in Egypt, closing the narrative Yusuf had seen foreshadowed in his childhood dream.",
+        storyOrder: 3, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "yusuf", relationshipType: "brother", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "yaqub", relationshipType: "son", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Forgiveness is offered directly by Yusuf once he holds real power over those who wronged him — 'no blame will there be upon you today,' 12:92 — rather than used as an opportunity for retribution.", quranReferences: [asRef(12, 92)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Surah Yusuf 12:7-100" }],
+    statusNotes: [
+      "The Qur'an does not name any of Yusuf's brothers individually (only Bin-yamin, the youngest, is distinguished by role, and even he is not named directly in the text) — represented as one group entry for that reason, rather than assigning them the individual names common in later tafsir and popular retellings.",
+      "`directMentions` is empty because the Qur'an refers to them only via the pronoun 'his brothers' ('إخوته'), a generic phrase not unique to this narrative — their role is instead captured through the curated Related Passages above, consistent with how this dataset treats other pronoun-only figures.",
+    ],
+  },
+
+  {
+    id: "gardenmen",
+    name: "The Two Men of the Gardens",
+    arabicName: "الرجلان صاحبا الجنتين",
+    entityType: "group",
+    primaryCategory: "other",
+    personType: "quranic_group",
+    shortDescription:
+      "Two unnamed men in a parable Allah instructs be told: one given two flourishing gardens who grows arrogant and doubts the Resurrection, the other — poorer, but believing — who warns him. The Qur'an itself introduces this as a mathal (parable), not a historical account.",
+    detailedDescription:
+      "18:32-44 opens with Allah instructing that this example be 'set forth' for people: a man given two lush vineyard gardens boasts of his wealth to his companion, doubts the Hour will ever come, and declares 'I do not think this will ever perish.' His companion answers by pointing back to their shared origin — 'did you disbelieve in Him who created you from dust' — and reminds him that all provision comes from Allah alone. The boastful man's gardens are then destroyed overnight; he is left wringing his hands over what he had spent on them, powerless, while the passage closes on the reminder that 'protection is only from Allah, the True.'",
+    themes: ["Wealth and gratitude versus arrogance", "The Resurrection as a certainty, not a doubt", "A parable's own moral, stated directly by the text"],
+    chronology: { status: "unknown" },
+    directMentions: [],
+    relatedPassages: [
+      {
+        id: "gardenmen-kahf-parable",
+        surahNumber: 18, ayahStart: 32, ayahEnd: 44,
+        title: "The Parable of the Two Gardens",
+        description: "The boastful man's arrogance and doubt, his companion's warning, and the destruction of the gardens.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [],
+    keyLessons: [
+      { text: "Prosperity is directly linked by the believing companion back to Allah as its source, not to one's own doing — the opposite of the boastful man's claim.", quranReferences: [asRef(18, 39), asRef(18, 40)], status: "quran_derived" },
+      { text: "The Qur'an closes the parable by stating its own moral directly: true protection ('al-walayah') belongs to Allah alone.", quranReferences: [asRef(18, 44)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Al-Kahf 18:32-44" }],
+    statusNotes: [
+      "IMPORTANT: The Qur'an itself introduces this passage as a parable to be 'set forth' (18:32, 'وَاضْرِبْ لَهُم مَّثَلًا'), not as a historical account of two identifiable individuals — this entry represents them as the Qur'an's own didactic figures, not as historical persons with a chronology or biography, which is why no chronology label and no relationships to other dataset entries are given.",
+      "No personal names are given for either man in the Qur'an or in mainstream tradition; 'The Two Men of the Gardens' is a descriptive title, not a Qur'anic title (unlike, e.g., 'Dhul-Qarnayn').",
+    ],
+  },
+
+  // ============================================================
+  // Boundary-case resolution pass — Al-'Aziz of Egypt and his wife were
+  // reconsidered against the figures already included above (Ibrahim's
+  // Wife, Lut's Wife, Nuh's Wife, Pharaoh's Wife, Maryam's Mother) and
+  // found to clear the same bar with room to spare: more verses, more
+  // direct quoted speech, and a distinct moral arc (a public confession)
+  // than the weakest of those already-included entries (Nuh's Wife, a
+  // single verse with no speech). Excluding them while including Nuh's
+  // Wife was an inconsistent application of the same rule — corrected
+  // here, not added merely to grow the count. The King of Egypt from the
+  // same narrative was identified in the same re-audit as a genuine
+  // omission on equivalent grounds (a recurring figure across several
+  // scenes, with a dream, an investigation he orders, and Yusuf's eventual
+  // appointment). See the "Final Qur'anic Persons Content Decision" report
+  // for the full comparison matrix and the boundary cases NOT added.
+  // ============================================================
+  {
+    id: "alaziz",
+    name: "Al-'Aziz of Egypt",
+    arabicName: "العزيز",
+    primaryCategory: "ruler_leader",
+    personType: "title_based_person",
+    shortDescription:
+      "The Egyptian official who bought the young Yusuf and told his household to treat him well — and who, on discovering his wife's pursuit of Yusuf, judges the matter directly from physical evidence rather than taking either side's word alone.",
+    detailedDescription:
+      "12:21 introduces him only as 'the one who bought him from Egypt,' instructing his wife to make Yusuf's stay honorable, 'perhaps he will benefit us, or we will adopt him as a son.' Years later, finding his wife had attempted to seduce Yusuf, he examines the evidence himself — Yusuf's shirt, torn from behind rather than the front — and rules from it: 'this is of your [women's] scheming; indeed your scheming is great,' telling Yusuf to overlook the matter and his wife to seek forgiveness (12:28-29). The Qur'an later uses his title, 'Al-'Aziz,' again — but by then it refers to Yusuf himself, who rises to that same position; the two are distinct individuals despite sharing the title (see this entry's statusNotes).",
+    themes: ["Judging from evidence rather than assumption", "A household transformed by one decision"],
+    chronology: { status: "unknown" },
+    directMentions: [],
+    relatedPassages: [
+      {
+        id: "alaziz-yusuf-purchase",
+        surahNumber: 12, ayahStart: 21, ayahEnd: 22,
+        title: "Buying Yusuf and Raising Him Well",
+        description: "His instruction to treat the young Yusuf honorably in his household.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "alaziz-yusuf-judgment",
+        surahNumber: 12, ayahStart: 25, ayahEnd: 29,
+        title: "Judging the Evidence of the Torn Shirt",
+        description: "His examination of the shirt's tear, his ruling on what happened, and his instruction to both his wife and Yusuf.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "yusuf", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "alazizwife", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "A judgment is reached by weighing physical evidence (which side of the shirt was torn) rather than accepting either party's claim outright.", quranReferences: [asRef(12, 26), asRef(12, 28)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Yusuf 12:21-22, 25-29" }],
+    statusNotes: [
+      "'Al-'Aziz' ('the Exalted/Mighty One') is a title for a high Egyptian official, not a personal name — the Qur'an never gives this man's personal name. `directMentions` is correctly empty because the Qur'an never uses this title to independently name him directly; it identifies him only via the descriptive phrase 'the one who bought him' (12:21, not independently searchable as unique to him) and, later, via his wife's designation 'امرأت العزيز' (12:30, 12:51) — reflected instead on his wife's own entry, since grammatically that phrase names her, using his title to do so.",
+      "IMPORTANT: The Qur'an reuses the title 'Al-'Aziz' later in the same surah (12:78, 12:88) — but by that point in the narrative it refers to Yusuf himself, who has risen to that position. This entry covers only the original official who purchased Yusuf; it is not the same person as the later references to 'Al-'Aziz,' which belong to Yusuf's own story.",
+    ],
+  },
+
+  {
+    id: "alazizwife",
+    name: "Zulaikha",
+    arabicName: "امرأة العزيز",
+    alternateNames: ["Zulaikha"],
+    primaryCategory: "woman",
+    secondaryCategories: ["family_relative"],
+    personType: "title_based_person",
+    shortDescription:
+      "Al-'Aziz's wife, whose attempted seduction of Yusuf, public gathering of the city's women, and eventual open confession of her own wrongdoing form one of the most developed individual character arcs of any unnamed figure in the Qur'an.",
+    detailedDescription:
+      "12:23-29 describes her pursuit of the young Yusuf in her household, his refusal and flight, and the shirt torn from behind that settles the matter against her. When word spreads and other women of the city gossip about her, 12:30-32 has her invite them to a gathering, hand each a knife, and bring out Yusuf — the women, awestruck, cut their own hands without noticing; she declares 'this is the one you blamed me for... and if he does not do what I order, he will surely be imprisoned.' Years later, once the truth is fully public, 12:51 records her own direct words: 'Now the truth has become evident. It was I who sought to seduce him, and indeed, he is of the truthful.'",
+    themes: ["Temptation and refusal", "Public reputation versus private truth", "An open confession of wrongdoing"],
+    chronology: { status: "unknown" },
+    directMentions: [asRef(12, 30), asRef(12, 51)],
+    relatedPassages: [
+      {
+        id: "alazizwife-seduction",
+        surahNumber: 12, ayahStart: 23, ayahEnd: 29,
+        title: "The Pursuit and the Torn Shirt",
+        description: "Her attempt to seduce Yusuf, his refusal and flight, and the evidence that settles the matter.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "alazizwife-gathering",
+        surahNumber: 12, ayahStart: 30, ayahEnd: 32,
+        title: "The Gathering of the City's Women",
+        description: "Her response to gossip: gathering the women, presenting Yusuf, and her declaration before them.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "alazizwife-confession",
+        surahNumber: 12, ayahStart: 51, ayahEnd: 51,
+        title: "Her Own Confession",
+        description: "Her direct, unprompted admission before the king that she was the one who sought to seduce Yusuf, and that he was truthful.",
+        storyOrder: 3, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "yusuf", relationshipType: "other", sourceType: "quran", verificationStatus: "verified" },
+      { personId: "alaziz", relationshipType: "spouse", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Her own words record a direct, public admission of wrongdoing once the truth was clear — not offered under compulsion, but stated plainly: 'it was I who sought to seduce him.'", quranReferences: [asRef(12, 51)], status: "quran_derived" },
+    ],
+    sources: [
+      { type: "quran", citation: "Yusuf 12:23-32, 51" },
+      { type: "traditional_account", citation: "Widely known in tradition as 'Zulaikha.'", note: "This name is not stated anywhere in the Qur'an text; it is a traditional identification used across tafsir and popular literature." },
+    ],
+    statusNotes: [
+      "IMPORTANT: The Qur'an never names her — she is referred to only as 'امرأت العزيز,' the wife of Al-'Aziz (12:30, 12:51), which is what `directMentions` reflects here. 'Zulaikha' is the standard traditional identification (not from the Qur'an text), used as this entry's name for recognizability.",
+    ],
+  },
+
+  {
+    id: "kingofegypt",
+    name: "The King of Egypt",
+    arabicName: "الملك",
+    primaryCategory: "ruler_leader",
+    personType: "title_based_person",
+    shortDescription:
+      "The unnamed ruler whose dream of seven fat cows and seven lean ones sets in motion Yusuf's release from prison, and who ultimately grants him a position of authority over Egypt's stores.",
+    detailedDescription:
+      "12:43 has the king recount his dream — seven fat cows eaten by seven lean ones, seven green ears of grain and seven dry — to his court, who dismiss it as 'confused dreams.' Yusuf, still in prison, interprets it as seven years of abundance followed by seven of famine. On hearing this, the king orders Yusuf brought to him; Yusuf instead asks that the women's affair be investigated first, so his innocence is established beyond doubt. The king then declares 'bring him to me, I will select him for myself' and, once satisfied of his trustworthiness and knowledge, gives Yusuf authority: 'You are today, with us, established firmly and trusted.'",
+    themes: ["A dream that reshapes a kingdom's future", "Vindication before advancement"],
+    chronology: { status: "unknown" },
+    directMentions: [],
+    relatedPassages: [
+      {
+        id: "kingofegypt-dream",
+        surahNumber: 12, ayahStart: 43, ayahEnd: 49,
+        title: "The Dream and Its Interpretation",
+        description: "The king's dream, his court's inability to interpret it, and Yusuf's interpretation relayed from prison.",
+        storyOrder: 1, source: "quran", verificationStatus: "verified",
+      },
+      {
+        id: "kingofegypt-appointment",
+        surahNumber: 12, ayahStart: 50, ayahEnd: 57,
+        title: "The Investigation and Yusuf's Appointment",
+        description: "Yusuf's request that the women's affair be investigated first, and the king's eventual appointment of him to a position of trust.",
+        storyOrder: 2, source: "quran", verificationStatus: "verified",
+      },
+    ],
+    relationships: [
+      { personId: "yusuf", relationshipType: "supporter", sourceType: "quran", verificationStatus: "verified" },
+    ],
+    keyLessons: [
+      { text: "Yusuf asks for his innocence to be established before accepting advancement, rather than simply accepting the king's favor and leaving the matter unresolved.", quranReferences: [asRef(12, 50)], status: "quran_derived" },
+    ],
+    sources: [{ type: "quran", citation: "Yusuf 12:43-57" }],
+    statusNotes: [
+      "The Qur'an does not name this king. `directMentions` is empty because 'الملك' ('the king'/'the sovereign') is a generic word used throughout the Qur'an in many unrelated contexts, not a designation unique to him within Surah Yusuf, so it is not listed as if it were a verified unique reference — his scenes are instead captured through the curated Related Passages above.",
+      "This entry is distinct from Yusuf's own later position of authority — after his appointment, Yusuf himself is addressed by the title 'Al-'Aziz' (12:78, 12:88), not 'Al-Malik'; the two titles and the two roles are not conflated here.",
     ],
   },
 ];

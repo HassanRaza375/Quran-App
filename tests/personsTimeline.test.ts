@@ -39,12 +39,19 @@ describe("buildTimeline (against the real seed dataset)", () => {
   });
 
   it("does not branch a prophet off relationships that are now full mainline entries themselves", () => {
-    // Ibrahim's relationships (Isma'il, Ishaq, Nuh, Lut) are ALL mainline
-    // prophets in the full 25-prophet dataset, so Ibrahim ends up with zero
-    // branches — the correct outcome once a "stub" relationship target gets
-    // promoted to a full entry, not a bug.
+    // Ibrahim's relationships to Isma'il, Ishaq, Nuh, and Lut are ALL mainline
+    // prophets in the full 25-prophet dataset, so none of those four appear
+    // as branches — the correct outcome once a "stub" relationship target
+    // gets promoted to a full entry, not a bug. Ibrahim's non-mainline
+    // relationships (Azar, his wife, the king who disputed with him) still
+    // correctly appear as branches.
     const ibrahim = timeline.mainline.find((n) => n.person.id === "ibrahim")!;
-    expect(ibrahim.branches).toEqual([]);
+    const ibrahimBranchIds = ibrahim.branches.map((b) => b.personId);
+    expect(ibrahimBranchIds).not.toContain("ismail");
+    expect(ibrahimBranchIds).not.toContain("ishaq");
+    expect(ibrahimBranchIds).not.toContain("nuh");
+    expect(ibrahimBranchIds).not.toContain("lut");
+    expect(ibrahimBranchIds.sort()).toEqual(["azar", "ibrahimwife", "namrud"]);
 
     // Harun is himself a mainline prophet now too, so he no longer appears
     // as one of Musa's branches — but Fir'aun (not a prophet) still does.

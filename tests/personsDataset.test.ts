@@ -15,9 +15,10 @@ describe("QURAN_PERSONS dataset integrity", () => {
     expect(issues).toEqual([]);
   });
 
-  it("has all 38 people: the 25 traditional named prophets + 13 other named/title-based figures", () => {
-    expect(QURAN_PERSONS.length).toBe(38);
+  it("has all 59 entries: the 25 traditional named prophets + 27 other named/title-based individuals + 7 groups", () => {
+    expect(QURAN_PERSONS.length).toBe(59);
     expect(QURAN_PERSONS.filter((p) => p.primaryCategory === "prophet")).toHaveLength(25);
+    expect(QURAN_PERSONS.filter((p) => p.entityType === "group")).toHaveLength(7);
   });
 
   it("includes every one of the 25 traditionally named prophets by id", () => {
@@ -44,9 +45,19 @@ describe("QURAN_PERSONS dataset integrity", () => {
   });
 
   it("every personType is one of the spec's defined types", () => {
-    const valid = new Set(["prophet", "messenger", "prophet_and_messenger", "quranic_person", "title_based_person"]);
+    const valid = new Set([
+      "prophet", "messenger", "prophet_and_messenger", "quranic_person", "title_based_person", "quranic_group",
+    ]);
     for (const person of QURAN_PERSONS) {
       expect(valid.has(person.personType)).toBe(true);
+    }
+  });
+
+  it("every entityType is either undefined or one of the spec's defined values, and groups use personType 'quranic_group'", () => {
+    const valid = new Set(["person", "group"]);
+    for (const person of QURAN_PERSONS) {
+      if (person.entityType !== undefined) expect(valid.has(person.entityType)).toBe(true);
+      if (person.entityType === "group") expect(person.personType).toBe("quranic_group");
     }
   });
 

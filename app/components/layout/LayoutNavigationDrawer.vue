@@ -60,6 +60,7 @@ const sidebarList = computed(() => [
   { title: "Stories", icon: "mdi-book-open-page-variant-outline", path: "/stories" },
   { title: "Themes", icon: "mdi-lightbulb-on-outline", path: "/themes" },
   { title: "Duas", icon: "mdi-hands-pray", path: "/duas" },
+  { title: "Events", icon: "mdi-timeline-clock-outline", path: "/events" },
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
   { title: "Reading Goals", icon: "mdi-target", path: "/goals" },
   { title: "Ramadan Mode", icon: "mdi-moon-waning-crescent", path: "/ramadan" },

@@ -26,6 +26,15 @@
           </span>
         </NuxtLink>
 
+        <NuxtLink
+          v-if="eventCountForPerson(node.person.id) > 0"
+          :to="`/events?person=${node.person.id}`"
+          class="node-events-link"
+        >
+          <v-icon size="14" aria-hidden="true">mdi-timeline-clock-outline</v-icon>
+          {{ eventCountForPerson(node.person.id) }} related {{ eventCountForPerson(node.person.id) === 1 ? "event" : "events" }}
+        </NuxtLink>
+
         <button
           v-if="node.branches.length"
           type="button"
@@ -81,6 +90,12 @@ import { buildTimeline } from "~/utils/personsTimeline";
 
 const { persons, resolveRelated } = usePersons();
 const timeline = computed(() => buildTimeline(persons));
+
+// Purely additive Phase 7 (Events) integration — see quranEvents.ts's own
+// header comment for why this is a small link rather than a shared
+// timeline data structure: buildTimeline/personsTimeline.ts above are
+// untouched, and this composable call is the only new dependency.
+const { eventCountForPerson } = useEvents();
 
 const expanded = reactive({});
 const toggleExpanded = (id) => {
@@ -198,6 +213,21 @@ const sourceLabel = (type) => sourceLabels[type] ?? type;
 .node-chronology--traditional {
   color: rgb(var(--v-theme-warning));
   font-weight: 400;
+}
+
+.node-events-link {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.72rem;
+  color: rgba(var(--v-theme-on-surface), 0.6);
+  text-decoration: none;
+}
+
+.node-events-link:hover {
+  color: rgb(var(--v-theme-primary));
+  text-decoration: underline;
 }
 
 .branch-toggle {

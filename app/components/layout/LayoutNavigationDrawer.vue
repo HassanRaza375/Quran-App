@@ -58,6 +58,8 @@ const sidebarList = computed(() => [
   { title: "Peoples & Nations", icon: "mdi-map-marker-radius-outline", path: "/peoples" },
   { title: "Places", icon: "mdi-map-outline", path: "/places" },
   { title: "Stories", icon: "mdi-book-open-page-variant-outline", path: "/stories" },
+  { title: "Themes", icon: "mdi-lightbulb-on-outline", path: "/themes" },
+  { title: "Duas", icon: "mdi-hands-pray", path: "/duas" },
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
   { title: "Reading Goals", icon: "mdi-target", path: "/goals" },
   { title: "Ramadan Mode", icon: "mdi-moon-waning-crescent", path: "/ramadan" },

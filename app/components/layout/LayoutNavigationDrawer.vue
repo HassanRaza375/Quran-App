@@ -55,6 +55,7 @@ const sidebarList = computed(() => [
   { title: "Surah Listing", icon: "mdi-view-list", path: "/surah-listing" },
   { title: "Search", icon: "mdi-magnify", path: "/search" },
   { title: "Prophets & People", icon: "mdi-account-group-outline", path: "/persons" },
+  { title: "Peoples & Nations", icon: "mdi-map-marker-radius-outline", path: "/peoples" },
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
   { title: "Reading Goals", icon: "mdi-target", path: "/goals" },
   { title: "Ramadan Mode", icon: "mdi-moon-waning-crescent", path: "/ramadan" },

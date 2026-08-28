@@ -55,6 +55,9 @@
 // MODULE_BLUEPRINT.md Module 17 for the full audit report (counts
 // before/after, rejected false positives, etc.).
 
+import { asRef } from "~/utils/quranReference";
+import type { QuranReference, RelatedPassage, SourceType, SourceReference } from "~/utils/quranReference";
+
 export type PrimaryCategory =
   | "prophet"
   | "woman"
@@ -87,27 +90,13 @@ export type EntityType = "person" | "group";
 
 export type ChronologyStatus = "strong" | "traditional" | "uncertain" | "unknown";
 
-export type SourceType = "quran" | "authentic_hadith" | "traditional_account";
-
-export type QuranReference = {
-  surahNumber: number;
-  ayahNumber?: number;
-  ayahStart?: number;
-  ayahEnd?: number;
-  contentId?: string;
-};
-
-export type RelatedPassage = {
-  id: string;
-  surahNumber: number;
-  ayahStart: number;
-  ayahEnd: number;
-  title?: string;
-  description?: string;
-  storyOrder?: number;
-  source: "quran";
-  verificationStatus: "verified";
-};
+// QuranReference/RelatedPassage/SourceType/SourceReference/asRef moved to
+// app/utils/quranReference.ts in Phase 2 (Peoples & Nations), which needs
+// the identical shapes — imported at the top of this file (so the data
+// literals below can still call `asRef(...)` directly) and re-exported
+// here so every existing import from this file keeps working unchanged.
+export type { QuranReference, RelatedPassage, SourceType, SourceReference } from "~/utils/quranReference";
+export { asRef };
 
 export type PersonRelationship = {
   personId: string;
@@ -120,12 +109,6 @@ export type KeyLesson = {
   text: string;
   quranReferences: QuranReference[];
   status: "quran_derived";
-};
-
-export type SourceReference = {
-  type: SourceType;
-  citation: string;
-  note?: string;
 };
 
 export type QuranPerson = {
@@ -166,8 +149,6 @@ export type QuranPerson = {
   sources?: SourceReference[];
   statusNotes?: string[];
 };
-
-const asRef = (surahNumber: number, ayahNumber: number): QuranReference => ({ surahNumber, ayahNumber });
 
 export const QURAN_PERSONS: QuranPerson[] = [
   // ============================================================

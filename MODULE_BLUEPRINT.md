@@ -11,6 +11,10 @@ It complements, not replaces, the existing docs:
 - `Hifz_Module_Specification.md` — full design spec for Module 10 (Hifz), referenced not repeated here
 - `prophets-quran-feature.md` — full design spec for Module 17 (Prophets & Qur'anic Persons), referenced not repeated here
 - `PROJECT_PLAN.md` — build history
+- `quranic_knowledge_platform_phased_plan.md` — the phased roadmap (Phases 0-10) for expanding Module
+  17 into a full Qur'anic knowledge platform (Peoples, Places, Stories, Themes, Duas, Events, Signs,
+  Commands, and finally a cross-module Knowledge Graph). The "Qur'anic Knowledge Platform — Shared
+  Foundation" section right before Module 17 below is that plan's Phase 0 deliverable.
 
 **Global architectural decisions** (apply to every module unless noted):
 1. **Local-first, no backend.** All user data lives on-device. Every module owns one storage
@@ -750,6 +754,110 @@ rather than by omission.
 - True background push notifications (Module 5) are a related, equally-deferred backend
   dependency: needs push credentials, a server-side subscription store, and a scheduler — separate
   from account sync but likely built alongside it.
+
+---
+
+## Qur'anic Knowledge Platform — Shared Foundation (Phase 0)
+
+**Status: documentation only — no code changes were required.** This section is the Phase 0
+deliverable of `quranic_knowledge_platform_phased_plan.md`: it inspects Module 17 (Prophets &
+Qur'anic Persons, the platform's only built module so far) and writes down, as an explicit
+contract, which of its conventions are already generic enough for Phases 2-10 (Peoples, Places,
+Stories, Themes, Duas, Events, Signs, Commands, Knowledge Graph) to reuse as-is, and which will
+need a small, additive extension *when* a second module actually needs it — not speculatively now.
+Every mechanism below was inspected in the actual shipped code (Module 17, listed in full above),
+not assumed from the spec.
+
+1. **Entity IDs** — lowercase, ASCII-transliterated, no hyphens/underscores/spaces (`adam`,
+   `ashabalkahf`, `alazizwife`, `dhulqarnayn`). An id only needs to be unique **within its own
+   module's array** (`QURAN_PERSONS`, and future `QURAN_PEOPLES`/`QURAN_PLACES`/etc.), not
+   globally — each module gets its own top-level route and its own bookmark key namespace (#9
+   below), so `persons.adam` and a hypothetical `peoples.adam` (a nation) could coexist without
+   collision. **Flag for Phase 10**: `PersonRelationship.personId` is currently a bare string
+   because Module 17 only ever links Persons to other Persons. A future cross-module relationship
+   (e.g. a Person → a Place) will need a typed reference (`{ module: "places", id: "makkah" }` or
+   equivalent), not an assumption that ids are globally unique — do not build this until Phase 10
+   actually needs it.
+2. **Names & Arabic names** — every entity has `name` (English/transliterated) and `arabicName`
+   (the Qur'anic word/phrase where one exists, otherwise the standard traditional Arabic term —
+   see `title_based_person` entries like Al-Khidr, where `arabicName` is the traditional form and
+   `statusNotes` discloses that explicitly). `alternateNames?: string[]` holds traditional names
+   the Qur'an itself doesn't state (e.g. "Zulaikha," "Asiyah," "Nimrod") — never promoted into
+   `name`/`arabicName` as if Qur'anic. `honorific?` is reserved for prophets and Maryam by the
+   feature's own documented exception; not attached to `title_based_person`/group entries.
+3. **Qur'an references** — the two shapes in Module 17's data model (`QuranReference` for exact
+   mentions, `RelatedPassage` for curated narrative ranges) are generic Qur'an-citation primitives
+   with nothing Person-specific about them; every future module cites the Qur'an the same way.
+   They currently live inline in `app/data/quranPersons.ts` rather than a shared types file —
+   **extract them into a shared location the first time a second module needs them (Phase 2)**,
+   not before; importing the type cross-module before then works fine as-is and doesn't justify a
+   refactor with only one consumer.
+4. **Source types** — `SourceType = "quran" | "authentic_hadith" | "traditional_account"` and
+   `SourceReference { type, citation, note? }` are the platform's core source-discipline vocabulary
+   (principle #2 of the phased plan). Reuse verbatim; do not invent a parallel vocabulary in a
+   later module.
+5. **Verification status** — `"verified" | "traditional" | "uncertain"` (relationships),
+   `ChronologyStatus = "strong" | "traditional" | "uncertain" | "unknown"`, and `"quran_derived"`
+   (key lessons) are the standing severity/confidence vocabulary. A later module needing a
+   confidence label should reuse one of these rather than inventing a fourth near-duplicate scale.
+6. **Relationships** — `{ personId, relationshipType, sourceType, verificationStatus }`, directional
+   (the field describes the *owning* entity's role toward the target, e.g. `{ personId: "ismail",
+   relationshipType: "father" }` on Ibrahim's own record means "Ibrahim is Isma'il's father" — see
+   `app/utils/personsTimeline.ts`'s file header for why the inverse is never inferred
+   automatically). A `personId` may point at an entity with no full profile yet — the UI is
+   responsible for only linking what resolves (`usePersons().resolveRelated`) and rendering the
+   rest as plain text; the dataset validator deliberately does not flag this as an error.
+7. **Themes** — a curated free-text `string[]` per entity, not yet a controlled taxonomy. Phase 5
+   (Themes module) is explicitly where this becomes a first-class, cross-referenced entity type
+   with its own source discipline — do not pre-build that taxonomy now.
+8. **Search indexing** — the established pattern is one dependency-free `{module}Search.ts` per
+   module (see `personsSearch.ts`): tashkeel-stripped/case-insensitive text match across
+   name/arabicName/alternateNames/description/themes/category, plus an exact `"surah:ayah"`
+   reference shortcut. **Known gap, not addressed in Phase 0**: this is entirely separate from the
+   site-wide `/search` page (`useSearch.ts`), which only full-text-searches raw ayah/tafsir text
+   against the external `alquran.cloud` API and has no awareness of Persons (or any future module)
+   at all. Unifying these is explicitly Phase 10's job, not Phase 0's — noted here so it isn't
+   mistaken for an oversight later.
+9. **Bookmarks** — `useBookmarks.js` already exposes generic, content-type-agnostic
+   `has(key)/add(key)/remove(key)/toggle(key)` over a flat `Set<string>`, keyed by a
+   `"{type}:{id}"` string convention (`person:{id}` is simply the latest of eight existing
+   namespaces — surah/ayah/name/sajda/juz/audio/page/person). **No code change is needed for
+   future modules**: a new module can call `toggle(\`peoples:${id}\`)` directly with the generic
+   API. The dedicated wrapper functions Module 17 added (`isPersonBookmarked`/`togglePerson`/etc.)
+   are optional ergonomic sugar, not a required part of the pattern — add them for a new module
+   only if actually useful, not as boilerplate.
+10. **Audio** — reuse the single global player (`useAudioPlayer`) via a small per-module "play all"
+    queue composable built on its `endedAt` tick, exactly as `usePersonPassageQueue` does. Never
+    build a second audio player.
+11. **Tafsir** — reuse `useTafsirPreference` (the same composable the main Surah reader and
+    `AyahReferenceCard` already share); never a per-module tafsir preference.
+12. **Translation preferences** — reuse `useTranslationPreference`, same rationale as #11.
+13. **Related entities** — currently same-module only (Person → Person via `relationships[]`).
+    Cross-module relationships (Person → Place, Story → Event, etc.) are explicitly deferred to
+    Phase 10 by the phased plan itself; see the Phase 10 flag under #1 above.
+14. **Accessibility** — the verified, reusable patterns from Module 17: a whole clickable card is a
+    single `<v-card :to="...">` (a real, keyboard-focusable link), not a `<div>` with a nested
+    `<v-btn :to>` (which would create a nested-interactive-element anti-pattern); a toggleable
+    filter chip uses `role="button"` + `:aria-pressed`; icon-only buttons get an explicit
+    `aria-label`, while a button with visible text content needs no separate label. Reuse these
+    exact patterns rather than re-deriving accessibility choices per module.
+15. **Mobile** — Vuetify's grid (`v-row`/`v-col`) for directory/card layouts, `flex-wrap` for chip
+    rows, and a standing QA checkpoint (verify no horizontal overflow at ~390px) before considering
+    any new module's UI done — the same bar Module 17 was held to.
+
+**Dataset integrity pattern (apply to every future module's dataset):** a dependency-free
+`{module}Validate.ts` (see `personsValidate.ts`) that checks every Qur'an reference against the
+*real* per-surah ayah counts (`app/assets/data/surah.json`), run automatically by a
+`tests/{module}Dataset.test.ts` (see `tests/personsDataset.test.ts`). This is not optional
+scaffolding — it has caught real errors during this platform's own content work and is the
+concrete mechanism behind principle #10 ("keep source/reference data traceable to Qur'anic
+passages").
+
+**Phase 0 conclusion:** every mechanism the phased plan's Phase 0 asked to "document and, where
+necessary, standardize" was found to already be generic enough to reuse as-is; nothing required a
+code change to become reusable. The one genuinely new architectural question this raised — typed
+cross-module references for Phase 10 — is flagged above, not solved, per the plan's own rule 12
+("if a major architectural decision is required, stop and explain it before implementing it").
 
 ---
 

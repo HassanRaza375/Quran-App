@@ -213,6 +213,10 @@
 import { useTheme } from "vuetify";
 
 const theme = useTheme();
+// Same cookie key as app/plugins/vuetify.js — keeping it in sync here too
+// means picking a theme and immediately refreshing already has the right
+// theme available at SSR time, not just after the next full app mount.
+const themeCookie = useCookie("theme-resolved", { default: () => "light", sameSite: "lax", maxAge: 60 * 60 * 24 * 365 });
 const themeMode = ref("system");
 const prayer = usePrayerStore();
 const sendingTest = ref(false);
@@ -337,19 +341,15 @@ watch(
 
 watch(themeMode, (val) => {
   localStorage.setItem("themeMode", val);
-  theme.global.name.value = val === "system"
-    ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-    : val;
+  applyTheme(val);
 });
 
-
 function applyTheme(mode) {
-  if (mode === "system") {
-    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    theme.global.name.value = isDark ? "dark" : "light";
-  } else {
-    theme.global.name.value = mode;
-  }
+  const resolved = mode === "system"
+    ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    : mode;
+  theme.global.name.value = resolved;
+  themeCookie.value = resolved;
 }
 
 /* ---------------- Reading preferences ---------------- */

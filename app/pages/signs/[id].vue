@@ -192,6 +192,12 @@ const sign = computed(() => getSignById(String(route.params.id)));
 useHead(() => ({
   title: sign.value ? `${sign.value.title} — Signs & Miracles` : "Sign not found",
 }));
+useSeoMeta({
+  description: () => sign.value?.description,
+  ogTitle: () => (sign.value ? `${sign.value.title} — Signs & Miracles` : undefined),
+  ogDescription: () => sign.value?.description,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

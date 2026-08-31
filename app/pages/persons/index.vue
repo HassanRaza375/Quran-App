@@ -79,6 +79,14 @@
 import { CATEGORY_FILTERS } from "~/utils/personsSearch";
 import PersonCard from "~/components/persons/PersonCard.vue";
 
+useHead({ title: "People & Groups of the Qur'an" });
+useSeoMeta({
+  description: "Browse 59 prophets, named figures, and groups mentioned in the Qur'an, with direct references, family relationships, and key lessons.",
+  ogTitle: "People & Groups of the Qur'an",
+  ogDescription: "Browse 59 prophets, named figures, and groups mentioned in the Qur'an.",
+  ogType: "website",
+});
+
 const { query, category, filteredPersons, setQuery, setCategory, resetFilters } = usePersons();
 
 const { load: loadBookmarks, isPersonBookmarked } = useBookmarks();

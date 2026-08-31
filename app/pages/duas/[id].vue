@@ -184,6 +184,12 @@ const dua = computed(() => getDuaById(String(route.params.id)));
 useHead(() => ({
   title: dua.value ? `${dua.value.title} — Duas of the Qur'an` : "Dua not found",
 }));
+useSeoMeta({
+  description: () => dua.value?.context,
+  ogTitle: () => (dua.value ? `${dua.value.title} — Duas of the Qur'an` : undefined),
+  ogDescription: () => dua.value?.context,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

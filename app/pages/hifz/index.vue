@@ -187,6 +187,9 @@
 </template>
 
 <script setup>
+useHead({ title: "Hifz Mode — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const {
   targets,
   activeTargets,

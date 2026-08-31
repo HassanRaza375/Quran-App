@@ -86,6 +86,14 @@
 import { COMMAND_TYPE_FILTERS } from "~/utils/commandsSearch";
 import CommandCard from "~/components/commands/CommandCard.vue";
 
+useHead({ title: "Commands & Prohibitions of the Qur'an" });
+useSeoMeta({
+  description: "Browse 18 direct commands and prohibitions from the Qur'an's own text — Prayer, Zakah, Shirk, Riba, and more — with their audience and source.",
+  ogTitle: "Commands & Prohibitions of the Qur'an",
+  ogDescription: "Browse 18 direct commands and prohibitions from the Qur'an's own text.",
+  ogType: "website",
+});
+
 const route = useRoute();
 const { query, type, personFilter, filteredCommands, commands, setQuery, setType, setPersonFilter, resetFilters, resolvePerson } = useCommands();
 

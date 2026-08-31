@@ -109,6 +109,9 @@
 </template>
 
 <script setup>
+useHead({ title: "Tasbeeh Counter — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const route = useRoute();
 const router = useRouter();
 const tasbeeh = useTasbeeh();

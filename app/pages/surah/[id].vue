@@ -340,6 +340,26 @@ const { data, pending, error } = await useAsyncData(
   { watch: [chapterNo] }
 );
 
+/* ---------- SEO — dynamic per surah, recomputed on client-side navigation
+ * between surahs since `data` is reactive on `chapterNo` ---------- */
+useHead(() => ({
+  title: data.value
+    ? `Surah ${data.value.surahNo} — ${data.value.surahNameTranslation} (${data.value.surahNameArabicLong})`
+    : `Surah ${chapterNo.value}`,
+}));
+useSeoMeta({
+  description: () =>
+    data.value
+      ? `Read Surah ${data.value.surahNo}, ${data.value.surahNameTranslation} (${data.value.surahNameArabicLong}) — ${data.value.totalAyah} ayahs, revealed in ${data.value.revelationPlace}. Arabic text, translation, tafsir, and audio recitation.`
+      : `Read Surah ${chapterNo.value} of the Qur'an with Arabic text, translation, tafsir, and audio recitation.`,
+  ogTitle: () => (data.value ? `${data.value.surahNameTranslation} — Surah ${data.value.surahNo}` : `Surah ${chapterNo.value}`),
+  ogDescription: () =>
+    data.value
+      ? `${data.value.totalAyah} ayahs, revealed in ${data.value.revelationPlace}.`
+      : undefined,
+  ogType: "website",
+});
+
 /* ---------- Reading progress ---------- */
 const { setProgress, load: loadProgress } = useReadingProgress();
 const { recordAyahRead, load: loadGoals } = useReadingGoals();

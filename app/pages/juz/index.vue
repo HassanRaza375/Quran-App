@@ -28,6 +28,13 @@
   </v-container>
 </template>
 <script setup>
+useSeoMeta({
+  title: "Juz Index — All 30 Parts of the Qur'an",
+  description: "Browse all 30 Juz (parts) of the Qur'an for structured daily reading.",
+  ogTitle: "Juz Index — All 30 Parts of the Qur'an",
+  ogType: "website",
+});
+
 const router = useRouter();
 const goto = (path) => {
   router.push(path);

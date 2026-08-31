@@ -204,6 +204,12 @@ const command = computed(() => getCommandById(String(route.params.id)));
 useHead(() => ({
   title: command.value ? `${command.value.title} — Commands & Prohibitions` : "Not found",
 }));
+useSeoMeta({
+  description: () => command.value?.description,
+  ogTitle: () => (command.value ? `${command.value.title} — Commands & Prohibitions` : undefined),
+  ogDescription: () => command.value?.description,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

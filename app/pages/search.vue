@@ -151,6 +151,9 @@
 <script setup>
 import { useDebounceFn } from "@vueuse/core"
 
+useHead({ title: "Search — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const router = useRouter()
 const route = useRoute()
 

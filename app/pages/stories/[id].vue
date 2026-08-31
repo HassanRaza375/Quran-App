@@ -214,6 +214,12 @@ const story = computed(() => getStoryById(String(route.params.id)));
 useHead(() => ({
   title: story.value ? `${story.value.title} — Stories of the Qur'an` : "Story not found",
 }));
+useSeoMeta({
+  description: () => story.value?.shortDescription,
+  ogTitle: () => (story.value ? `${story.value.title} — Stories of the Qur'an` : undefined),
+  ogDescription: () => story.value?.shortDescription,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

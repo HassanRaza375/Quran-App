@@ -156,6 +156,12 @@ const theme = computed(() => getThemeById(String(route.params.id)));
 useHead(() => ({
   title: theme.value ? `${theme.value.name} — Themes of the Qur'an` : "Theme not found",
 }));
+useSeoMeta({
+  description: () => theme.value?.definition,
+  ogTitle: () => (theme.value ? `${theme.value.name} — Themes of the Qur'an` : undefined),
+  ogDescription: () => theme.value?.definition,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

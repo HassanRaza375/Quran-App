@@ -86,6 +86,14 @@
 import { SIGN_CLASSIFICATION_FILTERS } from "~/utils/signsSearch";
 import SignCard from "~/components/signs/SignCard.vue";
 
+useHead({ title: "Signs & Miracles of the Qur'an" });
+useSeoMeta({
+  description: "Browse 14 signs and miracles the Qur'an itself describes — from Musa's staff to the Table from Heaven — each linked to its source verses.",
+  ogTitle: "Signs & Miracles of the Qur'an",
+  ogDescription: "Browse 14 signs and miracles the Qur'an itself describes.",
+  ogType: "website",
+});
+
 const route = useRoute();
 const { query, classification, personFilter, filteredSigns, signs, setQuery, setClassification, setPersonFilter, resetFilters, resolvePerson } = useSigns();
 

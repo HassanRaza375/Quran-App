@@ -92,6 +92,9 @@
 </template>
 
 <script setup>
+useHead({ title: "Hifz Session — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const {
   session,
   loadSession,

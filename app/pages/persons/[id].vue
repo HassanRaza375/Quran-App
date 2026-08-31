@@ -235,6 +235,12 @@ const person = computed(() => getPersonById(String(route.params.id)));
 useHead(() => ({
   title: person.value ? `${person.value.name} — Prophets & People of the Qur'an` : "Person not found",
 }));
+useSeoMeta({
+  description: () => person.value?.shortDescription,
+  ogTitle: () => (person.value ? `${person.value.name} — Prophets & People of the Qur'an` : undefined),
+  ogDescription: () => person.value?.shortDescription,
+  ogType: "website",
+});
 
 onMounted(() => {
   loadBookmarks();

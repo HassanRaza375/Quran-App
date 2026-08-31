@@ -22,6 +22,11 @@
 import PropheticTimeline from "~/components/persons/PropheticTimeline.vue";
 
 useHead({ title: "Timeline — Prophets & People of the Qur'an" });
+useSeoMeta({
+  description: "A chronological timeline of the prophets and key figures mentioned in the Qur'an, with their relationships to one another.",
+  ogTitle: "Timeline — Prophets & People of the Qur'an",
+  ogType: "website",
+});
 </script>
 
 <style scoped>

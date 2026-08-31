@@ -243,6 +243,13 @@
 <script setup>
 import { RAMADAN_DUAS, LAYLAT_AL_QADR_NIGHTS, LAYLAT_AL_QADR_NOTE, RAMADAN_GOAL_LABEL } from "~/utils/ramadanContent";
 
+useSeoMeta({
+  title: "Ramadan Mode",
+  description: "Fasting times, Ramadan duas, Laylatul Qadr guidance, and a daily Ramadan reading tracker.",
+  ogTitle: "Ramadan Mode",
+  ogType: "website",
+});
+
 const prayer = usePrayerStore();
 const router = useRouter();
 

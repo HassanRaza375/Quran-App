@@ -120,6 +120,18 @@ const surah = computed(() => chapterData.value);
 const reciters = computed(() =>
   chapterData.value?.audio ? Object.values(chapterData.value.audio) : []
 );
+
+useHead(() => ({
+  title: surah.value ? `${surah.value.surahNameTranslation} — Audio Recitations` : `Surah ${surahNo.value} — Audio Recitations`,
+}));
+useSeoMeta({
+  description: () =>
+    surah.value
+      ? `Listen to Surah ${surah.value.surahNo}, ${surah.value.surahNameTranslation} (${surah.value.surahNameArabicLong}), recited by multiple reciters.`
+      : `Listen to Surah ${surahNo.value} recited by multiple reciters.`,
+  ogTitle: () => (surah.value ? `${surah.value.surahNameTranslation} — Audio Recitations` : `Surah ${surahNo.value} — Audio Recitations`),
+  ogType: "website",
+});
 const currentReciter = computed(() =>
   reciters.value.find((r) => r.url === currentUrl.value)
 );

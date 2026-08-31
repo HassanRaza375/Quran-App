@@ -220,6 +220,9 @@
 </template>
 
 <script setup>
+useHead({ title: "Reading Goals — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const router = useRouter();
 const {
   goals,

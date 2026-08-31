@@ -85,6 +85,14 @@
 import { STORY_TYPE_FILTERS, filterByPersonId } from "~/utils/storiesSearch";
 import StoryCard from "~/components/stories/StoryCard.vue";
 
+useHead({ title: "Stories of the Qur'an" });
+useSeoMeta({
+  description: "Browse 21 narrative accounts from the Qur'an, prophet by prophet, with episodes, lessons, and cross-links to the people and places involved.",
+  ogTitle: "Stories of the Qur'an",
+  ogDescription: "Browse 21 narrative accounts from the Qur'an, prophet by prophet.",
+  ogType: "website",
+});
+
 const { query, storyType, filteredStories, stories, setQuery, setStoryType, resetFilters, resolvePerson } = useStories();
 
 const { load: loadBookmarks, has } = useBookmarks();

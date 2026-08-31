@@ -197,6 +197,12 @@ const event = computed(() => getEventById(String(route.params.id)));
 useHead(() => ({
   title: event.value ? `${event.value.title} — Events of the Qur'an` : "Event not found",
 }));
+useSeoMeta({
+  description: () => event.value?.description,
+  ogTitle: () => (event.value ? `${event.value.title} — Events of the Qur'an` : undefined),
+  ogDescription: () => event.value?.description,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

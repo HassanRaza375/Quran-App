@@ -89,6 +89,9 @@
 </template>
 
 <script setup>
+useHead({ title: "Per-Page Reading — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const route = useRoute();
 const initialPage = Number(route.query.page) || 1;
 const page = ref(initialPage >= 1 && initialPage <= 604 ? initialPage : 1);

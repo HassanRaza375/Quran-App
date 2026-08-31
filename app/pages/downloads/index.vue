@@ -169,6 +169,9 @@
 </template>
 
 <script setup>
+useHead({ title: "Downloads — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const {
   manifest,
   downloadingSurah,

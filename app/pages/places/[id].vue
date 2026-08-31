@@ -184,6 +184,12 @@ const place = computed(() => getPlaceById(String(route.params.id)));
 useHead(() => ({
   title: place.value ? `${place.value.name} — Places of the Qur'an` : "Place not found",
 }));
+useSeoMeta({
+  description: () => place.value?.shortDescription,
+  ogTitle: () => (place.value ? `${place.value.name} — Places of the Qur'an` : undefined),
+  ogDescription: () => place.value?.shortDescription,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

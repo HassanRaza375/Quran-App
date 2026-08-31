@@ -212,6 +212,9 @@
 <script setup>
 import { useTheme } from "vuetify";
 
+useHead({ title: "Settings — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const theme = useTheme();
 // Same cookie key as app/plugins/vuetify.js — keeping it in sync here too
 // means picking a theme and immediately refreshing already has the right

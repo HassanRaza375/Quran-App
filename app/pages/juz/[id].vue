@@ -76,6 +76,14 @@ const surahs = computed(() => Object.entries(data.value?.surahs || {}));
 const surahNamesInJuz = computed(() =>
   Object.keys(data.value?.surahs || {}).join(" · ")
 );
+
+useHead(() => ({ title: `Juz ${route.params.id} — Quran App` }));
+useSeoMeta({
+  description: () =>
+    surahNamesInJuz.value ? `Read Juz ${route.params.id} of the Qur'an, covering: ${surahNamesInJuz.value}.` : `Read Juz ${route.params.id} of the Qur'an.`,
+  ogTitle: () => `Juz ${route.params.id} — Quran App`,
+  ogType: "website",
+});
 </script>
 <style scoped>
 /* ===============================

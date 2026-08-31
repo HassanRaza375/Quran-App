@@ -74,6 +74,13 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: "Ayat of Sajda — Verses of Prostration in the Qur'an",
+  description: "The verses of the Qur'an that call for a prostration of recitation (sajdah tilawah), with their locations and Arabic text.",
+  ogTitle: "Ayat of Sajda — Verses of Prostration in the Qur'an",
+  ogType: "website",
+});
+
 const { getAll } = useSajda();
 const { data, pending, error } = await useAsyncData("sajda", () => getAll(), {
   cache: true,

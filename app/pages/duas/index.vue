@@ -86,6 +86,14 @@
 import { DUA_CATEGORY_FILTERS } from "~/utils/duasSearch";
 import DuaCard from "~/components/duas/DuaCard.vue";
 
+useHead({ title: "Duas of the Qur'an" });
+useSeoMeta({
+  description: "Browse 38 supplications made by name in the Qur'an's own text, who made each one, and what it asks for.",
+  ogTitle: "Duas of the Qur'an",
+  ogDescription: "Browse 38 supplications made by name in the Qur'an's own text.",
+  ogType: "website",
+});
+
 const { query, category, speakerFilter, filteredDuas, duas, setQuery, setCategory, setSpeakerFilter, resetFilters, resolvePerson } = useDuas();
 
 const { load: loadBookmarks, has } = useBookmarks();

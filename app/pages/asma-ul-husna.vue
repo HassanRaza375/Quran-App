@@ -95,6 +95,13 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: "Asma-ul-Husna — The 99 Names of Allah",
+  description: "The 99 Names of Allah (Asma-ul-Husna) in Arabic, transliteration, Urdu, and English, each with audio recitation.",
+  ogTitle: "Asma-ul-Husna — The 99 Names of Allah",
+  ogType: "website",
+});
+
 const { isNameBookmarked, toggleName, removeName } = useBookmarks();
 
 const { names, search, setSort, selectedSort } = useAsma();

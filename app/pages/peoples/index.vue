@@ -73,6 +73,14 @@
 import { COMMUNITY_TYPE_FILTERS } from "~/utils/peoplesSearch";
 import CommunityCard from "~/components/peoples/CommunityCard.vue";
 
+useHead({ title: "Peoples & Nations of the Qur'an" });
+useSeoMeta({
+  description: "Browse 14 peoples and nations described in the Qur'an — 'Ad, Thamud, Bani Isra'il, and more — with their outcomes and Qur'anic references.",
+  ogTitle: "Peoples & Nations of the Qur'an",
+  ogDescription: "Browse 14 peoples and nations described in the Qur'an.",
+  ogType: "website",
+});
+
 const { query, communityType, filteredCommunities, setQuery, setCommunityType, resetFilters } = usePeoples();
 
 const { load: loadBookmarks, has } = useBookmarks();

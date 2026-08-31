@@ -282,6 +282,14 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: "Quran App — Read, Listen, and Study the Qur'an",
+  description: "A local-first Qur'an companion: reading, translations, tafsir, audio recitation, prayer times, Qibla direction, and a structured knowledge platform covering People, Places, Stories, Themes, Duas, Events, Signs, and Commands of the Qur'an.",
+  ogTitle: "Quran App — Read, Listen, and Study the Qur'an",
+  ogDescription: "A local-first Qur'an companion with reading, translations, tafsir, audio recitation, prayer times, and a structured Qur'anic knowledge platform.",
+  ogType: "website",
+});
+
 const prayer = usePrayerStore();
 const { progress: readingProgress, percent: readingPercent, load: loadReadingProgress } = useReadingProgress();
 const { activeGoal, todayCount: goalTodayCount, streak: goalStreak, load: loadGoals, useGoalStats } = useReadingGoals();

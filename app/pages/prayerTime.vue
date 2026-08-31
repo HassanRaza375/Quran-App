@@ -101,6 +101,13 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: "Prayer Times",
+  description: "Accurate daily prayer times calculated from your location, with support for multiple calculation methods and fiqh.",
+  ogTitle: "Prayer Times",
+  ogType: "website",
+});
+
 const prayer = usePrayerStore();
 </script>
 <style scoped>

@@ -198,6 +198,13 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 
+useSeoMeta({
+  title: "Islamic Calendar",
+  description: "The Hijri (Islamic) calendar with important Islamic dates and events, converted from your local Gregorian date.",
+  ogTitle: "Islamic Calendar",
+  ogType: "website",
+});
+
 const prayer = usePrayerStore();
 
 const currentMonth = ref(new Date().getMonth() + 1);

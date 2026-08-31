@@ -11,8 +11,13 @@
 
     <v-footer border class="bg-surface">
       <v-container>
-        <v-row dense>
-          <v-col class="text-end" cols="12">
+        <v-row dense align="center">
+          <v-col cols="12" sm="6" class="footer-links">
+            <NuxtLink to="/about">About</NuxtLink>
+            <span class="mx-2">·</span>
+            <NuxtLink to="/sitemap">Sitemap</NuxtLink>
+          </v-col>
+          <v-col class="text-sm-end" cols="12" sm="6">
             &copy; {{ new Date().getFullYear() }} Quran App
           </v-col>
         </v-row>
@@ -37,3 +42,16 @@ onMounted(() => {
   loadAccessibilityPrefs();
 });
 </script>
+
+<style scoped>
+.footer-links a {
+  color: rgba(var(--v-theme-on-surface), 0.7);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+  color: rgb(var(--v-theme-primary));
+  text-decoration: underline;
+}
+</style>

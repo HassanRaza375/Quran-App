@@ -86,6 +86,14 @@
 import { EVENT_CATEGORY_FILTERS } from "~/utils/eventsSearch";
 import EventCard from "~/components/events/EventCard.vue";
 
+useHead({ title: "Events of the Qur'an" });
+useSeoMeta({
+  description: "Browse 40 discrete events and turning points described in the Qur'an, cross-linked to the people, places, and stories they belong to.",
+  ogTitle: "Events of the Qur'an",
+  ogDescription: "Browse 40 discrete events and turning points described in the Qur'an.",
+  ogType: "website",
+});
+
 const route = useRoute();
 const { query, category, personFilter, filteredEvents, events, setQuery, setCategory, setPersonFilter, resetFilters, resolvePerson } = useEvents();
 

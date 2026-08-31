@@ -73,6 +73,14 @@
 import { THEME_CATEGORY_FILTERS } from "~/utils/themesSearch";
 import ThemeCard from "~/components/themes/ThemeCard.vue";
 
+useHead({ title: "Themes of the Qur'an" });
+useSeoMeta({
+  description: "Browse 42 recurring doctrinal and moral concepts across the Qur'an — Tawhid, Justice, Patience, and more — with representative passages.",
+  ogTitle: "Themes of the Qur'an",
+  ogDescription: "Browse 42 recurring doctrinal and moral concepts across the Qur'an.",
+  ogType: "website",
+});
+
 const { query, category, filteredThemes, setQuery, setCategory, resetFilters } = useThemes();
 
 const { load: loadBookmarks, has } = useBookmarks();

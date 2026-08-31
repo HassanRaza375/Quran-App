@@ -7,6 +7,9 @@ const props = defineProps<{
 }>();
 console.error(props.error);
 
+useHead({ title: `${props.error.statusCode || 500} — Quran App` });
+useSeoMeta({ robots: "noindex, nofollow" });
+
 const handleClearError = () => clearError({ redirect: "/" });
 </script>
 

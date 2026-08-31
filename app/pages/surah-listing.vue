@@ -184,6 +184,14 @@
 </template>
 
 <script setup>
+useHead({ title: "Surah Listing — All 114 Surahs" });
+useSeoMeta({
+  description: "Browse all 114 surahs of the Qur'an with Arabic names, translations, ayah counts, and audio recitation by your choice of reciter.",
+  ogTitle: "Surah Listing — All 114 Surahs",
+  ogDescription: "Browse all 114 surahs of the Qur'an with Arabic names, translations, ayah counts, and audio recitation.",
+  ogType: "website",
+});
+
 const searchText = ref("");
 
 const { surahs, search, setSort, selectedSort } = useSurahs();

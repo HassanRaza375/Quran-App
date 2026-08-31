@@ -73,6 +73,14 @@
 import { PLACE_TYPE_FILTERS } from "~/utils/placesSearch";
 import PlaceCard from "~/components/places/PlaceCard.vue";
 
+useHead({ title: "Places of the Qur'an" });
+useSeoMeta({
+  description: "Browse 16 real-world places named or described in the Qur'an — Makkah, Egypt, Sinai, Badr, and more — with their Qur'anic references.",
+  ogTitle: "Places of the Qur'an",
+  ogDescription: "Browse 16 real-world places named or described in the Qur'an.",
+  ogType: "website",
+});
+
 const { query, placeType, filteredPlaces, setQuery, setPlaceType, resetFilters } = usePlaces();
 
 const { load: loadBookmarks, has } = useBookmarks();

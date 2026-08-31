@@ -287,6 +287,9 @@
 <script setup>
 import { SECTION_LABELS } from "~/utils/personStudy"
 
+useHead({ title: "Bookmarks — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const tab = ref(0)
 
 const categories = [

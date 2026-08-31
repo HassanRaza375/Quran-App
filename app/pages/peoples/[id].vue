@@ -201,6 +201,12 @@ const community = computed(() => getCommunityById(String(route.params.id)));
 useHead(() => ({
   title: community.value ? `${community.value.name} — Peoples & Nations of the Qur'an` : "Entity not found",
 }));
+useSeoMeta({
+  description: () => community.value?.shortDescription,
+  ogTitle: () => (community.value ? `${community.value.name} — Peoples & Nations of the Qur'an` : undefined),
+  ogDescription: () => community.value?.shortDescription,
+  ogType: "website",
+});
 
 onMounted(() => loadBookmarks());
 

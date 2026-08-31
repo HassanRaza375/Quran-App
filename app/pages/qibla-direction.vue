@@ -65,6 +65,13 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
+useSeoMeta({
+  title: "Qibla Direction Finder",
+  description: "Find the Qibla direction toward the Kaaba in Makkah from your current location, calculated using precise spherical trigonometry.",
+  ogTitle: "Qibla Direction Finder",
+  ogType: "website",
+});
+
 /* ---------------- STATE ---------------- */
 
 const latitude = ref(null);

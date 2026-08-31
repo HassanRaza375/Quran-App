@@ -48,6 +48,9 @@
 </template>
 
 <script setup>
+useHead({ title: "Tasbeeh Counter — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
+
 const { load, peekEntry } = useTasbeeh();
 const router = useRouter();
 

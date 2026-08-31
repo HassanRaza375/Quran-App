@@ -10,6 +10,9 @@
 </template>
 
 <script setup>
+// Placeholder / "Coming Soon" page — noindex until it has real content.
+useHead({ title: "Surah Videos — Quran App" });
+useSeoMeta({ robots: "noindex, follow" });
 </script>
 
 <style scoped>

@@ -185,6 +185,11 @@
         <li v-for="(note, i) in story.statusNotes" :key="i">{{ note }}</li>
       </ul>
     </v-sheet>
+
+    <RelatedEntitiesSection
+      :entity-ref="{ module: 'stories', id: story.id }"
+      :exclude-modules="['persons', 'peoples', 'places', 'stories']"
+    />
   </v-container>
 
   <v-container v-else class="text-center py-12">
@@ -196,6 +201,7 @@
 
 <script setup>
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
+import RelatedEntitiesSection from "~/components/knowledge/RelatedEntitiesSection.vue";
 import { STORY_TYPE_FILTERS } from "~/utils/storiesSearch";
 
 const route = useRoute();

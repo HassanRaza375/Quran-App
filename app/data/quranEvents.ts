@@ -120,6 +120,11 @@ export type QuranEvent = {
   themeIds?: string[];
   duaIds?: string[];
   relatedEventIds?: string[];
+  // Reciprocal of Signs & Miracles' own `eventIds` (Phase 8,
+  // app/data/quranSigns.ts). Added only where Phase 8's own audit
+  // verified a real relationship — never for symmetry. Left undefined
+  // (not an empty array) on every Event with no linked Sign.
+  signIds?: string[];
 
   statusNotes?: string[];
 };
@@ -237,6 +242,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     personIds: ["ibrahim"],
     storyIds: ["ibrahimnarrative"],
     themeIds: ["tawakkul"],
+    signIds: ["ibrahimfiresign"],
   },
   {
     id: "angelsvisitibrahim",
@@ -423,6 +429,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     storyIds: ["musaandpharaoh"],
     duaIds: ["musacallingprayer"],
     themeIds: ["revelation", "prophethood"],
+    signIds: ["musastaff", "musahand"],
   },
   {
     id: "confrontpharaoh",
@@ -440,6 +447,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     duaIds: ["musaprayeragainstfiraun"],
     themeIds: ["oppression"],
     relatedEventIds: ["magiciansconvert"],
+    signIds: ["musaplagues"],
   },
   {
     id: "magiciansconvert",
@@ -455,6 +463,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     storyIds: ["musaandpharaoh"],
     duaIds: ["saharaconversionprayer"],
     themeIds: ["faith"],
+    signIds: ["musastaff"],
   },
   {
     id: "exoduscrossing",
@@ -471,6 +480,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     placeIds: ["egypt", "thesea"],
     storyIds: ["musaandpharaoh"],
     themeIds: ["tawakkul"],
+    signIds: ["seasplitting"],
     statusNotes: [
       "This entry covers both the crossing and Fir'aun's drowning as one event — no separate 'Destruction of Aal Fir'aun' entry was created, since it would duplicate this same occurrence's own climax.",
     ],
@@ -564,6 +574,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     communityIds: ["saba"],
     storyIds: ["sulaimanandsaba"],
     themeIds: ["guidance"],
+    signIds: ["sulaimancreatures"],
   },
   {
     id: "yunusfish",
@@ -621,6 +632,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     personIds: ["isa", "maryam"],
     storyIds: ["maryamandisa"],
     themeIds: ["creation"],
+    signIds: ["isacradlespeech"],
   },
   {
     id: "isamiracles",
@@ -636,6 +648,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     communityIds: ["baniisrael"],
     storyIds: ["maryamandisa"],
     themeIds: ["tawhid"],
+    signIds: ["isamiraclessign"],
   },
   {
     id: "tablefromheaven",
@@ -651,6 +664,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     storyIds: ["maryamandisa"],
     duaIds: ["isatableprayerdua"],
     themeIds: ["faith"],
+    signIds: ["tablesign"],
   },
   {
     id: "isaascension",
@@ -701,6 +715,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     communityIds: ["thamud"],
     placeIds: ["alhijr"],
     themeIds: ["disobedience"],
+    signIds: ["salihcamel"],
   },
   {
     id: "battlebadr",
@@ -718,6 +733,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     personIds: ["muhammad"],
     placeIds: ["badr"],
     themeIds: ["tawakkul"],
+    signIds: ["badrangels"],
   },
   {
     id: "siegeconfederates",
@@ -731,6 +747,7 @@ export const QURAN_EVENTS: QuranEvent[] = [
     passage: { id: "siegeconfederates-p", surahNumber: 33, ayahStart: 9, ayahEnd: 27, source: "quran", verificationStatus: "verified" },
     personIds: ["muhammad"],
     placeIds: ["madinah"],
+    signIds: ["ahzabwind"],
     statusNotes: [
       "IMPORTANT: The Qur'an itself never uses the word 'trench' (khandaq) — the digging of a trench, and the specific identification of this siege as 'the Battle of the Trench,' are traditional/seerah details layered onto this surah's own content. `sourceBasis: 'quran_context'` reflects that the SIEGE is established through the surah's own narrative content and its very name ('the Confederates'), while the trench detail specifically is not asserted here as Qur'anic.",
     ],

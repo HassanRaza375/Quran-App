@@ -160,6 +160,11 @@
         <li v-for="(note, i) in community.statusNotes" :key="i">{{ note }}</li>
       </ul>
     </v-sheet>
+
+    <RelatedEntitiesSection
+      :entity-ref="{ module: 'peoples', id: community.id }"
+      :exclude-modules="['persons', 'places']"
+    />
   </v-container>
 
   <v-container v-else class="text-center py-12">
@@ -172,6 +177,7 @@
 <script setup>
 import SurahReferenceGroup from "~/components/persons/SurahReferenceGroup.vue";
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
+import RelatedEntitiesSection from "~/components/knowledge/RelatedEntitiesSection.vue";
 import { COMMUNITY_TYPE_FILTERS } from "~/utils/peoplesSearch";
 import { getPlaceById } from "~/data/quranPlaces";
 

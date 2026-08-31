@@ -204,6 +204,8 @@
         <li v-for="(note, i) in person.statusNotes" :key="i">{{ note }}</li>
       </ul>
     </v-sheet>
+
+    <RelatedEntitiesSection :entity-ref="{ module: 'persons', id: person.id }" :exclude-modules="['persons']" />
   </v-container>
 
   <v-container v-else class="text-center py-12">
@@ -217,6 +219,7 @@
 import SurahReferenceGroup from "~/components/persons/SurahReferenceGroup.vue";
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
 import FamilyTree from "~/components/persons/FamilyTree.vue";
+import RelatedEntitiesSection from "~/components/knowledge/RelatedEntitiesSection.vue";
 import { SECTION_LABELS } from "~/utils/personStudy";
 import { chronologyText } from "~/utils/personsChronology";
 

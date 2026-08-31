@@ -154,6 +154,11 @@
         <li v-for="(note, i) in dua.statusNotes" :key="i">{{ note }}</li>
       </ul>
     </v-sheet>
+
+    <RelatedEntitiesSection
+      :entity-ref="{ module: 'duas', id: dua.id }"
+      :exclude-modules="['persons', 'peoples', 'places', 'stories', 'themes']"
+    />
   </v-container>
 
   <v-container v-else class="text-center py-12">
@@ -165,6 +170,7 @@
 
 <script setup>
 import AyahReferenceCard from "~/components/persons/AyahReferenceCard.vue";
+import RelatedEntitiesSection from "~/components/knowledge/RelatedEntitiesSection.vue";
 import { DUA_CATEGORY_FILTERS } from "~/utils/duasSearch";
 
 const route = useRoute();

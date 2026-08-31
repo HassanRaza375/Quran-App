@@ -61,6 +61,8 @@ const sidebarList = computed(() => [
   { title: "Themes", icon: "mdi-lightbulb-on-outline", path: "/themes" },
   { title: "Duas", icon: "mdi-hands-pray", path: "/duas" },
   { title: "Events", icon: "mdi-timeline-clock-outline", path: "/events" },
+  { title: "Signs & Miracles", icon: "mdi-star-four-points-outline", path: "/signs" },
+  { title: "Commands & Prohibitions", icon: "mdi-gavel", path: "/commands" },
   { title: "Bookmarks", icon: "mdi-bookmark", path: "/bookmarks" },
   { title: "Reading Goals", icon: "mdi-target", path: "/goals" },
   { title: "Ramadan Mode", icon: "mdi-moon-waning-crescent", path: "/ramadan" },

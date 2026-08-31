@@ -147,6 +147,11 @@
         <li v-for="(note, i) in place.statusNotes" :key="i">{{ note }}</li>
       </ul>
     </v-sheet>
+
+    <RelatedEntitiesSection
+      :entity-ref="{ module: 'places', id: place.id }"
+      :exclude-modules="['persons', 'peoples', 'places']"
+    />
   </v-container>
 
   <v-container v-else class="text-center py-12">
@@ -159,6 +164,7 @@
 <script setup>
 import SurahReferenceGroup from "~/components/persons/SurahReferenceGroup.vue";
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
+import RelatedEntitiesSection from "~/components/knowledge/RelatedEntitiesSection.vue";
 import { PLACE_TYPE_FILTERS } from "~/utils/placesSearch";
 
 const route = useRoute();

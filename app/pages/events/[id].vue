@@ -166,6 +166,11 @@
         </v-chip>
       </div>
     </v-sheet>
+
+    <RelatedEntitiesSection
+      :entity-ref="{ module: 'events', id: event.id }"
+      :exclude-modules="['persons', 'peoples', 'places', 'stories', 'themes', 'duas', 'events']"
+    />
   </v-container>
 
   <v-container v-else class="text-center py-12">
@@ -177,6 +182,7 @@
 
 <script setup>
 import AyahReferenceCard from "~/components/persons/AyahReferenceCard.vue";
+import RelatedEntitiesSection from "~/components/knowledge/RelatedEntitiesSection.vue";
 import { EVENT_CATEGORY_FILTERS } from "~/utils/eventsSearch";
 
 const route = useRoute();

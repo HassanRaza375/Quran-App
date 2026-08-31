@@ -127,6 +127,11 @@
         <li v-for="(note, i) in theme.statusNotes" :key="i">{{ note }}</li>
       </ul>
     </v-sheet>
+
+    <RelatedEntitiesSection
+      :entity-ref="{ module: 'themes', id: theme.id }"
+      :exclude-modules="['persons', 'peoples', 'places', 'stories', 'themes']"
+    />
   </v-container>
 
   <v-container v-else class="text-center py-12">
@@ -138,6 +143,7 @@
 
 <script setup>
 import RelatedPassageCard from "~/components/persons/RelatedPassageCard.vue";
+import RelatedEntitiesSection from "~/components/knowledge/RelatedEntitiesSection.vue";
 import { THEME_CATEGORY_FILTERS } from "~/utils/themesSearch";
 
 const route = useRoute();

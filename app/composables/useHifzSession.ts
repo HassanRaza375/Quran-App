@@ -306,6 +306,16 @@ export const useHifzSession = () => {
       } else if (item.ayahNo != null) {
         hifz.gradeAyah(item.targetId, item.ayahNo, grade, hintLevel);
       }
+      // A "new" item is the target's next not-yet-introduced ayah (built
+      // from `target.lastPosition + 1` in buildDailyItems). Advancing
+      // lastPosition here — once the ayah has actually been graded, not
+      // merely queued — is what lets the next session offer the ayah
+      // after it instead of re-offering this same one forever. Also
+      // creates the ayah-to-ayah transition state so it can be tracked
+      // for weakness like every other transition.
+      if (item.type === "new" && item.ayahNo != null) {
+        hifz.introduceAyahs(item.targetId, 1);
+      }
     }
 
     session.value = {

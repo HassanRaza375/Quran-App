@@ -13,7 +13,7 @@ export const useAudioPlayer = () => {
   // show a title even though playback may have been started from a page
   // that's since been navigated away from.
   const nowPlaying = useState<{
-    type: "surah" | "ayah";
+    type: "surah" | "ayah" | "name";
     surahNo: number;
     title: string;
     subtitle: string;

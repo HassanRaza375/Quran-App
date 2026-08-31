@@ -74,6 +74,17 @@
 
               <div class="meta mt-3">
                 <v-chip size="x-small" variant="tonal"> #{{ name.id }} </v-chip>
+                <v-btn
+                  icon
+                  size="x-small"
+                  variant="tonal"
+                  color="primary"
+                  :loading="isPlaying(name) && loading"
+                  :aria-label="isPlaying(name) ? `Pause ${name.transliteration}` : `Play ${name.transliteration}`"
+                  @click.stop="togglePlay(name)"
+                >
+                  <v-icon size="16">{{ isPlaying(name) ? "mdi-pause" : "mdi-play" }}</v-icon>
+                </v-btn>
               </div>
             </v-card-text>
           </v-card>
@@ -95,6 +106,26 @@ const filteredNames = computed(() => {
 /* Favorites */
 const videoId = "ta_tTZrarE0"; // Set your video ID dynamically if needed.
 const videoSrc = `https://www.youtube.com/embed/${videoId}?si=gv5AX6IPEI7pfMYo`;
+
+/* Audio — reuses the app's shared global audio player, same as every
+ * other audio feature (a name's own play button here doubles as the
+ * mini-player control once tapped). */
+const { play, pause, playing, currentUrl, loading } = useAudioPlayer();
+
+const isPlaying = (name) => currentUrl.value === name.audio && playing.value;
+
+const togglePlay = (name) => {
+  if (currentUrl.value === name.audio && playing.value) {
+    pause();
+    return;
+  }
+  play(name.audio, {
+    type: "name",
+    surahNo: name.id,
+    title: name.transliteration,
+    subtitle: name.english,
+  });
+};
 </script>
 <style scoped>
 .surah-card {
@@ -124,6 +155,7 @@ const videoSrc = `https://www.youtube.com/embed/${videoId}?si=gv5AX6IPEI7pfMYo`;
 
 .meta {
   display: flex;
+  align-items: center;
   gap: 6px;
   flex-wrap: wrap;
   position: absolute;

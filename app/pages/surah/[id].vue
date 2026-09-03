@@ -131,6 +131,14 @@
                 @click="shareAyahNo = index + 1"
               />
               <v-btn
+                icon="mdi-download-outline"
+                variant="text"
+                class="download--btn"
+                :loading="isDownloadingAyah(index + 1)"
+                :aria-label="`Download audio for ayah ${index + 1}`"
+                @click="downloadAyahAudio(index + 1)"
+              />
+              <v-btn
                 class="verse--play"
                 :icon="
                   playing && playingAyah === index + 1
@@ -537,6 +545,24 @@ watch(playing, (v) => {
   if (!v) playingAyah.value = null;
 });
 
+/* ---------- Ayah audio download ---------- */
+const { downloadAudio, isDownloading } = useAudioDownload();
+const ayahAudioUrls = ref({});
+
+const downloadAyahAudio = async (ayahNo) => {
+  let url = ayahAudioUrls.value[ayahNo];
+  if (!url) {
+    const verse = await getVerse(chapterNo.value, ayahNo);
+    url = verse?.audio?.["1"]?.url;
+    if (url) ayahAudioUrls.value = { ...ayahAudioUrls.value, [ayahNo]: url };
+  }
+  if (!url) return;
+  const surahName = data.value?.surahNameTranslation ?? `Surah ${chapterNo.value}`;
+  await downloadAudio(url, `${surahName}-ayah-${ayahNo}`);
+};
+
+const isDownloadingAyah = (ayahNo) => isDownloading(ayahAudioUrls.value[ayahNo]);
+
 /* ---------- Tafsir ---------- */
 const { getTafsir } = useTafsir();
 
@@ -678,6 +704,11 @@ watch(chapterNo, () => {
 .share--btn {
   position: absolute;
   top: -4px;
+  right: -4px;
+}
+.download--btn {
+  position: absolute;
+  top: 34px;
   right: -4px;
 }
 .verse--play {

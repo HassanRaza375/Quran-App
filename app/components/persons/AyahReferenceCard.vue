@@ -61,6 +61,21 @@
         <v-btn
           size="small"
           variant="text"
+          icon="mdi-download-outline"
+          :loading="isDownloadingAudio"
+          :aria-label="`Download audio for ${surahLabel(surahNo)} ayah ${ayahNo}`"
+          @click="onDownloadAudio"
+        />
+        <v-btn
+          size="small"
+          variant="text"
+          icon="mdi-image-outline"
+          :aria-label="`Download ${surahLabel(surahNo)} ayah ${ayahNo} as wallpaper`"
+          @click="wallpaperOpen = true"
+        />
+        <v-btn
+          size="small"
+          variant="text"
           :icon="isBookmarked ? 'mdi-star' : 'mdi-star-outline'"
           :color="isBookmarked ? 'amber' : undefined"
           :aria-label="isBookmarked ? `Remove ${surahLabel(surahNo)} ayah ${ayahNo} bookmark` : `Bookmark ${surahLabel(surahNo)} ayah ${ayahNo}`"
@@ -139,10 +154,23 @@
     <v-alert v-else type="warning" variant="tonal" density="compact" class="mt-1">
       Qur'anic reference could not be loaded. Please try again.
     </v-alert>
+
+    <AyahShareCard
+      v-if="verse"
+      v-model="wallpaperOpen"
+      :arabic="verse.arabic1"
+      :translation="translationText"
+      :translation-label="translationLangTitle(selectedLang)"
+      :surah-name="surahLabel(surahNo)"
+      :surah-no="surahNo"
+      :ayah-no="ayahNo"
+    />
   </div>
 </template>
 
 <script setup>
+import AyahShareCard from "~/components/ayah/AyahShareCard.vue";
+
 const props = defineProps({
   surahNo: { type: Number, required: true },
   ayahNo: { type: Number, required: true },
@@ -156,6 +184,7 @@ const { play, pause, playing, currentUrl } = useAudioPlayer();
 const { load: loadBookmarks, isAyahBookmarked, toggleAyah } = useBookmarks();
 const { preferredLang, load: loadTranslationPreference, setPreferredLang } = useTranslationPreference();
 const { preferredAuthor, load: loadTafsirPreference, setPreferredAuthor } = useTafsirPreference();
+const { downloadAudio, isDownloading } = useAudioDownload();
 
 onMounted(() => {
   loadBookmarks();
@@ -258,6 +287,18 @@ const togglePlay = async () => {
 
 const isBookmarked = computed(() => isAyahBookmarked(props.surahNo, props.ayahNo));
 const toggleBookmark = () => toggleAyah(props.surahNo, props.ayahNo);
+
+const isDownloadingAudio = computed(() => isDownloading(audioUrl.value));
+const onDownloadAudio = async () => {
+  if (!audioUrl.value) {
+    const v = await getVerse(props.surahNo, props.ayahNo);
+    audioUrl.value = v?.audio?.["1"]?.url ?? null;
+  }
+  if (!audioUrl.value) return;
+  await downloadAudio(audioUrl.value, `${surahLabel(props.surahNo)}-ayah-${props.ayahNo}`);
+};
+
+const wallpaperOpen = ref(false);
 
 const tafsirContent = computed(() => tafsirEntries.value?.find((t) => t.author === tafsirAuthor.value)?.content ?? "");
 const tafsirGroupVerse = computed(

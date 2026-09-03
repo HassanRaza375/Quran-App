@@ -99,12 +99,25 @@
               size="small"
               variant="text"
               class="play-btn"
-              @click.stop="toggleSurahAudio(surah)"
               :loading="isThisLoading(surah)"
+              @click.stop="toggleSurahAudio(surah)"
             >
               <v-icon>
                 {{ isPlaying(surah) ? "mdi-pause" : "mdi-play" }}
               </v-icon>
+            </v-btn>
+
+            <!-- Download audio button -->
+            <v-btn
+              icon
+              size="small"
+              variant="text"
+              class="download-btn"
+              :loading="isDownloadingAudio(surah)"
+              :aria-label="`Download audio for ${surah.surahNameTranslation}`"
+              @click.stop="downloadSurahAudio(surah)"
+            >
+              <v-icon>mdi-download-outline</v-icon>
             </v-btn>
 
             <!-- Favorite button -->
@@ -210,6 +223,13 @@ const {
 } = useAudioPlayer();
 
 const { selected, setReciter, loadSaved } = useReciter();
+const { downloadAudio, isDownloading } = useAudioDownload();
+const downloadSurahAudio = (surah) => {
+  const url = getSurahUrl(surah);
+  if (!url) return;
+  downloadAudio(url, `${surah.surahNameTranslation ?? "surah-" + surah.surahNo}`);
+};
+const isDownloadingAudio = (surah) => isDownloading(getSurahUrl(surah));
 const isPlaying = (surah) => {
   const url = getSurahUrl(surah);
 
@@ -272,7 +292,7 @@ onBeforeRouteLeave(() => {
   reset();
 });
 
-let sortSurahs = ref([
+const sortSurahs = ref([
   "Surah No",
   "Name",
   "Revelation Place",
@@ -288,7 +308,7 @@ const favKey = (surahNo) => `surah:${surahNo}`;
 const isFav = (surahNo) => has(favKey(surahNo));
 const toggleFav = (surahNo) => toggle(favKey(surahNo));
 onMounted(() => {
-  if (process.client) setSort("Surah No");
+  if (import.meta.client) setSort("Surah No");
 });
 </script>
 
@@ -331,6 +351,13 @@ onMounted(() => {
   position: absolute;
   top: 6px;
   left: 6px;
+  z-index: 2;
+}
+
+.download-btn {
+  position: absolute;
+  top: 6px;
+  left: 44px;
   z-index: 2;
 }
 

@@ -50,7 +50,10 @@ export default defineNuxtConfig({
   },
   // pwa
   pwa: {
-    registerType: "autoUpdate",
+    // "prompt" (not "autoUpdate") so a new service worker waits for the user
+    // to confirm via the bottom reload banner (PwaUpdatePrompt.vue) instead
+    // of silently swapping the app under them / force-reloading mid-read.
+    registerType: "prompt",
     injectRegister: "auto",
     manifest: {
       name: "Quran App",

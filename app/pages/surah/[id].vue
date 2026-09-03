@@ -707,9 +707,7 @@ watch(chapterNo, () => {
   right: -4px;
 }
 .download--btn {
-  position: absolute;
-  top: 34px;
-  right: -4px;
+  flex: 0 0 auto;
 }
 .verse--play {
   position: absolute;

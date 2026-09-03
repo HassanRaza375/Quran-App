@@ -116,10 +116,12 @@ Surah listing, multi-translation display, inline tafsir, per-ayah bookmark/audio
 
 ### Screens
 - **Surah listing** — all 114 surahs, name/translation/ayah-count/revelation-place, search/filter,
-  bookmark toggle per surah.
+  bookmark toggle per surah, and a download-to-device button for the currently selected reciter's
+  full-surah audio file (Module 4's save-to-device capability — see there).
 - **Surah reader** (`/surah/:id`) — full surah text; tabs for available translations
   (Arabic/Urdu/English/Bengali/alternate Arabic script); per-ayah: bookmark toggle, play audio,
-  open tafsir panel (source picker across 3 tafsir sources), open translation panel, share.
+  download that ayah's audio to device, open tafsir panel (source picker across 3 tafsir sources),
+  open translation panel, share (opens Module 13's ayah-card/wallpaper dialog).
   Continuous-scroll reading position is tracked (feeds Module 8).
 - **Juz index** (`/juz`) — 30 Juz, each showing its surah/ayah range.
 - **Juz detail** (`/juz/:id`) — reads through a Juz across surah boundaries.
@@ -207,6 +209,19 @@ resumeInfo: { url, position, nowPlaying } | null   // persisted, restored on nex
 - Repeat-one and auto-advance are player-level toggles, not per-surah settings.
 - Playback speed, repeat, and auto-advance preferences persist independently of what's playing.
 
+### Saving a track to device (distinct from Module 12's offline download manifest)
+A small, unrelated capability surfaced next to the play button everywhere ayah/surah audio
+appears — Surah listing (Module 2), Surah reader per-ayah (Module 2), and every
+`AyahReferenceCard` (Module 17's shared reference card, reused by Duas/Persons/Events/Signs/
+Commands/Stories): fetch the audio URL as a blob and trigger an `<a download>` save to the user's
+downloads folder, falling back to opening the URL in a new tab if the CDN blocks the cross-origin
+fetch (no `Access-Control-Allow-Origin` header on the response). This is a one-off file export —
+**not** the same thing as Module 12's `DownloadedSurah` manifest, which persists content into the
+app's own cache for in-app offline reading/playback and tracks its own progress/size/quota state.
+Implemented once as a shared composable (fetch → blob → object-URL → synthetic anchor click →
+revoke) so every "play" surface can add a "download" button beside it without re-implementing the
+blob/fallback logic per screen.
+
 ### Rebuild notes
 - On mobile, prefer a genuine background-audio-capable player (e.g. platform media player /
   foreground service) so playback survives app backgrounding — the web version is
@@ -214,6 +229,9 @@ resumeInfo: { url, position, nowPlaying } | null   // persisted, restored on nex
 - Module 10 (Hifz) explicitly reuses this player rather than building a second one — preserve that
   relationship in any reimplementation; per-ayah repeat, range looping, and loop-count controls
   needed by Hifz should be capabilities of this module, not duplicated.
+- On native mobile, the blob/anchor download trick above doesn't apply — use the platform's native
+  file-save/share API instead; the "one composable, every audio surface calls it" shape still
+  applies.
 
 ---
 
@@ -654,23 +672,54 @@ Manifest = `DownloadedSurah[]`, persisted separately from Module 1's opportunist
 
 ---
 
-## Module 13 — Ayah Sharing
+## Module 13 — Ayah Sharing / Wallpaper Card
 
-**Purpose:** Generate a shareable image card for a chosen ayah (Arabic + translation), with theme
-customization, plus copy-text and native share.
+**Purpose:** Generate a shareable/wallpaper-style image card for a chosen ayah (Arabic, with
+translation optional), with theme customization, plus copy-text and native share. Originally built
+for the Surah reader's per-ayah share button; now reachable from every `AyahReferenceCard` (Module
+17's shared reference card) too, so Duas, Persons, Events, Signs, Commands, and Stories all get the
+same wallpaper dialog for free rather than a second implementation.
 
 ### Theme model
 ```
 AyahCardTheme {
   id, label,
+  category: "Classic"|"Ramadan"|"Nature"|"Minimal"|"Luxury"|"Pastel",
   background: [colorStop1, colorStop2],   // gradient
   textColor, accentColor,
   pattern: "none"|"geometric"|"arch"|"stars"
 }
 ```
-8 curated presets shipped; a `"custom"` theme id lets the user override colors/pattern and,
-separately, supply a custom photo background — the preset list is a starting point, not an
-exhaustive enum.
+16 curated presets shipped (up from an initial 8), grouped into the 6 categories above so the
+picker stays browsable instead of one long undifferentiated grid; each chip shows a small
+gradient-swatch dot so the palette is visible before selecting it. Palettes are grounded in
+recurring Islamic/Quranic design conventions rather than arbitrary colors — deep green+gold
+(Classic/Nature), black-on-black minimalist with a red accent (Classic — "Mono Ink"), luminous
+night-gold and starfield patterns (Ramadan/Luxury), soft pastel pink/green/beige (Pastel), and
+blue+sand or purple/orange mosque-silhouette gradients (Nature/Ramadan). A `"custom"` theme id lets
+the user override colors/pattern and, separately, supply a custom photo background — the preset
+list is a starting point, not an exhaustive enum.
+
+### Card options (beyond the theme)
+```
+RenderCardOptions {
+  ...theme fields, arabic, translation, translationLabel, reference,
+  arabicFontScale, translationFontScale: number   // independent size sliders
+  textAlign: "center"|"right"                      // translation alignment only
+  includeTranslation: boolean                      // default true
+  sidePadding: number                              // px, default 90, user-adjustable 40-160
+}
+```
+- **`includeTranslation`** — a toggle in the customization panel. Off drops the translation block
+  (and its font-size/alignment controls, hidden rather than left showing inert) entirely; the
+  Arabic verse is then vertically re-centered on the frame instead of leaving the lower half empty,
+  computed from the wrapped line count rather than a fixed offset so both short and long ayahs
+  center correctly.
+- **`sidePadding`** — a slider controlling the left/right margin (in canvas px, 1080px-wide frame)
+  that both the Arabic and translation text wrap against. Lower values let more characters fit per
+  line (denser card); higher values give a narrower, more poster-like column.
+- Copy-text and the native-share text fallback respect `includeTranslation` too (omit the quoted
+  translation line when it's off) — one source of truth for what's "in" the card, not two.
 
 ### Rendering
 - Client-side canvas (or platform-native image compositing) rendering: draw background
@@ -678,14 +727,17 @@ exhaustive enum.
   → word-wrapped Arabic + translation text, respecting RTL for the Arabic block → export as an
   image.
 - Text wrapping measures against the canvas's current font metrics and greedily packs words per
-  line up to a max width — direction (RTL/LTR) only affects alignment, not the wrapping algorithm
-  itself.
+  line up to a max width (`1080 - sidePadding * 2`) — direction (RTL/LTR) only affects alignment,
+  not the wrapping algorithm itself.
 - Output actions: copy the ayah text (plain text, no image), download the generated image, or
   invoke the platform's native share sheet with the image attached.
 
 ### Rebuild notes
 - Keep image generation entirely client-side — no server round-trip needed, and it keeps the
   no-backend property intact.
+- Keep the theme list and the render function decoupled from any one call site (they already live
+  in a shared composable) — that's what let this module get reused by Module 17's reference card
+  without forking the dialog.
 
 ---
 
@@ -1049,6 +1101,13 @@ already used internally for surah-to-surah auto-advance, not a parallel playback
   primitive with a `person:{id}` namespace — not a separate bookmark store.
 - "Read in Quran" / "Read Passage" deep-link to Module 2's reader as `/surah/{surahNo}#ayah-{n}`,
   the same anchor convention Module 3 (Search) already uses.
+- **Download audio** and **download-as-wallpaper** buttons added to `AyahReferenceCard` reuse
+  Module 4's save-to-device composable and Module 13's ayah-card dialog respectively — same
+  reasoning as every other row here: the card resolves the ayah's audio URL the same way its own
+  play button already does (fetched once, cached on first play/download, not re-fetched), and opens
+  the *same* `AyahShareCard` dialog component the Surah reader uses, just fed this card's own
+  arabic/translation/reference props. Every module built on top of this card (Duas, Persons,
+  Events, Signs, Commands, Stories) picked up both buttons automatically — no per-module wiring.
 
 ### Translation language + Tafsir source now match the main reader exactly (closed gaps)
 An earlier version of this module hardcoded English-only translation text and only the first

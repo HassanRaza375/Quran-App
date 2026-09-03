@@ -21,22 +21,35 @@
             <v-window v-model="activeTab">
               <!-- THEME -->
               <v-window-item value="theme">
-                <div class="text-caption text-medium-emphasis mb-2">Pick a default, or choose Custom to set your own colors</div>
-                <div class="d-flex ga-2 flex-wrap mb-3">
-                  <v-chip
-                    v-for="t in themes"
-                    :key="t.id"
-                    size="small"
-                    :color="selectedThemeId === t.id ? 'primary' : undefined"
-                    :variant="selectedThemeId === t.id ? 'flat' : 'outlined'"
-                    @click="selectTheme(t.id)"
-                  >
-                    {{ t.label }}
-                  </v-chip>
+                <div class="text-caption text-medium-emphasis mb-2">
+                  {{ themes.length }} pre-built Quranic themes — pick one, or choose Custom to set your own colors
+                </div>
+
+                <div v-for="cat in themeCategories" :key="cat" class="theme-category-group mb-3">
+                  <div class="theme-category-label">{{ cat }}</div>
+                  <div class="d-flex ga-2 flex-wrap">
+                    <v-chip
+                      v-for="t in themesByCategory[cat]"
+                      :key="t.id"
+                      size="small"
+                      :color="selectedThemeId === t.id ? 'primary' : undefined"
+                      :variant="selectedThemeId === t.id ? 'flat' : 'outlined'"
+                      class="theme-swatch-chip"
+                      :style="{ '--swatch-a': t.background[0], '--swatch-b': t.background[1] }"
+                      @click="selectTheme(t.id)"
+                    >
+                      <span class="theme-swatch" />
+                      {{ t.label }}
+                    </v-chip>
+                  </div>
+                </div>
+
+                <div class="d-flex ga-2 flex-wrap mb-1">
                   <v-chip
                     size="small"
                     :color="isCustom ? 'primary' : undefined"
                     :variant="isCustom ? 'flat' : 'outlined'"
+                    prepend-icon="mdi-palette-outline"
                     @click="selectedThemeId = CUSTOM_THEME_ID"
                   >
                     Custom
@@ -96,17 +109,37 @@
 
               <!-- TEXT -->
               <v-window-item value="text">
+                <v-switch
+                  v-model="includeTranslation"
+                  label="Include translation"
+                  color="primary"
+                  density="compact"
+                  hide-details
+                  class="mb-2"
+                />
+                <div class="text-caption text-medium-emphasis mb-3">
+                  {{ includeTranslation ? "The translation is drawn below the Arabic verse." : "Arabic-only card — the verse is re-centered on the frame." }}
+                </div>
+
                 <div class="text-caption text-medium-emphasis mb-1">Arabic size</div>
                 <v-slider v-model="arabicFontScale" :min="0.8" :max="1.3" :step="0.05" thumb-label density="compact" />
 
-                <div class="text-caption text-medium-emphasis mb-1">Translation size</div>
-                <v-slider v-model="translationFontScale" :min="0.8" :max="1.3" :step="0.05" thumb-label density="compact" />
+                <template v-if="includeTranslation">
+                  <div class="text-caption text-medium-emphasis mb-1">Translation size</div>
+                  <v-slider v-model="translationFontScale" :min="0.8" :max="1.3" :step="0.05" thumb-label density="compact" />
 
-                <div class="text-caption text-medium-emphasis mb-1">Translation alignment</div>
-                <div class="d-flex ga-2 mb-3">
-                  <v-chip size="small" :color="textAlign === 'center' ? 'primary' : undefined" @click="textAlign = 'center'">Center</v-chip>
-                  <v-chip size="small" :color="textAlign === 'right' ? 'primary' : undefined" @click="textAlign = 'right'">Right</v-chip>
+                  <div class="text-caption text-medium-emphasis mb-1">Translation alignment</div>
+                  <div class="d-flex ga-2 mb-3">
+                    <v-chip size="small" :color="textAlign === 'center' ? 'primary' : undefined" @click="textAlign = 'center'">Center</v-chip>
+                    <v-chip size="small" :color="textAlign === 'right' ? 'primary' : undefined" @click="textAlign = 'right'">Right</v-chip>
+                  </div>
+                </template>
+
+                <div class="text-caption text-medium-emphasis mb-1">
+                  Left/right spacing
+                  <span class="text-medium-emphasis">({{ sidePadding }}px)</span>
                 </div>
+                <v-slider v-model="sidePadding" :min="40" :max="160" :step="10" thumb-label density="compact" />
 
                 <div class="text-caption text-medium-emphasis mb-1">Text color</div>
                 <div class="d-flex ga-2">
@@ -158,6 +191,10 @@ const open = computed({
 });
 
 const themes = AYAH_CARD_THEMES;
+const themeCategories = AYAH_CARD_THEME_CATEGORIES;
+const themesByCategory = computed(() =>
+  Object.fromEntries(themeCategories.map((cat) => [cat, themes.filter((t) => t.category === cat)]))
+);
 const activeTab = ref("theme");
 const selectedThemeId = ref(AYAH_CARD_THEMES[0].id);
 const isCustom = computed(() => selectedThemeId.value === CUSTOM_THEME_ID);
@@ -207,6 +244,8 @@ const arabicFontScale = ref(1);
 const translationFontScale = ref(1);
 const textAlign = ref("center");
 const textColorOverride = ref("auto");
+const includeTranslation = ref(true);
+const sidePadding = ref(90);
 
 const baseTheme = computed(() => themes.find((t) => t.id === selectedThemeId.value) ?? themes[0]);
 const effectiveBackground = computed(() => (isCustom.value ? [customColor1.value, customColor2.value] : baseTheme.value.background));
@@ -230,9 +269,12 @@ const deepLink = computed(() =>
     : ""
 );
 
-const shareText = computed(
-  () => `${props.arabic}\n\n"${props.translation}"\n\n${reference.value}${deepLink.value ? `\n${deepLink.value}` : ""}`
-);
+const shareText = computed(() => {
+  const parts = [props.arabic];
+  if (includeTranslation.value) parts.push(`"${props.translation}"`);
+  parts.push(reference.value + (deepLink.value ? `\n${deepLink.value}` : ""));
+  return parts.join("\n\n");
+});
 
 const redraw = async () => {
   if (!canvasEl.value || !props.arabic) return;
@@ -249,6 +291,8 @@ const redraw = async () => {
     arabicFontScale: arabicFontScale.value,
     translationFontScale: translationFontScale.value,
     textAlign: textAlign.value,
+    includeTranslation: includeTranslation.value,
+    sidePadding: sidePadding.value,
   });
 };
 
@@ -265,6 +309,8 @@ watch(
     arabicFontScale,
     translationFontScale,
     textAlign,
+    includeTranslation,
+    sidePadding,
   ],
   async ([isOpen]) => {
     if (isOpen) await nextTick().then(redraw);
@@ -327,6 +373,35 @@ const shareImage = async () => {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.theme-category-group:last-child {
+  margin-bottom: 4px !important;
+}
+
+.theme-category-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(var(--v-theme-on-surface), 0.55);
+  margin-bottom: 6px;
+}
+
+.theme-swatch-chip :deep(.v-chip__content) {
+  display: flex;
+  align-items: center;
+}
+
+.theme-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: linear-gradient(135deg, var(--swatch-a), var(--swatch-b));
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  flex: 0 0 auto;
 }
 
 .preview-canvas {

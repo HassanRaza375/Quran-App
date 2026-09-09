@@ -171,6 +171,28 @@
       </v-col>
     </v-row>
 
+    <!-- Additional Modules -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4" rounded="xl">
+          <div class="text-subtitle-1 font-weight-bold mb-1">Additional Modules</div>
+          <div class="text-caption text-medium-emphasis mb-3">
+            Extra sidebar sections for community/contributed literary study modules (e.g. Mir
+            Anis) as they're added — off by default so the sidebar stays uncluttered until you
+            want them.
+          </div>
+
+          <v-switch
+            v-model="additionalModulesEnabled"
+            label="Show Literary Modules in sidebar"
+            inset
+            color="primary"
+            hide-details
+          />
+        </v-card>
+      </v-col>
+    </v-row>
+
     <!-- Data & Privacy -->
     <v-row>
       <v-col cols="12">
@@ -419,6 +441,14 @@ const arabicFontScale = computed({
   set: (v) => setAccessibilityPref("arabicFontScale", v),
 });
 
+/* ---------------- Additional modules ---------------- */
+const { enabled: additionalModulesEnabledState, load: loadPoetModules, setEnabled: setPoetModulesEnabled } =
+  usePoetModules();
+const additionalModulesEnabled = computed({
+  get: () => additionalModulesEnabledState.value,
+  set: (v) => setPoetModulesEnabled(v),
+});
+
 /* ---------------- Data & privacy ---------------- */
 const clearDataDialog = ref(false);
 
@@ -454,5 +484,6 @@ onMounted(() => {
   preferredTafsirAuthor.value = localStorage.getItem("tafsirDefaultAuthor") || null;
   loadSavedReciter();
   loadAccessibilityPrefs();
+  loadPoetModules();
 });
 </script>

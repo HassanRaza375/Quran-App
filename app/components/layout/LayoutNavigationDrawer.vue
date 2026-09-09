@@ -49,8 +49,17 @@ onMounted(async () => {
   }));
 });
 
+// Off by default (Settings → Additional Modules) — keeps the sidebar
+// uncluttered until the user opts in to community/contributed literary
+// modules (Mir Anis, and others added later under /poets).
+const { enabled: additionalModulesEnabled, load: loadPoetModules } = usePoetModules();
+onMounted(loadPoetModules);
+
 const sidebarList = computed(() => [
   { title: "Home", icon: "mdi-home", path: "/" },
+  ...(additionalModulesEnabled.value
+    ? [{ title: "Literary Modules", icon: "mdi-book-open-variant", path: "/poets" }]
+    : []),
   { title: "Asma-ul-Husna", icon: "mdi-book", path: "/asma-ul-husna" },
   { title: "Surah Listing", icon: "mdi-view-list", path: "/surah-listing" },
   { title: "Search", icon: "mdi-magnify", path: "/search" },

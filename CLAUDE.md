@@ -16,7 +16,10 @@ read it first, this file only adds what the README doesn't cover. For build hist
 see `PROJECT_PLAN.md`; for the Hifz engine's design, see `Hifz_Module_Specification.md`; for the
 Prophets & Qur'anic Persons feature, see `prophets-quran-feature.md`; for the original feature
 roadmap, see `Quran_WebApp_Feature_Roadmap_and_Module_Specification.md`. For a tech-agnostic,
-module-by-module rebuild spec of the whole app, see `MODULE_BLUEPRINT.md`.
+module-by-module rebuild spec of the whole app, see `MODULE_BLUEPRINT.md`. For the literary/poet
+study modules (Mir Anis and, over time, others) — their research process, anti-hallucination rules
+and source-verification levels — see `mir_anis_module_research_extraction_plan.md` and
+`Mir_Anis_Module_Research.md`.
 
 ## Commands
 

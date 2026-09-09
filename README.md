@@ -95,6 +95,12 @@ backgrounds + text controls), Copy Text, Download Image, and native Share (Web S
 defaults, accessibility — reduced motion/high contrast/larger touch targets/Arabic text size, data
 export/clear).
 
+**Literary modules** (`/poets`, opt-in) — source-verified study modules on Urdu/Islamic poets,
+starting with Mir Anis (`/poets/mir-anis`, currently a Phase 1 seed dataset — see
+`mir_anis_module_research_extraction_plan.md` and `Mir_Anis_Module_Research.md`). Hidden from the
+sidebar by default; enable via Settings → Additional Modules, since more modules get added here
+over time.
+
 ---
 
 ## Project structure
@@ -130,6 +136,7 @@ app/
 | `useAccessibilityPrefs` | Reduced motion / high contrast / large touch targets / Arabic text scale |
 | `useDownloads` / `useOnlineStatus` | Explicit offline downloads; connectivity state |
 | `useAyahCardImage` | Canvas-based share-card image renderer |
+| `usePoetModules` | Literary/poet module registry + Settings-gated sidebar visibility |
 
 ---
 

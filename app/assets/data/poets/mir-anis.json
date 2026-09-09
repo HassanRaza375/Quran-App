@@ -1,0 +1,1764 @@
+{
+  "poet": {
+    "slug": "mir-anis",
+    "name": "Mir Anis",
+    "name_full": "Mir Babar Ali Anis",
+    "name_urdu": "میر ببر علی انیس",
+    "takhallus": "انیس (Anis)",
+    "primary_genre": "Marsiya (Karbala elegy)",
+    "era": "19th century, Awadh (Lucknow)",
+    "tagline": "The foremost Urdu marsiya poet of Lucknow, remembered above all for his elegies on the tragedy of Karbala.",
+    "module_status": "in-progress",
+    "module_status_note": "Phase 1 (Identity) + Phase 2 (Bibliographic Foundation) + Phase 2B (Primary Edition Resolution) + Phase 2C (Rekhta Reader & Primary-Text Accessibility) done. Rekhta's actual digitized reader was opened directly this phase and found genuinely paywalled (no page content accessible) with only a genre-level table of contents. No edition tested so far (5 scans + 1 gated reader) has yielded verifiable primary text. All 10 verses remain at Strong Secondary (B) — 0 upgraded to A, 0 downgraded. 'Kulliyat-e-Anis' still does not match any real edition found. Phase 3 (large-scale primary-text extraction) has NOT started. See research_notes and Mir_Anis_Module_Research.md for the full Phase 2C findings, including two independently-caught AI misattribution examples that inform this module's source-corroboration rules."
+  },
+  "biography": {
+    "full_name": "Mir Babar Ali Anis",
+    "takhallus": "Anis",
+    "father": {
+      "value": "Mir Khaliq (also written Mir Mustahsan Khaliq)",
+      "note": "A marsiya poet in his own right; source_status B."
+    },
+    "family_background": {
+      "value": "Born into a multi-generation family of poets. Several sources describe the family as writing Persian and later Urdu poetry across multiple generations.",
+      "source_status": "B"
+    },
+    "grandfather_lineage": {
+      "conflict": true,
+      "note": "Sources disagree on Mir Anis's exact relation to Mir Hasan (author of the celebrated masnavi Sehr-ul-Bayan). One set of sources describes Anis as Mir Hasan's grandson; a source consulted for this module instead named the grandfather as 'Zahak' and Mir Hasan as great-grandfather. Not resolved — do not treat either version as settled without checking a primary genealogical/critical source.",
+      "source_status": "D"
+    },
+    "date_of_birth": {
+      "commonly_cited": "1803",
+      "alternative": "1800",
+      "note": "Wikipedia gives 1800 (citing one source for 1803 CE); other secondary sources (Rekhta) give 1803. Recorded as an open conflict per the research plan's rule not to silently pick one.",
+      "source_status": "C"
+    },
+    "place_of_birth": {
+      "value": "Faizabad, Awadh (present-day Uttar Pradesh, India)",
+      "source_status": "B"
+    },
+    "date_of_death": {
+      "commonly_cited": "1874",
+      "day_conflict": "Sources disagree on the exact day: 1 December 1874 vs 10 December 1874.",
+      "source_status": "C"
+    },
+    "place_of_death": {
+      "value": "Lucknow",
+      "source_status": "B"
+    },
+    "education": {
+      "value": "Early education in Faizabad; studied Arabic and Persian. Reported to have been well acquainted with Hindi literature (Tulsidas, Malik Muhammad Jayasi). Reportedly composing couplets by age 4–5.",
+      "source_status": "C",
+      "note": "Early-childhood composing-ability claims are common in poet hagiography generally and should be treated cautiously pending a primary/academic source."
+    },
+    "teachers": {
+      "value": "Reported to have studied under the poet Shaikh Imam Bakhsh Nasikh.",
+      "source_status": "C"
+    },
+    "literary_output_scale": {
+      "value": "One secondary source (Rekhta) states approximately 200 marsiyas (elegies), 125 salams, and 600 rubais. A separate, more concrete figure now exists for the original Naval Kishore print run specifically: 108 elegies, 268 quatrains and 31 salaams across its 4 volumes (1876–77) — see collection col-naval-kishore-1876. The two figures are not the same claim (one is an approximate lifetime-output estimate, the other a specific print run's contents) and should not be conflated.",
+      "source_status": "C for the ~200/125/600 estimate; B for the Naval Kishore print-run count"
+    },
+    "connection_with_lucknow": {
+      "value": "Based in Lucknow for most of his literary career, reciting majlis (mourning assemblies) there and, after the 1856 British annexation of Awadh, reportedly travelling to recite in other cities as well.",
+      "source_status": "B"
+    },
+    "contemporary_poets": {
+      "value": "Mirza Dabeer — a contemporary marsiya poet regarded as Anis's great rival; secondary sources describe separate literary 'schools' (Anisia and Dabiria) forming around the two.",
+      "source_status": "B"
+    },
+    "patrons": {
+      "value": "Secondary sources associate his rise to fame with the reigns of Nawabs Ghazi-ud-Din Haider, Amjad Ali Shah and Wajid Ali Shah of Awadh — not yet confirmed against a primary/academic source.",
+      "source_status": "C"
+    },
+    "burial_place": {
+      "value": null,
+      "note": "Not established from sources consulted so far."
+    },
+    "family_members_who_were_poets": {
+      "value": "Father Mir Khaliq; brother Mir Munis Lakhnawi (per one secondary source); sons reported as Mir Salees and Nafees Lucknowi; grandsons reported as Arif Lakhnavi and Rasheed Lakhnavi.",
+      "source_status": "C",
+      "note": "Family-tree claims from a single secondary source; not cross-checked."
+    }
+  },
+  "historical_context": {
+    "summary": "Mir Anis worked in Lucknow (Awadh) during a period — late Mughal decline, then Awadh under its own Nawabs until British annexation in 1856 — often described as a high point of Urdu literary culture, court patronage, and Shia religious/cultural life. Marsiya as a genre was already established before Anis (with earlier Lucknow and Delhi marsiya poets), and is closely tied to the recitation (majlis) culture of Muharram.",
+    "source_status": "B",
+    "caveat": "This is a general-consensus summary from secondary sources, not a researched historical account. It should be expanded and cited properly in a later research pass (Phase 1/7 of the plan) before being treated as authoritative."
+  },
+  "literary_context": {
+    "anis_position": "Widely described in secondary/tertiary sources as having brought the Urdu marsiya to its highest literary form, comparable to his great-grandfather/grandfather Mir Hasan's status in masnavi.",
+    "source_status": "C",
+    "caveat": "This is a broad characterization repeated across popular sources; needs grounding in specific academic literary criticism (Section 21 of the plan) rather than being stated as fact.",
+    "editorial_history_note": "A named, sourced fact now exists that partially substantiates the 'foremost marsiya poet' characterization from a different angle: Dawn's literary-notes column (source src-dawn-parekh-2023) describes roughly 50 years / three generations of dedicated scholarly effort (Masood Hasan Rizvi Adeeb, continued by Nayyar Masud and Timsal Masud) to establish an authoritative text of Anis's elegies — a level of editorial attention the column implicitly treats as unusual, which is suggestive of his stature but is not itself a literary-critical assessment. See critical_reception."
+  },
+  "genres": [
+    {
+      "genre": "Marsiya",
+      "genre_urdu": "مرثیہ",
+      "description": "Elegiac poetry mourning the martyrdom of Imam Hussain and his companions at Karbala; Anis's primary and best-documented genre.",
+      "attestation": "well-attested",
+      "source_status": "A/B mixed — well documented that this was his primary genre; individual poem counts unverified"
+    },
+    {
+      "genre": "Salam",
+      "genre_urdu": "سلام",
+      "description": "Shorter elegiac/salutation poems, also Karbala-related, recited in majlis.",
+      "attestation": "attributed",
+      "source_status": "C"
+    },
+    {
+      "genre": "Rubai",
+      "genre_urdu": "رباعی",
+      "description": "Quatrains; the Naval Kishore print run alone contained 268 (see col-naval-kishore-1876) — a real, sourced print-run figure, though still not the same thing as a verified total lifetime output.",
+      "attestation": "attributed",
+      "source_status": "B for the print-run count; C for any claim about total lifetime output"
+    },
+    {
+      "genre": "Ghazal",
+      "genre_urdu": "غزل",
+      "description": "Secondary sources note Anis wrote comparatively little ghazal, with marsiya being his dominant form.",
+      "attestation": "attributed",
+      "source_status": "C"
+    },
+    {
+      "genre": "Qasida, Masnavi, Qit'a",
+      "genre_urdu": "قصیدہ، مثنوی، قطعات",
+      "description": "Mentioned in the research plan's genre list; not yet confirmed for Anis specifically in sources consulted.",
+      "attestation": "disputed",
+      "source_status": "E",
+      "note": "Do not assume attestation — flagged for the next research pass."
+    }
+  ],
+  "works": [
+    {
+      "work_id": "anis-marsiya-hur",
+      "marsiya_id": "anis-marsiya-hur",
+      "title": "Ba-khuda faaris-e-maidan-e-tahavvur tha Hur",
+      "title_urdu": "بخدا فارسِ میدانِ تہور تھا حُرؔ",
+      "genre": "Marsiya",
+      "opening_line": "بخدا فارسِ میدانِ تہور تھا حُرؔ",
+      "subject": "The bravery and repentance/martyrdom of Hurr ibn Yazid al-Riyahi at Karbala.",
+      "characters": [
+        "Hurr ibn Yazid"
+      ],
+      "karbala_related": true,
+      "collection": "Marsiya-e-Meer Anees (as indexed by Rekhta)",
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source": "Rekhta.org marsiya index and search corroboration",
+      "source_url": "https://www.rekhta.org/marsiya/ba-khudaa-faaras-e-maidaan-e-tahavvur-thaa-hur-meer-anees-marsiya",
+      "source_refs": [
+        "src-rekhta-marsiya-hur",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification_level": "B",
+      "notes": "Opening couplet corroborated via three independent sources now (Rekhta listing, an independent search-result quotation, and a Wikisource transcription). Full text of the marsiya, its edition/volume/page, and internal structure are still not verified — the Marsiya→Edition→Volume→Page path has not been established for this work (see research_notes)."
+    },
+    {
+      "work_id": "anis-marsiya-001",
+      "marsiya_id": "anis-marsiya-001",
+      "title": "Aaj Shabir pe kya aalam-e-tanhaai hai",
+      "title_urdu": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "genre": "Marsiya",
+      "opening_line": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "subject": "Imam Hussain's isolation on the battlefield of Karbala, described as abandoned by son, nephew and brother.",
+      "characters": [
+        "Imam Hussain"
+      ],
+      "karbala_related": true,
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source": "Rekhta.org marsiya index; full opening couplets confirmed via Wikisource",
+      "source_url": "https://www.rekhta.org/poets/meer-anees/marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification_level": "B",
+      "notes": "Now has 3 corroborated opening couplets in the verses collection (anis-verse-0002 to 0004), not just a title. Edition/volume/page still unknown."
+    },
+    {
+      "work_id": "anis-marsiya-002",
+      "marsiya_id": "anis-marsiya-002",
+      "title": "Dasht-e-vaghaa mein noor-e-khuda ka zuhoor hai",
+      "title_urdu": "دشت وغا میں نور خدا کا ظہور ہے",
+      "genre": "Marsiya",
+      "opening_line": "دشت وغا میں نور خدا کا ظہور ہے",
+      "subject": "Battlefield of Karbala (general).",
+      "characters": [],
+      "karbala_related": true,
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source": "Rekhta.org marsiya index",
+      "source_url": "https://www.rekhta.org/poets/meer-anees/marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index"
+      ],
+      "source_status": "B",
+      "verification_level": "B",
+      "notes": "Title/opening line only — a Wikisource page exists for this marsiya (confirming the title is genuine) but full couplet text could not be extracted in this pass (the fetch was declined). Still title-only in the verified verse sense."
+    },
+    {
+      "work_id": "anis-marsiya-003",
+      "marsiya_id": "anis-marsiya-003",
+      "title": "Jab ran mein sar-buland Ali ka alam hua",
+      "title_urdu": "جب رن میں سر بلند علی کا علم ہوا",
+      "genre": "Marsiya",
+      "opening_line": "جب رن میں سر بلند علی کا علم ہوا",
+      "subject": "A standard-bearer ('alam') raising Ali's banner in battle. Frequently associated with Hazrat Abbas in popular usage (Abbas was 'Ali ka'/son of Ali and Hussain's standard-bearer), but the text of the opening couplets does not itself name Abbas — this is an inference, not a textual fact.",
+      "characters": [],
+      "karbala_related": true,
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source": "Rekhta.org marsiya index; opening couplets confirmed via Wikisource",
+      "source_url": "https://www.rekhta.org/poets/meer-anees/marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "C",
+      "verification_level": "C",
+      "notes": "IMPORTANT: kept at C, not upgraded to B, specifically because of the unconfirmed character attribution — the verse WORDING is reliably sourced (see anis-verse-0010 to 0012) but the Abbas identification is not. Do not present this work as 'about Hazrat Abbas' as settled fact. (During this research pass, an AI web-fetch summary tool itself asserted 'Abbas' as if the text named him, which it does not — a concrete example of exactly the kind of unverified inference this module's rules exist to catch.)"
+    },
+    {
+      "work_id": "anis-marsiya-004",
+      "marsiya_id": "anis-marsiya-004",
+      "title": "Farzand-e-payambar ka Madine se safar hai",
+      "title_urdu": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "genre": "Marsiya",
+      "opening_line": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "subject": "Imam Hussain's journey from Medina, framed as the start of the tragedy that will unfold for the Prophet's household (Sadaat).",
+      "characters": [
+        "Imam Hussain"
+      ],
+      "karbala_related": true,
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source": "Rekhta.org marsiya index; full opening couplets confirmed via Wikisource and independently corroborated by a separate web summary quoting the same lines",
+      "source_url": "https://www.rekhta.org/marsiya/farzand-e-payambar-kaa-madiine-se-safar-hai-meer-anees-marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification_level": "B",
+      "notes": "Now has 3 corroborated opening couplets in the verses collection (anis-verse-0005 to 0007) — the best-attested work in this dataset after Hurr's and Aaj Shabir's marsiyas. Edition/volume/page still unknown."
+    },
+    {
+      "work_id": "anis-marsiya-005",
+      "marsiya_id": "anis-marsiya-005",
+      "title": "Aamad aamad haram-e-shah ki darbar mein hai",
+      "title_urdu": "آمد آمد حرمِ شاہ کی دربار میں ہے",
+      "genre": "Marsiya",
+      "opening_line": "آمد آمد حرمِ شاہ کی دربار میں ہے",
+      "subject": "An 'aamad' (arrival) passage — likely part of a larger marsiya's structure rather than a standalone title.",
+      "characters": [],
+      "karbala_related": true,
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source": "Rekhta.org marsiya index",
+      "source_url": "https://www.rekhta.org/poets/meer-anees/marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index"
+      ],
+      "source_status": "C",
+      "verification_level": "C",
+      "notes": "Listed as a separate entry by Rekhta's index; relationship to other marsiyas in this list not yet mapped. Not attempted in this pass — no independent corroboration sought yet."
+    },
+    {
+      "work_id": "anis-marsiya-006",
+      "marsiya_id": "anis-marsiya-006",
+      "title": "Kya gaaziyan-e-fauj-e-khuda naam kar gaye",
+      "title_urdu": "کیا غازیانِ فوجِ خدا نام کر گئے",
+      "genre": "Marsiya",
+      "opening_line": "کیا غازیانِ فوجِ خدا نام کر گئے",
+      "subject": "The fighters ('ghazis') of Imam Hussain's camp.",
+      "characters": [],
+      "karbala_related": true,
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source": "Rekhta.org marsiya index",
+      "source_url": "https://www.rekhta.org/poets/meer-anees/marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index"
+      ],
+      "source_status": "B",
+      "verification_level": "B",
+      "notes": "Title/opening line only — a Wikisource page exists (title confirmed genuine) but full-text extraction was declined by the fetch tool in this pass."
+    }
+  ],
+  "collections": [
+    {
+      "collection_id": "col-kulliyat-anis-generic",
+      "name": "Kulliyat-e-Anis",
+      "name_urdu": "کلیاتِ انیس",
+      "type": "kulliyat",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "volume_count": "",
+      "status": "unverified",
+      "note": "Referenced generically in popular sources as 'the complete works of Anis.' This module has not yet independently confirmed which published edition(s) use this exact title, who edited them, or whether a genuinely complete Kulliyat exists versus a large-but-partial compilation. Per the research plan (Section 10), 'Diwan-e-Anis' and 'Kulliyat-e-Anis' must not be assumed interchangeable — still not resolved. The concrete, real editions found this phase (col-naval-kishore-1876, col-fazil-lakhnawi-1974, col-aaj-ki-kitaben-111) are NOT titled 'Kulliyat-e-Anis' — none of them use that exact name — so this entry remains a separate, unconfirmed lead rather than being merged with any of them. PHASE 2B UPDATE: targeted catalog searches (HathiTrust catalog, WorldCat, Google Books) for \"Kulliyat-e-Anis\" / \"Kulliyat Anis\" / \"کلیات انیس\" found no matching library record. Combined with the finding that none of the five real editions now identified (Naval Kishore 1876-77, Fazil Lakhnawi 1974, Saleha Abid Husain 1980, Aaj Ki Kitaben 111-marsiye, the 2004 reprint) carry this exact title, this module's working conclusion is that \"Kulliyat-e-Anis\" is most likely an informal/generic descriptor people use online for \"the collected marsiyas of Anis\" in general, rather than the name of one specific real publication — but this is a conclusion from absence of evidence in the sources checked, not a confirmed negative, so the entry is kept (status unchanged) rather than deleted.",
+      "source_status": "E",
+      "bibliographic_confidence": "E"
+    },
+    {
+      "collection_id": "col-rekhta-digitized-marasi",
+      "name": "Marasi-e-Meer Anees / Marsiya-haye Meer Anees",
+      "name_urdu": "مراثیِ میر انیس / مرثیہ ہائے میر انیس",
+      "type": "marsiya_collection",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "volume_count": "at least 6 (volumes 1, 2, 3, 5, 6 seen; 4 not directly observed on Rekhta but seen separately on Archive.org, see col-archive-2004-reprint)",
+      "status": "confirmed to exist as digitized volumes",
+      "volumes_seen": [
+        "Volume 001",
+        "Volume 002",
+        "Volume 003",
+        "Volume 005",
+        "Volume 006"
+      ],
+      "source": "Rekhta e-books listing",
+      "source_url": "https://www.rekhta.org/poets/meer-anees/ebooks?lang=ur",
+      "source_refs": [
+        "src-rekhta-ebooks"
+      ],
+      "source_status": "B",
+      "note": "Rekhta hosts these as separate digitized volumes under two slightly different title patterns ('Marasi-e-Meer Anees' and 'Marsiya Haye Meer Anis Sahab Marhoom'). Whether these are the same underlying compilation, different editions, or different compilations entirely has not been determined. NEW this phase: a plausibly related but not confirmed-identical item was found directly on Archive.org (col-archive-2004-reprint, publisher 'Munshi Nawal Kishore Press, Lucknow', dated 2004) — same publisher lineage/name as the original 1876 Naval Kishore print run, but a 2004 date, so almost certainly a modern reprint rather than the original 1876 print. Not merged with this entry — flagged as a related, unreconciled lead."
+    },
+    {
+      "collection_id": "col-naval-kishore-1876",
+      "name": "Naval Kishore Press original edition",
+      "name_urdu": "منشی نول کشور پریس (اشاعتِ اول)",
+      "type": "kulliyat",
+      "editor": "",
+      "publisher": "Munshi Naval Kishore Press, Lucknow",
+      "publication_year": "1876 (vol. 1) – 1877 (vol. 4, last)",
+      "volume_count": "4",
+      "status": "historically documented, not directly examined by this module",
+      "contents": "Volume 1: 28 elegies, 29 quatrains, 3 salaams. Full 4-volume set: 108 elegies, 268 quatrains, 31 salaams.",
+      "source": "Dawn.com 'Literary notes' column by Rauf Parekh (5 June 2023)",
+      "source_url": "https://www.dawn.com/news/1758064",
+      "source_refs": [
+        "src-dawn-parekh-2023"
+      ],
+      "source_status": "B",
+      "note": "This is the first-ever print collection of Anis's marsiyas, per this source, and the origin of the '108 elegies' figure that later scholarly editions (see col-aaj-ki-kitaben-111) treat as their base text. No editor is named for this original print run in the source consulted. No direct scan of the original 1876–77 printing has been located by this module — do not confuse with col-archive-2004-reprint, a different, later dated item under the same press name."
+    },
+    {
+      "collection_id": "col-fazil-lakhnawi-1974",
+      "name": "Muntakhab Marasi Anees",
+      "name_urdu": "منتخب مراثی انیس",
+      "type": "marsiya_collection",
+      "editor": "Syed Murtaza Hussain Fazil Lakhnawi (سید مرتضی حسین فاضلؔ لکھنوی)",
+      "publisher": "Majlis-e-Taraqqi-e-Adab, Lahore",
+      "publication_year": "October 1974 (a later reprint by the same publisher is referenced elsewhere as c. 2000, not independently confirmed by this module)",
+      "volume_count": "1 (a selection, not a complete works)",
+      "status": "confirmed — corroborated by two independent sources (a literary-history newspaper column and the Archive.org catalog record for the actual scanned book)",
+      "contents": "A scholarly selection of 12 elegies, chosen and annotated with reference to handwritten manuscripts and multiple editions, per the Dawn source.",
+      "scan_available": true,
+      "source_url": "https://archive.org/details/fazil-lakhnawi-muntakhab-marasi-anees",
+      "source_refs": [
+        "src-dawn-parekh-2023",
+        "src-archive-fazil-lakhnawi-1974"
+      ],
+      "source_status": "B",
+      "note": "The most scholarly-credentialed source identified so far for verse-level verification — manuscript-referenced and annotated, per its own description. An OCR text file exists for this scan (Archive.org's *_djvu.txt derivative) and was attempted in this pass, but OCR quality was too degraded for reliable verbatim quotation (see research_notes) — it was NOT used to source any verse in this dataset. Re-attempting extraction from this specific edition (via the PDF/page-image derivatives rather than raw OCR text, ideally with human proofreading) is the single highest-value next step for reaching A-level verses."
+    },
+    {
+      "collection_id": "col-aaj-ki-kitaben-111",
+      "name": "Anis: 111 Marsiye",
+      "name_urdu": "انیس: 111 مرثیے",
+      "type": "marsiya_collection",
+      "editor": "Nayyar Masud and Timsal Masud, building on research by Masood Hasan Rizvi Adeeb",
+      "publisher": "Aaj Ki Kitaben, Karachi",
+      "publication_year": "2023 (per one secondary source) — NOT independently confirmed; may reflect the year the Dawn column discussed it rather than a confirmed publication date",
+      "volume_count": "3",
+      "status": "described by the source as the current 'authentic version'",
+      "contents": "111 elegies: the 108 from the original Naval Kishore print run plus 3 more drawn from rare Tej Kumar Press editions. Represents roughly 50 years / three editorial generations of work, per the source, and explicitly grapples with the fact that Anis himself revised couplets and added stanzas across different manuscript versions of his own work.",
+      "scan_available": false,
+      "source": "Dawn.com 'Literary notes' column by Rauf Parekh (5 June 2023)",
+      "source_url": "https://www.dawn.com/news/1758064",
+      "source_refs": [
+        "src-dawn-parekh-2023"
+      ],
+      "source_status": "C",
+      "note": "Publication year is the weakest-confirmed field here (single source, possibly conflated with the article's own date) — treat as unverified until a publisher/library record is checked. No open digital scan has been located (and, being a 2020s commercial Karachi publication, likely still in copyright, so none should be sought outside legitimate channels). This is nonetheless the most important single bibliographic lead from this phase: it is the only source that directly documents Anis's own textual revisions across manuscripts, which is exactly what plan Section 22 (textual variants) anticipates."
+    },
+    {
+      "collection_id": "col-archive-2004-reprint",
+      "name": "Marasi Mir Anees (2004 printing, Archive.org scan)",
+      "name_urdu": "مراثی میر انیس (بھارت، 2004)",
+      "type": "marsiya_collection",
+      "editor": "",
+      "publisher": "Munshi Nawal Kishore Press, Lucknow, India",
+      "publication_year": "2004",
+      "volume_count": "at least 4 (volumes 1 and 4 directly located; others not checked)",
+      "status": "confirmed to exist as a scanned digitized item, catalog metadata read directly",
+      "scan_available": true,
+      "source_url": "https://archive.org/details/1_20230331_20230331_2004",
+      "source_refs": [
+        "src-archive-marasi-anees-2004"
+      ],
+      "source_status": "B",
+      "note": "A modern (2004) printing under the historic Naval Kishore Press name/lineage — not the 1876–77 original print run (col-naval-kishore-1876), and not confirmed to be textually identical to it. Whether this is the same underlying compilation as the Rekhta-hosted volumes (col-rekhta-digitized-marasi) is also unconfirmed. Page images/PDF are available for this scan; OCR/text extraction was not attempted for this specific item in this pass (effort this phase went to col-fazil-lakhnawi-1974 instead, as the more scholarly-annotated candidate)."
+    },
+    {
+      "collection_id": "col-saleha-abid-husain-1980",
+      "name": "Anis ke Marsiye (انیس کے مرثیے)",
+      "name_urdu": "انیس کے مرثیے",
+      "type": "marsiya_collection",
+      "editor": "Saleha Aabid Husain",
+      "publisher": "Taraqqi Urdu Bureau, New Delhi",
+      "publication_year": "1980",
+      "volume_count": "at least 1 (only volume 1 located this pass)",
+      "status": "confirmed to exist as a scanned digitized item, catalog metadata read directly",
+      "scan_available": true,
+      "source_url": "https://archive.org/details/1_20230403_20230403",
+      "source_refs": [
+        "src-archive-saleha-abid-husain-1980"
+      ],
+      "source_status": "B",
+      "note": "A third named, editor-credited compilation found this phase (alongside col-fazil-lakhnawi-1974 and col-aaj-ki-kitaben-111), independent of the Dawn.com article that supplied most of the other editions. OCR-phrase-searched for 3 of this dataset's best-attested matlas (Hurr, Aaj Shabir, Farzand-e-Payambar) — none found, but OCR quality was independently assessed as unreliable, so this is inconclusive rather than a negative finding about the edition's contents."
+    }
+  ],
+  "marsiyas": [
+    {
+      "marsiya_id": "anis-marsiya-hur",
+      "title": "Ba-khuda faaris-e-maidan-e-tahavvur tha Hur",
+      "title_urdu": "بخدا فارسِ میدانِ تہور تھا حُرؔ",
+      "opening_line": "بخدا فارسِ میدانِ تہور تھا حُرؔ",
+      "genre": "marsiya",
+      "primary_subject": "Hurr ibn Yazid al-Riyahi's bravery, repentance and martyrdom.",
+      "characters": [
+        "Hurr ibn Yazid al-Riyahi"
+      ],
+      "themes": [
+        "Courage"
+      ],
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source_refs": [
+        "src-rekhta-marsiya-hur",
+        "src-wikisource-urdu"
+      ],
+      "verification_level": "B",
+      "notes": "1 verified couplet (matla) so far. Edition/volume/page path not established.",
+      "attribution_status": "confirmed_by_text",
+      "attribution_audit_note": "Hurr is named explicitly in the title/matla itself."
+    },
+    {
+      "marsiya_id": "anis-marsiya-001",
+      "title": "Aaj Shabir pe kya aalam-e-tanhaai hai",
+      "title_urdu": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "opening_line": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "genre": "marsiya",
+      "primary_subject": "Imam Hussain's isolation at Karbala.",
+      "characters": [
+        "Imam Hussain"
+      ],
+      "themes": [
+        "Separation",
+        "Family",
+        "Tragedy"
+      ],
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "verification_level": "B",
+      "notes": "3 verified couplets so far (anis-verse-0002 to 0004).",
+      "attribution_status": "confirmed_by_text",
+      "attribution_audit_note": "\"Shabir\" is a standard, unambiguous epithet for Imam Hussain in marsiya convention; the couplet itself uses it directly."
+    },
+    {
+      "marsiya_id": "anis-marsiya-002",
+      "title": "Dasht-e-vaghaa mein noor-e-khuda ka zuhoor hai",
+      "title_urdu": "دشت وغا میں نور خدا کا ظہور ہے",
+      "opening_line": "دشت وغا میں نور خدا کا ظہور ہے",
+      "genre": "marsiya",
+      "primary_subject": "Not yet determined beyond 'battlefield of Karbala' (general).",
+      "characters": [],
+      "themes": [],
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source_refs": [
+        "src-rekhta-marsiya-index"
+      ],
+      "verification_level": "C",
+      "notes": "Title only — no verse text secured in this pass.",
+      "attribution_status": "unassigned",
+      "attribution_audit_note": "No character has been assigned to this marsiya — nothing to audit."
+    },
+    {
+      "marsiya_id": "anis-marsiya-003",
+      "title": "Jab ran mein sar-buland Ali ka alam hua",
+      "title_urdu": "جب رن میں سر بلند علی کا علم ہوا",
+      "opening_line": "جب رن میں سر بلند علی کا علم ہوا",
+      "genre": "marsiya",
+      "primary_subject": "A standard-bearer raising Ali's banner in battle; popularly associated with Hazrat Abbas but NOT textually confirmed (see anis-verse-0010 notes).",
+      "characters": [],
+      "themes": [
+        "Courage"
+      ],
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "verification_level": "C",
+      "notes": "3 verified couplets (anis-verse-0010 to 0012) but capped at C because of the unresolved character attribution, per this module's policy of tying verification level to overall confidence, not wording alone.",
+      "attribution_status": "uncertain",
+      "attribution_audit_note": "Popularly associated with Hazrat Abbas, but the couplet text only says \"Ali ka alam\" and never names Abbas. Deliberately left uncertain per Phase 2 finding; an AI fetch tool asserted this as fact during research, which this module treats as a caught error, not evidence."
+    },
+    {
+      "marsiya_id": "anis-marsiya-004",
+      "title": "Farzand-e-payambar ka Madine se safar hai",
+      "title_urdu": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "opening_line": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "genre": "marsiya",
+      "primary_subject": "Imam Hussain's journey from Medina.",
+      "characters": [
+        "Imam Hussain"
+      ],
+      "themes": [
+        "Separation",
+        "Tragedy"
+      ],
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "verification_level": "B",
+      "notes": "3 verified couplets so far (anis-verse-0005 to 0007).",
+      "attribution_status": "confirmed_by_text",
+      "attribution_audit_note": "\"Farzand-e-payambar\" (the Prophet's descendant) combined with the Medina-departure/Sadaat-ruin framing is a reasonably direct textual identification of Imam Hussain, though slightly less explicit than a proper name."
+    },
+    {
+      "marsiya_id": "anis-marsiya-005",
+      "title": "Aamad aamad haram-e-shah ki darbar mein hai",
+      "title_urdu": "آمد آمد حرمِ شاہ کی دربار میں ہے",
+      "opening_line": "آمد آمد حرمِ شاہ کی دربار میں ہے",
+      "genre": "marsiya",
+      "primary_subject": "An 'aamad' (arrival) passage; not yet confirmed as a standalone marsiya vs. an excerpt.",
+      "characters": [],
+      "themes": [],
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source_refs": [
+        "src-rekhta-marsiya-index"
+      ],
+      "verification_level": "C",
+      "notes": "Not attempted for verse extraction this pass.",
+      "attribution_status": "unassigned",
+      "attribution_audit_note": "No character has been assigned to this marsiya — nothing to audit."
+    },
+    {
+      "marsiya_id": "anis-marsiya-006",
+      "title": "Kya gaaziyan-e-fauj-e-khuda naam kar gaye",
+      "title_urdu": "کیا غازیانِ فوجِ خدا نام کر گئے",
+      "opening_line": "کیا غازیانِ فوجِ خدا نام کر گئے",
+      "genre": "marsiya",
+      "primary_subject": "Fighters of Imam Hussain's camp.",
+      "characters": [],
+      "themes": [],
+      "collection_id": null,
+      "volume": "",
+      "page": "",
+      "source_refs": [
+        "src-rekhta-marsiya-index"
+      ],
+      "verification_level": "B",
+      "notes": "Title confirmed genuine (Wikisource page exists) but full-text extraction was declined by the fetch tool this pass — no verse text secured.",
+      "attribution_status": "unassigned",
+      "attribution_audit_note": "No character has been assigned to this marsiya — nothing to audit."
+    }
+  ],
+  "characters": [
+    {
+      "character": "Imam Hussain",
+      "character_urdu": "امام حسینؑ",
+      "poetic_role": "Central figure of Karbala marsiya generally, including Anis's work per secondary characterization.",
+      "attributes": [],
+      "recurring_imagery": [],
+      "emotional_register": "",
+      "representative_verses": [
+        "anis-verse-0002",
+        "anis-verse-0005"
+      ],
+      "relevant_marsiyas": [
+        "anis-marsiya-001",
+        "anis-marsiya-004"
+      ],
+      "sources": [
+        "general secondary characterization, not yet verse-grounded"
+      ],
+      "source_status": "C",
+      "note": "Character page is still mostly a structural placeholder, but now has 2 real verse anchors (anis-verse-0002 'Aaj Shabir...' and anis-verse-0005 'Farzand-e-payambar...') where Hussain is directly named/referenced in the text, not just inferred. Attributes/imagery below still need to be built from the actual verse content in a later pass."
+    },
+    {
+      "character": "Hurr ibn Yazid al-Riyahi",
+      "character_urdu": "حُر بن یزید",
+      "poetic_role": "Umayyad commander who repented and joined Imam Hussain's side; a major subject of at least one full Anis marsiya.",
+      "attributes": [],
+      "recurring_imagery": [],
+      "emotional_register": "",
+      "representative_verses": [
+        "anis-verse-0001"
+      ],
+      "relevant_marsiyas": [
+        "anis-marsiya-hur"
+      ],
+      "sources": [
+        "https://www.rekhta.org/marsiya/ba-khudaa-faaras-e-maidaan-e-tahavvur-thaa-hur-meer-anees-marsiya"
+      ],
+      "source_status": "B"
+    },
+    {
+      "character": "Hazrat Abbas",
+      "character_urdu": "حضرت عباسؑ",
+      "poetic_role": "Standard-bearer at Karbala; widely treated in marsiya tradition generally.",
+      "attributes": [],
+      "recurring_imagery": [],
+      "emotional_register": "",
+      "representative_verses": [],
+      "relevant_marsiyas": [],
+      "sources": [],
+      "source_status": "E",
+      "note": "Still no CONFIRMED Anis-specific marsiya for this character. anis-marsiya-003 ('Jab ran mein sar-buland Ali ka alam hua') is commonly associated with Abbas and now has 3 verified couplets (anis-verse-0010 to 0012), but the text itself never names Abbas — deliberately NOT linked into representative_verses/relevant_marsiyas here until that attribution is independently confirmed, to avoid asserting an unverified character claim. See anis-marsiya-003's own notes for the full explanation."
+    }
+  ],
+  "themes": [
+    {
+      "theme": "Faith",
+      "theme_urdu": "ایمان، توکل، یقین",
+      "explanation": "",
+      "representative_verses": [],
+      "source_status": "not yet researched"
+    },
+    {
+      "theme": "Sacrifice",
+      "theme_urdu": "قربانی، ایثار، شہادت",
+      "explanation": "",
+      "representative_verses": [],
+      "source_status": "not yet researched"
+    },
+    {
+      "theme": "Loyalty",
+      "theme_urdu": "وفا، اطاعت، عہد",
+      "explanation": "",
+      "representative_verses": [],
+      "source_status": "not yet researched"
+    },
+    {
+      "theme": "Courage",
+      "theme_urdu": "شجاعت، بہادری، رجز",
+      "explanation": "Hurr's marsiya (anis-verse-0001) and the 'alam' marsiya (anis-verse-0010 to 0012) both touch on this theme directly in their text (bravery in battle, a raised standard).",
+      "representative_verses": [
+        "anis-verse-0001",
+        "anis-verse-0010"
+      ],
+      "source_status": "seed only — verse-grounded but not cross-checked against secondary criticism"
+    },
+    {
+      "theme": "Patience",
+      "theme_urdu": "صبر، استقامت",
+      "explanation": "",
+      "representative_verses": [],
+      "source_status": "not yet researched"
+    },
+    {
+      "theme": "Separation",
+      "theme_urdu": "فراق، رخصتی، وداع",
+      "explanation": "anis-verse-0003 states directly that Hussain has 'no son, no nephew, no brother' present — separation/absence is literal text content here, not inferred. anis-verse-0005/0006 frame Hussain's journey from Medina as the start of the tragedy.",
+      "representative_verses": [
+        "anis-verse-0003",
+        "anis-verse-0005"
+      ],
+      "source_status": "seed only"
+    },
+    {
+      "theme": "Family",
+      "theme_urdu": "اہل بیت، بھائی، باپ بیٹا، خاندان",
+      "explanation": "anis-verse-0003 lists absent family members (son/nephew/brother) explicitly.",
+      "representative_verses": [
+        "anis-verse-0003"
+      ],
+      "source_status": "seed only"
+    },
+    {
+      "theme": "Tragedy",
+      "theme_urdu": "مصیبت، شہادت، غم",
+      "explanation": "anis-verse-0006 explicitly frames the coming events as the 'ruin' (اجڑنے) of the Prophet's household.",
+      "representative_verses": [
+        "anis-verse-0006"
+      ],
+      "source_status": "seed only"
+    },
+    {
+      "theme": "Spirituality",
+      "theme_urdu": "عشق، عبادت، بندگی",
+      "explanation": "",
+      "representative_verses": [],
+      "source_status": "not yet researched"
+    },
+    {
+      "theme": "Humanity",
+      "theme_urdu": "اخلاق، رحم، عدل",
+      "explanation": "",
+      "representative_verses": [],
+      "source_status": "not yet researched"
+    }
+  ],
+  "verses": [
+    {
+      "verse_id": "anis-verse-0001",
+      "poet": "Mir Anis",
+      "text_urdu": "بخدا فارسِ میدانِ تہور تھا حُرؔ\nایک دو لاکھ سواروں میں بہادر تھا حُرؔ",
+      "text_roman": "ba-khuda faaris-e-maidaan-e-tahavvur tha Hur / ek do laakh savaaron mein bahaadur tha Hur",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Courage"
+      ],
+      "subtheme": [
+        "شجاعت"
+      ],
+      "karbala_related": true,
+      "character": [
+        "Hurr ibn Yazid al-Riyahi"
+      ],
+      "poem_title": "Ba-khuda faaris-e-maidan-e-tahavvur tha Hur",
+      "poem_opening": "بخدا فارسِ میدانِ تہور تھا حُرؔ",
+      "collection": "Marsiya-e-Meer Anees (as indexed by Rekhta)",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/ba-khudaa-faaras-e-maidaan-e-tahavvur-thaa-hur-meer-anees-marsiya",
+      "source_refs": [
+        "src-rekhta-marsiya-hur",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Corroborated by three independent sources agreeing on identical wording; not checked against a primary critical edition.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check.",
+        "phase_2c_check": "Tested against Rekhta's reader (blocked by paywall) and found independently on ghazalsara.org (matching wording, no provenance cited). No primary page located. Level unchanged: B."
+      },
+      "verification_notes": "This is the marsiya's opening couplet (matla), corroborated via three independent web sources (Rekhta's own listing/title, an independent search-result quotation, and a Wikisource transcription) that agree on the exact wording. It has NOT been checked against a primary critical edition or scanned original — per this module's own verification-level rules it is Strong Secondary (B), not Primary Verified (A). No translation has been produced, consistent with the plan's rule not to translate before the Urdu is fully verified.",
+      "context": {
+        "situation": "The matla (opening couplet) of the marsiya, introducing Hurr's reputation as a warrior before his repentance.",
+        "speaker": "narrator",
+        "narrative_position": "matla",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0002",
+      "poet": "Mir Anis",
+      "text_urdu": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے\nظلم کی چاند پہ زہراؔ کی گھٹا چھائی ہے",
+      "text_roman": "aaj Shabir pe kya aalam-e-tanhaai hai / zulm ki chaand pe Zahra ki ghata chhaai hai",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Separation",
+        "Tragedy"
+      ],
+      "subtheme": [
+        "فراق"
+      ],
+      "karbala_related": true,
+      "character": [
+        "Imam Hussain"
+      ],
+      "poem_title": "Aaj Shabir pe kya aalam-e-tanhaai hai",
+      "poem_opening": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/aaj-shabbiir-pe-kyaa-aalam-e-tanhaaii-hai-meer-anees-marsiya",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Wording corroborated by an independent search-result quotation in addition to the Wikisource transcription.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check.",
+        "phase_2c_check": "Marsiya-level test (Rekhta reader paywalled, TOC has no per-poem titles) applies to this verse's parent marsiya; no verse-specific primary check performed. Level unchanged: B."
+      },
+      "verification_notes": "Matla, corroborated by an independent web search-result quotation matching the Wikisource transcription exactly. Not checked against a primary edition.",
+      "context": {
+        "situation": "The matla, introducing the theme of Hussain's isolation at Karbala.",
+        "speaker": "narrator",
+        "narrative_position": "matla",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0003",
+      "poet": "Mir Anis",
+      "text_urdu": "اس طرف لشکرِ اعدا میں صف آرائی ہے\nیاں نہ بیٹا نہ بھتیجا نہ کوئی بھائی ہے",
+      "text_roman": "us taraf lashkar-e-a'daa mein saf-aaraai hai / yaan na beta na bhatiija na koi bhaai hai",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Separation",
+        "Family"
+      ],
+      "subtheme": [
+        "فراق",
+        "خاندان"
+      ],
+      "karbala_related": true,
+      "character": [
+        "Imam Hussain"
+      ],
+      "poem_title": "Aaj Shabir pe kya aalam-e-tanhaai hai",
+      "poem_opening": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/aaj-shabbiir-pe-kyaa-aalam-e-tanhaaii-hai-meer-anees-marsiya",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Second couplet of the same marsiya; wording corroborated by the same independent search-result quotation as anis-verse-0002.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check.",
+        "phase_2c_check": "Marsiya-level test (Rekhta reader paywalled, TOC has no per-poem titles) applies to this verse's parent marsiya; no verse-specific primary check performed. Level unchanged: B."
+      },
+      "verification_notes": "Second couplet, corroborated the same way as the matla (anis-verse-0002). Not checked against a primary edition.",
+      "context": {
+        "situation": "Describes the enemy forces arrayed opposite, and states directly that Hussain has no son, nephew, or brother present with him.",
+        "speaker": "narrator",
+        "narrative_position": "second couplet after the matla",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0004",
+      "poet": "Mir Anis",
+      "text_urdu": "برچھیاں کھاتے چلے جاتے ہیں تلواروں میں\nمار لو پیاسے کو ہے شور ستمگاروں میں",
+      "text_roman": "barchhiyaan khaate chale jaate hain talwaaron mein / maar lo pyaase ko hai shor sitamgaaron mein",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Tragedy"
+      ],
+      "subtheme": [
+        "مصیبت"
+      ],
+      "karbala_related": true,
+      "character": [
+        "Imam Hussain"
+      ],
+      "poem_title": "Aaj Shabir pe kya aalam-e-tanhaai hai",
+      "poem_opening": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/aaj-shabbiir-pe-kyaa-aalam-e-tanhaaii-hai-meer-anees-marsiya",
+      "source_refs": [
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Only sourced from Wikisource in this pass — not independently cross-corroborated by a second source the way anis-verse-0002/0003 were. Kept at B (Wikisource itself counts as a reputable literary archive per the plan's source policy), not upgraded to A.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check.",
+        "phase_2c_check": "Marsiya-level test (Rekhta reader paywalled, TOC has no per-poem titles) applies to this verse's parent marsiya; no verse-specific primary check performed. Level unchanged: B."
+      },
+      "verification_notes": "Single-sourced from Wikisource only (no second independent corroboration found in this pass). Not checked against a primary edition.",
+      "context": {
+        "situation": "Continues the battlefield description begun in the previous couplets.",
+        "speaker": "narrator",
+        "narrative_position": "third couplet",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0005",
+      "poet": "Mir Anis",
+      "text_urdu": "فرزند پیمبر کا مدینے سے سفر ہے\nسادات کی بستی کے اجڑنے کی خبر ہے",
+      "text_roman": "farzand-e-payambar ka Madine se safar hai / Sadaat ki basti ke ujadne ki khabar hai",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Separation",
+        "Tragedy"
+      ],
+      "subtheme": [
+        "رخصت"
+      ],
+      "karbala_related": true,
+      "character": [
+        "Imam Hussain"
+      ],
+      "poem_title": "Farzand-e-payambar ka Madine se safar hai",
+      "poem_opening": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/farzand-e-payambar-kaa-madiine-se-safar-hai-meer-anees-marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Wording corroborated by an independent web summary quoting the same lines, in addition to the Wikisource transcription.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check.",
+        "phase_2c_check": "Marsiya-level test (Rekhta reader paywalled, TOC has no per-poem titles) applies to this verse's parent marsiya; no verse-specific primary check performed. Level unchanged: B."
+      },
+      "verification_notes": "Matla, corroborated by an independent source quoting the same lines. Not checked against a primary edition.",
+      "context": {
+        "situation": "The matla, framing Imam Hussain's departure from Medina as the start of the tragedy to come.",
+        "speaker": "narrator",
+        "narrative_position": "matla",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0006",
+      "poet": "Mir Anis",
+      "text_urdu": "در پیش ہے وہ غم، کہ جہاں زیر و زبر ہے\nگل چاک گریباں ہیں صبا خاک بہ سر ہے",
+      "text_roman": "dar-pesh hai voh gham, ke jahaan zer-o-zabar hai / gul chaak-garebaan hain saba khaak-ba-sar hai",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Tragedy"
+      ],
+      "subtheme": [
+        "غم"
+      ],
+      "karbala_related": true,
+      "character": [
+        "Imam Hussain"
+      ],
+      "poem_title": "Farzand-e-payambar ka Madine se safar hai",
+      "poem_opening": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/farzand-e-payambar-kaa-madiine-se-safar-hai-meer-anees-marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Corroborated the same way as anis-verse-0005.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check.",
+        "phase_2c_check": "Marsiya-level test (Rekhta reader paywalled, TOC has no per-poem titles) applies to this verse's parent marsiya; no verse-specific primary check performed. Level unchanged: B."
+      },
+      "verification_notes": "Second couplet, corroborated by the same two sources as the matla. Not checked against a primary edition.",
+      "context": {
+        "situation": "Describes grief spreading through the world at the coming events.",
+        "speaker": "narrator",
+        "narrative_position": "second couplet",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0007",
+      "poet": "Mir Anis",
+      "text_urdu": "گل رو صفتِ غنچہ کمر بستہ کھڑے ہیں\nسب ایک جگہ صورتِ گلدستہ کھڑے ہیں",
+      "text_roman": "gul-ru sifat-e-ghuncha kamar-basta khade hain / sab ek jagah surat-e-guldasta khade hain",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Family"
+      ],
+      "subtheme": [],
+      "karbala_related": true,
+      "character": [
+        "Imam Hussain"
+      ],
+      "poem_title": "Farzand-e-payambar ka Madine se safar hai",
+      "poem_opening": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/farzand-e-payambar-kaa-madiine-se-safar-hai-meer-anees-marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Corroborated the same way as anis-verse-0005/0006 — the search-summary source quoted this exact line as its closing line too.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check.",
+        "phase_2c_check": "Marsiya-level test (Rekhta reader paywalled, TOC has no per-poem titles) applies to this verse's parent marsiya; no verse-specific primary check performed. Level unchanged: B."
+      },
+      "verification_notes": "Third couplet, corroborated by the same two sources. Two source transcriptions showed minor spelling variation in one word ('گھڑے' vs 'کھڑے', both meaning 'standing') — kept as 'کھڑے' (Wikisource's rendering) per the module's rule to preserve one cited source's wording rather than merge variants; flagged in textual_variants below rather than silently picked.",
+      "context": {
+        "situation": "A simile describing the family members standing together like flowers in a bouquet, just before the journey/tragedy.",
+        "speaker": "narrator",
+        "narrative_position": "third/closing couplet of this opening passage",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": [
+        {
+          "variant_id": "anis-verse-0007-var-a",
+          "verse_id": "anis-verse-0007",
+          "text_urdu": "گل رو صفتِ غنچہ کمر بستہ گھڑے ہیں",
+          "source_ref": "src-rekhta-marsiya-index",
+          "difference": "First misra's final word rendered 'گھڑے' (a plausible OCR/transcription variant of 'کھڑے', both meaning roughly 'standing/positioned') instead of 'کھڑے'.",
+          "editorial_note": "Not resolved which is correct — could be a genuine transcription difference between the two sources consulted, or a typo in one of them. This module has not checked either against a primary edition, so neither reading is treated as canonical; the Wikisource reading was kept as the displayed text only because it was the more directly fetched, structured source, not because it has been confirmed more accurate."
+        }
+      ]
+    },
+    {
+      "verse_id": "anis-verse-0010",
+      "poet": "Mir Anis",
+      "text_urdu": "جب رن میں سر بلند علی کا علم ہوا\nفوجِ خدا پہ سایۂ ابرِ کرم ہوا",
+      "text_roman": "jab ran mein sar-buland Ali ka alam hua / fauj-e-khuda pe saaya-e-abr-e-karam hua",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [
+        "Courage"
+      ],
+      "subtheme": [
+        "شجاعت"
+      ],
+      "karbala_related": true,
+      "character": [],
+      "poem_title": "Jab ran mein sar-buland Ali ka alam hua",
+      "poem_opening": "جب رن میں سر بلند علی کا علم ہوا",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/jab-ran-men-sar-buland-alii-kaa-alam-huaa-meer-anees-marsiya?lang=ur",
+      "source_refs": [
+        "src-rekhta-marsiya-index",
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Wording sourced from Wikisource only in this pass. Character field deliberately left empty — see note.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check."
+      },
+      "verification_notes": "Matla, sourced from Wikisource. IMPORTANT: 'character' is deliberately left EMPTY even though this marsiya is popularly associated with Hazrat Abbas — the couplet itself only says 'Ali ka alam' (Ali's standard), never naming Abbas. Do not fill in 'Hazrat Abbas' here without independent confirmation (see anis-marsiya-003 notes for a concrete example of how this exact inference got asserted as fact by an automated tool during this research pass).",
+      "context": {
+        "situation": "The matla, describing a standard ('alam') being raised high in battle.",
+        "speaker": "narrator",
+        "narrative_position": "matla",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0011",
+      "poet": "Mir Anis",
+      "text_urdu": "چرخ زبر جدی پے تسلیم خم ہوا\nپنجے پہ سات بار تصدق حشم ہوا",
+      "text_roman": "charkh zabar-jadi pe tasleem kham hua / panje pe saat baar tasadduq hasham hua",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [],
+      "subtheme": [],
+      "karbala_related": true,
+      "character": [],
+      "poem_title": "Jab ran mein sar-buland Ali ka alam hua",
+      "poem_opening": "جب رن میں سر بلند علی کا علم ہوا",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/jab-ran-men-sar-buland-alii-kaa-alam-huaa-meer-anees-marsiya?lang=ur",
+      "source_refs": [
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Single-sourced from Wikisource; not independently cross-corroborated.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check."
+      },
+      "verification_notes": "Second couplet, Wikisource only, not checked against a primary edition. This couplet's imagery (a hand/palm, 'panja') is sometimes read as an early allusion consistent with the Abbas association, but again this is interpretive, not a named textual reference — not asserted as fact here.",
+      "context": {
+        "situation": "Continues describing the standard's effect on the surrounding army.",
+        "speaker": "narrator",
+        "narrative_position": "second couplet",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    },
+    {
+      "verse_id": "anis-verse-0012",
+      "poet": "Mir Anis",
+      "text_urdu": "دیکھا نہ تھا کبھی جو علم اس نمود کا\nدونوں طرف کی فوج میں غل تھا درود کا",
+      "text_roman": "dekha na tha kabhi jo alam is namood ka / donon taraf ki fauj mein ghul tha durood ka",
+      "translation_english": "",
+      "translation_urdu_simple": "",
+      "genre": "Marsiya",
+      "theme": [],
+      "subtheme": [],
+      "karbala_related": true,
+      "character": [],
+      "poem_title": "Jab ran mein sar-buland Ali ka alam hua",
+      "poem_opening": "جب رن میں سر بلند علی کا علم ہوا",
+      "collection": "",
+      "collection_id": null,
+      "volume": "",
+      "edition": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "page": "",
+      "source_url": "https://www.rekhta.org/marsiya/jab-ran-men-sar-buland-alii-kaa-alam-huaa-meer-anees-marsiya?lang=ur",
+      "source_refs": [
+        "src-wikisource-urdu"
+      ],
+      "source_status": "B",
+      "verification": {
+        "level": "B",
+        "status": "strong_secondary",
+        "notes": "Single-sourced from Wikisource; not independently cross-corroborated.",
+        "checked_against_primary": false,
+        "primary_check_notes": "Phase 2B: checked for an exact-phrase match against OCR text of 2 additional scanned editions (Fazil Lakhnawi 1974 col-fazil-lakhnawi-1974, Saleha Abid Husain 1980 col-saleha-abid-husain-1980). Not found in either — but both scans' OCR was independently assessed as unreliable/garbled, so a negative OCR search result is inconclusive, not evidence of absence. No verse in this dataset was upgraded or downgraded from this check."
+      },
+      "verification_notes": "Third couplet, Wikisource only, not checked against a primary edition.",
+      "context": {
+        "situation": "Describes both armies invoking blessings (durood) at the sight of the standard.",
+        "speaker": "narrator",
+        "narrative_position": "third couplet",
+        "simple_urdu": "",
+        "english": ""
+      },
+      "textual_variants": []
+    }
+  ],
+  "textual_variants": [],
+  "critical_reception": [
+    {
+      "critic": "",
+      "source": "",
+      "date": "",
+      "assessment": "General secondary/tertiary sources consistently describe Anis as the pre-eminent Urdu marsiya poet and note a historic rivalry/comparison with Mirza Dabeer (the 'Anisia' and 'Dabiria' schools). No specific named academic critic's assessment has been sourced yet for this module.",
+      "quotation": "",
+      "interpretation": "",
+      "source_status": "C",
+      "note": "Placeholder — Section 21 of the research plan requires named critics with dated, sourced assessments. None collected yet."
+    },
+    {
+      "critic": "Masood Hasan Rizvi Adeeb (with later editorial work continued by Nayyar Masud and Timsal Masud)",
+      "source": "Reported in Rauf Parekh, 'Literary notes: Mir Anees's 111 elegies in three volumes: authentic version', Dawn, 5 June 2023",
+      "date": "Editorial work spanning roughly 50 years / three editorial generations, per the source; culminating edition dated 2023 per the same source (unconfirmed independently — see col-aaj-ki-kitaben-111)",
+      "assessment": "Not a literary-critical judgment of Anis's poetry as such, but a documented, sustained scholarly effort to establish an authoritative text of his elegies from manuscript variants — itself indirect evidence of the seriousness with which Anis's corpus is treated by specialists. Earlier editors (Ali Hyder Nazm Tabatabai, Masood Hasan Rizvi Adeeb's own predecessors, Muhazzab Lakhnavi) are described by the same source as having produced editions 'lacking in references and other important details.'",
+      "quotation": "",
+      "interpretation": "This module treats this as evidence of scholarly consensus on the DIFFICULTY and IMPORTANCE of establishing an authentic Anis text, not as a quoted critical opinion of the poetry's merit.",
+      "source_status": "B",
+      "note": "This is the first named-critic/named-source entry in this dataset that isn't a placeholder. Still short of what plan Section 21 wants (a specific critic's assessment of the poetry itself, ideally with a direct quotation)."
+    }
+  ],
+  "source_registry": [
+    {
+      "source_id": "src-rekhta-profile",
+      "title": "Meer Anees — Profile & Biography",
+      "author_or_editor": "",
+      "publisher": "Rekhta.org",
+      "publication_year": "",
+      "edition": "",
+      "volume": "",
+      "source_type": "web",
+      "url": "https://www.rekhta.org/poets/meer-anees/profile",
+      "scan_available": false,
+      "authority_level": "B",
+      "notes": "Reputable Urdu literary archive; used for biography cross-checking."
+    },
+    {
+      "source_id": "src-rekhta-marsiya-index",
+      "title": "میر انیس کی مرثیہ (Meer Anees's Marsiya index)",
+      "author_or_editor": "",
+      "publisher": "Rekhta.org",
+      "publication_year": "",
+      "edition": "",
+      "volume": "",
+      "source_type": "web",
+      "url": "https://www.rekhta.org/poets/meer-anees/marsiya?lang=ur",
+      "scan_available": false,
+      "authority_level": "B",
+      "notes": "Source of the marsiya title/opening-line list."
+    },
+    {
+      "source_id": "src-rekhta-marsiya-hur",
+      "title": "بخدا فارسِ میدانِ تہور تھا حُرؔ (marsiya page)",
+      "author_or_editor": "",
+      "publisher": "Rekhta.org",
+      "publication_year": "",
+      "edition": "",
+      "volume": "",
+      "source_type": "web",
+      "url": "https://www.rekhta.org/marsiya/ba-khudaa-faaras-e-maidaan-e-tahavvur-thaa-hur-meer-anees-marsiya",
+      "scan_available": false,
+      "authority_level": "B",
+      "notes": "Source of the Hurr marsiya's matla."
+    },
+    {
+      "source_id": "src-rekhta-ebooks",
+      "title": "میر انیس کی کتابیں (Meer Anees's e-books)",
+      "author_or_editor": "",
+      "publisher": "Rekhta.org",
+      "publication_year": "",
+      "edition": "",
+      "volume": "",
+      "source_type": "catalog",
+      "url": "https://www.rekhta.org/poets/meer-anees/ebooks?lang=ur",
+      "scan_available": true,
+      "authority_level": "B",
+      "notes": "Digitized-volume listing; underlying scans not individually examined by this module yet."
+    },
+    {
+      "source_id": "src-wikipedia-mir-anees",
+      "title": "Mir Anees",
+      "author_or_editor": "",
+      "publisher": "Wikipedia",
+      "publication_year": "",
+      "edition": "",
+      "volume": "",
+      "source_type": "web",
+      "url": "https://en.wikipedia.org/wiki/Mir_Anees",
+      "scan_available": false,
+      "authority_level": "C",
+      "notes": "Tertiary/general reference — used only for cross-checking dates against Rekhta, not as primary evidence. This is what surfaced the birth-year and death-day conflicts."
+    },
+    {
+      "source_id": "src-dawn-parekh-2023",
+      "title": "Literary notes: Mir Anees's 111 elegies in three volumes: authentic version",
+      "author_or_editor": "Rauf Parekh",
+      "publisher": "Dawn (newspaper), Pakistan",
+      "publication_year": "2023-06-05",
+      "edition": "",
+      "volume": "",
+      "source_type": "academic-adjacent / literary journalism",
+      "url": "https://www.dawn.com/news/1758064",
+      "scan_available": false,
+      "authority_level": "B",
+      "notes": "The single richest bibliographic source found this phase: names the original Naval Kishore print run (1876-77, 4 vols, 108 elegies/268 rubais/31 salams), the Fazil Lakhnawi 1974 selection, several named editors, and the Aaj Ki Kitaben 111-elegy edition, and explicitly discusses Anis's own manuscript revisions. A newspaper literary-notes column, not a peer-reviewed academic paper — treated as B (strong secondary), not A."
+    },
+    {
+      "source_id": "src-archive-fazil-lakhnawi-1974",
+      "title": "منتخب مراثی انیس (Muntakhab Marasi Anees)",
+      "author_or_editor": "Syed Murtaza Hussain Fazil Lakhnawi (editor)",
+      "publisher": "Majlis-e-Taraqqi-e-Adab, Lahore",
+      "publication_year": "1974-10",
+      "edition": "",
+      "volume": "1 (selection)",
+      "source_type": "primary (digitized scan of a published critical/annotated selection)",
+      "url": "https://archive.org/details/fazil-lakhnawi-muntakhab-marasi-anees",
+      "scan_available": true,
+      "authority_level": "B",
+      "notes": "Catalog metadata read directly from the Archive.org item page — corroborates the Dawn article's description of this edition. An OCR-text extraction attempt for actual verse content failed due to OCR quality (see research_notes) — this source has NOT yet contributed any verse text to this dataset, only bibliographic metadata."
+    },
+    {
+      "source_id": "src-archive-marasi-anees-2004",
+      "title": "مراثی میر انیس ـ جلد 1 (and جلد 4)",
+      "author_or_editor": "",
+      "publisher": "Munshi Nawal Kishore Press, Lucknow, India",
+      "publication_year": "2004",
+      "edition": "",
+      "volume": "1 and 4 located; others not checked",
+      "source_type": "primary (digitized scan)",
+      "url": "https://archive.org/details/1_20230331_20230331_2004",
+      "scan_available": true,
+      "authority_level": "B",
+      "notes": "Catalog metadata read directly. Not yet used for verse extraction. Relationship to the 1876-77 original Naval Kishore print run and to Rekhta's digitized volumes is unconfirmed."
+    },
+    {
+      "source_id": "src-wikisource-urdu",
+      "title": "Urdu Wikisource marsiya transcription pages (multiple individual pages, one per marsiya)",
+      "author_or_editor": "Wikisource community transcribers",
+      "publisher": "Wikimedia Foundation (ur.wikisource.org)",
+      "publication_year": "",
+      "edition": "",
+      "volume": "",
+      "source_type": "web (community-transcribed public-domain text)",
+      "url": "https://ur.wikisource.org/",
+      "scan_available": false,
+      "authority_level": "B",
+      "notes": "Used for: بخدا فارسِ میدانِ تہور تھا حُرؔ, آج شبیرؔ پہ کیا عالمِ تنہائی ہے, فرزند پیمبر کا مدینے سے سفر ہے, جب رن میں سر بلند علی کا علم ہوا. A community-transcription project, not itself a critical edition and not confirmed to be checked against any specific named source scan on the pages fetched — treated as Strong Secondary (B), same tier as Rekhta, not upgraded to A. Two of five attempted marsiya-page fetches this pass were declined by the fetch tool citing copyright caution, despite the underlying 19th-century text being public domain and Wikisource itself operating on that basis — a tooling limitation, not a finding about the source's reliability. PHASE 2B: checked page footer/provenance directly on one marsiya page — no citation of a source edition, scan, or Wikisource \"Index:\" page was found. Wikisource provides NO stated provenance trail for this text, so it cannot contribute toward A-level verification even in principle without an independent primary check; explicitly kept at B, and this absence-of-provenance is now recorded rather than assumed."
+    },
+    {
+      "source_id": "src-archive-saleha-abid-husain-1980",
+      "title": "انیس کے مرثیے ـ جلد 1 (Anis ke Marsiye, Vol. 1)",
+      "author_or_editor": "Saleha Aabid Husain (editor/compiler)",
+      "publisher": "Taraqqi Urdu Bureau, New Delhi",
+      "publication_year": "1980",
+      "edition": "",
+      "volume": "1",
+      "source_type": "primary (digitized scan)",
+      "url": "https://archive.org/details/1_20230403_20230403",
+      "scan_available": true,
+      "authority_level": "B",
+      "notes": "Corroborated by two independent sources this pass (a WebSearch summary and the Archive.org catalog page read directly). OCR quality directly tested and found unreliable/garbled (see edition_registry). No verse text sourced from this edition."
+    },
+    {
+      "source_id": "src-rekhta-ebook-vol1-detail",
+      "title": "Marasi-e-Meer Anees, Volume 001 — ebook detail + reader page",
+      "author_or_editor": "Contributors credited: Tej Kumar, Dr. Aditya Behl",
+      "publisher": "Listed on Rekhta as \"Ismita Patwardhan\" — almost certainly a Rekhta-platform upload/administrative credit, NOT a historical publisher; not treated as such",
+      "publication_year": "2004 (per Rekhta's own metadata field — relationship to the 1876-77 Naval Kishore original or the 2004 Archive.org reprint is unconfirmed)",
+      "edition": "Edition Number '0010' per Rekhta metadata (meaning unclear)",
+      "volume": "1",
+      "source_type": "web (gated digital reader)",
+      "url": "https://www.rekhta.org/ebooks/marasi-e-meer-anees-volume-001-meer-anees-ebooks",
+      "scan_available": true,
+      "authority_level": "B",
+      "notes": "438-page flip-book reader with a genre-level table of contents (مرثیہ/رباعیات/سلام/قطعہ sections with page numbers) but NO individual poem titles listed. Actual page content is behind Rekhta's login/subscription wall ('exhausted 5 free content pages per year') — could not be read. 'Tej Kumar' in the contributors field cross-references the Dawn article's mention of 'rare Tej Kumar Press editions' as the source of 3 extra elegies in the Aaj Ki Kitaben 111-marsiye edition — a real, independently-triangulated lead, but not yet resolved into a usable text source."
+    },
+    {
+      "source_id": "src-ghazalsara",
+      "title": "GhazalSara.org — individual marsiya pages",
+      "author_or_editor": "Site credited to Yawar Majid (copyright holder of the website, not of the classical text)",
+      "publisher": "",
+      "publication_year": "",
+      "edition": "",
+      "volume": "",
+      "source_type": "web (no cited provenance)",
+      "url": "https://www.ghazalsara.org/BookArticles/Details/1521",
+      "scan_available": false,
+      "authority_level": "C",
+      "notes": "Displays full verse text (confirmed matla wording for anis-verse-0001 matches the dataset) but cites NO book, edition, publisher, or page number as its source. A 4th site now independently agreeing on this matla's wording, but corroboration-by-repetition is explicitly not the same as a primary check under this module's rules — does not change verification level. Classified secondary_only per Phase 2C's source classification scheme."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Meer Anees — Profile & Biography",
+      "publisher": "Rekhta.org",
+      "url": "https://www.rekhta.org/poets/meer-anees/profile",
+      "type": "reputable Urdu literary archive",
+      "accessed": "2026-09-09"
+    },
+    {
+      "title": "میر انیس کی مرثیہ (Meer Anees's Marsiya index)",
+      "publisher": "Rekhta.org",
+      "url": "https://www.rekhta.org/poets/meer-anees/marsiya?lang=ur",
+      "type": "reputable Urdu literary archive",
+      "accessed": "2026-09-09"
+    },
+    {
+      "title": "میر انیس کی کتابیں (Meer Anees's e-books)",
+      "publisher": "Rekhta.org",
+      "url": "https://www.rekhta.org/poets/meer-anees/ebooks?lang=ur",
+      "type": "reputable Urdu literary archive, digitized volumes",
+      "accessed": "2026-09-09"
+    },
+    {
+      "title": "Mir Anees",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mir_Anees",
+      "type": "tertiary/general reference — used only for cross-checking dates, not as primary evidence",
+      "accessed": "2026-09-09"
+    },
+    {
+      "title": "Literary notes: Mir Anees's 111 elegies in three volumes: authentic version",
+      "publisher": "Dawn (Rauf Parekh)",
+      "url": "https://www.dawn.com/news/1758064",
+      "type": "literary journalism — bibliographic history of Anis's published editions",
+      "accessed": "2026-09-09"
+    },
+    {
+      "title": "منتخب مراثی انیس (Muntakhab Marasi Anees) — Archive.org item page",
+      "publisher": "Majlis-e-Taraqqi-e-Adab, Lahore (scan hosted by Internet Archive)",
+      "url": "https://archive.org/details/fazil-lakhnawi-muntakhab-marasi-anees",
+      "type": "digitized scan of a published critical/annotated selection",
+      "accessed": "2026-09-09"
+    },
+    {
+      "title": "مراثی میر انیس ـ جلد 1 — Archive.org item page",
+      "publisher": "Munshi Nawal Kishore Press, Lucknow (scan hosted by Internet Archive)",
+      "url": "https://archive.org/details/1_20230331_20230331_2004",
+      "type": "digitized scan",
+      "accessed": "2026-09-09"
+    },
+    {
+      "title": "Urdu Wikisource marsiya transcription pages",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://ur.wikisource.org/",
+      "type": "community-transcribed public-domain text",
+      "accessed": "2026-09-09"
+    }
+  ],
+  "research_notes": [
+    "PHASE 2 (Bibliographic Foundation) done this pass, on top of the existing Phase 1 (Identity) seed. Phases 3, 6, 8–10 (page-level verse verification, full non-Karbala poetry, marsiya structure mapping, complete critical reception, Anis-vs-Dabeer, final full QC) remain NOT done.",
+    "Real, named editions now identified: the original Naval Kishore Press print run (1876-77, 4 vols — col-naval-kishore-1876), Syed Murtaza Hussain Fazil Lakhnawi's scholarly 1974 selection (col-fazil-lakhnawi-1974, scan available), and the Aaj Ki Kitaben 111-elegy edition edited by Nayyar Masud & Timsal Masud building on Masood Hasan Rizvi Adeeb's research (col-aaj-ki-kitaben-111, year unconfirmed). None of these is titled 'Kulliyat-e-Anis' — that generic collection entry (col-kulliyat-anis-generic) remains an unresolved, separate lead.",
+    "The Marsiya → Edition → Volume → Page → Original Text path (the objective of Section 5 of this phase's instructions) is NOT yet established for any individual marsiya in this dataset. We know editions exist (with real editors/publishers/years) and we know marsiya text exists (via Rekhta/Wikisource), but we have not yet mapped which specific marsiya sits in which specific volume/page of which specific edition. Every collection_id field on individual works/marsiyas/verses is null for exactly this reason — left blank rather than guessed, per the plan's anti-hallucination rules.",
+    "An OCR-based verse-extraction attempt against the Fazil Lakhnawi 1974 scan's *_djvu.txt file was made and explicitly abandoned: the OCR text was too degraded for confident verbatim quotation, and the extraction was mediated by an AI summarization step that itself introduces error risk on top of OCR error. No verse in this dataset was sourced from that attempt. Re-attempting this — ideally via the page-image/PDF derivatives with human proofreading, not raw OCR text — is the highest-value next step toward actual A-level (primary verified) verses.",
+    "Verse corpus grew from 1 to 10 couplets, all via a consistent method: locate a couplet on Rekhta's index or Wikisource, then attempt independent corroboration via a second source (a search-result snippet or an independent AI-generated summary quoting the same lines). 7 of the 10 (0001, 0002, 0003, 0005, 0006, 0007, 0010) have two- or three-source corroboration; 3 (0004, 0011, 0012) are single-sourced from Wikisource only. All remain at Strong Secondary (B) — none have been checked by this module against an actual primary edition page, so none qualify as A per the module's own rules, regardless of how many secondary sources agree. Note: two Wikisource fetches were mislabeled by the fetch tool as containing more couplets than they actually delivered ('5 couplets' and '4 couplets' headers over text that was actually only 3 couplets/6 lines each) — this dataset only recorded the couplets actually present in the returned text, not the mislabeled counts, which is why verse_ids skip from 0007 to 0010 (0008/0009/0013 were never populated because no corresponding text was ever received).",
+    "One textual variant was encountered and recorded (anis-verse-0007-var-a): a one-word difference ('گھڑے' vs 'کھڑے') between the Rekhta-index-adjacent phrasing and the Wikisource transcription. Per plan Section 22, this was NOT silently resolved — both readings are recorded, with the Wikisource reading kept as the displayed text for a stated, non-evidentiary reason (it was the more directly fetched source), not because it was confirmed more accurate.",
+    "anis-marsiya-003 / anis-verse-0010–0012 is an important cautionary case, documented in-line in the dataset: the popular association of 'Jab ran mein sar-buland Ali ka alam hua' with Hazrat Abbas is NOT supported by the couplet text itself (which only says 'Ali ka alam', never naming Abbas), and an AI web-fetch tool used during this research pass asserted the Abbas identification as if it were textually explicit — a live example of exactly the kind of unverified inference the plan's anti-hallucination rules exist to prevent. The character field was deliberately left empty on these verses and the Hazrat Abbas character entry was NOT updated to link them.",
+    "The Aaj Ki Kitaben 111-elegy edition's 2023 publication year is single-sourced and may simply reflect when the Dawn column was written, not a confirmed publication date — flagged as unconfirmed rather than stated as fact.",
+    "The Dawn source is the first evidence in this dataset of Mir Anis revising his own verses across manuscript versions ('alter[ing] couplets or add[ing] stanzas') — directly relevant to plan Section 22 (textual variants) as a methodological warning, even though no concrete instance of Anis's OWN cross-manuscript revision (as opposed to a transcription-level difference like anis-verse-0007-var-a) has been located and documented yet.",
+    "Two of five Wikisource marsiya-page fetches were declined by the fetch tool on (mistaken, in this module's assessment) copyright-caution grounds, since Wikisource specifically hosts this material because the 19th-century originals are public domain. This is a tooling limitation encountered during research, not a finding about Wikisource's reliability as a source — noted here so a future pass doesn't waste time assuming the block reflects an actual rights issue.",
+    "Carried over from Phase 1, still unresolved: birth year (1800 vs 1803), death day (1 vs 10 December 1874), and grandfather/lineage (Mir Hasan as grandfather vs great-grandfather, with a 'Zahak' claim for the grandfather generation).",
+    "No page numbers, specific editions, or specific editors have been confirmed for any individual verse or marsiya (as opposed to the collections themselves, several of which now have real editor/publisher/year data). Every such field on verse/work/marsiya records is intentionally blank rather than guessed.",
+    "PHASE 2B (Primary Edition Resolution) done this pass. Goal was resolution, not expansion: 0 new verses were added (well under the 10-verse cap), 3 new editions/collections/sources were added (col-saleha-abid-husain-1980 plus its source_registry/edition_registry entries), and a new edition_registry[] (6 entries) and edition_page_map[] (7 entries, all 'unresolved') were added.",
+    "Directly tested OCR quality on 2 scans this phase (Fazil Lakhnawi 1974, Saleha Abid Husain 1980) via targeted phrase search for this dataset's 3 best-attested matlas — both scans' OCR was assessed unreliable/garbled, and none of the 3 phrases could be confirmed found in either. This is inconclusive (not proof the marsiyas are absent from these books), but it does mean neither scan is currently usable as a primary text source via this module's tooling (WebFetch has no image/vision capability, so page images could not be inspected directly).",
+    "Kulliyat-e-Anis investigated further: targeted searches of HathiTrust's catalog, WorldCat, and Google Books found no record under this title. Working conclusion (not a proof): 'Kulliyat-e-Anis' is most likely an informal, generic descriptor rather than the name of one specific real publication. The col-kulliyat-anis-generic entry's source_status/bibliographic_confidence was downgraded to E to reflect this.",
+    "Attribution audit performed on all 7 marsiyas (marsiyas[].attribution_status): 3 confirmed_by_text (Hurr, Aaj Shabir/Imam Hussain, Farzand-e-Payambar/Imam Hussain), 1 uncertain (the Abbas association on anis-marsiya-003, unchanged from Phase 2), 3 unassigned (no character claimed, nothing to audit).",
+    "Bibliographic confidence and text/verse verification are now explicitly tracked as separate dimensions per plan instruction: edition_registry[].bibliographic_confidence (how sure we are the edition exists/is correctly identified) vs. verses[].source_status / verification.level (how sure we are the exact wording is genuine). An edition can have bibliographic_confidence B while contributing zero verified verse text, which is exactly the current state for every scanned edition in this dataset.",
+    "All 10 existing verses were re-checked against the 2 newly OCR-tested scans and left unchanged at B — no upgrade to A (no primary match confirmed), no downgrade (no contradicting evidence found either). Each verse's verification object now carries checked_against_primary:false and a primary_check_notes field documenting this attempt, so a future pass can see what was already tried rather than repeating it blindly.",
+    "Remaining blocker for Phase 3: this module has no way to read page IMAGES (only OCR text, which has proven unreliable on every scan tested so far) — until either a higher-quality OCR pass, a vision-capable tool, or human proofreading is available, no marsiya can be reliably linked to a specific edition/volume/page, and no verse can be upgraded past B. This is the single concrete blocker referenced in the final answer below.",
+    "PHASE 2C (Rekhta Reader & Primary-Text Accessibility) done this pass. 0 new verses added (limit was 5). 2 new source_registry entries, 0 new collections/editions (ed-rekhta-digitized and ed-saleha-abid-husain-1980 were updated in place with new fields, not duplicated).",
+    "Rekhta's actual e-book reader (not just its index/search pages) was opened directly for the first time this phase: it is a real 438-page flip-book with genuine metadata (Tej Kumar / Dr. Aditya Behl contributors — cross-referencing the Dawn article's 'Tej Kumar Press' mention independently), but actual page content is paywalled ('exhausted 5 free content pages per year') and the visible table of contents is genre-level only (مرثیہ/رباعیات/سلام section headings with page numbers, no individual poem titles) — so even with access, this specific index would not by itself confirm which marsiyas the volume contains.",
+    "ghazalsara.org was checked as a 4th independent site confirming anis-verse-0001's matla wording — but like Rekhta's marsiya-index pages, it cites no book/edition/page. More agreeing sources does not equal a primary check; verification level intentionally unchanged.",
+    "CAUGHT MISATTRIBUTION (new example, same failure class as the Phase 2 Abbas case): a WebSearch summarization tool, asked about anis-verse-0002/0003's marsiya ('آج شبیر پہ کیا عالم تنہائی ہے'), stated it 'is a ghazal by Mir Taqqi Mir' and appears in 'Mir's Kulliyat' — this is WRONG. This exact text is Mir ANIS's marsiya, already independently confirmed via Rekhta, Wikisource, and an earlier search-snippet corroboration in Phase 1/2. Mir Taqi Mir is a different, earlier (18th-century) poet. Nothing in this dataset was changed because of this false claim — it is recorded here specifically as a second, independent demonstration of why this module never accepts a single AI-generated summary as evidence, and always requires corroboration from an actual source page.",
+    "Archive.org's own archive-hocr-tools metadata for the Saleha Abid Husain 1980 scan reports 96% OCR 'confidence' and does provide a scan-page-to-printed-page mapping structure (_page_numbers.json) — but this module's own direct reading of the same file's OCR text found it heavily garbled, and a targeted phrase search against it found none of 3 known matlas. This contradiction is recorded, not resolved — the 96% figure is a character-recognition metric, not a semantic-readability guarantee, and should not be read as evidence the scan is currently usable.",
+    "Result: 0 of 7 marsiyas achieved a complete citation chain (marsiya → edition → volume → page → visible original text). 0 verses upgraded to A. 0 verses downgraded. 0 textual variants confirmed (ghazalsara's text was not compared word-for-word — only its matla was independently checked against the dataset and found consistent). The Abbas attribution question remains uncertain — no new evidence was found this phase (Rekhta's marsiya-index page for that specific poem was already checked in Phase 2 with no citation found, and this phase's new leads — the ebook reader and ghazalsara — don't reach that specific poem's text either)."
+  ],
+  "edition_registry": [
+    {
+      "edition_id": "ed-naval-kishore-1876",
+      "collection_id": "col-naval-kishore-1876",
+      "title": "Naval Kishore Press original edition of Anis's elegies",
+      "title_urdu": "",
+      "editor": "",
+      "publisher": "Munshi Naval Kishore Press, Lucknow",
+      "publication_year": "1876 (v.1) – 1877 (v.4)",
+      "edition_statement": "first print edition",
+      "volume_count": "4",
+      "library_identifier": "",
+      "archive_identifier": "",
+      "source_url": "https://www.dawn.com/news/1758064",
+      "scan_url": "",
+      "scan_quality": "unavailable — no digitized copy of this specific 1876–77 printing was located (checked Archive.org, HathiTrust catalog, WorldCat, Google Books)",
+      "ocr_quality": "unavailable",
+      "primary_text_usable": false,
+      "bibliographic_confidence": "B",
+      "notes": "Existence and contents (108 elegies/268 rubais/31 salams) are well-sourced (Dawn), but this module has not located an actual scan of THIS printing — do not confuse with ed-naval-kishore-2004-reprint, a different, later item."
+    },
+    {
+      "edition_id": "ed-fazil-lakhnawi-1974",
+      "collection_id": "col-fazil-lakhnawi-1974",
+      "title": "Muntakhab Marasi Anees",
+      "title_urdu": "منتخب مراثی انیس",
+      "editor": "Syed Murtaza Hussain Fazil Lakhnawi",
+      "publisher": "Majlis-e-Taraqqi-e-Adab, Lahore",
+      "publication_year": "1974-10",
+      "edition_statement": "annotated scholarly selection, manuscript-referenced per Dawn",
+      "volume_count": "1 (12 elegies)",
+      "library_identifier": "",
+      "archive_identifier": "fazil-lakhnawi-muntakhab-marasi-anees",
+      "source_url": "https://archive.org/details/fazil-lakhnawi-muntakhab-marasi-anees",
+      "scan_url": "https://archive.org/details/fazil-lakhnawi-muntakhab-marasi-anees",
+      "scan_quality": "not directly assessed — page images (PDF/JP2) exist but were not visually inspected by this module (WebFetch cannot view images); only the raw OCR text layer was checked",
+      "ocr_quality": "unreliable — directly tested twice (a general read, and a targeted phrase search for the 3 best-attested matlas in this dataset); text is degraded/incoherent and none of the 3 phrases could be confirmed found",
+      "primary_text_usable": false,
+      "bibliographic_confidence": "B",
+      "notes": "The most scholarly-credentialed scan identified so far (manuscript-referenced, annotated). Blocked on OCR quality, not on bibliographic identity. Highest-value candidate for a future human-proofread or vision-based extraction pass against its page images."
+    },
+    {
+      "edition_id": "ed-saleha-abid-husain-1980",
+      "collection_id": "col-saleha-abid-husain-1980",
+      "title": "Anis ke Marsiye, Vol. 1",
+      "title_urdu": "انیس کے مرثیے ـ جلد 1",
+      "editor": "Saleha Aabid Husain",
+      "publisher": "Taraqqi Urdu Bureau, New Delhi",
+      "publication_year": "1980",
+      "edition_statement": "",
+      "volume_count": "≥1 (only vol. 1 located)",
+      "library_identifier": "",
+      "archive_identifier": "1_20230403_20230403",
+      "source_url": "https://archive.org/details/1_20230403_20230403",
+      "scan_url": "https://archive.org/details/1_20230403_20230403",
+      "scan_quality": "not directly assessed — page images exist, not visually inspected",
+      "ocr_quality": "unreliable — directly tested this phase via targeted phrase search for the 3 best-attested matlas in this dataset; text assessed as heavily garbled, none of the 3 phrases confirmed found",
+      "primary_text_usable": false,
+      "bibliographic_confidence": "B",
+      "notes": "Newly identified this phase, independent of the Dawn article. Same OCR-quality blocker as ed-fazil-lakhnawi-1974. PHASE 2C: found this item's own _page_numbers.json (archive-hocr-tools output) reports an overall OCR 'confidence' of 96% and does map scan-index (leafNum) to printed page numbers for at least some pages (e.g. scan 9 = printed page 8). This CONTRADICTS this module's own direct reading of the same item's OCR text, which was assessed as heavily garbled/incoherent, and a targeted 3-phrase search against it found nothing. This discrepancy is recorded, not resolved: archive-hocr-tools' 96% figure is a character/word-recognition confidence metric, not a semantic-readability judgment, and may not mean what it appears to mean for Urdu script. Do not cite the 96% figure as evidence this scan is usable — this module's own attempted verbatim/phrase extraction from it failed.",
+      "page_images_available": true,
+      "ocr_available": true,
+      "primary_text_confidence": "E — see notes for an unresolved discrepancy"
+    },
+    {
+      "edition_id": "ed-naval-kishore-2004-reprint",
+      "collection_id": "col-archive-2004-reprint",
+      "title": "Marasi Mir Anees (2004 printing)",
+      "title_urdu": "مراثی میر انیس",
+      "editor": "",
+      "publisher": "Munshi Nawal Kishore Press, Lucknow",
+      "publication_year": "2004",
+      "edition_statement": "reprint",
+      "volume_count": "≥4 (vols 1, 4 located)",
+      "library_identifier": "",
+      "archive_identifier": "1_20230331_20230331_2004",
+      "source_url": "https://archive.org/details/1_20230331_20230331_2004",
+      "scan_url": "https://archive.org/details/1_20230331_20230331_2004",
+      "scan_quality": "not directly assessed",
+      "ocr_quality": "not conclusively assessed this phase — one retrieval attempt failed (404, likely a filename-encoding issue on retry) and was not repeated; given this scan shares its digitization batch/style with the other two directly-tested scans (both found unreliable), it is provisionally treated as likely unreliable, but this is an inference, not a direct finding — flagged explicitly as unconfirmed.",
+      "primary_text_usable": false,
+      "bibliographic_confidence": "B",
+      "notes": "Not yet directly OCR-tested (see ocr_quality). Relationship to the 1876-77 original and to Rekhta's digitized volumes remains unconfirmed (carried over from Phase 2)."
+    },
+    {
+      "edition_id": "ed-aaj-ki-kitaben-2023",
+      "collection_id": "col-aaj-ki-kitaben-111",
+      "title": "Anis: 111 Marsiye",
+      "title_urdu": "انیس: 111 مرثیے",
+      "editor": "Nayyar Masud and Timsal Masud",
+      "publisher": "Aaj Ki Kitaben, Karachi",
+      "publication_year": "2023 (unconfirmed)",
+      "edition_statement": "scholarly critical edition per Dawn",
+      "volume_count": "3",
+      "library_identifier": "",
+      "archive_identifier": "",
+      "source_url": "https://www.dawn.com/news/1758064",
+      "scan_url": "",
+      "scan_quality": "unavailable — no open digital scan located; a 2020s Karachi commercial publication, likely still in copyright, so none was sought outside legitimate channels",
+      "ocr_quality": "unavailable",
+      "primary_text_usable": false,
+      "bibliographic_confidence": "C",
+      "notes": "Described by Dawn as the current 'authentic version' but this module cannot use it as a primary source without a legitimately accessible copy."
+    },
+    {
+      "edition_id": "ed-rekhta-digitized",
+      "collection_id": "col-rekhta-digitized-marasi",
+      "title": "Marasi-e-Meer Anees / Marsiya Haye Meer Anis Sahab Marhoom (Rekhta digitized volumes)",
+      "title_urdu": "",
+      "editor": "",
+      "publisher": "",
+      "publication_year": "",
+      "edition_statement": "",
+      "volume_count": "≥6 (vols 1,2,3,5,6 seen)",
+      "library_identifier": "",
+      "archive_identifier": "",
+      "source_url": "https://www.rekhta.org/poets/meer-anees/ebooks?lang=ur",
+      "scan_url": "https://www.rekhta.org/poets/meer-anees/ebooks?lang=ur",
+      "scan_quality": "not assessed — blocked by login/subscription wall before any page could be viewed",
+      "ocr_quality": "not assessed — same reason",
+      "primary_text_usable": false,
+      "bibliographic_confidence": "B",
+      "notes": "PHASE 2C: directly tested the actual reader (not just the index page). Confirmed real: 438 pages, a genre-level TOC (marsıya/rubaiyat/salam/qit'a sections with page numbers, but no individual poem titles), and a Tej Kumar/Aditya Behl contributor credit that cross-references the Dawn article's 'Tej Kumar Press' mention. Confirmed blocked: actual page text/images require login and the free quota ('5 pages/year') was already exhausted — zero page content was readable. None of this dataset's 7 known marsiya titles appear in the visible (genre-level) TOC, so even if access were available, this specific volume's index alone would not confirm which marsiyas it contains — you would still need to open individual pages.",
+      "rekhta_book_id": "marasi-e-meer-anees-volume-001-meer-anees-ebooks",
+      "reader_url": "https://www.rekhta.org/ebooks/marasi-e-meer-anees-volume-001-meer-anees-ebooks",
+      "scan_available": true,
+      "page_images_available": true,
+      "ocr_available": "unknown — reader may have selectable/searchable text internally, but this module could not get past the paywall to check",
+      "primary_text_confidence": "E — access blocked",
+      "classification": "primary-source lead"
+    }
+  ],
+  "edition_page_map": [
+    {
+      "marsiya_id": "anis-marsiya-hur",
+      "edition_id": null,
+      "volume": "",
+      "start_page": null,
+      "end_page": null,
+      "printed_page": null,
+      "scan_page": null,
+      "opening_line": "بخدا فارسِ میدانِ تہور تھا حُرؔ",
+      "page_verification": "unresolved",
+      "source_url": "",
+      "status": "unresolved",
+      "notes": "OCR-phrase-searched in ed-fazil-lakhnawi-1974 and ed-saleha-abid-husain-1980 — not found in either (inconclusive, both OCR unreliable). No edition/volume/page match established. PHASE 2C: tested Rekhta's actual reader (ed-rekhta-digitized) and ghazalsara.org — Rekhta's page content is paywalled (could not view), its visible TOC is genre-level only (no per-poem titles), and ghazalsara.org shows the verse text but cites no book/edition/page. Still unresolved."
+    },
+    {
+      "marsiya_id": "anis-marsiya-001",
+      "edition_id": null,
+      "volume": "",
+      "start_page": null,
+      "end_page": null,
+      "printed_page": null,
+      "scan_page": null,
+      "opening_line": "آج شبیرؔ پہ کیا عالمِ تنہائی ہے",
+      "page_verification": "unresolved",
+      "source_url": "",
+      "status": "unresolved",
+      "notes": "OCR-phrase-searched in ed-fazil-lakhnawi-1974 and ed-saleha-abid-husain-1980 — not found in either (inconclusive, both OCR unreliable). PHASE 2C: tested Rekhta's actual reader (ed-rekhta-digitized) and ghazalsara.org — Rekhta's page content is paywalled (could not view), its visible TOC is genre-level only (no per-poem titles), and ghazalsara.org shows the verse text but cites no book/edition/page. Still unresolved."
+    },
+    {
+      "marsiya_id": "anis-marsiya-002",
+      "edition_id": null,
+      "volume": "",
+      "start_page": null,
+      "end_page": null,
+      "printed_page": null,
+      "scan_page": null,
+      "opening_line": "دشت وغا میں نور خدا کا ظہور ہے",
+      "page_verification": "unresolved",
+      "source_url": "",
+      "status": "unresolved",
+      "notes": "Not attempted this phase — effort went to the 3 best-attested marsiyas first."
+    },
+    {
+      "marsiya_id": "anis-marsiya-003",
+      "edition_id": null,
+      "volume": "",
+      "start_page": null,
+      "end_page": null,
+      "printed_page": null,
+      "scan_page": null,
+      "opening_line": "جب رن میں سر بلند علی کا علم ہوا",
+      "page_verification": "unresolved",
+      "source_url": "",
+      "status": "unresolved",
+      "notes": "Not attempted this phase (also blocked on the separate unresolved character-attribution question — see marsiyas[].attribution_status)."
+    },
+    {
+      "marsiya_id": "anis-marsiya-004",
+      "edition_id": null,
+      "volume": "",
+      "start_page": null,
+      "end_page": null,
+      "printed_page": null,
+      "scan_page": null,
+      "opening_line": "فرزند پیمبر کا مدینے سے سفر ہے",
+      "page_verification": "unresolved",
+      "source_url": "",
+      "status": "unresolved",
+      "notes": "OCR-phrase-searched in ed-fazil-lakhnawi-1974 and ed-saleha-abid-husain-1980 — not found in either (inconclusive, both OCR unreliable). PHASE 2C: tested Rekhta's actual reader (ed-rekhta-digitized) and ghazalsara.org — Rekhta's page content is paywalled (could not view), its visible TOC is genre-level only (no per-poem titles), and ghazalsara.org shows the verse text but cites no book/edition/page. Still unresolved."
+    },
+    {
+      "marsiya_id": "anis-marsiya-005",
+      "edition_id": null,
+      "volume": "",
+      "start_page": null,
+      "end_page": null,
+      "printed_page": null,
+      "scan_page": null,
+      "opening_line": "آمد آمد حرمِ شاہ کی دربار میں ہے",
+      "page_verification": "unresolved",
+      "source_url": "",
+      "status": "unresolved",
+      "notes": "Not attempted this phase."
+    },
+    {
+      "marsiya_id": "anis-marsiya-006",
+      "edition_id": null,
+      "volume": "",
+      "start_page": null,
+      "end_page": null,
+      "printed_page": null,
+      "scan_page": null,
+      "opening_line": "کیا غازیانِ فوجِ خدا نام کر گئے",
+      "page_verification": "unresolved",
+      "source_url": "",
+      "status": "unresolved",
+      "notes": "Not attempted this phase."
+    }
+  ]
+}

@@ -1,32 +1,39 @@
-# Mir Anis Module — Research Notes (Phase 1 + Phase 2 + Phase 2B + Phase 2C + Phase 3 + Phase 4 + Phase 5 + Phase 6 + Phase 7 + Phase 8)
+# Mir Anis Module — Research Notes (Phase 1 + Phase 2 + Phase 2B + Phase 2C + Phase 3 + Phase 4 + Phase 5 + Phase 6 + Phase 7 + Phase 8 + Phase 9 + Phase 10 + Phase 11)
 
 Companion to [`mir_anis_module_research_extraction_plan.md`](./mir_anis_module_research_extraction_plan.md),
 which defines the full 31-section research/extraction process and the anti-hallucination rules this
 document (and the underlying dataset) must follow.
 
-**Status: Phase 1 (Identity) through Phase 8 (Edition Confirmation) done.** Phases 1-3 built a
-bibliographic foundation and established OCR-based recovery was a dead end. Phase 4 broke through
-via a Columbia University scholar's teaching site hosting cleanly typeset transcriptions with
-printed source citations. Phase 5 reached this dataset's first 5 Primary Verified (A1) verses,
-visually confirmed against a printed page attributed at the time to *Anis ke Marsiye, Jild Dom*
-(Saleha Aabid Husain, 1980), plus 2 more verses from a second, edition-unidentified witness. Phases
-6-7 extended that second witness and resolved the Phase 1 grandfather/lineage conflict via Ali Jawad
-Zaidi's monograph. **Phase 8 was the decisive breakthrough**: a direct Archive.org search for the
-exact edition already in this dataset found a second, *complete* 577-page scan of the same title,
-and three of its pages were fetched and matched **word-for-word** against already-transcribed text.
-This resolved the standing edition-identification blocker outright — **11 verses were upgraded from
-B to A1, and 5 more had a genuine, documented correction** (their page changed from 16, which
-belonged to a separately-paginated excerpt, to 309, the complete volume's real pagination — the
-original claim preserved, not erased). **Current state: 16 A-level verses (up from 5), 10 B-level
-verses (down from 21), 26 total, 0 downgraded, 5 characters (2 upgraded to A this phase), 1 major
-biographical conflict resolved.** Four independent AI-tool misattribution/fabrication attempts have
-been caught and rejected across the research — each documented as a worked example of why this
-module never accepts a single AI-generated claim as evidence on its own. Phases 9–10 (transcribing
-bands 18+ at the same confidence level, full Karbala/character/
-theme mapping, contextualized verses, non-Karbala poetry, literary-style analysis, full critical
-reception, and the final verification audit) are **not done**. This document and the
-underlying `app/assets/data/poets/mir-anis.json` are meant to be extended in later passes, not
-treated as the finished module.
+**Status: Phase 1 (Identity) through Phase 9 (Band 18-20 Extraction & Discrepancy Investigation)
+done.** Phases 1-3 built a bibliographic foundation and established OCR-based recovery was a dead
+end. Phase 4 broke through via a Columbia University scholar's teaching site hosting cleanly typeset
+transcriptions. Phases 5-7 reached the dataset's first A1 verses and resolved the grandfather/
+lineage conflict. **Phase 8 found and confirmed a complete 577-page scan of the exact edition
+already in this dataset**, matching already-transcribed text word-for-word and upgrading/correcting
+16 verses. **Phase 9 extended that confirmed edition by 3 more bands (page 312, all A1), closed a
+Phase-8 fetch gap (page 311 now directly re-confirmed), and re-investigated — rather than further
+deferred — an open discrepancy**: the confirmed edition's own page 16 doesn't match a different,
+earlier-used excerpt's "page 16" for the same nominal book. Direct comparison of both sources' title
+pages found them near-identical, which *deepens* rather than resolves this puzzle; it is recorded as
+explicitly unresolved, with the affected A1 verses cross-referencing the open question without being
+downgraded (their own page-309 attribution is independently solid). **Current state: 19 A-level
+verses (up from 16), 10 B-level verses (unchanged), 29 total, 0 downgraded, 5 characters, 1 major
+biographical conflict resolved, 1 bibliographic discrepancy honestly left open.** Four independent
+AI-tool misattribution/fabrication attempts have been caught and rejected across the research — each
+documented as a worked example of why this module never accepts a single AI-generated claim as
+evidence on its own. **Phase 10 (Karbala Core Topics, Data Refinement & UI Simplification) is a
+deliberate scope change and is done for its own narrowed goals**: it did not extract new primary
+text, but instead synced `themes[]`/`characters[]` to the 29 verses actually in the dataset (was
+stale, still pointing at Phase-1 placeholders), consolidated the page-16 discrepancy into one
+current-status note, and added real character/theme/verification-level filtering to the Poetry
+Library UI. Primary-text extraction past band 20, the page-16 discrepancy's resolution, non-Karbala
+poetry, Anis-vs-Dabeer comparison, and marsiya-structure mapping remain **paused, not abandoned** —
+see Phase 10's section below for the full breakdown. **Phase 11 was a small polish pass**: it fixed
+a display gap where Phase 10's character/theme data existed in the dataset but wasn't rendered on
+the page, and proofread (reworded, not re-argued) the two Phase 10 research notes for clarity. No
+data, scope, or extraction changed. This document and the underlying
+`app/assets/data/poets/mir-anis.json` are meant to be extended in later passes, not treated as the
+finished module.
 
 The machine-readable counterpart to this document is
 [`app/assets/data/poets/mir-anis.json`](./app/assets/data/poets/mir-anis.json), following the
@@ -1093,22 +1100,302 @@ anis-verse-0019 — A1
 
 ---
 
-## Next steps (Phase 9 candidates)
+# Phase 9 — Band 18-23 Extraction & Page-16 Discrepancy Investigation
 
-1. **Transcribe bands 18-23 from page 312** (already fetched, edition-confirmed, image in hand) —
-   the fastest, lowest-risk way to push past 20 A-level verses; do it carefully, not hurriedly.
-2. **Continue past band 23** — bands 24 through at least 41 are visually confirmed to exist in the
-   same confirmed edition; low-risk continuation once 18-23 is done properly.
-3. **Retry page 311 directly** (this session's IIIF fetch hit a transient 500 error) to upgrade
-   anis-verse-0025–0029 from "bracketed confirmation" to a fully independently-reconfirmed A1.
-4. **Read more of Ali Jawad Zaidi's monograph** (~13 of 54 pages read) — the lineage question is
-   resolved, but the remaining ~40 pages likely hold further named-critic quotations.
+Goal: (1) transcribe bands 18-23 to pass the 20-A-level target, (2) resolve the page-311 gap from a
+Phase 8 transient fetch failure, (3) directly re-investigate the page-16 discrepancy rather than
+defer it further. **All three priorities were acted on** — 1 and 2 succeeded cleanly; 3 was
+genuinely re-investigated and found to be a deeper puzzle than Phase 8 assumed, and is now
+documented as explicitly unresolved rather than quietly reinterpreted as settled.
+
+## Executive result
+
+```text
+New verses:                  3  (anis-verse-0030 to 0032 — bands 18-20, page 312, A1)
+Verses strengthened:         5  (anis-verse-0025 to 0029 — page 311 gap closed, "bracketed
+                                  confirmation" caveat removed, now directly re-confirmed)
+Verses downgraded:           0
+A-level: 19 (was 16)   B-level: 10 (unchanged)   Total: 29 (was 26)
+```
+
+## Priority 1 — bands 18-20 transcribed, bands 21-23 deliberately NOT rushed
+
+Page 312 was freshly re-fetched (not reused from Phase 8) via Archive.org's IIIF API, cropped
+locally with Pillow into per-band regions for careful reading, and bands 18, 19, 20 were transcribed
+and added as A1 verses (edition already confirmed in Phase 8; page 312 directly visible and
+matching). **Bands 21-23 were attempted but not added**: the text on this specific stretch of page
+312 is visibly denser, with editorial footnote markers (suggesting the underlying edition carries
+scholarly annotations this module has no access to), and initial readings showed lower confidence
+than bands 18-20. Rather than transcribe at reduced confidence to hit a target count, extraction
+stopped at band 20 — consistent with "confidence per verse, not band count."
+
+## Priority 2 — page 311 gap closed
+
+Re-fetched leaf 311 via IIIF; it succeeded this time (Phase 8's failure was transient, as
+suspected). Direct visual comparison confirms an exact match against anis-verse-0025 through 0029
+(bands 12-16), with the printed page number "311" clearly visible. These 5 verses' verification
+notes are updated to remove the "bracketed confirmation" caveat — they are now as directly confirmed
+as pages 309, 310, and 312.
+
+## Priority 3 — page-16 discrepancy: investigated, not resolved, and deepened
+
+Fetched the confirmed edition's own leaf 1 (title page) via IIIF and directly compared it — pixel
+by pixel, not just by title text — against the Pritchett-hosted excerpt's title page (on file since
+Phase 5). **Finding: the two title pages are visually near-identical** (same arch/dome graphic
+design, same publisher seal, same text layout). This *deepens* the puzzle rather than resolving it:
+Phase 8's working theory (that the Pritchett excerpt's "16" belonged to a separately-typeset
+offprint) is now less well-supported, since a genuinely separate offprint would be less likely to
+reuse an apparently identical title page design. No alternative explanation was confirmed either.
+
+**Verdict: left explicitly unresolved**, per this module's rule for conflicts the evidence doesn't
+clearly settle — not resolved by assumption in either direction, and Phase 8's tentative explanation
+is now flagged as weakened, not restated as fact. Both `source_registry` entries and all 5 affected
+A1 verses (anis-verse-0014–0018) now carry a note pointing to this open question, so it doesn't sit
+silently contradicted in the record. **This does not affect those verses' A1 status** — their page-309
+attribution is an independent, direct match against the confirmed edition, unrelated to whatever
+explains the other source's internal numbering.
+
+## Edition table update
+
+No new editions this phase — Priority 1/2 extended confirmed use of `ed-anees-k-marsye-577`;
+Priority 3 added a documented open question to `src-pritchett-saleha-vol2-p16` and
+`src-archive-anees-k-marsye` rather than a new candidate.
+
+## Marsiya mapping update
+
+```text
+anis-marsiya-007: bands 1-20 now A1 (pages 309-312, all 4 pages directly, independently confirmed)
+Bands 21-41: visually confirmed to exist (denser text, footnote markers); not transcribed
+```
+
+## Source chain (band 18, representative)
+
+```text
+Fresh IIIF fetch, leaf 312, anees-k-marsye
+  ↓ local Pillow crop for band-level reading
+  ↓ independent re-verification crop
+band 18 text — exact, no uncertain words
+  ↓
+anis-verse-0030 — A1
+```
+
+## Rejected/Caveated Evidence
+
+- Did not transcribe bands 21-23 despite having page 312 open and edition-confirmed — a deliberate
+  confidence-over-completeness choice, documented as such rather than silently skipped.
+- Did not let the page-16 title-page similarity be read as resolving the discrepancy in favor of
+  "same book" — visual similarity of a cover is not the same as matching interior content, and the
+  interior content (page 16 itself) still doesn't match.
+- Did not let a second fetch failure (had it occurred) on page 311 become treated as confirmation by
+  omission — the retry genuinely succeeded and was checked, not assumed.
+
+## Phase 10 readiness
+
+`YES for continued extraction — 19 A-level verses (target was 20+, effectively met/one verse short),`
+`a page-verification pipeline proven across 4 consecutive pages (309-312), and a clear, low-risk next`
+`step (bands 21-41 with fresh, careful attention, or extending past page 312). PARTIAL for the`
+`broader module: the page-16 discrepancy remains a genuine open question, not blocking further`
+`extraction but worth flagging before any future pass treats "page 16" claims elsewhere in this`
+`dataset as settled. Single highest-value next step: attempt bands 21-23 again with more targeted`
+`high-resolution crops per band (the density issue may be a resolution problem, not necessarily an`
+`unreadable-source problem), or move on to bands 24+ where legibility may improve.`
+
+---
+
+# Phase 10 — Karbala Core Topics, Data Refinement & UI Simplification
+
+**Scope change, recorded explicitly:** this phase intentionally narrowed away from the original
+31-section plan. Primary-text page hunting (bands 21+, the page-16 discrepancy) is **paused, not
+abandoned**. Non-Karbala poetry, Anis-vs-Dabeer comparison, and marsiya-structure mapping remain out
+of scope until explicitly resumed. This phase instead refined what already exists: syncing
+themes/characters to the real dataset, consolidating a scattered research thread, and adding real
+UI filtering now that the Poetry Library holds 29 verses.
+
+## Executive result
+
+```text
+Themes populated:          8 of 10 now have real verse coverage (was 3 of 10, and those 3 were
+                            stale — pointing at seed verses from Phase 1, not the 27 added since)
+Theme tags added to verses: 4  (anis-verse-0011/0012 → Courage; 0021/0026 → Spirituality) —
+                            conservative, grounded only in already-transcribed text
+Characters refined:        5 of 5 (attributes/recurring_imagery/emotional_register filled in
+                            where evidenced; Hazrat Abbas's left deliberately empty)
+Research notes:            +2 (1 consolidated page-16 status note, 1 phase-scope note);
+                            0 deleted — historical trail preserved
+Verses/marsiyas/editions:  unchanged (0 new extraction this phase, by design)
+UI: Poetry Library gained character/theme/verification-level filtering; no tabs removed
+    (none of the out-of-scope sections — non-Karbala poetry, Anis-vs-Dabeer, marsiya-structure —
+    had ever been built into the UI to begin with)
+```
+
+## Priority 1 — Karbala characters & themes
+
+**Themes**: `themes[].representative_verses` was badly stale — it only reflected the 2 verses
+seeded in Phase 1, never updated as 27 more verses were added across Phases 4-9. Rebuilt from what
+verses are *actually* tagged:
+
+| Theme | Verses | Status |
+|---|---|---|
+| Faith | 8 | Best-covered — dawn prayer, ablution with dust, praise amid hardship |
+| Tragedy | 7 | Hussain's isolation, the journey from Medina, the garden-destroyed metaphor |
+| Family | 5 | Absent family named explicitly; Qasim/Ali Akbar together; garden metaphor |
+| Courage | 5 (+2 this phase) | Hurr's bravery; the "alam"/standard passage (bands 10-12) |
+| Separation | 3 | "No son, no nephew, no brother"; departure from Medina |
+| Spirituality | 2 (new this phase) | Houris testifying to sainthood; contemplating God's power |
+| Sacrifice | 1 | Direct: "this morning is blessed, whose evening leads to Paradise" |
+| Patience | 1 | "Three days of hunger, yet content with life" |
+| Loyalty | 0 | **Honestly marked unsupported** — no verse in this dataset evidences it yet |
+| Humanity | 0 | **Honestly marked unsupported** — same |
+
+The 4 new tags (bands 11-12 → Courage, continuing band 10's same passage; bands 21/26 →
+Spirituality) were added only because the *already-transcribed* text directly supports them — no
+new research, no verses re-read for this purpose.
+
+**Characters**: filled in `attributes`/`recurring_imagery`/`emotional_register` for all 5 existing
+characters (Imam Hussain, Hurr, Hazrat Abbas, Qasim, Ali Akbar), grounded strictly in verse text and
+sources already in `source_registry`. **Hazrat Abbas's fields were deliberately left empty** — this
+dataset still has no verse confirmed to be about him specifically (the popular "جب رن میں..."
+association remains unconfirmed per its own long-standing note), and filling these fields would mean
+drawing on general Karbala knowledge not evidenced by this dataset's own text, which this phase's
+refinement-only scope explicitly excludes. Qasim and Ali Akbar's entries note explicitly that only
+their physical-description couplet is evidenced here — their well-known martyrdom narratives are
+*not* asserted, since they aren't in this dataset's transcribed text.
+
+No new characters were added (Zainab, Sakina, Ali Asghar, Habib ibn Mazahir — none appear by name in
+any verse currently transcribed).
+
+## Priority 2 — Refinement, not re-extraction
+
+- **Consolidated the page-16 discrepancy** into one clearly-labeled "PHASE 10 CONSOLIDATED STATUS
+  NOTE" at the end of `research_notes`, giving the current single-source-of-truth summary. The
+  earlier phase-by-phase notes were **preserved, not deleted** — they're a legitimate audit trail of
+  how the finding developed, and deleting them would look like erasing evidence rather than tidying
+  prose.
+- **Cross-reference audit**: verified every `characters[].representative_verses` and
+  `themes[].representative_verses` entry actually appears in that verse's own `character`/`theme`
+  array (and vice versa) — zero mismatches found after Priority 1's additions.
+- **Did not** re-open primary-text page hunting, the page-16 resolution, or push past band 20 —
+  explicitly out of scope this phase.
+
+## Priority 3 — UI simplification
+
+Reviewed `/poets/mir-anis` and its dedicated components (`usePoetModules.ts`,
+`literary/VerificationBadge.vue`). Found that the UI was already minimal by design from earlier
+phases: no tab or filter had ever been built for non-Karbala poetry, Anis-vs-Dabeer comparison, or
+marsiya-structure — and `critical_reception` (4 entries, 2 of them real) was never rendered anywhere
+at all. So there was nothing to hide or remove.
+
+What the module *did* need: the Poetry Library had grown to 29 verses as a single flat list with no
+way to navigate it. Added real, data-backed filtering — verification level, character, theme — using
+the same `v-chip role="button" aria-pressed` pattern already used elsewhere in this app (e.g. the
+Persons module), not a new visual style. Filter options are generated from what actually occurs on
+some verse (`[...new Set(...)]`), so a filter chip only ever appears when it has real data behind
+it — no "genre" filter was added, since every verse in this dataset is currently genre "Marsiya"
+(zero discriminating value).
+
+## Files Changed
+
+`app/assets/data/poets/mir-anis.json` — themes/characters refined, 2 research_notes added (0
+deleted), module status note updated. `app/pages/poets/[slug].vue` — Poetry Library tab gained
+filter chips + filtered-verse computed properties; no other tabs touched. No other files.
+
+## Validation
+
+JSON valid; zero duplicate IDs; zero broken references; a dedicated cross-reference audit (verse ↔
+character ↔ theme consistency) found zero mismatches; `eslint` clean on `[slug].vue` (zero
+warnings); other pre-existing warnings elsewhere unchanged; dev server returned 200 on `/`,
+`/poets`, `/poets/mir-anis`, `/settings`; default (Overview) tab content confirmed present in SSR
+output; sidebar toggle still hidden by default.
+
+## Done for now vs. explicitly paused
+
+**Done for now:** Karbala character/theme refinement (grounded in existing 29 verses), page-16
+discrepancy documentation consolidated into one current-status note, Poetry Library filtering.
+
+**Explicitly paused, not abandoned:** primary-text extraction past band 20 (bands 21-41 visually
+confirmed to exist); resolving the page-16 discrepancy; non-Karbala poetry (ghazal/rubai/salam
+corpus); Anis-vs-Dabeer comparison; marsiya structure mapping (chehra/sarapa/rukhsat/etc.); reading
+the rest of Ali Jawad Zaidi's monograph and franpritchett.com's other PDFs; further edition/volume
+discovery. Resume any of these by picking up the relevant "Next steps" list from Phase 9's section
+above — nothing about this phase's scope narrowing invalidates that work, it's just not this
+phase's job.
+
+---
+
+# Phase 11 — Small Polish Pass
+
+Light cleanup only — no new research, no new extraction, no scope changes. Two things prompted
+this pass: verifying that Phase 10's data additions actually show up in the UI (they hadn't all
+been wired in), and tightening the two Phase 10 notes future passes will read first.
+
+**What was fixed:** Phase 10 filled in `characters[].attributes` / `recurring_imagery` /
+`emotional_register` and rebuilt `themes[].explanation`, but `[slug].vue`'s Karbala & Characters
+and Themes tabs never rendered any of those fields — only `poetic_role`/`note` for characters and
+`theme`/`source_status` for themes. All of that Phase 10 work was invisible in the actual page.
+Added `v-if`-guarded rows for the three character fields and the theme `explanation`, so a field
+only renders when it has real content. Hazrat Abbas's three fields are empty strings/arrays, so his
+card simply skips those rows and falls back to `poetic_role` + `note`, exactly as before — no empty
+headers, no broken layout. Verified this by temporarily switching the page's default active tab
+(`karbala`, then `themes`, then `poetry`) and re-fetching the SSR HTML each time — the same
+technique used in earlier phases to inspect Vuetify `v-window-item` content, since only the active
+tab renders server-side. Confirmed: all 5 character cards render cleanly (4 with real
+attributes/imagery/register text, Abbas's card cleanly omitting those three rows); all 10 theme
+cards render their `explanation` text, including Loyalty and Humanity, whose explanation is itself
+the honest "not yet supported" sentence — so even the zero-verse themes read as intentional, not
+broken. The Poetry Library's filter chips (level/character/theme) and all 29 verse cards render as
+expected. The active tab was reverted to `overview` afterward — confirmed via a final SSR fetch.
+
+No actual browser/screenshot tool is available in this environment; this SSR-HTML-per-tab technique
+plus direct data/template inspection is the closest verification available, and is more rigorous
+than a plain dev-server 200 check.
+
+**Proofreading:** tightened the two Phase 10 research notes for clarity — the page-16 consolidated
+status note and the Phase 10 scope-change note. Both were dense single-paragraph blocks (no
+line-break rendering in the notes UI, so clarity has to come from sentence structure). Cleaned up
+run-on clauses and mid-sentence emphasis (e.g. "not deleted, but THIS is..." → two plain sentences)
+and gave the scope note's four numbered items parallel structure. **No facts, claims, or citations
+were changed** — same content, easier to scan. Verified via `research_notes.length` staying at 75
+before and after (only the last two entries' text changed).
+
+**Files changed:** `app/pages/poets/[slug].vue` (character/theme field rendering added; no tabs
+added/removed, no filter logic changed), `app/assets/data/poets/mir-anis.json` (two research_notes
+entries reworded only — no additions, deletions, or data changes elsewhere), this document.
+
+**Validation:** ESLint clean on `[slug].vue`; JSON valid, `research_notes` count unchanged (75);
+dev server 200 on `/poets/mir-anis` under all four tested default-tab states; sidebar toggle/routing
+untouched.
+
+**Confirmation nothing else changed:** no verses, marsiyas, editions, or sources were added, edited,
+or removed this phase; no other pages/composables touched; nothing committed to git
+(`git status --short` shows the same three files as Phase 10: this document, the dataset, and
+`[slug].vue`).
+
+---
+
+## Next steps (Phase 11 candidates — resume point, carried over unchanged from Phase 9)
+
+Phase 10 deliberately did not act on this list (see its section above — scope was narrowed to
+refinement only). It remains the correct resume point whenever primary-text/extraction work picks
+back up:
+
+1. **Retry bands 21-23** with more targeted, per-band high-resolution crops (the density/legibility
+   issue this phase may be a resolution problem, not an unreadable-source problem) — or move on to
+   bands 24+ where legibility may simply improve past this particular stretch.
+2. **Continue toward band 41** once 21-23 (or a skip past them) is resolved — the marsiya's full
+   extent is already visually confirmed to exist in the same confirmed edition.
+3. **The page-16 discrepancy is now a standalone open question worth its own investigation**, not
+   just a footnote: the two title pages being near-identical while page 16's content differs is
+   genuinely strange and might reward checking a few more early pages (2-15) of both sources for
+   any divergence point, rather than jumping straight to page 16. (Phase 10 added a consolidated
+   status note for this but did not re-investigate it — see `research_notes`.)
+4. **Read more of Ali Jawad Zaidi's monograph** (~13 of 54 pages read) — the remaining ~40 pages
+   likely hold further named-critic quotations and bibliographic detail.
 5. **Read more of the franpritchett.com site**: other segmented-text PDFs, the "variant readings"
    PDF (directly relevant to Section 22), and the unread critic excerpts (Faruqi, Sadiq's other
    work, Saksena) — still untouched since Phase 4.
-6. **Investigate why this confirmed edition's page 16 doesn't match the Pritchett excerpt's "page
-   16"** — not urgent (doesn't block further extraction) but would close out a documented open
-   question about the excerpt's actual origin/pagination.
-7. Only then attempt Sections 14–27 (famous-verse ranking, marsiya structure mapping, Anis vs.
+6. Only then attempt Sections 14–27 (famous-verse ranking, marsiya structure mapping, Anis vs.
    Dabeer, full critical reception) — the plan's Section 1 ("Accuracy > Quantity") still governs
    pacing, but this dataset now has a proven, working page-verification pipeline to scale up with.
+7. **Loyalty and Humanity themes still have zero supporting verses** in this dataset (see Phase 10)
+   — worth watching for as future extraction continues; do not force-tag existing verses to fill
+   this gap.

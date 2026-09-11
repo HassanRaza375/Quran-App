@@ -103,7 +103,16 @@
                 <VerificationBadge :level="c.source_status" />
               </div>
               <p class="text-body-2">{{ c.poetic_role }}</p>
-              <p v-if="c.note" class="text-caption text-medium-emphasis">{{ c.note }}</p>
+              <p v-if="c.attributes?.length" class="text-caption mt-2 mb-0">
+                <span class="font-weight-medium">Attributes:</span> {{ c.attributes.join("; ") }}
+              </p>
+              <p v-if="c.recurring_imagery?.length" class="text-caption mt-1 mb-0">
+                <span class="font-weight-medium">Recurring imagery:</span> {{ c.recurring_imagery.join("; ") }}
+              </p>
+              <p v-if="c.emotional_register" class="text-caption mt-1 mb-0">
+                <span class="font-weight-medium">Emotional register:</span> {{ c.emotional_register }}
+              </p>
+              <p v-if="c.note" class="text-caption text-medium-emphasis mt-2">{{ c.note }}</p>
             </v-card>
           </v-col>
         </v-row>
@@ -116,6 +125,7 @@
             <v-card rounded="xl" class="pa-4 h-100">
               <div class="font-weight-medium">{{ t.theme }}</div>
               <div class="text-caption urdu-text text-medium-emphasis mb-2">{{ t.theme_urdu }}</div>
+              <p v-if="t.explanation" class="text-body-2 mb-2">{{ t.explanation }}</p>
               <div class="text-caption text-medium-emphasis">{{ t.source_status }}</div>
             </v-card>
           </v-col>
@@ -127,23 +137,80 @@
         <v-alert v-if="!data.verses.length" type="info" variant="tonal" class="mb-4">
           No verses meet this module's verification bar yet.
         </v-alert>
-        <v-card v-for="v in data.verses" :key="v.verse_id" rounded="xl" class="pa-4 mb-4">
-          <div class="d-flex justify-space-between align-start">
-            <p class="urdu-text text-h6" style="white-space:pre-line">{{ v.text_urdu }}</p>
-            <VerificationBadge :level="v.source_status" />
+        <template v-else>
+          <div class="d-flex flex-wrap ga-2 align-center mb-2">
+            <v-chip
+              v-for="lvl in verseLevels"
+              :key="lvl"
+              role="button"
+              :aria-pressed="levelFilter === lvl ? 'true' : 'false'"
+              :color="levelFilter === lvl ? 'primary' : undefined"
+              :variant="levelFilter === lvl ? 'flat' : 'outlined'"
+              size="small"
+              @click="levelFilter = levelFilter === lvl ? null : lvl"
+            >
+              {{ lvl === "A" ? "A — Primary verified" : "B — Strong secondary" }}
+            </v-chip>
           </div>
-          <p v-if="v.text_roman" class="text-caption text-medium-emphasis">{{ v.text_roman }}</p>
-          <v-divider class="my-2" />
-          <p class="text-caption">{{ v.verification_notes }}</p>
-          <a :href="v.source_url" target="_blank" rel="noopener" class="text-caption">Source</a>
-        </v-card>
+          <div v-if="verseCharacters.length" class="d-flex flex-wrap ga-2 align-center mb-2">
+            <span class="text-caption text-medium-emphasis">Character:</span>
+            <v-chip
+              v-for="ch in verseCharacters"
+              :key="ch"
+              role="button"
+              :aria-pressed="characterFilter === ch ? 'true' : 'false'"
+              :color="characterFilter === ch ? 'primary' : undefined"
+              :variant="characterFilter === ch ? 'flat' : 'outlined'"
+              size="small"
+              @click="characterFilter = characterFilter === ch ? null : ch"
+            >
+              {{ ch }}
+            </v-chip>
+          </div>
+          <div v-if="verseThemes.length" class="d-flex flex-wrap ga-2 align-center mb-4">
+            <span class="text-caption text-medium-emphasis">Theme:</span>
+            <v-chip
+              v-for="th in verseThemes"
+              :key="th"
+              role="button"
+              :aria-pressed="themeFilter === th ? 'true' : 'false'"
+              :color="themeFilter === th ? 'primary' : undefined"
+              :variant="themeFilter === th ? 'flat' : 'outlined'"
+              size="small"
+              @click="themeFilter = themeFilter === th ? null : th"
+            >
+              {{ th }}
+            </v-chip>
+            <v-btn v-if="levelFilter || characterFilter || themeFilter" size="small" variant="text" @click="levelFilter = null; characterFilter = null; themeFilter = null">
+              Clear filters
+            </v-btn>
+          </div>
+
+          <v-alert v-if="!filteredVerses.length" type="info" variant="tonal" class="mb-4">
+            No verses match the selected filters.
+          </v-alert>
+          <v-card v-for="v in filteredVerses" :key="v.verse_id" rounded="xl" class="pa-4 mb-4">
+            <div class="d-flex justify-space-between align-start">
+              <p class="urdu-text text-h6" style="white-space:pre-line">{{ v.text_urdu }}</p>
+              <VerificationBadge :level="v.source_status" />
+            </div>
+            <p v-if="v.text_roman" class="text-caption text-medium-emphasis">{{ v.text_roman }}</p>
+            <div v-if="v.character?.length || v.theme?.length" class="d-flex flex-wrap ga-1 my-2">
+              <v-chip v-for="ch in v.character" :key="ch" size="x-small" variant="tonal">{{ ch }}</v-chip>
+              <v-chip v-for="th in v.theme" :key="th" size="x-small" variant="outlined">{{ th }}</v-chip>
+            </div>
+            <v-divider class="my-2" />
+            <p class="text-caption">{{ v.verification_notes }}</p>
+            <a :href="v.source_url" target="_blank" rel="noopener" class="text-caption">Source</a>
+          </v-card>
+        </template>
       </v-window-item>
 
       <!-- Sources & Research Notes -->
       <v-window-item value="notes">
         <v-card rounded="xl" class="pa-4 mb-4">
           <div class="text-subtitle-1 font-weight-bold mb-2">Sources Consulted</div>
-          <ul>
+          <ul class="ps-4">
             <li v-for="s in data.sources" :key="s.url">
               <a :href="s.url" target="_blank" rel="noopener">{{ s.title }}</a> — {{ s.publisher }}
             </li>
@@ -196,6 +263,36 @@ const editionLine = (c) => {
 
 const attestationColor = (a) =>
   ({ "well-attested": "success", attributed: "warning", disputed: "error" })[a] ?? "grey";
+
+// --- Poetry Library filters ---
+// Only ever show a filter chip for a value that actually occurs on some verse —
+// per Phase 10's rule against filters with zero/near-zero data behind them (e.g.
+// no "genre" filter: every verse in this dataset is currently genre "Marsiya").
+const levelFilter = ref(null);
+const characterFilter = ref(null);
+const themeFilter = ref(null);
+
+const verseLevels = computed(() => {
+  if (!data.value) return [];
+  return [...new Set(data.value.verses.map((v) => v.source_status))].sort();
+});
+const verseCharacters = computed(() => {
+  if (!data.value) return [];
+  return [...new Set(data.value.verses.flatMap((v) => v.character || []))].sort();
+});
+const verseThemes = computed(() => {
+  if (!data.value) return [];
+  return [...new Set(data.value.verses.flatMap((v) => v.theme || []))].sort();
+});
+const filteredVerses = computed(() => {
+  if (!data.value) return [];
+  return data.value.verses.filter((v) => {
+    if (levelFilter.value && v.source_status !== levelFilter.value) return false;
+    if (characterFilter.value && !(v.character || []).includes(characterFilter.value)) return false;
+    if (themeFilter.value && !(v.theme || []).includes(themeFilter.value)) return false;
+    return true;
+  });
+});
 
 const biographyRows = computed(() => {
   if (!data.value) return [];

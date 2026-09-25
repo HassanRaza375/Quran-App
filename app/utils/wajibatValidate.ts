@@ -17,7 +17,7 @@ export interface WajibatIssue {
 }
 
 const HUKMS = new Set(["wajib", "haram", "mustahab", "makruh", "mubah"]);
-const BASES = new Set(["fatwa", "ihtiyat_wajib", "ihtiyat_mustahab"]);
+const BASES = new Set(["fatwa", "ihtiyat_wajib", "ihtiyat_mustahab", "ihtiyat_unspecified"]);
 const LEVELS = new Set(["A", "B", "D"]);
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -69,6 +69,7 @@ const validateMarjaRuling = (
   } else if (entry.urSource) {
     push(label, "urSource given but no Urdu text");
   }
+  if (entry.urduEditionLag && hasUrdu) push(label, "urduEditionLag entries must not carry the outdated Urdu text");
 };
 
 export const validateWajibatDataset = (
@@ -139,6 +140,41 @@ export const validateWajibatDataset = (
     if (hasD && r.status !== "disputed") push(r.id, "level-D entry requires status: disputed");
     if (!hasD && r.status === "disputed") push(r.id, "status: disputed without a level-D entry");
     for (const m of r.rulings) validateMarjaRuling(m, r.id, maraji, push);
+  }
+
+  // Procedures: ordered steps, each quoting its cited ruling verbatim for the same marja'.
+  const procedures = data.procedures ?? [];
+  for (const dup of findDuplicates(procedures.map((p) => p.id))) push(dup, "duplicate procedure id");
+  for (const t of topics) {
+    for (const pid of t.procedureIds ?? []) {
+      const p = procedures.find((x) => x.id === pid);
+      if (!p) push(t.id, `procedureIds references unknown procedure "${pid}"`);
+      else if (p.topicId !== t.id) push(t.id, `procedure "${pid}" belongs to topic "${p.topicId}"`);
+    }
+  }
+  for (const p of procedures) {
+    if (!/^[a-z0-9]+$/.test(p.id)) push(p.id, "procedure id must be lowercase ASCII letters/digits only (Shared Foundation #1)");
+    const topic = topics.find((t) => t.id === p.topicId);
+    if (!topic) push(p.id, `unknown topicId "${p.topicId}"`);
+    else if (!(topic.procedureIds ?? []).includes(p.id)) push(p.id, `not listed in topic "${topic.id}".procedureIds`);
+    const marja = maraji.find((m) => m.id === p.marjaId);
+    if (!marja) push(p.id, `unknown marjaId "${p.marjaId}"`);
+    else if (marja.status === "pending-sources") push(p.id, `${marja.id} is pending sources and must not have procedures yet`);
+    if (p.steps.length === 0) push(p.id, "procedure has no steps");
+    p.steps.forEach((s, i) => {
+      const label = `${p.id}/${s.id}`;
+      if (s.order !== i + 1) push(label, `steps must be ordered 1..n without gaps (expected ${i + 1}, got ${s.order})`);
+      if (s.hukm !== undefined && !HUKMS.has(s.hukm)) push(label, `invalid hukm "${s.hukm}"`);
+      const ruling = rulings.find((r) => r.id === s.rulingId);
+      const entry = ruling?.rulings.find((m) => m.marjaId === p.marjaId);
+      if (!ruling) push(label, `rulingId references unknown ruling "${s.rulingId}"`);
+      else if (!entry) push(label, `ruling "${s.rulingId}" has no entry for ${p.marjaId}`);
+      else {
+        if (!s.instruction.en?.trim() || !entry.text.en.includes(s.instruction.en)) push(label, "instruction is not a verbatim excerpt of the cited ruling");
+        if (s.instruction.ur && !(entry.text.ur ?? "").includes(s.instruction.ur)) push(label, "Urdu instruction is not a verbatim excerpt of the cited ruling");
+      }
+    });
+    for (const dup of findDuplicates(p.steps.map((s) => s.id))) push(p.id, `duplicate step id "${dup}"`);
   }
 
   for (const g of glossary) {

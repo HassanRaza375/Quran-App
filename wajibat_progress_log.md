@@ -269,3 +269,155 @@ Phase 2 (Taharat): water, then najasat, mutahhirat, istinja, wudu (with the proc
   composables, server routes, older pages, and the `props` / `U+FFFF` issues in
   `LayoutNavigationDrawer.vue` and `bookmarks.vue`, which are identical at HEAD. The Wajibat files
   lint clean.
+
+---
+
+## Phase 1 carry-over applied at the start of Phase 2 (2026-09-25)
+- **P5, Khamenei Q 16 ("it is a caution"):** checked his book for a definition of unqualified caution.
+  The Glossary has no entry for "caution", and Q 48 defines only *obligatory* caution ("the obligation
+  of performing or refraining from an action is a matter of caution"). So there is no definition to
+  apply, and Q 16 is now shown verbatim with the neutral label "Precaution (type not specified in the
+  source)". This is the new `basis: "ihtiyat_unspecified"`. The Taharat generator applies the same
+  rule to every answer that opens with "As per caution", "According to caution" or similar (R3).
+- **P6a:** the Urdu view now shows an app-written Urdu notice, marked as explanation, wherever the
+  Urdu edition lags a revised ruling (`urduEditionLag`).
+- **Sistani Ruling 434 (Bulugh):** its official Urdu (مسئلہ ۴۳۴, `/urdu/book/61/3632/`) was found, and
+  the ruling is no longer English only.
+
+### Phase 2 · Water — 2026-09-25
+- Rulings added, per marja': Sistani 11 · Khamenei 4 · Makarem 0 (A: 15)
+- Sources used: Sistani, Rulings 13–52 (selected; `/english/book/48/2118–2124/`; Urdu `/urdu/book/61/3627/`). Khamenei, Q 72, 73, 74 and 77 (`sn=5140`); Urdu س 73, 74, 75 and 78 (`sn=11374`).
+- English only: 35* (rain), because the Urdu lacks the revised "utensil three times" clause; edition-lag notice shown.
+- **Urdu spot-check (R4):** all 10 unrevised rulings read side by side. No mismatches.
+- Differences between maraji' flagged: none.
+
+### Phase 2 · Istinjāʾ / toilet — 2026-09-25
+- Rulings added: Sistani 13 · Khamenei 7 · Makarem 0 (A: 20)
+- Sources used: Sistani, Rulings 53–74 (`/2125/`, `/2126/`). Khamenei, Q 90–93, 96, 97 and 98 (`sn=5141`, Q 96 in the same section); Urdu س 91–99.
+- **Urdu spot-check (R4):** all 13 read. One minor wording difference: 69 (istibrāʾ), where the English says "one way is as follows" and the Urdu says "the best of which is". The ruling itself (recommended) is the same.
+- **Differences between maraji' flagged:** purifying the urinary outlet. Sistani (62): once suffices, twice is a recommended precaution. Khamenei (Q 97): twice, by obligatory caution. This is stored with `differsBetweenMaraji`; users see only their own marja's ruling.
+
+### Phase 2 · Najāsāt — 2026-09-25
+- Rulings added: Sistani 17 · Khamenei 11 · Makarem 0 (A: 28)
+- Sources used: Sistani, Rulings 80–135 (selected; `/2128–2139/`; Urdu `/3628/`). Khamenei, Q 265, 267, 271, 273, 275, 276, 278, 282, 284, 289, 300 and 304 (`sn=5252`); Urdu س +1 (`sn=11383`).
+- English only: 109* (alcohol). The revised English makes alcohol distilled from grape wine impure; the old Urdu says all alcohol is pure.
+- **Urdu spot-check (R4):** 80, 102 and 119 match.
+- **Differences flagged:** wine and intoxicants. Sistani (108): wine is impure and other intoxicants are not. Khamenei (Q 300): intoxicating drinks are najis by obligatory caution.
+- **Deliberately left out (see P8):** Rulings 103–107 on the impurity of disbelievers and certain groups. They are sourced, but their framing needs your decision.
+
+### Phase 2 · Muṭahhirāt — 2026-09-25
+- Rulings added: Sistani 14 · Khamenei 6 · Makarem 0 (A: 20)
+- Sources used: Sistani, Rulings 142–227 (selected; `/2140–2153/`; Urdu `/3629/`). Khamenei, Q 267, 79, 80, 81, 85 and 291.
+- English only: 178* (asphalt); the revised English adds "rubbing against a wall".
+- **Urdu spot-check (R4):** 143 and 185 match. **177 has a minor mismatch:** the English allows "some wetness or moisture on the earth that does not spread", and the Urdu condition (دوم) just says "the earth is dry". This ruling is unrevised, so its Urdu is currently still shown (see P10).
+
+### Phase 2 · Wuḍūʾ — 2026-09-25
+- Rulings added: Sistani 24 · Khamenei 11 · Makarem 0 (A: 35)
+- Sources used:
+  - Sistani, Rulings 235–327 and conditions 7 and 11 (`/2154/`, `/8295/` "Conditions for the validity of wuḍūʾ", `/2157–2160/`); Urdu `/3630/`.
+  - Khamenei, Q 101, 102, 104, 113, 119, 121, 122, 124, 126 and 134 (`sn=5142`), plus Q 153 (`sn=5246`); Urdu س +1.
+- Procedure: **Sistani wuḍūʾ, 7 steps.** Each step quotes Rulings 281, 236, 244, 248, 251 or condition 7 verbatim. The "Wājib" badges cite Ruling 235 in a step note.
+- Qur'anic basis: 5:6 (R2).
+- **English only:** the 7th condition* (sequence). The revised English says the left foot must be wiped after the right as an *obligatory* precaution; the old Urdu says *recommended*.
+- **Urdu spot-check (R4):** 247, 258 and 322 match.
+- **Differences flagged:** how many times to wash. Sistani (247): once obligatory, twice recommended, three times unlawful. Khamenei (Q 101): once obligatory, twice permissible, "a third is not in the shar'". A sixth flag (wiping the feet) was removed after both texts were compared in full: both require wiping from the toe tips.
+
+### Phase 2 · Ghusl — 2026-09-25
+- Rulings added: Sistani 16 · Khamenei 12 · Makarem 0 (A: 28)
+- Sources used: Sistani, Rulings 344–389 and 510 (`/2162–2168/`, `/2182/`; Urdu `/3631/`, `/3633/`). Khamenei, Q 169, 170, 176, 177, 184, 186, 187, 188, 190, 192, 196 and 198 (`sn=5247`); Urdu س +1.
+- Procedures: Sistani sequential ghusl (2 steps, Ruling 360) and immersive ghusl (1 step, Ruling 366).
+- Qur'anic basis: 5:6 and 4:43.
+- English only: 383* (doubt about ghusl).
+- **Urdu spot-check (R4):** 373 and 389 match. 354 has a minor difference: the Urdu item 1 adds "in any language" and a recommendation about the names of the Prophets and Imams. It doesn't contradict the English.
+- **Differences flagged:**
+  - Right side before left. Sistani (360): "it is better". Khamenei (Q 190): obligatory caution.
+  - Washing the hair. Sistani (378): long hair need not be washed. Khamenei (Q 192): obligatory caution to wash all of it.
+
+### Phase 2 · Ḥayḍ, istiḥāḍah and nifās — 2026-09-25
+- Rulings added: Sistani 16 · Khamenei 9 · Makarem 0 (A: 25). Every ruling is `sensitive`, in the collapsed panel (Q8).
+- Sources used: Sistani, Rulings 390–502 (selected; `/2169–2181/`; Urdu `/3632/`). Khamenei, Q 216–224, excluding Q 215 (`sn=5250`); Urdu س +1.
+- English only: 394* (excessive istiḥāḍah). The Urdu has "for every prayer" in its first clause, which the revised English doesn't.
+- 393* (medium istiḥāḍah) was compared and matches, so the Urdu is shown.
+- **Urdu spot-check (R4):** 391, 438 and 448 match.
+- Not used: Khamenei's Q 215. The extracted Q&A pairing looked wrong (a question about sayyid lineage with an answer about menopause), so it was left out rather than trusted.
+
+### Phase 2 · Tayammum — 2026-09-25
+- Rulings added: Sistani 13 · Khamenei 11 · Makarem 0 (A: 24)
+- Sources used: Sistani, Rulings 653–712 (selected; `/2195–2205/`; Urdu `/3636/`). Khamenei, Q 199–214 (selected; `sn=5249`); Urdu س +1.
+- Procedures:
+  - **Sistani, 4 steps**, from Ruling 689.
+  - **Khamenei, 4 steps**, from Q 208. Its step 4 (a second strike) is by obligatory caution, as the answer says. The step quotes are English only, because the Urdu answer (س 209) runs the steps together; the full Urdu Q&A is in the ruling card.
+- Qur'anic basis: 5:6 and 4:43.
+- English only: 712*. The revised English excepts medium istiḥāḍah; the old Urdu doesn't.
+- **Urdu spot-check (R4):** 681 and 709 match. 673 has minor wording differences in the fallback order (sand, clod, pebbles), with the same substance.
+
+## Phase 2 — Taharat — Completion Report (2026-09-25)
+
+### What was inspected
+- The official sources:
+  - sistani.org English *Islamic Laws* chapter 2: 78 pages, plus the unlisted "Conditions for the validity of wuḍūʾ" page `/8295/`.
+  - The Urdu *توضیح المسائل* Taharat pages (3627–3636).
+  - leader.ir *Practical Laws of Islam* "Rules on Purity" (Q 69–336) and the Urdu *احکام طهارت* (س 70–337).
+- The app's own Qur'an text (quranapi.pages.dev) for 5:6 and 4:43.
+
+### What was built / changed
+- **Content:** 8 Taharat topics, 131 rulings with 195 entries (Sistani 124, 117 with official Urdu; Khamenei 71, all with official Urdu), all level A. 5 step-by-step procedures. 18 new glossary terms (37 in total), quoted from the *Islamic Laws* Glossary.
+- **Data model:**
+  - `Procedure` / `ProcedureStep`. Each step's `instruction` must be a **verbatim substring of the cited ruling** for the same marja', and the validator enforces this.
+  - `WajibatTopic.procedureIds` replaces the spec's single `procedureId`, since a topic can have several procedures and each belongs to one marja'.
+  - `basis: "ihtiyat_unspecified"` (P5/R3).
+  - `urduEditionLag` (P6).
+- **Validator:** procedure checks (steps ordered 1..n, verbatim instructions, ruling entries for the procedure's marja', no procedures for a pending marja', topic ↔ procedure links), plus the lag check (no outdated Urdu kept on a lag entry).
+- **UI:**
+  - `ProcedureStepper` + `ProcedureStepBody`: one step at a time with a progress bar, Previous/Next/Start over, and "Show all steps". Each step shows the quoted text and the source line. Only the chosen marja's procedures are shown; otherwise an "a guide according to {marja} has not been added" notice appears.
+  - The "Qur'anic basis" section now has an explanatory line.
+  - `BasisBadge` wraps long labels, and `RulingCard` shows the Urdu edition-lag notice.
+
+### How the texts were produced
+Same method as Phase 1, with a reusable extractor: every English/Urdu ruling is indexed by its number from the downloaded pages, and every Khamenei Q&A by its Q number.
+- **Khamenei's Urdu:** the purity chapter runs exactly one ahead of the English (EN Q n = UR س n+1). All 71 pairs were still checked one by one, by comparing the questions.
+- **Every revised (*) Sistani ruling** was compared with its Urdu by reading both. The generator refuses to emit a revised ruling until it is marked `match` or `lag`.
+- **Two Urdu-extractor bugs were found by the R4 spot-check and fixed:**
+  - A cross-reference ("…مسئلہ (۶۳۳) میں…") inside a ruling was taken as the start of a new مسئلہ. This had truncated the Urdu of 84 and 389.
+  - A section heading and intro leaked into the end of the previous مسئلہ (322).
+  - After the fix, every generated text was diffed against the previous run. Only those three changed, and a scan found no remaining leaked headings in the Urdu, and no leaked headings or truncated endings in the English.
+
+### Tests / Lint / Build
+- `npm test`: **26 files, 406 tests passed** (33 Wajibat tests).
+- `npx eslint` on the Wajibat files: clean. The 56 pre-existing errors elsewhere are unchanged (X1).
+- `npm run build`: succeeded. The PWA precache is now 242 entries / 5,764.57 KiB, up from 5,469.06 KiB (+~296 KiB, mostly the ruling texts).
+- **Bug found and fixed:** the `/bookmarks` Fiqh tab imported `~/data/wajibat` (the index), which put the whole rulings chunk (~335 KB) into the bookmarks page. It now imports only `topics.ts`/`categories.ts`, a 13 KB chunk.
+- **Checked by recording network requests in the browser:** `/bookmarks` loads only the 13 KB chunk, `/settings` loads neither, and `/fiqh/taharat/wudu` loads the rulings chunk. Per-category lazy loading of the rulings is still spec Phase 10 work.
+
+### Browser verification (Playwright + Chromium, production build)
+- **Phase 2 suite: 37 of 37 checks passed.** It covered:
+  - 8 Taharat topics, and 24 wuḍūʾ ruling cards.
+  - The Qur'anic basis card (5:6).
+  - The 7-step wuḍūʾ stepper: Next moves to step 2 with the quoted Ruling 236, and "Show all steps" lists all 7.
+  - The Urdu edition-lag notice on the revised 7th condition, and the official Urdu with its own مسئلہ number.
+  - Khamenei's view of wuḍūʾ has no Sistani procedure or text; his tayammum stepper comes from Q 208.
+  - Q 16's unspecified-precaution label.
+  - The women-specific rulings collapsed (20) and expanding correctly.
+  - The istinjāʾ page showing only the chosen marja's differing ruling.
+  - Search.
+  - No overflow or clipped chips on 5 pages at 1280/768/390.
+  - No nested or unlabeled controls.
+  - Regression pages returning 200, and no console errors (aladhan and Vercel noise filtered, per X1).
+  - 390 px crops were checked by eye.
+- **The Phase 1 suite was re-run: 63 of 64 passed.** The one failure is expected: it asserted that Taharat shows the empty "scheduled for phase 2" state, and Taharat now has content.
+
+### Architecture decisions
+- **Procedures quote rulings and never paraphrase them**, and the step labels are marked as app-written. A step's hukm badge is set only where a ruling states it, and the note on the step cites that ruling.
+- **Procedures are stored per marja'.** Khamenei has no numbered English wuḍūʾ procedure in his books, so his wuḍūʾ page shows the "not added" notice rather than Sistani's steps.
+
+### Unsourced / left out
+- Makarem Shirazi: everything (P1).
+- Sistani 103–107 (P8).
+- Khamenei: rulings with no Q&A on the same point. Each topic above shows which marja' has an entry.
+- A "Is my wuḍūʾ still valid?" decision helper was **not built**. Its outcomes would mix rulings on invalidators (322), doubts (299–303) and the conditions, and a sourced tree needs your go-ahead on its scope (P11).
+
+### Open questions
+P8–P11 in `wajibat_decisions.md`.
+
+### Recommended next phase
+Phase 3 (Salat core), once P8–P11 are answered. For Khamenei it should prefer *The Rules on Prayer & Fasting 2023* (P2).

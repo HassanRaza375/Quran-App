@@ -41,9 +41,13 @@
       />
     </section>
 
-    <!-- 2. Qur'anic basis (only when a cited source links the ayah) -->
+    <!-- 2. Qur'anic basis (decision R2: only ayahs whose own text names the act) -->
     <section v-if="topic.quranicBasis?.length" class="mb-6" aria-labelledby="sec-quran">
       <h2 id="sec-quran" class="section-title">Qur'anic basis</h2>
+      <p class="text-body-2 text-medium-emphasis mb-3">
+        Ayahs whose own words name this act. They are shown for study alongside the rulings; how
+        the act is performed is set out in your marja's rulings below.
+      </p>
       <div class="d-flex flex-column ga-3">
         <AyahReferenceCard
           v-for="ref in quranicAyahs"
@@ -92,7 +96,19 @@
       </template>
     </section>
 
-    <!-- 4. Related topics -->
+    <!-- 4. Step-by-step (the chosen marja's procedures only) -->
+    <section v-if="marja && topic.procedureIds?.length" class="mb-6" aria-labelledby="sec-steps">
+      <h2 id="sec-steps" class="section-title">Step by step</h2>
+      <div v-if="procedures.length" class="d-flex flex-column ga-4">
+        <ProcedureStepper v-for="p in procedures" :key="p.id" :procedure="p" :marja="marja" />
+      </div>
+      <v-alert v-else type="info" variant="tonal" density="compact">
+        A step-by-step guide according to {{ marja.name.en }} has not been added for this topic yet.
+        The rulings above still apply.
+      </v-alert>
+    </section>
+
+    <!-- 5. Related topics -->
     <section v-if="relatedTopics.length" class="mb-6" aria-labelledby="sec-related">
       <h2 id="sec-related" class="section-title">Related topics</h2>
       <div class="d-flex flex-wrap ga-2">
@@ -108,7 +124,7 @@
       </div>
     </section>
 
-    <!-- 5. Terms -->
+    <!-- 6. Terms -->
     <section v-if="terms.length" class="mb-6" aria-labelledby="sec-terms">
       <h2 id="sec-terms" class="section-title">Terms used</h2>
       <v-table density="compact" class="terms-table">
@@ -123,7 +139,7 @@
       </v-table>
     </section>
 
-    <!-- 6. Sources -->
+    <!-- 7. Sources -->
     <section v-if="marja && sourcesUsed.length" class="mb-6" aria-labelledby="sec-sources">
       <h2 id="sec-sources" class="section-title">Sources on this page</h2>
       <ul class="sources-list">
@@ -155,6 +171,8 @@ import LangToggle from "~/components/wajibat/LangToggle.vue";
 import ExplanationBlock from "~/components/wajibat/ExplanationBlock.vue";
 import RulingCard from "~/components/wajibat/RulingCard.vue";
 import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
+import ProcedureStepper from "~/components/wajibat/ProcedureStepper.vue";
+import { getProcedureById } from "~/data/wajibat";
 
 const route = useRoute();
 useUrduFont();
@@ -179,6 +197,13 @@ useSeoMeta({ description: () => topic.value?.summary.text.en });
 const rulings = computed(() => (topic.value ? rulingsFor(topic.value) : []));
 const mainRulings = computed(() => rulings.value.filter((r) => !r.sensitive));
 const sensitiveRulings = computed(() => rulings.value.filter((r) => r.sensitive));
+
+// Only the chosen marja's procedures — never another marja's (decision P1).
+const procedures = computed(() =>
+  (topic.value?.procedureIds ?? [])
+    .map(getProcedureById)
+    .filter((p) => p && marja.value && p.marjaId === marja.value.id)
+);
 
 const relatedTopics = computed(() => (topic.value?.relatedTopicIds ?? []).map(getTopicById).filter(Boolean));
 const terms = computed(() => (topic.value?.glossaryIds ?? []).map(getGlossaryTermById).filter(Boolean));

@@ -26,7 +26,7 @@ export const WAJIBAT_CATEGORIES: WajibatCategory[] = [
     order: 2,
     phase: 2,
     summary: explain("Water, impurities and purifiers, istinja, wudu, ghusl and tayammum."),
-    topicIds: [],
+    topicIds: ["water", "najasat", "mutahhirat", "istinja", "wudu", "ghusl", "haydistihadanifas", "tayammum"],
   },
   {
     id: "salat",

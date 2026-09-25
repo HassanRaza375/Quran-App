@@ -6,6 +6,7 @@ import { computeCoverage, summarizeCoverage } from "../app/utils/wajibatCoverage
 const tiny: WajibatDataset = {
   categories: [],
   glossary: [],
+  procedures: [],
   topics: [
     {
       id: "t",

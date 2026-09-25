@@ -42,7 +42,48 @@ describe("Wajibat dataset integrity", () => {
     }
   });
 
-  it("every Foundations ruling is level A", () => {
+  it("labels an undefined 'caution' as unspecified, never as wajib/mustahab (decision P5)", () => {
+    const q16 = getMarjaRuling(getRulingById("followingthealam")!, "khamenei")!;
+    expect(q16.basis).toBe("ihtiyat_unspecified");
+    expect(q16.text.en.startsWith("It is a caution")).toBe(true);
+  });
+
+  it("withholds outdated Urdu where the Urdu edition lags the revised ruling (decision P6)", () => {
+    const r2271 = getMarjaRuling(getRulingById("bulughfacialhair")!, "sistani")!;
+    expect(r2271.urduEditionLag).toBe(true);
+    expect(r2271.text.ur).toBeUndefined();
+  });
+
+  it("Taharat Qur'anic basis cards use only ayahs that name the act (decision R2)", () => {
+    const basis = (id: string) => WAJIBAT_DATASET.topics.find((t) => t.id === id)!.quranicBasis;
+    expect(basis("wudu")).toEqual([{ surahNumber: 5, ayahNumber: 6 }]);
+    expect(basis("ghusl")).toEqual([{ surahNumber: 5, ayahNumber: 6 }, { surahNumber: 4, ayahNumber: 43 }]);
+    expect(basis("tayammum")).toEqual([{ surahNumber: 5, ayahNumber: 6 }, { surahNumber: 4, ayahNumber: 43 }]);
+    expect(basis("najasat")).toBeUndefined();
+  });
+
+  it("every procedure step quotes its cited ruling verbatim for the procedure's marja'", () => {
+    expect(WAJIBAT_DATASET.procedures.length).toBeGreaterThan(0);
+    for (const p of WAJIBAT_DATASET.procedures)
+      for (const s of p.steps) {
+        const entry = getMarjaRuling(getRulingById(s.rulingId)!, p.marjaId)!;
+        expect(entry.text.en).toContain(s.instruction.en);
+      }
+  });
+
+  it("women-specific Taharat rulings are all marked sensitive (collapsed, decision Q8)", () => {
+    const ids = WAJIBAT_DATASET.topics.find((t) => t.id === "haydistihadanifas")!.rulingIds;
+    for (const id of ids) expect(getRulingById(id)!.sensitive).toBe(true);
+  });
+
+  it("revised (*) Sistani rulings carry compared Urdu, or say why the Urdu is withheld", () => {
+    for (const e of WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.marjaId === "sistani" && m.source.reference.endsWith("*"))) {
+      if (e.text.ur) expect(e.urduEditionLag).toBeFalsy();
+      else expect(!!e.urduEditionLag || !!e.urduNote).toBe(true);
+    }
+  });
+
+  it("every ruling is level A", () => {
     for (const entry of WAJIBAT_RULINGS.flatMap((r) => r.rulings)) expect(entry.verification).toBe("A");
   });
 });
@@ -94,6 +135,25 @@ describe("validateWajibatDataset catches broken data", () => {
     const msgs = messages(data);
     expect(msgs).toContain('rulingIds references unknown ruling "doesnotexist"');
     expect(msgs).toContain("summary must be kind: explanation");
+  });
+
+  it("flags outdated Urdu text kept on an urduEditionLag entry", () => {
+    const data = clone();
+    const entry = data.rulings.flatMap((r) => r.rulings).find((m) => m.text.ur && m.urSource)!;
+    entry.urduEditionLag = true;
+    expect(messages(data).some((m) => m.includes("urduEditionLag"))).toBe(true);
+  });
+
+  it("flags a procedure step that is not a verbatim excerpt of its ruling", () => {
+    const data = clone();
+    data.procedures[0]!.steps[0]!.instruction.en = "Paraphrased by the app";
+    expect(messages(data)).toContain("instruction is not a verbatim excerpt of the cited ruling");
+  });
+
+  it("flags procedure steps that are out of order", () => {
+    const data = clone();
+    data.procedures[0]!.steps[1]!.order = 5;
+    expect(messages(data).some((m) => m.startsWith("steps must be ordered 1..n"))).toBe(true);
   });
 
   it("flags hyphenated ids (Shared Foundation #1)", () => {

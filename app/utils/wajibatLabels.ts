@@ -1,6 +1,6 @@
 // Display vocabulary for the Wajibat module. Every badge pairs a colour with
 // a text label AND an icon — never colour alone (spec §8, Module 17 §24).
-import type { Hukm, RulingBasis, VerificationLevel } from "~/data/wajibat/types";
+import type { Explanation, Hukm, RulingBasis, VerificationLevel } from "~/data/wajibat/types";
 
 export const HUKM_META: Record<Hukm, { label: string; icon: string; color?: string }> = {
   wajib: { label: "Wājib · obligatory", icon: "mdi-alert-decagram-outline", color: "primary" },
@@ -25,6 +25,21 @@ export const BASIS_META: Record<RulingBasis, { label: string; icon: string; hint
     label: "Recommended precaution",
     icon: "mdi-shield-outline",
     hint: "Acting on this precaution is recommended, not required.",
+  },
+  ihtiyat_unspecified: {
+    label: "Precaution (type not specified in the source)",
+    icon: "mdi-shield-half-full",
+    hint: "The marja's text says 'caution' without saying whether it is obligatory or recommended. The app does not guess; ask his office if it matters for you.",
+  },
+};
+
+/** App-written notice (decision P6a), shown in the Urdu view when the official Urdu edition
+ * still carries the pre-revision text of a ruling. */
+export const URDU_EDITION_LAG_NOTICE: Explanation = {
+  kind: "explanation",
+  text: {
+    en: "The Urdu edition has not been updated for this ruling yet, so the revised English (4th edition) text is shown.",
+    ur: "اس مسئلے کے لیے اردو ایڈیشن ابھی تازہ نہیں ہوا، اس لیے انگریزی (چوتھے ایڈیشن) کا نظرثانی شدہ متن دکھایا گیا ہے۔",
   },
 };
 

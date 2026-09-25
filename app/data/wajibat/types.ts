@@ -13,7 +13,9 @@ import type { QuranReference } from "~/utils/quranReference";
 export type FiqhId = "jafari"; // extend later: "hanafi" | "shafii" | ...
 export type MarjaId = "sistani" | "khamenei" | "makarem";
 export type Hukm = "wajib" | "haram" | "mustahab" | "makruh" | "mubah";
-export type RulingBasis = "fatwa" | "ihtiyat_wajib" | "ihtiyat_mustahab";
+/** "ihtiyat_unspecified": the source says "caution/precaution" without stating whether it is
+ * obligatory or recommended, and the book defines no default (decision P5 / rule R3). Never guessed. */
+export type RulingBasis = "fatwa" | "ihtiyat_wajib" | "ihtiyat_mustahab" | "ihtiyat_unspecified";
 /** A = checked against the marja's official text; B = reputable secondary
  * source citing the marja'; D = sources disagree (shown only with a disputed
  * notice). "C" (unverified) is never stored — it is excluded from the dataset. */
@@ -82,7 +84,8 @@ export interface WajibatTopic {
   /** Shown via AyahReferenceCard, labelled "Qur'anic basis" — only where a cited source links the ayah to the topic. */
   quranicBasis?: QuranReference[];
   rulingIds: string[];
-  procedureId?: string;
+  /** Step-by-step guides; each belongs to one marja' (the UI shows only the chosen marja's). */
+  procedureIds?: string[];
   decisionTreeId?: string;
   relatedTopicIds?: string[];
   glossaryIds?: string[];
@@ -112,6 +115,9 @@ export interface MarjaRuling {
   verification: VerificationLevel;
   /** Why no official Urdu text is shown for this ruling (listed in the phase summary). */
   urduNote?: string;
+  /** The official Urdu edition still has the pre-revision text of this ruling (decision P6):
+   * Urdu is withheld, and the Urdu view shows URDU_EDITION_LAG_NOTICE instead. */
+  urduEditionLag?: boolean;
   note?: string;
 }
 
@@ -125,6 +131,29 @@ export interface Ruling {
   status?: "disputed";
   /** Women-specific / sensitive content: rendered inside a collapsed panel (Q8). */
   sensitive?: boolean;
+}
+
+export interface ProcedureStep {
+  id: string;
+  /** 1..n without gaps (validator). */
+  order: number;
+  /** App-written short label (explanation, not a ruling). */
+  title: LocalizedText;
+  /** Verbatim excerpt of the procedure marja's entry in `rulingId` (validator checks it is a substring). */
+  instruction: LocalizedText;
+  rulingId: string;
+  /** Only where the cited ruling states it. */
+  hukm?: Hukm;
+  isRukn?: boolean;
+  note?: string;
+}
+
+export interface Procedure {
+  id: string;
+  topicId: string;
+  marjaId: MarjaId;
+  title: LocalizedText;
+  steps: ProcedureStep[];
 }
 
 export interface GlossaryTerm {

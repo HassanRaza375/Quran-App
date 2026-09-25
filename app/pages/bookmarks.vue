@@ -286,7 +286,9 @@
 
 <script setup>
 import { SECTION_LABELS } from "~/utils/personStudy"
-import { getTopicById, getCategoryById } from "~/data/wajibat"
+// Only the small topic/category lists — not ~/data/wajibat, which would pull every ruling into this page.
+import { WAJIBAT_TOPICS } from "~/data/wajibat/topics"
+import { WAJIBAT_CATEGORIES } from "~/data/wajibat/categories"
 
 useHead({ title: "Bookmarks — Quran App" });
 useSeoMeta({ robots: "noindex, follow" });
@@ -619,8 +621,8 @@ const fiqhBookmarks = computed(() => {
     .filter((k) => String(k).startsWith("fiqh:"))
     .map((k) => {
       const topicId = String(k).split(":")[1]
-      const topic = getTopicById(topicId)
-      const category = topic ? getCategoryById(topic.categoryId) : undefined
+      const topic = WAJIBAT_TOPICS.find((t) => t.id === topicId)
+      const category = topic ? WAJIBAT_CATEGORIES.find((c) => c.id === topic.categoryId) : undefined
       return {
         id: k,
         type: "fiqh",

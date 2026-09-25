@@ -203,6 +203,31 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3332/"
         },
         verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Is it required to follow only the most learned marji‘? And what is the criterion of being the most learned?",
+          ur: "کیا مرجع تقلید کا اعلم ہونا شرط ہے یا نہیں ؟ نیز اعلمیت کا معیار کیا ہے ؟"
+        },
+        text: {
+          en: "It is a caution to follow the most learned mujtahid with respect to issues in which his fatwās differ from that of others. The criterion of being the most learned is to have a greater competence, when compared to other mujtahids, in the following realms:\ni. Identifying the divine laws,\nii. Inferring the shar‘ī rules from their proofs in a way that it is obvious for the experts that he is different from others, and\niii. Being more aware of the events of his time insofar as it affects identifying the subjects of religious rules and influences the expression of juristic opinion.",
+          ur: "جن مسائل میں مجتہد اعلم کے فتاویٰ دیگر مجتہدین کے فتاویٰ سے مختلف ہوں ان میں احتیاط یہ ہے کہ اعلم کی تقلید کی جائے اور اعلمیت کا معیار یہ ہے کہ وہ دوسرے مجتہدین کی نسبت احکام خدا کو سمجھنے اور الہی فرائض کو ان کی دلیلوں سے استنباط کرنے میں زیادہ مہارت رکھتاہو اس طرح کہ اس فن کے ماہرین کے نزدیک اس مجتہد اور دوسروں کے درمیان فرق واضح ہو۔ نیز احکام شرعی کے موضوعات کی تشخیص میں جس حد تک زمانے کے حالات کا دخل ہے اور جس حد تک یہ فقہی نظر قائم کرنے میں مؤثر ہیں دوسروں کی نسبت زیادہ آگاہ ہو۔"
+        },
+        basis: "ihtiyat_unspecified",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 16",
+          url: "https://www.leader.ir/en/book/32/1?sn=5239"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 16",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11367"
+        },
+        verification: "A",
+        note: "The answer says 'it is a caution' without stating whether the caution is obligatory or recommended. The book's glossary does not define an unqualified 'caution', and Q 48 defines only 'obligatory caution', so the type is left unspecified (decision P5)."
       }
     ]
   },
@@ -672,7 +697,8 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/english/book/48/2355/"
         },
         verification: "A",
-        urduNote: "The Urdu توضیح المسائل (مسئلہ ۲۲۷۱) words this differently from the revised 4th-edition English ruling, so only the English is shown until the user decides (see wajibat_progress_log.md)."
+        urduEditionLag: true,
+        urduNote: "The Urdu توضیح المسائل (مسئلہ ۲۲۷۱) still has the wording from before the revision, so only the revised English is shown (decision P6)."
       }
     ]
   },
@@ -688,7 +714,8 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Bleeding that a girl experiences before the age of nine is not ḥayḍ."
+          en: "Bleeding that a girl experiences before the age of nine is not ḥayḍ.",
+          ur: "اگرکسی لڑکی کونوسال کی عمرتک پہنچنے سے پہلے خون آئے تووہ حیض نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -696,8 +723,12 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 434",
           url: "https://www.sistani.org/english/book/48/2171/"
         },
-        verification: "A",
-        urduNote: "The matching Urdu مسئلہ has not been located on the official Urdu site yet."
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (434)",
+          url: "https://www.sistani.org/urdu/book/61/3632/"
+        },
+        verification: "A"
       },
       {
         marjaId: "khamenei",

@@ -271,5 +271,257 @@ export const WAJIBAT_GLOSSARY: GlossaryTerm[] = [
       reference: "Glossary",
       url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
     }
+  },
+  {
+    id: "kurr",
+    term: "kurr",
+    arabic: "كر",
+    urdu: "کر",
+    definition: {
+      en: "a quantity of water greater or equal to approximately 384 litres"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "qalil",
+    term: "qalīl",
+    arabic: "قليل",
+    urdu: "قلیل",
+    definition: {
+      en: "water that does not gush from the earth and is less than kurr"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "mutlaq",
+    term: "muṭlaq",
+    arabic: "مطلق",
+    urdu: "مطلق",
+    definition: {
+      en: "unmixed water"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "mudaf",
+    term: "muḍāf",
+    arabic: "مضاف",
+    urdu: "مضاف",
+    definition: {
+      en: "mixed water"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "najis",
+    term: "najis",
+    arabic: "نجس",
+    urdu: "نجس",
+    definition: {
+      en: "impure"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "tahir",
+    term: "ṭāhir",
+    arabic: "طاهر",
+    urdu: "طاہر",
+    definition: {
+      en: "pure"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "istibra",
+    term: "istibrāʾ",
+    arabic: "استبراء",
+    urdu: "استبراء",
+    definition: {
+      en: "(1) the process of clearing the male urethra of urine after urinating"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "wudu",
+    term: "wuḍūʾ",
+    arabic: "وضوء",
+    urdu: "وضو",
+    definition: {
+      en: "ablution"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "jabirah",
+    term: "jabīrah",
+    arabic: "جبيرة",
+    urdu: "جبیرہ",
+    definition: {
+      en: "something with which a wound or a break in a bone is bandaged, or the medication that is applied to a wound"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "tartib",
+    term: "tartīb",
+    arabic: "ترتيب",
+    urdu: "ترتیب",
+    definition: {
+      en: "sequence"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "muwalah",
+    term: "muwālāh",
+    arabic: "موالاة",
+    urdu: "موالات",
+    definition: {
+      en: "close succession"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "ghusl",
+    term: "ghusl",
+    arabic: "غسل",
+    urdu: "غسل",
+    definition: {
+      en: "ritual bathing"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "junub",
+    term: "junub",
+    arabic: "جنب",
+    urdu: "جنب",
+    definition: {
+      en: "someone in the state of janābah"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "janabah",
+    term: "janābah",
+    arabic: "جنابة",
+    urdu: "جنابت",
+    definition: {
+      en: "ritual impurity"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "hayd",
+    term: "ḥayḍ",
+    arabic: "حيض",
+    urdu: "حیض",
+    definition: {
+      en: "menstruation; period"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "istihadah",
+    term: "istiḥāḍah",
+    arabic: "استحاضة",
+    urdu: "استحاضہ",
+    definition: {
+      en: "irregular blood discharge"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "nifas",
+    term: "nifās",
+    arabic: "نفاس",
+    urdu: "نفاس",
+    definition: {
+      en: "lochia, i.e. blood discharge after childbirth"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "tayammum",
+    term: "tayammum",
+    arabic: "تيمم",
+    urdu: "تیمم",
+    definition: {
+      en: "dry ablution"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
   }
 ];

@@ -114,8 +114,139 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
       "Religious obligations begin at bulugh, the age of legal responsibility. This topic covers its signs for girls and boys and how the age is counted."
     ),
     rulingIds: ["bulughsigns", "bulughlunaryears", "bulughfacialhair", "bleedingbeforenine"],
-    relatedTopicIds: ["taqlid"],
+    relatedTopicIds: ["taqlid", "haydistihadanifas"],
     glossaryIds: ["bulugh", "baligh", "mukallaf", "mumayyiz"],
+    lastSourceCheck: "2026-09-25",
+  },
+
+  // ---------------------------- Taharat (Phase 2) ----------------------------
+  // Qur'anic basis (decision R2): an ayah is linked only where its own text names
+  // the act — 5:6 (washing the face and arms, wiping the head and feet; "if you are
+  // junub, purify yourselves"; tayammum) and 4:43 ("until you bathe"; tayammum).
+  // Checked against the app's Qur'an text (quranapi.pages.dev) on 2026-09-25.
+  {
+    id: "water",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "Water and its types", ur: "پانی کے احکام" },
+    arabicTerm: "المياه",
+    summary: explain(
+      "Water is either unmixed (muṭlaq), which can purify and be used for wuḍūʾ and ghusl, or mixed (muḍāf), which cannot. Unmixed water is further divided by quantity and source (kurr, qalīl, flowing, rain and well water), which decides whether it becomes impure on contact with an impurity."
+    ),
+    rulingIds: ["watertypes", "kurrdefinition", "kurrimpurity", "kurrdoubt", "qalilwater", "flowingwater", "tapwater", "rainwater", "mixedwateruse", "waterchangedbyimpurity", "waterpuritydoubt"],
+    relatedTopicIds: ["najasat", "mutahhirat", "wudu"],
+    glossaryIds: ["kurr", "qalil", "mutlaq", "mudaf"],
+    lastSourceCheck: "2026-09-25",
+  },
+  {
+    id: "najasat",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "Impurities (najāsāt)", ur: "نجاسات" },
+    arabicTerm: "النجاسات",
+    summary: explain(
+      "Certain things are intrinsically impure (najis). This topic covers what they are, how impurity is established, and how it transfers from one thing to another."
+    ),
+    rulingIds: ["tennajasat", "urinefaeces", "birddroppings", "semen", "corpse", "deadskin", "importedleather", "blood", "dogpig", "wineintoxicants", "alcohol", "establishingimpurity", "purityimpuritydoubt", "impuritytransfer", "wetnessdoubt", "quranimpure", "eatingimpure"],
+    relatedTopicIds: ["mutahhirat", "water"],
+    glossaryIds: ["najis", "tahir"],
+    lastSourceCheck: "2026-09-25",
+  },
+  {
+    id: "mutahhirat",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "Purifiers (muṭahhirāt)", ur: "مطہرات" },
+    arabicTerm: "المطهرات",
+    summary: explain(
+      "The things that make an impure object pure again: water, earth, the sun, transformation and others. This topic covers the most common ones and how to wash impure things and utensils."
+    ),
+    rulingIds: ["twelvemutahhirat", "waterconditions", "utensilwashing", "immersionkurr", "urinequalilwater", "otherimpurityqalil", "intrinsicremoval", "washingmachine", "earthpurifies", "asphalt", "sunpurifies", "istihala", "islampurifies", "purityestablished", "goldsilverutensils"],
+    relatedTopicIds: ["najasat", "water"],
+    glossaryIds: ["najis", "tahir", "kurr", "qalil"],
+    lastSourceCheck: "2026-09-25",
+  },
+  {
+    id: "istinja",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "The toilet and istinjāʾ", ur: "بیت الخلاء کے احکام" },
+    arabicTerm: "أحكام التخلي",
+    summary: explain(
+      "What is obligatory and what is recommended when using the toilet: covering, facing the qibla, purifying the urinary outlet and the anus, and istibrāʾ."
+    ),
+    rulingIds: ["coveringprivateparts", "toiletqibla", "toiletprohibitedplaces", "anuswateronly", "urinaryoutlet", "anuswithwater", "anuswithstone", "anusthreetimes", "istinjadoubt", "istibra", "dischargesmadhi", "istibradoubt", "istibrawomen"],
+    relatedTopicIds: ["najasat", "wudu"],
+    glossaryIds: ["istibra"],
+    lastSourceCheck: "2026-09-25",
+  },
+  {
+    id: "wudu",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "Wuḍūʾ (ablution)", ur: "وضو" },
+    arabicTerm: "الوضوء",
+    summary: explain(
+      "Wuḍūʾ is washing the face and arms and wiping the head and feet, in order and without a break. This topic covers how it is done, its conditions, what invalidates it, and doubts about it."
+    ),
+    quranicBasis: [{ surahNumber: 5, ayahNumber: 6 }],
+    rulingIds: ["wuduobligatoryacts", "wuduface", "wududirection", "wuduarms", "wuduwashingcount", "wuduhead", "wuduheadarea", "wudufeet", "wudusocks", "wuduimmersive", "wuduwaterimpure", "wuduusurpedwater", "wuduintention", "wudusequence", "wudusuccession", "wuduobstruction", "wududoubtvoid", "wududoubtperformed", "wududoubtafterprayer", "wuduwhenwajib", "touchingquran", "wuduinvalidators", "jabirauncovered", "jabiracovered"],
+    procedureIds: ["wudusistani"],
+    relatedTopicIds: ["ghusl", "tayammum", "istinja"],
+    glossaryIds: ["wudu", "jabirah", "tartib", "muwalah"],
+    lastSourceCheck: "2026-09-25",
+  },
+  {
+    id: "ghusl",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "Ghusl (ritual bath)", ur: "غسل" },
+    arabicTerm: "الغسل",
+    summary: explain(
+      "Ghusl is washing the whole body with the intention of ghusl, either in sequence (head and neck first, then the body) or by immersion. This topic covers janābah, the ghusl for janābah and its conditions, and the ghusl for touching a corpse."
+    ),
+    quranicBasis: [
+      { surahNumber: 5, ayahNumber: 6 },
+      { surahNumber: 4, ayahNumber: 43 },
+    ],
+    rulingIds: ["becomingjunub", "semensigns", "womenjanabah", "junubunlawful", "ghusljanabahobligatory", "ghusltypes", "ghusltartibi", "ghuslirtimasi", "ghuslgradual", "ghuslwholebody", "ghuslobstruction", "ghuslhair", "ghusldoubt", "ghusleventduring", "ghuslseveral", "ghuslreplaceswudu", "ghuslmassmayyit"],
+    procedureIds: ["ghusltartibisistani", "ghuslirtimasisistani"],
+    relatedTopicIds: ["wudu", "haydistihadanifas", "tayammum"],
+    glossaryIds: ["ghusl", "junub", "janabah"],
+    lastSourceCheck: "2026-09-25",
+  },
+  {
+    id: "haydistihadanifas",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "Ḥayḍ, istiḥāḍah and nifās", ur: "حیض، استحاضہ اور نفاس" },
+    arabicTerm: "الحيض والاستحاضة والنفاس",
+    summary: explain(
+      "Rulings on menstruation (ḥayḍ), irregular bleeding (istiḥāḍah) and post-natal bleeding (nifās): how each is recognised, and what it means for prayer, fasting and ghusl. The rulings are shown in full, inside a collapsed section."
+    ),
+    rulingIds: ["istihadablood", "istihadatypes", "istihadaslight", "istihadamedium", "istihadaexcessive", "haydblood", "haydduration", "haydunlawful", "haydghusl", "haydprayers", "haydfast", "haydpostponing", "haydpregnancy", "haydcategories", "haydspotting", "haydcontraceptive", "nifasdefinition", "nifasduration", "nifasrulings", "menopause"],
+    relatedTopicIds: ["ghusl", "bulugh"],
+    glossaryIds: ["hayd", "istihadah", "nifas"],
+    sensitive: true,
+    lastSourceCheck: "2026-09-25",
+  },
+  {
+    id: "tayammum",
+    fiqh: "jafari",
+    categoryId: "taharat",
+    title: { en: "Tayammum (dry ablution)", ur: "تیمم" },
+    arabicTerm: "التيمم",
+    summary: explain(
+      "Tayammum replaces wuḍūʾ or ghusl when water cannot be used: when there is none, when using it is harmful, or when time is too short. This topic covers when it is allowed, what it may be performed on, how it is done, and what invalidates it."
+    ),
+    quranicBasis: [
+      { surahNumber: 5, ayahNumber: 6 },
+      { surahNumber: 4, ayahNumber: 43 },
+    ],
+    rulingIds: ["tayammumnoaccess", "tayammumharm", "tayammumhardship", "tayammumshorttime", "tayammumsurfaces", "tayammumgypsum", "tayammumpure", "tayammumobligatory", "tayammumcomplete", "tayammumdirection", "tayammumexcuseends", "tayammuminvalidators", "tayammuminsteadofghusl", "tayammumneither"],
+    procedureIds: ["tayammumsistani", "tayammumkhamenei"],
+    relatedTopicIds: ["wudu", "ghusl"],
+    glossaryIds: ["tayammum"],
     lastSourceCheck: "2026-09-25",
   },
 ];

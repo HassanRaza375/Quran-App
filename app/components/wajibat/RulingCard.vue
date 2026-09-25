@@ -43,6 +43,14 @@
           <SourceLine :source="entry.urSource" :marja-name="marja.name.en" urdu />
         </div>
 
+        <!-- Decision P6a: app-written Urdu notice when the Urdu edition lags the revised ruling -->
+        <div v-if="urduUnavailable && entry.urduEditionLag" class="lag-notice mt-2" role="note">
+          <p class="urdu-text mb-0" lang="ur">{{ URDU_EDITION_LAG_NOTICE.text.ur }}</p>
+          <p class="text-caption text-medium-emphasis mb-0">
+            <v-icon size="14" aria-hidden="true">mdi-lightbulb-outline</v-icon>
+            Explanation written by the app, not a ruling: {{ URDU_EDITION_LAG_NOTICE.text.en }}
+          </p>
+        </div>
         <p v-if="urduUnavailable" class="text-caption text-medium-emphasis mt-2 mb-0">
           <v-icon size="14" aria-hidden="true">mdi-translate-off</v-icon>
           No official Urdu text for this ruling yet, so the English is shown.
@@ -61,6 +69,7 @@ import HukmBadge from "~/components/wajibat/HukmBadge.vue";
 import BasisBadge from "~/components/wajibat/BasisBadge.vue";
 import SourceLine from "~/components/wajibat/SourceLine.vue";
 import { getMarjaRuling } from "~/data/wajibat";
+import { URDU_EDITION_LAG_NOTICE } from "~/utils/wajibatLabels";
 
 const props = defineProps({
   ruling: { type: Object, required: true },
@@ -108,6 +117,12 @@ const missingMessage = computed(() =>
   letter-spacing: 0.06em;
   color: rgba(var(--v-theme-on-surface), 0.6);
   margin-bottom: 2px;
+}
+.lag-notice {
+  border: 1px dashed rgba(var(--v-theme-on-surface), 0.25);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: rgba(var(--v-theme-on-surface), 0.025);
 }
 .qa-label.urdu-inline {
   text-transform: none;

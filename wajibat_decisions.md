@@ -42,6 +42,17 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | R4 | **New rule: Urdu/English spot-checks** | See P6(b). Every topic summary reports how many unrevised rulings were spot-checked and whether any mismatch was found. |
 | X1 | Out-of-scope issues | The api.aladhan.com 503/CORS errors and the 56 pre-existing lint errors are logged as separate known issues in `wajibat_progress_log.md`. They are **not** fixed in this module. |
 
+## Answered Phase 2 questions (2026-09-25)
+
+| # | Question | Decision |
+|---|---|---|
+| P8 | Sistani Rulings 103–107 (purity of people) | **Include them** in their own collapsed panel with a neutral heading, quoted exactly, with **no app commentary**. Apply the same treatment to Khamenei's equivalent rulings where sourced. |
+| P9 | 5:6 card on the wuḍūʾ page ("wash your feet" in the app's translation) | **Keep the card** and add a one-line note, `kind: "explanation"`, stating that Ja'fari fiqh reads this ayah as wiping the feet, **citing a Shia tafsir on 5:6** (e.g. Ṭabāṭabāʾī's *al-Mīzān*). Claude Code finds and quotes the source under the normal source rules. **If it can't be sourced, report back instead of writing the note.** |
+| P10 | Unrevised Urdu wording differences | **177: English only.** Keep the Urdu for 69 and 354. |
+| P11 | "Is my wuḍūʾ still valid?" helper | Build it in **Phase 4**, together with the salat-doubts helper. |
+| R5 | **New rule: install-size reporting** | Every phase summary reports the **running total** of ruling text added to the PWA install-time download. |
+| R6 | **Khamenei source priority for Salat (Phase 3)** | *The Rules on Prayer & Fasting 2023* first, then the *Practical Laws of Islam* Q&A. **If the two conflict, flag it and ask; don't pick one.** (Restates P2 for Phase 3.) |
+
 ## Phase 0 findings (2026-09-25)
 
 - **Q5 UI kit: Vuetify 3.** `package.json` has `vuetify` + `vite-plugin-vuetify` and no shadcn-vue,
@@ -86,9 +97,4 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 
 _(Claude Code adds new questions here and asks the user. Move them to "Answered" with the date once decided.)_
 
-| # | Question | Why it matters | Claude Code's recommendation |
-|---|---|---|---|
-| P8 | Sistani's Rulings 103–107 are sourced but **left out** of Najāsāt. They cover: 103, who is impure (a person who does not believe in Allah or His oneness, *ghulāt*, and others it lists); 104*, a disbeliever who is not of the People of the Book (obligatory precaution) and apostates; 105*, children of such disbelievers; 106, a person not known to be Muslim is pure; 107*, one who abuses the Imams out of enmity (obligatory precaution). Should they be included, and how? | They are part of the official najāsāt chapter (item 8 of Ruling 80 is shown). But spec §6.8 and §3.7 ask for a respectful tone that attacks no group, and several are revised (*) rulings with obligatory-precaution wording. | Include them verbatim in their own collapsed panel ("Rulings on the purity of people"), with no app-written commentary, after the Urdu of each revised one has been compared. Or keep leaving them out and point to the risala. Your call. |
-| P9 | On the wuḍūʾ page, the Qur'anic basis card for 5:6 uses the app's default English translation, which reads "**wash** your feet". Ja'fari fiqh (Sistani 251, Khamenei Q 104) **wipes** the feet, reading *wa-arjulakum* with *wa-msaḥū*. | Readers may see the ayah card and the ruling as contradicting each other. R2 forbids adding an interpretive note without a cited source. | Add a one-line note on this card only, quoting a cited source for the Ja'fari reading (you choose the source, e.g. a tafsir the app already offers). Alternatively, show 5:6 with a different translation on this page, or drop the card from the wuḍūʾ topic until decided. |
-| P10 | The R4 spot-check found **minor** Urdu/English wording differences in some **unrevised** Sistani rulings: 69 ("one way" vs "the best way"), 177 (the English allows non-spreading moisture on the earth, the Urdu just says "dry") and 354 (the Urdu adds a recommendation). Their Urdu is **currently shown**. Should it be? | P6 covers only revised (*) rulings. 177 is the only one where the English permits something the Urdu doesn't mention. | Keep the Urdu for 69 and 354 (no conflict). Treat 177 like an edition lag (English only plus the Urdu notice). |
-| P11 | Should the spec's "Is my wuḍūʾ still valid?" decision helper be built? | Every outcome must cite level-A rulings (Sistani 299–305 and 322, the conditions). The helper's scope (doubts only, or invalidators plus doubts) decides which rulings each branch cites. | Build it in Phase 4 alongside the salat doubts helper, using the same tree engine and the same "every leaf cites a ruling" test. |
+_None open._

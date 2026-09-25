@@ -80,6 +80,8 @@ const sidebarList = computed(() => [
   { title: "Tasbeeh", icon: "mdi-counter", path: "/tasbeeh" },
   { title: "Sajda", icon: "mdi-airbag", path: "/sajda" },
   { title: "Per Page", icon: "mdi-note-multiple", path: "/per-page-read" },
+  // Module 18 — moves into the "Worship" group when the sidebar is redesigned (decision P3).
+  { title: "Daily Fiqh (Wajibat)", icon: "mdi-scale-balance", path: "/fiqh" },
   { title: "Prayer Times", icon: "mdi-clock-outline", path: "/prayerTime" },
   {
     title: "Qibla Direction",

@@ -4,7 +4,7 @@
       <div class="d-flex align-center justify-space-between flex-wrap ga-2">
         <div>
           <h1 class="text-h4">{{ data.poet.name }}</h1>
-          <div class="text-subtitle-1 text-medium-emphasis">{{ data.poet.name_urdu }}</div>
+          <div class="text-subtitle-1 text-medium-emphasis urdu-inline" lang="ur">{{ data.poet.name_urdu }}</div>
         </div>
         <v-chip color="warning" variant="tonal">{{ data.poet.module_status === "seed" ? "Seed data — not yet fully verified" : data.poet.module_status }}</v-chip>
       </div>
@@ -37,7 +37,7 @@
           <v-row dense>
             <v-col v-for="g in data.genres" :key="g.genre" cols="12" sm="6">
               <div class="d-flex align-center justify-space-between">
-                <span class="font-weight-medium">{{ g.genre }} <span class="text-medium-emphasis">({{ g.genre_urdu }})</span></span>
+                <span class="font-weight-medium">{{ g.genre }} <span class="text-medium-emphasis urdu-inline" lang="ur">({{ g.genre_urdu }})</span></span>
                 <v-chip size="x-small" :color="attestationColor(g.attestation)" variant="tonal">{{ g.attestation }}</v-chip>
               </div>
               <p class="text-caption text-medium-emphasis mb-3">{{ g.description }}</p>
@@ -70,7 +70,7 @@
           <div class="text-subtitle-1 font-weight-bold mb-2">Collections</div>
           <div v-for="c in data.collections" :key="c.name" class="mb-3">
             <div class="d-flex align-center justify-space-between flex-wrap ga-2">
-              <div class="font-weight-medium">{{ c.name }} <span class="text-medium-emphasis">({{ c.name_urdu }})</span></div>
+              <div class="font-weight-medium">{{ c.name }} <span class="text-medium-emphasis urdu-inline" lang="ur">({{ c.name_urdu }})</span></div>
               <VerificationBadge v-if="c.source_status" :level="c.source_status" />
             </div>
             <p v-if="editionLine(c)" class="text-caption">{{ editionLine(c) }}</p>
@@ -99,7 +99,7 @@
           <v-col v-for="c in data.characters" :key="c.character" cols="12" md="6">
             <v-card rounded="xl" class="pa-4 h-100">
               <div class="d-flex align-center justify-space-between mb-1">
-                <span class="font-weight-medium">{{ c.character }} <span class="text-medium-emphasis">({{ c.character_urdu }})</span></span>
+                <span class="font-weight-medium">{{ c.character }} <span class="text-medium-emphasis urdu-inline" lang="ur">({{ c.character_urdu }})</span></span>
                 <VerificationBadge :level="c.source_status" />
               </div>
               <p class="text-body-2">{{ c.poetic_role }}</p>
@@ -235,6 +235,8 @@
 import VerificationBadge from "~/components/literary/VerificationBadge.vue";
 import mirAnisData from "~/assets/data/poets/mir-anis.json";
 
+useUrduFont();
+
 // One entry per registered module (see usePoetModules.ts) — add a line here
 // alongside the JSON file when a new poet module is added.
 const MODULE_DATA = {
@@ -313,8 +315,9 @@ const biographyRows = computed(() => {
 </script>
 
 <style scoped>
-/* Same RTL convention as the app's .ar helper (main.css) — no dedicated
-   Nastaliq font is bundled, so this relies on the system Urdu font stack. */
+/* Same RTL convention as the app's .ar helper (main.css). The Nastaliq face
+   comes from the global .urdu-text/.urdu-inline classes (main.css), with the
+   bundled Noto Nastaliq Urdu registered on this route by useUrduFont(). */
 .urdu-text {
   direction: rtl;
   unicode-bidi: isolate;

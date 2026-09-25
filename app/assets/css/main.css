@@ -104,3 +104,17 @@ body {
 :root[data-high-contrast="true"] .text-grey-lighten-1 {
   opacity: 1 !important;
 }
+
+/* Urdu (Nastaliq) text — the font face itself is registered only on routes
+   that display Urdu, by useUrduFont() (Module 18 decision P4). Elsewhere this
+   class falls back to the system Urdu/Arabic font. */
+.urdu-text {
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+  line-height: 2.4;
+  direction: rtl;
+  text-align: right;
+}
+.urdu-inline {
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+  line-height: 2.2;
+}

@@ -16,7 +16,7 @@
             <span class="text-h6">{{ m.name }}</span>
             <v-chip size="small" variant="tonal">{{ statusLabel(m.status) }}</v-chip>
           </div>
-          <div class="text-subtitle-2 text-medium-emphasis mb-2">{{ m.nameUrdu }}</div>
+          <div class="text-subtitle-2 text-medium-emphasis mb-2 urdu-inline" lang="ur">{{ m.nameUrdu }}</div>
           <p class="text-body-2">{{ m.tagline }}</p>
         </v-card>
       </v-col>
@@ -29,6 +29,7 @@
 </template>
 
 <script setup>
+useUrduFont();
 useHead({ title: "Literary Modules — Quran App" });
 useSeoMeta({ robots: "noindex, follow" });
 

@@ -19,7 +19,9 @@ roadmap, see `Quran_WebApp_Feature_Roadmap_and_Module_Specification.md`. For a t
 module-by-module rebuild spec of the whole app, see `MODULE_BLUEPRINT.md`. For the literary/poet
 study modules (Mir Anis and, over time, others) — their research process, anti-hallucination rules
 and source-verification levels — see `mir_anis_module_research_extraction_plan.md` and
-`Mir_Anis_Module_Research.md`.
+`Mir_Anis_Module_Research.md`. For the Wajibat / Daily Fiqh module (Module 18, `/fiqh`, Fiqh Ja'fari,
+per-marja' sourced rulings), see `wajibat-fiqh-jafari-module.md` (spec), `wajibat_decisions.md`
+(decisions + official sources — wins over the spec) and `wajibat_progress_log.md` (phase reports).
 
 ## Commands
 

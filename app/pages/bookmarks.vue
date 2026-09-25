@@ -286,6 +286,7 @@
 
 <script setup>
 import { SECTION_LABELS } from "~/utils/personStudy"
+import { getTopicById, getCategoryById } from "~/data/wajibat"
 
 useHead({ title: "Bookmarks — Quran App" });
 useSeoMeta({ robots: "noindex, follow" });
@@ -296,6 +297,7 @@ const categories = [
   { label: "Surahs", value: "surah" },
   { label: "Ayahs", value: "ayah" },
   { label: "People", value: "person" },
+  { label: "Fiqh", value: "fiqh" },
   { label: "Audios", value: "audio" },
   { label: "Sajdas", value: "sajda" },
   { label: "Pages", value: "page" },
@@ -316,6 +318,7 @@ const {
   removeJuz,
   removePage,
   removePerson,
+  remove,
 } = useBookmarks()
 onMounted(() => load())
 
@@ -610,11 +613,32 @@ const personBookmarks = computed(() => {
     .sort((a, b) => a.title.localeCompare(b.title))
 })
 
+/* ---------------- Fiqh topic bookmarks (Module 18 — Wajibat) ---------------- */
+const fiqhBookmarks = computed(() => {
+  return list.value
+    .filter((k) => String(k).startsWith("fiqh:"))
+    .map((k) => {
+      const topicId = String(k).split(":")[1]
+      const topic = getTopicById(topicId)
+      const category = topic ? getCategoryById(topic.categoryId) : undefined
+      return {
+        id: k,
+        type: "fiqh",
+        title: topic?.title.en || topicId,
+        subtitle: category ? `Daily Fiqh · ${category.title.en}` : "Daily Fiqh",
+        arabicName: topic?.arabicTerm || "",
+        to: topic ? `/fiqh/${topic.categoryId}/${topic.id}` : "/fiqh",
+      }
+    })
+    .sort((a, b) => a.title.localeCompare(b.title))
+})
+
 /* ---------------- Category lookup + top chip count ---------------- */
 const categoryItems = computed(() => ({
   surah: surahBookmarks.value,
   ayah: ayahBookmarks.value,
   person: personBookmarks.value,
+  fiqh: fiqhBookmarks.value,
   audio: audioBookmarks.value,
   sajda: sajdaBookmarks.value,
   page: pageBookmarks.value,
@@ -634,6 +658,7 @@ const removeBookmark = (item) => {
   if (item.type === "juz") removeJuz(item.juzNo)
   if (item.type === "page") removePage(item.pageNo)
   if (item.type === "person") removePerson(item.personId)
+  if (item.type === "fiqh") remove(item.id)
   removeItemMeta(item.id)
 }
 </script>

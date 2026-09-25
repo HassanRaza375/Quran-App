@@ -55,6 +55,7 @@ It complements, not replaces, the existing docs:
 | 15 | [Settings & Accessibility](#module-15--settings--accessibility) | all |
 | 16 | [Account & Cloud Sync (future)](#module-16--account--cloud-sync-not-built) | all |
 | 17 | [Prophets & Qur'anic Persons](#module-17--prophets--quranic-persons) | 1, 4, 9 |
+| 18 | [Wajibat & Daily Fiqh (Ja'fari)](#module-18--wajibat--daily-fiqh-jafari) | 5, 9, 11, 15, 17 |
 
 ---
 
@@ -426,6 +427,8 @@ LibraryItemMeta   { note: string, tags: string[], collectionIds: string[], updat
 - Keep bookmarks and library metadata as two separate stores even in a rebuild — it lets
   "bookmark" stay a cheap, ubiquitous action (used from a dozen places) while notes/tags/folders
   stay an opt-in power-user layer.
+- **Additive (Module 18):** a new `fiqh:{topicId}` namespace, stored through the generic
+  `toggle()`/`remove()` with no new wrapper functions, plus a "Fiqh" tab on `/bookmarks`.
 
 ---
 
@@ -1332,6 +1335,97 @@ responsive layout at 1280/768/390px) passed without defects.
   concurrently for the *same* underlying resource (this feature's Direct Mentions groups; likely
   true of list/grid UIs generally), give the fetch layer in-flight-request dedup, not just a
   post-hoc cache — the cache alone doesn't help until the first write has actually landed.
+
+---
+
+## Module 18 — Wajibat & Daily Fiqh (Ja'fari)
+
+**Status: Phase 0 (inspection) and Phase 1 (Foundation: data layer, shell UI, Foundations content)
+shipped. Phases 2–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
+`wajibat-fiqh-jafari-module.md`. Decisions and official sources: `wajibat_decisions.md`. Phase
+reports: `wajibat_progress_log.md`.
+
+### Purpose
+A source-verified, practical guide to the obligatory acts (wajibat) of Fiqh Ja'fari: taharat,
+salat, sawm, khums, zakat, a Hajj overview, the remaining furu' al-din, and selected daily-life
+obligations. It lives at `/fiqh`. This is the **practical-fiqh layer**. It is deliberately separate
+from Commands & Prohibitions (the Qur'anic-text layer, `/commands`), and the two will be
+cross-linked only in the Knowledge Graph phase.
+
+### Business rules (fixed by the decisions log)
+- There are three maraji' (Sistani, Khamenei, Makarem Shirazi). The user picks one, and a first-visit
+  picker appears before any ruling is shown. There is no silent default, and there is no
+  side-by-side comparison in the UI.
+- A missing ruling for the chosen marja' shows a "not added yet, refer to his risala" notice. It
+  **never** falls back to another marja's ruling.
+- Content is filtered by `usePrayerStore().fiqh`. Sunni users can still see the module, with a
+  "Fiqh Ja'fari only for now" banner.
+- Every ruling carries the marja', book, issue or Q&A number, `basis`
+  (fatwa / ihtiyat wajib / ihtiyat mustahab) and a verification level (A / B / D; C is never stored).
+- Every topic page shows a "Not scholar-reviewed" label and a study-aid disclaimer.
+- English + Urdu content (Urdu in Noto Nastaliq Urdu). Recitations are text only, with no audio.
+  The personal tracker is deferred.
+
+### Source discipline
+Only the marja's official website or risala, or official Q&A, counts as a level-A source.
+Secondary sites (e.g. al-islam.org) are level B at most. Nothing is written from memory. The
+official books and URLs verified in Phase 0 are listed in `wajibat_decisions.md`: Sistani's
+*Islamic Laws* 4th ed. and Urdu *توضیح المسائل*; Khamenei's *Practical Laws of Islam* (Q&A) and
+*The Rules on Prayer & Fasting 2023*. Makarem Shirazi's primary text couldn't be reached as of
+Phase 0 and is still an open question.
+
+### Reuse boundaries
+Prayer times, Qibla and the Ja'fari method come from Module 5. The fasting log comes from Module 11.
+Bookmarks come from Module 9 (`fiqh:{topicId}` namespace plus a "Fiqh" tab). Qur'anic-basis cards
+reuse Module 17's `AyahReferenceCard`, and Qur'an citation types come from
+`app/utils/quranReference.ts`. Do not build a second prayer-time, fasting-log, bookmark, audio or
+reminder system.
+
+### Data model (as implemented — `app/data/wajibat/types.ts`)
+- `Marja { id: "sistani"|"khamenei"|"makarem", name, officialSite, status: "active"|"pending-sources", books[] }`.
+  A `pending-sources` marja' is selectable, but may hold no rulings (the validator enforces this).
+- `WajibatCategory { id, fiqh, title, arabicTerm, icon, order, phase, summary: Explanation, topicIds }`.
+  There are 9 categories; the ones whose phase hasn't shipped have `topicIds: []`.
+- `WajibatTopic { id, fiqh, categoryId, title, arabicTerm?, summary, explanations?, quranicBasis?, rulingIds, relatedTopicIds?, glossaryIds?, sensitive?, reviewedBy?, lastSourceCheck }`.
+- `Ruling { id, topicId, subject, rulings: MarjaRuling[], differsBetweenMaraji?, status?: "disputed", sensitive? }`.
+  `sensitive` places the ruling in the collapsed women-specific panel.
+- `MarjaRuling { marjaId, format: "issue"|"qa", question?, text: {en, ur?}, hukm?, basis, excerpt?, source, urSource?, verification: "A"|"B"|"D", urduNote?, note? }`:
+  - `hukm` is set only when the source states it.
+  - `urSource` carries the Urdu book's **own** number, because the Urdu and English books number rulings differently.
+- `Explanation { kind: "explanation", text }` marks app-written text. It is never shown as a ruling.
+- `GlossaryTerm { id, term, arabic?, urdu?, definition, source? }`.
+- User data is `quran:fiqh-prefs:v1` = `{ marjaId | null, lang: "en"|"ur"|"both", updatedAt }`.
+  Settings' export/clear cover it automatically.
+
+### Pure logic
+- `wajibatValidate.ts` checks:
+  - ids are unique and hyphen-free, and references between categories, topics, rulings and glossary resolve both ways;
+  - Qur'an references fall within the ayah bounds in `surah.json`;
+  - there is at most one entry per marja' per ruling;
+  - a level-A URL is on the marja's official site;
+  - Urdu text has an Urdu citation on the official site;
+  - a level-D entry is marked `disputed`;
+  - a pending marja' has no entries.
+- `wajibatSearch.ts` matches without regard to diacritics or tashkeel, and treats Arabic and Urdu letter forms as the same (so "ihtiyat" finds "iḥtiyāṭ" and "تقليد" finds "تقلید").
+- `wajibatCoverage.ts` counts sourced vs missing rulings per marja' per topic, broken down by level and by Urdu availability.
+
+### Phase 1 — shipped
+- **Pages:** `/fiqh`, `/fiqh/[category]`, `/fiqh/[category]/[topic]`, `/fiqh/glossary`, `/fiqh/choose-marja`.
+  - The static segments win over `[category]`, as with `/persons/timeline`.
+  - A topic requested under the wrong category shows the not-found state.
+- **Content:** the Foundations topics (taqlid, ahkam, usul, furu', bulugh) have 17 rulings and 26 per-marja' entries (Sistani 16, Khamenei 10, Makarem 0), all level A. There are 19 glossary terms.
+- **How ruling text is produced:** it is cut from the official pages by script and never retyped. The script fails if an excerpt isn't found in its source.
+- **Urdu:** `useUrduFont()` registers only the woff2 file of the Noto Nastaliq Urdu Arabic-script subset (~156 KiB), and only on pages that call it (`/fiqh/**`, `/poets/**`).
+- **Real bug found in browser QA:** a long chip (a marja's full name) overflowed at 390 px. Chips holding names must be allowed to wrap.
+- **Sources lesson:** the Urdu book on a marja's own site can lag the latest English/Persian edition. For Sistani, the rulings marked * in *Islamic Laws* 4th ed. have to be compared one by one before their Urdu is shown.
+
+### Rebuild notes
+- Store rulings **per marja'** from day one (`Ruling.rulings: MarjaRuling[]`). A single-ruling
+  shape can't later express "this marja' is unsourced", and the no-fallback rule depends on that.
+- Give each language its own citation (`urSource`). Do not assume the translated books keep the
+  original's numbering.
+- Keep content generation mechanical: quote from downloaded official texts with a script that
+  fails when a quote isn't found. Never have a person or a model retype fatwas.
 
 ---
 

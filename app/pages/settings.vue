@@ -38,6 +38,22 @@
             {{ selectedFiqhOption?.subtitle }}
           </div>
 
+          <!-- Module 18: marja' for Daily Fiqh rulings — only meaningful for Ja'fari (spec §9) -->
+          <template v-if="fiqhModel === 'jafari'">
+            <v-select
+              v-model="marjaModel"
+              :items="marjaItems"
+              item-title="title"
+              item-value="value"
+              label="Marja' for Daily Fiqh rulings"
+              variant="outlined"
+              density="comfortable"
+              class="mt-4"
+              hint="Daily Fiqh shows only this marja's rulings."
+              persistent-hint
+            />
+          </template>
+
           <v-divider class="my-4" />
 
           <div class="d-flex align-center justify-space-between flex-wrap ga-2">
@@ -233,6 +249,7 @@
 
 <script setup>
 import { useTheme } from "vuetify";
+import { MARAJI } from "~/data/wajibat/marja";
 
 useHead({ title: "Settings — Quran App" });
 useSeoMeta({ robots: "noindex, follow" });
@@ -257,6 +274,20 @@ const fiqhModel = computed({
 const selectedFiqhOption = computed(() =>
   fiqhOptions.find((o) => o.value === fiqhModel.value)
 );
+
+/* ---------------- Marja' for Daily Fiqh (Module 18) ---------------- */
+const { marjaId: fiqhMarjaId, load: loadFiqhPrefs, setMarja } = useFiqhPrefs();
+const marjaItems = [
+  { value: null, title: "Not chosen yet" },
+  ...MARAJI.map((m) => ({
+    value: m.id,
+    title: m.status === "pending-sources" ? `${m.name.en} (rulings being added)` : m.name.en,
+  })),
+];
+const marjaModel = computed({
+  get: () => fiqhMarjaId.value,
+  set: (val) => setMarja(val ?? null),
+});
 
 const notificationsEnabled = ref(false);
 const reminderOffset = ref(0);
@@ -485,5 +516,6 @@ onMounted(() => {
   loadSavedReciter();
   loadAccessibilityPrefs();
   loadPoetModules();
+  loadFiqhPrefs();
 });
 </script>

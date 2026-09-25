@@ -81,8 +81,10 @@ export interface WajibatTopic {
   summary: Explanation;
   /** Additional app-written sections (e.g. the list of the five uṣūl). */
   explanations?: { heading: LocalizedText; body: Explanation }[];
-  /** Shown via AyahReferenceCard, labelled "Qur'anic basis" — only where a cited source links the ayah to the topic. */
+  /** Shown via AyahReferenceCard, labelled "Qur'anic basis" — only ayahs whose own text names the act (R2). */
   quranicBasis?: QuranReference[];
+  /** One-line app-written notes on a specific basis ayah, each citing a tafsir (decision P9). */
+  quranicBasisNotes?: QuranicBasisNote[];
   rulingIds: string[];
   /** Step-by-step guides; each belongs to one marja' (the UI shows only the chosen marja's). */
   procedureIds?: string[];
@@ -94,6 +96,15 @@ export interface WajibatTopic {
   reviewedBy?: { name: string; date: string };
   /** YYYY-MM-DD, local calendar day. */
   lastSourceCheck: string;
+}
+
+export interface QuranicBasisNote {
+  surahNumber: number;
+  ayahNumber: number;
+  note: Explanation;
+  /** Verbatim quote from the cited tafsir (original language). */
+  quote: { text: string; lang: "ar" | "fa" | "ur" | "en" };
+  source: { title: string; reference: string; urls: string[] };
 }
 
 export interface MarjaRuling {
@@ -131,7 +142,12 @@ export interface Ruling {
   status?: "disputed";
   /** Women-specific / sensitive content: rendered inside a collapsed panel (Q8). */
   sensitive?: boolean;
+  /** Other collapsed panels with a neutral heading (decision P8: "persons" = purity of persons).
+   * Rulings in a panel are quoted exactly, with no app commentary. */
+  panel?: RulingPanel;
 }
+
+export type RulingPanel = "persons";
 
 export interface ProcedureStep {
   id: string;

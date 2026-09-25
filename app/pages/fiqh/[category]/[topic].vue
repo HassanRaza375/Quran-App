@@ -49,12 +49,22 @@
         the act is performed is set out in your marja's rulings below.
       </p>
       <div class="d-flex flex-column ga-3">
-        <AyahReferenceCard
-          v-for="ref in quranicAyahs"
-          :key="`${ref.surahNo}:${ref.ayahNo}`"
-          :surah-no="ref.surahNo"
-          :ayah-no="ref.ayahNo"
-        />
+        <div v-for="ref in quranicAyahs" :key="`${ref.surahNo}:${ref.ayahNo}`">
+          <AyahReferenceCard :surah-no="ref.surahNo" :ayah-no="ref.ayahNo" />
+          <!-- Decision P9: a one-line, sourced explanation on this ayah (not a ruling) -->
+          <div v-for="(n, i) in basisNotesFor(ref)" :key="i" class="basis-note mt-2" role="note">
+            <p class="mb-1">
+              <v-icon size="14" aria-hidden="true">mdi-lightbulb-outline</v-icon>
+              <span class="text-caption font-weight-bold">Explanation · written by the app, not a ruling:</span>
+              {{ n.note.text.en }}
+            </p>
+            <p class="basis-quote mb-1" :lang="n.quote.lang" dir="rtl">«{{ n.quote.text }}»</p>
+            <p class="text-caption text-medium-emphasis mb-0">
+              {{ n.source.title }}, {{ n.source.reference }} ·
+              <a v-for="(u, j) in n.source.urls" :key="u" :href="u" target="_blank" rel="noopener noreferrer" class="me-2">copy {{ j + 1 }}</a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -78,6 +88,21 @@
         <div class="d-flex flex-column ga-4">
           <RulingCard v-for="r in mainRulings" :id="r.id" :key="r.id" :ruling="r" :marja="marja" :lang="lang" />
         </div>
+
+        <!-- Other collapsed panels, neutral heading (P8) -->
+        <v-expansion-panels v-for="p in panels" :key="p.id" class="mt-4" variant="accordion">
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <v-icon class="me-2" aria-hidden="true">{{ p.icon }}</v-icon>
+              {{ p.heading }} ({{ p.rulings.length }})
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <div class="d-flex flex-column ga-4 pt-2">
+                <RulingCard v-for="r in p.rulings" :id="r.id" :key="r.id" :ruling="r" :marja="marja" :lang="lang" />
+              </div>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+        </v-expansion-panels>
 
         <!-- Women-specific / sensitive rulings: full detail, collapsed by default (Q8) -->
         <v-expansion-panels v-if="sensitiveRulings.length" class="mt-4" variant="accordion">
@@ -173,6 +198,7 @@ import RulingCard from "~/components/wajibat/RulingCard.vue";
 import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
 import ProcedureStepper from "~/components/wajibat/ProcedureStepper.vue";
 import { getProcedureById } from "~/data/wajibat";
+import { PANEL_META } from "~/utils/wajibatLabels";
 
 const route = useRoute();
 useUrduFont();
@@ -195,7 +221,13 @@ useHead(() => ({ title: topic.value ? `${topic.value.title.en} — Daily Fiqh` :
 useSeoMeta({ description: () => topic.value?.summary.text.en });
 
 const rulings = computed(() => (topic.value ? rulingsFor(topic.value) : []));
-const mainRulings = computed(() => rulings.value.filter((r) => !r.sensitive));
+const mainRulings = computed(() => rulings.value.filter((r) => !r.sensitive && !r.panel));
+// Other collapsed panels (decision P8), each with a neutral heading and no app commentary.
+const panels = computed(() =>
+  Object.entries(PANEL_META)
+    .map(([id, meta]) => ({ id, ...meta, rulings: rulings.value.filter((r) => r.panel === id) }))
+    .filter((p) => p.rulings.length)
+);
 const sensitiveRulings = computed(() => rulings.value.filter((r) => r.sensitive));
 
 // Only the chosen marja's procedures — never another marja's (decision P1).
@@ -207,6 +239,9 @@ const procedures = computed(() =>
 
 const relatedTopics = computed(() => (topic.value?.relatedTopicIds ?? []).map(getTopicById).filter(Boolean));
 const terms = computed(() => (topic.value?.glossaryIds ?? []).map(getGlossaryTermById).filter(Boolean));
+
+const basisNotesFor = (ref) =>
+  (topic.value?.quranicBasisNotes ?? []).filter((n) => n.surahNumber === ref.surahNo && n.ayahNumber === ref.ayahNo);
 
 const quranicAyahs = computed(() =>
   (topic.value?.quranicBasis ?? []).flatMap((q) => {
@@ -277,6 +312,18 @@ watch(
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
+}
+.basis-note {
+  border: 1px dashed rgba(var(--v-theme-on-surface), 0.25);
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: rgba(var(--v-theme-on-surface), 0.025);
+  font-size: 0.9rem;
+}
+.basis-quote {
+  font-family: "Amiri Quran", serif;
+  font-size: 1.1rem;
+  text-align: right;
 }
 .term-cell {
   white-space: nowrap;

@@ -83,6 +83,24 @@ describe("Wajibat dataset integrity", () => {
     }
   });
 
+  it("purity-of-persons rulings sit in their own panel, quoted with no app commentary (decision P8)", () => {
+    const ids = WAJIBAT_RULINGS.filter((r) => r.panel === "persons").map((r) => r.id);
+    expect(ids).toHaveLength(8);
+    for (const id of ids)
+      for (const e of getRulingById(id)!.rulings) {
+        expect(e.verification).toBe("A");
+        expect(e.note ?? "").not.toMatch(/app|explanation/i);
+      }
+  });
+
+  it("the 5:6 note on wuḍūʾ is an explanation with a verbatim al-Mīzān quote and two source copies (decision P9)", () => {
+    const notes = WAJIBAT_DATASET.topics.find((t) => t.id === "wudu")!.quranicBasisNotes!;
+    expect(notes).toHaveLength(1);
+    expect(notes[0]!.note.kind).toBe("explanation");
+    expect(notes[0]!.quote.text).toContain("ومسح الرأس والرجلين");
+    expect(notes[0]!.source.urls).toHaveLength(2);
+  });
+
   it("every ruling is level A", () => {
     for (const entry of WAJIBAT_RULINGS.flatMap((r) => r.rulings)) expect(entry.verification).toBe("A");
   });

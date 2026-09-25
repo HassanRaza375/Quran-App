@@ -1709,6 +1709,361 @@ export const TAHARAT_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "personsnotbelieving",
+    topicId: "najasat",
+    subject: {
+      en: "Not believing in Allah or His oneness"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A person who does not believe in Allah or His oneness is impure.",
+          ur: "کافریعنی وہ شخص جوباری تعالیٰ کے وجود یااس کی وحدانیت کامنکر ہو نجس ہے"
+        },
+        basis: "fatwa",
+        excerpt: true,
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 103",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (103)",
+          url: "https://www.sistani.org/urdu/book/61/3628/"
+        },
+        verification: "A"
+      }
+    ],
+    panel: "persons"
+  },
+  {
+    id: "personsghulat",
+    topicId: "najasat",
+    subject: {
+      en: "Ghulāt, Khawārij and Nawāṣib"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Similarly, the following are impure: extremists (ghulāt) (i.e. those who regard one of the Infallible Imams (ʿA) as Allah, or say that Allah has immanence (ḥulūl) in the Imam (ʿA)), Kharijites (khawārij), and nawāṣib (i.e. those who display enmity towards the Infallible Imams (ʿA)).",
+          ur: "اوراسی طرح غلات (یعنی وہ لوگ جوائمہ علیہم السلام میں سے کسی کوخداکہیں یا یہ کہیں کہ خدا،امام میں سماگیاہے)اور خارجی وناصبی (یعنی وہ لوگ جوائمہ علیہم السلام سے نفرت اوربغض کااظہارکریں ) بھی نجس ہیں ۔"
+        },
+        basis: "fatwa",
+        excerpt: true,
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 103",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (103)",
+          url: "https://www.sistani.org/urdu/book/61/3628/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "There is a sect that calls itself ‘Aliyyullāhī, and it considers the Commander of the Faithful, Ali ibn Abītālib (a.), as a god and believes in supplicating and seeking fulfillment of requests as an alternative to prayers and fasting. Are they najis?",
+          ur: "ایک فرقہ ہے جو اپنے کو \"علی اللہٰی\" کہتا ہے۔ وہ لوگ امیرالمؤمنین علی ابن ابی طالب علیہ السلام کو خدا سمجھتے ہیں اور ان کا عقیدہ ہے کہ دعا اور طلب حاجت، نماز اور روزے کا بدل ہیں، کیا یہ لوگ نجس ہیں؟"
+        },
+        text: {
+          en: "If they believe that Amīr al-Mu’minīn, Ali ibn Abītālib (a.), is a god (Allah, the exalted, is above what they say), then the rule applicable to them is that of non-Muslims who have not a Book, i.e., they are kāfirs and najis.",
+          ur: "اگر وہ امیرالمؤمنین علی بن ابیطالب علیہ السلام کو اللہ مانتے ہیں \"تعالی اللہ عن ذلک علواً کبیراً\" تو ان کا حکم اہل کتاب کے سوا دوسرے غیر مسلموں جیسا ہے یعنی کافر اور نجس ہیں۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 316",
+          url: "https://www.leader.ir/en/book/32/1?sn=5255"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 317",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11386"
+        },
+        verification: "A"
+      }
+    ],
+    panel: "persons"
+  },
+  {
+    id: "personsrejecting",
+    topicId: "najasat",
+    subject: {
+      en: "Rejecting prophethood or an indispensable of the religion"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The same applies to a person who rejects prophethood or any one of the indispensable aspects of the religion – such as prayers (ṣalāh) and fasting (ṣawm) – if it is in a way that it amounts to refuting Prophet Muḥammad (Ṣ), albeit in a general manner.",
+          ur: "اسی طرح وہ شخص جوکسی نبی کی نبوت یاضروریات دین یعنی وہ چیزیں جنہیں مسلمان دین کاجزسمجھتے ہیں ، مثلاً نمازاورروزےمیں سے کسی ایک کایہ جانتے ہوئے کہ یہ ضروریات دین ہیں ،منکرہو اگر اس طرح انکار کریں کہ اس سے پیغمبر کی تکذیب لازم قرار پائے خواہ اجمالی طور سے ہی کیوں نہ ہو"
+        },
+        basis: "fatwa",
+        excerpt: true,
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 103",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (103)",
+          url: "https://www.sistani.org/urdu/book/61/3628/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Does the rule applicable to a non-Muslim apply to a person who rejects some indispensable elements of the religion, such as fasting, etc.?",
+          ur: "جو شخص ضروریات دین ۔جیسے روزہ و غیرہ ۔میں سے کسی کامنکر ہو جائے تو کیا اس پر کافر کا حکم لگے گا یا نہیں؟"
+        },
+        text: {
+          en: "If rejection of some indispensable elements of religion amounts to rejection of the Prophet’s (s.) prophethood, denial of the Prophet’s mission, or belief that the sharī‘ah is defective, then it leads to apostasy and being a non-Muslim.",
+          ur: "اگر ضروریات دین میں سے کسی چیز کا انکار، نبوت کے انکار یا پیغمبر اسلام صلی اللہ علیہ و آلہ و سلم کی تکذیب یا شریعت کی تنقیص کی طرف بازگشت کرے تو یہ کفر و ارتداد ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 335",
+          url: "https://www.leader.ir/en/book/32/1?sn=5255"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 336",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11386"
+        },
+        verification: "A"
+      }
+    ],
+    panel: "persons"
+  },
+  {
+    id: "personsahlalkitab",
+    topicId: "najasat",
+    subject: {
+      en: "The People of the Book"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "As for the People of the Book (ahl al‑kitāb) (i.e. Jews, Christians, and Zoroastrians), they are ruled to be pure.",
+          ur: "لیکن اھل کتاب(یعنی یہود، نصاریٰ و مجوسی) پاک ہیں ۔"
+        },
+        basis: "fatwa",
+        excerpt: true,
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 103",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (103)",
+          url: "https://www.sistani.org/urdu/book/61/3628/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Some mujtahids are of the opinion that the People of the Book are najis, while some others consider them pure. What is your opinion?",
+          ur: "بعض فقہا اہل کتاب کو نجس اور بعض انہیں پاک قرار دیتے ہیں آپ کی کیا رائے ہے؟"
+        },
+        text: {
+          en: "It is not established that the People of the Book are najis themselves; rather, we consider them as pure by themselves.",
+          ur: "اہل کتاب کی ذاتی نجاست ثابت نہیں ہے، بلکہ ہماری نظر میں ان پر ذاتی طہارت کا حکم لگایا جائیگا۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 312",
+          url: "https://www.leader.ir/en/book/32/1?sn=5255"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 313",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11386"
+        },
+        verification: "A"
+      }
+    ],
+    panel: "persons"
+  },
+  {
+    id: "personsnonkitabi",
+    topicId: "najasat",
+    subject: {
+      en: "A disbeliever who is not of the People of the Book"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, the entire body of a disbeliever who is not kitābī [i.e. not from among the People of the Book] is impure; this includes his hair, nails, and the moisture from his body. As for an apostate (i.e. someone who is no longer a Muslim), the rule that applies to him is determined by his new religious status. Therefore, if the apostate person becomes a kitābī disbeliever, he is pure; and if he becomes a non-kitābī disbeliever, he is impure based on obligatory precaution."
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 104*",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        verification: "A",
+        urduEditionLag: true,
+        urduNote: "The official Urdu edition has the pre-revision wording of this ruling.",
+        note: "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6). Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "The vast majority of people here are Buddhist non-Muslims. Therefore if a university student rents a house, what is the rule concerning its state of purity and najāsah? Is it necessary to wash and clean the house? It is noteworthy that most of the houses are made of wood and to wash them is not possible. Further, what is the rule concerning hotels and their furniture and articles?",
+          ur: "ہماری تعلیم اور رہائش کے علاقے کی اکثر آبادی بدھ مذہب کے ماننے والے کافروں کی ہے، لذا اگر یونیورسٹی کا کوئی طالب علم کرایہ پر مکان لے تو اس مکان کی طہارت و نجاست کا کیا حکم ہے؟ کیا اس مکان کو دھونا اور اسے پاک کرنا ضروری ہے یا نہیں؟ اس بات کی طرف بھی اشارہ کرنا مناسب ہے کہ یہاں اکثر مکان لکڑی کے بنے ہوئے ہیں اور ان کا دھونا ممکن نہیں ہے، نیز ہوٹلوں، سامان اور ان میں موجود دیگر چیزوں کا کیا حکم ہے؟"
+        },
+        text: {
+          en: "Unless it is confirmed that the hand or body of a non-Muslim that is not among The People of the Book has touched something in the presence of transferable wetness, that thing will not be considered najis. Presuming that its najāsah has been ascertained, it is not obligatory to purify the doors and walls of homes and hotels, nor their furniture and articles. All that is obligatory is to purify those things which are used for eating, drinking, and praying.",
+          ur: "جس چیز کو آپ استعمال کرنا چاہتے ہیں جب تک آپ کو اس کے غیر کتابی کافر کے تر ہاتھ اور بدن کے ساتھ مس ہونے کا یقین نہ ہو، اس پر نجاست کا حکم نہیں لگے گا اور نجاست کا یقین ہونے کی صورت میں ہوٹلوں اور مکانوں کے دروازوں اور دیواروں کا پاک کرنا واجب نہیں ہے اور نہ ہی سامان اور ان چیزوں کا پاک کرنا واجب ہے جو ان میں موجود ہیں، بلکہ کھانے پینے اور نماز کے لئے استعمال کی جانے والی چیزیں اگر نجس ہوں تو ان کا پاک کرنا واجب ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 320",
+          url: "https://www.leader.ir/en/book/32/1?sn=5255"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 321",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11386"
+        },
+        verification: "A"
+      }
+    ],
+    panel: "persons"
+  },
+  {
+    id: "personschild",
+    topicId: "najasat",
+    subject: {
+      en: "Children of disbelievers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If the father, mother, paternal grandfather, and paternal grandmother of a child who is not of the age of legal responsibility (bāligh) are non-kitābī disbelievers, that child is also impure based on obligatory precaution, unless he is mumayyiz and professes Islam, in which case he is pure. If he turns away from his father and mother and inclines towards Muslims, or if he is in the process of researching and investigating, then ruling him as being impure is problematic [and therefore, based on obligatory precaution, the requisite precautionary action must be taken]. If either his father, mother, paternal grandfather, or paternal grandmother is a Muslim, then as per the details that will be mentioned in Ruling 210, the child is pure."
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 105*",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        verification: "A",
+        urduEditionLag: true,
+        urduNote: "The official Urdu edition has the pre-revision wording of this ruling.",
+        note: "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6). Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ],
+    panel: "persons"
+  },
+  {
+    id: "personsunknown",
+    topicId: "najasat",
+    subject: {
+      en: "Someone not known to be Muslim"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If it is not known whether someone is a Muslim and there is no indication of him being a Muslim, he is pure. However, other rules of being a Muslim do not apply to him; for example, he cannot marry a Muslim woman nor be buried in a Muslim cemetery.",
+          ur: "اگرکسی کے متعلق یہ علم نہ ہوکہ مسلمان ہے یانہیں اورکوئی علامت اس کے مسلمان ہونے کی نہ ہوتووہ پاک سمجھاجائے گا،لیکن اس پراسلام کے دوسرے احکام کااطلاق نہیں ہوگامثلاً نہ ہی وہ مسلمان عورت سے شادی کر سکتاہے اورنہ ہی اسے مسلمانوں کے قبرستان میں دفن کیاجاسکتاہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 106",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (106)",
+          url: "https://www.sistani.org/urdu/book/61/3628/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "In an Islamic country a foreign person, whose religion is unknown, sells food items and touches it in the presence of transmitting moisture. Is it obligatory to ask him about his religion, or will the principle of presuming a state of purity apply?",
+          ur: "ایک شخص کھا نا بیچتا ہے اور سرایت کرنے والی تری کے ساتھ کھا نے کو اپنے جسم سے چھوتا ہے، لیکن اس کے دین کا پتہ نہیں ہے اور وہ کسی دوسرے ملک سے اسلامی ملک میں کام کرنے کیلئے آیا ہے کیا اس سے اس کے دین کے بارے میں سوال کرنا واجب ہے؟ یا اس پر اصالت طہارت کا حکم جاری ہوگا؟"
+        },
+        text: {
+          en: "It is not obligatory to ask about his religion and the principle of presuming state of purity will be applicable in respect to him as well as the food he touches in the presence of transmitting moisture.",
+          ur: "اس سے اس کا دین پوچھنا واجب نہیں ہے اور اس شخص کے بارے میں اور رطوبت کے ساتھ اس کے جسم سے لگنے والی چیز کے بارے میں اصالت طہارت جاری کریں گے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 298",
+          url: "https://www.leader.ir/en/book/32/1?sn=5252"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 299",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11383"
+        },
+        verification: "A"
+      }
+    ],
+    panel: "persons"
+  },
+  {
+    id: "personsabusingimams",
+    topicId: "najasat",
+    subject: {
+      en: "Abusing the Infallible Imams"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, a person who abuses any of the Infallible Imams (ʿA) on account of his enmity towards them is impure."
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 107*",
+          url: "https://www.sistani.org/english/book/48/2134/"
+        },
+        verification: "A",
+        urduEditionLag: true,
+        urduNote: "The official Urdu edition has the pre-revision wording of this ruling.",
+        note: "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6)."
+      }
+    ],
+    panel: "persons"
+  },
+  {
     id: "eatingimpure",
     topicId: "najasat",
     subject: {
@@ -2011,8 +2366,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Earth purifies the sole of one’s foot or shoe on four conditions:\n1. the earth is pure;\n2. the earth is dry; however, there is no problem if there is some wetness or moisture on the earth that does not spread;\n3. based on obligatory precaution, the impurity has spread onto the sole of one’s foot or shoe from impure earth;\n4. an intrinsic impurity – such as blood and urine – or an object that has become impure – such as mud that has become impure and is on the sole of one’s foot or shoe – is removed by walking or rubbing the foot on earth; and in the event that the intrinsic impurity had previously been removed, then based on obligatory precaution, the sole of one’s foot or shoe does not become pure by walking or rubbing the foot on earth. Furthermore, the earth must be of soil, stone, brick, or something similar; therefore, walking on a rug, ḥaṣīr, and grass does not purify the impure sole of one’s foot or shoe.",
-          ur: "زمین پاؤں کے تلوے اورجوتے کے نچلے حصہ کوچارشرطوں سے پاک کرتی ہے:\n(اول:) یہ کہ زمین پاک ہو۔\n(دوم:) زمین خشک ہو۔\n(سوم:) احتیاط لازم کی بناپرنجاست زمین پرچلنے سے لگی ہو۔\n(چہارم:) عین نجاست مثلاً خون اورپیشاب یامتنجس جیسے مٹی پاؤں کے تلوے یا جوتے کے نچلے حصے میں لگی ہووہ راستہ چلنے سے یاپاؤں زمین پررگڑنے سے دور ہو جائے،لیکن اگرعین نجاست زمین پرچلنے یازمین پررگڑنے سے پہلے ہی دورہوگئی ہو تو احتیاط لازم کی بناپرپاک نہیں ہوں گے۔ البتہ یہ ضروری ہے کہ زمین مٹی یاپتھریااینٹوں کے فرش یاان سے ملتی جلتی چیزپرمشتمل ہو۔قالین ودری وغیرہ اورچٹائی یاگھاس پر چلنے سے پاؤں کانجس تلوایاجوتے کانجس حصہ پاک نہیں ہوتا۔"
+          en: "Earth purifies the sole of one’s foot or shoe on four conditions:\n1. the earth is pure;\n2. the earth is dry; however, there is no problem if there is some wetness or moisture on the earth that does not spread;\n3. based on obligatory precaution, the impurity has spread onto the sole of one’s foot or shoe from impure earth;\n4. an intrinsic impurity – such as blood and urine – or an object that has become impure – such as mud that has become impure and is on the sole of one’s foot or shoe – is removed by walking or rubbing the foot on earth; and in the event that the intrinsic impurity had previously been removed, then based on obligatory precaution, the sole of one’s foot or shoe does not become pure by walking or rubbing the foot on earth. Furthermore, the earth must be of soil, stone, brick, or something similar; therefore, walking on a rug, ḥaṣīr, and grass does not purify the impure sole of one’s foot or shoe."
         },
         basis: "fatwa",
         source: {
@@ -2020,12 +2374,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 177",
           url: "https://www.sistani.org/english/book/48/2142/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (177)",
-          url: "https://www.sistani.org/urdu/book/61/3629/"
-        },
         verification: "A",
+        urduNote: "The official Urdu مسئلہ ۱۷۷ omits the English ruling's allowance for moisture on the earth that does not spread, so only the English is shown (decision P10).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       },
       {

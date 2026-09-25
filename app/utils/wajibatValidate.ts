@@ -19,6 +19,7 @@ export interface WajibatIssue {
 const HUKMS = new Set(["wajib", "haram", "mustahab", "makruh", "mubah"]);
 const BASES = new Set(["fatwa", "ihtiyat_wajib", "ihtiyat_mustahab", "ihtiyat_unspecified"]);
 const LEVELS = new Set(["A", "B", "D"]);
+const PANELS = new Set(["persons"]);
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 /** A level-A citation must point at the marja's own official site. */
@@ -126,6 +127,12 @@ export const validateWajibatDataset = (
       else if (ayahs.length === 0) push(t.id, `quranicBasis: ${ref.surahNumber} has no ayah`);
       else for (const a of ayahs) if (a < 1 || a > surah.totalAyah) push(t.id, `quranicBasis: ${ref.surahNumber}:${a} is out of bounds`);
     }
+    for (const n of t.quranicBasisNotes ?? []) {
+      const linked = (t.quranicBasis ?? []).some((q) => q.surahNumber === n.surahNumber && q.ayahNumber === n.ayahNumber);
+      if (!linked) push(t.id, `quranicBasisNotes: ${n.surahNumber}:${n.ayahNumber} is not one of the topic's basis ayahs`);
+      if (n.note?.kind !== "explanation") push(t.id, "quranicBasisNotes: note must be kind: explanation");
+      if (!n.quote?.text?.trim() || !n.source?.title?.trim() || !n.source?.urls?.length) push(t.id, "quranicBasisNotes: needs a verbatim quote and a cited source");
+    }
     if (t.reviewedBy && (!t.reviewedBy.name || !DATE_RE.test(t.reviewedBy.date))) push(t.id, "reviewedBy needs a name and YYYY-MM-DD date");
   }
 
@@ -134,6 +141,8 @@ export const validateWajibatDataset = (
     if (!topic) push(r.id, `unknown topicId "${r.topicId}"`);
     else if (!topic.rulingIds.includes(r.id)) push(r.id, `not listed in topic "${topic.id}".rulingIds`);
     if (!r.subject?.en?.trim()) push(r.id, "missing subject");
+    if (r.panel !== undefined && !PANELS.has(r.panel)) push(r.id, `unknown panel "${r.panel}"`);
+    if (r.panel && r.sensitive) push(r.id, "a ruling can be in the women-specific panel or another panel, not both");
     if (r.rulings.length === 0) push(r.id, "has no marja' entries");
     for (const dup of findDuplicates(r.rulings.map((m) => m.marjaId))) push(r.id, `two entries for marja "${dup}"`);
     const hasD = r.rulings.some((m) => m.verification === "D");

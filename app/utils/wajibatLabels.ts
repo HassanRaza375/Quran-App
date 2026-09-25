@@ -1,6 +1,6 @@
 // Display vocabulary for the Wajibat module. Every badge pairs a colour with
 // a text label AND an icon — never colour alone (spec §8, Module 17 §24).
-import type { Explanation, Hukm, RulingBasis, VerificationLevel } from "~/data/wajibat/types";
+import type { Explanation, Hukm, RulingBasis, RulingPanel, VerificationLevel } from "~/data/wajibat/types";
 
 export const HUKM_META: Record<Hukm, { label: string; icon: string; color?: string }> = {
   wajib: { label: "Wājib · obligatory", icon: "mdi-alert-decagram-outline", color: "primary" },
@@ -41,6 +41,11 @@ export const URDU_EDITION_LAG_NOTICE: Explanation = {
     en: "The Urdu edition has not been updated for this ruling yet, so the revised English (4th edition) text is shown.",
     ur: "اس مسئلے کے لیے اردو ایڈیشن ابھی تازہ نہیں ہوا، اس لیے انگریزی (چوتھے ایڈیشن) کا نظرثانی شدہ متن دکھایا گیا ہے۔",
   },
+};
+
+/** Neutral headings for collapsed ruling panels (decision P8). */
+export const PANEL_META: Record<RulingPanel, { heading: string; icon: string }> = {
+  persons: { heading: "Purity of persons", icon: "mdi-account-group-outline" },
 };
 
 export const VERIFICATION_META: Record<VerificationLevel, { label: string; icon: string; color?: string }> = {

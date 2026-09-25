@@ -147,7 +147,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Certain things are intrinsically impure (najis). This topic covers what they are, how impurity is established, and how it transfers from one thing to another."
     ),
-    rulingIds: ["tennajasat", "urinefaeces", "birddroppings", "semen", "corpse", "deadskin", "importedleather", "blood", "dogpig", "wineintoxicants", "alcohol", "establishingimpurity", "purityimpuritydoubt", "impuritytransfer", "wetnessdoubt", "quranimpure", "eatingimpure"],
+    rulingIds: ["tennajasat", "urinefaeces", "birddroppings", "semen", "corpse", "deadskin", "importedleather", "blood", "dogpig", "wineintoxicants", "alcohol", "establishingimpurity", "purityimpuritydoubt", "impuritytransfer", "wetnessdoubt", "quranimpure", "eatingimpure", "personsnotbelieving", "personsghulat", "personsrejecting", "personsahlalkitab", "personsnonkitabi", "personschild", "personsunknown", "personsabusingimams"],
     relatedTopicIds: ["mutahhirat", "water"],
     glossaryIds: ["najis", "tahir"],
     lastSourceCheck: "2026-09-25",
@@ -190,6 +190,26 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
       "Wuḍūʾ is washing the face and arms and wiping the head and feet, in order and without a break. This topic covers how it is done, its conditions, what invalidates it, and doubts about it."
     ),
     quranicBasis: [{ surahNumber: 5, ayahNumber: 6 }],
+    // Decision P9: the app's default translation renders 5:6 as "wash your feet". The clause
+    // below was checked verbatim in two independent online copies of al-Mīzān (2026-09-25).
+    quranicBasisNotes: [
+      {
+        surahNumber: 5,
+        ayahNumber: 6,
+        note: explain(
+          "Ja'fari fiqh reads this ayah as wiping (masḥ) the feet, not washing them: Ṭabāṭabāʾī concludes in al-Mīzān that the ayah conveys the obligation of washing the face and hands, and wiping the head and feet."
+        ),
+        quote: { text: "وفهمت من الكلام وجوب غسل الوجه واليدين، ومسح الرأس والرجلين", lang: "ar" },
+        source: {
+          title: "al-Mīzān fī Tafsīr al-Qurʾān (Ṭabāṭabāʾī)",
+          reference: "vol. 5, pp. 187–199, commentary on 5:6",
+          urls: [
+            "https://almerja.com/reading.php?idm=73433",
+            "https://www.greattafsirs.com/Tafsir_Library.aspx?QuranAyat_Home=1&MadhabNo=4&TafsirNo=56&SoraNo=5&AyahNo=6&LanguageID=1",
+          ],
+        },
+      },
+    ],
     rulingIds: ["wuduobligatoryacts", "wuduface", "wududirection", "wuduarms", "wuduwashingcount", "wuduhead", "wuduheadarea", "wudufeet", "wudusocks", "wuduimmersive", "wuduwaterimpure", "wuduusurpedwater", "wuduintention", "wudusequence", "wudusuccession", "wuduobstruction", "wududoubtvoid", "wududoubtperformed", "wududoubtafterprayer", "wuduwhenwajib", "touchingquran", "wuduinvalidators", "jabirauncovered", "jabiracovered"],
     procedureIds: ["wudusistani"],
     relatedTopicIds: ["ghusl", "tayammum", "istinja"],

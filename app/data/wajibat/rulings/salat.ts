@@ -1,0 +1,6447 @@
+// Salat (§6.3, excluding doubts) rulings — Phase 3.
+//
+// GENERATED from the official texts, do not hand-edit the quoted strings:
+// every `text`/`instruction` was looked up verbatim (by script) on the marja's
+// official website as downloaded on 2026-09-25 / 2026-10-02 —
+//   Sistani:  sistani.org Islamic Laws 4th ed. (English) / توضیح المسائل (Urdu)
+//   Khamenei: leader.ir "The Rules on Prayer & Fasting 2023" (book 241), first priority
+//             for salat (decision R6). It has no official Urdu edition, so Khamenei's
+//             salat entries are English only (decision R1).
+// Revised (*) Sistani rulings were compared with the Urdu one by one (decision P6).
+// `basis` comes from the ruling's own opening words — never inferred beyond them (R3).
+import type { Ruling } from "../types";
+
+export const SALAT_RULINGS: Ruling[] = [
+  {
+    id: "obligatoryprayers",
+    topicId: "dailyprayers",
+    subject: {
+      en: "The obligatory prayers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "There are six obligatory prayers in the period of the Imam of the Time’s (ʿA) occultation (ghaybah):\n1. the daily prayers;\n2. the prayer of signs (ṣalāt al‑āyāt);\n3. the funeral prayer (ṣalāt al‑mayyit);\n4. the prayer for the obligatory circumambulation (ṭawāf) of the Kaʿbah;\n5. the lapsed (qaḍāʾ) prayers of one’s father that, based on obligatory precaution (al‑iḥtiyāṭ al‑wājib), are obligatory for the eldest son to perform;\n6. prayers that become obligatory on account of hire (ijārah), vow (nadhr), oath (qasam), and covenant (ʿahd).\nThe Friday prayer (ṣalāt al‑jumuʿah) is regarded as one of the daily prayers.",
+          ur: "چھ نمازیں واجب ہیں :\n۱:) روزانہ کی نمازیں\n۲:) نمازآیات\n۳:) نمازمیت\n۴:) خانۂ کعبہ کے واجب طواف کی نماز\n۵:) باپ کی قضانمازیں جوبڑے بیٹے پر(احتیاط واجب کی بناءپر) واجب ہیں ۔\n۶:) جونمازیں اجارہ،منت،قسم اور عہدسے واجب ہوجاتی ہیں اورنماز جمعہ روزانہ کی نمازوں میں سے ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "The Obligatory (Wājib) Prayers — section introduction",
+          url: "https://www.sistani.org/english/book/48/2207/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "(تمہید)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Obligatory prayers are as follows:\n1. Daily prayers;\n2. Prayer of ṭawāf which is said after obligatory tawāf around Ka‘bah;\n3. Āyāt prayer which is performed due to natural phenomena such as a lunar/solar eclipse, earthquake, etc.\n4. Mayyit prayer which is performed on the corpse of a deceased Muslim\n5. Qaḍā’ prayers of one's father and, by obligatory caution, of the mother as well; to be performed by the eldest son.\n6. The prayer which becomes obligatory due to nadhr (reciprocal vow), ‘ahd (covenant), qasam (oath), or through being hired to preform it."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "1.",
+          url: "https://www.leader.ir/en/book/241?sn=32480"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "dailyrakat",
+    topicId: "dailyprayers",
+    subject: {
+      en: "The five daily prayers and their rakʿahs"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "There are five obligatory daily prayers: (1) midday (ẓuhr) and (2) afternoon (ʿaṣr) prayers – each of these consists of four units (rakʿahs); (3) after sunset (maghrib), which is three rakʿahs; (4) evening (ʿishāʾ), which is four rakʿahs; and (5) morning (ṣubḥ), which is two rakʿahs.",
+          ur: "روزانہ کی واجب نمازیں پانچ ہیں :\nظہراورعصر(ہرایک چاررکعت) مغرب (تین رکعت) عشا (چاررکعت) اور فجر (دورکعت)۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "The Obligatory Daily Prayers — section introduction",
+          url: "https://www.sistani.org/english/book/48/2208/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "(تمہید)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The daily prayers consist of 17 rak‘ah which are made up of the following:\n1. Fajr prayer (two rak‘ah)\n2. Ẓuhr prayer (four rak‘ah)\n3. ‘Aṣr prayer (four rak‘ah)\n4. Maghrib prayer (three rak‘ah)\n5. ‘ishā’ prayer (four rak‘ah)"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "3.",
+          url: "https://www.leader.ir/en/book/241?sn=32481"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "importanceofprayer",
+    topicId: "dailyprayers",
+    subject: {
+      en: "The place of the daily prayers in the religion"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Daily prayers are among the most important obligations in Islamic Law. Furthermore, they are pillars of the religion and should never be neglected."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "2.",
+          url: "https://www.leader.ir/en/book/241?sn=32481"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "zuhrasrtime",
+    topicId: "prayertimes",
+    subject: {
+      en: "The time for ẓuhr and ʿaṣr"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The time for ẓuhr and ʿaṣr prayers is from zawāl [i.e. the time after midday when the sun begins to decline] (known as the ‘legal midday’ (al‑ẓuhr al‑sharʿī)) until sunset (ghurūb). However, in the event that one intentionally (ʿamdan) performs the ʿaṣr prayer before the ẓuhr prayer, his prayer is invalid (bāṭil), except if this happens at the end of the prescribed time and there is scope for performing only one prayer, in which case if someone has not performed the ẓuhr prayer by then, his ẓuhr prayer is deemed to have become qaḍāʾ and he must perform the ʿaṣr prayer. If before this time someone mistakenly performs the whole of the ʿaṣr prayer before the ẓuhr prayer, his prayer is valid (ṣaḥīḥ), and he must then perform the ẓuhr prayer. And the recommended precaution (al‑iḥtiyāṭ al‑mustaḥabb) is that he should perform the second set of four rakʿahs with the intention (niyyah) to fulfil whatever his legal obligation happens to be (mā fī al‑dhimmah).",
+          ur: "نماز ظہر اور عصر کا وقت زوال (ظہر شرعی) کے بعد سے غروب آفتاب تک ہے۔ لیکن اگرکوئی شخص جان بوجھ کرعصر کی نماز کوظہر کی نماز سے پہلے پڑھے تواس کی عصر کی نماز باطل ہے سوائے اس کے کہ آخری وقت تک ایک نمازسے زیادہ پڑھنے کا وقت باقی نہ ہوکیوں کہ ایسی صورت میں اگراس نے ظہر کی نماز نہیں پڑھی تواس کی ظہر کی نماز قضا ہوگی اور اسے چاہئے کہ عصر کی نماز پڑھے اوراگرکوئی شخص اس وقت سے پہلے غلط فہمی کی بناپر عصر کی پوری نماز ظہر کی نمازسے پہلے پڑھ لے تواس کی نماز صحیح ہے اور نماز ظہر پڑھنا ضروی ہے اور احتیاط مستحب یہ ہے کہ مافی الذمہ کی نیت سے چاررکعت نماز پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 717",
+          url: "https://www.sistani.org/english/book/48/2209/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (717)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Both ẓuhr and ‘aṣr prayers have special and common times. A few minutes — enough to say it — after shar‘ī noon is special for ẓuhr prayer. A few minutes — enough to perform it — before sunset is special to ‘aṣr prayer. The gap between these two special times is common time for both."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "8.",
+          url: "https://www.leader.ir/en/book/241?sn=32483"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "maghribishatime",
+    topicId: "prayertimes",
+    subject: {
+      en: "The time for maghrib and ʿishāʾ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "For a person under normal circumstances, the time for the maghrib prayer is until midnight, but for a helpless person – who due to forgetfulness, oversleeping, menstruation (ḥayḍ), or suchlike did not perform prayers before midnight – the time for maghrib and ʿishāʾ prayers is extended until dawn. However, in both cases, the proper order between the two prayers must be observed, meaning that if the ʿishāʾ prayer is knowingly performed before the maghrib prayer, it is invalid unless the time remaining is sufficient for performing only the ʿishāʾ prayer, in which case it is necessary that one perform the ʿishāʾ prayer before the maghrib prayer.",
+          ur: "مغرب اورعشاکی نماز کاوقت مختار شخص کے لئے آدھی رات تک برقرار رہتا ہے لیکن جن لوگوں کوکوئی عذرہو(مثلاً بھول جانے کی وجہ سے یانیند یاحیض یاان جیسے دوسرے امورکی وجہ سے آدھی رات سے پہلے نماز نہ پڑھ سکتے ہوں ) توان کے لئے مغرب اورعشاکی نماز کاوقت فجرطلوع ہونے تک باقی رہتاہے۔ لیکن ان دونوں نمازوں کے درمیان متوجہ ہونے کی صورت میں ترتیب معتبرہے یعنی عشاکی نماز کو جان بوجھ کرمغرب کی نماز سے پہلے پڑھے توباطل ہے۔ لیکن اگرعشاکی نمازاداکرنے کی مقدارسے زیادہ وقت باقی نہ رہاہوتواس صورت میں لازم ہے کہ عشاکی نماز کومغرب کی نماز سے پہلے پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 723",
+          url: "https://www.sistani.org/english/book/48/2212/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (723)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Both maghrib and ‘ishā’ prayers have special and common times. A few minutes — enough to perform it — after maghrib is special for maghrib prayer. A few minutes — enough to perform it — before shar‘ī midnight is special to ‘ishā’ prayer. The gap between these two special times is common time for both."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "13.",
+          url: "https://www.leader.ir/en/book/241?sn=32484"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "fajrtime",
+    topicId: "prayertimes",
+    subject: {
+      en: "The time for the ṣubḥ (fajr) prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Near the time of the morning call to prayer, a whiteness in the sky moves upwards from the east; this is known as ‘the first dawn’. When this whiteness spreads, it is called ‘the second dawn’, which is the start of the prescribed time for the morning prayer. The end of the time for the morning prayer is when the sun rises.",
+          ur: "صبح کی اذان کے قریب مشرق کی طرف سے ایک سفیدی اوپراٹھتی ہے، جسے فجراول کہاجاتاہے۔ جب یہ سفیدی پھیل جائے تووہ فجردوم اورصبح کی نماز کا اول وقت ہے اور صبح کی نماز کاآخری وقت سورج نکلنے تک ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 728",
+          url: "https://www.sistani.org/english/book/48/2213/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (728)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The time for fajr prayer begins from the true dawn (al-fajr al-ṣādiq) and continues until sunrise.\n* The true dawn is opposed to the false dawn (al-fajr al-kāẓib). The false dawn being a light, which appears before the true dawn, that moves upwards instead of spreading across the horizon. The true dawn is when a dim, white light which spreads across the horizon and becomes more intensely illuminated as time passes. Since the the true dawn starts out very dim, in order to witness it, one needs to have clear and unobstructed visibility of the eastern horizon in total darkness. Hence, it would be extremely difficult to observe it from within the city. Therefore, as it is difficult to ascertain the time of fajr, one should exercise caution."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "4.",
+          url: "https://www.leader.ir/en/book/241?sn=32482"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "missedbymidnight",
+    topicId: "prayertimes",
+    subject: {
+      en: "Maghrib and ʿishāʾ not prayed by midnight"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If someone wilfully does not perform maghrib or ʿishāʾ prayers by midnight, he must, based on obligatory precaution, perform them before the time of the morning call to prayer (adhān) without making the intention of performing them in their prescribed time (adāʾ) belatedly or (qaḍāʾ).",
+          ur: "اگرکوئی شخص اختیاری حالت میں مغرب اورعشاکی نمازآدھی رات تک نہ پڑھے تو(احتیاط واجب کی بناپر)ضروری ہے کہ اذان صبح سے پہلے قضااوراداکی نیت کئے بغیران نمازوں کوپڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 727",
+          url: "https://www.sistani.org/english/book/48/2212/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (727)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person does not offer the maghrib or ‘ishā’ prayers until 'midnight' due to a sin or an excuse, according to the obligatory caution, he should offer them before the morning adhān, without the intention of performing it as qaḍā’ or adā’ (rather with the intention of doing one's actual duty).\n[1] Translator’s note: The time gap between sunset and when the redness that appears in the east after sunset disappears varies with the change of the seasons of the year."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "15.",
+          url: "https://www.leader.ir/en/book/241?sn=32484"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "certaintyoftime",
+    topicId: "prayertimes",
+    subject: {
+      en: "Being certain that the time has set in"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One can start performing prayers when he attains certainty (yaqīn) that the time has set in or when two dutiful men inform him that the time has set in. In fact, one can conclude that the time for the morning prayer has set in if he hears the adhān said by someone whom he knows is extremely careful in observing the time of prayers, or if he is informed by such a person, provided that he derives confidence (iṭmiʾnān) from it.",
+          ur: "انسان نمازمیں اس وقت مشغول ہوسکتاہے جب اسے یقین ہو جائے کہ وقت داخل ہوگیاہے یادوعادل مردوقت داخل ہونے کی خبردیں بلکہ اذان یا ایسے شخص کی خبر سے جس کے بارے میں مکلف جانتا ہو کہ وقت داخل ہونے کی پوری رعایت کرتا ہے چنانچہ اطمینان کا سبب قرار پائے تو اس پر اکتفا کرسکتا ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 729",
+          url: "https://www.sistani.org/english/book/48/5418/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (729)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person can start offering prayers only when he becomes certain that the time has set in, when two just persons inform him that the time has set in, or if a reliable and punctual reciter of the adhān recites the adhān."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "18.",
+          url: "https://www.leader.ir/en/book/241?sn=32485"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "onerakahintime",
+    topicId: "prayertimes",
+    subject: {
+      en: "Time left for only one rakʿah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Someone who has time to perform one rakʿah of the prayer must perform the prayer with the intention of adāʾ; however, he must not intentionally delay the prayer until this time.",
+          ur: "جس شخص کے پاس نمازکی فقط ایک رکعت اداکرنے کاوقت ہو اسے چاہئے کہ نماز اداکی نیت سے پڑھے البتہ اسے جان بوجھ کرنماز میں اتنی تاخیر نہیں کرنی چاہئے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 735",
+          url: "https://www.sistani.org/english/book/48/5418/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (735)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who has time enough to perform only one rak‘ah should perform the prayer with the intention of adā’, but he should not postpone performing the prayer until such a time intentionally."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "24.",
+          url: "https://www.leader.ir/en/book/241?sn=32485"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "prayingearly",
+    topicId: "prayertimes",
+    subject: {
+      en: "Praying at the start of the time"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is recommended that one perform prayers at the start of their prescribed time; this is something that has been highly advised. The nearer to the start of the prescribed time, the better, unless delaying the prayer is better for some reason; for example, someone waits a little to perform the prayer in congregation, on condition that it does not pass the prime time (waqt al‑faḍīlah).",
+          ur: "انسان کے لئے مستحب ہے کہ نمازاول وقت میں پڑھے اوراس کے متعلق بہت زیادہ تاکید کی گئی ہے اورجتنااول وقت کے قریب ہوبہترہے ماسوااس کے کہ اس میں تاخیرکسی وجہ سے بہترہومثلاً اس لئے تھوڑا انتظارکرے کہ نمازجماعت کے ساتھ پڑھے۔ اس شرط کے ساتھ کہ فضیلت کا وقت نہ گزرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 738",
+          url: "https://www.sistani.org/english/book/48/5418/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (738)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is mustaḥabb that one offers prayers at the beginning of their times as Islamic instructions advise it with emphasis. If a person cannot offer a prayer at the beginning of its time, then the closest to this time you offer, the better unless it is better to delay it for a reason, such as when a person wants to perform the prayer in congregation."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "16.",
+          url: "https://www.leader.ir/en/book/241?sn=32485"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "orderzuhrasr",
+    topicId: "prayertimes",
+    subject: {
+      en: "Ẓuhr before ʿaṣr, maghrib before ʿishāʾ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One must perform the ʿaṣr prayer after the ẓuhr prayer, and the ʿishāʾ prayer after the maghrib prayer. If someone intentionally performs ʿaṣr before ẓuhr or ʿishāʾ before maghrib, the prayer is invalid.",
+          ur: "ضروری ہے کہ انسان نماز عصر،نماز ظہرکے بعداورنماز عشا، نماز مغرب کے بعدپڑھے اوراگرجان بوجھ کرنماز عصرنماز ظہر سے پہلے اورنماز عشا نماز مغرب سے پہلے پڑھے تواس کی نماز باطل ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 742",
+          url: "https://www.sistani.org/english/book/48/2214/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (742)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person has to perform ẓuhr prayer and then the ‘aṣr prayer. The same rule applies to maghrib and ‘ishā’ prayers. If a person intentionally performs ‘aṣr prayer before ẓuhr prayer, or performs ‘ishā’ prayer before maghrib prayer, his prayer is void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "27.",
+          url: "https://www.leader.ir/en/book/241?sn=32486"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qibladirection",
+    topicId: "qibla",
+    subject: {
+      en: "Facing the qibla"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Qibla is the place of the Kaʿbah in Mecca, and prayers must be performed facing it. However, for someone who is far away, it is sufficient to stand in such a manner that it can be said he is performing prayers facing qibla. The same applies to other acts – such as slaughtering animals – that must be performed facing qibla.",
+          ur: "خانۂ کعبہ جومکۂ مکرمہ میں ہے وہ ہماراقبلہ ہے لہٰذا(ہرمسلمان کے لئے) ضروری ہے کہ اس کے سامنے کھڑے ہوکرنمازپڑھے،لیکن جوشخص اس سے دورہو اگروہ اس طرح کھڑاہوکہ لوگ کہیں کہ قبلے کی طرف منہ کرکے نمازپڑھ رہاہے توکافی ہے اور دوسرے کام جوقبلے کی طرف منہ کرکے انجام دینے ضروری ہیں ۔(مثلاً حیوانات کو ذبح کرنا)ان کابھی یہی حکم ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 763",
+          url: "https://www.sistani.org/english/book/48/2218/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (763)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Muslims should offer their prayers facing the Ka‘bah, and, thus, they call it qiblah. However, for those who are away from it, it is not possible to face it in the exact direction, so it is sufficient for them to perform it in a way that it is commonly regarded as facing the qiblah."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "41.",
+          url: "https://www.leader.ir/en/book/241?sn=32488"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qiblaeffort",
+    topicId: "qibla",
+    subject: {
+      en: "Finding the direction of the qibla"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Someone who wants to perform prayers must make efforts to find out the direction of qibla to the extent that he attains certainty about its direction, or that which comes under the rule (ḥukm) of certainty, such as the testimony of two dutiful people if their testimony is based on sensory perception and suchlike. If he cannot [find out its direction to this extent], he must act according to what he supposes to be the direction of qibla based on the position of the miḥrāb of a mosque, or the graves of believers, or by some other way. Even if he bases his supposition (ẓann) on the words of an immoral person or a disbeliever who knows the direction of qibla by employing scientific principles, it is sufficient.",
+          ur: "جوشخص نمازپڑھناچاہے ضروری ہے کہ قبلے کی سمت کاتعین کرنے کے لئے کوشش کرے تاکہ قبلے کی سمت کے بارے میں یقین یاایسی کیفیت جویقین کے حکم میں ہو ۔(مثلاًدوعادل آدمیوں کی گواہی اگر محسوسات اور اس کے جیسی دوسری چیز سے مستند ہو)حاصل کرلے اوراگرایسانہ کرسکے تو ضروری ہے کہ مسلمانوں کی مسجدکے محراب سے یاان کی قبروں سے یادوسرے طریقوں سے جوگمان پیداہواس کے مطابق عمل کرے حتیٰ کہ اگرکسی ایسے فاسق یا کافر کے کہنے پر جو علمی قواعد کے ذریعے قبلے کا رخ پہچانتاہوقبلے کے بارے میں گمان پیداکرے تووہ بھی کافی ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 769",
+          url: "https://www.sistani.org/english/book/48/2218/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (769)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who wants to offer prayer has to become certain and confident about the direction of qiblah, whether through a reliable compass, through the sun* and stars (for those who know how to use them), or through other ways; and if he cannot acquire confidence, he should offer the prayer in whichever direction he considers more likely, like when you guess qiblah from a masjid's miḥrāb.\n* It is said that on May 7 and July 16 in Mecca at ẓuhr the sun shines vertically. Therfore, if at this time you insert a pole in the ground in your city vertically, the shadow will be in the oppsite direction of qiblah. If you become confidence that this methods shows qiblah, you can act accordingly."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "44.",
+          url: "https://www.leader.ir/en/book/241?sn=32488"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qiblanomeans",
+    topicId: "qibla",
+    subject: {
+      en: "When the direction cannot be found"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If someone does not have any means to find the direction of qibla, or despite his efforts he cannot arrive at a supposition as to its direction, it is sufficient for him to perform prayers facing a direction that he thinks could be qibla. Furthermore, the recommended precaution is that if there is enough time, he should perform prayers four times, each time facing one of the four compass directions [i.e. what he supposes to be north, east, south, and west].",
+          ur: "اگرکسی کے پاس قبلے کارخ متعین کرنے کاکوئی ذریعہ نہ ہو (مثلاً قطب نما) یاکوشش کے باوجود اس کاگمان کسی ایک طرف نہ جاتاہوتواس کاکسی بھی طرف منہ کرکے نماز پڑھناکافی ہے اور احتیاط مستحب یہ ہے کہ اگرنماز کاوقت وسیع ہوتوچار نمازیں چاروں طرف منہ کرکے پڑھے (یعنی وہی ایک نماز چار مرتبہ ایک ایک سمت کی جانب منہ کرکے پڑھے)۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 771",
+          url: "https://www.sistani.org/english/book/48/2218/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (771)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who does not have any means to find out the direction of qiblah nor gives more probability to any direction should perform the prayer in four directions, by obligatory caution. But if there is not enough time to perform the prayer in four directions, he should perform the prayer in the maximum possible number of directions."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "45.",
+          url: "https://www.leader.ir/en/book/241?sn=32488"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "qiblarecommended",
+    topicId: "qibla",
+    subject: {
+      en: "Recommended prayers while walking or riding"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A recommended prayer can be performed while walking and riding, and if a person performs a recommended prayer in either of these ways, it is not necessary that he face qibla.",
+          ur: "مستحب نمازراستہ چلتے ہوئے اورسواری کی حالت میں پڑھی جا سکتی ہے اوراگرانسان ان دونوں حالتوں میں مستحب نمازپڑھے توضروری نہیں کہ اس کامنہ قبلے کی طرف ہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 768",
+          url: "https://www.sistani.org/english/book/48/2218/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (768)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Mustaḥabb prayers can be offered while one is walking or riding, and in such conditions, it is not necessary to face qiblah."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "42.",
+          url: "https://www.leader.ir/en/book/241?sn=32488"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "coveringmen",
+    topicId: "clothing",
+    subject: {
+      en: "Covering in prayer: men"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "While performing prayers, a man must cover his private parts even if no one sees him; and it is better that he cover his body from the navel to the knees.",
+          ur: "ضروری ہے کہ مردخواہ اسے کوئی بھی نہ دیکھ رہاہونماز کی حالت میں اپنی دونوں شرم گاہوں کو ڈھانپے اوربہتریہ ہے کہ ناف سے گھٹنوں تک بدن بھی ڈھانپے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 775",
+          url: "https://www.sistani.org/english/book/48/2219/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (775)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A man should cover his private parts in the prayer, even if no one sees him, and it is better for him to cover from the navel down to the knees."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "50.",
+          url: "https://www.leader.ir/en/book/241?sn=32489"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "coveringwomen",
+    topicId: "clothing",
+    subject: {
+      en: "Covering in prayer: women"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "While performing prayers, a woman must cover her entire body, even her head and hair; and based on obligatory precaution, she must cover her body in a way that even she cannot see it. Therefore, if she wears a chador in a way that she can see her body, it is problematic [i.e. based on obligatory precaution, a woman must not wear a chador in such a way]. However, it is not necessary for a woman to cover her face, her hands below the wrists, or her feet below the ankles. To be certain that she has covered the obligatory areas, she must also cover a little of the sides of her face and a little of the area below her wrists and ankles.",
+          ur: "ضروری ہے کہ عورت نماز کے وقت اپناتمام بدن حتیٰ کہ سراور بال بھی ڈھانپے اوراحتیاط واجب یہ ہےکہ اپنی نظروں سے بھی اپنے سر اور بال کو چھپائے لہٰذا اگر نماز کی چادر کو اس طرح سے پہنے کہ اپنے بدن کو دیکھ سکتی ہے تو( ایسی نماز میں ) اشکال ہے البتہ چہرے اورکلائیوں تک ہاتھ اورٹخنوں تک پاؤں کاڈھانپنا ضروری نہیں ہے لیکن یہ یقین کرنے کے لئے کہ اس نے بدن کی واجب مقدار ڈھانپ لی ہے ضروری ہے کہ چہرے کے اطراف کاکچھ حصہ اورکلائیوں سے نیچے کاکچھ حصہ بھی ڈھانپے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 776",
+          url: "https://www.sistani.org/english/book/48/2219/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (776)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Women should cover the whole body and hair using a covering which covers them all. But it is not necessary to cover the part of face washed during wuḍū’, the hands up to the wrists, and the feet up to the ankles. Of course, in the presence of a non-maḥram person, she must cover her feet up to the ankles as well."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "51.",
+          url: "https://www.leader.ir/en/book/241?sn=32489"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "coveringintentional",
+    topicId: "clothing",
+    subject: {
+      en: "Leaving the private parts uncovered"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "When performing prayers, if one intentionally does not cover his private parts, his prayers are invalid. If he does this on account of not knowing the ruling, then in the event that he was negligent in not learning the ruling, he must, based on obligatory precaution, perform the prayers again.",
+          ur: "اگرانسان جان بوجھ کر اپنی شرم گاہ نہ ڈھانپے تواس کی نماز باطل ہےاور اگر مسئلہ نہ جاننے کی بناپر ہو چنانچہ اس کی یہ جہالت مسئلہ سیکھنے میں کوتاہی کرنے کی بنا پرہو تو (احتیاط واجب کی بنا پر) نماز دوبارہ پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 778",
+          url: "https://www.sistani.org/english/book/48/2219/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (778)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The obligation of covering in prayer is not limited to the presence of a non-mahram in the place of worship; rather, even if nobody is present, covering is a condition for validity of prayer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "49.",
+          url: "https://www.leader.ir/en/book/241?sn=32489"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "clothingconditions",
+    topicId: "clothing",
+    subject: {
+      en: "The conditions of the clothing"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The clothing worn by someone performing prayers must meet six conditions:\n1. it must be pure (ṭāhir);\n2. it must be permissible (mubāḥ) [i.e. it must not be usurped], as an obligatory precaution;\n3. it must not be made from the parts of the carcass [of an animal that has not been slaughtered according to Islamic law];\n4. it must not be from a predatory animal; and based on obligatory precaution, nor must it be from an animal whose meat is unlawful to eat;\n5.–6. if the person performing prayers is male, it must not be made from pure silk nor embroidered with gold.\nThe details of these conditions will be explained in the following rulings.",
+          ur: "نماز پڑھنے والے کے لباس کی چھ شرطیں ہیں :\n(اول:) پاک ہو۔\n(دوم:) مباح ہو احتیاط واجب کی بناپر۔\n(سوم:) مردارکے اجزاسے نہ بناہو۔\n(چہارم:) (درندہ )پھاڑ کھانے والے حیوان کے اجزاء سے نہ ہو بلکہ( احتیاط واجب کی بنا پر)حرام گوشت حیوان کے اجزا سے بھی نہ بناہو۔\n(پنجم اورششم:)اگرنماز پڑھنے والامردہوتواس کالباس خالص ریشم اور سونے کے تاروں کابناہوانہ ہو۔ان شرطوں کی تفصیل آئندہ مسائل میں بتائی جائے گی۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 785",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (785)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The clothes of a praying person should be:\n1. pure;\n2. permissible to use;\n3. not a part of an animal of not-ritually slaughtered;\n4. not a part of an animal of ḥarām meat;\n5. for men, not to be golden;\n6. for men, not to made from silk only."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "56.",
+          url: "https://www.leader.ir/en/book/241?sn=32490"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "clothingpure",
+    topicId: "clothing",
+    subject: {
+      en: "Clothing must be pure"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The first condition: the clothing worn by a person performing prayers must be pure. If someone voluntarily performs prayers with an impure body or with impure clothing, his prayers are invalid.",
+          ur: "نماز پڑھنے والے کالباس پاک ہوناضروری ہے۔ اگرکوئی شخص حالت اختیار میں نجس بدن یانجس لباس کے ساتھ نماز پڑھے تواس کی نماز باطل ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 786",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (786)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The clothes of a praying person should be pure."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "57.",
+          url: "https://www.leader.ir/en/book/241?sn=32491"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "impureunaware",
+    topicId: "clothing",
+    subject: {
+      en: "Praying unaware that the clothing was impure"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If someone is certain that his body or clothing is not impure and after prayers he realises it was impure, his prayers are valid.",
+          ur: "اگرکسی شخص کویہ یقین ہوکہ اس کابدن یالباس نجس نہیں ہے اور اس کے نجس ہونے کے بارے میں اسے نماز کے بعدپتا چلے تواس کی نماز صحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 789",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (789)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person does not know that his body or clothes are najis and realizes it after the prayer, his prayer is valid, but if he knew before the prayer that his body or clothes were najis, then forgot and performed the prayer with it, his prayer is invalid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "59.",
+          url: "https://www.leader.ir/en/book/241?sn=32491"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "impurityexemptions",
+    topicId: "clothing",
+    subject: {
+      en: "Cases where impurity on the body or clothing is excused"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In three cases – the details of which will follow afterwards – if the body or clothing of someone performing prayers is impure, his prayers are valid:\n1. if due to a wound, sore, or boil on his body the clothing or his body has become impure with blood;\n2. if the amount of blood that has made his body or clothing impure is less than the area covered by a dirham. Based on obligatory precaution, a dirham is equal to the size of the upper joint of the thumb;\n3. if he is compelled to perform prayers with an impure body or clothing.\nIn one case, [despite not falling under any of the three cases above,] if the clothing of someone performing prayers is impure, his prayers are valid, and that is when his small items of clothing – such as his socks and cap – are impure.\nThe laws (aḥkām) of these four situations will be explained in detail in the following rulings.",
+          ur: "تین صورتوں میں جن کی تفصیل نیچے بیان کی جارہی ہے اگر نماز پڑھنے والے کابدن یا لباس نجس بھی ہوتواس کی نماز صحیح ہے :\n(اول:)اس کے بدن کے زخم، جراحت یاپھوڑے کی وجہ سے اس کے لباس یا بدن پرخون لگ جائے۔\n(دوم:) اس کے بدن یالباس پردرہم(جس کی مقدارتقریباً انگوٹھے کے اوپر والی گرہ کے برابرہے )کی مقدار سے کم خون لگ جائے (احتیاط واجب کی بنا پر) درہم کی مقدار انگوٹھے کے پور کے برابر ہونا ضروری ہے۔\n(سوم:) وہ نجس بدن یالباس کے ساتھ نماز پڑھنے پرمجبورہو۔\nاس کےعلاوہ ایک اورصورت میں اگر نماز پڑھنے والے کا لباس نجس بھی ہوتواس کی نماز صحیح ہے اور وہ صورت یہ ہے کہ اس کاچھوٹالباس مثلاً موزہ اورٹوپی نجس ہو۔\nان چاروں صورتوں کے مفصل احکام آئندہ مسئلوں میں بیان کئے جائیں گے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 834",
+          url: "https://www.sistani.org/english/book/48/2221/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (834)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In the following four cases, if the body or clothes of a person who offers prayer are najis, his prayer is valid:"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "64.",
+          url: "https://www.leader.ir/en/book/241?sn=32492"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "woundblood",
+    topicId: "clothing",
+    subject: {
+      en: "Blood from a wound or sore"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If blood from a wound, sore, or boil is on the body or clothing of someone performing prayers, he can perform prayers with that blood as long as the wound, sore, or boil has not healed. The same applies to pus that comes out with blood or any medicine that is applied to the wound and becomes impure.",
+          ur: "اگر نماز پڑھنے والے کے بدن یالباس پرزخم یاجراحت یاپھوڑے کا خون ہوتووہ اس خون کے ساتھ اس وقت تک نماز پڑھ سکتاہے جب تک زخم یا جراحت یا پھوڑاٹھیک نہ ہوجائے اوراگراس کے بدن یالباس پرایسی پیپ ہوجوخون کے ساتھ نکلی ہو یا ایسی دوائی ہو جوزخم پرلگائی گئی ہواورنجس ہوگئی ہوتواس کے لئے بھی یہی حکم ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 835",
+          url: "https://www.sistani.org/english/book/48/2221/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (835)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If there is blood from a wound, sore or abscess on the body or clothes of the person performing the prayer, and rinsing the body or clothes or changing the clothes is unbearably difficult for him or for most people, he may offer prayer with that blood so long as the wound or abscess has not healed. The same ruling applies to pus which comes out with the blood, or a medicine applied to the wound that becomes najis."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "65.",
+          url: "https://www.leader.ir/en/book/241?sn=32492"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "usurpedclothing",
+    topicId: "clothing",
+    subject: {
+      en: "Usurped clothing"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The second condition: based on obligatory precaution, the clothing with which a person performing prayers covers his private parts must be permissible (mubāḥ) [i.e. it must not be usurped (ghaṣbī)]. If a person knows that wearing usurped clothing is unlawful, or he does not know the ruling due to his negligence, and he intentionally performs prayers with that clothing, then based on obligatory precaution, his prayers are invalid. However, with regard to usurped things that do not on their own cover the private parts, and things that the person performing prayers is not currently wearing – such as a big handkerchief or a loincloth in his pocket, even though they could cover his private parts – and things that he is currently wearing but under which he has some other clothes that are not usurped and which cover his private parts, in all of these cases, the fact that these things are usurped do not affect the validity of the prayer, although as a recommended precaution using such things should be avoided.",
+          ur: "(احتیاط واجب کی بناء پر)نماز پڑھنے والے کا وہ لباس مباح ہونا ضروری ہےجس سے اپنی دونوں شرم گاہ کو چھپاتا ہے پس اگرایک ایسا شخص جوجانتاہوکہ غصبی لباس پہنناحرام ہے یاکوتاہی کی وجہ سے مسئلہ کاحکم نہ جانتاہواور جان بوجھ کراس لباس کے ساتھ نماز پڑھے تواحتیاط کی بناپراس کی نماز باطل ہے۔ لیکن اگر لباس میں وہ چیزیں شامل ہوں جو تنہاشرم گاہ کونہیں ڈھانپ سکتیں اوراسی طرح وہ چیزیں جن سے اگرچہ شرم گاہ کوڈھانپاجاسکتاہولیکن نماز پڑھنے والے نے انہیں حالت نماز میں نہ پہن رکھاہومثلاً بڑارومال یالنگوٹی جوجیب میں رکھی ہواوراسی طرح وہ چیزیں جنہیں نمازی نے پہن رکھاہواگرچہ اس کے پاس ایک دوسرا مباح سترپوش ہو۔ ایسی تمام صورتوں میں ان (اضافی) چیزوں کے غصبی ہونے سے نمازمیں کوئی فرق نہیں پڑتا اگرچہ احتیاط ان کے ترک کردینے میں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 802",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (802)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The clothes of the praying person should be permissible (they should not be usurped)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "78.",
+          url: "https://www.leader.ir/en/book/241?sn=32493"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "nonslaughtered",
+    topicId: "clothing",
+    subject: {
+      en: "Clothing from an animal not ritually slaughtered"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The third condition: the clothing that is large enough to cover the private parts on its own of someone performing prayers must not be made from the carcass [of an animal that has not been slaughtered according to Islamic law] and whose blood gushes out when its jugular vein is cut. Based on obligatory precaution, this condition also applies to clothing that cannot cover the private parts on its own. And the recommended precaution is that one should not perform prayers with clothing that has been made from an animal whose blood does not gush out, such as a snake.",
+          ur: "ضروری ہے کہ نمازپڑھنے والے کالباس اورہروہ چیزجوشرم گاہ چھپانے کے لئے تنہاکافی ہےضروری ہے کہ جہندہ خون والے مردہ حیوان (یعنی ایسا حیوان جس کا خون ذبح کرتے وقت اچھل کر نکلے) کے اجزاء سے نہ بنی ہواور یہ شرط( احتیاط واجب کی بنا پر) ایسے کپڑےجو صرف شرم گاہ کو نہ چھپا سکتے ہوں میں بھی ثابت ہے اور احتیاط مستحب یہ ہے کہ اس لباس میں جو ایسے حیوان کے مردار سےبنا ہو جو خون جہندہ نہیں رکھتا (جیسے سانپ) تو اس کے ساتھ نماز نہ پڑھی جائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 808",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (808)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The clothes of a praying person should not be made of the parts of the body of an animal not slaughtered as per Islamic law if its blood gushes out when the body is cut. By obligatory caution, the same rule is applied if it is a cold-blooded animal."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "82.",
+          url: "https://www.leader.ir/en/book/241?sn=32494"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "haramanimal",
+    topicId: "clothing",
+    subject: {
+      en: "Clothing from an animal whose meat is unlawful"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The fourth condition: the clothing of a person performing prayers – apart from things that do not cover the private parts on their own, such as socks – must not be made from a predatory animal; in fact, based on obligatory precaution, it must not be made from an animal whose blood gushes out when its jugular vein is cut. Similarly, a person’s body and clothing must not be tainted with the urine, faeces, sweat, milk, or hair of such an animal. However, there is no problem if, for example, one strand of hair of such an animal is on his clothing, and the same applies if he carries something on his person from that animal; for example, in a container or box.",
+          ur: "ضروری ہے کہ نماز پڑھنے والے کالباس ان چیزوں کے علاوہ جو صرف شرم گاہ چھپانے کے لئے ناکافی ہے مثلاً جوراب (درندوں کے اجزاسے تیار کیا ہوا نہ ہوبلکہ احتیاط لازم کی بناپر)ہر اس جانور کے اجزاسے بناہوانہ ہوجس کاگوشت کھانا حرام ہے۔اسی طرح ضروری ہے کہ نماز پڑھنے والے کالباس اوربدن حرام گوشت جانور کے پیشاب،پاخانے،پسینے،دودھ اوربال سے آلودہ نہ ہولیکن اگرحرام گوشت جانور کاایک بال اس کے لباس پرلگاہوتوکوئی حرج نہیں ہے۔ اسی طرح نمازگزارکے ہمراہ ان میں سے کوئی چیز اگرڈبیہ (یابوتل وغیرہ) میں بندرکھی ہوتب بھی کوئی حرج نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 811",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (811)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The clothes of a praying person should not be made of the parts of an animal whose meat is ḥarām; even if a hair of it is on the clothes or body of the praying person, his prayer is invalid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "85.",
+          url: "https://www.leader.ir/en/book/241?sn=32495"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "goldmen",
+    topicId: "clothing",
+    subject: {
+      en: "Gold for men"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The fifth condition: wearing clothing embroidered with gold for men is unlawful, and prayers performed with it are invalid. However, for women, wearing it in prayers and at other times is not a problem.",
+          ur: "سونے کے تار سے بنا ہوا لباس مردوں کے لئے پہننا حرام ہے اور اس کے ساتھ نمازپڑھناباطل ہے لیکن عورتوں کے لئے نمازمیں یانماز کے علاوہ اس کے پہننے میں کوئی حرج نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 818",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (818)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Wearing clothes woven with gold is forbidden for men and prayer performed in them is invalid. However, there is no problem for women to wear them in any situation."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "89.",
+          url: "https://www.leader.ir/en/book/241?sn=32496"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "goldjewellerymen",
+    topicId: "clothing",
+    subject: {
+      en: "Gold jewellery and watches for men"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Wearing gold, such as a gold necklace, ring, and wristwatch, is unlawful for men, and performing prayers with it is invalid. However, for women, wearing it in prayers and at other times is not a problem.",
+          ur: "سوناپہننامثلاً سونے کی زنجیرگلے میں پہننا،سونے کی انگوٹھی ہاتھ میں پہننا، سونے کی گھڑی کلائی پرباندھنامردوں کے لئے حرام ہے اوران چیزوں کے ساتھ نمازپڑھناباطل ہے۔ لیکن عورتوں کے لئے نمازمیں اورنماز کے علاوہ ان چیزوں کے استعمال میں کوئی حرج نہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 819",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (819)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Wearing a gold chain, gold ring, as well as a gold wrist watch is forbidden for men even for a short period, such as the moment of reading the marriage contract, even for a purpose other than using it as an adornment and hidden from the sight of people. By obligatory caution, prayer performed with them is invalid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "90.",
+          url: "https://www.leader.ir/en/book/241?sn=32496"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "silkmen",
+    topicId: "clothing",
+    subject: {
+      en: "Pure silk for men"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The sixth condition: the clothing of a man performing prayers that can cover the private parts on its own must not be made of pure silk. Furthermore, it is unlawful for a man to wear such clothing at other times.",
+          ur: "نماز پڑھنے والے مردکالباس جو صرف شرم گاہ کو چھپا سکتا ہو ضروری ہے کہ خالص ریشم کا نہ ہو اورنماز کے علاوہ بھی مردوں کے لئے اس کا پہننا حرام ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 821",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (821)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The clothes of a man performing prayer, (even the things which are too small to cover the private parts such as skullcaps, socks) should not be made of pure silk. Wearing such clothes is forbidden for men outside the prayers as well, but there is no problem if a man has a silken handkerchief or anything similar in his pocket. It does not invalidate the prayer either."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "94.",
+          url: "https://www.leader.ir/en/book/241?sn=32497"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "silkwomen",
+    topicId: "clothing",
+    subject: {
+      en: "Silk for women"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "For women, there is no problem in wearing silk clothing in prayers and at other times.",
+          ur: "عورت کے لئے نماز میں یااس کے علاوہ ریشمی لباس پہننے میں کوئی حرج نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 825",
+          url: "https://www.sistani.org/english/book/48/2220/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (825)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A woman may wear silken clothes whether or not she is performing her prayer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "97.",
+          url: "https://www.leader.ir/en/book/241?sn=32497"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "usurpedplace",
+    topicId: "placeofprayer",
+    subject: {
+      en: "Praying on usurped property"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If someone performs prayers on usurped property, even if it is a carpet, couch, or something similar, then based on obligatory precaution, his prayers are invalid. However, there is no problem in performing prayers under a usurped roof or in a usurped tent.",
+          ur: "جوشخص غصبی جگہ پراگرچہ وہ قالین،تخت اوراسی طرح کی دوسری چیزیں ہوں ،نماز پڑھ رہاہوتو(احتیاط لازم کی بناپر) اس کی نماز باطل ہے، لیکن غصبی چھت کے نیچے اورغصبی خیمے میں نماز پڑھنے میں کوئی حرج نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 853",
+          url: "https://www.sistani.org/english/book/48/2224/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (853)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The place of offering the prayer should not be usurped."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "100.",
+          url: "https://www.leader.ir/en/book/241?sn=32500"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "stillplace",
+    topicId: "placeofprayer",
+    subject: {
+      en: "The place must be still"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The second condition: the place where obligatory prayers are performed must not move so vigorously that it would prevent the person from performing prayers from standing and performing rukūʿ and sujūd normally; in fact, based on obligatory precaution, the movement must not prevent his body from being steady. If one is compelled to perform prayers in such a place due to shortage of time or any other reason – for example, in certain types of cars or on a ship or train – he must remain still and face qibla as much as possible. If the vehicle moves away from the direction of qibla, he must turn and face the qibla again; and if it is not possible to face qibla precisely, he must try to ensure that the difference is less than ninety degrees; and if this is not possible, he must face qibla at least while performing takbīrat al‑iḥrām; and if even this is not possible, it is not necessary for him to face qibla.",
+          ur: "(دوسری شرط:) ضروری ہے کہ نمازی کی جگہ واجب نمازوں میں ایسی نہ ہوکہ تیزحرکت نمازی کے کھڑے ہونے یارکوع اورسجود کرنے میں اختیاری طور سے مانع ہوبلکہ (احتیاط لازم کی بناپر)ضروری ہے کہ اس کے بدن کوساکن رکھنے میں بھی مانع نہ ہواور اگر وقت کی تنگی یاکسی اوروجہ سے ایسی جگہ مثلاً بس، ٹرک،کشتی یاریل گاڑی میں نماز پڑھنے پر مجبور ہو تو جس قدرممکن ہوبدن کے ٹھہراؤ اورقبلے کی سمت کاخیال رکھے اوراگر سواری قبلے سے کسی دوسری طرف مڑجائے تواپنامنہ قبلے کی جانب موڑدے اور اگر قبلہ کی رعایت پورے طور سے ممکن نہ ہو تو کوشش کرے کہ اس کا (قبلہ)سےانحراف (۹۰) درجہ سے کم ہو اور اگر یہ بھی ممکن نہ ہو تو صرف تکبیرۃ الاحرام کہتے وقت قبلہ کی رعایت کرے اور اگر یہ بھی ممکن نہ ہوتوقبلہ کی رعایت ضروری نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 866",
+          url: "https://www.sistani.org/english/book/48/2224/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (866)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The place at which one is offering their prayer should be immovable so that one can pray while their body is still and without movement. Therefore, to pray at a place where one moves against their will (like in a moving car or train) or on some spring mattresses, is incorrect except if one is compelled to offer the prayer there due to time shortage or some other reason."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "106.",
+          url: "https://www.leader.ir/en/book/241?sn=32501"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "vehicleprayer",
+    topicId: "placeofprayer",
+    subject: {
+      en: "Praying in a car, train or plane"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Performing prayers in a car, ship, train etc. is permitted while it is standing still. The same applies when it is moving, provided that it does not move to such an extent that it prevents the person’s body from being steady.",
+          ur: "جب گاڑی،کشتی یاریل گاڑی وغیرہ کھڑی ہوئی ہوں توان میں نماز پڑھنے میں کوئی حرج نہیں اوراسی طرح جب چل رہی ہوں تواس حدتک نہ ہل جل رہی ہوں کہ نمازی کے بدن کے ٹھہراؤ میں حائل ہوں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 867",
+          url: "https://www.sistani.org/english/book/48/2224/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (867)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is obligatory for passengers who travel on buses to ask the driver to stop the bus at a place appropriate for praying if they fear of lapse of the prayer’s time; and it will be obligatory for the driver to accept their request. If he refuses to stop the bus for an acceptable reason, or for no reason, the passengers should perform the prayer on the bus while it is moving, and observe qiblah, standing position, rukū‘ and sajdah as much as possible."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "107.",
+          url: "https://www.leader.ir/en/book/241?sn=32501"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "aheadofgrave",
+    topicId: "placeofprayer",
+    subject: {
+      en: "Standing ahead of the grave of the Prophet or an Imam"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In prayers and other situations, it is unlawful to turn one’s back to the grave of the Prophet (Ṣ) or the Infallible Imams (ʿA) if it amounts to disrespecting them. However, if it would not amount to disrespecting them due to there being a large distance or an obstacle like a wall between the person and the grave, then there is no problem. Of course, on its own, the distance between the person and the sacred coffin, or the cloth that is placed over it, or the sacred lattice enclosure of the tomb (ḍarīḥ), would not be sufficient for discounting any disrespectful behaviour towards them; but in either case, if the person establishes an intention to attain proximity to Allah, his prayer will be valid.",
+          ur: "ضروری ہے کہ پیغمبراکرم ﷺ اور ائمہ اہل بیت علیھم السلام کی قبر کے آگے اگران کی بے حرمتی ہوتی ہوتونماز نہ پڑھے۔ اس کے علاوہ کسی اور صورت میں اشکال نہیں ۔لیکن دونوں صورتوں میں نماز صحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 872",
+          url: "https://www.sistani.org/english/book/48/2224/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (872)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The praying person should not stand ahead of the grave of the Holy Prophet (S.A.W.) or an infallible Imam (a.), but there is no problem with standing in line with them."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "109.",
+          url: "https://www.leader.ir/en/book/241?sn=32503"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "menwomengap",
+    topicId: "placeofprayer",
+    subject: {
+      en: "A man and a woman praying side by side"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a woman stands level with or in front of a man and they both start prayers together, then based on obligatory precaution, they must perform the prayer again. If one of them starts prayers before the other, then based on obligatory precaution, the prayer of the one who performed takbīrat al‑iḥrām second is invalid, and the prayer of the one who performed takbīrat al‑iḥrām first is valid provided that what is mentioned in the next ruling is observed; if it is not observed, the prayer of the first person who performed takbīrat al‑iḥrām will also be invalid. However, if observing what is mentioned in the next ruling is not possible, then the person should continue with the prayer and it will be valid.",
+          ur: "اگرکوئی عورت مرد کے برابریاآگے کھڑی ہواوردونوں بیک وقت نماز پڑھنے لگیں تو(احتیاط واجب کی بنا پر)ضروری ہے کہ نمازکودوبارہ پڑھیں اوریہی حکم ہے اگرایک، دوسرے سے پہلے نماز کے لئے کھڑاہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 873",
+          url: "https://www.sistani.org/english/book/48/2224/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (873)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "According to the obligatory caution, there must be at least one span gap between a man and a woman who are praying (outside Masjid al- Ḥarām), and in this case, if they stand (in the same row) next to each other or the woman stands in front of the man, their prayer is correct. It makes no difference whether or not they are maḥrams."
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "112.",
+          url: "https://www.leader.ir/en/book/241?sn=32505"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "insidekaba",
+    topicId: "placeofprayer",
+    subject: {
+      en: "Obligatory prayers inside the Kaʿbah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The obligatory precaution is that obligatory prayers must not be wilfully performed inside the Kaʿbah or on its roof. There is no problem, however, if one is compelled.",
+          ur: "احتیاط واجب یہ ہے کہ اختیارکی حالت میں خانۂ کعبہ کے اندراور اس کی چھت کے اوپرواجب نماز نہ پڑھی جائے۔ لیکن مجبوری کی حالت میں کوئی اشکال نہیں ہے۔"
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 877",
+          url: "https://www.sistani.org/english/book/48/2224/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (877)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      }
+    ]
+  },
+  {
+    id: "mosquevirtue",
+    topicId: "placeofprayer",
+    subject: {
+      en: "Praying in a mosque"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In the sacred law of Islam, it has been highly advised to perform prayers in a mosque. The best of all mosques is Masjid al-Ḥarām, and after that the Mosque of the Prophet (Ṣ), and after that the Mosque of Kufa, and after that the al-Aqsa Mosque, and after that the jāmiʿ mosque of every town, and after that one’s local mosque, and after that a mosque in the bazaar.",
+          ur: "اسلام کی مقدس شریعت میں بہت تاکیدکی گئی ہے کہ نمازمسجد میں پڑھی جائے۔ دنیا بھرکی ساری مسجدوں میں سب سے بہترمسجدالحرام اوراس کے بعد مسجد نبویؐ ہے اوراس کے بعدمسجدکوفہ اور اس کے بعدمسجدبیت المقدس کادرجہ ہے۔ اس کے بعدشہرکی جامع مسجداوراس کے بعدمحلے کی مسجداور اس کے بعدبازارکی مسجد کانمبر آتا ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 879",
+          url: "https://www.sistani.org/english/book/48/2225/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (879)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is mustaḥabb to offer prayer in the following places:\n1. a masjid; (The best masjid is Masjid al- Ḥarām, followed by Masjid al-Nabī (peace be upon him and his family), then Masjid of Kūfah, Masjid al-Aqṣā, and then masjid jāmi‘ in any city).\n2. The shrine of an infallible Imam (a.). To offer prayer in their shrine brings more reward than offering in a masjid.\n3. To offer prayer in the holy shrine of a prophet (a.) or the place in which a friend of Allah, a pious man or a great scholar (upon whom be the blessing of Allah) is buried."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "114.",
+          url: "https://www.leader.ir/en/book/241?sn=32506"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "mosqueimpure",
+    topicId: "placeofprayer",
+    subject: {
+      en: "Making a mosque impure"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is unlawful to make impure a mosque’s floor, ceiling, roof, and inside walls, as well as fixtures and fittings that are deemed to be part of the building, such as doors and windows.\nWhoever finds out that it has become impure must immediately purify it. The recommended precaution is that the outside walls of the mosque should not be made impure either, but if they become impure, it is not necessary to purify them. However, if making the outside walls of a mosque impure amounts to disrespecting the mosque, it would, of course, be unlawful and make it necessary to purify them to the extent that it would no longer be considered disrespectful.",
+          ur: "مسجد کی زمین،اندرونی چھت اوراندرونی دیوارکونجس کرناحرام ہے اورجس شخص کوپتا چلے کہ ان میں سے کوئی مقام نجس ہوگیاہے توضروری ہے کہ اس کی نجاست کوفوراً دورکرے اور احتیاط مستحب یہ ہے کہ مسجدکی دیوار کے بیرونی حصے کو بھی نجس نہ کیاجائے اوراگروہ نجس ہوجائے تو نجاست کاہٹانالازم نہیں لیکن اگردیوار کابیرونی حصہ نجس کرنامسجد کی بے حرمتی کاسبب ہوتوقطعاً حرام ہے اور اس قدرنجاست کازائل کرناکہ جس سے بے حرمتی ختم ہوجائے ضروری ہے۔"
+        },
+        hukm: "haram",
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 886",
+          url: "https://www.sistani.org/english/book/48/2227/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (886)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is forbidden to make the floor, roof, ceiling, and walls of a masjid najis, and if a masjid becomes najis, it is obligatory to purify it immediately."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "115.",
+          url: "https://www.leader.ir/en/book/241?sn=32507"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "adhanrecommended",
+    topicId: "adhaniqamah",
+    subject: {
+      en: "Status of adhān and iqāmah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is recommended for both men and women to say adhān and then iqāmah before the daily obligatory prayers; however, they have not been sanctioned in Islamic law (they are not mashrūʿ) for other obligatory prayers or for recommended prayers. If Eid al-Fiṭr and Eid al-Aḍḥā prayers are performed in congregation, it is recommended to say ‘aṣṣalāh’ three times before commencing them.",
+          ur: "ہرمرداورعورت کے لئے مستحب ہے کہ شب وروز کی(روزانہ) کی واجب نمازوں سے پہلے اذان اور اقامت کہے اورایساکرنادوسری واجب یامستحب نمازوں کے لئےجائز نہیں لیکن عیدفطراورعیدقربان سے پہلے جب کہ نمازباجماعت پڑھیں تومستحب ہے کہ تین مرتبہ ’’الصلوٰۃ‘‘ کہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 902",
+          url: "https://www.sistani.org/english/book/48/2228/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (902)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Reciting the adhān and iqāmah before the daily prayers is mustaḥabb. This recommendation is emphasized about the fajr and maghrib prayers, especially when they are performed in congregation, but reciting adhān and iqāmah is not prescribed for other obligatory prayers, such as the āyāt prayer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "129.",
+          url: "https://www.leader.ir/en/book/241?sn=32508"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "adhanwording",
+    topicId: "adhaniqamah",
+    subject: {
+      en: "The words of adhān and iqāmah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Adhān consists of the following eighteen sentences:\nIqāmah consists of the following seventeen sentences:",
+          ur: "اذان اٹھارہ جملوں پرمشتمل ہے:\nاَللہُ اَکْبَرُ اَللہُ اَکْبَرُ اَللہُ اَکْبَرُ اَللہُ اَکْبَرُ\nاَشْھَدُ اَنْ لَّااِلٰہَ اِلَّا اللہُ اَشْھَدُ اَنْ لَّااِلٰہَ اِلَّا اللہُ\nاَشْھَدُاَنَّ مُحَمَّدًارَّسُوْلُ اللہِ اَشْھَدُاَنَّ مُحَمَّدًارَّسُوْلُ اللہِ"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 904",
+          url: "https://www.sistani.org/english/book/48/2228/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (904)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The adhān consists of eighteen phrases, as follows:\n1. Allāhu akbar, four times (“God is greater than any description”).\n2. Ashhadu allā ilāha illallāh, two times (“I testify that there is no god but Allah”).\n3. Ashhadu anna Muḥammadan rasūlullāh, two times (“I testify that Muhammad is Allah’s Messenger”).\n4. Ḥayya ‘alaṣ ṣalāh, two times (“Hasten to prayer”).\n5. Ḥayya ‘alal falāḥ, two times (“Hasten to ultimate happiness”).\n6. Ḥayya ‘alā khayril ‘amal, two times (“Hasten to the best of acts”).\n7. Allāhu akbar, two times (“God is greater than any description”).\n8. Lā ilāha illallāh, two times (“There is no god but Allah”).\nand the iqāmah is like the adhān, except for the following differences:\nThe first phrase is repeated twice instead of four times.\nBetween the 7th and 8th phrases, the following is repeated twice:\nqad qāmati-ṣṣalāh;\ncertainly, the prayer has been established;\nThe final phrase, lā ilāha ill-Allāh, is said once instead of repeated twice."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "130.",
+          url: "https://www.leader.ir/en/book/241?sn=32508"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "shahadathalithah",
+    topicId: "adhaniqamah",
+    subject: {
+      en: "“Ashhadu anna ʿAliyyan waliyyullāh”"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The sentence:\nأَشْهَدُ أَنَّ عَلِيًّا وَلِيُّ اللهِ\nashhadu anna ʿaliyyan waliyyul lāh\n...is not a part of adhān and iqāmah, but it is good to say it after the sentence ‘ashhadu anna muḥammadar rasūlul lāh’ with the intention of attaining proximity to Allah.\nTranslation of the sentences of adhān and iqāmah:",
+          ur: "اَشْھَدُاَنَّ عَلِیًّاوَلِیُّ اللہِ اذان اوراقامت کاجزنہیں ہے، لیکن اگر اَشْھَدُاَنَّ مُحَمَّدًارَّسُوْلُ اللہِ کے بعدقربت کی نیت سے کہاجائے تواچھاہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 905",
+          url: "https://www.sistani.org/english/book/48/2228/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (905)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Saying “ashhadu anna ‘Aliyyan waliyyullāh” (“I testify that Ali is the Friend of God”) in the adhān and iqāmah with the intention of it being a symbol for the Shi‘a is good and important, and it should be said only with the intention of closeness to Allah, but it is not a part of the adhān and iqāmah."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "131.",
+          url: "https://www.leader.ir/en/book/241?sn=32508"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "adhancongregation",
+    topicId: "adhaniqamah",
+    subject: {
+      en: "Joining a congregation that has said adhān"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If adhān and iqāmah have been said for a congregational prayer, a person joining that congregation must not say adhān and iqāmah for his own prayers.",
+          ur: "اگرنماز جماعت کے لئے اذان اوراقامت کہی جاچکی ہوتوجو شخص اس جماعت کے ساتھ نماز پڑھ رہاہواس کے لئے ضروری نہیں کہ اپنی نماز کے لئے اذان اور اقامت کہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 909",
+          url: "https://www.sistani.org/english/book/48/2228/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (909)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If they have said adhān and iqāmah for congregational prayer, a person who prays with that congregation should not say adhān and iqāmah for his/her own prayer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "134.",
+          url: "https://www.leader.ir/en/book/241?sn=32508"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "adhanafter",
+    topicId: "adhaniqamah",
+    subject: {
+      en: "Adhān and iqāmah after the time has set in"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Adhān and iqāmah must be said after the time for prayer has set in. If a person says them before that time – whether intentionally or forgetfully – they are invalid, except in the case when the time of prayer sets in during a prayer and the prayer is ruled to be valid, as explained in Ruling 731.",
+          ur: "ضروری ہے کہ اذان اوراقامت، نماز کاوقت داخل ہونے کے بعد کہی جائیں اوراگرکوئی شخص عمداً یابھول کروقت سے پہلے کہے توباطل ہے مگرایسی صورت میں جب کہ وسط نماز میں وقت داخل ہوتواس نمازپرصحیح کاحکم لگے گاکہ جس کا مسئلہ ( ۷۳۱) میں ذکرہوچکاہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 921",
+          url: "https://www.sistani.org/english/book/48/2228/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (921)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      }
+    ]
+  },
+  {
+    id: "iqamahstanding",
+    topicId: "adhaniqamah",
+    subject: {
+      en: "Saying iqāmah standing and with ṭahārah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Iqāmah must be said after adhān, and it is a requirement that iqāmah be said while one is standing and in the state of ritual purity, i.e. while one has wuḍūʾ, ghusl, or tayammum.",
+          ur: "ضروری ہے کہ اقامت،اذان کے بعدکہی جائے اس کےعلاوہ اقامت میں معتبرہے کہ کھڑے ہوکراورحدث سے پاک ہوکر(وضویاغسل یاتیمم کرکے) کہی جائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 917",
+          url: "https://www.sistani.org/english/book/48/2228/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (917)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      }
+    ]
+  },
+  {
+    id: "elevencomponents",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "The eleven obligatory components"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "There are eleven obligatory components of the prayer:\n1. intention (niyyah);\n2. standing (qiyām);\n3. takbīrat al‑iḥrām, i.e. saying ‘allāhu akbar’ at the beginning of the prayer;\n4. bowing (rukūʿ);\n5. prostrating (sujūd);\n6. recitation (qirāʾah);\n7. declaring in rukūʿ and sujūd that Allah is free from imperfections (dhikr);\n8. testifying (tashahhud);\n9. salutation (salām);\n10. sequence (tartīb);\n11. close succession (muwālāh).",
+          ur: "واجبات نمازگیارہ ہیں :\n۱) نیت ۲) قیام یعنی کھڑے ہونا\n۳) تکبیرۃ الاحرام یعنی نماز کے شروع میں اللہ اکبر کہنا ۴)رکوع ۵)سجود\n۶) قرأت ۷)ذکر ۸)تشہد ۹) سلام ۱۰) ترتیب\n۱۱) موالات یعنی اجزائے نماز کا پے درپے بجالانا۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Obligatory Components of the Prayer — section introduction",
+          url: "https://www.sistani.org/english/book/48/2229/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "(تمہید)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "There are eleven obligatory acts in a prayer as follows:\n1. Intention\n2. Takbīrah al-iḥrām (saying Allāhu akbar at the beginning of the prayer);\n3. Being in a standing posture;\n4. Recitation;\n5. Rukū‘ (bowing);\n6. Sajdah (prostration);\n7. Dhikr (the prescribed recitation while doing rukū‘ and sajdah)\n8. Tashahhud (bearing witness)\n9. Salām\n10. Tartīb (sequence)\n11. Muwālāt (succession)\nNow we will discuss these obligatory acts in details as well as their rules:"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "138.",
+          url: "https://www.leader.ir/en/book/241?sn=32509"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "rukns",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "The elemental parts (rukn)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Some of the obligatory components of the prayer are elemental (rukn), i.e. if one does not perform them – whether intentionally or mistakenly – the prayer is invalid. Some other obligatory components are not elemental, i.e. if they are omitted mistakenly, the prayer is not invalid. There are five rukns of the prayer:\n1. intention;\n2. takbīrat al‑iḥrām while standing;\n3. standing that is joined to rukūʿ, i.e. standing before rukūʿ;\n4. rukūʿ;\n5. two sajdahs in one rakʿah.\nIf a rukn is intentionally performed more than the prescribed number of times, the prayer is invalid. If it is done mistakenly, and if the additional act is a rukūʿ or two sajdahs in one rakʿah, then based on obligatory precaution, the prayer is invalid; otherwise [i.e. if the additional act is not a rukūʿ or two sajdahs in one rakʿah], it is not invalid.",
+          ur: "نماز کے واجبات میں سے بعض اس کے رکن ہیں یعنی انسان انہیں بجانہ لائے توخواہ ایساکرنا(عمداً ہویاغلطی سے) ہونمازباطل ہوجاتی ہے اوربعض واجبات رکن نہیں ہیں یعنی اگروہ غلطی سے چھوٹ جائیں تو نماز باطل نہیں ہوتی۔\nنماز کے ارکان پانچ ہیں :\n۱:) نیت"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 928",
+          url: "https://www.sistani.org/english/book/48/2229/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (928)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The foundational elements (rukns) of prayer are:\n1. intention\n2. takbīrah al-iḥrām\n3. standing (at the time of saying takbīrah al-iḥrām and before the rukū‘)\n4. rukū‘\n5. two sajdah."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "140.",
+          url: "https://www.leader.ir/en/book/241?sn=32509"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "intention",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Intention (niyyah)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One must perform prayers with the intention of qurbah, i.e. in humility and obedience to the Lord of the worlds. It is not necessary for him to make the intention pass through his heart or, for example, to say ‘I am performing four rakʿahs of the ẓuhr prayer qurbatan ilal lāh [to attain proximity to Allah]’.",
+          ur: "ضروری ہے کہ انسان نماز قربت کی نیت سے( یعنی تذلل اور خدا کےمقابل سرجھکانے کے لئے ہی) بجالائے اوریہ ضروری نہیں کہ نیت کواپنے دل سے گزارے یامثلاً زبان سے کہے کہ چاررکعت نمازظہرپڑھتاہوں قربۃً الی اللہ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 929",
+          url: "https://www.sistani.org/english/book/48/2230/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (929)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Making an intention is obligatory for performing the prayer, which means performing a specified prayer to comply with the order of God."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "141.",
+          url: "https://www.leader.ir/en/book/241?sn=32510"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "intentionspecified",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Specifying which prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person makes the intention in ẓuhr or ʿaṣr prayers that ‘I am performing a four rakʿah prayer’ but does not specify if it is the ẓuhr or ʿaṣr prayer, his prayer is invalid. However, it is sufficient if he specifies the ẓuhr prayer as the first prayer and the ʿaṣr prayer as the second prayer. With regard to someone for whom it is obligatory, for example, to make up a ẓuhr prayer, if he wants to make up that prayer or perform the ẓuhr prayer within the prescribed time for ẓuhr prayers, he must specify in his intention which prayer he is performing.",
+          ur: "اگرکوئی شخص ظہر کی نمازمیں یاعصرکی نماز میں نیت کرے کہ چار رکعت نماز پڑھتاہوں لیکن اس امرکاتعین نہ کرے کہ نمازظہرکی ہے یاعصرکی تواس کی نمازباطل ہے۔ لیکن کافی ہے کہ نماز کو پہلی نماز کےعنوان سے اور نماز عصر کو دوسری نماز کے عنوان سے معین کرےنیزمثال کے طورپراگر کسی شخص پرنمازظہرکی قضاواجب ہواوروہ اس قضا نماز یانمازظہرکو ’’ظہرکے وقت‘‘ میں پڑھناچاہے تو ضروری ہے کہ جونمازوہ پڑھے نیت میں اس کاتعین کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 930",
+          url: "https://www.sistani.org/english/book/48/2230/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (930)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person should know which prayer he is performing. Hence, if a person, for example, makes the intention to perform a four-rak‘ah prayer, but does not specify whether it is ẓuhr or ‘aṣr prayer, his prayer is void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "143.",
+          url: "https://www.leader.ir/en/book/241?sn=32510"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "riya",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Praying to be seen by others (riyāʾ)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One must only perform prayers in humility to the Lord of the worlds; therefore, if one performs prayers ostentatiously – i.e. to show off to people – his prayer is invalid, irrespective of whether he does so solely for people or partly for Allah the Exalted and partly for people.",
+          ur: "ضروری ہے کہ انسان فقط خداوندعالم کی بارگاہ میں تذلل کے لئے نمازپڑھے پس جو شخص ریاکرے (یعنی لوگوں کودکھانے کے لئے نمازپڑھے) تو اس کی نمازباطل ہے خواہ یہ نماز پڑھنافقط لوگوں کویاخدااورلوگوں دونوں کودکھانے کے لئے ہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 932",
+          url: "https://www.sistani.org/english/book/48/2230/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (932)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person should perform the prayer to comply with the order of God. Thus, if a person performs the very prayer for riyā’, i.e. in order to pretend to be religious or the like, it is ḥarām and the prayer is void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "144.",
+          url: "https://www.leader.ir/en/book/241?sn=32510"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "takbir",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Takbīrat al-iḥrām"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Saying ‘allāhu akbar’ at the beginning of every prayer is obligatory and an elementary part of the prayer. The letters in ‘allāh’ and ‘akbar’, as well as the two words ‘allāh’ and ‘akbar’, must be said in succession. Furthermore, these two words must be pronounced in correct Arabic; if someone pronounces them in incorrect Arabic or, for example, says their translation in English, it is not correct.",
+          ur: "ہرنماز کے شروع میں ’’اللہ اکبر‘‘ کہناواجب اوررکن ہے اورضروری ہے کہ انسان’’ اللہ‘‘ کے حروف اور’’اکبر‘‘کے حروف اوردوکلمے اللہ اوراکبرپے درپے کہے اور یہ بھی ضروری ہے کہ یہ دوکلمے صحیح عربی میں کہے جائیں اوراگرکوئی شخص غلط عربی میں کہے مثلاً ان کاکسی زبان میں ترجمہ کرکے کہے توصحیح نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 934",
+          url: "https://www.sistani.org/english/book/48/2231/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (934)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Saying takbīrah al-iḥrām is obligatory for the prayer; namely, saying Allāhu akbar at the beginning of the prayer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "164.",
+          url: "https://www.leader.ir/en/book/241?sn=32512"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "takbirstill",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Being still for takbīrat al-iḥrām"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "When saying takbīrat al‑iḥrām in an obligatory prayer, the body must be still; if one intentionally says takbīrat al‑iḥrām while his body is moving, it is invalid.",
+          ur: "تکبیرۃ الاحرام کہتے وقت ضروری ہے کہ انسان کابدن ساکن ہو اور اگرکوئی شخص جان بوجھ کر اس حالت میں تکبیرۃ الاحرام کہے کہ اس کا بدن حرکت میں ہوتو باطل ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 937",
+          url: "https://www.sistani.org/english/book/48/2231/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (937)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is necessary that during pronunciation of the takbīrah al-iḥrām, the person’s body be still, so if a person intentionally pronounces takbīrah al-iḥrām while his body is moving, the prayer is invalid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "168.",
+          url: "https://www.leader.ir/en/book/241?sn=32512"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qiyam",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Standing (qiyām)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Standing while saying takbīrat al‑iḥrām and standing before rukūʿ – which is called ‘the standing that is connected to the rukūʿ’ (al‑qiyām al‑muttaṣil bil‑rukūʿ) – is a rukn. However, standing while reciting Sūrat al-Ḥamd and the other surah, and standing after rukūʿ, are not rukns; and if one omits these forgetfully, his prayer is valid.",
+          ur: "تکبیرۃ الاحرام کہنے کے موقع پرقیام اوررکوع سے پہلے والاقیام جسے (قیام متصل برکوع کہتے ہیں ) رکن ہے۔ لیکن الحمداورسورہ پڑھنے کے موقع پرقیام اوررکوع کے بعدقیام رکن نہیں ہے اوراگرکوئی شخص اسے بھول چوک کی وجہ سے ترک کردے تواس کی نمازصحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 944",
+          url: "https://www.sistani.org/english/book/48/2232/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (944)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Standing while uttering takbīrah al-iḥrām and before going to rukū‘ is considered a foundational (rukn) element, meaning that if a person abandons it – even by mistake or due to forgetting it, the prayer becomes void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "149.",
+          url: "https://www.leader.ir/en/book/241?sn=32511"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qiyamstill",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Not moving or leaning while standing"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "When one stands for takbīrat al‑iḥrām or qirāʾah, he must not walk nor incline to one side. And based on obligatory precaution, he must not move his body or voluntarily lean on anything; however, there is no problem if he is compelled to.",
+          ur: "جس وقت ایک شخص تکبیرۃ الاحرام یاقرأت کے لئے کھڑاہوضروری ہے کہ راستہ نہ چلے اورکسی طرف نہ جھکے اوراحتیاط لازم کی بناپربدن کو حرکت نہ دے اور اختیار کی حالت میں کسی جگہ ٹیک نہ لگائے لیکن اگرایساکرنابہ امرمجبوری ہوتوکوئی اشکال نہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 947",
+          url: "https://www.sistani.org/english/book/48/2232/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (947)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "When a person stands for recitation, he should not move his body, nor should he tilt towards one side or lean on anything, unless it is inevitable to do so, or he does so by mistake or forgetfully."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "153.",
+          url: "https://www.leader.ir/en/book/241?sn=32511"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "unabletostand",
+    topicId: "obligatoryparts",
+    subject: {
+      en: "Praying sitting or lying down"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person is unable to stand while performing prayers, he must sit down; and if he is unable to sit down, he must lie down. However, he must not say any of the obligatory dhikrs until his body becomes still.",
+          ur: "نمازکے دوران اگرکوئی شخص کھڑے ہونے کے قابل نہ ہوتو ضروری ہے کہ بیٹھ جائے اوراگربیٹھ بھی نہ سکتاہوتوضروری ہے کہ لیٹ جائے،لیکن جب تک اس کے بدن کوسکون حاصل نہ ہوضروری ہے کہ کوئی واجب ذکرنہ پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 955",
+          url: "https://www.sistani.org/english/book/48/2232/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (955)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who is not able to offer the prayer in a standing posture should offer the prayer in a sitting posture, but if he is able to stand and lean on something, he should offer his prayer in a standing posture."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "156.",
+          url: "https://www.leader.ir/en/book/241?sn=32511"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "fatihasurah",
+    topicId: "qiraah",
+    subject: {
+      en: "Al-Ḥamd and another surah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In the first and second rakʿahs of the daily obligatory prayers, one must recite Sūrat al-Ḥamd followed by another surah; and based on obligatory precaution, [the second surah] must be a complete surah. Also based on obligatory precaution, ‘Sūrat al-Ḍuḥā’ and ‘Sūrat al-Sharḥ’, and similarly ‘Sūrat al-Fīl’ and ‘Sūrah Quraysh’, are counted as one surah in prayers.",
+          ur: "ضروری ہے کہ انسان روزانہ کی واجب نمازوں کی پہلی اور دوسری رکعت میں پہلے الحمداور اس کے بعد(احتیاط واجب کی بناپر)کسی ایک پورے سورے کی تلاوت کرے اور’’وَالضُّحیٰ‘‘ اور’’اَلَمْ نَشْرَح‘‘کی سورتیں اور اسی طرح ’’سورۂ فیل‘‘ اور’’سورۂ قریش‘‘( احتیاط واجب کی بناپر)نماز میں ایک سورت شمارہوتی ہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 964",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (964)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "One should recite chapter al-Fātiḥah in the first and second rak‘ah of the daily obligatory prayers, and thereafter, one should recite, by obligatory caution, a complete chapter."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "172.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "shorttimesurah",
+    topicId: "qiraah",
+    subject: {
+      en: "When time is short"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If the time for prayers is short or one is compelled to not recite the other surah – for example, he fears that if he recites the other surah, a thief, predatory animal, or something else will harm him – or if one has some urgent matter to attend to, then in these cases, he can leave out reciting the other surah. In fact, when time is short and in some cases where a person is fearful, he must not recite the other surah.",
+          ur: "اگرنمازکاوقت تنگ ہویاانسان کسی مجبوری کی وجہ سے سورہ نہ پڑھ سکتاہو مثلاًاسے خوف ہوکہ اگرسورہ پڑھے گاتوچوریادرندہ یاکوئی چیزاسے نقصان پہنچائے گی یااسے ضروری کام ہوتواگروہ چاہے توسورہ نہ پڑھے بلکہ وقت تنگ ہونے کی صورت میں اور خوف کی بعض حالتوں میں ضروری ہے کہ وہ سورہ نہ پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 965",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (965)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If the time is short for the prayer, he should not recite the chapter."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "174.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "forgotrecitation",
+    topicId: "qiraah",
+    subject: {
+      en: "Forgetting the recitation"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person forgets to recite Sūrat al-Ḥamd and the other surah, or one of them, and realises this after going into rukūʿ, his prayers are valid.",
+          ur: "اگرکوئی شخص الحمداورسورہ یاان میں سے کسی ایک کاپڑھنابھول جائے اور رکوع میں جانے کے بعداسے یادآئے تواس کی نمازصحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 967",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (967)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person forgets to recite chapter al-Fātiḥah and the other chapter, or one of them, and after he goes to rukū‘, he realizes it, his prayer is correct."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "176.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahsurahs",
+    topicId: "qiraah",
+    subject: {
+      en: "Surahs with an obligatory sajdah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If during obligatory prayers one intentionally recites one of the four surahs that contain an obligatory sajdah – as mentioned in Ruling 354 – it is obligatory that he perform sajdah after reciting the verse of sajdah. However, based on obligatory precaution, by performing the sajdah his prayer becomes invalid, and it is obligatory that he perform the prayer again unless he performed the sajdah forgetfully. If he does not perform the sajdah, he can continue with the prayer but he will have sinned for not performing the sajdah.",
+          ur: "اگرکوئی شخص جان بوجھ کرفریضہ نماز میں ان چارسوروں میں سے کوئی ایک سورہ پڑھے جن میں آیۂ سجدہ ہواورجن کاذکرمسئلہ (۳۵۴ )میں کیاگیاہے توواجب ہے کہ آیۂ سجدہ پڑھنے کے بعدسجدہ کرے لیکن اگرسجدہ بجالائے تو(احتیاط کی بناپر) اس کی نماز باطل ہے اورضروری ہے کہ اسے دوبارہ پڑھے لیکن یہ کہ بھول کر سجدہ کرے اور اگرسجدہ نہ کرے تواپنی نمازجاری رکھ سکتاہے اگرچہ سجدہ نہ کرکے اس نے گناہ کیاہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 969",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (969)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In the obligatory prayers, it is not permissible to recite chapters that contain verses of obligatory sajdah, and if a person intentionally or by mistake recites one of those chapters, he should, by obligatory caution, perform sajdah instantly upon reciting the verse of sajdah; then he should stand up and finish the chapter if it has not ended yet and finish the prayer, and then repeat the prayer. In case he realizes this before reaching the verse of sajdah, based on obligatory caution, he should abandon that chapter and recite another chapter and perform the prayer to the end and then repeat the prayer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "178.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "ikhlaskafirun",
+    topicId: "qiraah",
+    subject: {
+      en: "Starting al-Ikhlāṣ or al-Kāfirūn"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If after Sūrat al-Ḥamd one begins reciting Sūrat al-Ikhlāṣ or Sūrat al-Kāfirūn, he cannot leave it and recite another surah instead. This rule applies to the nāfilah prayers as well based on obligatory precaution. However, in the Friday prayer and the prayers on Friday, if one forgetfully recites one of these two surahs instead of Sūrat al-Jumuʿah and Sūrat al-Munāfiqūn, he can leave it and recite Sūrat al-Jumuʿah and Sūrat al-Munāfiqūn instead; however, the recommended precaution is that one should not leave it [i.e. Sūrat al-Ikhlāṣ or Sūrat al-Kāfirūn] after having recited half of it."
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 974*",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        verification: "A",
+        urduEditionLag: true,
+        urduNote: "The official Urdu edition has the pre-revision wording of this ruling.",
+        note: "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6). Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If after chapter al-Fātiḥah, the praying person begins reciting chapter al-Ikhlāṣ or al-Kāfirūn, he cannot abandon it and recite another chapter. However, if in the Friday prayer, he recites one of these two chapters instead of chapter al-Jumu‘ah and chapter al-Munāfiqūn inadvertently, he can abandon them and start reciting chapter al-Jumu‘ah and chapter al-Munāfiqūn."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "180.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "aloudmen",
+    topicId: "qiraah",
+    subject: {
+      en: "Reciting aloud or quietly: men"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, it is obligatory for a man to recite Sūrat al-Ḥamd and the other surah aloud (jahr) in ṣubḥ, maghrib, and ʿishāʾ prayers. And based on obligatory precaution, it is obligatory for a man and a woman to recite Sūrat al-Ḥamd and the other surah in ẓuhr and ʿaṣr in a whisper (ikhfāt).",
+          ur: "مردپر(احتیاط کی بناءپر) واجب ہے کہ صبح اورمغرب وعشاکی نمازوں میں الحمد اور سورہ بلندآواز سے پڑھے اورمرداورعورت دونوں پر(احتیاط کی بناپر) واجب ہے کہ نماز ظہروعصرمیں الحمداورسورہ آہستہ پڑھیں ۔"
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 978",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (978)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is obligatory for men to recite chapter al-Fātiḥah and the second chapter in fajr, maghrib and ‘ishā’ prayers loudly (in jahr), and in ẓuhr and ‘aṣr prayers in a whispering manner (ikhfāt)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "190.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "aloudsubhmaghrib",
+    topicId: "qiraah",
+    subject: {
+      en: "Aloud in ṣubḥ, maghrib and ʿishāʾ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, in ṣubḥ, maghrib, and ʿishāʾ prayers, a man must be careful that he recites all the words of Sūrat al-Ḥamd and the other surah aloud, even their last letters.",
+          ur: "(احتیاط کی بناپر)ضروری ہے کہ مردصبح اورمغرب وعشا کی نمازمیں خیال رکھے کہ الحمداور سورہ کے تمام کلمات حتیٰ کہ ان کے آخری حرف تک بلندآوازسے پڑھے۔"
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 979",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (979)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      }
+    ]
+  },
+  {
+    id: "aloudwomen",
+    topicId: "qiraah",
+    subject: {
+      en: "Reciting aloud or quietly: women"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A woman can recite Sūrat al-Ḥamd and the other surah in ṣubḥ, maghrib, and ʿishāʾ prayers aloud or in a whisper. However, if someone who is not her maḥram is able to hear her voice and the situation is such that it would be unlawful for her to make her voice heard by a non-maḥram man, then she must recite them in a whisper. And if she intentionally recites them aloud, her prayer will be invalid based on obligatory precaution.",
+          ur: "صبح کی نمازاورمغرب وعشاکی نماز میں عورت الحمداورسورہ بلندآواز سے یاآہستہ جیساچاہے پڑھ سکتی ہے۔ لیکن اگرنامحرم اس کی آوازسن رہاہواورایسی جگہ ہو جہاں نامحرم کو آواز سنانا حرام ہوتوضروری ہے آہستہ پڑھے اور اگر جان بوجھ کر بلند آواز سے پڑھے تو (احتیاط واجب کی بناپر) اسکی نمازباطل ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 980",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (980)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In the morning, maghrib and ‘ishā’ prayers, a female has the choice to recite the chapter al-Fātiḥah and another chapter quietly or loudly unless a non-maḥram is hearing her voice, in case of which it is better that she recites quietly."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "191.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "aloudmistake",
+    topicId: "qiraah",
+    subject: {
+      en: "Reciting aloud or quietly by mistake"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If when one must recite aloud he intentionally recites in a whisper, or when one must recite in a whisper he intentionally recites aloud, his prayer is invalid based on obligatory precaution. However, his prayer is valid if he does this due to forgetfulness or not knowing the ruling. While reciting Sūrat al-Ḥamd or the other surah, if he realises that he has made a mistake [in not reciting aloud or in a whisper as per his duty], it is not necessary for him to repeat what he has already recited.",
+          ur: "اگرکوئی شخص جس نمازکوبلندآوازسے پڑھناضروری ہے اسے عمداً آہستہ پڑھے یاجونماز آہستہ پڑھنی ضروری ہے اسے عمداً بلندآواز سے پڑھے تو(احتیاط واجب کی بناپر) اس کی نمازباطل ہے۔ لیکن اگربھول جانے کی وجہ سے یامسئلہ نہ جاننے کی وجہ سے ایسا کرے تو(اس کی نماز) صحیح ہے۔نیزالحمداورسورہ پڑھنے کے دوران بھی اگروہ متوجہ ہو جائے کہ اس سے غلطی ہوئی ہے توضروری نہیں کہ جوحصہ پڑھ چکاہواسے دوبارہ پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 981",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (981)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person intentionally offers a prayer quietly which should be offered loudly, or he intentionally offers a prayer loudly which should be offered quietly, his prayer is void. However, if he does so owing to forgetting or not knowing the ruling, his prayer is correct, and if he realizes his mistake while reciting chapter al-Fātiḥah, the other chapter, or the four tasbīḥ, it is not necessary for him to repeat what he has recited in the wrong manner."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "197.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "correctrecitation",
+    topicId: "qiraah",
+    subject: {
+      en: "Reciting correctly"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One must correctly recite qirāʾah of the prayer. If someone cannot in any way recite the whole of Sūrat al-Ḥamd correctly, he must recite it in the way he can, provided that the amount he recites correctly is significant. However, if that amount is insignificant, then based on obligatory precaution, he must add to it an amount of the Qur’an that he can recite correctly. If he cannot do this, he must add to it tasbīḥ [i.e. saying ‘subḥānal lāh’]. However, if someone cannot recite the other surah correctly at all, it is not necessary for him to recite something else in its place. In all the above cases, the recommended precaution is that such a person should perform prayers in congregation.",
+          ur: "انسان کے لئے ضروری ہے کہ نمازکو صحیح قرأت کےساتھ پڑھے اورجوشخص کسی طرح بھی پورے سورۂ الحمدکوصحیح طرح نہ پڑھ سکتا ہو تو ضروری ہے کہ اسی طرح پڑھے اگر جس مقدار کو صحیح پڑھ سکتا ہے وہ قابل توجہ ہو لیکن اگروہ مقداربہت کم ہوتو(احتیاط واجب کی بناپر)قرآن کے دوسرے سوروں میں سے جس قدر صحیح پڑھنا ممکن ہواس کے ساتھ ملاکر پڑھنا ضروری ہے اوراگرایسانہ کرسکتاہوتوتسبیح (سبحان اللہ)اس کے ساتھ ملاکر پڑھنا ضروری ہے اوراگرکوئی پورے سورہ کو صحیح نہ پڑھ سکتاہوتوضروری نہیں کہ اس کے بدلے کچھ پڑھے اورہرحال میں احتیاط مستحب یہ ہے کہ نماز کوجماعت کے ساتھ بجا لائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 983",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (983)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is obligatory that the recitations of the prayer should be correct and without any problem. If one is not able to learn the correct pronunciation at all, he should recite in any manner he can, and by mustaḥabb caution he should offer his prayer in congregation."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "200.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "thirdfourthrakah",
+    topicId: "qiraah",
+    subject: {
+      en: "The third and fourth rakʿahs"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In the third and fourth rakʿahs of prayers, a person can either recite one Sūrat al-Ḥamd or say one al‑tasbīḥāt al‑arbaʿah, i.e. he can say once:\nسُبْحَانَ اللهِ وَالْحَمْدُ لِلّٰهِ وَلَا إِلٰهَ إِلَّا اللهُ وَاللهُ أَكْبَرُ\nsubḥānal lāhi wal ḥamdu lillāhi wa lā ilāha illal lāhu wallāhu akbar\nI declare emphatically that Allah is free from imperfections, and all praise is for Allah, and there is no god but Allah, and Allah is greater [than what He is described as].\n...and it is better that he says this three times. A person can recite Sūrat al-Ḥamd in one rakʿah and say al‑tasbīḥāt al‑arbaʿah in the second rakʿah, although it is better that he says al‑tasbīḥāt al‑arbaʿah in both the rakʿahs.",
+          ur: "نماز کی تیسری اورچوتھی رکعت میں فقط ایک دفعہ الحمدیاایک دفعہ تسبیحات اربعہ پڑھی جاسکتی ہے یعنی نماز پڑھنے والاایک دفعہ کہے ’’سُبْحَانَ اللہِ وَالْحَمْدُ للّٰہِ وَلَااِلٰہَ اِلَّااللہُ وَاللہُ اَکْبَرُ‘‘اوربہتریہ ہے کہ تین دفعہ کہے اور وہ ایک رکعت میں الحمد اور دوسری رکعت میں تسبیحات بھی پڑھ سکتاہے اوربہتریہ ہے کہ دونوں رکعتوں میں تسبیحات پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 991",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (991)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once. However, according to mustaḥabb caution, it is said three times. Of course, instead of this dhikr, which is called the four tasbīḥ, one may recite chapter al-Fātiḥah."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "184.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "thirdfourthquiet",
+    topicId: "qiraah",
+    subject: {
+      en: "Reciting quietly in the third and fourth rakʿahs"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, it is obligatory for men and women to recite Sūrat al-Ḥamd and to say al‑tasbīḥāt al‑arbaʿah in a whisper in the third and fourth rakʿahs of the prayer.",
+          ur: "(احتیاط کی بناپر) مرداورعورت دونوں پرواجب ہے کہ نماز کی تیسری اور چوتھی رکعت میں الحمد یاتسبیحات اربعہ آہستہ پڑھیں ۔"
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 993",
+          url: "https://www.sistani.org/english/book/48/2233/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (993)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is obligatory for both men and women in the third and fourth rak‘ah to recite the four tasbīḥ or chapter al-Fātiḥah in a whispering manner; and by caution, if a person recites chapter al-Fātiḥah, he should recite bismillāhir raḥmānir raḥīm in a whispering manner."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "192.",
+          url: "https://www.leader.ir/en/book/241?sn=32513"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5)."
+      }
+    ]
+  },
+  {
+    id: "ruku",
+    topicId: "rukusujud",
+    subject: {
+      en: "Rukūʿ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In every rakʿah after qirāʾah, one must bend forward to the extent that he can place all his fingertips, including his thumb, on his knees. This action is called ‘rukūʿ’.",
+          ur: "ضروری ہے کہ ہررکعت میں قرأت کے بعد اس قدر جھکے کہ اپنی انگلیوں کے سرے(انگوٹھے کے ساتھ) گھٹنے پررکھ سکے اوراس عمل کو’’رکوع‘‘ کہتے ہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1008",
+          url: "https://www.sistani.org/english/book/48/2234/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1008)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In every rak‘ah after the recitation, the praying person should make a rukū‘, i.e. to bow to an extent that he is able to place his palms on his knees, and it is sufficient if only the fingertips can reach the knees."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "213.",
+          url: "https://www.leader.ir/en/book/241?sn=32514"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "rukudhikr",
+    topicId: "rukusujud",
+    subject: {
+      en: "The dhikr of rukūʿ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times.",
+          ur: "بہتریہ ہے کہ اختیارکی حالت میں رکوع میں تین دفعہ ’’سُبْحَانَ اللہِ‘‘ یا ایک دفعہ’’سُبْحَانَ رَبِّیَ الْعَظِیْمِ وَبِحَمْدِہٖ‘‘ کہے اور ظاہریہ ہے کہ جوذکربھی اتنی مقدار میں کہا جائے کافی ہے اور( احتیاط واجب کی بناپر) ضروری ہے کہ اسی مقدار میں ہو لیکن وقت کی تنگی اور مجبوری کی حالت میں ایک دفعہ ’’سُبْحَانَ اللہِ‘‘ کہنا ہی کافی ہےاور جو شخصسُبْحَانَ رَبِّیَ الْعَظِیْمِ کو اچھی طرح سےادا نہ کرسکے اس کے لئے ضروری ہے کہ دوسرے ذکر جیسے سبحان اللہ کوتین دفعہ کہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1014",
+          url: "https://www.sistani.org/english/book/48/2234/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1014)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The obligatory dhikr in rukū‘ is to say subḥāna rabbīyal ‘aẓīmi wa biḥamdih once or subḥānallāh three times, and it is sufficient if a person says another dhikr such as alḥamdu lillāh, Allāhu akbar or another dhikr to the same amount."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "221.",
+          url: "https://www.leader.ir/en/book/241?sn=32514"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ],
+    differsBetweenMaraji: true
+  },
+  {
+    id: "rukustill",
+    topicId: "rukusujud",
+    subject: {
+      en: "Stillness in rukūʿ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "While performing rukūʿ, the body must be still and one must not intentionally move his body in a manner that it is no longer still, even when – based on obligatory precaution – he is not saying an obligatory dhikr. If a person intentionally does not observe this requirement to be still, then based on obligatory precaution, his prayer is invalid even if he says dhikr while his body is still.",
+          ur: "رکوع کی حالت میں ضروری ہے کہ نماز پڑھنے والے کابدن ساکن ہو نیز ضروری ہے کہ وہ اپنے اختیار سے بدن کواس طرح حرکت نہ دے کہ اس پر ساکن ہونا صادق نہ آئے حتیٰ کہ( احتیاط کی بناپر)اگروہ واجب ذکرمیں مشغول نہ ہوتب بھی یہی حکم ہےاگر عمداً اطمینان کی رعایت نہ کرے تو (احتیاط واجب کی بنا پر) نماز باطل ہے یہاں تک کہ اگر وہ ذکر کو حالت استقرار میں دوہرائے تب بھی باطل ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1016",
+          url: "https://www.sistani.org/english/book/48/2234/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1016)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The body should be still while reciting the obligatory dhikr in rukū‘. Moreover, based on obligatory caution, the body should be still while reciting mustaḥabb dhikr with the intention of counting it a part of rukū‘, such as the repetition of subḥāna rabbīyal ‘aẓīmi wa biḥamdih."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "223.",
+          url: "https://www.leader.ir/en/book/241?sn=32514"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "afterruku",
+    topicId: "rukusujud",
+    subject: {
+      en: "Standing up after rukūʿ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "After completing the dhikr of rukūʿ, one must stand straight; and based on obligatory precaution, he must go into sajdah after his body has become still. If he intentionally goes into sajdah before standing, his prayer is invalid; and the same applies, based on obligatory precaution, if he intentionally goes into sajdah before his body has become still.",
+          ur: "ضروری ہے کہ ذکررکوع ختم ہونے کے بعدسیدھاکھڑاہوجائے اور (احتیاط واجب کی بناء پر) جب اس کا بدن سکون حاصل کرلے اس کے بعدسجدے میں جائے اوراگرجان بوجھ کر کھڑےہونے سے پہلے یابدن کے سکون حاصل کرنے سے پہلے سجدے میں چلا جائے تو اس کی نمازباطل ہے اور(احتیاط واجب کی بناء پر) یہی حکم ہے اگر جان بوجھ کر بدن کے سکون حاصل کرنے سے پہلے سجدہ میں چلاجائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1026",
+          url: "https://www.sistani.org/english/book/48/2234/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1026)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is obligatory to stand straight after the completion of rukū‘, and after the body has become still, one should go to sajdah. Thus, if a person intentionally goes to sajdah before standing straight or before his body becomes still, his prayer will be void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "231.",
+          url: "https://www.leader.ir/en/book/241?sn=32514"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "forgotruku",
+    topicId: "rukusujud",
+    subject: {
+      en: "Forgetting rukūʿ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person forgets to perform rukūʿ and remembers this before he performs sajdah, he must stand upright and then perform rukūʿ. It will not suffice if he performs rukūʿ while in the state of bending forward [not having stood upright].",
+          ur: "اگرکوئی شخص رکوع اداکرنابھول جائے اور اس سے پیشترکہ سجدے کی حالت میں پہنچے اسے یادآجائے توضروری ہے کہ کھڑاہوجائے اورپھر رکوع میں جائے اورجھکے ہوئے ہونے کی حالت میں اگررکوع کی جانب لوٹ جائے توکافی نہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1027",
+          url: "https://www.sistani.org/english/book/48/2234/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1027)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person forgets to perform rukū‘, and before he performs the first sajdah, he recollects it, he should stand up and then go to rukū‘ (and it is not sufficient if he returns to rukū‘ from a bowing posture and if he does not make another rukū‘, his prayer is void)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "232.",
+          url: "https://www.leader.ir/en/book/241?sn=32514"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "twosajdahs",
+    topicId: "rukusujud",
+    subject: {
+      en: "The two sajdahs"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In every rakʿah of the obligatory and recommended prayers, one must perform two sajdahs after rukūʿ. A sajdah is performed when one places his forehead on the ground in a particular manner with the intention of humility [before Allah]. While performing a sajdah in prayers, it is obligatory that the palms of both hands, both knees, and both big toes be placed on the ground. Based on obligatory precaution, [for the purposes of sajdah] the ‘forehead’ refers to its middle area, i.e. the rectangular area when two imaginary lines are drawn between the place where the eyebrows begin in the middle of the forehead up to the point where the hair grows.",
+          ur: "نمازپڑھنے والے کے لئے ضروری ہے کہ واجب اورمستحب نمازوں کی ہررکعت میں رکوع کے بعددوسجدے کرے۔سجدہ یہ ہے کہ خاص شکل میں پیشانی کوخضوع کی نیت سے زمین پر رکھے اورنماز کے سجدے کی حالت میں واجب ہے کہ دونوں ہتھیلیاں ، دونوں گھٹنے اوردونوں پاؤں کے انگوٹھے زمین پررکھے جائیں اور پیشانی سے مراد( احتیاط واجب کی بناء پر) اس کا درمیانی حصہ ہے اور دونوں ابرؤں اور سر پر بال کے اگنے کی جگہ کے درمیان دو فرضی لائنوں کے کھینچے جانے کی صورت میں ظاہر ہونے والی چوڑائی کو پیشانی کہتے ہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1031",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1031)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In every rak‘ah of the obligatory or mustaḥabb prayers after rukū‘, two sajdah should be performed, which is to put the forehead on the ground out of humility before Allah."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "236.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sevenparts",
+    topicId: "rukusujud",
+    subject: {
+      en: "The seven parts of the body in sajdah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In sajdah, one must place his two palms on the ground; and based on obligatory precaution, one must place the whole of his palms on the ground if possible. However, if it is not possible, there is no problem in him placing the back of his hand on the ground. If placing the back of the hand is not possible either, he must place his wrists on the ground based on obligatory precaution. In the event that this is not possible, he must place any part of his forearm up to his elbows on the ground. And if even this is not possible, then placing the upper arm on the ground is sufficient.",
+          ur: "ضروری ہے کہ سجدے میں دونوں ہتھیلیاں زمین پررکھے( اور احتیاط واجب کی بناء پر) ممکنہ صورت میں پوری ہتھیلی کو رکھے، لیکن مجبوری کی حالت میں ہاتھوں کی پشت بھی زمین پررکھے توکوئی حرج نہیں اوراگرہاتھوں کی پشت بھی زمین پررکھناممکن نہ ہوتو(احتیاط واجب کی بناپر) ضروری ہے کہ ہاتھوں کی کلائیاں زمین پررکھے اوراگرانہیں بھی نہ رکھ سکے توپھرکہنی تک جوحصہ بھی ممکن ہوزمین پررکھے اور اگریہ بھی ممکن نہ ہوتوپھربازوکارکھنابھی کافی ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1047",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1047)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In sajdah, it is obligatory to place seven body parts on the ground: the forehead, the palms, the knees, and the tips of both big toes."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "237.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahrukn",
+    topicId: "rukusujud",
+    subject: {
+      en: "The two sajdahs together are a rukn"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Two sajdahs together comprise one rukn, and if someone does not perform both of them in obligatory prayers in one rakʿah – even if this is due to forgetfulness or not knowing the ruling – his prayer is invalid. The same applies, based on obligatory precaution, if one adds two sajdahs in one rakʿah forgetfully or due to inculpable ignorance (al‑jahl al‑quṣūrī). (Inculpable ignorance is when someone has a valid excuse for not knowing.)",
+          ur: "دوسجدے مل کرایک رکن ہیں اوراگرکوئی شخص واجب نمازمیں ( مسئلہ نہ جاننے کی بناپر یا بھولے سے) ایک رکعت میں دونوں سجدے ترک کردے تواس کی نمازباطل ہے اور اگر بھول کریا جاہل قاصر ہونے کی صورت میں ایک رکعت میں دوسجدوں کااضافہ کرے تو(احتیاط لازم کی بناپر)یہی حکم ہے(اور جاہل قاصر سے مراد وہ شخص ہےجو اپنے جاہل ہونے کا عذر رکھتا ہو)۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1032",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1032)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The two sajdah in one rak‘ah together comprise one foundational element (rukn), meaning that if a person, intentionally or forgetfully, abandons them or adds two more sajdah to them, his prayer becomes void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "238.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahdhikr",
+    topicId: "rukusujud",
+    subject: {
+      en: "The dhikr of sajdah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times.",
+          ur: "بہتریہ ہے کہ اختیارکی حالت میں سجدے میں تین دفعہ ’’سُبْحَانَ اللہ‘‘یاایک دفعہ ’’سُبْحَانَ رَبِّیَ الْاَعْلیٰ وَبِحَمْدِہٖ‘‘ پڑھے اورضروری ہے کہ یہ جملے مسلسل اور صحیح عربی میں کہے جائیں اورظاہر یہ ہے کہ ہرذکرکاپڑھناکافی ہے لیکن (احتیاط لازم کی بنا پر)ضروری ہے کہ اتنی ہی مقدار میں ہواور مستحب ہے کہ’’سُبْحَانَ رَبِّیَ الْاَعْلیٰ وَبِحَمْدِہٖ‘‘ تین یا پانچ یاسات دفعہ یااس سے بھی زیادہ مرتبہ پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1035",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1035)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The obligatory dhikr in sajdah is to say subḥāna rabbī al‘alā wa biḥamdih once or subḥānallāh three times, and it is sufficient if a person says another dhikr such as alḥamdu lillāh, Allāhu akbar or another dhikr — except for rukū‘ dhikr — to the same amount."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "243.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ],
+    differsBetweenMaraji: true
+  },
+  {
+    id: "dhikrwording",
+    topicId: "rukusujud",
+    subject: {
+      en: "Wording of the rukūʿ and sajdah dhikr"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Translations of the dhikr of rukū‘ and sajdah and some mustaḥabb phrases are as follows:\nسُبْحَانَ الله\nGlorified is God\nسُبْحَانَ ربی العظیم و بحمده\nGlorified is my Lord, the Almighty, and I praise Him\nسُبْحَانَ ربی الأعلی و بحمده\nGlorified is my Lord, the Highest, and I praise Him\nسمع الله لمن حمده\nMay God attend to the one who praises Him.\nأستغفرالله ربی و أتوب علیه\nI ask God, my Lord, to forgive me, and I return to Him.\nبحول الله و قوته أقوم و أقعد\nWith the will of God and His power, I stand and I sit."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "318.",
+          url: "https://www.leader.ir/en/book/241?sn=32524"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "betweensajdahs",
+    topicId: "rukusujud",
+    subject: {
+      en: "Sitting between the two sajdahs"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "After completing the dhikr of the first sajdah, one must sit until his body becomes still and then go into sajdah again.",
+          ur: "پہلے سجدے کاذکرختم ہونے کے بعدضروری ہے کہ بیٹھ جائے حتیٰ کہ اس کابدن سکون حاصل کرلے اورپھردوبارہ سجدے میں جائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1042",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1042)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "After finishing the dhikr of the first sajdah, the praying person should sit until his body becomes still and then make sajdah again."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "255.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahheight",
+    topicId: "rukusujud",
+    subject: {
+      en: "Height of the place of the forehead"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In sajdah, the difference in height between the place where one places his forehead and where he places his knees and toes must not be more than the height of four closed fingers. In fact, the obligatory precaution is that the difference in height between the place where he places his forehead and the place where he stands must also not be more than four closed fingers.",
+          ur: "نمازپڑھنے والے کی پیشانی رکھنے کی جگہ گھٹنوں اورپاؤں کی انگلیوں کے سروں کی جگہ سے چارملی ہوئی انگلیوں سے زیادہ بلندیاپست نہیں ہونی چاہئے۔ بلکہ احتیاط واجب یہ ہے اس کی پیشانی کی جگہ اس کے کھڑے ہونے کی جگہ سے چارملی ہوئی انگلیوں سے زیادہ نیچی یااونچی بھی نہ ہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1043",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1043)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The place where a person puts his forehead for sajdah should not be more than four joined fingers lower or higher than the place where he places his knees and the tips of his toes."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "258.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahbarrier",
+    topicId: "rukusujud",
+    subject: {
+      en: "Nothing between the forehead and the turbah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "There must not be a barrier between one’s forehead and the thing on which it is permitted to perform sajdah. Therefore, if the turbah is so dirty that his forehead does not make contact with the turbah itself, the sajdah is invalid. However, if, for example, only the colour of the turbah has changed, there is no problem.",
+          ur: "ضروری ہے کہ نمازپڑھنے والے کی پیشانی اوراس چیزکے درمیان جس پرسجدہ کرناصحیح ہے کوئی دوسری چیزکا فاصلہ نہ ہوپس اگرسجدہ گاہ اتنی میلی ہوکہ پیشانی سجدہ گاہ کو نہ چھوئے تواس کاسجدہ باطل ہے۔ لیکن اگرسجدہ گاہ کارنگ تبدیل ہوگیاہوتوکوئی حرج نہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1046",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1046)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "There should not be any barrier such as hair or a hat between the forehead and what the sajdah is done on."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "260.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "turbahpure",
+    topicId: "rukusujud",
+    subject: {
+      en: "The place of the forehead must be pure"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The part of the turbah or the thing on which it is permitted to perform sajdah must be pure. However, if, for example, one places a turbah on an impure carpet, or if one side of the turbah is impure and he places his forehead on its pure side, or if one part of the turbah is pure and another impure, then as long as it does not make the forehead impure, there is no problem.",
+          ur: "سجدہ گاہ یادوسری چیزجس پرنمازپڑھنے والاسجدے کرے ضروری ہے کہ پاک ہو لیکن اگرمثال کے طورپرسجدہ گاہ کونجس فرش پررکھ دے یاسجدہ گاہ کی ایک طرف نجس ہواوروہ پیشانی پاک طرف رکھے توکوئی حرج نہیں ہے اور اگر سجدہ گاہ کاکچھ حصہ نجس اور کچھ حصہ پاک ہو اور پیشانی کو نجس نہ کرے تو اشکال نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1051",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1051)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The turbah or another thing on which a person prostrates should be pure, but there is no problem if he puts it on a najis carpet or if one side of it is najis and he places his forehead on the pure side."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "259.",
+          url: "https://www.leader.ir/en/book/241?sn=32515"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahearth",
+    topicId: "sajdahplace",
+    subject: {
+      en: "Earth and what grows from it"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One must perform sajdah on earth and on those things that grow from the earth but are neither edible nor worn, such as wood and the leaves of trees. It is not permitted to perform sajdah on edible things, nor on things that are worn, such as wheat, barley, and cotton. Furthermore, it is not permitted to perform sajdah on things that are not considered parts of the earth, such as gold, silver, and suchlike. However, when one is compelled, performing sajdah on tar and asphalt (which is a lower grade of tar) take precedence over other things on which it is not permitted to perform sajdah.",
+          ur: "سجدہ زمین پراوران چیزوں پرکرناضروری ہے جوکھائی اورپہنی نہ جاتی ہوں اور زمین سے اگتی ہوں مثلاً لکڑی اوردرختوں کے پتے پرسجدہ کرے۔ کھانے اور پہننے کی چیزوں مثلاً گندم،جو اورکپاس پراوران چیزوں پرجوزمین کے اجزاء میں شمار نہیں ہوتیں مثلاً سونے، چاندی اوراسی طرح کی دوسری چیزوں پرسجدہ کرناصحیح نہیں ہے لیکن تارکول اور بیروزا(ایک قسم کاگندا تارکول)کومجبوری کی حالت میں دوسری چیزوں کے مقابلے میں کہ جن پر سجدہ کرناصحیح نہیں سجدے کے لئے اولویت دے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1062",
+          url: "https://www.sistani.org/english/book/48/2236/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1062)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Sajdah should be performed on earth or non-edible plants which grow on earth, including stone, soil, wood, leaves of trees and the like. Sajdah is not permissible on what is edible or worn, even though it may grow on the earth, such as cotton and wheat. Also, sajdah on minerals which are not considered earth, such as metals, glass, or the like, is invalid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "265.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahfodder",
+    topicId: "sajdahplace",
+    subject: {
+      en: "Plants eaten only by animals"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is permitted to perform sajdah on something that originates from the ground and is food for animals, such as grass and straw.",
+          ur: "جوچیزیں زمین سے اگتی ہیں اورحیوانات کی خوراک ہیں مثلاً گھاس اور بھوساان پرسجدہ کرناصحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1064",
+          url: "https://www.sistani.org/english/book/48/2236/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1064)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Performing sajdah on what grows on earth and is served only as fodder for animals, such as grass, hay, etc., is valid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "268.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahbuilding",
+    topicId: "sajdahplace",
+    subject: {
+      en: "Limestone, gypsum and building materials"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is permitted to perform sajdah on limestone and gypsum. Moreover, there is no problem in performing sajdah on baked gypsum, baked lime, brick, and a clay pitcher.",
+          ur: "چونے اورجپسم کے پتھرپرسجدہ کرناصحیح ہےبلکہ پختہ جپسم اورچونے اوراینٹ اورمٹی کے پکے ہوئے برتنوں اور ان سے ملتی جلتی چیزوں پرسجدہ کرنے میں کوئی حرج نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1067",
+          url: "https://www.sistani.org/english/book/48/2236/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1067)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Prostrating on the brick, clay, gypsum, limestone, and cement is valid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "267.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahpaper",
+    topicId: "sajdahplace",
+    subject: {
+      en: "Paper"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is permitted to perform sajdah on writing paper made from something on which it is permitted to perform sajdah, such as wood and grass; the same applies if it is made out of cotton or flax. However, if it is made out of silk and suchlike, performing sajdah on it is not permitted. As for performing sajdah on tissue paper, it is only permitted if one knows that it is made out of something on which it is permitted to perform sajdah.",
+          ur: "اگر لکھنے کےکاغذکوایسی چیزسے بنایاجائے کہ جس پرسجدہ صحیح ہے مثلاً لکڑی اور بھوسے سے تو اس پرسجدہ کیاجاسکتاہے اوراسی طرح اگرروئی یاکتان سے بنایاگیاہو تو بھی اس پرسجدہ کرناصحیح ہے لیکن اگرریشم یاابریشم اوراسی طرح کی کسی چیزسے بنایاگیاہو تو اس پرسجدہ صحیح نہیں ہے لیکن ٹیشو پیپر پر صرف اسی صورت میں سجدہ کرسکتے ہیں جب معلوم ہو کہ یہ ایسی چیز سے بنایا گیاہے جس پر سجدہ صحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1068",
+          url: "https://www.sistani.org/english/book/48/2236/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1068)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Sajdah on a piece of paper made of wood and plants (except for flax and cotton) is valid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "272.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahbest",
+    topicId: "sajdahplace",
+    subject: {
+      en: "The best thing to perform sajdah on"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The best thing on which to perform sajdah is the turbah of His Eminence Sayyid al-Shuhadāʾ [Imam al-Ḥusayn] (ʿA), and after that, earth, then stone, and then grass.",
+          ur: "سجدے کے لئے خاک شفاسب چیزوں سے بہترہے اس کے بعد مٹی، مٹی کے بعدپتھراورپتھرکے بعدگھاس ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1069",
+          url: "https://www.sistani.org/english/book/48/2236/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1069)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The best object to use for sajdah is soil and earth, because it is a sign of humility before God, the Almighty, and no soil approaches the great merits of the blessed soil of the grave of Imam al-Husayn (a)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "277.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "sajdahnothing",
+    topicId: "sajdahplace",
+    subject: {
+      en: "When nothing permitted is available"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person does not have anything on which it is permitted to perform sajdah, or if he does have something but cannot perform sajdah on it on account of severe heat or cold and suchlike, then performing sajdah on tar and asphalt takes precedence over performing sajdah on other things. However, if it is not possible to perform sajdah on them, one must perform sajdah on his clothes or any other thing on which performing sajdah is not permitted in normal circumstances. However, the recommended precaution is that as long as it is possible for one to perform sajdah on his clothes, he should not perform sajdah on anything else.",
+          ur: "اگرکسی کے پاس ایسی چیزنہ ہوجس پرسجدہ کرناصحیح ہے یااگرہوتو سردی یازیادہ گرمی وغیرہ کی وجہ سے اس پرسجدہ نہ کرسکتاہوتوایسی صورت میں تارکول اور گندا بیروزاکوسجدے کے لئے دوسری چیزوں پراولویت حاصل ہے لیکن اگران پرسجدہ کرنا ممکن نہ ہوتوضروری ہے کہ اپنے لباس یا ہراس چیز پرجس پر حالت اختیار میں سجدہ جائزنہیں سجدہ کرے لیکن احتیاط مستحب یہ ہے کہ جب تک کپڑے پرسجدہ ممکن ہوکسی دوسری چیزپرسجدہ نہ کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1070",
+          url: "https://www.sistani.org/english/book/48/2236/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1070)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person does not have anything on which he is allowed to perform sajdah, or he has such a thing but cannot perform sajdah on it due to severe heat or cold, he should perform sajdah on his clothes or something else made of flax or cotton. By obligatory caution, if it is possible to prostrate on clothes made of cotton or flax, a person should not prostrate on clothes which are not made of cotton or flax. If, however, he does not have these things, he may perform sajdah on the back of his hand, by obligatory caution."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "273.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "sajdahtaqiyyah",
+    topicId: "sajdahplace",
+    subject: {
+      en: "Sajdah under taqiyyah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In a situation where one must observe taqiyyah, he can perform sajdah on a rug or something similar, and it is not necessary he go to another place to perform prayers or delay prayers to perform them in that place once the reason for observing taqiyyah is no longer valid. However, if in the same place he can perform sajdah on haṣīr or something else that is valid to perform sajdah on in a manner that does not contravene taqiyyah, then he must not perform sajdah on a rug or something similar.",
+          ur: "جہاں انسان کے لئے تقیہ کرناضروری ہے وہاں وہ قالین یااس طرح کی چیزپرسجدہ کرسکتا ہے اوریہ ضروری نہیں کہ نمازکے لئے کسی دوسری جگہ جائے یانماز کو مؤخر کرے تاکہ اسی جگہ پراس سبب تقیہ کے ختم ہونے کے بعدنمازاداکرے۔ لیکن اگراسی جگہ چٹائی یاکسی دوسری چیزجس پرسجدہ کرناصحیح ہواگروہ اس طرح سجدہ کرسکتا ہو کہ تقیہ کی مخالفت نہ ہوتی ہوتوضروری ہے کہ پھروہ قالین یااس سے ملتی جلتی چیزپر سجدہ نہ کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1058",
+          url: "https://www.sistani.org/english/book/48/2235/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1058)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "When a person has to observe taqiyyah, he can perform sajdah on a carpet or other similar objects, and it is not necessary for him to go somewhere else to perform the prayer. In case, however, he can perform sajdah in the same place on a straw mat, stone, or the like without any difficulty, he should do so by obligatory caution."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "275.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "sajdahforother",
+    topicId: "sajdahplace",
+    subject: {
+      en: "Sajdah for other than Allah"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is unlawful to perform sajdah for any being other than Allah the Exalted. Some people place their forehead on the ground in front of the graves of the Infallible Imams (ʿA); if they do this for offering thanks to Allah the Exalted, there is no problem; otherwise, it is problematic [i.e. based on obligatory precaution, it must not be done].",
+          ur: "اللہ تعالیٰ کے علاوہ کسی دوسرے کوسجدہ کرناحرام ہے۔ عوام میں سے بعض لوگ جوائمہ علیہم السلام کے مزارات مقدسہ کے سامنے پیشانی زمین پررکھتے ہیں اگروہ اللہ تعالیٰ کاشکراداکرنے کی نیت سے ایساکریں توکوئی حرج نہیں ورنہ ایساکرنامشکل ہے۔"
+        },
+        hukm: "haram",
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1076",
+          url: "https://www.sistani.org/english/book/48/2236/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1076)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is forbidden to perform sajdah for anyone other than the Almighty God. Regarding placing the forehead on the earth before the last entrance to the shrine — i.e. under the dome — of the Imams (a), if this is done with the intention of prostrating to thank God Almighty, there is no problem with it; otherwise, it is forbidden."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "280.",
+          url: "https://www.leader.ir/en/book/241?sn=32516"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "quransajdah",
+    topicId: "sajdahplace",
+    subject: {
+      en: "The obligatory sajdahs of the Qur'an"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In each of the four surahs al-Sajdah, Fuṣṣilat, al-Najm, and al-ʿAlaq, there is a verse of sajdah, which means that if one recites this verse or listens to it, he must immediately perform sajdah after the verse has finished. If he forgets to do this, he must perform sajdah whenever he remembers. Performing sajdah is not obligatory if one hears such a verse involuntarily, although it is better that he does.",
+          ur: "قرآن مجیدکی چارسورتوں یعنی سورۂ ’’ سجدہ‘‘،’’ فصلت‘‘، ’’النجم‘‘، ’’العلق‘‘ میں سے ہرایک میں ایک آیۂ سجدہ ہے جسے اگرانسان پڑھے یاسنے توآیت ختم ہونے کے بعدفوراً سجدہ کرناضروری ہے اوراگرسجدہ کرنابھول جائے توجب بھی اسے یاد آئے سجدہ کرے اور آیۂ سجدہ غیر اختیاری حالت میں سنے توسجدہ واجب نہیں ہے اگرچہ بہتریہ ہے کہ سجدہ کیاجائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1079",
+          url: "https://www.sistani.org/english/book/48/2238/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1079)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In each of the four chapters of the holy Qur’an — chapter al-Sajdah, chapter Fuṣṣilat, chapter al-Najm, and chapter al-‘Alaq — there is a verse of obligatory sajdah. If you recite the whole verse or listen to it, you are immediately required to make sajdah. if you forget to perform it, you should do so when you remember.*\n\n* The verses of obligatory sajdah are 32:15, 41:37, 53:62, and 96:19."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "281.",
+          url: "https://www.leader.ir/en/book/241?sn=32517"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "tashahhud",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Tashahhud"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In the second rakʿah of all obligatory and recommended prayers, and in the third rakʿah of maghrib prayers, and in the fourth rakʿah of ẓuhr, ʿaṣr and ʿishāʾ prayers, one must sit [in a kneeling type of position] after the second sajdah; and while his body is still, he must say tashahhud, i.e.:\nأَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ، اَللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِ مُحَمَّدٍ\nashhadu an lā ilāha illal lāhu waḥdahu lā sharīka lah, wa ashhadu anna muḥammadan ʿabduhu wa rasūluh, allāhumma ṣalli ʿalā muḥammadin wa āli muḥammad\nI testify that there is no god but Allah, He alone, for whom there is no partner. And I testify that Muḥammad is His servant and His messenger. O Allah! Bless Muḥammad and the progeny of Muḥammad.\nAnd it is sufficient for one to say:\nأَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا صَلَّى اللهُ عَلَيْهِ وَآلِهِ عَبْدُهُ وَرَسُوْلُهُ\nashhadu an lā ilāha illal lāh, wa ashhadu anna muḥammadan ṣallal lāhu ʿalayhi wa ālihi ʿabduhu wa rasūluh\nI testify that there is no god but Allah. And I testify that Muḥammad – may Allah shower His blessings upon him and his progeny – is His servant and His messenger.\nTashahhud is also necessary in the witr prayer.",
+          ur: "تمام واجب اورمستحب نمازوں کی دوسری رکعت میں اورنماز مغرب کی تیسری رکعت میں اورظہر،عصراورعشاکی چوتھی رکعت میں انسان کے لئے ضروری ہے کہ دوسرے سجدے کے بعدبیٹھ جائے اور بدن کے سکون کی حالت میں تشہد پڑھے یعنی کہے:\n’’اَشْھَدُاَنْ لَّااِلٰہَ اِلَّا اللہُ وَحْدَہٗ لَاشَرِیْکَ لَہٗ وَاَشْھَدُاَنَّ مُحَمَّدًاعَبْدُہٗ وَرَسُوْلُہٗ اَللّٰھُمَّ صَلِّ عَلیٰ مُحَمَّدٍ وَّاٰلِ مُحَمَّدٍ‘‘ اوراگرکہے: ’’اَشْھَدُ اَنْ لَّااِلٰہَ اِلَّااللہُ وَاَشْھَدُاَنَّ مُحَمَّدًاصَلَّی اللہُ عَلَیْہِ وَاٰلِہٖ عَبْدُہٗ وَرَسُوْلُہٗ‘‘\nتو کافی ہے اورنماز وترمیں بھی تشہدپڑھناضروری ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1086",
+          url: "https://www.sistani.org/english/book/48/2239/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1086)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The obligatory dhikr in tashahhud is:\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِیکَ لَهُ وَ أَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَ رَسُولُهُ اللَّهُمَّ صَلِّ عَلَی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "289.",
+          url: "https://www.leader.ir/en/book/241?sn=32518"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "tashahhudforgot",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Forgetting tashahhud"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person forgets tashahhud, stands up, and remembers before going into rukūʿ that he has not performed it, he must sit down, say tashahhud, stand up again, recite everything that must be recited in that rakʿah, and complete the prayer. And based on recommended precaution, after completing the prayer, he should perform sajdatā al‑sahw for standing without due reason. However, if he remembers [that he has not said tashahhud] during or after performing rukūʿ, then he must complete the prayer. And based on recommended precaution, after the salām of the prayer, he should perform qaḍāʾ of the tashahhud, and he must perform sajdatā al‑sahw for the forgotten tashahhud.",
+          ur: "اگرکوئی شخص تشہد پڑھنابھول جائے اور کھڑاہوجائے اوررکوع سے پہلے اسے یادآئے کہ اس نے تشہدنہیں پڑھاتوضروری ہے کہ بیٹھ جائے اورتشہدپڑھے اور پھردوبارہ کھڑاہواوراس رکعت میں جوکچھ پڑھناضروری ہے پڑھے اورنماز ختم کرے اور (احتیاط مستحب کی بناپر)نماز کے بعدبے جاقیام کے لئے دو سجدئہ سہوبجالائے اور اگر اسے رکوع میں یااس کے بعدیاد آئے توضروری ہے کہ نماز تمام کرے اورنماز کے سلام کے بعد(احتیاط مستحب کی بنا)پرتشہدکی قضاکرے اورضروری ہے کہ بھولے ہوئے تشہد کے لئے دوسجدۂ سہوبجالائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1088",
+          url: "https://www.sistani.org/english/book/48/2239/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1088)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who forgets tashahhud and stands up for the third rak‘ah, if he remembers that he has not recited tashahhud before going to rukū‘, he has to sit, recite tashahhud, stand up again, say tasbīḥ of the third rak‘ah, and finish the prayer. Then, based on mustaḥabb caution, he performs two sahw sajdah because of his wrongly standing."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "292.",
+          url: "https://www.leader.ir/en/book/241?sn=32518"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "salam",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Salām"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "After completing tashahhud of the last rakʿah of the prayer, it is recommended that while one is sitting and his body is still, he should say:\nاَلسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ\nassalāmu ʿalayka ayyuhan nabiyyu wa raḥmatul lāhi wa barakātuh\nPeace be upon you O Prophet, and Allah’s mercy and His blessings (be upon you too).\nAnd after that, he must say:\nاَلسَّلَامُ عَلَيْكُمْ\nassalāmu ʿalaykum\nPeace be upon you.\nAnd the recommended precaution is that [after saying assalāmu ʿalaykum,] one adds the sentence:\nوَرَحْمَةُ اللهِ وَبَرَكَاتُهُ\nwa raḥmatul lāhi wa barakātuh\nAnd Allah’s mercy and His blessings (be upon you too).\nOr [i.e. instead of saying assalāmu ʿalaykum], one must say:\nاَلسَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللهِ الصَّالِحِيْنَ\nassalāmu ʿalaynā wa ʿalā ʿibādil lāhiṣ ṣāliḥīn\nPeace be upon us and upon the righteous servants of Allah.\nHowever, if he says this, then the obligatory precaution is that he must also say after it:\nاَلسَّلَامُ عَلَيْكُمْ\nassalāmu ʿalaykum\nPeace be upon you.",
+          ur: "نماز کی آخری رکعت کے تشہدکے بعدجب نمازی بیٹھاہواور اس کا بدن سکون کی حالت میں ہوتومستحب ہے کہ وہ کہے: ’’اَلسَّلاَمُ عَلَیْکَ اَیُّھَاالنَّبِیُّ وَرَحْمَۃُ اللہِ وَبَرَکَاتُہٗ‘‘ اوراس کے بعد ضروری ہے کہ کہے: ’’اَلسَّلاَمُ عَلَیْکُمْ‘‘ (اور احتیاط مستحب یہ ہے کہ’’اَلسَّلاَمُ عَلَیْکُمْ‘‘ کے جملے کے ساتھ’’وَرَحْمَۃُ اللہِ وَبَرَکَاتُہٗ‘‘ کے جملے کااضافہ کرے)یایہ کہے: ’’اَلسَّلاَمُ عَلَیْنَاوَعَلیٰ عِبَادِاللہِ الصَّالِحِیْنَ‘‘ لیکن اگراس سلام کوپڑھے تواحتیاط واجب یہ ہے کہ اس کے بعد ’’اَلسَّلاَمُ عَلیْکُمْ‘‘ بھی کہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1091",
+          url: "https://www.sistani.org/english/book/48/2240/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1091)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The last part of prayer, with the recitation of which the prayer ends, is salām. The obligatory salām of prayer is to say assalāmu ‘alaykum, and it is better to add to it, wa raḥmatullāhi wa barakātuh, or to say assalāmu ‘alaynā wa ‘alā ‘ibādillāhiṣ ṣāliḥīn."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "294.",
+          url: "https://www.leader.ir/en/book/241?sn=32519"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "salamforgot",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Forgetting salām"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person forgets the salām of the prayer and remembers it before the form of the prayer has broken up, and if he has neither intentionally nor inadvertently done something that would invalidate his prayer – such as turning his back to qibla – then he must say the salām and his prayer is valid.",
+          ur: "اگرکوئی شخص نمازکاسلام کہنابھول جائے اوراسے ایسے وقت یاد آئے جب ابھی نمازکی شکل ختم نہ ہوئی ہواوراس نے کوئی ایساکام بھی نہ کیاہوجسے عمداً اور سہواًکرنے سے نمازباطل ہوجاتی ہومثلاً قبلے کی طرف پیٹھ کرناتوضروری ہے کہ سلام کہے اوراس کی نمازصحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1092",
+          url: "https://www.sistani.org/english/book/48/2240/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1092)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person forgets to recite the salām of prayer, and remembers before the form of the prayer is disturbed and before performing any acts that invalidate the prayer both intentionally and inadvertently — such as turning away from the qiblah, he should recite salām, and his prayer is correct."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "297.",
+          url: "https://www.leader.ir/en/book/241?sn=32519"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "tartib",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Sequence (tartīb)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person intentionally breaks the sequence of prayers – for example, he recites the other surah before Sūrat al-Ḥamd, or he performs sajdah before rukūʿ – his prayer becomes invalid.",
+          ur: "اگرکوئی شخص جان بوجھ کرنماز کی ترتیب الٹ دے مثلاً الحمدسے پہلے سورہ پڑھ لے یارکوع سے پہلے سجدے بجالائے تواس کی نمازباطل ہوجاتی ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1094",
+          url: "https://www.sistani.org/english/book/48/2241/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1094)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who is offering the prayer should observe the sequence of the acts of prayer. Therefore, if he intentionally does not observe the sequence of acts in the prayer, for example, if he recites the second chapter before chapter al-Fātiḥah or if he performs the two sajdah before rukū‘, his prayer is void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "298.",
+          url: "https://www.leader.ir/en/book/241?sn=32520"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "muwalat",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Close succession (muwālāh)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One must perform the [parts of the] prayer in close succession, i.e. he must perform acts such as rukūʿ, sujūd, and tashahhud one after the other, and he must say those things that are said in prayers one after the other in a normal manner. If a person delays between the acts to the extent that it cannot be said he is performing prayers, his prayer is invalid.",
+          ur: "ضروری ہے کہ انسان نمازموالات کے ساتھ پڑھے یعنی نماز کے افعال مثلاًرکوع، سجوداورتشہدتواتراورتسلسل کے ساتھ بجالائے اور جوچیزیں بھی نماز میں پڑھے معمول کے مطابق پے درپے پڑھے اوراگران کے درمیان اتنافاصلہ ڈالے کہ لوگ یہ نہ کہیں کہ نمازپڑھ رہاہے تواس کی نمازباطل ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1100",
+          url: "https://www.sistani.org/english/book/48/2242/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1100)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The praying person should perform the acts of the prayer successively, meaning that he should not leave a lengthy unusual gap between the acts of prayer, such as rukū‘, sajdah and tashahhud. Therefore, if a person leaves a lengthy break between the acts of prayer so that, according to an onlooker, it seems like he is not praying, the prayer is void."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "303.",
+          url: "https://www.leader.ir/en/book/241?sn=32521"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qunut",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Qunūt"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In all the obligatory and recommended prayers, it is recommended to perform qunūt before the rukūʿ of the second rakʿah. However, in the shafʿ prayer, one must perform qunūt with the intention of rajāʾ. In the witr prayer – despite it being only one rakʿah – it is recommended to perform qunūt before rukūʿ. In the Friday prayer, each rakʿah has a qunūt. Ṣalāt al‑āyāt has five qunūts. The Eid al-Fiṭr and Eid al-Aḍḥā prayers each have a number of qunūts in the two rakʿahs, details of which will be explained in their own place.",
+          ur: "تمام واجب اورمستحب نمازوں میں دوسری رکعت کے رکوع سے پہلے قنوت پڑھنامستحب ہے لیکن نمازشفع میں ضروری ہے کہ اسے رجاء ً پڑھے اورنماز وتر میں بھی باوجودیکہ ایک رکعت کی ہوتی ہے رکوع سے پہلے قنوت پڑھنامستحب ہے اور نماز جمعہ کی ہررکعت میں ایک قنوت،نمازآیات میں پانچ قنوت،نمازعیدفطروقربان کی دونوں رکعتوں میں چندقنوت ہیں جن کی تفصیل اپنی جگہ آئے گی۔"
+        },
+        hukm: "mustahab",
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1103",
+          url: "https://www.sistani.org/english/book/48/2243/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1103)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In all obligatory and mustaḥabb prayers, it is mustaḥabb to raise the hands and recite supplication in the second rak‘ah, after recitation of chapter al-Fātiḥah and the second chapter but before rukū‘. This action is called qunūt."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "306.",
+          url: "https://www.leader.ir/en/book/241?sn=32522"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qunutdhikr",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "What may be said in qunūt"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "In qunūt, it is sufficient to say any dhikr, even if it is one ‘subḥānal lāh’, and it is better if one says the following:\nلَا إِلٰهَ إِلَّا اللهُ الْحَلِيْمُ الْكَرِيْمُ، لَا إِلٰهَ إِلَّا اللهُ الْعَلِيُّ الْعَظِيْمُ، سُبْحَانَ اللهِ رَبِّ السَّمَاوَاتِ السَّبْعِ، وَرَبِّ الْأَرَضِيْنَ السَّبْعِ، وَمَا فِيْهِنَّ وَمَا بَيْنَهُنَّ وَرَبِّ الْعَرْشِ الْعَظِیْم، وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ\nlā ilāha illal lāhul ḥalīmul karīm, lā ilāha illal lāhul ʿaliyyul ʿaẓīm, subḥānal lāhi rabbis samāwātis sabʿ, wa rabbil araḍīnas sabʿ, wa mā fīhinna wa mā baynahunna wa rabbil ʿarshil ʿaẓīm, wal ḥamdu lillāhi rabbil ʿālamīn\nThere is no god but Allah, the Forbearing, the Generous. There is no god but Allah, the High, the Great. I declare emphatically that Allah is free from imperfections, [Allah,] Lord of the seven skies and all that is in them and all that is between them, and Lord of the Great Throne. And all praise is for Allah, Lord of the worlds.",
+          ur: "قنوت میں انسان جوذکربھی پڑھے خواہ ایک دفعہ’’سُبْحَانَ اللہِ‘‘ ہی کہے کافی ہے اوربہترہے کہ یہ دعاپڑھے :\n’’لَااِلٰہَ اِلَّا اللہُ الْحَلِیْمُ الْکَرِیْمُ،لَااِلٰہَ اِلَّااللہُ الْعَلِیُّ الْعَظِیْمُ،سُبْحَانَ اللہِ رَبِّ السَّمٰوَاتِ السَّبْعِ وَرَبِّ الْاَرَضِیْنَ السَّبْعِ وَمَافِیْھِنَّ وَمَابَیْنَھُنَّ وَ رَبِّ الْعَرْشِ الْعَظِیْمِ، وَالْحَمْدُلِلّٰہِ رَبِّ الْعَالَمِیْنَ‘‘۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1105",
+          url: "https://www.sistani.org/english/book/48/2243/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1105)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In qunūt, any dhikr, supplication or verse of the Qur’an can be recited. One can suffice with reciting one salāwāt, subḥānallāh, bismillāh, or bismillāhir raḥmānir raḥīm; but it is better to recite the supplications which are mentioned in the Holy Qur’an, such as\nرَبَّنَا آتِنَا فِی الدُّنْیَا حَسَنَةً وَفِی الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nor dhikr transmitted from Imams (a) such as\nلا اِلَهَ اِلاّ اللهُ الحَلِیمُ الکَرِیمُ، لا اِلهَ اِلاّ اللهُ العَلِیُّ العَظِیمُ، سُبْحَانَ اللهِ رَبِّ السَّمَاوَاتِ السَّبْعِ وَ رَبِّ الْاَرَضِینَ السَّبْعِ وَ مَا فِیهِنَّ وَ مَا بَیْنَهُنَّ وَ رَبِّ الْعَرْشِ العَظِیمِ وَ الْحَمْدُ لِلهِ رَبِّ العَالَمینَ"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "309.",
+          url: "https://www.leader.ir/en/book/241?sn=32522"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "taqibat",
+    topicId: "tashahhudsalam",
+    subject: {
+      en: "Supplications after the prayer (taʿqībāt)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "After prayers, it is recommended that one engage himself in taʿqībāt, i.e. saying dhikr, reciting duʿāʾs, and reciting the Qur’an. It is better that he recite taʿqībāt facing qibla before he moves from his place and before his wuḍūʾ, ghusl, or tayammum becomes invalid. It is not necessary that the taʿqībāt be in Arabic, but it is better to recite what has been instructed in the books of duʿāʾs. One of the taʿqībāt that has been highly recommended is the tasbīḥ of Her Eminence [Fāṭimah] al-Zahrāʾ (ʿA), which must be said in this order: thirty-four times ‘allāhu akbar’, then thirty-three times ‘alḥamdu lillāh’, and then thirty-three times ‘subḥānal lāh’. It is possible to say the ‘subḥānal lāh’ before ‘alḥamdu lillāh’, but it is better to say it after it.",
+          ur: "مستحب ہے کہ نماز پڑھنے کے بعدانسان کچھ دیرکے لئے تعقیبات (یعنی ذکر، دعااور قرآن مجید)پڑھنے میں مشغول رہے اوربہترہے کہ اس سے پہلے کہ وہ اپنی جگہ سے اٹھے کہ اس کاوضو،غسل یاتیمم باطل ہوجائے روبہ قبلہ ہوکرتعقیبات پڑھے اوریہ ضروری نہیں کہ تعقیبات عربی میں ہوں لیکن بہترہے کہ انسان وہ دعائیں پڑھے جودعاؤں کی کتابوں میں بتائی گئی ہیں اورتسبیح فاطمہ ؑ ان تعقیبات میں سے ہے جن کی بہت زیادہ تاکیدکی گئی ہے۔یہ تسبیح اس ترتیب سے پڑھنی چاہئے : ۳۴ دفعہ ’’اَللہُ اَکْبَرُ‘‘۔ اس کے بعد ۳۳دفعہ’’اَلْحَمْدُلِلّٰہِ‘‘ اوراس کے بعد۳۳ دفعہ’’سُبْحَانَ اللہِ‘‘ اور سُبْحَانَ اللہِ،اَلْحَمْدُلِلّٰہِ سے پہلے بھی پڑھاجاسکتاہے لیکن بہترہے کہ اَلْحَمْدُلِلّٰہِ کے بعد پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1108",
+          url: "https://www.sistani.org/english/book/48/2245/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1108)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "After finishing the prayer, it is mustaḥabb to recite Qur'an, dhikr, or supplications. This act is called prayer’s ta‘qīb and it is better to do it while sitting facing the qiblah and being in the state of wuḍū’, ghusl, or tayammum."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "312.",
+          url: "https://www.leader.ir/en/book/241?sn=32523"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "mubtilatlist",
+    topicId: "mubtilat",
+    subject: {
+      en: "Things that invalidate the prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Twelve things invalidate prayers. These twelve things are called the ‘mubṭilāt’ of prayers.\nFirst: during prayers, one of the required conditions is no longer fulfilled. For example, during prayers one realises that his clothes are impure.\nSecond: during prayers, one intentionally, inadvertently, or due to helplessness, does something that invalidates wuḍūʾ or ghusl. For example, he urinates, even if – based on obligatory precaution – this happens inadvertently or due to helplessness after completing the last sajdah of the prayer. However, if one cannot prevent the discharge of urine and faeces, and during prayers urine or faeces is discharged from his body, then in the event that he acts according to the instructions mentioned in the section on wuḍūʾ, his prayer does not become invalid. Similarly, if during prayers, blood is discharged from a woman experiencing an irregular blood discharge (istiḥāḍah), in the event that she has acted according to the instructions concerning irregular blood discharge, her prayer is valid.",
+          ur: "بارہ چیزیں نمازکوباطل کرتی ہیں اورانہیں ’’ مبطلات‘‘ کہاجاتاہے :\n(اول:) نمازکے دوران نماز کی شرطوں میں سے کوئی شرط مفقود ہوجائے مثلاً نماز پڑھتے ہوئے نمازی کوپتا چلے کہ اس کا لباس نجس ہے۔\n(دوم:) نمازکے دوران عمداًیاسہواًیامجبوری کی وجہ سے انسان کسی ایسی چیز سے دوچارہوجو وضویاغسل کوباطل کردے مثلاً اس کاپیشاب خارج ہوجائے اگرچہ( احتیاط واجب کی بنا پر) اس طرح نماز کے آخری سجدے کے بعدسہواًیامجبوری کی بناپرہو‘تاہم جوشخص پیشاب یا پاخانہ نہ روک سکتاہواگرنمازکے دوران اس کاپیشاب یاپاخانہ نکل جائے اوروہ اس طریقے پرعمل کرے جواحکام وضو کے ذیل میں بتائے گئےہیں تواس کی نمازباطل نہیں ہوگی اور اسی طرح اگرنماز کے دوران مستحاضہ کوخون آجائے تواگر وہ استحاضہ سے متعلق احکام کے مطابق عمل کرے تواس کی نمازصحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1112",
+          url: "https://www.sistani.org/english/book/48/2247/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1112)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The prayer is invalidated in the following cases:\n1. When one of the conditions of prayer ceases to exist during prayer;\n2. When wuḍū’ or ghusl is invalidated;\n3. To turn away from the qiblah;\n4. Talking;\n5. Laughing;\n6. Weeping;\n7. When the form of the prayer is disrupted;\n8. Eating and drinking;\n9. Doubts which invalidate the prayer;\n10. To repeat a foundational element or to neglect it;\n11. Saying āmīn after chapter al-Fātiḥah;\n12. Placing one hand on the other in a certain manner which is called takattuf."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "322.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "turningface",
+    topicId: "mubtilat",
+    subject: {
+      en: "Turning away from the qibla"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person turns only his face away from qibla and his body remains facing qibla, in the event that he turns his neck to such an extent that he can see a little of what is behind him, the rule of turning away from qibla – which was mentioned earlier – applies. However, if his turning is not to this extent but is commonly considered a lot, then based on obligatory precaution, he must perform his prayer again. If he turns his neck a little, his prayer does not become invalid, although this action is disapproved.\nSixth: one intentionally speaks, even if what he says is only one letter, as long as it conveys a meaning; for example, he says ‘ قِ’ (qi), which in Arabic means ‘keep safe’. The same applies if what he says only means something in a particular context; for example, he says ‘ باء ’ (bāʾ) in response to someone who asks what the second letter of the Arabic alphabet is. In the event that what he intentionally says conveys no meaning at all but consists of two or more letters, then based on obligatory precaution, it also invalidates prayers.",
+          ur: "اگرفقط اپنے چہرے کوقبلے سے گھمائے لیکن اس کابدن قبلے کی طرف ہوچنانچہ اس حدتک گردن کوموڑے کہ اپنے سرکے پیچھے کچھ دیکھ سکے تواس کے لئے بھی وہی حکم ہے جوقبلے سے پھرجانے والے کے لئے ہے جس کاذکر پہلے کیاجاچکا ہے اوراگراپنی گردن کوموڑنا اتنا زیادہ نہ ہو لیکن عرفاً زیادہ انحراف کہا جائے تو( احتیاط واجب کی بناء پر) دوبارہ نماز پڑھنا ضروری ہے لیکن اگر اپنی گردن کو تھوڑاسا موڑے تواس کی نمازباطل نہیں ہوگی اگرچہ یہ کام مکروہ ہے۔\n(ششم:) مبطلات نمازمیں سے ایک یہ ہے کہ عمداًبات کرے اگرچہ ایساکلمہ ہو کہ جس میں ایک حرف سے زیادہ نہ ہواگروہ حرف بامعنی ہومثلاً(ق) کہ جس کے عربی زبان میں معنی( حفاظت کرو)کے ہیں یا کوئی اورمعنی سمجھ میں آتے ہوں مثلاً (ب) اس شخص کے جواب میں کہ جوحروف تہجی کے حرف دوم کے بارے میں سوال کرے اوراگراس لفظ سے کوئی معنی بھی سمجھ میں نہ آتے ہوں اوروہ دویادوسے زیادہ حرفوں سے مرکب ہو تب بھی( احتیاط کی بناپر) (وہ لفظ) نماز کوباطل کردیتاہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1117",
+          url: "https://www.sistani.org/english/book/48/2247/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1117)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person intentionally turns his face or his body from the qiblah so that he can see the right or left easily, his prayer is invalidated. If a person does so unintentionally, by obligatory caution, his prayer becomes invalidated. However, if a person turns his face a little to each side, his prayer is not invalidated."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "325.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "speaking",
+    topicId: "mubtilat",
+    subject: {
+      en: "Speaking during the prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person inadvertently says a word that has one or more letters, then even if that word conveys a meaning, his prayer does not become invalid. However, based on obligatory precaution, it is necessary that after prayers he perform sajdatā al‑sahw, which will be discussed later.",
+          ur: "اگرکوئی شخص سہواًایساکلمہ کہے جس کے حروف ایک یااس سے زیادہ ہوں توخواہ وہ کلمہ معنی بھی رکھتاہواس شخص کی نمازباطل نہیں ہوتی لیکن (احتیاط کی بناپر)اس کے لئے ضروری ہے کہ جیساکہ بعدمیں ذکرآئے گانماز کے بعدوہ سجدئہ سہوبجالائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1118",
+          url: "https://www.sistani.org/english/book/48/2247/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1118)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person intentionally talks, even to the extent of one word, the prayer is invalidated."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "326.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "replyingsalam",
+    topicId: "mubtilat",
+    subject: {
+      en: "Replying to a salām during the prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "One must immediately reply to salām, irrespective of whether he is performing prayers or not. If a person intentionally or due to forgetfulness delays his reply to salām to the extent that were he to reply to it, it would not be considered a reply to that initial salām, then in the event that he is performing prayers, he must not reply; and if he is not performing prayers, replying is not obligatory.",
+          ur: "انسان کوچاہئے کہ خواہ وہ نمازکی حالت میں ہویانہ ہوسلام کاجواب فوراًدے اوراگر جان بوجھ کریابھولے سے سلام کاجواب دینے میں اتناتوقف کرے کہ اگر جواب دے تووہ اس سلام کاجواب شمارنہ ہوتواگروہ نمازکی حالت میں ہو تو ضروری ہے کہ جواب نہ دے اوراگرنماز کی حالت میں نہ ہوتوجواب دیناواجب نہیں ہے ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1124",
+          url: "https://www.sistani.org/english/book/48/2247/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1124)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is obligatory to answer the salām immediately. If for any reason someone delays it to such an extent that the answer is not considered answer to the salām, then if he is praying, he should not give the answer to the salām and if he is not praying, it is not obligatory to answer it. In case of doubt regarding the delay the same rule applies. If delaying the greeting is intentional, it is a sin."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "332.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "laughing",
+    topicId: "mubtilat",
+    subject: {
+      en: "Laughing"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If on account of refraining oneself from laughing aloud one’s condition changes – for example, the colour of his face turns red – the obligatory precaution is that he must perform his prayer again.\nEighth: based on obligatory precaution, intentionally crying loudly or silently over a worldly matter. However, if one cries silently or loudly out of fear of Allah the Exalted, or in eagerness for Him or the Hereafter, there is no problem; indeed, it is among the best actions. If one cries in asking Allah the Exalted for a worldly matter in humility to Him, there is no problem.\nNinth: doing something that breaks the form of the prayer, such as jumping in the air and suchlike, whether intentionally or forgetfully. However, doing something that does not break the form of the prayer, such as indicating with one’s hand, is not a problem.",
+          ur: "اگرہنسی کی آواز روکنے کے لئے کسی شخص کی حالت بدل جائے مثلاً اس کارنگ سرخ ہوجائے تو(احتیاط واجب )یہ ہے کہ وہ نمازدوبارہ پڑھے۔\n(ہشتم:)( احتیاط واجب کی بناپر)یہ نماز کے مبطلات میں سے ہے کہ انسان دنیاوی کام کے لئے جان بوجھ کرآواز سے یابغیر آواز کے روئے لیکن اگرخوف خدا سے یا شوقِ خدا یا آخرت کے لئے روئے توخواہ آہستہ روئے یابلندآواز سے روئے کوئی حرج نہیں بلکہ یہ بہترین اعمال میں سے ہے لیکن اگر دنیوی حاجت کو حاصل کرنے کے لئے بارگاہ خدا میں تذلل(خشوع وخضوع) کی نیت سے روئے تو کوئی حرج نہیں ہے۔\n(نہم:) نمازباطل کرنے والی چیزوں میں سے ہے کہ کوئی ایساکام کرے جس سے نمازکی شکل باقی نہ رہے مثلاًاچھلناکودنااوراسی طرح کاکوئی عمل انجام دینا۔ایسا کرنا عمداً ہویابھول چوک کی وجہ سے ہو۔لیکن جس کام سے نمازکی شکل تبدیل نہ ہوتی ہو مثلاً ہاتھ سے اشارہ کرنااس میں کوئی حرج نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1137",
+          url: "https://www.sistani.org/english/book/48/2247/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1137)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Intentional loud laughter (guffawing) invalidates the prayer. But inadvertent or silent laughter does not."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "334.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "eatingdrinking",
+    topicId: "mubtilat",
+    subject: {
+      en: "Eating and drinking"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, even if the form of prayer does not break by intentionally eating or drinking, one must perform the prayer again, irrespective of whether or not muwālāh is maintained, i.e. irrespective of whether or not it can be said that he is performing [the parts of] the prayer in close succession.",
+          ur: "اگرکسی کاجان بوجھ کرکھاناپینانمازکی شکل کوختم نہ بھی کرے تب بھی (احتیاط واجب کی بناپر)ضروری ہے کہ نماز کودوبارہ پڑھے خواہ نمازکاتسلسل ختم ہو(یعنی یہ نہ کہا جائے کہ نمازکومسلسل پڑھ رہاہے) یانمازکاتسلسل ختم نہ ہو۔"
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1140",
+          url: "https://www.sistani.org/english/book/48/2247/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1140)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "To eat or drink, whether a little or a lot, during prayer does invalidate the prayer. However, swallowing food particles left here and there in the mouth or sucking the sweet of sugar remained in the mouth does not invalidate prayer. Also, if one absentmindedly or forgetfully eats or drinks something during prayer, the latter is not invalidated provided that prayer's form is not disturbed."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "341.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "amin",
+    topicId: "mubtilat",
+    subject: {
+      en: "Saying “āmīn” after al-Ḥamd"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is not permissible to say \"āmīn\" after reciting chapter al- Fātiḥah and it invalidates the prayer. But if it is because of taqiyyah, there is no problem. Also, putting folded-hands on one's chest while standing during prayer (putting hands together in front of the body) invalidates the prayer if it is done with the intention that it is a part of prayer. By obligatory caution, one should avoid it even without this intention."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "343.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "breakingprayer",
+    topicId: "mubtilat",
+    subject: {
+      en: "Breaking an obligatory prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, it is not permitted for one to voluntarily break an obligatory prayer. However, there is no problem if one does so to protect property or prevent financial or physical harm. In fact, there is no problem [if one breaks an obligatory prayer] for any religious or worldly purpose that is of importance to him.",
+          ur: "اختیاری حالت میں واجب نمازکاتوڑنا(احتیاط واجب کی بناپر) جائز نہیں ہے لیکن مال کی حفاظت اورمالی یاجسمانی ضررسے بچنے کے لئے نمازتوڑنے میں کوئی حرج نہیں بلکہ وہ تمام اہم دینی اور دنیاوی کام جونمازی کوپیش آئیں ان کے لئے نماز توڑنے میں کوئی حرج نہیں ۔"
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1145",
+          url: "https://www.sistani.org/english/book/48/2249/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1145)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is not permissible to cut obligatory prayers without an excuse."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "344.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "breakingnecessity",
+    topicId: "mubtilat",
+    subject: {
+      en: "When the prayer must be broken"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If without breaking one’s prayers it is not possible for him to protect his life or the life of someone whose life is obligatory for him to protect, or property whose protection is obligatory for him, then he must break his prayers.",
+          ur: "اگرانسان اپنی جان کی حفاظت یاکسی ایسے شخص کی جان کی حفاظت جس کی جان کی حفاظت واجب ہویاایسے مال کی حفاظت جس کی نگہداشت واجب ہواور وہ نماز توڑے بغیر ممکن نہ ہوتوانسان کو چاہئے کہ نمازتوڑدے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1146",
+          url: "https://www.sistani.org/english/book/48/2249/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1146)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If it is not possible, without cutting the prayer, to save life or property when it is obligatory, then the prayer should be abandoned. In general, it is permissible to cut the prayer to avoid life and financial risks that are significant and important for the praying person."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "345.",
+          url: "https://www.leader.ir/en/book/241?sn=32525"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrintro",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Shortening the four-rakʿah prayers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "While travelling, one must perform the four rakʿah prayers as two rakʿahs in accordance with the conditions that will be mentioned later.",
+          ur: "انسان سفرمیں ہوتوضروری ہے کہ چار رکعتی نمازیں ان شرائط کے ساتھ جوبعدمیں بیان ہوں گی دورکعت پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 716",
+          url: "https://www.sistani.org/english/book/48/2208/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (716)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Among the obligatory daily prayers, a traveler must perform four-rak‘ah prayers in two rak‘ah in some conditions."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "407.",
+          url: "https://www.leader.ir/en/book/241?sn=32547"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrconditions",
+    topicId: "travellerprayer",
+    subject: {
+      en: "The conditions for shortening"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Prayer during travel is shortened under eight conditions, which are as follows:\n1. Shar‘ī distance;\n2. Intention to travel the shar‘ī distance;\n3. Continuity of intention (not giving up on the intention of the shar‘ī distance nor having doubts about it);\n4. Not crossing the watan nor deciding to stay ten days in a place during the trip;\n5. The travel is not a sin;\n6. Not being at home;\n7. Traveling is not their job;\n8. Reaching the tarakhkhuṣ point."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "408.",
+          url: "https://www.leader.ir/en/book/241?sn=32547"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrdistance",
+    topicId: "travellerprayer",
+    subject: {
+      en: "The distance of eight farsakhs"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person’s outward and return journey totals eight farsakhs – irrespective of whether or not the outward or the return journey on its own is less than four farsakhs – he must perform qaṣr prayers. Therefore, if his outward journey is three farsakhs and his return is five, or vice versa, he must perform qaṣr prayers, i.e. [he must perform the four rakʿah prayers] as two rakʿah prayers.",
+          ur: "جس شخص کے جانے اورواپس آنے کی مجموعی مسافت ملاکرآٹھ فرسخ ہواورخواہ اس کے جانے یاواپسی کی مسافت چارفرسخ سے کم ہویانہ ہوضروری ہے کہ نمازقصرکرکے پڑھے۔ اس بناپراگرجانے کی مسافت تین فرسخ اور واپسی کی پانچ فرسخ یااس کے برعکس ہوتوضروری ہے کہ نمازقصریعنی( دورکعتی) پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1258",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1258)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The distance that shortens the prayer must be at least eight farsakhs, so if the journey is less than this distance, the prayer is not shortened."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "409.",
+          url: "https://www.leader.ir/en/book/241?sn=32548"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrkm",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Eight farsakhs in kilometres"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Shar‘ī distance (eight farsakhs) which shortens the prayers (according to the reliable research), is equivalent to 41 kilometers."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "410.",
+          url: "https://www.leader.ir/en/book/241?sn=32548"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrdistancestart",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Where the distance is measured from"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The start of the eight farsakhs on one’s journey must be calculated from the point beyond which a person is deemed to be a traveller; this is usually the outskirts of a town. However, in some very big cities, it is possible that it is the outskirts of a particular area. The end of the journey of a traveller who intends to travel to a town or village that is not his home town (waṭan) is deemed to be his destination in that town or village, not the point of entry into that town or village."
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1266*",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        verification: "A",
+        urduEditionLag: true,
+        urduNote: "The official Urdu edition has the pre-revision wording of this ruling.",
+        note: "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6)."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The criterion for calculating the shar‘ī distance is the distance between the end of the city of departure and the beginning of the city of destination*; whether the city is large or not.\n* i.e. from the last houses in the city of departure till the first houses of the city of destination."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "411.",
+          url: "https://www.leader.ir/en/book/241?sn=32548"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrintention",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Intending the distance from the start"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A traveller must perform qaṣr prayers when he has decided to travel eight farsakhs. Therefore, if someone goes out of his town and, for example, his intention is that if he finds a friend he will travel for eight farsakhs, then in the event that he is confident that he will find a friend, he must perform qaṣr prayers; and if he is not confident about this, he must perform tamām prayers.",
+          ur: "مسافرکونمازقصرکرکے اس صورت میں پڑھنی ضروری ہے جب اس کا آٹھ فرسخ طے کرنے کاپختہ ارادہ ہولہٰذااگرکوئی شخص شہرسے باہر جارہاہواورمثال کے طورپراس کاارادہ یہ ہوکہ اگرکوئی ساتھی مل گیاتوآٹھ فرسخ کے سفر پرچلاجاؤں گا اوراسے اطمینان ہوکہ ساتھی مل جائے گاتواسے نمازقصرکرکے پڑھنی ضروری ہے اور اگراسے اس بارے میں اطمینان نہ ہوتوضروری ہے کہ پوری نمازپڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1268",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1268)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "When leaving the city, the mukallaf must intend to travel eight farsakhs, one way or combined (see 413 to 415). Therefore, if at first, he intends to travel less than the shar‘ī distance; like if he plans to go three farsakhs and after reaching his destination (three farsakhs), he decides to go another five farsakhs and stay there for ten days, such a journey (even though eight farsakhs have been traveled) does not shorten the prayers."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "430.",
+          url: "https://www.leader.ir/en/book/241?sn=32550"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrsinful",
+    topicId: "travellerprayer",
+    subject: {
+      en: "A journey for a sinful purpose"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "With regard to someone whose journey is not unlawful and who is not travelling for any unlawful purpose, if he commits a sin on his journey – for example, he backbites or drinks alcohol – he must perform qaṣr prayers.",
+          ur: "جس شخص کاسفر حرام نہ ہواوروہ کسی حرام کام کے لئے بھی سفر نہ کر رہا ہووہ اگرچہ سفر میں گناہ بھی کرے مثلاً غیبت کرے یاشراب پئے تب بھی ضروری ہے کہ نمازقصر کرکے پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1282",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1282)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Another condition for shortening the prayer is that the journey is permissible (not ḥarām). Therefore, if a person goes on a ḥarām journey, whether the journey itself is ḥarām, such as fleeing from war or traveling to do a ḥarām act, like to steal, then his prayer is complete."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "452.",
+          url: "https://www.leader.ir/en/book/241?sn=32554"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrleisure",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Travelling for recreation"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person travels for recreational and leisure purposes, his journey is not unlawful and he must perform qaṣr prayers.",
+          ur: "اگرکوئی شخص سیروتفریح کی غرض سے سفرکرے تواس کا سفرحرام نہیں ہے اورضروری ہے کہ نمازقصرکرکے پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1286",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1286)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Traveling for fun/recreation is not ḥarām, and prayer during such a travel is not shortened."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "465.",
+          url: "https://www.leader.ir/en/book/241?sn=32555"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrjob",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Someone whose job is travelling"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "With regard to someone whose profession is travelling, if he travels for another purpose, such as ziyārah or hajj, he must perform qaṣr prayers unless he is commonly known to be a frequent traveller, such as someone who always travels three days in a week. However, if, for example, a car driver is hired for a ziyārah trip and on that trip he also performs ziyārah, he must perform tamām prayers.",
+          ur: "جس شخص کے پیشے کاتعلق سفرسے ہواگروہ کسی دوسرے مقصد مثلاً حج یازیارت کے لئے سفرکرے توضروری ہے کہ نمازقصرکرکے پڑھے لیکن اگرعرف عام میں ’’ کثیرالسفر‘‘کہلاتاہوجیسے ہفتہ میں تین دن مسلسل سفر پر رہنے والا شخص (تو قصرنہ کرے) لیکن اگرمثال کے طورپر ڈرائیور اپنی گاڑی زیارت کے لئے کرائے پرچلائے اورضمناًخودبھی زیارت کرے توہرحال میں ضروری ہے کہ پوری نمازپڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1293",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1293)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "One of the conditions for shortening the prayer while traveling is that the trip is not for work, so if the trip is for work, whether travel constitute the work, such as driving or piloting, or whether traveling is a preliminary to the job, such as the travel of a doctor or a teacher who travels for his job, prayer is complete during that trip and fasting is correct."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "478.",
+          url: "https://www.leader.ir/en/book/241?sn=32559"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrlimit",
+    topicId: "travellerprayer",
+    subject: {
+      en: "The permitted limit (tarakhkhuṣ)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The permitted limit is the place where the people of a town – including those who live on its outskirts and are considered residents of the town – cannot see a traveller due to the distance he has travelled. A traveller would know he has reached this point when he can no longer see the people of the town nor those living on its outskirts.",
+          ur: "حدترخص وہ جگہ ہے جہاں سے اہل شہر اور یہاں تک کہ شہر اور اطراف شہر کے باہر رہنے والے افراد مسافرکونہ دیکھ سکیں اوراس کی علامت یہ ہے کہ وہ اہل شہرکونہ دیکھ سکے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1304",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1304)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A traveler who leaves his watan and intends to travel a shar‘ī distance, his prayer is shortened from the time he reaches a certain point, and on his return, when he reaches the same point, he must complete the prayer. They call this point \"tarakhkhuṣ point\". However, there is mustaḥabb caution to perform the prayer in both forms, complete and shortened, in the place between tarakhkhuṣ point and city entrance.\nThe criterion for determining the tarakhkhuṣ point is to be far from the last house of city so that one does not hear the sound of adhān said in the city without a loudspeaker, whether he sees the city walls or not."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "506.",
+          url: "https://www.leader.ir/en/book/241?sn=32560"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "qasrwatan",
+    topicId: "travellerprayer",
+    subject: {
+      en: "The home town (waṭan)"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A place that one adopts as his permanent residence is his home town, irrespective of whether he was born there or not, or it was the home of his parents, or he selected it himself for his residence.",
+          ur: "جس جگہ کوانسان نے اپنی مستقل سکونت اوربودوباش کے لئے منتخب کیاہووہ اس کا وطن ہے خواہ وہ وہاں پیداہواہواوروہ اس کے والدین کا وطن ہویااس نے خود اس جگہ کوزندگی بسرکرنے کے لئے اختیارکیاہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1314",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1314)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "According to common view, watan is a place where a person resides and lives, whether it is a city or a village or else."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "529.",
+          url: "https://www.leader.ir/en/book/241?sn=32562"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrtendays",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Intending to stay ten days"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A traveller who has the intention of staying somewhere for ten consecutive days, or knows that he has no choice but to stay somewhere for ten days, must perform tamām prayers in that place.",
+          ur: "اگرکسی مسافرکاکسی جگہ پرمسلسل دس دن رہنے کاارادہ ہویاوہ جانتا ہو کہ بہ امرمجبوری دس دن تک ایک جگہ رہناپڑے گاتووہاں اسے پوری نمازپڑھنی ضروری ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1320",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1320)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a traveler intends to stay in a place for ten days, he must perform complete prayer there. But if he stays for ten days without intention or in doubt, his prayer is short."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "558.",
+          url: "https://www.leader.ir/en/book/241?sn=32568"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrthirtydays",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Staying thirty days without intending ten"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a traveller happens to stay somewhere for thirty days – for example, throughout those thirty days he was unsure about going or staying – he must perform tamām prayers after thirty days have passed even if he stays there for a short time [after the thirty days].",
+          ur: "اگرکوئی مسافراتفاقاًکسی جگہ تیس دن رہ جائے مثلاً تیس کے تیس دنوں میں وہاں سے چلے جانے یاوہاں رہنے کے بارے میں مذبذب رہاہوتوتیس دن گزرنے کے بعداگرچہ وہ تھوڑی مدت ہی وہاں رہے ضروری ہے کہ نمازپوری پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1338",
+          url: "https://www.sistani.org/english/book/48/2264/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1338)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If, after going eight farsakhs, one remains in a place for thirty days without intention to stay, he should perform complete prayers after the thirtieth day until he leaves the place (even if it is half a day)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "588.",
+          url: "https://www.leader.ir/en/book/241?sn=32572"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qasrfourplaces",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Mecca, Medina, Kūfah and al-Ḥāʾir"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A traveller can perform tamām prayers in the entire city of Mecca, Medina, and Kufa, and in the shrine (ḥaram) of His Eminence Sayyid al-Shuhadāʾ [Imam al-Ḥusayn] (ʿA) up to a distance of approximately 11.5 metres from the sacred grave [i.e. the area known as the ‘ḥāʾir’].",
+          ur: "مکہ،مدینہ اور کوفے کے پورے شہر میں نیزحضرت سیدالشہداء علیہ السلام کے حرم میں بھی قبرمطہر سے تقریباً ساڑھے گیارہ میٹر تک مسافراپنی نمازپوری پڑھ سکتاہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1341",
+          url: "https://www.sistani.org/english/book/48/2265/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1341)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In the four places of choice, i.e. the city of Mecca, Medina, the masjid of Kūfah and Hā’ir Hosseini (peace be upon him), a traveler can pray the four-rak‘ah prayers shortened or in full, and it is better to perform them in full, but it is mustaḥabb caution to perform them in short form."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "620.",
+          url: "https://www.leader.ir/en/book/241?sn=32576"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "qasrignorance",
+    topicId: "travellerprayer",
+    subject: {
+      en: "Praying in full not knowing the ruling"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a traveller who does not know that he must perform qaṣr prayers performs tamām prayers, his prayers are valid.",
+          ur: "جومسافریہ نہ جانتاہوکہ اسے نمازقصرکرکے پڑھنی ضروری ہے اگر وہ پوری نمازپڑھے تواس کی نمازصحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1344",
+          url: "https://www.sistani.org/english/book/48/2265/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1344)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A traveler who does not know that the prayer is short while traveling, and performs complete prayer contrary to his duty while he is qāṣir* ignorant, then after understanding the ruling, he does not need to repeat the prayer.\n* It means that he does not know the ruling nor aware of his ignorance."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "604.",
+          url: "https://www.leader.ir/en/book/241?sn=32574"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qadaobligation",
+    topicId: "qadaprayers",
+    subject: {
+      en: "Making up missed prayers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "With regard to someone who has not performed his daily prayers within their prescribed time, he must make them up even if he slept throughout the prescribed time or did not perform them on account of being intoxicated. The same applies to any other obligatory prayer that was not performed within its prescribed time, even, based on obligatory precaution, those prayers that had become obligatory at a specific time on account of a vow. However, the prayers of Eid al-Fiṭr and Eid al-Aḍḥā cannot be made up, and the prayers that a woman does not perform while experiencing ḥayḍ or nifās are not required to be made up, irrespective of whether they are the daily prayers or other prayers. The rule concerning ṣalāt al‑āyāt will be mentioned later.",
+          ur: "جس شخص نے اپنی یومیہ نمازیں ان کے وقت میں نہ پڑھی ہوں تو ضروری ہے کہ ان کی قضابجالائے اگرچہ وہ نمازکے تمام وقت کے دوران سویارہاہو یا اس نے مدہوشی کی وجہ سے نمازنہ پڑھی ہواوریہی حکم ہردوسری واجب نمازکاہے جسے اس کے وقت میں نہ پڑھاہو۔حتیٰ کہ( احتیاط لازم کی بناپر)یہی حکم ہے اس نمازکاجو منت ماننے کی وجہ سے معین وقت میں اس پرواجب ہوچکی ہو۔لیکن نماز عید فطر اور نماز عید قربان کی قضانہیں ہے۔ایسے ہی جونمازیں کسی عورت نے حیض یانفاس کی حالت میں نہ پڑھی ہوں ان کی قضاواجب نہیں خواہ وہ یومیہ نمازیں ہوں یاکوئی اورہوں اور نماز آیات کی قضا کا حکم آئندہ بیان ہو گا۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1355",
+          url: "https://www.sistani.org/english/book/48/2266/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1355)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person, who has not performed the obligatory daily prayer at its specified time intentionally or due to forgetfulness or ignorance, or who realizes, after the prayer's time, that his prayer was invalid, must perform its qaḍā’."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "627.",
+          url: "https://www.leader.ir/en/book/241?sn=32577"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qadanotdelay",
+    topicId: "qadaprayers",
+    subject: {
+      en: "Not being negligent about qaḍāʾ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Someone who has outstanding qaḍāʾ prayers must not be negligent about performing them; however, it is not obligatory for him to perform them immediately.",
+          ur: "جس شخص کی نمازقضاہوجائے ضروری ہے کہ اس کی قضا پڑھنے میں کوتاہی نہ کرے البتہ اس کافوراً پڑھناواجب نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1357",
+          url: "https://www.sistani.org/english/book/48/2266/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1357)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who owes some prayer is not obligated to perform them right away. However, negligence in performing them is not allowed."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "633.",
+          url: "https://www.leader.ir/en/book/241?sn=32577"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qadaorder",
+    topicId: "qadaprayers",
+    subject: {
+      en: "Order of qaḍāʾ prayers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is not necessary to make up daily prayers in the order they became qaḍāʾ, except for the prayers that must be performed in a particular order when they are performed within their prescribed time, such as ẓuhr and ʿaṣr prayers, and maghrib and ʿishāʾ prayers, of the same day.",
+          ur: "یومیہ نمازوں کی قضامیں ترتیب لازم نہیں ہے سوائے ان نمازوں کے جن کی ادامیں ترتیب ہے مثلاً ایک دن کی نمازظہروعصریامغرب وعشا۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1360",
+          url: "https://www.sistani.org/english/book/48/2266/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1360)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is not obligatory to observe the order in reading the qaḍā’ prayer; except for qaḍā’ of ẓuhr and ‘aṣr prayers of one day and qaḍā’ of maghrib and ‘ishā’ prayers of one day."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "638.",
+          url: "https://www.leader.ir/en/book/241?sn=32577"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qadaunknownnumber",
+    topicId: "qadaprayers",
+    subject: {
+      en: "Not knowing how many prayers were missed"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person deems it probable that he has qaḍāʾ prayers to perform or that the prayers he performed were not valid, it is recommended that he make them up as a precautionary measure.",
+          ur: "اگرکسی شخص کواحتمال ہوکہ قضا نمازاس کے ذمے ہے یاجو نمازیں پڑھ چکاہے وہ صحیح نہیں تھیں تو(مستحب ہے کہ احتیاطاً )ان نمازوں کی قضاکرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1359",
+          url: "https://www.sistani.org/english/book/48/2266/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1359)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who does not know the number of his qaḍā’ prayers, it suffices to settle them for the amount that he is sure he has missed."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "639.",
+          url: "https://www.leader.ir/en/book/241?sn=32577"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qadanafilah",
+    topicId: "qadaprayers",
+    subject: {
+      en: "Recommended prayers while qaḍāʾ is owed"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Someone who has outstanding qaḍāʾ prayers can perform recommended prayers.",
+          ur: "جس شخص پرکسی نمازکی قضا ہووہ مستحب نمازپڑھ سکتا ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1358",
+          url: "https://www.sistani.org/english/book/48/2266/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1358)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who owes some qaḍā’ prayers can perform nāfilah and mustaḥabb prayers."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "641.",
+          url: "https://www.leader.ir/en/book/241?sn=32577"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "qadaliving",
+    topicId: "qadaprayers",
+    subject: {
+      en: "Qaḍāʾ for someone still alive"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "As long as one is alive, another person cannot make up prayers on his behalf, even if he is unable to perform his qaḍāʾ prayers himself.",
+          ur: "جب تک انسان زندہ ہے خواہ وہ اپنی قضانمازیں پڑھنے سے قاصر ہی کیوں نہ ہوکوئی دوسراشخص اس کی قضا نمازیں نہیں پڑھ سکتا۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1367",
+          url: "https://www.sistani.org/english/book/48/2266/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1367)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      }
+    ]
+  },
+  {
+    id: "eldestson",
+    topicId: "qadaprayers",
+    subject: {
+      en: "The eldest son and his parents' missed prayers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If one’s father is a believer who has not performed his daily and other obligatory prayers – excluding those prayers that had become obligatory at a specific time on account of a vow – and he could have made them up, in the event that he did not fail to perform them due to outright disobedience, then based on obligatory precaution, after the father’s death his eldest son must either perform them himself or hire someone to perform them. However, if his father intentionally did not perform them, it is not obligatory for his eldest son to make them up. The qaḍāʾ prayers of one’s mother are not obligatory for him to perform, although it is better that he does."
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1370*",
+          url: "https://www.sistani.org/english/book/48/2267/"
+        },
+        verification: "A",
+        urduEditionLag: true,
+        urduNote: "The official Urdu edition has the pre-revision wording of this ruling.",
+        note: "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6). Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is the elder son’s duty to make up in qaḍā’ for the missed prayers of his late father and, as per obligatory caution, those of his mother."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "651.",
+          url: "https://www.leader.ir/en/book/241?sn=32579"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ],
+    differsBetweenMaraji: true
+  },
+  {
+    id: "eldestsonwho",
+    topicId: "qadaprayers",
+    subject: {
+      en: "Who the eldest son is"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If at the time of his father’s death the eldest son was not of the age of legal responsibility (bāligh) or he was insane, then when he becomes bāligh and/or sane, it is not obligatory for him to perform his father’s qaḍāʾ prayers.",
+          ur: "اگرباپ کے مرنے کے وقت بڑابیٹانابالغ یادیوانہ ہوتواس پر واجب نہیں کہ جب بالغ یا عاقل ہوجائے توباپ کی قضانمازیں پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1377",
+          url: "https://www.sistani.org/english/book/48/2267/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1377)",
+          url: "https://www.sistani.org/urdu/book/61/3639/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The eldest son means the oldest son who is alive when his parents die, whether he is an adult or minor."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "653.",
+          url: "https://www.leader.ir/en/book/241?sn=32579"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "jamaahvirtue",
+    topicId: "jamaah",
+    subject: {
+      en: "Praying in congregation"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "It is recommended to perform the daily prayers in congregation, and it is recommended more to perform ṣubḥ, maghrib, and ʿishāʾ prayers in congregation, especially for the neighbours of a mosque and for those who can hear the adhān of a mosque. Similarly, it is recommended for the other obligatory prayers to be performed in congregation; however, the legality (mashrūʿiyyah) of performing in congregation the prayer for ṭawāf and ṣalāt al‑āyāt – except for lunar and solar eclipses – is not established.",
+          ur: "یومیہ نمازیں جماعت کے ساتھ پڑھنا مستحب ہے اور مسجد کے پڑوس میں رہنے والے کواوراس شخص کوجو مسجد کی اذان کی آواز سنتاہونمازصبح اورمغرب وعشاجماعت کے ساتھ پڑھنے کی بالخصوص بہت زیادہ تاکید کی گئی ہے اور اسی طرح مستحب ہےکہ تمام واجب نمازوں کو جماعت سے پڑھیں لیکن نماز طواف اور سورج اور چاند گرہن کے علاوہ بقیہ نماز آیات کےلئے جماعت کا جواز ثابت نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1379",
+          url: "https://www.sistani.org/english/book/48/2268/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1379)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is mustaḥabb to perform the daily obligatory prayers in congregation, and it is more mustaḥabb to perform morning, maghrib and ‘ishā’ prayers in congregation."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "692.",
+          url: "https://www.leader.ir/en/book/241?sn=32586"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "jamaahneglect",
+    topicId: "jamaah",
+    subject: {
+      en: "Not attending out of indifference"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Not attending congregational prayers due to indifference about it is not permitted. And it is not befitting for one not to attend congregational prayers without a valid excuse.",
+          ur: "بے اعتنائی برتتے ہوئے نمازجماعت میں شریک نہ ہوناجائزنہیں ہے اورانسان کے لئے یہ مناسب نہیں ہے کہ بغیرعذرکے نمازجماعت کوترک کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1381",
+          url: "https://www.sistani.org/english/book/48/2268/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1381)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is not nice in shar‘ to not participate in the Friday prayer because of not attaching importance to it."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "763.",
+          url: "https://www.leader.ir/en/book/241?sn=32599"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "jamaahwhichprayers",
+    topicId: "jamaah",
+    subject: {
+      en: "Which prayers may be prayed in congregation"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Recommended prayers cannot be performed in congregation (in some cases, however, this rule is based on obligatory precaution). [There are some exceptions,] however: ṣalāt al‑istisqāʾ, which is performed to invoke rain, can be performed in congregation. The same applies [i.e. they too can be performed in congregation] to the prayers that were obligatory and have become recommended due to some reason, such as the Eid al-Fiṭr and Eid al-Aḍḥā prayers that were obligatory when the Imam (ʿA) was present and are recommended during his occultation."
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1387*",
+          url: "https://www.sistani.org/english/book/48/2268/"
+        },
+        verification: "A",
+        urduEditionLag: true,
+        urduNote: "The official Urdu edition has the pre-revision wording of this ruling.",
+        note: "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6). Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "No mustaḥabb prayer can be recited in congregation except for ‘īd of Fitṛ and ‘Īd of Aḍḥā prayers (which are mustaḥabb during absence of the last Imam) and istisqā’ prayer (said to ask Allah for rain)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "707.",
+          url: "https://www.leader.ir/en/book/241?sn=32588"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "imamconditions",
+    topicId: "jamaah",
+    subject: {
+      en: "Conditions of the imam"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The imam of congregational prayers must be bāligh, sane (ʿāqil), a Twelver Shia, dutiful (ʿādil), of legitimate birth, and a person who performs prayers correctly. Furthermore, if the follower is a man, the imam must also be a man. The validity of following a ten year old child, although it has some basis, is problematic [i.e. based on obligatory precaution, one must not follow a ten year old child]. Being ‘dutiful’ means he does the things that are obligatory for him and refrains from doing the things that are unlawful for him. The sign of being dutiful is that he appears to be a good person, [and this is sufficient] as long as one does not have information that contradicts this.",
+          ur: "امام جماعت کے لئے ضروری ہے کہ بالغ، عاقل، شیعہ اثناعشری، عادل اور حلال زادہ ہواور نماز صحیح طریقہ سے پڑھ سکتاہونیزاگرمقتدی مردہوتواس کاامام بھی مردہونا ضروری ہے اوردس سالہ بچے کی اقتداصحیح ہونااگرچہ وجہ سے خالی نہیں ،لیکن اشکال سے بھی خالی نہیں ہے اور عدالت یہ ہےکہ واجبات کو انجام دیتا ہو اور محرمات کو ترک کرتا ہو اور اس کی نشانی ظاہری وضع قطع ہے جب تک انسان کو اس کے برخلاف انجام دینے کی خبر نہ ہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1433",
+          url: "https://www.sistani.org/english/book/48/2269/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1433)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The imam of congregational prayer should be sane, Twelver Shiite, just (‘ādil), legally born, can perform prayer correctly and by obligatory caution Islamically pubescent (bāligh). Also, if the congregant is a male, the imam should be a male."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "711.",
+          url: "https://www.leader.ir/en/book/241?sn=32589"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "followerrecites",
+    topicId: "jamaah",
+    subject: {
+      en: "What the follower recites"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A follower must say everything in congregational prayers except the recitation of Sūrat al-Ḥamd and the other surah; however, if the first or second rakʿah of the follower is the third or fourth rakʿah of the imam, then he must recite Sūrat al-Ḥamd and the other surah.",
+          ur: "ضروری ہے کہ مقتدی الحمد اورسورہ کے علاوہ نمازکی سب چیزیں خود پڑھے لیکن اگراس کی پہلی اوردوسری رکعت امام کی تیسری اورچھوتھی رکعت ہوتوضروری ہے کہ الحمداورسورہ بھی پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1441",
+          url: "https://www.sistani.org/english/book/48/2270/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1441)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Except for chapter al-Fātiḥah and the other chapter, a ma‘mūm should read all the prayers' dhikr himself. But if one joins the prayer while imam is in the third or fourth rak‘ah of his prayer, the ma‘mūm should recite chapter al-Fātiḥah and the other chapter."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "728.",
+          url: "https://www.leader.ir/en/book/241?sn=32591"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "followerquietprayers",
+    topicId: "jamaah",
+    subject: {
+      en: "The follower in ẓuhr and ʿaṣr"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Based on obligatory precaution, in the first and second rakʿah of ẓuhr and ʿaṣr prayers, a follower must not recite Sūrat al-Ḥamd and the other surah, and it is recommended that he say dhikr instead.",
+          ur: "مقتدی کونمازظہروعصرکی پہلی اوردوسری رکعت میں (احتیاط کی بناپر) الحمد اورسورہ نہیں پڑھناچاہئے اورمستحب ہے کہ ان کے بجائے کوئی ذکرپڑھے۔"
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1446",
+          url: "https://www.sistani.org/english/book/48/2270/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1446)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "During the first two rak‘ahs of the ẓuhr and ‘aṣr prayers, by obligatory caution, a ma‘mūm should not recite chapter al-Fātiḥah and another chapter and it is mustaḥabb to say dhikr instead."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "730.",
+          url: "https://www.leader.ir/en/book/241?sn=32591"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "takbirbeforeimam",
+    topicId: "jamaah",
+    subject: {
+      en: "Saying takbīrat al-iḥrām before the imam"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A follower must not say takbīrat al‑iḥrām before the imam. In fact, the recommended precaution is that he should not say takbīrat al‑iḥrām until the imam has completed saying it.",
+          ur: "مقتدی کوتکبیرۃ الاحرام امام سے پہلے نہیں کہنی چاہئے بلکہ احتیاط مستحب یہ ہے کہ جب تک امام تکبیر نہ کہہ چکے مقتدی تکبیرنہ کہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1447",
+          url: "https://www.sistani.org/english/book/48/2270/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1447)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A ma‘mūm should not perform the takbīrah al-iḥrām before the imam; rather, by obligatory caution, he is not to say the takbīr until the imam's takbīr is finished."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "726.",
+          url: "https://www.leader.ir/en/book/241?sn=32591"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "joiningruku",
+    topicId: "jamaah",
+    subject: {
+      en: "Joining while the imam is in rukūʿ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person joins congregational prayers when the imam is in rukūʿ, then even if the dhikr of the imam has finished, his congregational prayer is valid and he is regarded as being in his first rakʿah. However, if he bows down to the extent that is required for rukūʿ but the imam is no longer in rukūʿ, he can either complete his prayer on his own or break his prayer to join in the next rakʿah.",
+          ur: "اگرکوئی شخص اس وقت اقتداکرے جب امام رکوع میں ہواور امام کے رکوع میں شریک ہوجائے اگرچہ امام نے رکوع کاذکرپڑھ لیاہواس شخص کی نماز صحیح ہے اور وہ ایک رکعت شمار ہوگی لیکن اگروہ شخص بقدررکوع کے جھکے تاہم امام کو رکوع میں نہ پا سکے تو وہ شخص اپنی نمازفرادیٰ کی نیت سے ختم کر سکتاہے اور جماعت کی اگلی رکعت میں شریک ہونے کےلئے اپنی نماز کو توڑ سکتا ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1407",
+          url: "https://www.sistani.org/english/book/48/2268/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1407)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If one joins the prayer while the imam is in rukū‘, one of the following situations may occur:\n1. If one reaches the imam's rukū‘, the congregational prayer is valid and counts as one rak‘ah even if the imam's dhikr is over.\n2. If the imam is getting up from rukū‘ or is in standing posture when the ma‘mūm starts to be in rukū‘, then the prayer in furādā form is valid and is considered as the first rak‘ah of his prayer. So, he must continue the prayer.\n3. If one bows to the extent of rukū‘ but doubts whether he has reached the imam's rukū‘ or not, his prayer is valid in the form of furādā, it is counted as the first rak‘ah of his prayer and he should continue the prayer.\n4. If the imam raises from rukū‘ before the ma‘mūm’s being in rukū‘ posture, then he can make furādā intention."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "745.",
+          url: "https://www.leader.ir/en/book/241?sn=32594"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "followerahead",
+    topicId: "jamaah",
+    subject: {
+      en: "Standing ahead of the imam"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "A follower must not stand in front of the imam. In fact, the obligatory precaution is that if there are a number of followers, they must not stand in line with the imam; however, if the follower is only one person, there is no problem if he stands in line with the imam.",
+          ur: "مقتدی کوامام سے آگے نہیں کھڑاہوناچاہئے بلکہ احتیاط واجب یہ ہے کہ اگرمقتدی زیادہ ہوں توامام کے برابر نہ کھڑے ہوں ۔ لیکن اگرمقتدی ایک آدمی ہو تو امام کے برابرکھڑے ہونے میں کوئی حرج نہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1412",
+          url: "https://www.sistani.org/english/book/48/2268/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1412)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The followings terms should be observed in congregational prayer:\n1- A ma‘mūm should not stand in front of the imam. Rather, it is an obligatory caution to stand a little behind.\n2- The imam’s place should not be higher than that of ma‘mūms. Of course, a little difference, less than one handspan, is no problem.\n3- There should not be a long gap between the imam and the ma‘mūm nor among different rows.\n4- There should not be a barrier, like a wall or a curtain, between the imam and the ma‘mūm nor among the rows. However, putting a curtain or the like between the rows of men and women is no problem."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "717.",
+          url: "https://www.leader.ir/en/book/241?sn=32590"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "womenimam",
+    topicId: "jamaah",
+    subject: {
+      en: "A woman leading women"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If both the imam and the followers are women, the obligatory precaution is that they must all stand in one line, and the imam must not stand in front of the others.",
+          ur: "اگرامام اورمقتدی دونوں عورتیں ہوں تواحتیاط واجب یہ ہے کہ سب ایک دوسرے کے برابر برابرکھڑی ہوں اورامام مقتدیوں سے آگے نہ کھڑی ہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1460",
+          url: "https://www.sistani.org/english/book/48/2271/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1460)",
+          url: "https://www.sistani.org/urdu/book/61/3640/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If all ma‘mūms are women, it is permissible for their imam to be a woman."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "712.",
+          url: "https://www.leader.ir/en/book/241?sn=32589"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "ayatcauses",
+    topicId: "otherprayers",
+    subject: {
+      en: "When the prayer of signs (ṣalāt al-āyāt) is obligatory"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Ṣalāt al‑āyāt, for which the method of performance will be explained later, becomes obligatory when the following three phenomena occur:\n1. solar eclipse;\n2. lunar eclipse;\nand with the occurrence of these two phenomena, ṣalāt al‑āyāt becomes obligatory even if the eclipse is partial and one is not frightened by it;\n3. earthquake, based on obligatory precaution, even if one is not frightened by it.\nBased on recommended precaution, ṣalāt al‑āyāt should be performed when thunder and lightning, gales that make the sky look black or red, and other similar natural celestial phenomena occur, provided that most people are frightened by them. Similarly, [the prayer should be performed] when natural terrestrial phenomena occur that cause most people to fear, such as sinkholes and rock-slides.",
+          ur: "نمازآیات جس کے پڑھنے کاطریقہ بعدمیں بیان ہوگاتین چیزوں کی وجہ سے واجب ہوتی ہے :\n۱:) سورج گرہن\n۲:)چاند گرہن، اگرچہ ان کے کچھ حصے کوہی گرہن لگے اورخواہ انسان پراس کی وجہ سے خوف بھی طاری نہ ہواہوتو پھر بھی نماز آیات واجب ہے۔\n۳:)زلزلہ( احتیاط واجب کی بناپر)اگرچہ اس سے کوئی بھی خوف زدہ نہ ہواہو۔\nالبتہ بادلوں کی گرج،بجلی کی کڑک، سرخ وسیاہ آندھی اورانہی جیسی دوسری آسمانی نشانیاں جن سے اکثر لوگ خوف زدہ ہوجائیں اوراسی طرح زمین کے حادثات مثلاً زمین کا دھنس جانا اور پہاڑ کا ٹکڑے ٹکڑے ہوجاناجن سے اکثرلوگ خوف زدہ ہو جاتے ہیں ان صورتوں میں بھی (احتیاط مستحب کی بناپر)نماز آیات ترک نہیں کرنی چاہئے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1470",
+          url: "https://www.sistani.org/english/book/48/2273/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1470)",
+          url: "https://www.sistani.org/urdu/book/61/3641/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Āyāt prayer becomes obligatory for one of the following four reasons:\n1. Solar eclipse, even if only a very small part of sun is not visible;\n2. lunar eclipse, even if only a very small part of moon is not visible;\n3. Earthquake;\n4. Any abnormal event in the sky that causes fear to most of the people, such as black and red winds and lightning."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "660.",
+          url: "https://www.leader.ir/en/book/241?sn=32580"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "ayatmethod",
+    topicId: "otherprayers",
+    subject: {
+      en: "How the prayer of signs is performed"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Ṣalāt al‑āyāt consists of two rakʿahs, and in each rakʿah there are five rukūʿs. The method of performing the prayer is as follows: after one has made the intention [of performing the prayer], he says takbīr, recites one Sūrat al-Ḥamd and one other complete surah, goes into rukūʿ, and raises his head from rukūʿ; then, he again recites one Sūrat al-Ḥamd and one other complete surah, goes into rukūʿ again, and so on until he has done this a total of five times. After getting up from the fifth rukūʿ, he performs two sajdahs, stands up, and proceeds to perform the second rakʿah in the same way as the first; he then says tashahhud and the salām of the prayer.",
+          ur: "نمازآیات کی دورکعتیں ہیں اورہررکعت میں پانچ رکوع ہیں ۔ اس کے پڑھنے کاطریقہ یہ ہے کہ نیت کرنے کے بعدانسان تکبیرکہے اور ایک دفعہ الحمد اور ایک پوراسورہ پڑھے اوررکوع میں جائے اورپھررکوع سے سراٹھائے پھردوبارہ ایک دفعہ الحمداورایک سورہ پڑھے اور پھررکوع میں جائے۔اس عمل کوپانچ دفعہ انجام دے اور پانچویں رکوع سے قیام کی حالت میں آنے کے بعددوسجدے بجالائے اور پھر اٹھ کھڑا ہو اور پہلی رکعت کی طرح دوسری رکعت بجالائے اورتشہداورسلام پڑھ کرنمازتمام کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1486",
+          url: "https://www.sistani.org/english/book/48/2274/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1486)",
+          url: "https://www.sistani.org/urdu/book/61/3641/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The āyāt prayer consists of two rak‘ahs, each rak‘ah consists of five rukū‘ and two sajdah, and it can be performed in several ways:\nThe first form: in each rak‘ah, chapter al-Fātiḥah and another chapter are recited five times. In this way, after the intention and takbīrah al-iḥrām, he recites the chapter al-Fātiḥah and another complete chapter and goes to rukū‘, then lifts his head from rukū‘, recites chapter al-Fātiḥah and another chapter again and goes to the second rukū‘, and again lifts his head from rukū‘ and so on. He continues until five rukū‘ are performed, then he goes to prostration, and after performing two prostrations, he performs the second rak‘ah like the first rak‘ah, and after performing two prostrations, he recites tashahhud and salām.\nThe second form: only the chapter al-Fātiḥah and another complete chapter is recited in each rak‘ah. In this way, he divides the second chapter into five parts, and after the intention and takbīrah al-iḥrām, recites the chapter al-Fātiḥah and a part of the other chapter (whether it is one verse, less or more) and goes to rukū‘, and after rukū‘ without reciting chapter al-Fātiḥah he recites the second part of the other chapter and then performs the second rukū‘, and continues in this way until the chapter of which he recited a part before each rukū‘, is finished before the last rukū‘, then he performs the fifth rukū‘ and two sajdah, then he performs the second rak‘ah like the first rak‘ah and recites tashahhud and salām."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "673.",
+          url: "https://www.leader.ir/en/book/241?sn=32582"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "ayatshort",
+    topicId: "otherprayers",
+    subject: {
+      en: "The shorter method of the prayer of signs"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "[A shorter method of performing ṣalāt al‑āyāt is as follows:] after one has made the intention [of performing the prayer], he says takbīr and recites Sūrat al-Ḥamd; then, he divides the verses of the other surah into five parts and recites one verse or more, or even less, provided that – based on obligatory precaution – it is a complete sentence. He must start from the beginning of the surah and must not suffice with reciting bismillāh [on its own and count that as one verse]. Then, he goes into rukūʿ, raises his head, and without reciting Sūrat al-Ḥamd he recites the second part of the other surah. He then goes into rukūʿ again, and so on until he completes the other surah before he goes into the fifth rukūʿ. For example, if the other surah is Sūrat al-Falaq, he first says:\nبِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ۞ قُلْ أَعُوْذُ بِرَبِّ الْفَلَقِ\nbismil lāhir raḥmānir raḥīm. qul aʿūdhu birabbil falaq\nIn the Name of Allah, the All-Beneficent, the Ever-Merciful. Say, ‘I seek refuge in the Lord of the daybreak,\n...and goes into rukūʿ [for the first time]; he then stands up and says:\nمِنْ شَرِّ مَا خَلَقَ\nmin sharri mā khalaq\nfrom the evil of what He created,\n...and goes into rukūʿ again [for the second time]; he then stands up and says:\nوَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ\nwa min sharri ghāsiqin idhā waqab\nand from the evil of the darkness of night when it settles,\n...and goes into rukūʿ again [for the third time]; he then stands up and says:\nوَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nwa min sharrin naffāthāti fil ʿuqad\nand from the evil of those who blow on knots,\n...and goes into rukūʿ again [for the fourth time]; he then stands up and says:\nوَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ\nwa min sharri ḥāsidin idhā ḥasad\nand from the evil of an envier when he envies.’\n...and goes into rukūʿ for the fifth time. He then stands up, performs two sajdahs, and proceeds to perform the second rakʿah in the same way as the first. After the second sajdah [of the second rakʿah], he says tashahhud and the salām of the prayer. It is permitted for one to divide the surah into less than five parts, but whenever he completes the surah, it is necessary that he recite Sūrat al-Ḥamd before performing the next rukūʿ.",
+          ur: "نمازآیات میں یہ بھی ممکن ہے کہ انسان نیت کرنے اورتکبیر اور الحمد پڑھنے کے بعد ایک سورے کی آیتوں کے پانچ حصے کرے اورایک آیت یااس سے کچھ زیادہ پڑھے بلکہ ایک آیت سے کم بھی پڑھ سکتاہے لیکن( احتیاط کی بناپر) ضروری ہے کہ مکمل جملہ ہو اور سورہ کے شروع سے ابتداء کرے اور’’ بسم اللہ‘‘ کہنے پر اکتفا نہ کرےاوراس کے بعدرکوع میں جائے اور پھرکھڑاہوجائے اور الحمدپڑھے بغیر اسی سورہ کادوسراحصہ پڑھے اور رکوع میں جائے اور اسی طرح اس عمل کو دہراتا رہے حتیٰ کہ پانچویں رکوع سے پہلے سورے کو ختم کردے مثلاً سورۂ فلق میں پہلے بِسْمِ اللہِ الرَّحْمٰنِ الرَّحِیْمِض قُلْ اَعُوْذُ بِرَبِّ الْفَلَقِ پڑھے: اور رکوع میں جائے۔ اس کے بعد کھڑاہواور پڑھے: مِنْ شَرِّ مَاخَلَقَ اور دوبارہ رکوع میں جائے اور رکوع کے بعدکھڑاہواورپڑھے: وَمِنْ شَرِّ غَاسِقٍ اِذَاوَقَبَ پھر رکوع میں جائے اورپھرکھڑاہواورپڑھے: وَمِنْ شَرِّ النَّفّٰثٰتِ فِی الْعُقَدِ اور رکوع میں چلاجائے اورپھر کھڑا ہوجائے اور پڑھے: وَمِنْ شَرِّحَاسِدٍ اِذَاحَسَدَ اور اس کے بعدپانچویں رکوع میں جائے اور (رکوع سے) کھڑاہونے کے بعددوسجدے کرے اور دوسری رکعت بھی پہلی رکعت کی طرح بجالائے اوراس کے دوسرے سجدے کے بعدتشہداورسلام پڑھے اور یہ بھی جائزہے کہ سورے کوپانچ سے کم حصوں میں تقسیم کرے لیکن جس وقت بھی سورہ ختم کرے لازم ہے کہ بعدوالے رکوع سے پہلے الحمدپڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1487",
+          url: "https://www.sistani.org/english/book/48/2274/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1487)",
+          url: "https://www.sistani.org/urdu/book/61/3641/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "ayatruku",
+    topicId: "otherprayers",
+    subject: {
+      en: "Every rukūʿ of the prayer of signs is a rukn"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Every rukūʿ of ṣalāt al‑āyāt is a rukn; therefore, if a rukūʿ is intentionally omitted or added, the prayer is invalid. The same applies if a rukūʿ is mistakenly omitted or, based on obligatory precaution, if it is mistakenly added.",
+          ur: "نمازآیات کاہررکوع رکن ہے اوراگران میں عمداًکمی یابیشی ہو جائے تونمازباطل ہے اوریہی حکم ہے اگرغلطی سے کمی ہویا(احتیاط کی بناپر)غلطی سےزیادہ ہو جائے ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1494",
+          url: "https://www.sistani.org/english/book/48/2274/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1494)",
+          url: "https://www.sistani.org/urdu/book/61/3641/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Each rukū‘ in āyāt prayer is rukn (a fundamental part), i.e. if one performs less/more rukū‘ intentionally or by mistake, the prayer is invalidated."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "679.",
+          url: "https://www.leader.ir/en/book/241?sn=32583"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "eidstatus",
+    topicId: "otherprayers",
+    subject: {
+      en: "The Eid prayers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The Eid al-Fiṭr and Eid al-Aḍḥā prayer is obligatory during the presence of the Imam (ʿA) and must be performed in congregation. In our time, when the Imam (ʿA) is in occultation, the prayer is recommended and it can be performed in congregation or on one’s own.",
+          ur: "امام عصرعلیہ السلام کے زمانۂ حضورمیں فطروعیدقربان کی نمازیں واجب ہیں اوران کاجماعت کے ساتھ پڑھناضروری ہے لیکن ہمارے زمانے میں جب کہ امام عصر علیہ السلام غیبت کبریٰ میں ہیں یہ نمازیں مستحب ہیں اورباجماعت وفرادیٰ دونوں طرح پڑھی جاسکتی ہیں ۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1495",
+          url: "https://www.sistani.org/english/book/48/2275/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1495)",
+          url: "https://www.sistani.org/urdu/book/61/3642/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "‘Īd of Fitṛ and ‘Īd of Aḍḥā prayers are obligatory during the presence of the infallible Imam (peace be upon him) and should be performed in congregation. However, it is mustaḥabb at the present time (which is the time of his long absence)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "681.",
+          url: "https://www.leader.ir/en/book/241?sn=32584"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "eidtime",
+    topicId: "otherprayers",
+    subject: {
+      en: "Time of the Eid prayers"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The time for the Eid al-Fiṭr and Eid al-Aḍḥā prayer is from the start of sunrise to the time of ẓuhr prayers on the day of Eid.",
+          ur: "نمازعیدفطروقربان کاوقت عیدکے دن طلوع آفتاب سے ظہرتک ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1496",
+          url: "https://www.sistani.org/english/book/48/2275/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1496)",
+          url: "https://www.sistani.org/urdu/book/61/3642/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "‘Īd of Fitṛ or ‘Īd of Aḍḥā prayer's time is from sunrise to shar‘ī noon."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "682.",
+          url: "https://www.leader.ir/en/book/241?sn=32584"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "fridayprayer",
+    topicId: "otherprayers",
+    subject: {
+      en: "The Friday prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "The Friday prayer consists of two rakʿahs like the ṣubḥ prayer, with the difference that in the Friday prayer, two sermons must be delivered before it. The Friday prayer is an optional obligation (al‑wājib al‑takhyīrī), meaning that on Fridays, someone who is duty-bound (mukallaf) has the option to either perform the Friday prayer – if all its conditions are fulfilled – or the ẓuhr prayer; and if he performs the Friday prayer, it will suffice in place of the ẓuhr prayer.\nSome conditions must be met for the Friday prayer to be obligatory:\n1. the time for the prayer must have set in. This refers to the time of zawāl, or in other words, the time of ẓuhr. Furthermore, the time for the Friday prayer is that which is commonly regarded to be the beginning of zawāl; therefore, if the Friday prayer is delayed beyond this time, its time will be deemed over and the ẓuhr prayer must be performed instead;\n2. the number of people must be at least five, including the imam. If five Muslims do not gather, the Friday prayer does not become obligatory;\n3. there must be an imam who meets all the conditions, such as being dutiful (ʿādil) and all the other qualities that are required of an imam, which will be mentioned in the section on congregational (jamāʿah) prayers. In the absence of an imam, the Friday prayer does not become obligatory.\nSome conditions must be met for the Friday prayer to be valid:\n1. it must be performed in congregation; therefore, it is not correct (ṣaḥīḥ) to perform the Friday prayer on one’s own (furādā). If the follower (maʾmūm) of an imam in congregational prayers joins the prayer before the rukūʿ of the second rakʿah of the Friday prayer and performs one more rakʿah on his own, his Friday prayer is valid. However, if one joins in the rukūʿ of the second rakʿah, then based on obligatory precaution, he cannot suffice with this Friday prayer and must perform ẓuhr prayers;\n2. the imam must deliver two sermons before the prayer. In the first sermon, he must praise (ḥamd) and eulogise (thanāʾ) Allah, exhort the congregation to God-wariness (taqwā), and recite a short chapter (surah) from the Qur’an. In the second sermon, again he must praise and eulogise Allah and invoke blessings (ṣalawāt) upon the Most Noble Messenger (Ṣ) and the Infallible Imams (ʿA); and the recommended precaution is that he should also seek forgiveness for the believers. Furthermore, it is necessary that the sermons be delivered before the prayer; therefore, if the imam starts the prayer before the two sermons, it is incorrect. Delivering the sermons before ẓuhr time is problematic (maḥall al‑ishkāl) [i.e. based on obligatory precaution, it is not correct]. In addition, it is necessary that the person delivering the sermons be in a standing position; therefore, if he delivers the sermons in a sitting position, it is incorrect. It is also necessary that he sit down a little between the two sermons and that his sitting be short and light. Furthermore, it is necessary that the imam of the congregation deliver the sermons himself, and based on obligatory precaution, he must praise Allah and pray for blessings to be showered upon the Most Noble Messenger (Ṣ) and the Infallible Imams (ʿA) in the Arabic language; however, saying other parts of the sermons in Arabic, such as eulogising Allah and exhorting the congregation to God-wariness, is not a requirement. Indeed, if most of the congregation do not understand Arabic, then the obligatory precaution is that exhorting the congregation to God-wariness must be said in the language of the attendees;\n3. the distance between two Friday prayers must not be less than one farsakh; therefore, if another Friday prayer takes place at a distance of less than 3.4 miles, then in the event that both prayers commenced together, both are invalid. If one of them commences before the other – even to the extent of the takbīrat al‑iḥrām – it is valid and the second one is invalid. However, if after a Friday prayer has taken place it becomes known that another Friday prayer took place at the same time or before it at a distance of less than 3.4 miles, it is not obligatory to perform the ẓuhr prayer. Furthermore, a Friday prayer can only have a prohibitive effect on another one taking place within the stipulated distance if it is a valid Friday prayer and fulfils all the conditions; otherwise, it does not have any prohibitive effect.",
+          ur: "جمعہ کی نماز صبح کی نماز کی طرح دو رکعت ہے۔اس میں اور صبح کی نماز میں فرق یہ ہے کہ اس نماز سے پہلے دوخطبے ضروری ہیں ۔ جمعہ کی نمازواجب تخییری ہے۔ اس سے مراد یہ ہے کہ جمعہ کے دن مکلف کواختیار ہے کہ( اگرنماز جمعہ کی شرائط موجود ہوں ) تو جمعہ کی نماز پڑھے یاظہر کی نماز پڑھے۔ لہٰذا اگرانسان جمعہ کی نماز پڑھے تووہ ظہر کی نماز سے کفایت کرتی ہے (یعنی پھرظہر کی نماز پڑھناضروری نہیں )۔\nجمعہ کی نمازواجب ہونے کی چندشرطیں ہیں :\n(اول:) وقت کاداخل ہوناجو زوال آفتاب ہے اور اس کاوقت اول زوال عرفی ہے پس جب بھی اس سے تاخیرہوجائے،اس کاوقت ختم ہوجاتاہے اورپھر ظہر کی نماز اداکرنی چاہئے۔\n(دوم:) نماز پڑھنے والوں کی تعدادجو بمع امام پانچ افراد ہے اورجب تک پانچ مسلمان اکٹھے نہ ہوں جمعہ کی نماز واجب نہیں ہوتی۔\n(سوم:) امام کاجامع شرائط امامت ہونامثلاً عدالت وغیرہ جوامام جماعت میں معتبرہیں اور نماز جماعت کی بحث میں بتایاجائے گا۔اگریہ شرط پوری نہ ہوتوجمعہ کی نماز واجب نہیں ہوتی۔\nجمعہ کی نماز کے صحیح ہونے کی چندشرطیں ہیں :\n(اول:) باجماعت پڑھاجانا۔پس یہ نمازفرادیٰ اداکرناصحیح نہیں اورجب مقتدی نماز کی دوسری رکعت کے رکوع سے پہلے امام کے ساتھ شامل ہوجائے تواس کی نمازجمعہ صحیح ہے اوروہ اس نماز پرایک فرادیٰ رکعت کااضافہ کرے گااوراگروہ دوسری رکعت کے رکوع میں امام کوپالےتو (احتیاط واجب کی بناء پر) اس نماز جمعہ پر اکتفا نہیں کرسکتا بلکہ نمازظہر پڑھنا ضروری ہے۔\n(دوم:) امام جماعت کانماز سے پہلے دوخطبے پڑھنا۔ پہلے خطبے میں خطیب اللہ تعالیٰ کی حمد و ثنا بیان کرے نیزنمازیوں کوتقویٰ اورپرہیزگاری کی تلقین کرے۔پھرقرآن مجید کاایک چھوٹا سورہ پڑھےاور دوسرے خطبہ میں دوبارہ اللہ تعالیٰ کی حمدوثنابجا لائے۔ پھرحضرت رسول اکرم صلی اللہ علیہ وآلہٖ وسلم اور ائمہ طاہرین علیہم السلام پردرود بھیجے اوراحتیاط مستحب یہ ہے کہ مومنین اورمومنات کے لئے استغفار (بخشش کی دعاء) کرے۔ ضروری ہے کہ خطبے نمازسے پہلے پڑھے جائیں ۔پس اگرنمازدو خطبوں سے پہلے شروع کرلی جائے تو صحیح نہیں ہوگی اور زوال (ظہر شرعی) سے پہلے خطبے پڑھنے میں اشکال ہے اور ضروری ہے کہ جوشخص خطبے پڑھے وہ خطبے پڑھنے کے وقت کھڑاہو۔لہٰذا اگر وہ بیٹھ کرخطبے پڑھے گاتوصحیح نہیں ہوگااوردوخطبوں کے درمیان بیٹھ کرفاصلہ دینالازم اورواجب ہے اورضروری ہے کہ مختصر لمحوں کے لئے بیٹھے اوریہ بھی ضروری ہے کہ امام جماعت اور خطیب یعنی جوشخص خطبے پڑھے ایک ہی شخص ہو(احتیاط کی بناپر ) اللہ تعالیٰ کی حمدوثنااسی طرح پیغمبراکرمؐ اورائمۃ المسلمین ؑ پرعربی زبان میں درودبھیجنا ضروری ہے اوراس سے زیادہ میں عربی معتبرنہیں ہے۔ بلکہ اگرحاضرین کی اکثریت عربی نہ جانتی ہوتواحتیاط لازم یہ ہے کہ تقویٰ کے بارے میں وعظ ونصیحت کرتے وقت جو زبان حاضرین جانتے ہیں اسی میں تقویٰ کی نصیحت کرے۔\n(سوم:) یہ کہ جمعہ کی دونمازوں کے درمیان ایک فرسخ سے کم فاصلہ نہ ہو۔ پس جب جمعہ کی دوسری نمازایک فرسخ سے کم فاصلہ پرقائم ہواوردونمازیں بیک وقت پڑھی جائیں تودونوں باطل ہوں گی اوراگرایک نمازکودوسری پرسبقت حاصل ہوخواہ وہ تکبیرۃُالاحرام کی حدتک ہی کیوں نہ ہوتووہ (نمازجسے سبقت حاصل ہو) صحیح ہوگی اور دوسری باطل ہوگی، لیکن اگرنماز کے بعدپتا چلے کہ ایک فرسخ سے کم فاصلہ پرجمعہ کی ایک اور نماز اس نماز سے پہلے یااس کے ساتھ ساتھ قائم ہوئی تھی توظہر کی نماز واجب نہیں ہوگی اور جمعہ کی نماز کاقائم کرنامذکورہ فاصلے کے اندرجمعہ کی دوسری نماز قائم کرنے میں اس وقت مانع ہوتاہے جب وہ نماز خودصحیح اور جامع الشرائط ہوورنہ وہ مانع نہیں ہوگی۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 719*",
+          url: "https://www.sistani.org/english/book/48/2210/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (719)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A",
+        note: "Marked * (revised) in the 4th edition. The Urdu text was compared and matches in substance. Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The Friday prayer which replaces the ẓuhr prayer on Fridays is a takhyīrī (optionally incumbent) obligation* at the present time, i.e. during the occultation of Imam Mahdi (a). However, at a time when a just Islamic government is ruling in Iran, the mustaḥabb caution is not to miss it if possible.\n* Takhyīrī obligation means that the person is allowed to offer either the Friday prayer or ẓuhr prayer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "762.",
+          url: "https://www.leader.ir/en/book/241?sn=32599"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "fridaybest",
+    topicId: "otherprayers",
+    subject: {
+      en: "When the Friday prayer is established"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Whenever the Friday prayer takes place with all its conditions fulfilled, if the one establishing it is the infallible Imam (ʿA) or his specific representative, it is obligatory to attend it; otherwise, it is not obligatory. In the first situation, however, it is not obligatory for the following groups of people to attend:\n1. women;\n2. slaves;\n3. travellers, even those travellers whose duty is to perform the complete (tamām) form of the prayer, such as those who have made an intention to stay [at their destination for ten or more days];\n4. the sick, blind, and aged;\n5. those who are more than two farsakhs [6.8 miles] from a place of Friday prayer;\n6. those who find it difficult and hard to attend the Friday prayer on account of rain, severe cold, and suchlike.",
+          ur: "جب جمعہ کی ایک ایسی نماز قائم ہوجوشرائط کوپوراکرتی ہواورنماز قائم کرنے والاامام وقت یااس کا خاص نائب ہوتواس صورت میں نمازجمعہ کے لئے حاضر ہونا واجب ہے اوراس صورت کے علاوہ حاضرہوناواجب نہیں ہے۔پہلی صورت میں چند گروہ کےلئے نماز جمعہ میں حاضر ہونا واجب نہیں :\n(اول:) عورتیں ۔\n(دوم:) غلام۔\n(سوم:) مسافر۔ خواہ ایسا مسافر کیوں نہ ہو جس کا فریضہ پوری نماز پڑھناہوجیسے کسی مسافر نے ایک جگہ پر قصد اقامت کیاہے۔\n(چہارم:) بیمار اوراندھا اور بوڑھا ہو۔\n(پنجم:) وہ افراد جو ایسی جگہ رہتے ہیں جس کا فاصلہ نماز جمعہ کے قائم ہونے کی جگہ سے دو شرعی فرسخ سے زیادہ دوری پر ہو۔\n(ششم:)اسی طرح وہ شخص جس کے لئے جمعہ کی نمازمیں بارش یاسخت سردی وغیرہ کی وجہ سے حاضر ہونامشکل یادشوارہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 720",
+          url: "https://www.sistani.org/english/book/48/2210/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (720)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The required term for a Friday prayer to be valid are as follows:\n1. It should be in congregation;\n2. There must be five person, Imam and four ma‘mūms;\n3. observing all requirements for a congregational prayer, like valid connection among imam and ma‘mūms;\n4. The distance between this Friday prayer and the nearest one should not be less than 5125 meter (one farsakh)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "764.",
+          url: "https://www.leader.ir/en/book/241?sn=32600"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "fridayzuhr",
+    topicId: "otherprayers",
+    subject: {
+      en: "Praying ẓuhr instead of the Friday prayer"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If the Friday prayer is obligatory for someone but he performs the ẓuhr prayer instead, his prayer is valid.",
+          ur: "جس شخص پر نماز جمعہ واجب ہے اگر وہ نماز جمعہ کےبجائے نماز ظہر پڑھ لے تو اس کی نماز صحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 721",
+          url: "https://www.sistani.org/english/book/48/2210/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (721)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A person who is not participating in the Friday prayer can perform ẓuhr prayer at the beginning of its time and it is not obligatory to wait until the Friday prayer ends."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "784.",
+          url: "https://www.leader.ir/en/book/241?sn=32605"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  }
+];

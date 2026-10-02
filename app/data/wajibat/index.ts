@@ -8,13 +8,15 @@ import { WAJIBAT_GLOSSARY } from "./glossary";
 import { FOUNDATIONS_RULINGS } from "./rulings/foundations";
 import { TAHARAT_RULINGS } from "./rulings/taharat";
 import { TAHARAT_PROCEDURES } from "./procedures/taharat";
+import { SALAT_RULINGS } from "./rulings/salat";
+import { SALAT_PROCEDURES } from "./procedures/salat";
 
 export * from "./types";
 export { MARAJI, getMarjaById, isMarjaId } from "./marja";
 export { WAJIBAT_CATEGORIES, WAJIBAT_TOPICS, WAJIBAT_GLOSSARY };
 
-export const WAJIBAT_RULINGS: Ruling[] = [...FOUNDATIONS_RULINGS, ...TAHARAT_RULINGS];
-export const WAJIBAT_PROCEDURES: Procedure[] = [...TAHARAT_PROCEDURES];
+export const WAJIBAT_RULINGS: Ruling[] = [...FOUNDATIONS_RULINGS, ...TAHARAT_RULINGS, ...SALAT_RULINGS];
+export const WAJIBAT_PROCEDURES: Procedure[] = [...TAHARAT_PROCEDURES, ...SALAT_PROCEDURES];
 
 export interface WajibatDataset {
   categories: WajibatCategory[];

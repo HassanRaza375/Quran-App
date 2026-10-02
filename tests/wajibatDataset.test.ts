@@ -101,6 +101,39 @@ describe("Wajibat dataset integrity", () => {
     expect(notes[0]!.source.urls).toHaveLength(2);
   });
 
+  it("guided prayers have the right number of rakʿahs, rukūʿs and sajdahs for each marja' (Phase 3)", () => {
+    const expected: Record<string, number> = { fajr: 2, maghrib: 3, zuhr: 4 };
+    for (const marja of ["sistani", "khamenei"])
+      for (const [name, rakahs] of Object.entries(expected)) {
+        const p = WAJIBAT_DATASET.procedures.find((x) => x.id === `${name}${marja}`)!;
+        expect(p.marjaId).toBe(marja);
+        const titled = (label: string) => p.steps.filter((s) => s.title.en.endsWith(label)).length;
+        expect(titled("Rukūʿ")).toBe(rakahs);
+        expect(titled("First sajdah")).toBe(rakahs);
+        expect(titled("Tashahhud")).toBe(rakahs === 2 ? 1 : 2);
+        expect(p.steps.at(-1)!.title.en).toBe("Salām");
+        // rukn steps: intention, takbīr, and one rukūʿ and one sajdah per rakʿah
+        expect(p.steps.filter((s) => s.isRukn).length).toBe(2 + 2 * rakahs);
+      }
+  });
+
+  it("Khamenei's salat entries come from The Rules on Prayer & Fasting 2023 and carry no Urdu (decisions R1, R6)", () => {
+    const salatTopics = new Set(WAJIBAT_DATASET.topics.filter((t) => t.categoryId === "salat").map((t) => t.id));
+    const entries = WAJIBAT_RULINGS.filter((r) => salatTopics.has(r.topicId)).flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei");
+    expect(entries.length).toBeGreaterThan(100);
+    for (const e of entries) {
+      expect(e.source.title).toBe("The Rules on Prayer & Fasting 2023");
+      expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/241\?sn=\d+$/);
+      expect(e.text.ur).toBeUndefined();
+      expect(e.urduNote).toBeTruthy();
+    }
+  });
+
+  it("the prayer-times and qibla topics show live data from Module 5 rather than any computed times", () => {
+    expect(WAJIBAT_DATASET.topics.find((t) => t.id === "prayertimes")!.liveTool).toBe("prayertimes");
+    expect(WAJIBAT_DATASET.topics.find((t) => t.id === "qibla")!.liveTool).toBe("qibla");
+  });
+
   it("every ruling is level A", () => {
     for (const entry of WAJIBAT_RULINGS.flatMap((r) => r.rulings)) expect(entry.verification).toBe("A");
   });

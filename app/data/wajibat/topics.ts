@@ -269,4 +269,247 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     glossaryIds: ["tayammum"],
     lastSourceCheck: "2026-09-25",
   },
+
+  // ---------------------------- Salat (Phase 3) ----------------------------
+  {
+    id: "dailyprayers",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "The obligatory prayers", ur: "واجب نمازیں" },
+    arabicTerm: "الصلوات الواجبة",
+    summary: explain(
+      "Which prayers are obligatory, and the five daily prayers with the number of rakʿahs in each."
+    ),
+    rulingIds: ["obligatoryprayers", "dailyrakat", "importanceofprayer"],
+    relatedTopicIds: ["prayertimes", "guidedprayers"],
+    glossaryIds: ["rakah", "nafilah"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "prayertimes",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Prayer times", ur: "اوقات نماز" },
+    arabicTerm: "مواقيت الصلاة",
+    summary: explain(
+      "When each daily prayer may be performed, the shared and specific times of ẓuhr/ʿaṣr and maghrib/ʿishāʾ, and the order between them. Today's times are shown live from the app's Prayer Times feature; nothing is recalculated here."
+    ),
+    liveTool: "prayertimes",
+    rulingIds: ["zuhrasrtime", "maghribishatime", "fajrtime", "missedbymidnight", "certaintyoftime", "onerakahintime", "prayingearly", "orderzuhrasr"],
+    relatedTopicIds: ["dailyprayers", "qibla"],
+    glossaryIds: ["zawal", "ada", "qada"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "qibla",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Qibla", ur: "قبلہ" },
+    arabicTerm: "القبلة",
+    summary: explain(
+      "Facing the Kaʿbah in prayer and what to do when its direction is uncertain. The app's Qibla tool shows the direction from your location."
+    ),
+    liveTool: "qibla",
+    rulingIds: ["qibladirection", "qiblaeffort", "qiblanomeans", "qiblarecommended"],
+    relatedTopicIds: ["prayertimes", "placeofprayer"],
+    glossaryIds: ["qibla"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "clothing",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Covering and clothing in prayer", ur: "نماز گزار کا لباس" },
+    arabicTerm: "لباس المصلي",
+    summary: explain(
+      "What men and women must cover in prayer, and the conditions of the clothing: pure, not usurped, not from a non-slaughtered or ḥarām-meat animal, and no gold or pure silk for men."
+    ),
+    rulingIds: ["coveringmen", "coveringwomen", "coveringintentional", "clothingconditions", "clothingpure", "impureunaware", "impurityexemptions", "woundblood", "usurpedclothing", "nonslaughtered", "haramanimal", "goldmen", "goldjewellerymen", "silkmen", "silkwomen"],
+    relatedTopicIds: ["placeofprayer", "najasat"],
+    glossaryIds: ["najis", "tahir"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "placeofprayer",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "The place of prayer", ur: "نماز کی جگہ" },
+    arabicTerm: "مكان المصلي",
+    summary: explain(
+      "Conditions of the place where one prays: permitted to use, still, and the rules on mosques."
+    ),
+    rulingIds: ["usurpedplace", "stillplace", "vehicleprayer", "aheadofgrave", "menwomengap", "insidekaba", "mosquevirtue", "mosqueimpure"],
+    relatedTopicIds: ["clothing", "sajdahplace"],
+    glossaryIds: [],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "adhaniqamah",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Adhān and iqāmah", ur: "اذان و اقامت" },
+    arabicTerm: "الأذان والإقامة",
+    summary: explain(
+      "The call to prayer and the call to stand for prayer: their status, wording and conditions."
+    ),
+    rulingIds: ["adhanrecommended", "adhanwording", "shahadathalithah", "adhancongregation", "adhanafter", "iqamahstanding"],
+    relatedTopicIds: ["obligatoryparts"],
+    glossaryIds: ["adhan", "iqamah"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "obligatoryparts",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "The obligatory parts of prayer", ur: "واجبات نماز" },
+    arabicTerm: "واجبات الصلاة",
+    summary: explain(
+      "The eleven obligatory parts of the prayer, which of them are elemental (rukn), and the rulings on intention, takbīrat al-iḥrām and standing."
+    ),
+    rulingIds: ["elevencomponents", "rukns", "intention", "intentionspecified", "riya", "takbir", "takbirstill", "qiyam", "qiyamstill", "unabletostand"],
+    relatedTopicIds: ["qiraah", "rukusujud", "tashahhudsalam", "guidedprayers"],
+    glossaryIds: ["rukn", "niyyah", "takbiratalihram"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "qiraah",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Recitation in prayer", ur: "قرأت" },
+    arabicTerm: "القراءة",
+    summary: explain(
+      "Reciting al-Ḥamd and another surah, reciting aloud or quietly, and what is recited in the third and fourth rakʿahs."
+    ),
+    rulingIds: ["fatihasurah", "shorttimesurah", "forgotrecitation", "sajdahsurahs", "ikhlaskafirun", "aloudmen", "aloudsubhmaghrib", "aloudwomen", "aloudmistake", "correctrecitation", "thirdfourthrakah", "thirdfourthquiet"],
+    relatedTopicIds: ["obligatoryparts", "rukusujud"],
+    glossaryIds: ["qiraah", "jahr", "ikhfat"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "rukusujud",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Rukūʿ and sajdah", ur: "رکوع و سجدہ" },
+    arabicTerm: "الركوع والسجود",
+    summary: explain(
+      "Bowing and prostrating: how they are done, their dhikr, stillness, and what happens if one is forgotten."
+    ),
+    rulingIds: ["ruku", "rukudhikr", "rukustill", "afterruku", "forgotruku", "twosajdahs", "sevenparts", "sajdahrukn", "sajdahdhikr", "dhikrwording", "betweensajdahs", "sajdahheight", "sajdahbarrier", "turbahpure"],
+    relatedTopicIds: ["sajdahplace", "obligatoryparts"],
+    glossaryIds: ["ruku", "sajdah", "rukn"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "sajdahplace",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "What sajdah may be performed on", ur: "سجدہ کی جگہ" },
+    arabicTerm: "ما يصح السجود عليه",
+    summary: explain(
+      "Earth and what grows from it that is neither eaten nor worn, and the obligatory sajdahs of the Qur'an."
+    ),
+    rulingIds: ["sajdahearth", "sajdahfodder", "sajdahbuilding", "sajdahpaper", "sajdahbest", "sajdahnothing", "sajdahtaqiyyah", "sajdahforother", "quransajdah"],
+    relatedTopicIds: ["rukusujud", "placeofprayer"],
+    glossaryIds: ["turbah", "sajdah"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "tashahhudsalam",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Tashahhud, salām, order and qunūt", ur: "تشہد، سلام اور قنوت" },
+    arabicTerm: "التشهد والسلام والقنوت",
+    summary: explain(
+      "Tashahhud and salām, keeping the parts of the prayer in sequence and in close succession, qunūt, and the supplications after prayer."
+    ),
+    rulingIds: ["tashahhud", "tashahhudforgot", "salam", "salamforgot", "tartib", "muwalat", "qunut", "qunutdhikr", "taqibat"],
+    relatedTopicIds: ["obligatoryparts", "guidedprayers"],
+    glossaryIds: ["tashahhud", "salam", "qunut", "tartib", "muwalah", "taqibat"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "mubtilat",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Things that invalidate the prayer", ur: "مبطلات نماز" },
+    arabicTerm: "مبطلات الصلاة",
+    summary: explain(
+      "What breaks the prayer, replying to a greeting during prayer, and when a prayer may or must be broken."
+    ),
+    rulingIds: ["mubtilatlist", "turningface", "speaking", "replyingsalam", "laughing", "eatingdrinking", "amin", "breakingprayer", "breakingnecessity"],
+    relatedTopicIds: ["obligatoryparts"],
+    glossaryIds: ["mubtilat"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "travellerprayer",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "The traveller's prayer", ur: "نماز مسافر" },
+    arabicTerm: "صلاة المسافر",
+    summary: explain(
+      "When a traveller shortens the four-rakʿah prayers to two (qaṣr): the distance, intention, purpose of the journey, the permitted limit, and what ends the journey."
+    ),
+    rulingIds: ["qasrintro", "qasrconditions", "qasrdistance", "qasrkm", "qasrdistancestart", "qasrintention", "qasrsinful", "qasrleisure", "qasrjob", "qasrlimit", "qasrwatan", "qasrtendays", "qasrthirtydays", "qasrfourplaces", "qasrignorance"],
+    relatedTopicIds: ["qadaprayers"],
+    glossaryIds: ["qasr", "tamam", "watan"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "qadaprayers",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Qaḍāʾ (missed) prayers", ur: "قضا نمازیں" },
+    arabicTerm: "قضاء الصلاة",
+    summary: explain(
+      "Making up missed prayers, their order, and the eldest son's duty for his parents' missed prayers."
+    ),
+    rulingIds: ["qadaobligation", "qadanotdelay", "qadaorder", "qadaunknownnumber", "qadanafilah", "qadaliving", "eldestson", "eldestsonwho"],
+    relatedTopicIds: ["travellerprayer", "dailyprayers"],
+    glossaryIds: ["qada", "ada"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "jamaah",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Congregational prayer", ur: "نماز جماعت" },
+    arabicTerm: "صلاة الجماعة",
+    summary: explain(
+      "The basics of praying in congregation: which prayers, the conditions of the imam, what the follower recites, and joining late."
+    ),
+    rulingIds: ["jamaahvirtue", "jamaahneglect", "jamaahwhichprayers", "imamconditions", "followerrecites", "followerquietprayers", "takbirbeforeimam", "joiningruku", "followerahead", "womenimam"],
+    relatedTopicIds: ["otherprayers"],
+    glossaryIds: ["jamaah", "mamum", "furada"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "otherprayers",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Other obligatory prayers", ur: "دیگر واجب نمازیں" },
+    arabicTerm: "الصلوات الواجبة الأخرى",
+    summary: explain(
+      "The prayer of signs (ṣalāt al-āyāt), the Eid prayers, and the Friday prayer."
+    ),
+    rulingIds: ["ayatcauses", "ayatmethod", "ayatshort", "ayatruku", "eidstatus", "eidtime", "fridayprayer", "fridaybest", "fridayzuhr"],
+    relatedTopicIds: ["jamaah", "dailyprayers"],
+    glossaryIds: ["salatalayat"],
+    lastSourceCheck: "2026-10-02",
+  },
+  {
+    id: "guidedprayers",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Guided prayers (step by step)", ur: "نماز کا طریقہ" },
+    arabicTerm: "كيفية الصلاة",
+    summary: explain(
+      "Step-by-step ṣubḥ (2 rakʿahs), maghrib (3) and ẓuhr (4) prayers according to your marja'. Each step quotes the ruling it rests on, and rukn steps are marked. Recitations are shown as text only."
+    ),
+    procedureIds: ["fajrsistani", "maghribsistani", "zuhrsistani", "fajrkhamenei", "maghribkhamenei", "zuhrkhamenei"],
+    rulingIds: [],
+    relatedTopicIds: ["obligatoryparts", "qiraah", "rukusujud", "tashahhudsalam"],
+    glossaryIds: ["rukn", "rakah"],
+    lastSourceCheck: "2026-10-02",
+  },
 ];

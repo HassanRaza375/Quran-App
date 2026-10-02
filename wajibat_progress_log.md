@@ -421,3 +421,123 @@ P8–P11 in `wajibat_decisions.md`.
 
 ### Recommended next phase
 Phase 3 (Salat core), once P8–P11 are answered. For Khamenei it should prefer *The Rules on Prayer & Fasting 2023* (P2).
+
+---
+
+## Phase 2 follow-ups from the review (2026-09-25; you committed these as 1c052ce)
+- **P8, purity of persons:**
+  - Sistani 103 was split into four exact excerpts, in English and Urdu.
+  - 104*, 105* and 107* are English only plus the Urdu notice: their Urdu is the older text (e.g. the Urdu of 107* is a definite fatwa, the revised English an obligatory precaution).
+  - 106 is shown with its Urdu.
+  - Khamenei's equivalents are Q 316 (ghulāt), Q 335 (rejecting what is indispensable), Q 312 (People of the Book), Q 320 (a non-kitābī non-Muslim) and Q 298 (unknown religion).
+  - His Bahāʾī-specific answers (Q 327–330) are not equivalents of any of these rulings and were left out.
+  - All eight sit in a "Purity of persons" panel (`Ruling.panel`), with no app commentary.
+- **P9, the 5:6 note:** quotes Ṭabāṭabāʾī, *al-Mīzān*, vol. 5, pp. 187–199: «وفهمت من الكلام وجوب غسل الوجه واليدين، ومسح الرأس والرجلين».
+  - The clause was checked verbatim in two independent online copies, almerja.com and greattafsirs.com.
+  - The surrounding wording differs slightly between the copies, so only the clause they share is quoted.
+  - shiaonlinelibrary.com (DNS failure) and almizan.org (pages load by JavaScript) could not be used.
+  - The note is stored as `quranicBasisNotes`, `kind: "explanation"`, and the validator checks it.
+- **P10:** Sistani 177 is now English only, with a note.
+
+### Phase 3 · source notes (apply to every Salat topic below)
+- **Sistani:** *Islamic Laws* 4th ed., Rulings 716–1150 and 1258–1511, plus three unnumbered section introductions (the obligatory prayers, the daily prayers' rakʿahs, the eleven components). Pages `/english/book/48/2207–2276/` and the unlisted `/5418/` (times). Urdu from `/urdu/book/61/3637–3642/`.
+- **Khamenei:** *The Rules on Prayer & Fasting 2023* (leader.ir book 241), first priority per R6.
+  - It was read through the site's own contents endpoint (`POST /ajax/book`): 165 sections and 1,003 numbered rulings, each tied to its section URL `book/241?sn=…`.
+  - Rulings 507, 775–778 and 786 do not appear anywhere in the published text, so they are source gaps, not omissions.
+  - **The book has no official Urdu edition, so all 143 of Khamenei's Salat entries are English only (R1),** each with a note saying so.
+- **R6 conflict check:** I compared the two Khamenei books on seven points: tasbīḥāt, women's loud/quiet recitation, the qaḍāʾ of the mother's prayers, "āmīn", the Friday prayer's status, the shar'ī distance (41 km in both), and sajdah on tea leaves. **No conflicts.**
+  - One internal wrinkle in the *Rules* book itself: ruling 651 says the mother's qaḍāʾ is an *obligatory caution*, while a footnote to 656 says just "a caution". The entry quotes 651 verbatim.
+- **Two extraction bugs found and fixed:**
+  - Sistani's unnumbered traveller conditions ("Second condition: …") leaked into the end of Ruling 1266. The splitter now also handles "<Ordinal> condition:". Foundations and Taharat were regenerated and are byte-identical to what's committed.
+  - leader.ir writes some letters decomposed (h + U+0323 for ḥ). All texts are now normalised to Unicode NFC, which is the same text in a single encoding, so verbatim checks compare like with like.
+
+### Phase 3 · Salat topics — 2026-10-02
+Every entry is level A. Columns are entries per marja'. "Urdu" is Sistani entries with official Urdu; Khamenei's Salat entries are all English only (see above).
+
+| Topic | Rulings | Sistani | Urdu | Khamenei | Revised (*) Sistani rulings, Urdu outcome |
+|---|---|---|---|---|---|
+| The obligatory prayers | 3 | 2 | 2 | 3 | — (two are unnumbered intros) |
+| Prayer times | 8 | 8 | 8 | 8 | — |
+| Qibla | 4 | 4 | 4 | 4 | — |
+| Covering and clothing | 15 | 15 | 15 | 15 | — |
+| Place of prayer | 8 | 8 | 8 | 7 | — |
+| Adhān and iqāmah | 6 | 6 | 6 | 4 | — |
+| Obligatory parts | 10 | 10 | 10 | 10 | — (one unnumbered intro) |
+| Recitation | 12 | 12 | 11 | 11 | 974* lag (the Urdu lacks the nāfilah sentence) |
+| Rukūʿ and sajdah | 14 | 13 | 13 | 14 | — |
+| What sajdah may be on | 9 | 9 | 9 | 9 | — |
+| Tashahhud, salām, qunūt | 9 | 9 | 9 | 9 | — |
+| Things that invalidate | 9 | 8 | 8 | 9 | — |
+| Traveller's prayer | 15 | 13 | 12 | 15 | 1266* lag (the end-of-journey sentence is new) |
+| Qaḍāʾ prayers | 8 | 8 | 7 | 7 | 1370* lag (the "vow" and "deliberate omission" clauses are new) |
+| Congregational prayer | 10 | 10 | 9 | 10 | 1387* lag (the Urdu says "precaution" for all cases) |
+| Other obligatory prayers | 9 | 9 | 9 | 8 | 719* **match** (Friday prayer, compared in full) |
+| Guided prayers | 0 (6 procedures) | 3 procedures | — | 3 procedures | — |
+| **Total** | **149** | **144** | **140** | **143** | |
+
+- **Differences between maraji' flagged (`differsBetweenMaraji`):**
+  - The rukūʿ and sajdah dhikr: Sistani "any dhikr suffices, of this length"; Khamenei the specific dhikr once or "subḥānallāh" three times.
+  - The eldest son and the mother's qaḍāʾ: Sistani "not obligatory, though better"; Khamenei "obligatory caution".
+  - Glossary: Sistani's glossary gives a farsakh as about 5.5 km; Khamenei's ruling 410 puts eight farsakhs at 41 km. "farsakh" was therefore left out of the shared glossary, so neither marja's figure is shown to the other's followers.
+- **R4 Urdu spot-check:** 30 unrevised Sistani rulings, 2 in each of the 15 subject topics (729, 742, 763, 771, 775, 825, 866, 877, 902, 921, 929, 944, 978, 980, 1008, 1042, 1062, 1068, 1100, 1103, 1140, 1145, 1258, 1320, 1355, 1360, 1433, 1441, 1470, 1496), read side by side. All match in substance.
+  - One minor wording difference: in 978 the Urdu says "(احتیاط کی بناءپر)", just "precaution", where the English says "based on obligatory precaution".
+- **Guided prayers:** ṣubḥ (19 steps), maghrib (27) and ẓuhr (34), for each of Sistani and Khamenei, so 160 steps in all.
+  - Each step quotes its marja's own ruling, and the validator checks this.
+  - Rukn steps (intention, takbīr, and each rukūʿ and pair of sajdahs) cite each marja's own rukn list: Sistani's Ruling 928, Khamenei's ruling 140.
+  - "Wājib" badges cite each marja's list of eleven obligatory parts.
+  - Qunūt is marked mustaḥabb.
+- **Arabic in the guided prayers:**
+  - Sistani's tashahhud, salām and tasbīḥāt Arabic are quoted from his rulings' own text.
+  - **His rukūʿ and sajdah dhikr are published as images on sistani.org**, so those steps show the ruling's transliteration only. No Arabic was retyped (see P12).
+  - Khamenei's dhikr Arabic is quoted from his ruling 318.
+- **Unsourced / left out:**
+  - Makarem Shirazi entirely.
+  - Sistani entries the *Rules* book has no counterpart for, and vice versa (each topic shows which marja' is missing).
+  - Ṣalāt al-mayyit (it belongs to the obligations towards the deceased, §6.9).
+  - Prayers made obligatory by vow or hire.
+  - The doubts chapter (Sistani 1151–1257, Khamenei 346–406), which is Phase 4.
+
+## Phase 3 — Salat (core) — Completion Report (2026-10-02)
+
+### What was built / changed
+- **Content:** 17 Salat topics: 16 subject topics plus "Guided prayers" (6 procedures, 160 steps). 149 rulings with 287 entries, all level A. Glossary grows from 37 to 67 terms, each quoted from the *Islamic Laws* Glossary.
+- **Data model:** `WajibatTopic.liveTool` (`"prayertimes" | "qibla"`) shows live data from Module 5 on a topic page.
+- **UI:**
+  - `LiveToolPanel` shows today's timings from `usePrayerStore().data` as they are. Nothing is recalculated. It notes when the user's method is Sunni and links to Prayer Times and to the Qibla tool.
+  - The existing `ProcedureStepper` renders the guided prayers, with Rukn labels and hukm badges.
+- **Generators:** `kh_rpf.py` (Rules book parser) and `gen_salat.py` are in the session scratchpad, not in the repo, like the earlier generators.
+
+### Tests / Lint / Build
+- `npm test`: **26 files, 411 tests passed** (38 Wajibat tests). New tests check the rakʿah/rukūʿ/sajdah/tashahhud structure of all six guided prayers, the rukn counts, that Khamenei's Salat entries all cite the Rules book and carry no Urdu, and the `liveTool` wiring.
+- `npx eslint` on the Wajibat files: clean.
+- `npm run build`: succeeded.
+
+### Install-size (R5), running total of ruling text in the install-time download
+| Point | PWA precache | Rulings data chunk |
+|---|---|---|
+| Before the module | 5,469.06 KiB | — |
+| After Phase 2 | 5,764.57 KiB | ~335 KB |
+| **After Phase 3** | **6,165.09 KiB** | **~730 KB** (uncompressed JS) |
+
+- Phase 3 added **+400.5 KiB** to the install-time download. The module's running total since before it existed is **+696 KiB**, of which 156 KiB is the Urdu font.
+- The rulings chunk loads only on `/fiqh` pages. Splitting it per category (spec Phase 10) would cut what each `/fiqh` page loads, but not the install-time total, since the PWA precaches every chunk.
+
+### Browser verification (Playwright + Chromium, production build)
+- **Phase 3 suite: 35 of 35 passed.** It covered:
+  - 17 Salat topics.
+  - The guided prayers: only the chosen marja's three; steps with ruling citations, Rukn labels and the tashahhud Arabic; Sistani's dhikr transliteration and Khamenei's Arabic from ruling 318.
+  - Khamenei's English-only notes in Urdu mode.
+  - The edition-lag notice on 974*, and official Urdu with مسئلہ numbers.
+  - The live prayer-times panel (showing real times) and the Qibla link.
+  - No cross-marja text.
+  - No overflow or clipped controls on 5 pages at 1280/768/390, and no nested or unlabeled controls.
+  - Regression pages (`/surah/1`, `/prayerTime`, `/persons`, wuḍūʾ, taqlīd) returning 200 with no console errors.
+  - 390 px crops were checked by eye.
+- **The Phase 2 suite was re-run: 37 of 37 passed.**
+- AlAdhan was reachable this time, so the earlier 503 outage (X1) didn't recur.
+
+### Open questions
+P12–P14 in `wajibat_decisions.md`.
+
+### Recommended next phase
+Phase 4 (salat doubts and corrections: shakkiyyāt, ṣalāt al-iḥtiyāṭ, sajdat al-sahw), plus the "Is my wuḍūʾ still valid?" helper (P11). It is high-risk: every leaf of the decision trees must cite level-A rulings, and every path will be tested.

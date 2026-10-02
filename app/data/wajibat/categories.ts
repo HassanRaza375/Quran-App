@@ -37,7 +37,7 @@ export const WAJIBAT_CATEGORIES: WajibatCategory[] = [
     order: 3,
     phase: 3,
     summary: explain("The daily prayers, their conditions and obligatory parts, invalidators, doubts, the traveller's prayer, qada and other obligatory prayers."),
-    topicIds: [],
+    topicIds: ["dailyprayers", "prayertimes", "qibla", "clothing", "placeofprayer", "adhaniqamah", "obligatoryparts", "qiraah", "rukusujud", "sajdahplace", "tashahhudsalam", "mubtilat", "travellerprayer", "qadaprayers", "jamaah", "otherprayers", "guidedprayers"],
   },
   {
     id: "sawm",

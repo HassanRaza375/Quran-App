@@ -28,6 +28,9 @@
       <LangToggle />
     </div>
 
+    <!-- Live data from Module 5 (prayer times / qibla), never recomputed here -->
+    <LiveToolPanel v-if="topic.liveTool" :tool="topic.liveTool" class="mb-6" />
+
     <!-- 1. Summary (app-written) -->
     <section class="mb-6" aria-labelledby="sec-summary">
       <h2 id="sec-summary" class="section-title">Overview</h2>
@@ -197,6 +200,7 @@ import ExplanationBlock from "~/components/wajibat/ExplanationBlock.vue";
 import RulingCard from "~/components/wajibat/RulingCard.vue";
 import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
 import ProcedureStepper from "~/components/wajibat/ProcedureStepper.vue";
+import LiveToolPanel from "~/components/wajibat/LiveToolPanel.vue";
 import { getProcedureById } from "~/data/wajibat";
 import { PANEL_META } from "~/utils/wajibatLabels";
 

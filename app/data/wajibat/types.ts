@@ -132,6 +132,13 @@ export interface MarjaRuling {
    * Urdu is withheld, and the Urdu view shows URDU_EDITION_LAG_NOTICE instead. */
   urduEditionLag?: boolean;
   note?: string;
+  /** Set true only when `text.en` (or `question.en`) legitimately contains Arabic
+   * script because the cited English `source` book itself prints that Arabic as
+   * real text (e.g. Khamenei's Rules on Prayer & Fasting). The validator flags any
+   * Arabic in `text.en`/`question.en` that doesn't set this — Arabic sourced from a
+   * *different* book (e.g. a marja's Urdu edition) must go in a `Recitation`
+   * instead, never spliced into another book's quote (decision P12). */
+  arabicInSource?: boolean;
 }
 
 export interface Ruling {
@@ -147,6 +154,26 @@ export interface Ruling {
   /** Other collapsed panels with a neutral heading (decision P8: "persons" = purity of persons).
    * Rulings in a panel are quoted exactly, with no app commentary. */
   panel?: RulingPanel;
+  /** Recitation(s) shown alongside this ruling (decision P12) — kept separate
+   * from `MarjaRuling.text` rather than spliced into it, because the Arabic
+   * is often sourced from a *different* official book than the ruling text
+   * itself (e.g. the marja's Urdu book, when his English book shows the
+   * same dhikr only as an image). */
+  recitationIds?: string[];
+}
+
+/** A recited Arabic text (dhikr, tashahhud, etc.) shown separately from
+ * `MarjaRuling.text` so it can be cited to its own source even when that
+ * differs from the ruling's own book (decision P12). Never typed from memory
+ * — `arabic` must be a verbatim copy of `source`, checked letter by letter. */
+export interface Recitation {
+  id: string;
+  marjaId: MarjaId;
+  arabic: string;
+  transliteration?: string;
+  translation?: LocalizedText;
+  source: SourceCitation;
+  note?: string;
 }
 
 export type RulingPanel = "persons";
@@ -163,6 +190,8 @@ export interface ProcedureStep {
   /** Only where the cited ruling states it. */
   hukm?: Hukm;
   isRukn?: boolean;
+  /** Recitation(s) to show with this step (decision P12); see `Ruling.recitationIds`. */
+  recitationIds?: string[];
   note?: string;
 }
 

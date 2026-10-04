@@ -53,6 +53,15 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | R5 | **New rule: install-size reporting** | Every phase summary reports the **running total** of ruling text added to the PWA install-time download. |
 | R6 | **Khamenei source priority for Salat (Phase 3)** | *The Rules on Prayer & Fasting 2023* first, then the *Practical Laws of Islam* Q&A. **If the two conflict, flag it and ask; don't pick one.** (Restates P2 for Phase 3.) |
 
+## Answered Phase 3 questions (2026-10-04)
+
+| # | Question | Decision |
+|---|---|---|
+| P12 | Sistani's rukūʿ and sajdah dhikr (Rulings 1014, 1035) is an image on sistani.org; the guided prayers show the transliteration only | **Check Sistani's own sources for a text version first:** the Arabic *Minhāj al-Ṣāliḥīn*, the Urdu *توضیح المسائل*, or a Persian risala on sistani.org. If one has the dhikr as text, use that Arabic with its citation. **If none does, keep the ruling's own transliteration** as it is now. Never take the Arabic from Khamenei's pages, even though the words are the same — recitation text for one marja' must come only from his own sources. |
+| P13 | Khamenei's Salat entries are English only; his Urdu Q&A book (*استفتاآت کے جوابات*) covers some of the same points under its own numbering | **Yes — add his Urdu Q&A answers as separate entries**, with their own Q numbers, labelled as coming from the Q&A book (never presented as a translation of the *Rules* ruling). Use the same policy as Sistani's older Urdu (P6): show a Urdu Q&A entry only where it **agrees** with the 2023 *Rules* ruling; where it differs, show English only for the *Rules* ruling plus the existing Urdu-missing notice. Report agree/differ counts per topic. |
+| P14 | Ruling 651 (the mother's qaḍāʾ, obligatory caution) vs. its own footnote to 656, which just says "a caution" | Keep quoting 651 verbatim — a plain "caution" in a footnote doesn't contradict "obligatory caution"; it's just less specific, not a second source to reconcile. Record the footnote in the ruling's data note and in the progress log. **Do not show it to users.** |
+| R7 | **New rule: Khamenei Urdu Q&A supplementary entries** | See P13. Applies to every topic, every phase, wherever Khamenei's *Rules* book has no official Urdu and his Q&A book covers the same point. |
+
 ## Phase 0 findings (2026-09-25)
 
 - **Q5 UI kit: Vuetify 3.** `package.json` has `vuetify` + `vite-plugin-vuetify` and no shadcn-vue,
@@ -97,8 +106,4 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 
 _(Claude Code adds new questions here and asks the user. Move them to "Answered" with the date once decided.)_
 
-| # | Question | Why it matters | Claude Code's recommendation |
-|---|---|---|---|
-| P12 | On sistani.org the **Arabic of the rukūʿ and sajdah dhikr** (Rulings 1014, 1035) is published as an **image**, not text. Sistani's guided prayers currently show the ruling's own transliteration ("subḥāna rabbiyal ʿaẓīmi wa biḥamdih") for those two steps, with no Arabic. | Rule §4.5: Arabic must be copied from a source and checked letter by letter. Transcribing an image would be retyping. | Keep the transliteration. Or you provide another official Sistani text where these dhikrs are written as text (e.g. the Arabic *Minhāj al-Ṣāliḥīn* or the Urdu book, if it has them as text), and I quote it from there. |
-| P13 | **Khamenei's Salat entries are English only:** *The Rules on Prayer & Fasting 2023* has no official Urdu edition. His Urdu Q&A book (*استفتاآت کے جوابات*) covers some of the same points, with its own numbering. | Urdu readers following Khamenei see English for all of Salat. | Optionally add a supplementary Urdu Q&A entry where the Q&A covers the same point, shown as a separate entry (its own question, Q number and Urdu) and never presented as a translation of the Rules ruling. Leave as is if you'd rather keep strictly to R6's priority. |
-| P14 | The two Khamenei books were checked on seven high-risk points and **agreed on all of them**. But the *Rules* book is internally inconsistent on one: ruling 651 says the mother's qaḍāʾ is an *obligatory* caution, while the footnote to 656 says just "a caution". | No conflict between the books to ask about (R6), but you may want this footnote shown. | Keep quoting 651 verbatim (it agrees with the Q&A, Q 540), and say nothing about the footnote. Alternatively, add 656 with its footnote as its own entry. |
+_None open._

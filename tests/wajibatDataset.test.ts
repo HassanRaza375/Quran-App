@@ -119,13 +119,26 @@ describe("Wajibat dataset integrity", () => {
 
   it("Khamenei's salat entries come from The Rules on Prayer & Fasting 2023 and carry no Urdu (decisions R1, R6)", () => {
     const salatTopics = new Set(WAJIBAT_DATASET.topics.filter((t) => t.categoryId === "salat").map((t) => t.id));
-    const entries = WAJIBAT_RULINGS.filter((r) => salatTopics.has(r.topicId)).flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei");
+    const entries = WAJIBAT_RULINGS.filter((r) => salatTopics.has(r.topicId)).flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei" && m.format === "issue");
     expect(entries.length).toBeGreaterThan(100);
     for (const e of entries) {
       expect(e.source.title).toBe("The Rules on Prayer & Fasting 2023");
       expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/241\?sn=\d+$/);
       expect(e.text.ur).toBeUndefined();
       expect(e.urduNote).toBeTruthy();
+    }
+  });
+
+  it("Khamenei's supplementary Urdu Q&A salat entries are labelled as Q&A, not a translation of the 2023 Rules (decision P13, rule R7)", () => {
+    const salatTopics = new Set(WAJIBAT_DATASET.topics.filter((t) => t.categoryId === "salat").map((t) => t.id));
+    const entries = WAJIBAT_RULINGS.filter((r) => salatTopics.has(r.topicId)).flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei" && m.format === "qa");
+    expect(entries.length).toBeGreaterThan(0);
+    for (const e of entries) {
+      expect(e.source.title).toBe("Practical Laws of Islam (Q&A)");
+      expect(e.question?.en).toBeTruthy();
+      expect(e.text.ur).toBeTruthy();
+      expect(e.urSource?.reference).toBeTruthy();
+      expect(e.note).toMatch(/not a translation/);
     }
   });
 

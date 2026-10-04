@@ -1783,7 +1783,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسئلہ (905)",
           url: "https://www.sistani.org/urdu/book/61/3637/"
         },
-        verification: "A"
+        verification: "A",
+        arabicInSource: true,
       },
       {
         marjaId: "khamenei",
@@ -2802,7 +2803,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسئلہ (991)",
           url: "https://www.sistani.org/urdu/book/61/3637/"
         },
-        verification: "A"
+        verification: "A",
+        arabicInSource: true,
       },
       {
         marjaId: "khamenei",
@@ -2937,7 +2939,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3637/"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        recitationIds: ["rukudhikrarabic"],
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. The English 4th edition publishes this dhikr only as an image (/files-new/book-photo/48/ruku.png), so it is quoted here exactly as the English book has it (with the image left unretyped); the Arabic itself is shown separately as a sourced recitation (P12), taken from the official Urdu edition, not spliced into this English quote."
       },
       {
         marjaId: "khamenei",
@@ -3253,7 +3256,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3637/"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        recitationIds: ["sajdahdhikrarabic"],
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. The English 4th edition publishes this dhikr only as an image, so it is quoted here exactly as the English book has it (with the image left unretyped); the Arabic itself is shown separately as a sourced recitation (P12), taken from the official Urdu edition, not spliced into this English quote."
       },
       {
         marjaId: "khamenei",
@@ -3293,7 +3297,42 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32524"
         },
         verification: "A",
+        arabicInSource: true,
         urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+      }
+    ]
+  },
+  {
+    id: "rukusajdahdhikrqa",
+    topicId: "rukusujud",
+    subject: {
+      en: "The obligatory dhikr of rukūʿ and sajdah, per Khamenei's Q&A book"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "What is meant by dhikr? Does it include sending blessings on the Prophet and his family?",
+          ur: "ذکر سے کیا مراد ہے؟ کیا اس میں نبی کریمؐ اور آپ کی آل پر صلوات بھی شامل ہے؟"
+        },
+        text: {
+          en: "The obligatory dhikr of rukūʿ and sajdah is saying \"subḥāna rabbī al-ʿaẓīmi wa biḥamdih\" once in rukūʿ and \"subḥāna rabbī al-aʿlā wa biḥamdih\" once in sajdah, or \"subḥānallāh\" three times in each.",
+          ur: "رکوع اور سجدے کا واجب ذکر ایک دفعہ «سبحان ربی العظیم و بحمدہ» کا رکوع میں پڑھنا اور ایک دفعہ «سبحان ربی الاعلی و بحمدہ» کا سجدے میں یا تین مرتبہ «سبحان اللہ» پڑھنا ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam (Q&A)",
+          reference: "Q 485",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5266"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 487",
+          url: "https://www.leader.ir/ur/book/106/استفتاآت-کے-جوابات?sn=11397"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), shown as its own question and Q number from the Q&A book — not a translation of Ruling 318 in The Rules on Prayer & Fasting 2023. Shown because it agrees with Ruling 318: both give the same dhikr, once, or 'subḥānallāh' three times, in rukūʿ and sajdah."
       }
     ]
   },
@@ -3900,7 +3939,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسئلہ (1086)",
           url: "https://www.sistani.org/urdu/book/61/3637/"
         },
-        verification: "A"
+        verification: "A",
+        arabicInSource: true,
       },
       {
         marjaId: "khamenei",
@@ -3915,6 +3955,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32518"
         },
         verification: "A",
+        arabicInSource: true,
         urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
       }
     ]
@@ -3991,6 +4032,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3637/"
         },
         verification: "A",
+        arabicInSource: true,
         note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
       },
       {
@@ -4212,7 +4254,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسئلہ (1105)",
           url: "https://www.sistani.org/urdu/book/61/3637/"
         },
-        verification: "A"
+        verification: "A",
+        arabicInSource: true,
       },
       {
         marjaId: "khamenei",
@@ -4227,6 +4270,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32522"
         },
         verification: "A",
+        arabicInSource: true,
         urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
       }
     ]
@@ -4346,6 +4390,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3638/"
         },
         verification: "A",
+        arabicInSource: true,
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       },
       {
@@ -5564,7 +5609,7 @@ export const SALAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Data note (P14, not shown in the UI): the footnote to Ruling 656 in the same book describes this same duty as just \"a caution\" rather than \"an obligatory caution\". This is a plain caution in a footnote, not a second source to reconcile with 651 (which agrees with the Q&A book, Q 540) — so 651 is quoted verbatim and the footnote is left unshown."
       }
     ],
     differsBetweenMaraji: true
@@ -6173,6 +6218,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3641/"
         },
         verification: "A",
+        arabicInSource: true,
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]

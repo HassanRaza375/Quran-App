@@ -7,6 +7,13 @@
       <v-chip v-if="step.isRukn" size="small" color="secondary" variant="flat" prepend-icon="mdi-pillar">Rukn</v-chip>
     </div>
     <blockquote class="step-quote">{{ step.instruction.en }}</blockquote>
+    <!-- Recitation shown separately from the quoted instruction (decision P12) —
+         may be sourced from a different official book than the step's ruling. -->
+    <div v-for="r in recitations" :key="r.id" class="recitation-block mb-2">
+      <p class="recitation-arabic" lang="ar" dir="rtl">{{ r.arabic }}</p>
+      <p v-if="r.transliteration" class="text-body-2 text-medium-emphasis mb-1">{{ r.transliteration }}</p>
+      <SourceLine :source="r.source" :marja-name="marja.name.en" verification="A" urdu />
+    </div>
     <SourceLine v-if="entry" :source="entry.source" :marja-name="marja.name.en" :verification="entry.verification" />
     <p v-if="step.note" class="text-caption text-medium-emphasis mt-1 mb-0">{{ step.note }}</p>
   </div>
@@ -15,13 +22,20 @@
 <script setup>
 import HukmBadge from "~/components/wajibat/HukmBadge.vue";
 import SourceLine from "~/components/wajibat/SourceLine.vue";
+import { getRecitationById } from "~/data/wajibat";
 
-defineProps({
+const props = defineProps({
   step: { type: Object, required: true },
   marja: { type: Object, required: true },
   /** The marja's entry of the ruling the step quotes (for its source line). */
   entry: { type: Object, default: null },
 });
+
+const recitations = computed(() =>
+  (props.step.recitationIds ?? [])
+    .map((id) => getRecitationById(id))
+    .filter((r) => r && r.marjaId === props.marja.id)
+);
 </script>
 
 <style scoped>
@@ -49,5 +63,15 @@ defineProps({
   margin: 0 0 8px;
   line-height: 1.7;
   white-space: pre-line;
+}
+.recitation-block {
+  border-inline-start: 3px solid rgba(var(--v-theme-secondary), 0.35);
+  padding-inline-start: 10px;
+}
+.recitation-arabic {
+  font-family: "Amiri Quran", serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 4px;
 }
 </style>

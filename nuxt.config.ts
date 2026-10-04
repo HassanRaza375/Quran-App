@@ -47,6 +47,31 @@ export default defineNuxtConfig({
       "process.env.DEBUG": false,
     },
     plugins: [vuetify({ autoImport: true })],
+    // Force the Wajibat ruling/procedure text into its own deterministically
+    // named client chunk, so the PWA config can exclude it from the
+    // install-time precache and cache it at runtime instead (see the
+    // `pwa.workbox` globIgnores/runtimeCaching entries below) — it's ~700+
+    // KiB that only Fiqh-module visitors need, not something every install
+    // should fetch. `$client` (not the top-level `build` key) because Nuxt
+    // merges it in last, specifically so module-set rollupOptions.output
+    // (which a plain `build` key here loses to) don't silently win.
+    $client: {
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks(id) {
+              if (id.replace(/\\/g, "/").includes("/data/wajibat/")) return "wajibat-data";
+            },
+            // Nuxt's own default chunkFileNames is "_nuxt/[hash].js" (no
+            // [name]), so without this the manualChunks grouping above still
+            // lands in its own file, just under an indistinguishable hash —
+            // this is what lets the PWA config (below) target it by name.
+            chunkFileNames: (chunkInfo) =>
+              chunkInfo.name === "wajibat-data" ? "_nuxt/wajibat-data-[hash].js" : "_nuxt/[hash].js",
+          },
+        },
+      },
+    },
   },
   // pwa
   pwa: {
@@ -86,8 +111,37 @@ export default defineNuxtConfig({
     },
     workbox: {
       globPatterns: ["**/*.{js,css,html,ico,png,svg,woff,woff2,ttf}"],
+      // The Wajibat (Daily Fiqh) ruling/procedure text is its own chunk
+      // (see vite.$client.build.rollupOptions.output.manualChunks) and is
+      // deliberately kept OUT of the install-time precache — only users who
+      // open /fiqh should download it.
+      //
+      // This CacheFirst rule is a backstop, not the real mechanism: verified
+      // in a real browser (Playwright) that Nuxt's SSR-injected
+      // <link rel="modulepreload"> for this chunk is NOT run through the
+      // service worker's fetch event in Chromium, so a passive runtimeCaching
+      // rule alone never actually catches it. The real caching happens from
+      // app code instead — app/composables/useFiqhOfflineCache.ts explicitly
+      // fetches-and-caches the chunk on every /fiqh page visit (and the
+      // "Save all for offline" button on the /fiqh hub does the same thing
+      // on demand) — using the SAME cache name, so this rule still applies
+      // if some future code path ever does fetch it through a route the SW
+      // can see.
+      globIgnores: ["**/wajibat-data-*.js"],
       navigateFallback: "/",
       runtimeCaching: [
+        {
+          urlPattern: ({ url }) => /\/wajibat-data-.*\.js$/.test(url.pathname),
+          handler: "CacheFirst",
+          options: {
+            cacheName: "wajibat-data-cache",
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year; content is versioned by its build hash
+            },
+            cacheableResponse: { statuses: [0, 200] },
+          },
+        },
         {
           // Quran text/translation/tafsir/reciter-list API — this content is
           // immutable (surah text and tafsir never change), so CacheFirst

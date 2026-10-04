@@ -13,8 +13,15 @@ import {
 } from "~/data/wajibat";
 import type { Ruling, WajibatTopic } from "~/data/wajibat/types";
 import { searchWajibat } from "~/utils/wajibatSearch";
+import { ensureWajibatDataCached } from "~/composables/useFiqhOfflineCache";
 
 export const useWajibat = () => {
+  // Fire-and-forget: every /fiqh page calls useWajibat(), so this is where
+  // "visiting a category keeps it available offline" (R8) actually happens.
+  // See useFiqhOfflineCache.ts for why this can't just be a passive
+  // service-worker runtimeCaching rule.
+  if (import.meta.client) ensureWajibatDataCached();
+
   const categories = [...WAJIBAT_CATEGORIES].sort((a, b) => a.order - b.order);
 
   const topicsFor = (categoryId: string): WajibatTopic[] =>

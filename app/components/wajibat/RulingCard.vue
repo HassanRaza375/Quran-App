@@ -32,6 +32,19 @@
           <SourceLine :source="entry.source" :marja-name="marja.name.en" :verification="entry.verification" />
         </div>
 
+        <!-- Recitation shown separately from the ruling text (decision P12) — the
+             Arabic may come from a different official book than the ruling itself
+             (e.g. the marja's Urdu edition, when his English book shows it only as
+             an image). Never spliced into `entry.text`. -->
+        <div v-for="r in recitations" :key="r.id" class="recitation-block mt-3">
+          <p class="recitation-arabic" lang="ar" dir="rtl">{{ r.arabic }}</p>
+          <p v-if="r.transliteration" class="text-body-2 text-medium-emphasis mb-1">{{ r.transliteration }}</p>
+          <SourceLine :source="r.source" :marja-name="marja.name.en" verification="A" urdu />
+          <p v-if="r.note" class="text-caption text-medium-emphasis mt-1 mb-0">
+            <v-icon size="14" aria-hidden="true">mdi-information-outline</v-icon> {{ r.note }}
+          </p>
+        </div>
+
         <!-- Urdu — only from the marja's official Urdu book (decision R1) -->
         <div v-if="showUrdu" class="lang-block" :class="{ 'mt-4': showEnglish }">
           <div v-if="entry.question?.ur" class="qa-question">
@@ -68,7 +81,7 @@
 import HukmBadge from "~/components/wajibat/HukmBadge.vue";
 import BasisBadge from "~/components/wajibat/BasisBadge.vue";
 import SourceLine from "~/components/wajibat/SourceLine.vue";
-import { getMarjaRuling } from "~/data/wajibat";
+import { getMarjaRuling, getRecitationById } from "~/data/wajibat";
 import { URDU_EDITION_LAG_NOTICE } from "~/utils/wajibatLabels";
 
 const props = defineProps({
@@ -79,6 +92,12 @@ const props = defineProps({
 });
 
 const entry = computed(() => getMarjaRuling(props.ruling, props.marja.id));
+// Only the chosen marja's own recitations — never another marja's (same rule as rulings, P1).
+const recitations = computed(() =>
+  (props.ruling.recitationIds ?? [])
+    .map((id) => getRecitationById(id))
+    .filter((r) => r && r.marjaId === props.marja.id)
+);
 const hasUrdu = computed(() => !!entry.value?.text.ur);
 const showUrdu = computed(() => props.lang !== "en" && hasUrdu.value);
 const showEnglish = computed(() => props.lang !== "ur" || !hasUrdu.value);
@@ -123,6 +142,16 @@ const missingMessage = computed(() =>
   border-radius: 8px;
   padding: 6px 10px;
   background: rgba(var(--v-theme-on-surface), 0.025);
+}
+.recitation-block {
+  border-inline-start: 3px solid rgba(var(--v-theme-secondary), 0.35);
+  padding-inline-start: 10px;
+}
+.recitation-arabic {
+  font-family: "Amiri Quran", serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 4px;
 }
 .qa-label.urdu-inline {
   text-transform: none;

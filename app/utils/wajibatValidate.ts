@@ -16,6 +16,12 @@ export interface WajibatIssue {
   message: string;
 }
 
+/** Decision P12: Arabic in an English `text`/`question` is only legitimate when the
+ * cited English `source` book itself prints it as real text (flagged `arabicInSource`).
+ * Arabic sourced from a *different* book (e.g. a marja's Urdu edition, when the English
+ * book shows the same text only as an image) must be a separate `Recitation` instead —
+ * never spliced into another book's quote. */
+const ARABIC_RE = /[؀-ۿ]/;
 const HUKMS = new Set(["wajib", "haram", "mustahab", "makruh", "mubah"]);
 const BASES = new Set(["fatwa", "ihtiyat_wajib", "ihtiyat_mustahab", "ihtiyat_unspecified"]);
 const LEVELS = new Set(["A", "B", "D"]);
@@ -71,6 +77,11 @@ const validateMarjaRuling = (
     push(label, "urSource given but no Urdu text");
   }
   if (entry.urduEditionLag && hasUrdu) push(label, "urduEditionLag entries must not carry the outdated Urdu text");
+
+  const englishHasArabic = ARABIC_RE.test(entry.text.en) || ARABIC_RE.test(entry.question?.en ?? "");
+  if (englishHasArabic && !entry.arabicInSource) {
+    push(label, "Arabic in English text/question without arabicInSource — Arabic from a different book must be a Recitation, not spliced into this quote (decision P12)");
+  }
 };
 
 export const validateWajibatDataset = (
@@ -81,13 +92,14 @@ export const validateWajibatDataset = (
   const issues: WajibatIssue[] = [];
   const push = (id: string, message: string) => issues.push({ id, message });
 
-  const { categories, topics, rulings, glossary } = data;
+  const { categories, topics, rulings, glossary, recitations } = data;
   for (const [name, list] of [
     ["category", categories.map((c) => c.id)],
     ["topic", topics.map((t) => t.id)],
     ["ruling", rulings.map((r) => r.id)],
     ["glossary", glossary.map((g) => g.id)],
     ["marja", maraji.map((m) => m.id)],
+    ["recitation", recitations.map((r) => r.id)],
   ] as const) {
     for (const dup of findDuplicates([...list])) push(dup, `duplicate ${name} id`);
     for (const id of list) if (!/^[a-z0-9]+$/.test(id)) push(id, `${name} id must be lowercase ASCII letters/digits only (Shared Foundation #1)`);
@@ -95,6 +107,16 @@ export const validateWajibatDataset = (
 
   const topicIds = new Set(topics.map((t) => t.id));
   const glossaryIds = new Set(glossary.map((g) => g.id));
+  const recitationIds = new Set(recitations.map((r) => r.id));
+
+  for (const rec of recitations) {
+    if (!rec.arabic?.trim()) push(rec.id, "recitation needs its Arabic text");
+    const marja = maraji.find((m) => m.id === rec.marjaId);
+    if (!marja) push(rec.id, `unknown marjaId "${rec.marjaId}"`);
+    if (!rec.source?.title?.trim() || !rec.source?.reference?.trim() || !rec.source?.url?.trim())
+      push(rec.id, "recitation needs a source with title, reference and url");
+    else if (marja && !isOfficialUrl(rec.source.url, marja)) push(rec.id, `recitation source is not on ${marja.officialSite}`);
+  }
 
   for (const c of categories) {
     if (c.summary?.kind !== "explanation") push(c.id, "category summary must be kind: explanation");
@@ -148,6 +170,7 @@ export const validateWajibatDataset = (
     const hasD = r.rulings.some((m) => m.verification === "D");
     if (hasD && r.status !== "disputed") push(r.id, "level-D entry requires status: disputed");
     if (!hasD && r.status === "disputed") push(r.id, "status: disputed without a level-D entry");
+    for (const rec of r.recitationIds ?? []) if (!recitationIds.has(rec)) push(r.id, `recitationIds references unknown recitation "${rec}"`);
     for (const m of r.rulings) validateMarjaRuling(m, r.id, maraji, push);
   }
 
@@ -182,6 +205,7 @@ export const validateWajibatDataset = (
         if (!s.instruction.en?.trim() || !entry.text.en.includes(s.instruction.en)) push(label, "instruction is not a verbatim excerpt of the cited ruling");
         if (s.instruction.ur && !(entry.text.ur ?? "").includes(s.instruction.ur)) push(label, "Urdu instruction is not a verbatim excerpt of the cited ruling");
       }
+      for (const rec of s.recitationIds ?? []) if (!recitationIds.has(rec)) push(label, `recitationIds references unknown recitation "${rec}"`);
     });
     for (const dup of findDuplicates(p.steps.map((s) => s.id))) push(p.id, `duplicate step id "${dup}"`);
   }

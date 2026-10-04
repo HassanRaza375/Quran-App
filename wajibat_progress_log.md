@@ -541,3 +541,59 @@ P12–P14 in `wajibat_decisions.md`.
 
 ### Recommended next phase
 Phase 4 (salat doubts and corrections: shakkiyyāt, ṣalāt al-iḥtiyāṭ, sajdat al-sahw), plus the "Is my wuḍūʾ still valid?" helper (P11). It is high-risk: every leaf of the decision trees must cite level-A rulings, and every path will be tested.
+
+---
+
+## Phase 3 follow-ups from the review (2026-10-04)
+
+- **P12, the rukūʿ/sajdah dhikr Arabic:** checked Sistani's own sources first, per the decision.
+  - The official Urdu *توضیح المسائل* masla 1014 (rukūʿ) and masla 1035 (sajdah) **do** have the dhikr written as real text — this was already captured in the dataset's `ur` field (`سُبْحَانَ رَبِّیَ الْعَظِیْمِ وَبِحَمْدِہٖ` / `سُبْحَانَ رَبِّیَ الْاَعْلیٰ وَبِحَمْدِہٖ`), re-verified now against `sistani.org/urdu/book/61/3637/` live.
+  - **Correction (2026-10-04):** the Arabic was first spliced directly into the English `rukudhikr`/`sajdahdhikr` ruling text. That was wrong — the English *Islamic Laws* ruling must stay a verbatim quote of the English book, which only has this dhikr as an image, and mixing in Arabic sourced from a different book (the Urdu edition) corrupts that quote. Reverted the English `text.en` back to its original `...` placeholder for the image, and instead added two new `Recitation` entries (`rukudhikrarabic`, `sajdahdhikrarabic` in the new `app/data/wajibat/recitations.ts`), cited to Urdu masla 1014/1035, linked via a new `Ruling.recitationIds` / `ProcedureStep.recitationIds` field. `RulingCard` and `ProcedureStepBody` now render the recitation in its own block, next to the ruling/step, with its own source line — never merged into the ruling's own quote. No Arabic was taken from Khamenei's pages.
+  - **New validator rule:** `wajibatValidate.ts` now flags any Arabic script in a `MarjaRuling.text.en`/`question.en` that isn't marked `arabicInSource: true` — that flag may only be set when the cited **English** source book itself prints the Arabic as text (true for 10 existing entries, audited and flagged: Khamenei's dhikr-wording/tashahhud/qunūt rulings and Sistani's tasbīḥāt/tashahhud/salām/qunūt/sajdah-material/ṣalāt-al-āyāt rulings — all verified as the English book's own printed Arabic, not spliced in). This is meant to catch any repeat of this mistake automatically.
+  - The Arabic *Minhāj al-Ṣāliḥīn* and the short risala *مختصر احکام عبادات* were also checked; neither exposed readable inline text for this (TOC/PDF-only), so they weren't needed once the Tawzih text was confirmed.
+- **P14, ruling 651 vs. the footnote to 656:** 651 continues to be quoted verbatim, unchanged in the UI. A data note was added to the Khamenei entry on `eldestsonmother` (ruling 651) recording the footnote to 656 and why it isn't shown (the footnote is a plain "caution", not a second ruling to reconcile). The note is in the dataset only, not rendered.
+- **P13, Khamenei's Urdu Q&A for Salat:** built and verified the first entry — the rukūʿ/sajdah dhikr wording, the topic already flagged as `differsBetweenMaraji`.
+  - New `qa`-format ruling `rukusajdahdhikrqa` (topic `rukusujud`): Khamenei's *Practical Laws of Islam* Q&A, English Q 485 and Urdu *استفتاآت کے جوابات* س 487 (`leader.ir/ur/book/106/استفتاآت-کے-جوابات?sn=11397`), both read live and quoted verbatim. **Agrees** with Ruling 318 of *The Rules on Prayer & Fasting 2023* (same dhikr, same alternative), so it is shown, labelled as its own Q&A entry, not a translation of 318.
+  - **Coverage so far: 1 of 16 Salat subject topics.** The other 15 (prayer times, qibla, covering, place of prayer, adhān/iqāmah, obligatory parts, recitation, what sajdah may be on, tashahhud/salām/qunūt, invalidators, traveller's prayer, qaḏā' prayers, congregational prayer, other obligatory prayers, plus any other dhikr-adjacent entries in rukūʿ/sajdah) still need the Urdu Q&A book cross-check. This is left as explicit follow-up work, not claimed done — each topic needs its own live read of the matching Urdu Q&A section before an agree/differ call can be made (rule R7).
+  - Urdu Q&A book chapter/section map found this session (for the follow-up work): اذان و اقامت sn=11395, قرأت sn=11396, ذکرنماز sn=11397, سجدہ sn=11398, جواب سلام sn=11399, مبطلات نماز sn=11400, شکیات نماز sn=11401, قضا نماز sn=11402, ماں باپ کی قضا نمازیں sn=11403.
+
+## Install-size task (new, before Phase 4) — 2026-10-04
+
+**Goal:** stop the ~730 KiB Wajibat ruling/procedure text from downloading at install time; cache it at runtime instead; add a "Save all for offline" button; verify in a real browser, not just the build output.
+
+### What was built
+- `nuxt.config.ts`: `vite.$client.build.rollupOptions.output.manualChunks` isolates everything under `app/data/wajibat/` into one chunk, named `wajibat-data-[hash].js` via a matching `chunkFileNames` override (Nuxt's own default is `[hash].js`, no `[name]`, so without this override the chunk was already isolated but had no stable name to target). `pwa.workbox.globIgnores` excludes that filename pattern from the install-time precache; a `runtimeCaching` entry (CacheFirst, cache name `wajibat-data-cache`) is kept as a backstop.
+- `app/composables/useFiqhOfflineCache.ts` (new): `ensureWajibatDataCached()` and `isWajibatDataCached()`. Finds the chunk's URL from `performance.getEntriesByType("resource")` / `document.scripts`, and explicitly `fetch()`s + `cache.put()`s it into `wajibat-data-cache` if not already there.
+- `useWajibat()` calls `ensureWajibatDataCached()` (fire-and-forget, client-only) every time it's used — i.e. on every `/fiqh` page — so visiting any Fiqh page keeps the whole module available offline from then on.
+- `/fiqh` hub: a "Save all for offline" button (same function, on demand) with a live "Saved for offline" state, for a user who wants to be sure before going offline rather than relying on having visited.
+
+### Bug found and fixed (real browser testing caught this; the build-output check alone did not)
+The first version relied on the `runtimeCaching` rule alone, reasoning that the chunk would simply be fetched (and so cached) the first time any `/fiqh` page loaded it. **It didn't work.** Installed Playwright + a real Chromium and drove the actual production build (`node .output/server/index.mjs`):
+- Confirmed, by checking `response.fromServiceWorker()` on every request on a `/fiqh` page, that every other asset (50+ JS/CSS chunks) was correctly served `fromServiceWorker: true` — so the service worker itself was genuinely active and controlling the page.
+- The `wajibat-data` chunk alone showed `fromServiceWorker: false`, and `caches.open("wajibat-data-cache")` had zero entries after the visit.
+- Root cause: Nuxt's SSR renderer injects `<link rel="modulepreload" href=".../wajibat-data-*.js">` into the page `<head>` for every `/fiqh` page (because the page's components statically import `~/data/wajibat`). **Chromium does not run `modulepreload` fetches through the service worker's `fetch` event.** The chunk loaded fine (modulepreload fetched it directly over the network), but that fetch was invisible to Workbox, so the `runtimeCaching` rule never fired.
+- Tried removing the `<link>` two ways that didn't work and are worth recording so they aren't retried: (a) `vite.$client.build.modulePreload.resolveDependencies` — this only affects Vite's own SPA `index.html` injection, not Nuxt's SSR renderer; the link was still there after rebuilding. (b) a `hooks: { "render:html": ... }` entry in `nuxt.config.ts` — `render:html` fires on `nitroApp.hooks` (a separate, request-time hook registry inside the running server), not on the build-time `nuxt.hooks` that a top-level `hooks` key registers on, so the hook was silently never called; confirmed by a debug log that never printed even though the hook "registered" without error. A `server/plugins/*.ts` Nitro plugin would be the correct way to reach that hook, but at that point the explicit-cache approach below made chasing it further unnecessary.
+- **Fix:** stopped trying to make the SW passively intercept the chunk's fetch at all. `useFiqhOfflineCache.ts` fetches and caches it explicitly from app code, which works regardless of *how* the browser originally fetched the chunk (modulepreload, dynamic import, anything).
+
+### Browser verification (Playwright + Chromium, against `node .output/server/index.mjs`)
+- **Fresh install, non-`/fiqh` page:** a brand-new browser profile, service worker confirmed `controller: true` (genuinely active and controlling), navigated to `/prayerTime` — zero requests matching the `wajibat-data` chunk, and `caches.open("wajibat-data-cache")` has no entries. Ruling text is not downloaded until `/fiqh` is opened. **Confirmed.**
+- **Visiting `/fiqh` caches it:** opened `/fiqh` only (not a specific category), waited ~3 seconds — `wajibat-data-cache` has 1 entry (the chunk). Because every category/topic reads from this one chunk (the module isn't split per category — that's spec Phase 10 work, still not done), visiting the hub is enough to make every category available offline, not just the one visited.
+- **Offline, client-side navigation to a never-visited topic:** went offline, then — using real link clicks inside the already-open page, not a fresh browser navigation — clicked into the Salat category and then into a specific topic (`dailyprayers`) that had never been loaded before. It rendered fully (2909 characters of real content, including the app's own "Offline" indicator in the nav drawer). **Confirmed**: once the hub has been visited (or the button used), every category works offline.
+- **"Save all for offline" button:** clicked on a fresh profile that had only visited `/prayerTime` (never `/fiqh`); `wajibat-data-cache` gained the chunk, button showed "Saved for offline", and an unvisited topic then rendered offline the same way. **Confirmed.**
+- **Content-hashed filename:** the chunk is `wajibat-data-<8-char-hash>.js`, where the hash is Rollup's content hash — changing any ruling's text changes the hash, so a corrected ruling ships as a new URL and a browser with the old one cached fetches the new file instead of serving stale text. Confirmed the hash changed across rebuilds that touched the Wajibat data (`CwNzGUgm` → `BoKr4D3N` after an unrelated data edit) and stayed the same across rebuilds that didn't.
+- **One thing this did NOT manage to verify, and isn't claiming:** a full browser *reload* or a brand-new tab navigation (`page.goto`/F5) while offline failed in every attempt — but it failed identically for `/`, the exact page `navigateFallback` is bound to, with nothing to do with Wajibat. That strongly points to a Playwright/CDP-specific interaction between `setOffline()` and top-level navigation (sub-resource fetches were reliably interceptable throughout; only top-level `goto`/reload wasn't), not a real app bug — but it means "does a hard refresh work offline" for this SSR app in general is still an open question outside this task's scope, not something this change verified either way.
+
+### Install-size result
+| Point | PWA precache |
+|---|---|
+| After Phase 3 | 242 entries / 6,165.09 KiB |
+| **After this task** | **240 entries / 5,431.94 KiB** |
+
+The Wajibat ruling/procedure text (~730 KiB) is no longer in the install-time download. The 2-entry drop (242→240) is the `wajibat-data` chunk itself plus the duplicate-named chunk entry Rollup had been emitting for it; nothing else changed.
+
+### Tests / Lint
+`npm test`: 26 files, 412 tests passed (unchanged — this task touched no Wajibat content, only build config and a new, pure-utility composable). `npx eslint` on the changed files: clean.
+
+### Files created / changed
+- Created: `app/composables/useFiqhOfflineCache.ts`.
+- Changed: `nuxt.config.ts` (manualChunks, chunkFileNames, workbox globIgnores/runtimeCaching), `app/composables/useWajibat.ts`, `app/pages/fiqh/index.vue` (button simplified to use the new composable).

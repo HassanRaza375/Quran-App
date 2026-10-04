@@ -93,11 +93,28 @@
       </v-col>
     </v-row>
 
-    <div class="d-flex flex-wrap ga-2 mt-6 mb-4">
+    <div class="d-flex flex-wrap ga-2 mt-6 mb-4 align-center">
       <v-btn variant="tonal" prepend-icon="mdi-alphabetical-variant" to="/fiqh/glossary">Glossary</v-btn>
       <v-btn variant="tonal" prepend-icon="mdi-clock-outline" to="/prayerTime">Prayer times</v-btn>
       <v-btn variant="tonal" prepend-icon="mdi-compass-outline" to="/qibla-direction">Qibla</v-btn>
+      <v-btn
+        v-if="offlineState !== 'unsupported'"
+        variant="tonal"
+        :prepend-icon="offlineIcon"
+        :loading="offlineState === 'saving'"
+        :disabled="offlineState === 'saved'"
+        @click="saveOffline"
+      >
+        {{ offlineLabel }}
+      </v-btn>
     </div>
+    <p v-if="offlineState === 'error'" class="text-caption text-error mt-1">
+      Couldn't save the rulings for offline use. Check your connection and try again.
+    </p>
+    <p v-else-if="offlineState === 'saved'" class="text-caption text-medium-emphasis mt-1">
+      The rulings and guided prayers you've loaded are saved for offline use. Note: this saves the
+      whole Daily Fiqh module, not one category at a time.
+    </p>
 
     <FiqhDisclaimer :marja="marja" />
   </v-container>
@@ -108,6 +125,7 @@ import FiqhNotices from "~/components/wajibat/FiqhNotices.vue";
 import MarjaPicker from "~/components/wajibat/MarjaPicker.vue";
 import MarjaChip from "~/components/wajibat/MarjaChip.vue";
 import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
+import { ensureWajibatDataCached, isWajibatDataCached } from "~/composables/useFiqhOfflineCache";
 
 useHead({ title: "Daily Fiqh (Wajibat)" });
 useSeoMeta({
@@ -117,7 +135,40 @@ useSeoMeta({
 useUrduFont();
 const { categories, search, getCategoryById, getTopicById, getMarjaById } = useWajibat();
 const { marjaId, loaded, load } = useFiqhPrefs();
-onMounted(() => load());
+
+// Install-size follow-up (decisions R5/R8): see useFiqhOfflineCache.ts for
+// why this explicitly fetches-and-caches the chunk rather than relying on a
+// passive service-worker rule. useWajibat() above already triggers the same
+// thing on every /fiqh visit; this button is for a user who wants to be
+// sure it's saved — e.g. before going offline — without having to visit
+// every category page first.
+const offlineState = ref("unknown"); // unknown | saving | saved | unsupported | error
+
+const offlineLabel = computed(() => ({
+  saving: "Saving…",
+  saved: "Saved for offline",
+}[offlineState.value] ?? "Save all for offline"));
+const offlineIcon = computed(() =>
+  offlineState.value === "saved" ? "mdi-check-circle-outline" : "mdi-download-outline"
+);
+
+const checkOffline = async () => {
+  if (typeof caches === "undefined") {
+    offlineState.value = "unsupported";
+    return;
+  }
+  offlineState.value = (await isWajibatDataCached()) ? "saved" : "unknown";
+};
+
+const saveOffline = async () => {
+  offlineState.value = "saving";
+  offlineState.value = (await ensureWajibatDataCached()) ? "saved" : "error";
+};
+
+onMounted(() => {
+  load();
+  checkOffline();
+});
 
 const marja = computed(() => getMarjaById(marjaId.value));
 const query = ref("");

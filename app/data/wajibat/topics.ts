@@ -394,7 +394,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Bowing and prostrating: how they are done, their dhikr, stillness, and what happens if one is forgotten."
     ),
-    rulingIds: ["ruku", "rukudhikr", "rukustill", "afterruku", "forgotruku", "twosajdahs", "sevenparts", "sajdahrukn", "sajdahdhikr", "dhikrwording", "betweensajdahs", "sajdahheight", "sajdahbarrier", "turbahpure"],
+    rulingIds: ["ruku", "rukudhikr", "rukustill", "afterruku", "forgotruku", "twosajdahs", "sevenparts", "sajdahrukn", "sajdahdhikr", "dhikrwording", "rukusajdahdhikrqa", "betweensajdahs", "sajdahheight", "sajdahbarrier", "turbahpure"],
     relatedTopicIds: ["sajdahplace", "obligatoryparts"],
     glossaryIds: ["ruku", "sajdah", "rukn"],
     lastSourceCheck: "2026-10-02",

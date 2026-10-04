@@ -136,8 +136,10 @@ describe("Wajibat dataset integrity", () => {
     for (const e of entries) {
       expect(e.source.title).toBe("Practical Laws of Islam (Q&A)");
       expect(e.question?.en).toBeTruthy();
-      expect(e.text.ur).toBeTruthy();
-      expect(e.urSource?.reference).toBeTruthy();
+      // Urdu is included only where it was actually read verbatim; otherwise
+      // English only, same as any other ruling with no official Urdu text.
+      if (e.text.ur) expect(e.urSource?.reference).toBeTruthy();
+      else expect(e.urduNote).toBeTruthy();
       expect(e.note).toMatch(/not a translation/);
     }
   });

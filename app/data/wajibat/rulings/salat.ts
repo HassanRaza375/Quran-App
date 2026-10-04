@@ -570,6 +570,34 @@ export const SALAT_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "qiblaeffortqa",
+    topicId: "qibla",
+    subject: {
+      en: "Finding the direction of the qibla, per Khamenei's Q&A book"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Can the shadow of a pole (on the dates the sun is directly over the Ka'bah) or a compass be used to find qibla?"
+        },
+        text: {
+          en: "If using a pole or a compass gives certainty about the direction of qiblah, relying on it is correct. Otherwise, one should pray toward the direction where the strongest opinion exists — such as by the niche (miḥrāb) of a mosque."
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam (Q&A)",
+          reference: "Q 363",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5258"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Urdu Q&A book has an equivalent (س 365), but its exact Urdu wording could not be read verbatim this session (the fetch returned an English paraphrase, not quotable Urdu text) — English only is shown here rather than guessing the Urdu (decision R1).",
+        note: "Supplementary Q&A entry (decision P13/rule R7), shown as its own question and Q number — not a translation of Ruling 44 in The Rules on Prayer & Fasting 2023. Shown because it agrees with Ruling 44: both rely on a reliable method (compass/sun) for certainty, falling back to the most likely direction (e.g. a mosque's miḥrāb) otherwise."
+      }
+    ]
+  },
+  {
     id: "qiblanomeans",
     topicId: "qibla",
     subject: {
@@ -612,6 +640,34 @@ export const SALAT_RULINGS: Ruling[] = [
         verification: "A",
         urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "qiblanomeansqa",
+    topicId: "qibla",
+    subject: {
+      en: "When the direction cannot be found, per Khamenei's Q&A book"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "What should one do when all four directions seem equally probable for the qibla's location?"
+        },
+        text: {
+          en: "It is obligatory, as per obligatory caution, to perform the prayer in all four directions."
+        },
+        basis: "ihtiyat_wajib",
+        source: {
+          title: "Practical Laws of Islam (Q&A)",
+          reference: "Q 366",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5258"
+        },
+        verification: "A",
+        urduNote: "Khamenei's Urdu Q&A book has an equivalent (س 368), but its exact Urdu wording could not be read verbatim this session (the fetch returned an English paraphrase, not quotable Urdu text) — English only is shown here rather than guessing the Urdu (decision R1).",
+        note: "Supplementary Q&A entry (decision P13/rule R7), shown as its own question and Q number — not a translation of Ruling 45 in The Rules on Prayer & Fasting 2023. Shown because it agrees with Ruling 45: both require praying in all four directions, by obligatory caution, when no direction can be found more likely than another."
       }
     ]
   },

@@ -310,7 +310,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
       "Facing the Kaʿbah in prayer and what to do when its direction is uncertain. The app's Qibla tool shows the direction from your location."
     ),
     liveTool: "qibla",
-    rulingIds: ["qibladirection", "qiblaeffort", "qiblanomeans", "qiblarecommended"],
+    rulingIds: ["qibladirection", "qiblaeffort", "qiblaeffortqa", "qiblanomeans", "qiblanomeansqa", "qiblarecommended"],
     relatedTopicIds: ["prayertimes", "placeofprayer"],
     glossaryIds: ["qibla"],
     lastSourceCheck: "2026-10-02",

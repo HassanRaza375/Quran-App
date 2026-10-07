@@ -166,6 +166,10 @@ export interface Ruling {
    * ruling(s) it was compared with. `agreesWith` cites those rulings; a Q&A that differs from
    * them is not added at all. */
   supplementary?: { marjaId: MarjaId; agreesWith: SourceCitation[] };
+  /** For a marja' with no entry in this ruling whose own book states the same point inside
+   * another ruling of the same topic: the UI points there instead of showing "not added yet".
+   * Used only where that other entry really covers this point (Phase 4a). */
+  seeAlso?: { marjaId: MarjaId; rulingId: string }[];
 }
 
 /** A recited Arabic text (dhikr, tashahhud, etc.) shown separately from

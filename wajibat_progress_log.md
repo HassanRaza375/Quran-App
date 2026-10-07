@@ -757,3 +757,119 @@ The install-time download is **37 KiB smaller than before the module started**: 
 **Decisions I need before building:** P15 (*Rules* 465), P16 (Khamenei's wuḍūʾ helper), P17 (helper wording in Urdu).
 
 **Size estimate:** the largest content phase so far. Around 110 Sistani rulings + ~60 Khamenei rulings, plus 4 trees (2 doubt trees, 2 wuḍūʾ trees) and their path tests. The trees, not the extraction, are where most of the time goes.
+
+---
+
+## Review round 2026-10-07 (P15–P17, R9, R10) and Phase 4a — report
+
+### P15 — Khamenei *Rules* 465: hidden, mistranslation confirmed
+- **(a) The surrounding rulings:**
+  - 465 sits under "Continuation of the Travel's Permissibility", not under a particular kind of trip. Hunting for amusement is a separate subsection (469–471: lahwī hunting → full prayer).
+  - Its neighbour 462 names "tourism" as a *permissible* purpose, and permissible travel is shortened (452).
+  - So 465 cannot be read as being about a specific trip. As printed in English, it contradicts 452 and 462.
+- **(b) The Persian original:** رساله نماز و روزه (leader.ir book 180, crawled through the site's contents endpoint), مسأله 466, same heading: «سفر برای تفریح و تفرّج حرام نیست و نماز در آن قصر است». The prayer **is shortened**.
+  - The official **Urdu** edition (book 197, see P18) agrees: مسئلہ 466 «تفریح کے لئے سفر کرنا حرام نہیں ہے اور اس میں نماز قصر ہوگی».
+  - The English edition is numbered one lower here (465 = 466).
+- **Result:** the English 465 is a translation error.
+  - It is withheld in the generator: `entries.py` `HIDDEN_RPF`, with the reason recorded, so a regeneration can't bring it back.
+  - On "Travelling for recreation", Khamenei's followers see "not added yet — refer to his risala"; Sistani's ruling is unchanged.
+  - No translation of ours is shown anywhere. A test asserts no entry cites *Rules* 465.
+
+### P16 — Khamenei's practical treatise
+- **Official translations:** leader.ir has **an official Urdu translation** of *Risāla-yi Āmūzishī*: «احکام آموزشی» (book 201, 77 lessons; Persian original book 137). There is **no English translation**: the English library (books 24–256) has none, and english.khamenei.ir refuses connections from this environment.
+- **What it covers:** lesson 16 (وضو (4), leader.ir sn=32120) gives **his full list of the seven things that invalidate wuḍūʾ**, plus his rules on doubting whether one did wuḍūʾ, whether it broke, and whether it was valid.
+  - So Khamenei's wuḍūʾ helper can be **fully sourced in Urdu** in Phase 4b. That's more than the Q&A-only fallback.
+  - How to show it to English-mode users is **P19**.
+
+### R9 — generators in the repo (`scripts/wajibat/`)
+- **What's committed:** every generator plus the shared builders, `build.py` (regenerates everything), `fetch_sources.py`, `sources.manifest.json` (231 source files: URL, fetch date, SHA-256), the HTML-to-text converter, the leader.ir book crawler, the live Q&A check and a README.
+  - The source-unit records the verbatim test reads are in `tests/fixtures/wajibatSourceSnapshot.json` (also committed).
+  - Raw pages stay out of git: `scripts/wajibat/.cache/` is git-ignored.
+- **Reproducibility, verified:**
+  1. `build.py` from the repo regenerates every committed data file **identically**: no content diff before the P15/4a changes.
+  2. The recovered `h2t.py` plus a fresh download of sistani.org page 2247 reproduces the cached text **byte for byte**.
+  3. Deleting two cached pages and running `fetch_sources.py` re-downloaded both with **unchanged hashes**.
+- **Changes made while moving the scripts:**
+  - The shared entry builders moved from `gen_salat.py` into `entries.py`, so `gen_doubts.py` uses the same code.
+  - Q&A placement into `topics.ts` is now a script (`place_qa_ids.py`), not a one-off.
+  - `CLAUDE.md` now says the data is generated and must not be hand-edited.
+
+### A correction found on the way (raised as P18)
+- **The note was false:** every Khamenei *Rules* entry carried `urduNote`: "has no official Urdu edition on leader.ir".
+- **The real situation:** leader.ir *does* publish one, «نماز اور روزه کی احکام» (book 197), a full translation of the Persian original. It has the same 166 sections, and its numbering (1–1011) follows the Persian, not the English (1–1003).
+- **What changed:** the note now says the Urdu edition "has not yet been matched to this ruling, so only the English is shown for now". Matching it is a large change across Phases 3 and 4a, so it's a question for you, not something done here.
+
+### Phase 4a — content
+- **Sistani:** downloaded the doubts chapter of *Islamic Laws*: pages 2250–2263, plus page 8298 (Rulings 1154–1164, "doubt after passing the place", which is linked outside the main page range). Rulings 1120–1260 are now complete in English, and Urdu (page 3638) was already complete.
+- **Khamenei:** *Rules on Prayer & Fasting 2023*, 346–406.
+
+| Topic | Rulings | Paired (both maraji') | Sistani entries (with Urdu) | Khamenei entries | Points to the other card (`seeAlso`) | Differs between maraji' | Khamenei Q&A (P13/R7) |
+|---|---|---|---|---|---|---|---|
+| Doubts in prayer | 54 | 30 | 49 (48) | 35 | 5 | 5 | 4 (Q 514–517) |
+| Ṣalāt al-iḥtiyāṭ | 22 | 3 | 22 (22) | 3 | 0 | 1 | 1 (Q 520) |
+| Sajdat al-sahw and forgotten parts | 40 | 15 | 36 (36) | 19 | 2 | 3 | 3 (Q 518, 519, 521) |
+| **Total** | **116** | **48** | **107 (106)** | **57** | **7** | **9** | **8** |
+
+- **Coverage:**
+  - **Sistani:** every ruling of the chapter, 1151–1257, each exactly once (a test asserts it).
+  - **Khamenei:** every ruling 346–406 except four restatements inside his own book: 361 (only names the two kinds of rakʿah doubt), 365 (repeats 364's method), 374 (repeats 348), 377 (repeats part of 347). These are listed in the generator header.
+- **New: `seeAlso`.** Where one book states a point inside another ruling on the same page, the other marja's followers see "His ruling on this point is part of “…”", with a link to that card. That replaces a misleading "not added yet". The validator checks:
+  - the marja' really has no entry in this card;
+  - the target is in the same topic;
+  - the target has his entry.
+
+  Coverage doesn't count these points as gaps.
+- **Differences flagged (`differsBetweenMaraji`):**
+  - **Invalidating rakʿah doubts:** Sistani lists 8 cases, adding 2/5, 3/6 and 4/6; Khamenei lists 5.
+  - **Valid doubts:** Sistani lists 9. Khamenei lists 6, noting other rare cases are in the detailed books.
+  - **Restarting instead of ṣalāt al-iḥtiyāṭ:** Sistani makes iḥtiyāṭ a recommended precaution and voids the second prayer by obligatory precaution. Khamenei calls the restart a sin and the second prayer void.
+  - **Missing a rukn in a nāfilah:** Sistani rules it invalidates; Khamenei says so by obligatory caution.
+  - **Bismillāh in ṣalāt al-iḥtiyāṭ:** Sistani whispers it as a recommended precaution; Khamenei includes it by obligatory caution.
+  - **When sajdat al-sahw is due:** for a forgotten sajdah it is recommended for Sistani but an obligatory caution for Khamenei, and talking is the reverse.
+  - **Talking by mistake** and **sighing / "oh":** Sistani requires sajdat al-sahw by obligatory precaution; Khamenei states it as a ruling.
+  - **A sajdah doubt while getting up:** Sistani 1158 says dismiss it («کھڑا ہوتے وقت», confirmed in his Urdu); Khamenei 353 says perform the sajdah. Khamenei's tashahhud entry on that card has a note pointing to 353.
+- **Revised (*) Sistani rulings (P6):**
+  - 1220* **lags** (the English adds "based on obligatory precaution, this also applies to nāfilah prayers"; the Urdu lacks it), so English only plus the lag notice.
+  - 1222* **matches**, so its Urdu is shown.
+- **R4 spot-check:** 2 unrevised rulings per topic (1154, 1179, 1201, 1213, 1231, 1242). All match. In 1213 the Urdu «احتیاط لازم» is Sistani's own term for obligatory precaution.
+- **Source typo:** Sistani 1154 is printed "Sūrat al-Ḥamd00" on sistani.org (page 8298 HTML). It is quoted as published, with a data note; it is not corrected.
+- **P13/R7 for these topics:** the Q&A section "Doubt in Prayers" (Q 514–521 / س 516–523) was compared with the *Rules*.
+  - **All 8 agree, and all are shown with official Urdu.**
+  - Q 519 says only "based on caution" (in Urdu too) where the *Rules* 397/402 say obligatory caution. It's less specific, not different, and noted.
+  - Live-page check: 61/61 Q&A entries, 0 mismatches.
+- **R6:** that Q&A comparison is also the conflict check between his two books for these topics. No conflicts.
+- **Glossary:** six terms cut verbatim from Sistani's glossary: shakk, shakkiyyāt, ẓann, kathīr al-shakk, ṣalāt al-iḥtiyāṭ, sajdatā al-sahw.
+
+### Tests / lint / build / browser
+- `npm test`: 26 files, **422 tests passed**.
+  - New tests: complete chapter coverage for both maraji', the P15 exclusion, the revised-ruling handling, `seeAlso` integrity, and the validator catching a bad `seeAlso`.
+- `npx eslint` on the module: clean. `npm run build`: OK.
+- Playwright against the production build:
+  - **Phase 4a, `verify5.cjs`: 34/34.** Covers:
+    - Sistani and Khamenei content verbatim, and Urdu with masla numbers;
+    - the 1220* lag notice and the `seeAlso` link;
+    - the Ḥamd00 note;
+    - Khamenei's Q&A only for him, with its Urdu;
+    - P15 (465 absent);
+    - no overflow at 1280/768/390 in both languages;
+    - a11y and no console errors.
+  - Regressions: Salat 35/35 (two assertions updated for 20 topics and the corrected note), Taharat 37/37, offline/install 22/22.
+
+### Install-size (R5) — running total
+| Point | Install-time precache | Ruling chunk (runtime, only when Fiqh is opened) |
+|---|---|---|
+| Before the module | 5,469.06 KiB | — |
+| After R8 (2026-10-04) | 5,431.94 KiB | ~730 KB |
+| After P13 (2026-10-07, morning) | 5,432.20 KiB | 859 KB |
+| **Now (Phase 4a)** | **240 entries / 5,432.58 KiB** | **1,092 KB (219 KB gzip)** |
+
+Still no ruling text at install time. The chunk grew 233 KB with the 116 rulings and 8 Q&As.
+
+### Open questions
+- **P18:** match Khamenei's official Urdu *Rules* edition to his entries?
+- **P19:** how to show the Urdu-only wuḍūʾ helper to English-mode users.
+
+Both are in `wajibat_decisions.md`.
+
+### Recommended next step
+Phase 4b, the helpers, after your review of 4a and your answers to P18/P19. P19 only matters for 4b; P18 can be done separately.

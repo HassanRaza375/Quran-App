@@ -135,8 +135,8 @@ describe("Wajibat dataset integrity", () => {
 
   it("Khamenei's supplementary Q&A salat entries: own Q numbers, compared with the 2023 Rules, his followers only (P13, R7)", () => {
     const supp = WAJIBAT_RULINGS.filter((r) => r.supplementary);
-    expect(supp.length).toBe(53);
-    expect(supp.filter((r) => r.rulings[0]!.text.ur).length).toBe(52);
+    expect(supp.length).toBe(61);
+    expect(supp.filter((r) => r.rulings[0]!.text.ur).length).toBe(60);
     for (const r of supp) {
       const e = r.rulings[0]!;
       expect(r.rulings).toHaveLength(1);
@@ -178,6 +178,50 @@ describe("Wajibat dataset integrity", () => {
       0
     );
     expect(Object.keys(snapshot).length).toBe(quotes + WAJIBAT_DATASET.recitations.length);
+  });
+
+  it("Phase 4a: the doubts, ṣalāt al-iḥtiyāṭ and sajdat al-sahw topics quote each marja's whole chapter", () => {
+    const topics = ["doubts", "ihtiyatprayer", "sahwforgotten"];
+    const salat = WAJIBAT_DATASET.categories.find((c) => c.id === "salat")!;
+    for (const t of topics) expect(salat.topicIds).toContain(t);
+    const entries = WAJIBAT_RULINGS.filter((r) => topics.includes(r.topicId) && !r.supplementary).flatMap((r) => r.rulings);
+    const num = (e: { source: { reference: string } }) => Number(e.source.reference.match(/\d+/)![0]);
+    // Sistani: every ruling of the chapter (Islamic Laws 1151–1257), each exactly once.
+    const sis = entries.filter((e) => e.marjaId === "sistani").map(num).sort((a, b) => a - b);
+    expect(sis).toEqual(Array.from({ length: 107 }, (_, i) => 1151 + i));
+    // Khamenei: Rules on Prayer & Fasting 346–406, minus four restatements within the same book.
+    const kh = entries.filter((e) => e.marjaId === "khamenei").map(num).sort((a, b) => a - b);
+    const restated = [361, 365, 374, 377];
+    expect(kh).toEqual(Array.from({ length: 61 }, (_, i) => 346 + i).filter((n) => !restated.includes(n)));
+    // Revised (*) rulings compared with the Urdu one by one (P6): 1220* lags, 1222* matches.
+    const s1220 = getMarjaRuling(getRulingById("doubtsupposition")!, "sistani")!;
+    expect(s1220.urduEditionLag).toBe(true);
+    expect(s1220.text.ur).toBeUndefined();
+    expect(getMarjaRuling(getRulingById("sahwcases")!, "sistani")!.text.ur).toBeTruthy();
+  });
+
+  it("P15: Khamenei's Rules 465 (mistranslated in the English edition) is not shown anywhere", () => {
+    const cites465 = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter(
+      (e) => e.marjaId === "khamenei" && e.source.title === "The Rules on Prayer & Fasting 2023" && e.source.reference === "465."
+    );
+    expect(cites465).toEqual([]);
+    // Sistani's ruling on the same point stays; Khamenei's followers get "not added yet".
+    const leisure = getRulingById("qasrleisure")!;
+    expect(getMarjaRuling(leisure, "sistani")).toBeTruthy();
+    expect(getMarjaRuling(leisure, "khamenei")).toBeUndefined();
+  });
+
+  it("seeAlso only points from a marja' with no entry to a same-topic ruling that has his entry", () => {
+    const withSeeAlso = WAJIBAT_RULINGS.filter((r) => r.seeAlso?.length);
+    expect(withSeeAlso.length).toBeGreaterThan(0);
+    for (const r of withSeeAlso) {
+      for (const s of r.seeAlso!) {
+        expect(getMarjaRuling(r, s.marjaId)).toBeUndefined();
+        const target = getRulingById(s.rulingId)!;
+        expect(target.topicId).toBe(r.topicId);
+        expect(getMarjaRuling(target, s.marjaId)).toBeTruthy();
+      }
+    }
   });
 
   it("the prayer-times and qibla topics show live data from Module 5 rather than any computed times", () => {
@@ -282,6 +326,13 @@ describe("validateWajibatDataset catches broken data", () => {
     const data = clone();
     data.rulings[0]!.id = "untraceable";
     expect(validateSourceSnapshot(data, snapshot).some((i) => i.id.startsWith("untraceable|"))).toBe(true);
+  });
+
+  it("flags a seeAlso that points at a ruling without that marja's entry", () => {
+    const data = clone();
+    const r = data.rulings.find((x) => x.id === "doubttakbir")!;
+    r.seeAlso = [{ marjaId: "sistani", rulingId: "doubtkinds" }];
+    expect(messages(data)).toContain('seeAlso target "doubtkinds" has no entry for sistani');
   });
 
   it("flags a malformed supplementary entry", () => {

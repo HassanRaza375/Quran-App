@@ -53,7 +53,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32480"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -98,7 +98,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32481"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -122,7 +122,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32481"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -167,7 +167,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32483"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -211,7 +211,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32484"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -255,7 +255,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32482"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -300,7 +300,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32484"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -345,7 +345,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32485"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -389,7 +389,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32485"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -433,7 +433,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32485"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -477,7 +477,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32486"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -521,7 +521,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -565,7 +565,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -610,7 +610,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -655,7 +655,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -699,7 +699,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32489"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -744,7 +744,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32489"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -789,7 +789,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32489"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -834,7 +834,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32490"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -878,7 +878,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32491"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -922,7 +922,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32491"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -967,7 +967,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32492"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1011,7 +1011,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32492"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1056,7 +1056,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32493"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1101,7 +1101,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32494"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -1147,7 +1147,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32495"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1191,7 +1191,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32496"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1235,7 +1235,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32496"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -1280,7 +1280,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32497"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1324,7 +1324,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32497"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1369,7 +1369,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32500"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1414,7 +1414,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32501"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1458,7 +1458,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32501"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1502,7 +1502,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32503"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1547,7 +1547,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32505"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1620,7 +1620,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32506"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1666,7 +1666,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32507"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1710,7 +1710,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1754,7 +1754,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1799,7 +1799,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1843,7 +1843,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1945,7 +1945,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32509"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -1990,7 +1990,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32509"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2034,7 +2034,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32510"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2078,7 +2078,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32510"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2122,7 +2122,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32510"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2166,7 +2166,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32512"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2210,7 +2210,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32512"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2254,7 +2254,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32511"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2299,7 +2299,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32511"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2343,7 +2343,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32511"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2388,7 +2388,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -2433,7 +2433,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2477,7 +2477,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2522,7 +2522,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -2564,7 +2564,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2609,7 +2609,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2683,7 +2683,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2728,7 +2728,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2773,7 +2773,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -2819,7 +2819,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -2864,7 +2864,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5)."
       }
     ]
@@ -2909,7 +2909,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -2954,7 +2954,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ],
     differsBetweenMaraji: true,
@@ -3003,7 +3003,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3049,7 +3049,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3093,7 +3093,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3138,7 +3138,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3183,7 +3183,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3228,7 +3228,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3273,7 +3273,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ],
     differsBetweenMaraji: true,
@@ -3302,7 +3302,7 @@ export const SALAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         arabicInSource: true,
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3346,7 +3346,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3391,7 +3391,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3435,7 +3435,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3479,7 +3479,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3523,7 +3523,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3567,7 +3567,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3611,7 +3611,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3655,7 +3655,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3699,7 +3699,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3744,7 +3744,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3789,7 +3789,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3836,7 +3836,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3880,7 +3880,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32517"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3926,7 +3926,7 @@ export const SALAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         arabicInSource: true,
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -3971,7 +3971,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32518"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -4018,7 +4018,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32519"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4062,7 +4062,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32519"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4106,7 +4106,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32520"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4150,7 +4150,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32521"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4195,7 +4195,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32522"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4241,7 +4241,7 @@ export const SALAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         arabicInSource: true,
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4285,7 +4285,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32523"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4330,7 +4330,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4376,7 +4376,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -4422,7 +4422,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4466,7 +4466,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4511,7 +4511,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4555,7 +4555,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4579,7 +4579,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -4624,7 +4624,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4668,7 +4668,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4712,7 +4712,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32547"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4736,7 +4736,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32547"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4780,7 +4780,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32548"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4804,7 +4804,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32548"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4845,7 +4845,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32548"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4889,7 +4889,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32550"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4933,7 +4933,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32554"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -4963,21 +4963,6 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3639/"
         },
         verification: "A"
-      },
-      {
-        marjaId: "khamenei",
-        format: "issue",
-        text: {
-          en: "Traveling for fun/recreation is not ḥarām, and prayer during such a travel is not shortened."
-        },
-        basis: "fatwa",
-        source: {
-          title: "The Rules on Prayer & Fasting 2023",
-          reference: "465.",
-          url: "https://www.leader.ir/en/book/241?sn=32555"
-        },
-        verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
       }
     ]
   },
@@ -5021,7 +5006,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32559"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5065,7 +5050,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32560"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -5110,7 +5095,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32562"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5154,7 +5139,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32568"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5198,7 +5183,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32572"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5242,7 +5227,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32576"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -5287,7 +5272,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32574"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5332,7 +5317,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5376,7 +5361,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5420,7 +5405,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5464,7 +5449,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5508,7 +5493,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5578,7 +5563,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32579"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording. Data note (P14, not shown in the UI): the footnote to Ruling 656 in the same book describes this same duty as just \"a caution\" rather than \"an obligatory caution\". This is a plain caution in a footnote, not a second source to reconcile with 651 (which agrees with the Q&A book, Q 540) — so 651 is quoted verbatim and the footnote is left unshown."
       }
     ],
@@ -5624,7 +5609,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32579"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5668,7 +5653,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32586"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5712,7 +5697,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32599"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5753,7 +5738,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32588"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5798,7 +5783,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32589"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -5843,7 +5828,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32591"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -5887,7 +5872,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32591"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -5933,7 +5918,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32591"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -5978,7 +5963,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32594"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6023,7 +6008,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32590"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -6069,7 +6054,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32589"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6114,7 +6099,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32580"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6158,7 +6143,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32582"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6234,7 +6219,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32583"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6278,7 +6263,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32584"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6322,7 +6307,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32584"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6367,7 +6352,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32599"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1).",
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -6412,7 +6397,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32600"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   },
@@ -6456,7 +6441,7 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/en/book/241?sn=32605"
         },
         verification: "A",
-        urduNote: "Khamenei's Rules on Prayer & Fasting 2023 has no official Urdu edition on leader.ir, so only the English is shown (decision R1)."
+        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
       }
     ]
   }

@@ -5,8 +5,13 @@
     </v-card-item>
 
     <v-card-text class="pt-0">
+      <!-- No entry here, but his own book states this point inside another ruling on this page. -->
+      <v-alert v-if="!entry && seeAlsoTarget" type="info" variant="tonal" density="compact" class="mb-1">
+        {{ marja.name.en }}'s ruling on this point is part of
+        <a :href="`#${seeAlsoTarget.id}`">“{{ seeAlsoTarget.subject.en }}”</a> on this page.
+      </v-alert>
       <!-- No entry for this marja': never fall back to another marja's ruling (decision P1). -->
-      <v-alert v-if="!entry" type="info" variant="tonal" density="compact" class="mb-1">
+      <v-alert v-else-if="!entry" type="info" variant="tonal" density="compact" class="mb-1">
         {{ missingMessage }}
         <a :href="marja.officialSite" target="_blank" rel="noopener noreferrer" class="ms-1">
           Official website <v-icon size="14" aria-hidden="true">mdi-open-in-new</v-icon>
@@ -81,7 +86,7 @@
 import HukmBadge from "~/components/wajibat/HukmBadge.vue";
 import BasisBadge from "~/components/wajibat/BasisBadge.vue";
 import SourceLine from "~/components/wajibat/SourceLine.vue";
-import { getMarjaRuling, getRecitationById } from "~/data/wajibat";
+import { getMarjaRuling, getRecitationById, getRulingById } from "~/data/wajibat";
 import { URDU_EDITION_LAG_NOTICE } from "~/utils/wajibatLabels";
 
 const props = defineProps({
@@ -92,6 +97,10 @@ const props = defineProps({
 });
 
 const entry = computed(() => getMarjaRuling(props.ruling, props.marja.id));
+const seeAlsoTarget = computed(() => {
+  const s = (props.ruling.seeAlso ?? []).find((x) => x.marjaId === props.marja.id);
+  return s ? getRulingById(s.rulingId) : undefined;
+});
 // Only the chosen marja's own recitations — never another marja's (same rule as rulings, P1).
 const recitations = computed(() =>
   (props.ruling.recitationIds ?? [])

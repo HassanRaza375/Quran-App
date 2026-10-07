@@ -929,5 +929,89 @@ export const WAJIBAT_GLOSSARY: GlossaryTerm[] = [
       reference: "Glossary",
       url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
     }
+  },
+  {
+    id: "shakk",
+    term: "shakk",
+    arabic: "شك",
+    urdu: "شک",
+    definition: {
+      en: "doubt"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "shakkiyyat",
+    term: "shakkiyyāt",
+    arabic: "شكيات",
+    urdu: "شکیات",
+    definition: {
+      en: "doubts that arise in prayers"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "zann",
+    term: "ẓann",
+    arabic: "ظن",
+    urdu: "ظن",
+    definition: {
+      en: "supposition; conjecture"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "kathiralshakk",
+    term: "kathīr al‑shakk",
+    arabic: "كثير الشك",
+    urdu: "کثیر الشک",
+    definition: {
+      en: "excessive doubter"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "salatalihtiyat",
+    term: "ṣalāt al‑iḥtiyāṭ",
+    arabic: "صلاة الاحتياط",
+    urdu: "نماز احتیاط",
+    definition: {
+      en: "the precautionary prayer"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "sajdatalsahw",
+    term: "sajdatā al‑sahw",
+    arabic: "سجدتا السهو",
+    urdu: "سجدۂ سہو",
+    definition: {
+      en: "the two prostrations for inadvertence"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
   }
 ];

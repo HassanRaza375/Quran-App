@@ -97,6 +97,12 @@ feature is a view over this layer.
   concurrent callers collapse into a single real request. Found and fixed as a real 7-requests-
   became-1 bug during Module 17's Phase 5 polish, not a hypothetical.
 
+### Generators (R9)
+- `scripts/wajibat/` regenerates every ruling file and the snapshot fixture (`build.py`) from a git-ignored cache of
+  official pages. `sources.manifest.json` records each page's URL, fetch date and hash, and `fetch_sources.py` re-creates
+  the cache and reports changed pages. Lesson: commit the generators and the extraction tools from day one. A later session
+  that can't find them falls back to hand edits, and that is exactly how paraphrases got in.
+
 ### Rebuild notes
 - Any local structured store works: SQLite, Realm, Core Data, IndexedDB, or even flat files.
 - If moving to a backend-backed model, this whole layer can become a thin proxy/cache in front of
@@ -1341,8 +1347,8 @@ responsive layout at 1280/768/390px) passed without defects.
 ## Module 18 — Wajibat & Daily Fiqh (Ja'fari)
 
 **Status: Phases 0–3 built (Phase 3 on branch `wajibat-module`, with the P12–P14 fixes and Khamenei's
-Q&A supplementary entries, P13). Phase 4 is scoped and awaiting the user's review. Phases 5–8 and 10 are
-pending; Phase 9 (tracker) is deferred.** Spec:
+Q&A supplementary entries, P13). Phase 4a (doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw content) is built and awaiting review; 4b (the
+helpers) follows. Phases 5–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
 `wajibat-fiqh-jafari-module.md`. Decisions and official sources: `wajibat_decisions.md`. Phase
 reports: `wajibat_progress_log.md`.
 
@@ -1401,6 +1407,9 @@ reminder system.
   - `recitationIds` (P12): Arabic shown next to the ruling as a separate `Recitation { id, marjaId, arabic, transliteration?, source }`,
     used when the Arabic comes from a different official book than the quote (e.g. Sistani's Urdu Tawzih, when his English book
     prints the dhikr as an image). Never spliced into the quote.
+  - `seeAlso: { marjaId, rulingId }[]` (Phase 4a): for a marja' with no entry in this ruling whose book states the point
+    inside another ruling on the same topic page. The UI links to that card instead of showing "not added yet", and
+    coverage doesn't count it as a gap.
   - `supplementary: { marjaId, agreesWith: SourceCitation[] }` (P13/R7): one marja's own Q&A answer, added only where it agrees
     with the cited rulings of his main book. Shown only to his followers (topic page, search and coverage all filter it), so
     no other marja' ever sees a "not added yet" gap for it.

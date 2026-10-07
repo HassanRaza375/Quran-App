@@ -21,7 +21,8 @@ study modules (Mir Anis and, over time, others) — their research process, anti
 and source-verification levels — see `mir_anis_module_research_extraction_plan.md` and
 `Mir_Anis_Module_Research.md`. For the Wajibat / Daily Fiqh module (Module 18, `/fiqh`, Fiqh Ja'fari,
 per-marja' sourced rulings), see `wajibat-fiqh-jafari-module.md` (spec), `wajibat_decisions.md`
-(decisions + official sources — wins over the spec) and `wajibat_progress_log.md` (phase reports).
+(decisions + official sources — wins over the spec) and `wajibat_progress_log.md` (phase reports). Its ruling data is **generated** by `scripts/wajibat/` (see its README) — never hand-edit
+`app/data/wajibat/rulings/*.ts`, `procedures/*.ts` or `glossary.ts`; change the generator and rebuild.
 
 ## Commands
 

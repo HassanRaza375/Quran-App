@@ -22,3 +22,7 @@ logs
 .env
 .env.*
 !.env.example
+
+# Wajibat generator source cache (raw downloaded pages are never committed; see scripts/wajibat/README.md)
+scripts/wajibat/.cache/
+scripts/wajibat/__pycache__/

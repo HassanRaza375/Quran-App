@@ -173,6 +173,15 @@ export const validateWajibatDataset = (
     for (const rec of r.recitationIds ?? []) if (!recitationIds.has(rec)) push(r.id, `recitationIds references unknown recitation "${rec}"`);
     for (const m of r.rulings) validateMarjaRuling(m, r.id, maraji, push);
 
+    // seeAlso: only for a marja' with no entry here, pointing at a ruling of the same topic that has his entry.
+    for (const s of r.seeAlso ?? []) {
+      const target = rulings.find((x) => x.id === s.rulingId);
+      if (r.rulings.some((m) => m.marjaId === s.marjaId)) push(r.id, `seeAlso for ${s.marjaId}, who already has an entry here`);
+      if (!target) push(r.id, `seeAlso references unknown ruling "${s.rulingId}"`);
+      else if (target.topicId !== r.topicId) push(r.id, `seeAlso target "${s.rulingId}" is in another topic`);
+      else if (!target.rulings.some((m) => m.marjaId === s.marjaId)) push(r.id, `seeAlso target "${s.rulingId}" has no entry for ${s.marjaId}`);
+    }
+
     // Decision P13 / rule R7: a supplementary Q&A entry is one marja's own, compared with (and
     // agreeing with) cited rulings of his — never another marja's, never a gap for anyone else.
     if (r.supplementary) {

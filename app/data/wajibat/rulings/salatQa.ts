@@ -2365,5 +2365,362 @@ export const SALAT_QA_RULINGS: Ruling[] = [
         note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 478 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
       }
     ]
+  },
+  {
+    id: "khqa514",
+    topicId: "doubts",
+    subject: {
+      en: "Doubting the qunūt in the third rakʿah"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "348.",
+          url: "https://www.leader.ir/en/book/241?sn=32528"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "A person in the third rak‘ah of his prayer doubts whether he has performed the qunūt or not. What should they do? Should he complete the prayer or should he break it when the doubt occurs?",
+          ur: "جو شخص نماز کی تیسری رکعت میں ہو اور اسے یہ شک ہو کہ قنوت پڑھا ہے یا نہیں تو اس کا کیا حکم ہے؟ کیا وہ اپنی نماز کو تمام کرے یا شک پیدا ہوتے ہی اسے توڑ دے؟"
+        },
+        text: {
+          en: "The doubt should be ignored. His prayer is correct and there is no obligation upon him in this case.",
+          ur: "مذکورہ شک کی پروا نہیں کی جائے گی اور نماز صحیح ہے اور اس سلسلہ میں مکلف کے ذمہ کوئی چیز نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 514",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 516",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 348 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
+      }
+    ]
+  },
+  {
+    id: "khqa515",
+    topicId: "doubts",
+    subject: {
+      en: "Doubts about the parts of a nāfilah prayer"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "386.",
+          url: "https://www.leader.ir/en/book/241?sn=32539"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Should a person pay heed to doubts that occur in nāfilah prayers (other than the doubt concerning the number of performed rak‘ahs)? For example, he is unaware whether he has done one prostration or two.",
+          ur: "کیا نافلہ نمازوں میں رکعات کے علاوہ کسی اور چیز میں شک کی پروا کی جائیگی؟ مثلاً یہ شک کرے کہ ایک سجدہ بجا لایا ہے یا د و؟"
+        },
+        text: {
+          en: "The rule of doubts in the words and deeds of nāfilah prayer is the same as those of obligatory prayers, i.e. the doubt is heeded if its pertinent place has not passed, and is ignored after that.",
+          ur: "نافلہ کے اقوال و افعال میں شک کی پروا کرنے کا وہی حکم ہے جو واجب نمازوں کے اقوال و افعال میں شک کا ہے، یعنی اگر انسان محل شک سے نہ گزرا ہوتو شک کی اعتناء کرے اور محل شک کے گزر جانے کے بعد شک کی پروانہ کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 515",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 517",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 386 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
+      }
+    ]
+  },
+  {
+    id: "khqa516",
+    topicId: "doubts",
+    subject: {
+      en: "What an excessive doubter does when a doubt arises"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "380.",
+          url: "https://www.leader.ir/en/book/241?sn=32538"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Knowing that those who doubt excessively are not to pay heed to their doubts, what are they to do if the doubts occur during prayer?",
+          ur: "کثیرالشک اپنے شک کی پروا نہیں کرے گا، لیکن اگر نماز میں وہ شک کرے تو اس کا کیا فریضہ ہے؟"
+        },
+        text: {
+          en: "They must posit the occurrence of the act which they doubt unless doing so would lead to the invalidation of their prayers, in which case they must hold the opposite to be true. There is no difference whether the doubt is with regard to the number of rak‘ahs, the words or acts of prayer.",
+          ur: "اس کا فریضہ یہ ہے کہ جس چیز کے بارے میں شک ہو اس کے بجا لانے پر بنا رکھے، مگر یہ کہ اس کا بجالانا نماز کے بطلان کا سبب ہو تو اس صورت میں اسے بجانہ لانے پر بنا رکھے اس سلسلہ میں رکعات، افعال اور اقوال کے درمیان کوئی فرق نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 516",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 518",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 380 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
+      }
+    ]
+  },
+  {
+    id: "khqa517",
+    topicId: "doubts",
+    subject: {
+      en: "Doubting, years later, that past worship was valid"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "375.",
+          url: "https://www.leader.ir/en/book/241?sn=32535"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "What is the religious duty of a person who realizes after a number of years that his worship was invalid, or doubts its correctness?",
+          ur: "اگر کوئی شخص چند سال کے بعد اس بات کی طرف متوجہ ہو کہ اس کی عبادتیں باطل تھیں یا وہ ان میں شک کرے، تو اس کا کیا فریضہ ہے؟"
+        },
+        text: {
+          en: "Doubts after the performance of a deed are ignored. In case he is certain of its invalidity, he must perform the qaḍā’ of what is possible.",
+          ur: "عمل کے بعد شک کی پروا نہیں کی جاتی اور باطل ہونے کے علم کی صورت میں قابل تدارک عبادتوں کی قضاء واجب ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 517",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 519",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 375 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
+      }
+    ]
+  },
+  {
+    id: "khqa520",
+    topicId: "ihtiyatprayer",
+    subject: {
+      en: "How many rakʿahs of ṣalāt al-iḥtiyāṭ are due"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "364.",
+          url: "https://www.leader.ir/en/book/241?sn=32531"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "How can a person know the number of rak‘ahs of caution prayers he is liable to perform? (That is whether it is one rak‘ah or two).",
+          ur: "مکلف شخص کے لئے نماز احتیاط کی رکعات کی تعداد کا جاننا کیسے ممکن ہے کہ یہ ایک رکعت ہے یا دو رکعت؟"
+        },
+        text: {
+          en: "The number of rak‘ahs of caution prayers corresponds to the number of rak‘ahs that he may have missed in the obligatory prayer. So when it is doubted whether two rak‘ahs were performed or four, then it becomes necessary to perform a two-rak‘ah prayer of caution. However, if he doubts whether he prayed three or four rak‘ahs, then a one-rak‘ah prayer of caution must be done in standing position or a two-rak‘ah one in sitting position.",
+          ur: "نماز احتیاط کی رکعتوں کی تقدار اتنی ہی ہو گی جتنی رکعتیں احتمالی طور پر نماز میں چھوٹ گئی ہیں۔ پس اگر دو اور چار کے درمیان شک ہو تو دو رکعت نماز احتیاط واجب ہے اور اگر تین اور چار کے درمیان شک ہو تو ایک رکعت کھڑے ہو کر یا دو رکعت بیٹھ کر نماز احتیاط واجب ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 520",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 522",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 364 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
+      }
+    ]
+  },
+  {
+    id: "khqa518",
+    topicId: "sahwforgotten",
+    subject: {
+      en: "Inadvertent mistakes in the prayer"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "400.",
+          url: "https://www.leader.ir/en/book/241?sn=32546"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Does the prayer of a person become void if he mistakenly performs some parts of his prayer in the place of other parts, or looks away at some point during the prayer, or speaks by mistake?",
+          ur: "اگر بھول کر نماز کے بعض اجزاء کو دوسرے اجزاء کی جگہ بجا لائے یا اثنائے نماز میں اس کی نظر کسی چیز پر پڑ جائے یا بھولے سے کچھ کہہ دے تو کیا اس کی نماز باطل ہے یا نہیں؟ اور اس پر کیا واجب ہے؟"
+        },
+        text: {
+          en: "Unintentional acts in prayer do not bring about its invalidation. In some cases, they call for the performance of two prostrations of inadvertence or some other rulings. But, of course, the prayers are invalidated if a rukn of the prayer is repeated or missed. The same rule is applied if a person is no more in the state of saying prayer.",
+          ur: "نماز میں بھولے سے جو اعمال سرزد ہو جاتے ہیں وہ باطل ہونے کا سبب نہیں ہیں ہاں بعض موقعوں پر سجدہ سہو کا موجب بنتے ہیں، لیکن اگر کسی رکن میں کمی یا زیادتی ہو جائے تو اس سے نماز باطل ہوجاتی ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 518",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 520",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 400 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
+      }
+    ]
+  },
+  {
+    id: "khqa519",
+    topicId: "sahwforgotten",
+    subject: {
+      en: "A forgotten rakʿah remembered in the last rakʿah"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "397.",
+          url: "https://www.leader.ir/en/book/241?sn=32543"
+        },
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "388.",
+          url: "https://www.leader.ir/en/book/241?sn=32540"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "What is the duty of a person who forgets to perform a rak‘ah of his prayer and then remembers it in the last rak‘ah? For example, thinking first rak‘ah of his prayer to be the second one, he performs the third and the fourth rak‘ah; then in this last rak‘ah he realizes that it is really only the third rak‘ah. What should he do?",
+          ur: "اگر کوئی شخص اپنی نماز کی ایک رکعت بھول جائے اور پھر آخری رکعت میں اسے یاد آجائے مثلاً پہلی رکعت کو دوسری رکعت خیال کرے اور اس کے بعد تیسری اور چوتھی رکعت بجا لائے، لیکن آخری رکعت میں وہ اس بات کی طرف متوجہ ہو جائے کہ یہ تیسری رکعت ہے تو اس کا شرعی فریضہ کیا ہے؟"
+        },
+        text: {
+          en: "It is obligatory for him before reciting the final salām of the prayer to perform the rak‘ah he has missed and then recite the salām. As he had not done an obligatory tashahhud in its proper place, it is obligatory for him to perform the two prostrations of inadvertence for the forgotten tashahhud and, based on caution, to make up for it in qaḍā’ before the two prostrations of inadvertence. Moreover, if he says salām in the third rak`ah, thinking that it is the last rak`ah, it is an obligatory caution to perform another two prostrations of inadvertence which should be done after the qaḍā’ of the tashahhud.",
+          ur: "سلام سے قبل اس پر اپنی نماز کی چھوٹی ہوئی رکعت کو بجا لانا واجب ہے، اس کے بعد سلام پھیرے، اور اس صورت میں چونکہ واجب تشہد کو اس کے مقام پر بجا نہیں لایا   لہٰذا  واجب ہے کہ بھولے ہوئے تشہد کے لئے دوسجدے سہو انجام دے اور احتیاط یہ ہے کہ سجدہ سہو سے پہلے بھولے ہوئے تشہد کی قضا کرے۔ اور اگر تیسری رکعت کے دوران آخری رکعت کے خیال سے سلام کہہ لے تو احتیاط واجب کی بناپر مزید دو سجدہ سہو بجالائے اور یہ دونوں سجدہ سہو تشہد کی قضا بجالانے کے بعد انجام دیناہوں گے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 519",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 521",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 397 and Ruling 388 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees. Where this answer (in English and in Urdu: احتیاط یہ ہے) says the made-up tashahhud is 'based on caution', the Rules (397, 402) say 'by obligatory caution'; it is less specific, not different, so it is shown. Part of this answer is stated as an obligatory caution; see the wording. Part of this answer says 'caution' without stating whether it is obligatory or recommended (decision P5)."
+      }
+    ]
+  },
+  {
+    id: "khqa521",
+    topicId: "sahwforgotten",
+    subject: {
+      en: "Mispronouncing a word of a dhikr, verse or qunūt"
+    },
+    supplementary: {
+      marjaId: "khamenei",
+      agreesWith: [
+        {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "392.",
+          url: "https://www.leader.ir/en/book/241?sn=32541"
+        }
+      ]
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "qa",
+        question: {
+          en: "Do two prostrations of inadvertence become obligatory if a word of the dhikrs of the prayer, of the verses of the Holy Qur’an, or of the supplication of qunūt is mistakenly recited?",
+          ur: "اگر کوئی شخص بھولے سے یا غلطی سے اذکار نماز، آیات قرآن یا دعائے قنوت کا کوئی لفظ غلط پڑھے تو کیا اس پر سجدۂ سہو واجب ہے؟"
+        },
+        text: {
+          en: "No, it is not obligatory.",
+          ur: "واجب نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Practical Laws of Islam",
+          reference: "Q 521",
+          url: "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn=5270"
+        },
+        urSource: {
+          title: "استفتاآت کے جوابات",
+          reference: "س 523",
+          url: "https://www.leader.ir/ur/book/106/1?sn=11401"
+        },
+        verification: "A",
+        note: "Supplementary Q&A entry (decision P13/rule R7), quoted from Khamenei's Q&A book under its own number — not a translation of Ruling 392 of The Rules on Prayer & Fasting 2023, with which it was compared and agrees."
+      }
+    ]
   }
 ];

@@ -442,6 +442,48 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     lastSourceCheck: "2026-10-02",
   },
   {
+    id: "doubts",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Doubts in prayer", ur: "شکیات نماز" },
+    arabicTerm: "الشكوك في الصلاة",
+    summary: explain(
+      "Doubting whether you prayed, whether you did a part of the prayer, or how many rakʿahs you have prayed: which doubts invalidate the prayer, which are dismissed, and which are valid and how to act on them."
+    ),
+    rulingIds: ["doubtkinds", "doubtprayeritself", "doubtsinvalidating", "doubtinvalidthink", "doubtrakahhow", "doubtsvalid", "doubtsupposition", "doubtsuppositionchange", "doubtsuppositionunsure", "doubtvaliddontbreak", "doubtvalidrestart", "doubtknowsnextstage", "doubtafterprayerunsure", "doubtsajdahandrakah", "doubtbeforetashahhud", "doubtforgotsajdahstanding", "doubtchanges", "doubtafterprayertwo", "doubtafterprayerkind", "doubtsdismissedlist", "doubtpartgeneral", "khqa514", "doubttakbir", "doubtfatiha", "doubtsurah", "doubtverse", "doubtcorrectness", "doubtruku", "doubtrukn", "doubtrising", "doubtsittingprayer", "doubtrepeated", "doubtremembermissing", "doubtsalam", "doubtaftersalam", "khqa517", "doubtaftersalaminvalid", "doubtaftertime", "doubtzuhrasr", "doubtmaghribisha", "excessivedoubter", "excessiveact", "khqa516", "excessivepart", "excessiveprayer", "excessiveplace", "excessiveunsure", "excessiverukn", "excessivenonrukn", "doubtimam", "doubtmustahabnumber", "doubtmustahabrukn", "doubtmustahabpart", "khqa515", "doubtmustahabsupposition", "doubtmustahabsahw", "doubtmustahabprayed", "doubtotherprayers"],
+    relatedTopicIds: ["ihtiyatprayer", "sahwforgotten", "mubtilat"],
+    glossaryIds: ["shakk", "shakkiyyat", "zann", "kathiralshakk", "rakah", "rukn"],
+    lastSourceCheck: "2026-10-07",
+  },
+  {
+    id: "ihtiyatprayer",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "The precautionary prayer (ṣalāt al-iḥtiyāṭ)", ur: "نماز احتیاط" },
+    arabicTerm: "صلاة الاحتياط",
+    summary: explain(
+      "The prayer some valid doubts about the number of rakʿahs call for after the salām: how it is performed, and what to do if you find out more before, during or after it."
+    ),
+    rulingIds: ["ihtiyatmethod", "ihtiyatrecitation", "ihtiyatnotneeded", "ihtiyatfewer", "ihtiyatsame", "ihtiyatless", "ihtiyatmore", "ihtiyattwothreefour", "ihtiyatremembersduring", "ihtiyatremembersthree", "ihtiyatdifferentshortfall", "ihtiyatdoubtperformed", "ihtiyatadded", "ihtiyatdoubtpart", "ihtiyatdoubtnumber", "ihtiyatnosahw", "ihtiyatdoubtaftersalam", "ihtiyatforgot", "ihtiyatorder", "ihtiyatsitting", "ihtiyatcannotstand", "ihtiyatcanstand", "khqa520"],
+    relatedTopicIds: ["doubts", "sahwforgotten"],
+    glossaryIds: ["salatalihtiyat", "shakk", "rakah"],
+    lastSourceCheck: "2026-10-07",
+  },
+  {
+    id: "sahwforgotten",
+    fiqh: "jafari",
+    categoryId: "salat",
+    title: { en: "Sajdat al-sahw and forgotten parts", ur: "سجدۂ سہو اور بھولے ہوئے اجزاء" },
+    arabicTerm: "سجدتا السهو",
+    summary: explain(
+      "The two prostrations for inadvertence and when they are due, making up a forgotten sajdah or tashahhud, and leaving out or adding parts of the prayer."
+    ),
+    rulingIds: ["sahwcases", "sahwtalking", "sahwsounds", "sahwrecitedagain", "khqa521", "sahwonemistake", "sahwtasbihat", "sahwsalampart", "sahwsalamall", "forgotbeforeruku", "forgotafterruku", "khqa519", "forgotsajdahqada", "forgottashahhudqada", "forgotnonrukn", "khqa518", "sahwintentional", "sahwdoubtobligatory", "sahwdoubttwofour", "sahwonemissed", "sahwmethod", "qadaconditions", "qadanosalam", "qadaseveral", "qadasajdahtashahhud", "qadasajdahorder", "qadainvalidator", "qadalastrakah", "qadasahwbetween", "qadasajdahortashahhud", "qadadoubtforgot", "qadadoubtremembered", "qadasahwboth", "qadadoubtdone", "omitintentional", "omitignorance", "omitwudu", "omittwosajdahs", "omitlastsajdahs", "omitrakahbefore", "omitrakahafter", "omitsajdahsafter", "omittimeqibla"],
+    relatedTopicIds: ["doubts", "ihtiyatprayer", "obligatoryparts"],
+    glossaryIds: ["sajdatalsahw", "sajdah", "tashahhud", "rukn"],
+    lastSourceCheck: "2026-10-07",
+  },
+  {
     id: "travellerprayer",
     fiqh: "jafari",
     categoryId: "salat",

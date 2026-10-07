@@ -121,15 +121,47 @@ describe("Wajibat dataset integrity", () => {
       }
   });
 
-  it("Khamenei's salat entries come from The Rules on Prayer & Fasting 2023 and carry no Urdu (decisions R1, R6)", () => {
-    const salatTopics = new Set(WAJIBAT_DATASET.topics.filter((t) => t.categoryId === "salat").map((t) => t.id));
-    const entries = WAJIBAT_RULINGS.filter((r) => salatTopics.has(r.topicId)).flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei" && m.format === "issue");
-    expect(entries.length).toBeGreaterThan(100);
+  it("Khamenei's Rules entries: English from the 2023 Rules, official Urdu from book 197, checked against the Persian (R1, R6, R11)", () => {
+    const entries = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei" && m.source.title === "The Rules on Prayer & Fasting 2023");
+    expect(entries.length).toBe(200);
+    const withUrdu = entries.filter((e) => e.text.ur);
+    const urduWithheld = entries.filter((e) => !e.text.ur);
+    expect(withUrdu.length).toBe(198);
     for (const e of entries) {
-      expect(e.source.title).toBe("The Rules on Prayer & Fasting 2023");
       expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/241\?sn=\d+$/);
-      expect(e.text.ur).toBeUndefined();
-      expect(e.urduNote).toBeTruthy();
+      // Every pair was read against the Persian original, which is never displayed (R11).
+      expect(e.persianSource!.title).toBe("رساله نماز و روزه");
+      expect(e.persianSource!.url).toMatch(/^https:\/\/www\.leader\.ir\/fa\/book\/180\/1\?sn=\d+$/);
+    }
+    for (const e of withUrdu) {
+      expect(e.urSource!.title).toBe("نماز اور روزه کی احکام");
+      expect(e.urSource!.reference).toMatch(/^مسئلہ \d+(، \d+)?$/);
+      expect(e.urSource!.url).toMatch(/^https:\/\/www\.leader\.ir\/ur\/book\/197\/1\?sn=\d+$/);
+    }
+    // Urdu differs from the Persian here, so only the English (which matches it) is shown.
+    expect(urduWithheld.map((e) => e.source.reference).sort()).toEqual(["265.", "390."]);
+    for (const e of urduWithheld) expect(e.urduNote).toMatch(/differs from the Persian original/);
+  });
+
+  it("R11: where the English differs from the Persian original the English is withheld and the official Urdu is what is shown", () => {
+    const withheld = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.englishWithheld !== undefined);
+    expect(withheld.map((e) => e.source.reference).sort()).toEqual(["190.", "221.", "394.", "465.", "711.", "89."].sort());
+    for (const e of withheld) {
+      expect(e.marjaId).toBe("khamenei");
+      expect(e.text.ur).toBeTruthy();
+      expect(e.urSource).toBeTruthy();
+      expect(e.persianSource).toBeTruthy();
+    }
+    // 711: the Persian and Urdu say only "by caution"; the English's "obligatory" is not in the Persian.
+    const imam = getMarjaRuling(getRulingById("imamconditions")!, "khamenei")!;
+    expect(imam.note).toMatch(/without stating whether it is obligatory or recommended/);
+    // Footnote-only differences: the English body is a verbatim excerpt without the footnote.
+    for (const id of ["fajrtime", "qiblaeffort"]) {
+      const e = getMarjaRuling(getRulingById(id)!, "khamenei")!;
+      expect(e.excerpt).toBe(true);
+      expect(e.text.en).not.toContain("\n* ");
+      expect(e.text.ur).toContain("\n* ");
+      expect(e.note).toMatch(/footnote differs from the Persian original/);
     }
   });
 
@@ -200,15 +232,16 @@ describe("Wajibat dataset integrity", () => {
     expect(getMarjaRuling(getRulingById("sahwcases")!, "sistani")!.text.ur).toBeTruthy();
   });
 
-  it("P15: Khamenei's Rules 465 (mistranslated in the English edition) is not shown anywhere", () => {
-    const cites465 = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter(
-      (e) => e.marjaId === "khamenei" && e.source.title === "The Rules on Prayer & Fasting 2023" && e.source.reference === "465."
-    );
-    expect(cites465).toEqual([]);
-    // Sistani's ruling on the same point stays; Khamenei's followers get "not added yet".
+  it("P15: Khamenei's Rules 465 (mistranslated in the English edition) shows the Persian-matching official Urdu, not the English", () => {
     const leisure = getRulingById("qasrleisure")!;
+    const e = getMarjaRuling(leisure, "khamenei")!;
+    expect(e.source.reference).toBe("465.");
+    expect(e.englishWithheld).toMatch(/P15/);
+    expect(e.urSource!.reference).toBe("مسئلہ 466");
+    expect(e.text.ur).toContain("قصر");        // "…the prayer is shortened"
+    expect(e.persianSource!.reference).toBe("مسأله 466");
+    // Sistani's ruling on the same point is unaffected.
     expect(getMarjaRuling(leisure, "sistani")).toBeTruthy();
-    expect(getMarjaRuling(leisure, "khamenei")).toBeUndefined();
   });
 
   it("seeAlso only points from a marja' with no entry to a same-topic ruling that has his entry", () => {
@@ -343,5 +376,25 @@ describe("validateWajibatDataset catches broken data", () => {
     const msgs = messages(data);
     expect(msgs).toContain("a supplementary ruling holds exactly one entry, for its own marja'");
     expect(msgs).toContain("a supplementary ruling must cite the ruling(s) it was compared with and agrees with");
+  });
+  it("flags withheld English without the Urdu, the Persian check, or on a non-Khamenei marja' (R11)", () => {
+    const data = clone();
+    const e = getMarjaRuling(data.rulings.find((x) => x.id === "qasrleisure")!, "khamenei")!;
+    delete e.text.ur; delete e.urSource; delete e.persianSource;
+    const msgs = messages(data);
+    expect(msgs).toContain("englishWithheld entries must carry the official Urdu text with its citation (the English is not shown)");
+    expect(msgs).toContain("englishWithheld entries must cite the Persian original they were decided against (decision R11)");
+    const sis = clone();
+    const s0 = getMarjaRuling(sis.rulings.find((x) => x.id === "qibladirection")!, "sistani")!;
+    s0.englishWithheld = "x";
+    expect(messages(sis)).toContain("englishWithheld applies to Khamenei only: his English and Urdu are both translations of the Persian (decision R11)");
+  });
+
+  it("flags a guided-prayer step that quotes withheld English", () => {
+    const data = clone();
+    const step = data.procedures.find((p) => p.marjaId === "khamenei")!.steps[0]!;
+    const target = getMarjaRuling(data.rulings.find((x) => x.id === step.rulingId)!, "khamenei")!;
+    target.englishWithheld = "x";
+    expect(messages(data).some((m) => m.includes("which is withheld (decision R11)"))).toBe(true);
   });
 });

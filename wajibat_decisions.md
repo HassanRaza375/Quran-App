@@ -74,6 +74,15 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | R9 | **New rule: generators in the repo** | Commit the generators (`gen_salat.py`, `gen_kqa.py`, `snapshot.py` and the rest) under `scripts/wajibat/`, plus the extracted source-excerpt records the verbatim check depends on, so tests run from the repo. Add a manifest (source URL, fetch date, file hash) and a README on how to regenerate the data. **Don't commit raw downloaded pages.** **Never hand-edit generated data files again.** |
 | R10 | **Phase 4 split** | **4a:** download Sistani's doubts chapter; build the content topics (doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw / forgotten parts) for both maraji'. Stop for review. **4b:** the helpers (prayer doubts + wuḍūʾ, per marja'). Stop for review. Commit and push to `wajibat-module` only; never merge to `main`. |
 
+## Answered questions (2026-10-07, second round)
+
+| # | Question | Decision |
+|---|---|---|
+| P18 | Khamenei's official Urdu *Rules* edition | **Yes, pair it with his entries before 4b** (pair by content; the Urdu uses the Persian numbering). **New rule R11 for Khamenei:** his English and Urdu are both translations of the same Persian edition, so when they disagree **the Persian original decides**: show the version that matches the Persian, hide the other, log it. This differs from Sistani (whose English 4th edition is newer than his Urdu, so the English wins). The app never displays its own translation. Show Urdu مسئلہ 466 in the travel topic; English 465 stays hidden. |
+| P19 | Urdu-only wuḍūʾ source | **Agreed:** show the official Urdu with the label "no official English translation"; never translate it. Question screens may be in English (app-written); only the final answers are Urdu. **Result screens that are Urdu-only also say where English readers can verify the ruling** (his risala / office). *Ahkam-e Amozeshi* is a **third Khamenei source**: check it against the 2023 *Rules* and the Q&A with the same agree/differ rule; the 2023 Rules take priority; **flag any conflict and ask.** |
+| P18 result | — | **Done (2026-10-07):** all 200 Khamenei *Rules* entries read against the Persian original and his official Urdu edition. 190 agree; 6 English withheld (Urdu shown); 2 Urdu withheld; 2 footnote trims. Borderline cases (rulings 138, 141) treated as agreeing; details and the question to confirm are in the progress log. |
+| R12 | **Phase 4b conditions** | Every question offers an **"I'm not sure"** option that leads to the risala pointer, never to a guessed outcome. One question per screen, a visible "Start over", and the marja's name and the "Not scholar-reviewed" label on every result. P17's conditions stay (questions describe the situation only; each node lists the rulings its options rely on; tests check the branch logic, not just verbatim leaves). Tests walk every path for every marja'. Commit and push to `wajibat-module` only; stop for review after 4b; never merge to `main`. |
+
 ## Phase 0 findings (2026-09-25)
 
 - **Q5 UI kit: Vuetify 3.** `package.json` has `vuetify` + `vite-plugin-vuetify` and no shadcn-vue,
@@ -118,7 +127,4 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 
 _(Claude Code adds new questions here and asks the user. Move them to "Answered" with the date once decided.)_
 
-| # | Question | Recommendation |
-|---|---|---|
-| P18 (2026-10-07) | Khamenei's *Rules on Prayer & Fasting* **does** have an official Urdu edition on leader.ir: «نماز اور روزه کی احکام» (book 197). It translates the Persian original section for section (166 sections) and keeps the Persian numbering (1–1011), which drifts from the English numbering (1–1003, e.g. English 465 = Persian/Urdu 466). Phase 3 had wrongly noted "no official Urdu edition". The note is corrected, and the ~200 Khamenei *Rules* entries are still English only. | **Match it, the same way as Sistani's Urdu (P6):** pair each English ruling with its Urdu مسئلہ **by content** (numbers drift), cite the Urdu with its own number, and show the Urdu only where it agrees with the English. Where they differ, show English only and list the case. Do it as its own step before 4b, with a per-topic agree/differ report. It also lets 465's topic show the Urdu مسئلہ 466 (which is correct) while the English stays hidden. Your call. |
-| P19 (2026-10-07) | Khamenei's wuḍūʾ-helper source is in Urdu only («احکام آموزشی»). What do Khamenei users in **English** mode see? | **(a) Show the official Urdu ruling text in the English view too, with the label "Official text in Urdu — no official English translation"**, and keep the question wording in English (app-written, P17). Never translate it ourselves (R1). Alternatives: (b) English mode shows only the branches his English Q&A answers, and "refer to his risala" for the rest; (c) the helper is offered to Khamenei users only in Urdu mode. |
+_None open._

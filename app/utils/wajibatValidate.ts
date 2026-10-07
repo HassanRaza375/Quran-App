@@ -77,6 +77,18 @@ const validateMarjaRuling = (
     push(label, "urSource given but no Urdu text");
   }
   if (entry.urduEditionLag && hasUrdu) push(label, "urduEditionLag entries must not carry the outdated Urdu text");
+  // Decision R11: withheld English means the Urdu (matching the Persian) is what the user sees.
+  if (entry.englishWithheld !== undefined) {
+    if (!entry.englishWithheld.trim()) push(label, "englishWithheld needs its audit reason");
+    if (!entry.text.ur?.trim() || !entry.urSource) push(label, "englishWithheld entries must carry the official Urdu text with its citation (the English is not shown)");
+    if (!entry.persianSource) push(label, "englishWithheld entries must cite the Persian original they were decided against (decision R11)");
+    if (entry.marjaId !== "khamenei") push(label, "englishWithheld applies to Khamenei only: his English and Urdu are both translations of the Persian (decision R11)");
+  }
+  if (entry.persianSource) {
+    const ps = entry.persianSource;
+    if (!ps.title?.trim() || !ps.reference?.trim() || !ps.url?.trim()) push(label, "persianSource needs title, reference and url");
+    else if (!isOfficialUrl(ps.url, marja)) push(label, `persianSource is not on ${marja.officialSite}`);
+  }
 
   const englishHasArabic = ARABIC_RE.test(entry.text.en) || ARABIC_RE.test(entry.question?.en ?? "");
   if (englishHasArabic && !entry.arabicInSource) {
@@ -226,6 +238,7 @@ export const validateWajibatDataset = (
       if (!ruling) push(label, `rulingId references unknown ruling "${s.rulingId}"`);
       else if (!entry) push(label, `ruling "${s.rulingId}" has no entry for ${p.marjaId}`);
       else {
+        if (entry.englishWithheld !== undefined) push(label, `step quotes the English of "${s.rulingId}", which is withheld (decision R11)`);
         if (!s.instruction.en?.trim() || !entry.text.en.includes(s.instruction.en)) push(label, "instruction is not a verbatim excerpt of the cited ruling");
         if (s.instruction.ur && !(entry.text.ur ?? "").includes(s.instruction.ur)) push(label, "Urdu instruction is not a verbatim excerpt of the cited ruling");
       }

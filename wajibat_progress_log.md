@@ -873,3 +873,80 @@ Both are in `wajibat_decisions.md`.
 
 ### Recommended next step
 Phase 4b, the helpers, after your review of 4a and your answers to P18/P19. P19 only matters for 4b; P18 can be done separately.
+
+---
+
+## P18 — Khamenei's official Urdu *Rules*, checked against the Persian original (2026-10-07)
+
+### What was matched
+- **Three official editions of the same book**, all on leader.ir and all read through the site's own contents endpoint:
+  - the **Persian original**, رساله نماز و روزه (book 180): 1,010 rulings;
+  - the **official Urdu edition**, نماز اور روزه کی احکام (book 197): 1,010 rulings, the same numbering as the Persian;
+  - the **English** *Rules on Prayer & Fasting 2023* (book 241), which we already quote: 1,003 rulings.
+- Ruling 788 is missing from the Persian and the Urdu editions alike, so it is a gap in the source and not in the parsing.
+- **Pairing, never by number alone.** All three editions list the same sections in the same order. The English edition lacks some Persian rulings in the prayer chapter and merges one pair, so its numbers drift (+1 after 52, +2 after 495):
+  - English **506 = Persian/Urdu 508 + 509** (merged);
+  - Persian 52, 495 and 777–780 have no English counterpart.
+
+  Every pair was then **read side by side in all three languages**: 200 entries (the 199 from before plus ruling 465). A typo in the Urdu source's numbering ("5929") and another in the Persian ("8003") were read as the next number in sequence and are logged.
+- **Citations.** Each entry now cites the Urdu ruling under its own number, e.g. «نماز اور روزه کی احکام — مسئلہ 466». It also records the Persian ruling it was compared with. That is metadata and a small caption: *"Compared with the Persian original: مسأله 466"*. The Persian text is never displayed.
+
+### Result (rule R11: the Persian decides)
+| Verdict | Entries | What the user sees |
+|---|---|---|
+| **English, Urdu and Persian agree** | **190** | English; the official Urdu too in Urdu mode |
+| **English differs from the Persian (Urdu matches)** | **6** | English **hidden**; the official Urdu is shown in **every** language mode, with a notice that the English edition differs from the Persian and that the app does not translate |
+| **Urdu differs from the Persian (English matches)** | **2** | the English; in Urdu mode, the English with a notice (no Urdu shown) |
+| **Only a footnote differs** | **2** | the English ruling text only (a verbatim excerpt), with a note; the Urdu carries its footnote |
+
+**English hidden (6).** The reasons are in `scripts/wajibat/rules_verdicts.py`:
+| English ruling | Where | Why the English differs from the Persian |
+|---|---|---|
+| **465** (P15) | leisure travel | says the prayer is **not** shortened; the Persian (مسأله 466) and the Urdu (مسئلہ 466) say it **is** shortened |
+| 89 | clothes woven with gold | says "woven with gold"; the Persian and Urdu add "or in which gold is used" |
+| 190 | loud/quiet recitation | the English drops "first two rakʿahs" and says only men for ẓuhr/ʿaṣr; the Persian and Urdu say **men and women** |
+| 221 | dhikr of rukūʿ | the English allows any other dhikr; the Persian and Urdu exclude the dhikr specific to sajdah |
+| 394 | a part of the salām said by mistake | the English says flatly "should perform sajdatā al-sahw"; the Persian and Urdu say **by obligatory caution** |
+| 711 | imam's conditions | the English says "obligatory caution" for bāligh; the Persian and Urdu say only "caution", with the type **unspecified**, so the P5 note applies |
+
+**Urdu hidden (2).**
+- **265:** the Urdu gives "gold, silver and glass" as its examples where the Persian says metals and glass.
+- **390:** the Urdu merges two conditions (unwillingly, or thinking the prayer is over) into one.
+
+**Footnote only (2).**
+- **Ruling 4** (fajr): the English footnote leaves out the practical guidance of about ten minutes after the adhān that the Persian and Urdu give.
+- **Ruling 44** (qibla): the English footnote says "May 7", while the Persian (هفتم خرداد) and Urdu say 28 May. Khamenei's own Q&A also says 28 May.
+
+**Borderline cases treated as agreeing. Please say if you would rather withhold them:**
+- **138 (list of the eleven obligatory acts):** the English lists takbīrah before standing; the Persian and Urdu list standing before takbīrah. The content is the same.
+- **141 (intention):** the English drops the parenthetical "which is one of the rukn acts"; ruling 140 in the same English book lists intention among the rukns. This one is used by the guided prayers, so withholding it would also change the prayer steps.
+
+**Also noted.**
+- Three footnotes exist only in the English (rulings 15, 382, 604: translator's notes and definitions) and three only in the Urdu (rulings 1, 322, 764). None changes a ruling.
+- The footnote of ruling 346 is fuller in the Urdu than in the English, with no contradiction.
+- A guard was added: a guided-prayer step may not quote a ruling whose English is withheld, and none does today.
+
+### How reliable is this?
+- The checks were **read by me, side by side, not computed**.
+- I first tried automatic signals (obligatory-caution counts, numbers, negations). They were too noisy to trust on their own.
+- Reading missed one of the six on the first pass (394: an omitted "by obligatory caution"); it showed up when a signal flagged it. So **qualifier-level differences are the place I could have missed something.** I recommend a second reader on the 190 "agree" entries before release. The Phase 10 audit already plans one.
+- The Persian footnotes were compared only where the English and Urdu footnotes differ.
+- Sistani is **not** affected: his English 4th edition is newer than his Urdu, so the English wins there (P6, unchanged).
+
+### Tests and checks
+- **Dataset tests:** 425 pass.
+  - New: every Khamenei Rules entry cites its Urdu and Persian rulings (200 entries, 198 with Urdu).
+  - New: exactly the six English-withheld and two Urdu-withheld entries.
+  - New: 465 shows the Urdu مسئلہ 466 and not the English.
+  - New: the footnote trims.
+  - New: the validator catches a withheld English without its Urdu or Persian check, and a guided-prayer step that quotes withheld English.
+- **Source snapshot:** all 1,721 numbered quotes (English, Urdu and Q&A) match their official units exactly.
+- **Browser, Playwright against the production build:** `verify6.cjs` 30/30. It covers:
+  - 465 in English and Urdu mode, and Sistani unchanged;
+  - each English-withheld and Urdu-withheld case;
+  - the footnote trims and the merged 508 + 509;
+  - the Persian caption;
+  - no overflow at 768 and 390 in both languages.
+
+  Regressions: Phase 4a 34/34, Salat 35/35 (its Urdu-note assertion updated), Taharat 37/37, offline/install 22/22.
+- **Install-size (R5):** the install-time download is **5,433.61 KiB** (it was 5,432.58). The ruling chunk is 1,191 KB (240 KB gzip), up 99 KB with the ~198 Urdu Rules texts, and still downloads only when Fiqh is opened.

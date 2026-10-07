@@ -103,6 +103,11 @@ feature is a view over this layer.
   the cache and reports changed pages. Lesson: commit the generators and the extraction tools from day one. A later session
   that can't find them falls back to hand edits, and that is exactly how paraphrases got in.
 
+- **Translations of one original (Khamenei, R11):** his English and Urdu books are both translations of the same Persian edition,
+  so a translation can be wrong (the English said leisure travel is "not shortened"; the Persian says it is shortened). Compare the
+  editions against the original, never one translation against the other, and keep the verdicts as data (`rules_verdicts.py`).
+  Pair by position within sections and verify by content: the English edition's numbering drifts and merges rulings.
+
 ### Rebuild notes
 - Any local structured store works: SQLite, Realm, Core Data, IndexedDB, or even flat files.
 - If moving to a backend-backed model, this whole layer can become a thin proxy/cache in front of
@@ -1407,6 +1412,8 @@ reminder system.
   - `recitationIds` (P12): Arabic shown next to the ruling as a separate `Recitation { id, marjaId, arabic, transliteration?, source }`,
     used when the Arabic comes from a different official book than the quote (e.g. Sistani's Urdu Tawzih, when his English book
     prints the dhikr as an image). Never spliced into the quote.
+  - `englishWithheld?`, `persianSource?` (R11, Khamenei only): the English differs from the Persian original, so only the official Urdu is
+    shown, in every language mode. `persianSource` records which Persian ruling the pair was compared with (never displayed).
   - `seeAlso: { marjaId, rulingId }[]` (Phase 4a): for a marja' with no entry in this ruling whose book states the point
     inside another ruling on the same topic page. The UI links to that card instead of showing "not added yet", and
     coverage doesn't count it as a gap.

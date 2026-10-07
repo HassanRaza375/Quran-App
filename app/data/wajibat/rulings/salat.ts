@@ -44,7 +44,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Obligatory prayers are as follows:\n1. Daily prayers;\n2. Prayer of ṭawāf which is said after obligatory tawāf around Ka‘bah;\n3. Āyāt prayer which is performed due to natural phenomena such as a lunar/solar eclipse, earthquake, etc.\n4. Mayyit prayer which is performed on the corpse of a deceased Muslim\n5. Qaḍā’ prayers of one's father and, by obligatory caution, of the mother as well; to be performed by the eldest son.\n6. The prayer which becomes obligatory due to nadhr (reciprocal vow), ‘ahd (covenant), qasam (oath), or through being hired to preform it."
+          en: "Obligatory prayers are as follows:\n1. Daily prayers;\n2. Prayer of ṭawāf which is said after obligatory tawāf around Ka‘bah;\n3. Āyāt prayer which is performed due to natural phenomena such as a lunar/solar eclipse, earthquake, etc.\n4. Mayyit prayer which is performed on the corpse of a deceased Muslim\n5. Qaḍā’ prayers of one's father and, by obligatory caution, of the mother as well; to be performed by the eldest son.\n6. The prayer which becomes obligatory due to nadhr (reciprocal vow), ‘ahd (covenant), qasam (oath), or through being hired to preform it.",
+          ur: "واجب نمازیں درج ذیل ہیں؛\n1۔ یومیہ نمازیں\n2۔ نماز طواف جو خانہ کعبہ کے واجب طواف کے بعد ادا کی جاتی ہے۔\n3۔ نماز آیات جو سورج گرہن، چاند گرہن، زلزلہ وغیرہ کے وقت ادا کی جاتی ہے۔\n4۔ نماز میت جو دنیا سے رخصت ہونے والے مسلمان کے جنازے پر پڑھی جاتی ہے۔\n5۔ باپ کی قضا نماز اور احتیاط واجب کی بناپر ماں کی قضا نماز جو بڑے بیٹے پر واجب ہے۔\n6۔ وہ نماز جو عہد، نذر، قسم یا اجارہ کی وجہ سے واجب ہوتی ہے۔\n* درحقیقت (ان مواقع پر) مستحب نماز واجب میں نہیں بدلتی بلکہ نذر، عہد، قسم اور اجارہ پر عمل کرنا واجب ہوتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -52,8 +53,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "1.",
           url: "https://www.leader.ir/en/book/241?sn=32480"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 1",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31066"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 1",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30757"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -89,7 +99,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The daily prayers consist of 17 rak‘ah which are made up of the following:\n1. Fajr prayer (two rak‘ah)\n2. Ẓuhr prayer (four rak‘ah)\n3. ‘Aṣr prayer (four rak‘ah)\n4. Maghrib prayer (three rak‘ah)\n5. ‘ishā’ prayer (four rak‘ah)"
+          en: "The daily prayers consist of 17 rak‘ah which are made up of the following:\n1. Fajr prayer (two rak‘ah)\n2. Ẓuhr prayer (four rak‘ah)\n3. ‘Aṣr prayer (four rak‘ah)\n4. Maghrib prayer (three rak‘ah)\n5. ‘ishā’ prayer (four rak‘ah)",
+          ur: "یومیہ واجب نمازیں 17 رکعت ہیں جوکہ درج ذیل ہیں؛\nنماز صبح (دو رکعت)\nنماز ظہر (چار رکعت)\nنماز عصر (چار رکعت)\nنماز مغرب (تین رکعت)\nنماز عشاء (چار رکعت)"
         },
         basis: "fatwa",
         source: {
@@ -97,8 +108,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "3.",
           url: "https://www.leader.ir/en/book/241?sn=32481"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 3",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31067"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 3",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30758"
+        },
+        verification: "A"
       }
     ]
   },
@@ -113,7 +133,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Daily prayers are among the most important obligations in Islamic Law. Furthermore, they are pillars of the religion and should never be neglected."
+          en: "Daily prayers are among the most important obligations in Islamic Law. Furthermore, they are pillars of the religion and should never be neglected.",
+          ur: "یومیہ نمازیں شریعت اسلام کے انتہائی اہم واجبات میں سے بلکہ دین کا ستون ہیں اور ا نہیں کسی بھی حالت میں ترک نہیں کرنا چاہئے۔"
         },
         basis: "fatwa",
         source: {
@@ -121,8 +142,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "2.",
           url: "https://www.leader.ir/en/book/241?sn=32481"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 2",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31067"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 2",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30758"
+        },
+        verification: "A"
       }
     ]
   },
@@ -158,7 +188,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Both ẓuhr and ‘aṣr prayers have special and common times. A few minutes — enough to say it — after shar‘ī noon is special for ẓuhr prayer. A few minutes — enough to perform it — before sunset is special to ‘aṣr prayer. The gap between these two special times is common time for both."
+          en: "Both ẓuhr and ‘aṣr prayers have special and common times. A few minutes — enough to say it — after shar‘ī noon is special for ẓuhr prayer. A few minutes — enough to perform it — before sunset is special to ‘aṣr prayer. The gap between these two special times is common time for both.",
+          ur: "نماز ظہر اور عصر میں سے ہر ایک کے لئے مخصوص اور مشترک وقت ہے۔ نماز ظہر کا مخصوص وقت ابتدائے ظہر سے لے کر اتنا وقت گزرنے تک ہے کہ جس میں نماز ظہر پڑھ سکیں اور نماز عصر کا مخصوص وقت غروب آفتاب سے پہلے اتنا وقت ہے کہ جس میں فقط نماز عصر پڑھ سکیں۔ ان دونوں کا درمیانی وقت نماز ظہر و عصر کا مشترک وقت ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -166,8 +197,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "8.",
           url: "https://www.leader.ir/en/book/241?sn=32483"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 8",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31069"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 8",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30760"
+        },
+        verification: "A"
       }
     ]
   },
@@ -202,7 +242,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Both maghrib and ‘ishā’ prayers have special and common times. A few minutes — enough to perform it — after maghrib is special for maghrib prayer. A few minutes — enough to perform it — before shar‘ī midnight is special to ‘ishā’ prayer. The gap between these two special times is common time for both."
+          en: "Both maghrib and ‘ishā’ prayers have special and common times. A few minutes — enough to perform it — after maghrib is special for maghrib prayer. A few minutes — enough to perform it — before shar‘ī midnight is special to ‘ishā’ prayer. The gap between these two special times is common time for both.",
+          ur: "نماز مغرب و عشاء کےلئے مخصوص اور مشترک وقت ہے۔ نماز مغرب کا مخصوص وقت مغرب کی ابتدا سے اس وقت تک ہے جس میں تین رکعت نماز پڑھ سکیں۔ نماز عشاء کا مخصوص وقت آدھی رات ہونے سے پہلے اتنا وقت ہو جس میں فقط نماز عشاء پڑھ سکیں۔ ان دونوں کا درمیانی وقت دونوں نمازوں کا مشترکہ وقت ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -210,8 +251,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "13.",
           url: "https://www.leader.ir/en/book/241?sn=32484"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 13",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31070"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 13",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30761"
+        },
+        verification: "A"
       }
     ]
   },
@@ -246,16 +296,28 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The time for fajr prayer begins from the true dawn (al-fajr al-ṣādiq) and continues until sunrise.\n* The true dawn is opposed to the false dawn (al-fajr al-kāẓib). The false dawn being a light, which appears before the true dawn, that moves upwards instead of spreading across the horizon. The true dawn is when a dim, white light which spreads across the horizon and becomes more intensely illuminated as time passes. Since the the true dawn starts out very dim, in order to witness it, one needs to have clear and unobstructed visibility of the eastern horizon in total darkness. Hence, it would be extremely difficult to observe it from within the city. Therefore, as it is difficult to ascertain the time of fajr, one should exercise caution."
+          en: "The time for fajr prayer begins from the true dawn (al-fajr al-ṣādiq) and continues until sunrise.",
+          ur: "نماز صبح کا وقت طلوع فجر (صبح صادق) سے طلوع آفتاب تک ہے۔\n* صبح صادق صبح کاذب کے مقابلے میں ہے۔ صبح کاذب اس سفیدی کو کہتے ہیں جو صبح صادق سے پہلے آسمان میں نمودار ہوتی ہے اور افق پر پھیلنے کے بجائے عمودی شکل میں اوپر کی طرف اٹھتی ہے۔ صبح صادق اس وقت ہوتی ہے جب سفیدی افق کی سطح کے ساتھ متصل اور کم روشنی کے ساتھ افق پر پھیل جائےاور وقت گزرنے کے ساتھ اس کی روشنی میں اضافہ ہوجائے۔ چونکہ صبح صادق باریک ہوتی ہے لہذا اس کو مشاہدہ کرنے کے لئے مشرق کا افق پوری طرح کھلا اور مکمل تاریک ہونا چاہئے جو شہروں کے اندر نہایت مشکل ہے۔ چونکہ طلوع فجر کو واضح اور دقیق تشخیص دینا سخت ہے لہذا احتیاط کی رعایت کرتے ہوئے اذان شروع ہونے کے دس منٹ بعد صبح کی نماز ادا کی جائے۔"
         },
         basis: "fatwa",
+        excerpt: true,
         source: {
           title: "The Rules on Prayer & Fasting 2023",
           reference: "4.",
           url: "https://www.leader.ir/en/book/241?sn=32482"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 4",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31068"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 4",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30759"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        note: "The English edition's footnote differs from the Persian original and the official Urdu edition, so it is not shown here; the Urdu text carries the footnote."
       }
     ]
   },
@@ -291,7 +353,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person does not offer the maghrib or ‘ishā’ prayers until 'midnight' due to a sin or an excuse, according to the obligatory caution, he should offer them before the morning adhān, without the intention of performing it as qaḍā’ or adā’ (rather with the intention of doing one's actual duty).\n[1] Translator’s note: The time gap between sunset and when the redness that appears in the east after sunset disappears varies with the change of the seasons of the year."
+          en: "If a person does not offer the maghrib or ‘ishā’ prayers until 'midnight' due to a sin or an excuse, according to the obligatory caution, he should offer them before the morning adhān, without the intention of performing it as qaḍā’ or adā’ (rather with the intention of doing one's actual duty).\n[1] Translator’s note: The time gap between sunset and when the redness that appears in the east after sunset disappears varies with the change of the seasons of the year.",
+          ur: "اگر کوئی شخص کسی عذر کی وجہ سے یا معصیت کرتے ہوئے مغرب اور عشاء کی نماز کو آدھی رات تک نہ پڑھے تو احتیاط واجب کی بنا پر اذان صبح تک ادا یا قضا کی نیت کے بغیر (مافی الذمہ کی نیت سے) بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -299,8 +362,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "15.",
           url: "https://www.leader.ir/en/book/241?sn=32484"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 15",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31070"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 15",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30761"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -336,7 +408,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person can start offering prayers only when he becomes certain that the time has set in, when two just persons inform him that the time has set in, or if a reliable and punctual reciter of the adhān recites the adhān."
+          en: "A person can start offering prayers only when he becomes certain that the time has set in, when two just persons inform him that the time has set in, or if a reliable and punctual reciter of the adhān recites the adhān.",
+          ur: "نماز پڑھنے کے لئے مکلف کو چاہئے کہ وقت داخل ہونے پر یقین یا اطمینان حاصل کرے یا دو عادل مرد وقت داخل ہونے کی خبر دیں یا وقت شناس اور موثق موذن اذان دے۔"
         },
         basis: "fatwa",
         source: {
@@ -344,8 +417,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "18.",
           url: "https://www.leader.ir/en/book/241?sn=32485"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 18",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31071"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 18",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30762"
+        },
+        verification: "A"
       }
     ]
   },
@@ -380,7 +462,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who has time enough to perform only one rak‘ah should perform the prayer with the intention of adā’, but he should not postpone performing the prayer until such a time intentionally."
+          en: "A person who has time enough to perform only one rak‘ah should perform the prayer with the intention of adā’, but he should not postpone performing the prayer until such a time intentionally.",
+          ur: "اگر فقط ایک رکعت نماز پڑھنے کا وقت ہو تو نماز کو ادا کی نیت سے پڑھے لیکن جان بوجھ کر نمازمیں اس وقت تک تاخیر نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -388,8 +471,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "24.",
           url: "https://www.leader.ir/en/book/241?sn=32485"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 24",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31071"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 24",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30762"
+        },
+        verification: "A"
       }
     ]
   },
@@ -424,7 +516,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is mustaḥabb that one offers prayers at the beginning of their times as Islamic instructions advise it with emphasis. If a person cannot offer a prayer at the beginning of its time, then the closest to this time you offer, the better unless it is better to delay it for a reason, such as when a person wants to perform the prayer in congregation."
+          en: "It is mustaḥabb that one offers prayers at the beginning of their times as Islamic instructions advise it with emphasis. If a person cannot offer a prayer at the beginning of its time, then the closest to this time you offer, the better unless it is better to delay it for a reason, such as when a person wants to perform the prayer in congregation.",
+          ur: "مستحب ہے کہ انسان نماز کو اول وقت میں پڑھے۔ اس کے بارے میں اسلامی دستورات میں تاکید کے ساتھ سفارش کی گئی ہے اور اگر اول وقت میں نہ پڑھ سکے تو اول وقت سے جتنا نزدیک پڑھ سکے بہتر ہے مگر یہ کہ تاخیر سے پڑھنا کسی لحاظ سے بہتر ہو مثلا جماعت کے ساتھ نماز پڑھنا چاہے۔"
         },
         basis: "fatwa",
         source: {
@@ -432,8 +525,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "16.",
           url: "https://www.leader.ir/en/book/241?sn=32485"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 16",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31071"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 16",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30762"
+        },
+        verification: "A"
       }
     ]
   },
@@ -468,7 +570,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person has to perform ẓuhr prayer and then the ‘aṣr prayer. The same rule applies to maghrib and ‘ishā’ prayers. If a person intentionally performs ‘aṣr prayer before ẓuhr prayer, or performs ‘ishā’ prayer before maghrib prayer, his prayer is void."
+          en: "A person has to perform ẓuhr prayer and then the ‘aṣr prayer. The same rule applies to maghrib and ‘ishā’ prayers. If a person intentionally performs ‘aṣr prayer before ẓuhr prayer, or performs ‘ishā’ prayer before maghrib prayer, his prayer is void.",
+          ur: "نماز عصر کو نماز ظہر کے بعد اور نماز عشاء کو نماز مغرب کے بعد پڑھا جائے اور اگر جان بوجھ کر اس ترتیب کے برعکس پڑھی جائے تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -476,8 +579,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "27.",
           url: "https://www.leader.ir/en/book/241?sn=32486"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 27",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31072"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 27",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30765"
+        },
+        verification: "A"
       }
     ]
   },
@@ -512,7 +624,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Muslims should offer their prayers facing the Ka‘bah, and, thus, they call it qiblah. However, for those who are away from it, it is not possible to face it in the exact direction, so it is sufficient for them to perform it in a way that it is commonly regarded as facing the qiblah."
+          en: "Muslims should offer their prayers facing the Ka‘bah, and, thus, they call it qiblah. However, for those who are away from it, it is not possible to face it in the exact direction, so it is sufficient for them to perform it in a way that it is commonly regarded as facing the qiblah.",
+          ur: "مکلف کو چاہئے کہ خانہ کعبہ کی طرف رخ کرکے نماز پڑھے اس اعتبار سے کعبہ کو قبلہ کہتے ہیں۔ البتہ جو افراد اس سے دور ہیں اوران کے لئے حقیقی طور پر روبرو ہونا ممکن نہیں ہے، اتنا ہی کافی ہے کہ کہا جائے کہ قبلے کی طرف منہ کرکے نماز پڑھ رہے ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -520,8 +633,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "41.",
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 41",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31074"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 41",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30766"
+        },
+        verification: "A"
       }
     ]
   },
@@ -556,16 +678,28 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who wants to offer prayer has to become certain and confident about the direction of qiblah, whether through a reliable compass, through the sun* and stars (for those who know how to use them), or through other ways; and if he cannot acquire confidence, he should offer the prayer in whichever direction he considers more likely, like when you guess qiblah from a masjid's miḥrāb.\n* It is said that on May 7 and July 16 in Mecca at ẓuhr the sun shines vertically. Therfore, if at this time you insert a pole in the ground in your city vertically, the shadow will be in the oppsite direction of qiblah. If you become confidence that this methods shows qiblah, you can act accordingly."
+          en: "A person who wants to offer prayer has to become certain and confident about the direction of qiblah, whether through a reliable compass, through the sun* and stars (for those who know how to use them), or through other ways; and if he cannot acquire confidence, he should offer the prayer in whichever direction he considers more likely, like when you guess qiblah from a masjid's miḥrāb.",
+          ur: "نمازپڑھنے والے کو قبلے کی سمت کے بارے میں یقین یا اطمینان ہونا چاہئے، خواہ صحیح اور معتبر قبلہ نما کے ذریعے یا سورج اور ستاروں کی روشنی(جبکہ ان سے استفادہ کرنے سے واقفیت رکھتا ہو) کے ذریعے ہو یا دیگر ذرائع سے ہو۔ اگر اطمینان پیدا نہ کرسکے تو جس طرف زیادہ گمان ہو اسی سمت نماز پڑھے جیسے کہ محراب مسجد سے حاصل ہونے والا گمان ۔\n* ۔ کہاجاتا ہے کہ شمسی کیلنڈر کے تیسرے مہینے کی سات تاریخ(۲۸ مئی) اور چوتھے مہینے کی پچییس تاریخ(۱۶ جولائی) کو مکہ کے افق پر ظہر کے وقت سورج عمودی حالت میں کعبہ کے اوپر چمکتا ہے چنانچہ سیدھی لکڑی کی مانند کوئی مقیاس یا شاخص ہموار زمین میں سیدھا گاڑ دیا جائے تو ظہر کے وقت مکہ کے افق پر شاخص کا سایہ جس سمت کی نشاندہی کرے، قبلہ اس کی مخالف سمت میں ہوگا یعنی قبلہ سائے کی سیدھ میں شاخص کے اسی سمت ہوگا جہاں سایہ نہیں ہے۔ چنانچہ یہ طریقہ قبلے کی سمت کے بارے میں اطمینان کا باعث بنے تو اس کے مطابق عمل کرنا جائز ہے۔"
         },
         basis: "fatwa",
+        excerpt: true,
         source: {
           title: "The Rules on Prayer & Fasting 2023",
           reference: "44.",
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 44",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31074"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 44",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30766"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        note: "The English edition's footnote differs from the Persian original and the official Urdu edition, so it is not shown here; the Urdu text carries the footnote."
       }
     ]
   },
@@ -601,7 +735,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who does not have any means to find out the direction of qiblah nor gives more probability to any direction should perform the prayer in four directions, by obligatory caution. But if there is not enough time to perform the prayer in four directions, he should perform the prayer in the maximum possible number of directions."
+          en: "A person who does not have any means to find out the direction of qiblah nor gives more probability to any direction should perform the prayer in four directions, by obligatory caution. But if there is not enough time to perform the prayer in four directions, he should perform the prayer in the maximum possible number of directions.",
+          ur: "اگر قبلے کی سمت معلوم کرنے کے لئے کوئی راہ نہ ہو اور کسی سمت گمان بھی نہ ہو تو احتیاط واجب کی بناپر چاروں طرف رخ کرکے نماز پڑھے اور اگر چار نمازیں پڑھنے کا وقت نہ ہو تو جتنا وقت ہے اس کے مطابق نماز تکرار کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -609,8 +744,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "45.",
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 45",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31074"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 45",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30766"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -646,7 +790,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Mustaḥabb prayers can be offered while one is walking or riding, and in such conditions, it is not necessary to face qiblah."
+          en: "Mustaḥabb prayers can be offered while one is walking or riding, and in such conditions, it is not necessary to face qiblah.",
+          ur: "مستحب نمازوں کو چلتے ہوئے یا سواری کی حالت میں پڑھ سکتے ہیں اور اس صورت میں قبلے کی رعایت لازمی نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -654,8 +799,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "42.",
           url: "https://www.leader.ir/en/book/241?sn=32488"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 42",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31074"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 42",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30766"
+        },
+        verification: "A"
       }
     ]
   },
@@ -690,7 +844,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A man should cover his private parts in the prayer, even if no one sees him, and it is better for him to cover from the navel down to the knees."
+          en: "A man should cover his private parts in the prayer, even if no one sees him, and it is better for him to cover from the navel down to the knees.",
+          ur: "مرد نماز کی حالت میں اپنی دونوں شرمگاہوں کو چھپائے اگرچہ کوئی اس کو نہ دیکھے اور بہترہے کہ ناف سے زانو تک بھی چھپائے۔"
         },
         basis: "fatwa",
         source: {
@@ -698,8 +853,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "50.",
           url: "https://www.leader.ir/en/book/241?sn=32489"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 50",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31075"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 50",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30767"
+        },
+        verification: "A"
       }
     ]
   },
@@ -735,7 +899,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Women should cover the whole body and hair using a covering which covers them all. But it is not necessary to cover the part of face washed during wuḍū’, the hands up to the wrists, and the feet up to the ankles. Of course, in the presence of a non-maḥram person, she must cover her feet up to the ankles as well."
+          en: "Women should cover the whole body and hair using a covering which covers them all. But it is not necessary to cover the part of face washed during wuḍū’, the hands up to the wrists, and the feet up to the ankles. Of course, in the presence of a non-maḥram person, she must cover her feet up to the ankles as well.",
+          ur: "عورت نماز پڑھتے وقت پورے بدن اور بالوں کو چھپائے لیکن چہرے کا وہ حصہ جو وضو میں دھونا واجب ہے، ہاتھوں اور پاوں کو ٹخنے تک چھپانا لازمی نہیں ہے البتہ اگر کوئی نامحرم موجود ہوتو پاوں کو بھی ٹخنوں تک چھپائے۔"
         },
         basis: "fatwa",
         source: {
@@ -743,8 +908,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "51.",
           url: "https://www.leader.ir/en/book/241?sn=32489"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 51",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31075"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 51",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30767"
+        },
+        verification: "A"
       }
     ]
   },
@@ -780,7 +954,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The obligation of covering in prayer is not limited to the presence of a non-mahram in the place of worship; rather, even if nobody is present, covering is a condition for validity of prayer."
+          en: "The obligation of covering in prayer is not limited to the presence of a non-mahram in the place of worship; rather, even if nobody is present, covering is a condition for validity of prayer.",
+          ur: "نماز میں بدن کو ڈھانپنا نامحرم کی موجودگی سے مخصوص نہیں ہے بلکہ اگر کوئی موجود نہ ہو تو بھی بدن کو ڈھانپنا نماز صحیح ہونے کی شرط ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -788,8 +963,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "49.",
           url: "https://www.leader.ir/en/book/241?sn=32489"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 49",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31075"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 49",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30767"
+        },
+        verification: "A"
       }
     ]
   },
@@ -825,7 +1009,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The clothes of a praying person should be:\n1. pure;\n2. permissible to use;\n3. not a part of an animal of not-ritually slaughtered;\n4. not a part of an animal of ḥarām meat;\n5. for men, not to be golden;\n6. for men, not to made from silk only."
+          en: "The clothes of a praying person should be:\n1. pure;\n2. permissible to use;\n3. not a part of an animal of not-ritually slaughtered;\n4. not a part of an animal of ḥarām meat;\n5. for men, not to be golden;\n6. for men, not to made from silk only.",
+          ur: "نمازی کے لباس کی شرائط درج ذیل ہیں:\n1۔ پاک ہو؛\n2۔ مباح ہو؛\n3۔ مردار کے اجزاء سے نہ بنا ہو؛\n4۔ حرام گوشت حیوان کے اجزاء سے نہ بنا ہو؛\n5۔ مرد کا لباس سونے کا نہ ہو؛\n6۔ مرد کا لباس خالص ریشم کا نہ ہو؛"
         },
         basis: "fatwa",
         source: {
@@ -833,8 +1018,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "56.",
           url: "https://www.leader.ir/en/book/241?sn=32490"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 57",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31076"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 57",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30768"
+        },
+        verification: "A"
       }
     ]
   },
@@ -869,7 +1063,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The clothes of a praying person should be pure."
+          en: "The clothes of a praying person should be pure.",
+          ur: "نماز پڑھنے والے کا بدن اور لباس پاک ہونا چاہئے۔"
         },
         basis: "fatwa",
         source: {
@@ -877,8 +1072,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "57.",
           url: "https://www.leader.ir/en/book/241?sn=32491"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 58",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31077"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 58",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30769"
+        },
+        verification: "A"
       }
     ]
   },
@@ -913,7 +1117,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person does not know that his body or clothes are najis and realizes it after the prayer, his prayer is valid, but if he knew before the prayer that his body or clothes were najis, then forgot and performed the prayer with it, his prayer is invalid."
+          en: "If a person does not know that his body or clothes are najis and realizes it after the prayer, his prayer is valid, but if he knew before the prayer that his body or clothes were najis, then forgot and performed the prayer with it, his prayer is invalid.",
+          ur: "جو شخص نہیں جانتا کہ اس کا بدن یا لباس نجس ہے اور نماز کے بعد معلوم ہوجائے تو اس کی نماز صحیح ہے لیکن اگر پہلے سے اس کے نجس ہونے کا علم تھامگر بھول کر اس کے ساتھ نماز پڑھی ہو تو اس کی نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -921,8 +1126,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "59.",
           url: "https://www.leader.ir/en/book/241?sn=32491"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 60",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31077"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 60",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30769"
+        },
+        verification: "A"
       }
     ]
   },
@@ -958,7 +1172,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In the following four cases, if the body or clothes of a person who offers prayer are najis, his prayer is valid:"
+          en: "In the following four cases, if the body or clothes of a person who offers prayer are najis, his prayer is valid:",
+          ur: "چار صورتوں میں نماز پڑھنے والے کا بدن یا لباس نجس ہوتو بھی نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -966,8 +1181,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "64.",
           url: "https://www.leader.ir/en/book/241?sn=32492"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 65",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31078"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 65",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30770"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1002,7 +1226,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If there is blood from a wound, sore or abscess on the body or clothes of the person performing the prayer, and rinsing the body or clothes or changing the clothes is unbearably difficult for him or for most people, he may offer prayer with that blood so long as the wound or abscess has not healed. The same ruling applies to pus which comes out with the blood, or a medicine applied to the wound that becomes najis."
+          en: "If there is blood from a wound, sore or abscess on the body or clothes of the person performing the prayer, and rinsing the body or clothes or changing the clothes is unbearably difficult for him or for most people, he may offer prayer with that blood so long as the wound or abscess has not healed. The same ruling applies to pus which comes out with the blood, or a medicine applied to the wound that becomes najis.",
+          ur: "اگر نماز پڑھنے والے کے بدن یا لباس پر زخم، جراحت یا پھوڑے کا خون ہو چنانچہ بدن یا لباس کو دھونا یا لباس کو بدلنا اکثر لوگوں کے لئے یا خود اس شخص کے لئے مشکل اور مشقت و تکلیف کا باعث ہوتو جب تک زخم، جراحت یا پھوڑا ٹھیک نہ ہوجائے اس خون کے ساتھ نماز پڑھ سکتا ہے۔ اسی طرح خون کے ساتھ نکلنے والی پیپ اور زخم پر لگائی جانے والی دوائی نجس ہوجائے توبھی یہی حکم ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1010,8 +1235,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "65.",
           url: "https://www.leader.ir/en/book/241?sn=32492"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 66",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31078"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 66",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30770"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1047,7 +1281,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The clothes of the praying person should be permissible (they should not be usurped)."
+          en: "The clothes of the praying person should be permissible (they should not be usurped).",
+          ur: "نماز پڑھنے والے کا لباس مباح ہو یعنی غصبی نہ ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -1055,8 +1290,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "78.",
           url: "https://www.leader.ir/en/book/241?sn=32493"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 79",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31079"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 79",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30771"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1092,7 +1336,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The clothes of a praying person should not be made of the parts of the body of an animal not slaughtered as per Islamic law if its blood gushes out when the body is cut. By obligatory caution, the same rule is applied if it is a cold-blooded animal."
+          en: "The clothes of a praying person should not be made of the parts of the body of an animal not slaughtered as per Islamic law if its blood gushes out when the body is cut. By obligatory caution, the same rule is applied if it is a cold-blooded animal.",
+          ur: "نماز پڑھنے والے کا لباس خون جہندہ رکھنے والے مردار حیوان کے اجزاء سے نہ بنا ہو اور احتیاط واجب یہ ہے کہ خون جہندہ نہ رکھنے والے مردار کے اجزاء سے بھی نہ بنا ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -1100,8 +1345,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "82.",
           url: "https://www.leader.ir/en/book/241?sn=32494"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 83",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31080"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 83",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30772"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -1138,7 +1392,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The clothes of a praying person should not be made of the parts of an animal whose meat is ḥarām; even if a hair of it is on the clothes or body of the praying person, his prayer is invalid."
+          en: "The clothes of a praying person should not be made of the parts of an animal whose meat is ḥarām; even if a hair of it is on the clothes or body of the praying person, his prayer is invalid.",
+          ur: "نماز پڑھنے والے کا لباس حرام گوشت حیوان کے اجزاء سے نہ بنا ہو حتی کہ اگر حرام گوشت حیوان کا ایک بال بھی نماز پڑھنے والے کے بدن یا لباس کے ساتھ ہوتو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1146,8 +1401,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "85.",
           url: "https://www.leader.ir/en/book/241?sn=32495"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 86",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31081"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 86",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30773"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1182,7 +1446,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Wearing clothes woven with gold is forbidden for men and prayer performed in them is invalid. However, there is no problem for women to wear them in any situation."
+          en: "Wearing clothes woven with gold is forbidden for men and prayer performed in them is invalid. However, there is no problem for women to wear them in any situation.",
+          ur: "جو لباس سونے سے بنایا گیا ہو یا اس میں سونا استعمال کیا گیا ہو ، مرد کے لئے اس کو پہننا حرام اور اس میں نماز باطل ہے لیکن عورت کے لئے نماز اور دیگر تمام حالات میں کوئی اشکال نہیں رکھتا۔"
         },
         basis: "fatwa",
         source: {
@@ -1190,8 +1455,18 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "89.",
           url: "https://www.leader.ir/en/book/241?sn=32496"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 90",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31082"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 90",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30774"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        englishWithheld: "English says 'woven with gold'; the Persian and Urdu say woven with gold OR in which gold is used (یا طلا در آن به کار رفته باشد). The English leaves out a case."
       }
     ]
   },
@@ -1226,7 +1501,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Wearing a gold chain, gold ring, as well as a gold wrist watch is forbidden for men even for a short period, such as the moment of reading the marriage contract, even for a purpose other than using it as an adornment and hidden from the sight of people. By obligatory caution, prayer performed with them is invalid."
+          en: "Wearing a gold chain, gold ring, as well as a gold wrist watch is forbidden for men even for a short period, such as the moment of reading the marriage contract, even for a purpose other than using it as an adornment and hidden from the sight of people. By obligatory caution, prayer performed with them is invalid.",
+          ur: "مرد کے لئے سونے کی زنجیر، انگوٹھی اور ہاتھ کی گھڑی استعمال کرنا حرام ہے اگرچہ زینت کی نیت کے بغیر اور دوسروں کی نظروں سے مخفی اور مختصر مدت مثلا ًنکاح کے وقت ہی کیوں نہ ہو اور احتیاط واجب کی بناپر اس کے ساتھ نماز بھی باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1234,8 +1510,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "90.",
           url: "https://www.leader.ir/en/book/241?sn=32496"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 91",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31082"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 91",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30774"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -1271,7 +1556,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The clothes of a man performing prayer, (even the things which are too small to cover the private parts such as skullcaps, socks) should not be made of pure silk. Wearing such clothes is forbidden for men outside the prayers as well, but there is no problem if a man has a silken handkerchief or anything similar in his pocket. It does not invalidate the prayer either."
+          en: "The clothes of a man performing prayer, (even the things which are too small to cover the private parts such as skullcaps, socks) should not be made of pure silk. Wearing such clothes is forbidden for men outside the prayers as well, but there is no problem if a man has a silken handkerchief or anything similar in his pocket. It does not invalidate the prayer either.",
+          ur: "مرد کا لباس یہاں تک کہ وہ لباس بھی جس سے شرم گاہ کو چھپایا نہ جائے مثلا گول والی ٹوپی، جوراب وغیرہ بھی خالص ریشم کا ہوا تو اس کے ساتھ نماز باطل ہے اور مرد کے لئے نماز کے علاوہ بھی اس کو پہننا حرام ہے لیکن اگر ریشم کا رومال وغیرہ نماز پڑھنے والے کے ہمراہ مثلا ًجیب میں ہوتو کوئی اشکال نہیں ہے اور نماز باطل نہیں ہوتی ۔"
         },
         basis: "fatwa",
         source: {
@@ -1279,8 +1565,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "94.",
           url: "https://www.leader.ir/en/book/241?sn=32497"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 95",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31083"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 95",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30775"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1315,7 +1610,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A woman may wear silken clothes whether or not she is performing her prayer."
+          en: "A woman may wear silken clothes whether or not she is performing her prayer.",
+          ur: "عورت کے لئے نماز اور دوسرے مواقع پر ریشم کا لباس پہننے میں کوئی اشکال نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1323,8 +1619,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "97.",
           url: "https://www.leader.ir/en/book/241?sn=32497"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 98",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31083"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 98",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30775"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1360,7 +1665,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The place of offering the prayer should not be usurped."
+          en: "The place of offering the prayer should not be usurped.",
+          ur: "نماز پڑھنے والے کی جگہ غصبی نہ ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -1368,8 +1674,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "100.",
           url: "https://www.leader.ir/en/book/241?sn=32500"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 101",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31086"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 101",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30778"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1405,7 +1720,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The place at which one is offering their prayer should be immovable so that one can pray while their body is still and without movement. Therefore, to pray at a place where one moves against their will (like in a moving car or train) or on some spring mattresses, is incorrect except if one is compelled to offer the prayer there due to time shortage or some other reason."
+          en: "The place at which one is offering their prayer should be immovable so that one can pray while their body is still and without movement. Therefore, to pray at a place where one moves against their will (like in a moving car or train) or on some spring mattresses, is incorrect except if one is compelled to offer the prayer there due to time shortage or some other reason.",
+          ur: "نماز پڑھنے والے کی جگہ متحرک نہ ہو یعنی اس طرح ہو کہ نماز پڑھنے والاحرکت کے بغیر اور آرام سے نماز پڑھ سکے، بنابرایں ایسی جگہوں پر نماز پڑھنا کہ جہاں بے اختیار بدن کو حرکت آئے مثلا ً چلتی ہوئی گاڑی اور ریل یا اسپرنگ والے کچھ پلنگوں پر نماز صحیح نہیں ہے مگر یہ کہ وقت کی کمی یا کسی اور وجہ سے ایسی جگہ نماز پڑھنے پر مجبور ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -1413,8 +1729,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "106.",
           url: "https://www.leader.ir/en/book/241?sn=32501"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 107",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31088"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 107",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30779"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1449,7 +1774,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is obligatory for passengers who travel on buses to ask the driver to stop the bus at a place appropriate for praying if they fear of lapse of the prayer’s time; and it will be obligatory for the driver to accept their request. If he refuses to stop the bus for an acceptable reason, or for no reason, the passengers should perform the prayer on the bus while it is moving, and observe qiblah, standing position, rukū‘ and sajdah as much as possible."
+          en: "It is obligatory for passengers who travel on buses to ask the driver to stop the bus at a place appropriate for praying if they fear of lapse of the prayer’s time; and it will be obligatory for the driver to accept their request. If he refuses to stop the bus for an acceptable reason, or for no reason, the passengers should perform the prayer on the bus while it is moving, and observe qiblah, standing position, rukū‘ and sajdah as much as possible.",
+          ur: "عمومی سفری وسائل میں سفر کرنے والوں کو نماز کا وقت ختم ہونے کا خوف ہوتو واجب ہے کہ ڈرائیور سے رکنے کی درخواست کریں اور ڈرائیور پر بھی ان کی درخواست قبول کرنا واجب ہے۔ اگر کسی وجہ سے نہ رکے تو مسافروں پر واجب ہے کہ حرکت کی حالت میں نماز پڑھیں اورحتی الامکان قبلے کی سمت، قیام، رکوع اور سجود کی رعایت کریں۔"
         },
         basis: "fatwa",
         source: {
@@ -1457,8 +1783,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "107.",
           url: "https://www.leader.ir/en/book/241?sn=32501"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 108",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31088"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 108",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30779"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1493,7 +1828,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The praying person should not stand ahead of the grave of the Holy Prophet (S.A.W.) or an infallible Imam (a.), but there is no problem with standing in line with them."
+          en: "The praying person should not stand ahead of the grave of the Holy Prophet (S.A.W.) or an infallible Imam (a.), but there is no problem with standing in line with them.",
+          ur: "نماز پڑھتے وقت پیغمبراکرم صلی اللہ علیہ و آلہ وسلم اور امام علیہ السلام کی قبر سے آگے کھڑے نہ ہوں لیکن برابر میں کھڑے ہوں تو کوئی اشکال نہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -1501,8 +1837,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "109.",
           url: "https://www.leader.ir/en/book/241?sn=32503"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 110",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31090"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 110",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30781"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1538,7 +1883,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "According to the obligatory caution, there must be at least one span gap between a man and a woman who are praying (outside Masjid al- Ḥarām), and in this case, if they stand (in the same row) next to each other or the woman stands in front of the man, their prayer is correct. It makes no difference whether or not they are maḥrams."
+          en: "According to the obligatory caution, there must be at least one span gap between a man and a woman who are praying (outside Masjid al- Ḥarām), and in this case, if they stand (in the same row) next to each other or the woman stands in front of the man, their prayer is correct. It makes no difference whether or not they are maḥrams.",
+          ur: "احتیاط واجب کی بناپر نماز کی حالت میں (مسجد الحرام کے علاوہ) کم از کم ایک بالشت فاصلہ ہونا چاہئے اور اس صورت میں اگر مرد اور عورت ایک دوسرے کے برابر یا عورت مرد سے آگے کھڑی ہوجائے تو دونوں کی نماز صحیح ہے ، کوئی فرق نہیں کہ مرد و عورت دونوں محرم ہوں یا نامحرم ۔"
         },
         basis: "ihtiyat_wajib",
         source: {
@@ -1546,8 +1892,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "112.",
           url: "https://www.leader.ir/en/book/241?sn=32505"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 113",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31092"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 113",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30783"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1611,7 +1966,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is mustaḥabb to offer prayer in the following places:\n1. a masjid; (The best masjid is Masjid al- Ḥarām, followed by Masjid al-Nabī (peace be upon him and his family), then Masjid of Kūfah, Masjid al-Aqṣā, and then masjid jāmi‘ in any city).\n2. The shrine of an infallible Imam (a.). To offer prayer in their shrine brings more reward than offering in a masjid.\n3. To offer prayer in the holy shrine of a prophet (a.) or the place in which a friend of Allah, a pious man or a great scholar (upon whom be the blessing of Allah) is buried."
+          en: "It is mustaḥabb to offer prayer in the following places:\n1. a masjid; (The best masjid is Masjid al- Ḥarām, followed by Masjid al-Nabī (peace be upon him and his family), then Masjid of Kūfah, Masjid al-Aqṣā, and then masjid jāmi‘ in any city).\n2. The shrine of an infallible Imam (a.). To offer prayer in their shrine brings more reward than offering in a masjid.\n3. To offer prayer in the holy shrine of a prophet (a.) or the place in which a friend of Allah, a pious man or a great scholar (upon whom be the blessing of Allah) is buried.",
+          ur: "جن مقامات پر نماز پڑھنا مستحب ہے، درج ذیل ہیں:\n1۔ مسجد (مساجد میں سب سے افضل مسجد الحرام اس کے بعد مسجد نبوی اس کے بعد مسجد کوفہ اور مسجد اقصی اور اس کے بعد ہر شہر کی جامع مسجد افضل ہے)۔\n2۔ ائمہ علیہم السلام کے حرم (حرم اور مشاہد مشرفہ میں نماز پڑھنا مساجد سے زیادہ افضل ہے)۔\n3۔ انبیاء (علیہم السلام) مقدس روضے اور اولیاء، صلحاء اور علماء(رضوان اللہ علیہم) کے مقامات و مزارات۔"
         },
         basis: "fatwa",
         source: {
@@ -1619,8 +1975,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "114.",
           url: "https://www.leader.ir/en/book/241?sn=32506"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 115",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31093"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 115",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30784"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1657,7 +2022,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is forbidden to make the floor, roof, ceiling, and walls of a masjid najis, and if a masjid becomes najis, it is obligatory to purify it immediately."
+          en: "It is forbidden to make the floor, roof, ceiling, and walls of a masjid najis, and if a masjid becomes najis, it is obligatory to purify it immediately.",
+          ur: "مسجد کا فرش ، دیواراوراندرونی و بیرونی چھت کو نجس کرنا حرام ہے۔ اگر نجس ہوجائے تو اس کو فوراپاک کرنا واجب ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1665,8 +2031,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "115.",
           url: "https://www.leader.ir/en/book/241?sn=32507"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 116",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31094"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 116",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30785"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1701,7 +2076,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Reciting the adhān and iqāmah before the daily prayers is mustaḥabb. This recommendation is emphasized about the fajr and maghrib prayers, especially when they are performed in congregation, but reciting adhān and iqāmah is not prescribed for other obligatory prayers, such as the āyāt prayer."
+          en: "Reciting the adhān and iqāmah before the daily prayers is mustaḥabb. This recommendation is emphasized about the fajr and maghrib prayers, especially when they are performed in congregation, but reciting adhān and iqāmah is not prescribed for other obligatory prayers, such as the āyāt prayer.",
+          ur: "یومیہ واجب نمازوں سے پہلے اذان اور اقامت کہنا مستحب ہے اور نماز فجراور نماز مغرب مخصوصا ًنماز جماعت میں مستحب ہونے کی تاکید کی گئی ہے لیکن دوسری واجب نمازوں مثلا ًنماز آیات میں اذان و اقامہ نہیں ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -1709,8 +2085,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "129.",
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 130",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31095"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 130",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30786"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1745,7 +2130,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The adhān consists of eighteen phrases, as follows:\n1. Allāhu akbar, four times (“God is greater than any description”).\n2. Ashhadu allā ilāha illallāh, two times (“I testify that there is no god but Allah”).\n3. Ashhadu anna Muḥammadan rasūlullāh, two times (“I testify that Muhammad is Allah’s Messenger”).\n4. Ḥayya ‘alaṣ ṣalāh, two times (“Hasten to prayer”).\n5. Ḥayya ‘alal falāḥ, two times (“Hasten to ultimate happiness”).\n6. Ḥayya ‘alā khayril ‘amal, two times (“Hasten to the best of acts”).\n7. Allāhu akbar, two times (“God is greater than any description”).\n8. Lā ilāha illallāh, two times (“There is no god but Allah”).\nand the iqāmah is like the adhān, except for the following differences:\nThe first phrase is repeated twice instead of four times.\nBetween the 7th and 8th phrases, the following is repeated twice:\nqad qāmati-ṣṣalāh;\ncertainly, the prayer has been established;\nThe final phrase, lā ilāha ill-Allāh, is said once instead of repeated twice."
+          en: "The adhān consists of eighteen phrases, as follows:\n1. Allāhu akbar, four times (“God is greater than any description”).\n2. Ashhadu allā ilāha illallāh, two times (“I testify that there is no god but Allah”).\n3. Ashhadu anna Muḥammadan rasūlullāh, two times (“I testify that Muhammad is Allah’s Messenger”).\n4. Ḥayya ‘alaṣ ṣalāh, two times (“Hasten to prayer”).\n5. Ḥayya ‘alal falāḥ, two times (“Hasten to ultimate happiness”).\n6. Ḥayya ‘alā khayril ‘amal, two times (“Hasten to the best of acts”).\n7. Allāhu akbar, two times (“God is greater than any description”).\n8. Lā ilāha illallāh, two times (“There is no god but Allah”).\nand the iqāmah is like the adhān, except for the following differences:\nThe first phrase is repeated twice instead of four times.\nBetween the 7th and 8th phrases, the following is repeated twice:\nqad qāmati-ṣṣalāh;\ncertainly, the prayer has been established;\nThe final phrase, lā ilāha ill-Allāh, is said once instead of repeated twice.",
+          ur: "اذان اٹھارہ جملوں پر مشتمل ہے جو ذیل کی ترتیب سے ہیں:\n«اَللهُ اَکْبَرُ» چار مرتبہ\n«اَشْهَد اَنْ لا اِلهَ اِلاَّ اللهُ» دو مرتبہ،\n«اَشْهَدُ اَنَّ مُحَمَّداً (صلّی الله علیه و آله )رَسُولُ اللهِ» دو مرتبہ،\n«حَیَّ عَلَی الصَّلاهِ» دو مرتبہ،\n«حَیَّ عَلَی الفَلاحِ» دو مرتبہ،\n«حَیَّ عَلی خَیْرِ العَمَلِ» دو مرتبہ،\n«اَللهُ اَکْبَرُ» دو مرتبہ،\n«لا اِلهَ اِلاَّ اللهُ» دو مرتبہ.\nاقامت بھی اذان کی طرح ہے اس فرق کے ساتھ کہ اقامت کے شروع میں الله اکبر دو مرتبہ کہا جائے گا اور «حیّ علی‌ خیر العمل» کے بعد دو مرتبہ «قد قامت الصلوة» کہا جاتا ہے و آخر میں «لااله الا الله» ایک مرتبہ کہاجاتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1753,8 +2139,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "130.",
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 131",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31095"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 131",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30786"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1790,7 +2185,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Saying “ashhadu anna ‘Aliyyan waliyyullāh” (“I testify that Ali is the Friend of God”) in the adhān and iqāmah with the intention of it being a symbol for the Shi‘a is good and important, and it should be said only with the intention of closeness to Allah, but it is not a part of the adhān and iqāmah."
+          en: "Saying “ashhadu anna ‘Aliyyan waliyyullāh” (“I testify that Ali is the Friend of God”) in the adhān and iqāmah with the intention of it being a symbol for the Shi‘a is good and important, and it should be said only with the intention of closeness to Allah, but it is not a part of the adhān and iqāmah.",
+          ur: "«اَشْهَدُ اَنَّ عَلِیّاً وَلیُّ اللهِ» کہنا تشیع کے شعار کی حیثیت سے اہم اور بہتر ہے لیکن اذان اور اقامت کا جزء نہیں ہے اور قربت مطلقہ کی نیت سے کہا جائے۔"
         },
         basis: "fatwa",
         source: {
@@ -1798,8 +2194,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "131.",
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 132",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31095"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 132",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30786"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1834,7 +2239,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If they have said adhān and iqāmah for congregational prayer, a person who prays with that congregation should not say adhān and iqāmah for his/her own prayer."
+          en: "If they have said adhān and iqāmah for congregational prayer, a person who prays with that congregation should not say adhān and iqāmah for his/her own prayer.",
+          ur: "اگر نماز جماعت کے لئے اذان اور اقامت کہی جاچکی ہو اور کوئی اس نماز جماعت میں شریک ہونا چاہے تو اپنی نماز کے لئے اذان و اقامہ نہ کہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1842,8 +2248,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "134.",
           url: "https://www.leader.ir/en/book/241?sn=32508"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 135",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31095"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 135",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30786"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1936,7 +2351,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "There are eleven obligatory acts in a prayer as follows:\n1. Intention\n2. Takbīrah al-iḥrām (saying Allāhu akbar at the beginning of the prayer);\n3. Being in a standing posture;\n4. Recitation;\n5. Rukū‘ (bowing);\n6. Sajdah (prostration);\n7. Dhikr (the prescribed recitation while doing rukū‘ and sajdah)\n8. Tashahhud (bearing witness)\n9. Salām\n10. Tartīb (sequence)\n11. Muwālāt (succession)\nNow we will discuss these obligatory acts in details as well as their rules:"
+          en: "There are eleven obligatory acts in a prayer as follows:\n1. Intention\n2. Takbīrah al-iḥrām (saying Allāhu akbar at the beginning of the prayer);\n3. Being in a standing posture;\n4. Recitation;\n5. Rukū‘ (bowing);\n6. Sajdah (prostration);\n7. Dhikr (the prescribed recitation while doing rukū‘ and sajdah)\n8. Tashahhud (bearing witness)\n9. Salām\n10. Tartīb (sequence)\n11. Muwālāt (succession)\nNow we will discuss these obligatory acts in details as well as their rules:",
+          ur: "واجبات نماز گیارہ ہیں:\n1۔ نیت؛ 2۔ قیام؛ 3۔ تکبیرہ الاحرام؛ 4۔ قرائت ؛ 5۔ رکوع ؛ 6۔ سجدے؛ 7۔ ذکر؛ 8۔ تشہد؛ 9۔ سلام؛ 10۔ ترتیب؛ 11۔ موالات۔\nواجبات نماز اور ان کے احکام کی تفصیل آنے والے مسائل میں بیان کی جائے گی۔"
         },
         basis: "fatwa",
         source: {
@@ -1944,8 +2360,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "138.",
           url: "https://www.leader.ir/en/book/241?sn=32509"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 139",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31096"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 139",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30787"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1981,7 +2406,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The foundational elements (rukns) of prayer are:\n1. intention\n2. takbīrah al-iḥrām\n3. standing (at the time of saying takbīrah al-iḥrām and before the rukū‘)\n4. rukū‘\n5. two sajdah."
+          en: "The foundational elements (rukns) of prayer are:\n1. intention\n2. takbīrah al-iḥrām\n3. standing (at the time of saying takbīrah al-iḥrām and before the rukū‘)\n4. rukū‘\n5. two sajdah.",
+          ur: "ارکان نماز درج ذیل ہیں؛\n1۔ نیت؛ 2۔ تکبیرہ الاحرام؛ 3۔ تکبیرہ الاحرام کے دوران اور رکوع سے پہلے قیام (قیام متصل بہ رکوع)؛ 4۔ رکوع؛ 5۔ دونوں سجدے۔"
         },
         basis: "fatwa",
         source: {
@@ -1989,8 +2415,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "140.",
           url: "https://www.leader.ir/en/book/241?sn=32509"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 141",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31096"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 141",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30787"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2025,7 +2460,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Making an intention is obligatory for performing the prayer, which means performing a specified prayer to comply with the order of God."
+          en: "Making an intention is obligatory for performing the prayer, which means performing a specified prayer to comply with the order of God.",
+          ur: "نیت (جو واجبات رکنی میں سے ایک ہے) کا معنی نماز کو خدا کے فرمان کی اطاعت کے قصد سے انجام دینا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2033,8 +2469,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "141.",
           url: "https://www.leader.ir/en/book/241?sn=32510"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 142",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31097"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 142",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30788"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2069,7 +2514,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person should know which prayer he is performing. Hence, if a person, for example, makes the intention to perform a four-rak‘ah prayer, but does not specify whether it is ẓuhr or ‘aṣr prayer, his prayer is void."
+          en: "A person should know which prayer he is performing. Hence, if a person, for example, makes the intention to perform a four-rak‘ah prayer, but does not specify whether it is ẓuhr or ‘aṣr prayer, his prayer is void.",
+          ur: "نماز پڑھنے والے کو معلوم ہونا چاہئے کہ کون سی نماز پڑھ رہا ہے ۔ بنابرایں اگر نیت کرے کہ چار رکعت نماز پڑھتا ہوں لیکن اس امر کا تعین نہ کرے کہ ظہر کی نماز ہے یا عصر کی تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2077,8 +2523,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "143.",
           url: "https://www.leader.ir/en/book/241?sn=32510"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 144",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31097"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 144",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30788"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2113,7 +2568,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person should perform the prayer to comply with the order of God. Thus, if a person performs the very prayer for riyā’, i.e. in order to pretend to be religious or the like, it is ḥarām and the prayer is void."
+          en: "A person should perform the prayer to comply with the order of God. Thus, if a person performs the very prayer for riyā’, i.e. in order to pretend to be religious or the like, it is ḥarām and the prayer is void.",
+          ur: "انسان کو چاہئے کہ فقط اللہ کے فرمان کی اطاعت کے قصد سے نماز پڑھے۔ بنابرایں اگر اصل نماز کو ریا یعنی اپنی دینداری کے دکھاوے وغیرہ کے لئے پڑھے تویہ عمل حرام اور نماز باطل ہونے کا باعث ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2121,8 +2577,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "144.",
           url: "https://www.leader.ir/en/book/241?sn=32510"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 145",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31097"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 145",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30788"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2157,7 +2622,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Saying takbīrah al-iḥrām is obligatory for the prayer; namely, saying Allāhu akbar at the beginning of the prayer."
+          en: "Saying takbīrah al-iḥrām is obligatory for the prayer; namely, saying Allāhu akbar at the beginning of the prayer.",
+          ur: "نماز میں تکبیرۃ الاحرام واجب ہے اور اس سے مراد نماز کی ابتدا میں' الله اکبر' کہنا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2165,8 +2631,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "164.",
           url: "https://www.leader.ir/en/book/241?sn=32512"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 165",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31099"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 165",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30790"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2201,7 +2676,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is necessary that during pronunciation of the takbīrah al-iḥrām, the person’s body be still, so if a person intentionally pronounces takbīrah al-iḥrām while his body is moving, the prayer is invalid."
+          en: "It is necessary that during pronunciation of the takbīrah al-iḥrām, the person’s body be still, so if a person intentionally pronounces takbīrah al-iḥrām while his body is moving, the prayer is invalid.",
+          ur: "تکبیرۃ الاحرام کہتے وقت بدن سکون کے ساتھ اور حرکت کے بغیر ہونا چاہئے۔ بنابرایں اگر عمداً اور اختیار کے ساتھ اس وقت تکبیرۃ الاحرام کہے جب بدن حرکت میں ہو تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2209,8 +2685,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "168.",
           url: "https://www.leader.ir/en/book/241?sn=32512"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 169",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31099"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 169",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30790"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2245,7 +2730,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Standing while uttering takbīrah al-iḥrām and before going to rukū‘ is considered a foundational (rukn) element, meaning that if a person abandons it – even by mistake or due to forgetting it, the prayer becomes void."
+          en: "Standing while uttering takbīrah al-iḥrām and before going to rukū‘ is considered a foundational (rukn) element, meaning that if a person abandons it – even by mistake or due to forgetting it, the prayer becomes void.",
+          ur: "تکبیرۃ الاحرام کہتے وقت اور اسی طرح رکوع میں جانے سے پہلے کھڑے ہونا رکن ہے یعنی اگر سہواً اور فراموشی سے بھی ترک ہوجائے تو نماز باطل ہوجاتی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2253,8 +2739,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "149.",
           url: "https://www.leader.ir/en/book/241?sn=32511"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 150",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31098"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 150",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30789"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2290,7 +2785,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "When a person stands for recitation, he should not move his body, nor should he tilt towards one side or lean on anything, unless it is inevitable to do so, or he does so by mistake or forgetfully."
+          en: "When a person stands for recitation, he should not move his body, nor should he tilt towards one side or lean on anything, unless it is inevitable to do so, or he does so by mistake or forgetfully.",
+          ur: "نماز پڑھنے والے کو چاہئے کہ قیام کی حالت میں بدن کو حرکت نہ دے اور واضح طور پر کسی طرف نہ جھکے اور کسی جگہ ٹیک نہ لگائے مگر یہ کہ مجبور ہو یا بھولنے اور فراموشی کی وجہ سے ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -2298,8 +2794,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "153.",
           url: "https://www.leader.ir/en/book/241?sn=32511"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 154",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31098"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 154",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30789"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2334,7 +2839,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who is not able to offer the prayer in a standing posture should offer the prayer in a sitting posture, but if he is able to stand and lean on something, he should offer his prayer in a standing posture."
+          en: "A person who is not able to offer the prayer in a standing posture should offer the prayer in a sitting posture, but if he is able to stand and lean on something, he should offer his prayer in a standing posture.",
+          ur: "کوئی نماز کے دوران کھڑا نہ ہوسکے تو بیٹھ کر نماز پڑھے لیکن اگر کسی چیز پر ٹیک لگاکر کھڑا ہوسکتا ہو تو اس کا وظیفہ یہ ہے کہ کھڑے ہوکر نماز پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2342,8 +2848,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "156.",
           url: "https://www.leader.ir/en/book/241?sn=32511"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 157",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31098"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 157",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30789"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2379,7 +2894,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "One should recite chapter al-Fātiḥah in the first and second rak‘ah of the daily obligatory prayers, and thereafter, one should recite, by obligatory caution, a complete chapter."
+          en: "One should recite chapter al-Fātiḥah in the first and second rak‘ah of the daily obligatory prayers, and thereafter, one should recite, by obligatory caution, a complete chapter.",
+          ur: "یومیہ نمازوں کی پہلی اور دوسری رکعت میں پہلے سورہ حمد اور اس کے بعد احتیاط واجب کی بناپر ایک مکمل سورہ پڑھا جائے۔"
         },
         basis: "fatwa",
         source: {
@@ -2387,8 +2903,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "172.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 173",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 173",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -2424,7 +2949,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If the time is short for the prayer, he should not recite the chapter."
+          en: "If the time is short for the prayer, he should not recite the chapter.",
+          ur: "اگر نماز کا وقت تنگ ہوتو سورہ نہ پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2432,8 +2958,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "174.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 175",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 175",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2468,7 +3003,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person forgets to recite chapter al-Fātiḥah and the other chapter, or one of them, and after he goes to rukū‘, he realizes it, his prayer is correct."
+          en: "If a person forgets to recite chapter al-Fātiḥah and the other chapter, or one of them, and after he goes to rukū‘, he realizes it, his prayer is correct.",
+          ur: "اگر الحمد اور سورہ دونوں یا کسی ایک کو فراموش کردے اور رکوع میں پہنچنے کے بعد یاد آئے تو نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2476,8 +3012,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "176.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 177",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 177",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2513,7 +3058,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In the obligatory prayers, it is not permissible to recite chapters that contain verses of obligatory sajdah, and if a person intentionally or by mistake recites one of those chapters, he should, by obligatory caution, perform sajdah instantly upon reciting the verse of sajdah; then he should stand up and finish the chapter if it has not ended yet and finish the prayer, and then repeat the prayer. In case he realizes this before reaching the verse of sajdah, based on obligatory caution, he should abandon that chapter and recite another chapter and perform the prayer to the end and then repeat the prayer."
+          en: "In the obligatory prayers, it is not permissible to recite chapters that contain verses of obligatory sajdah, and if a person intentionally or by mistake recites one of those chapters, he should, by obligatory caution, perform sajdah instantly upon reciting the verse of sajdah; then he should stand up and finish the chapter if it has not ended yet and finish the prayer, and then repeat the prayer. In case he realizes this before reaching the verse of sajdah, based on obligatory caution, he should abandon that chapter and recite another chapter and perform the prayer to the end and then repeat the prayer.",
+          ur: "واجب نماز میں ان سوروں کو پڑھنا جائز نہیں کہ جن میں واجب سجدے ہیں۔ اگر عمدا یا بھول کر ان سوروں میں سے کسی کو پڑھے اور سجدے والی آیت پر پہنچ جائے تو احتیاط واجب کی بناپر سجدہ تلاوت بجالائے اور کھڑا ہوجائے اور اگر سورہ ختم نہیں ہوا ہے تو اس کو آخر تک پہنچائے اور نماز ختم کرے اور اس کے بعد نماز کو دوبارہ پڑھے۔ اگر سجدے والی آیت پر پہنچنے سے پہلے متوجہ ہوجائے تو احتیاط واجب یہ ہے کہ سورہ کو ترک کردے اور دوسرا سورہ پڑھے اور بعد میں نماز دوبارہ پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2521,8 +3067,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "178.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 179",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 179",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -2555,7 +3110,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If after chapter al-Fātiḥah, the praying person begins reciting chapter al-Ikhlāṣ or al-Kāfirūn, he cannot abandon it and recite another chapter. However, if in the Friday prayer, he recites one of these two chapters instead of chapter al-Jumu‘ah and chapter al-Munāfiqūn inadvertently, he can abandon them and start reciting chapter al-Jumu‘ah and chapter al-Munāfiqūn."
+          en: "If after chapter al-Fātiḥah, the praying person begins reciting chapter al-Ikhlāṣ or al-Kāfirūn, he cannot abandon it and recite another chapter. However, if in the Friday prayer, he recites one of these two chapters instead of chapter al-Jumu‘ah and chapter al-Munāfiqūn inadvertently, he can abandon them and start reciting chapter al-Jumu‘ah and chapter al-Munāfiqūn.",
+          ur: "اگر کوئی شخص الحمد کے بعد سورہ ' قل هو الله احد' یا 'قل یاایها الکافرون' شروع کرے تو اس کو چھوڑ کر دوسرا سورہ نہیں پڑھ سکتا لیکن نماز جمعہ میں اگر سورہ جمعہ یا منافقین کے بجائے بھول کر ان دونوں سوروں میں سے کسی ایک کو پڑھے تو اس کو چھوڑ کر سورہ جمعہ اور منافقین پڑھ سکتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2563,8 +3119,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "180.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 181",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 181",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2600,7 +3165,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is obligatory for men to recite chapter al-Fātiḥah and the second chapter in fajr, maghrib and ‘ishā’ prayers loudly (in jahr), and in ẓuhr and ‘aṣr prayers in a whispering manner (ikhfāt)."
+          en: "It is obligatory for men to recite chapter al-Fātiḥah and the second chapter in fajr, maghrib and ‘ishā’ prayers loudly (in jahr), and in ẓuhr and ‘aṣr prayers in a whispering manner (ikhfāt).",
+          ur: "مرد پر واجب ہے کہ نماز صبح، مغرب اور عشاء کی پہلی دو رکعتوں میں الحمد اور سورہ کو بلند آواز میں پڑھے اور مرد اور عورت پر واجب ہے کہ نماز ظہر اور عصر میں الحمد اور سورہ آہستہ پڑھیں۔"
         },
         basis: "fatwa",
         source: {
@@ -2608,8 +3174,18 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "190.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 191",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 191",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        englishWithheld: "English leaves out 'the first two rak'ahs' of fajr/maghrib/'isha' and says only men for the quiet prayers; the Persian and Urdu say men AND women for zuhr/'asr (بر مرد و زن)."
       }
     ]
   },
@@ -2674,7 +3250,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In the morning, maghrib and ‘ishā’ prayers, a female has the choice to recite the chapter al-Fātiḥah and another chapter quietly or loudly unless a non-maḥram is hearing her voice, in case of which it is better that she recites quietly."
+          en: "In the morning, maghrib and ‘ishā’ prayers, a female has the choice to recite the chapter al-Fātiḥah and another chapter quietly or loudly unless a non-maḥram is hearing her voice, in case of which it is better that she recites quietly.",
+          ur: "عورت نماز صبح، مغرب اور عشاء میں الحمد او سورہ کو بلند آواز سے یا آہستہ پڑھ سکتی ہے لیکن اگر نامحرم اس کی آواز سن رہا ہو تو بہتر ہے کہ آہستہ پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2682,8 +3259,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "191.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 192",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 192",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2719,7 +3305,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person intentionally offers a prayer quietly which should be offered loudly, or he intentionally offers a prayer loudly which should be offered quietly, his prayer is void. However, if he does so owing to forgetting or not knowing the ruling, his prayer is correct, and if he realizes his mistake while reciting chapter al-Fātiḥah, the other chapter, or the four tasbīḥ, it is not necessary for him to repeat what he has recited in the wrong manner."
+          en: "If a person intentionally offers a prayer quietly which should be offered loudly, or he intentionally offers a prayer loudly which should be offered quietly, his prayer is void. However, if he does so owing to forgetting or not knowing the ruling, his prayer is correct, and if he realizes his mistake while reciting chapter al-Fātiḥah, the other chapter, or the four tasbīḥ, it is not necessary for him to repeat what he has recited in the wrong manner.",
+          ur: "اگرکوئی شخص جس جگہ بلند آواز سے پڑھنا چاہئے، عمداً آہستہ پڑھے یا جہاں آہستہ پڑھنا چاہئے ، عمداً بلند آواز سے پڑھے تو نماز باطل ہے لیکن اگر فراموشی یا مسئلہ نہ جاننے کی وجہ سے ہو تو نماز صحیح ہے چنانچہ الحمد اور سورہ یا تسبیحات پڑھتے ہوئے متوجہ ہوجائے تو جتنی مقدار غلطی سے بلند یا آہستہ پڑھی ہے، دوبارہ پڑھنا لازم نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2727,8 +3314,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "197.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 198",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 198",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2764,7 +3360,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is obligatory that the recitations of the prayer should be correct and without any problem. If one is not able to learn the correct pronunciation at all, he should recite in any manner he can, and by mustaḥabb caution he should offer his prayer in congregation."
+          en: "It is obligatory that the recitations of the prayer should be correct and without any problem. If one is not able to learn the correct pronunciation at all, he should recite in any manner he can, and by mustaḥabb caution he should offer his prayer in congregation.",
+          ur: "انسان نماز کو غلطی کے بغیر اور صحیح پڑھے۔ جو شخص کسی بھی طور پر صحیح ادا ئیگی نہیں سیکھ سکتا ہو ضروری ہے کہ جس طریقے سے بھی ممکن ہو نماز پڑھے اور احتیاط مستحب یہ ہے کہ نماز کو جماعت کے ساتھ پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2772,8 +3369,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "200.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 201",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 201",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -2810,7 +3416,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once. However, according to mustaḥabb caution, it is said three times. Of course, instead of this dhikr, which is called the four tasbīḥ, one may recite chapter al-Fātiḥah."
+          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once. However, according to mustaḥabb caution, it is said three times. Of course, instead of this dhikr, which is called the four tasbīḥ, one may recite chapter al-Fātiḥah.",
+          ur: "نماز کی تیسری اور چوتھی رکعت میں ایک دفعہ سبحان الله والحمدلله ولا الله الاالله والله اکبر پڑھنا کافی ہے اگرچہ احتیاط مستحب یہ ہے کہ تین دفعہ پڑھا جائے البتہ اس ذکر (جس کو تسبیحات اربعہ کہتے ہیں) کے بجائے سورہ حمد بھی پڑھ سکتے ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -2818,8 +3425,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "184.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 185",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 185",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -2855,7 +3471,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is obligatory for both men and women in the third and fourth rak‘ah to recite the four tasbīḥ or chapter al-Fātiḥah in a whispering manner; and by caution, if a person recites chapter al-Fātiḥah, he should recite bismillāhir raḥmānir raḥīm in a whispering manner."
+          en: "It is obligatory for both men and women in the third and fourth rak‘ah to recite the four tasbīḥ or chapter al-Fātiḥah in a whispering manner; and by caution, if a person recites chapter al-Fātiḥah, he should recite bismillāhir raḥmānir raḥīm in a whispering manner.",
+          ur: "تیسری اور چوتھی رکعت میں تسبیحات یا الحمد کو آہستہ پڑھےاور الحمد پڑھنے کی صورت میں احتیاط کی بناپر بسم اللہ بھی آہستہ پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2863,8 +3480,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "192.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 193",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 193",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30791"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5)."
       }
     ]
@@ -2900,7 +3526,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In every rak‘ah after the recitation, the praying person should make a rukū‘, i.e. to bow to an extent that he is able to place his palms on his knees, and it is sufficient if only the fingertips can reach the knees."
+          en: "In every rak‘ah after the recitation, the praying person should make a rukū‘, i.e. to bow to an extent that he is able to place his palms on his knees, and it is sufficient if only the fingertips can reach the knees.",
+          ur: "ہر رکعت میں قرائت کے بعد رکوع کرے یعنی اس قدر جھک جائے کہ ہاتھ گھٹنوں پر رکھ سکے اور اگر انگلیوں کے سرے بھی گھٹنوں تک پہنچیں تو کافی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2908,8 +3535,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "213.",
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 214",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31127"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 214",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30792"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2945,7 +3581,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The obligatory dhikr in rukū‘ is to say subḥāna rabbīyal ‘aẓīmi wa biḥamdih once or subḥānallāh three times, and it is sufficient if a person says another dhikr such as alḥamdu lillāh, Allāhu akbar or another dhikr to the same amount."
+          en: "The obligatory dhikr in rukū‘ is to say subḥāna rabbīyal ‘aẓīmi wa biḥamdih once or subḥānallāh three times, and it is sufficient if a person says another dhikr such as alḥamdu lillāh, Allāhu akbar or another dhikr to the same amount.",
+          ur: "رکوع میں ذکر پڑھنا ضروری ہے۔ رکوع کا واجب ذکر ایک دفعہ سُبْحانَ رَبِّیَ‌ الْعَظیْمِ وَ بِحَمْدِهِ یا تین دفعہ سُبْحانَ اللهِ ہے۔ اگر اس کے بجائے (سجدے کے مخصوص ذکر کے علاوہ) کوئی دوسرا ذکر مثلاً اَلْحَمْدُ لِلهِ اور اَللّهُ اَکبَرُ وغیرہ اسی مقدار میں پڑھے تو کافی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2953,8 +3590,18 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "221.",
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 222",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31127"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 222",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30792"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        englishWithheld: "English allows 'another dhikr' in ruku' without the Persian/Urdu exception (غیر از ذکر مخصوص سجده: not the dhikr specific to sajdah). The English is more permissive."
       }
     ],
     differsBetweenMaraji: true,
@@ -2994,7 +3641,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The body should be still while reciting the obligatory dhikr in rukū‘. Moreover, based on obligatory caution, the body should be still while reciting mustaḥabb dhikr with the intention of counting it a part of rukū‘, such as the repetition of subḥāna rabbīyal ‘aẓīmi wa biḥamdih."
+          en: "The body should be still while reciting the obligatory dhikr in rukū‘. Moreover, based on obligatory caution, the body should be still while reciting mustaḥabb dhikr with the intention of counting it a part of rukū‘, such as the repetition of subḥāna rabbīyal ‘aẓīmi wa biḥamdih.",
+          ur: "رکوع میں واجب ذکر پڑھتے وقت بدن ساکن ہونا چاہئے بلکہ مستحب ہونے کے قصد سے پڑھنے والے اذکار کے دوران مثلا سُبْحانَ رَبِّیَ الْعَظیمِ وَ بِحَمْدِهِ کو تکرار کرے تو بھی احتیاط واجب یہ ہے کہ بدن کو سکون کی حالت میں رکھے۔"
         },
         basis: "fatwa",
         source: {
@@ -3002,8 +3650,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "223.",
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 224",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31127"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 224",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30792"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3040,7 +3697,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is obligatory to stand straight after the completion of rukū‘, and after the body has become still, one should go to sajdah. Thus, if a person intentionally goes to sajdah before standing straight or before his body becomes still, his prayer will be void."
+          en: "It is obligatory to stand straight after the completion of rukū‘, and after the body has become still, one should go to sajdah. Thus, if a person intentionally goes to sajdah before standing straight or before his body becomes still, his prayer will be void.",
+          ur: "نماز پڑھنے والا رکوع کا ذکر ختم ہونے کے بعد کھڑا ہوجائے اور بدن ساکن ہونے کے بعد سجدے میں جائے اور اگر کھڑا ہونے سے پہلے یا بدن ساکن ہونے سے پہلے عمداً سجدے میں چلا جائے تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3048,8 +3706,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "231.",
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 232",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31127"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 232",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30792"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3084,7 +3751,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person forgets to perform rukū‘, and before he performs the first sajdah, he recollects it, he should stand up and then go to rukū‘ (and it is not sufficient if he returns to rukū‘ from a bowing posture and if he does not make another rukū‘, his prayer is void)."
+          en: "If a person forgets to perform rukū‘, and before he performs the first sajdah, he recollects it, he should stand up and then go to rukū‘ (and it is not sufficient if he returns to rukū‘ from a bowing posture and if he does not make another rukū‘, his prayer is void).",
+          ur: "اگر رکوع کرنا بھول جائے اور سجدے میں پہنچنے سے پہلے یاد آئے تو کھڑا ہوجائے اور قیام کی حالت سے رکوع میں جائے چنانچہ جھکے ہوئے ہونے کی حالت میں رکوع کی طرف جائے تو کافی نہیں ہے اور اگر اسی پر اکتفاء کرے تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3092,8 +3760,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "232.",
           url: "https://www.leader.ir/en/book/241?sn=32514"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 233",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31127"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 233",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30792"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3129,7 +3806,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In every rak‘ah of the obligatory or mustaḥabb prayers after rukū‘, two sajdah should be performed, which is to put the forehead on the ground out of humility before Allah."
+          en: "In every rak‘ah of the obligatory or mustaḥabb prayers after rukū‘, two sajdah should be performed, which is to put the forehead on the ground out of humility before Allah.",
+          ur: "واجب او رمستحب نمازوں کی ہر رکعت میں رکوع کے بعد دو سجدے بجالائے یعنی خدا کے حضور خضوع سے پیشانی کو زمین پر رکھے۔"
         },
         basis: "fatwa",
         source: {
@@ -3137,8 +3815,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "236.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 237",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 237",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3174,7 +3861,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In sajdah, it is obligatory to place seven body parts on the ground: the forehead, the palms, the knees, and the tips of both big toes."
+          en: "In sajdah, it is obligatory to place seven body parts on the ground: the forehead, the palms, the knees, and the tips of both big toes.",
+          ur: "سجدے میں پیشانی کے علاوہ دونوں ہاتھوں کی ہتھیلی، دونوں گھٹنوں اور دونوں پاوں کے انگوٹھوں کی نوک کو زمین پر رکھا جائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3182,8 +3870,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "237.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 238",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 238",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3219,7 +3916,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The two sajdah in one rak‘ah together comprise one foundational element (rukn), meaning that if a person, intentionally or forgetfully, abandons them or adds two more sajdah to them, his prayer becomes void."
+          en: "The two sajdah in one rak‘ah together comprise one foundational element (rukn), meaning that if a person, intentionally or forgetfully, abandons them or adds two more sajdah to them, his prayer becomes void.",
+          ur: "ایک رکعت میں دونوں سجدے مل کر رکن ہیں بنابرایں اگر جان بوجھ کر یا بھولے سے دونوں ترک ہوجائیں یا دو سجدے زیادہ ہوجائیں تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3227,8 +3925,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "238.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 239",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 239",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3264,7 +3971,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The obligatory dhikr in sajdah is to say subḥāna rabbī al‘alā wa biḥamdih once or subḥānallāh three times, and it is sufficient if a person says another dhikr such as alḥamdu lillāh, Allāhu akbar or another dhikr — except for rukū‘ dhikr — to the same amount."
+          en: "The obligatory dhikr in sajdah is to say subḥāna rabbī al‘alā wa biḥamdih once or subḥānallāh three times, and it is sufficient if a person says another dhikr such as alḥamdu lillāh, Allāhu akbar or another dhikr — except for rukū‘ dhikr — to the same amount.",
+          ur: "سجدے کا واجب ذکر ایک دفعہ سُبْحانَ رَبِّیَ الْاَعْلی وَ بِحَمْدِهِ یا تین دفعہ سُبْحانَ اللهِ پڑھنا ہے اور اگر اس کے بجائے ( رکوع کے مخصوص ذکر کے علاوہ) کوئی اور ذکر مثلا اَلْحَمْدُ لِلّهِ، اَللهُ اَکْبَرُ وغیرہ اسی مقدار میں پڑھے تو کافی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3272,8 +3980,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "243.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 244",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 244",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ],
     differsBetweenMaraji: true,
@@ -3292,7 +4009,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Translations of the dhikr of rukū‘ and sajdah and some mustaḥabb phrases are as follows:\nسُبْحَانَ الله\nGlorified is God\nسُبْحَانَ ربی العظیم و بحمده\nGlorified is my Lord, the Almighty, and I praise Him\nسُبْحَانَ ربی الأعلی و بحمده\nGlorified is my Lord, the Highest, and I praise Him\nسمع الله لمن حمده\nMay God attend to the one who praises Him.\nأستغفرالله ربی و أتوب علیه\nI ask God, my Lord, to forgive me, and I return to Him.\nبحول الله و قوته أقوم و أقعد\nWith the will of God and His power, I stand and I sit."
+          en: "Translations of the dhikr of rukū‘ and sajdah and some mustaḥabb phrases are as follows:\nسُبْحَانَ الله\nGlorified is God\nسُبْحَانَ ربی العظیم و بحمده\nGlorified is my Lord, the Almighty, and I praise Him\nسُبْحَانَ ربی الأعلی و بحمده\nGlorified is my Lord, the Highest, and I praise Him\nسمع الله لمن حمده\nMay God attend to the one who praises Him.\nأستغفرالله ربی و أتوب علیه\nI ask God, my Lord, to forgive me, and I return to Him.\nبحول الله و قوته أقوم و أقعد\nWith the will of God and His power, I stand and I sit.",
+          ur: "رکوع اور سجدوں کے اذکار اور بعض مستحب اذکار کا ترجمہ:\nسُبْحَانِ اللهِ خدا پاک اور منزہ ہے۔\nسُبْحَانَ رَبِّیَ الْعَظیمِ وَ بِحَمْدِه میرا عظیم پروردگار پاک و منزہ ہے اور میں اس کی ستائش میں مشغول ہوں۔\nسُبْحانَ رَبِّیَ الْاَعْلی وَ بِحَمْدِهِ میرا پروردگار پاک و منزہ اور سب سے بالاتر ہے اور میں اس کی ستائش میں مشغول ہوں۔\nسَمِعَ اللهُ لِمَنْ حَمِدَهُ خدا کی عنایت اس پر ہو جو اس کی ستائش کرتا ہے۔\nاَسْتَغْفِرُ اللهَ رَبِّی وَ اَتُوبُ اِلَیْهِ میں اس خدا سے مغفرت چاہتا ہوں جو میرا پروردگار ہے اور میں اس کی طرف رجوع کرتا ہوں۔\nبِحَوْلِ اللهِ وَ قُوَّتِهِ اَقُومُ وَ اَقْعُدُ میں خدا کی قوت اور ارادے سے اٹھتا اور بیٹھتا ہوں۔"
         },
         basis: "fatwa",
         source: {
@@ -3300,9 +4018,18 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "318.",
           url: "https://www.leader.ir/en/book/241?sn=32524"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 319",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31138"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 319",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30803"
+        },
         verification: "A",
-        arabicInSource: true,
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        arabicInSource: true
       }
     ]
   },
@@ -3337,7 +4064,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "After finishing the dhikr of the first sajdah, the praying person should sit until his body becomes still and then make sajdah again."
+          en: "After finishing the dhikr of the first sajdah, the praying person should sit until his body becomes still and then make sajdah again.",
+          ur: "پہلے سجدے کا ذکر ختم ہونے کے بعد بیٹھے تاکہ بدن ساکن ہوجائے اور دوبارہ سجدے میں جائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3345,8 +4073,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "255.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 256",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 256",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3382,7 +4119,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The place where a person puts his forehead for sajdah should not be more than four joined fingers lower or higher than the place where he places his knees and the tips of his toes."
+          en: "The place where a person puts his forehead for sajdah should not be more than four joined fingers lower or higher than the place where he places his knees and the tips of his toes.",
+          ur: "سجدے کی حالت میں پیشانی کی جگہ گھٹنوں اور پاوں کی انگلیوں کی جگہ سے چار ملی ہوئی انگلیوں کی مقدار سے نیچی یا بلند نہیں ہونا چاہئے۔"
         },
         basis: "fatwa",
         source: {
@@ -3390,8 +4128,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "258.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 259",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 259",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3426,7 +4173,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "There should not be any barrier such as hair or a hat between the forehead and what the sajdah is done on."
+          en: "There should not be any barrier such as hair or a hat between the forehead and what the sajdah is done on.",
+          ur: "ضروری ہے کہ پیشانی اور سجدہ گاہ کے درمیان سر کے بال اور ٹوپی وغیرہ حائل نہ ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -3434,8 +4182,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "260.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 261",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 261",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3470,7 +4227,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The turbah or another thing on which a person prostrates should be pure, but there is no problem if he puts it on a najis carpet or if one side of it is najis and he places his forehead on the pure side."
+          en: "The turbah or another thing on which a person prostrates should be pure, but there is no problem if he puts it on a najis carpet or if one side of it is najis and he places his forehead on the pure side.",
+          ur: "سجدہ گاہ یا وہ چیز جس پر سجدہ کرے، پاک ہونی چاہئے لیکن نجس فرش پر سجدہ گاہ رکھنا چنانچہ بدن اور لباس تک نجاست سرایت نہ کرے یا سجدہ گاہ کی ایک طرف نجس ہونا جب کہ پیشانی کو پاک طرف رکھے تو کوئی اشکال نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3478,8 +4236,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "259.",
           url: "https://www.leader.ir/en/book/241?sn=32515"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 260",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31128"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 260",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30793"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3522,8 +4289,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "265.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 266",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urduNote: "The official Urdu edition differs from the Persian original in this ruling, so only the English, which matches the Persian, is shown (decision R11)."
       }
     ]
   },
@@ -3558,7 +4330,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Performing sajdah on what grows on earth and is served only as fodder for animals, such as grass, hay, etc., is valid."
+          en: "Performing sajdah on what grows on earth and is served only as fodder for animals, such as grass, hay, etc., is valid.",
+          ur: "ایسی چیزوں پر سجدہ صحیح ہے جو زمین سے اگتی ہیں اور فقط حیوانات کی خوراک ہیں مثلا بھوسا ًاور گھاس ۔"
         },
         basis: "fatwa",
         source: {
@@ -3566,8 +4339,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "268.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 269",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31129"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 269",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3602,7 +4384,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Prostrating on the brick, clay, gypsum, limestone, and cement is valid."
+          en: "Prostrating on the brick, clay, gypsum, limestone, and cement is valid.",
+          ur: "اینٹ، مٹی کے برتن، جپسم، چونے کے پتھر اور سیمنٹ پر سجدہ کرنا صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3610,8 +4393,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "267.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 268",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31129"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 268",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3646,7 +4438,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Sajdah on a piece of paper made of wood and plants (except for flax and cotton) is valid."
+          en: "Sajdah on a piece of paper made of wood and plants (except for flax and cotton) is valid.",
+          ur: "لکڑی اور گھاس (پٹ سن اور روئی کے علاوہ) سے تیارہ شدہ کاغذ پر سجدہ صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3654,8 +4447,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "272.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 273",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31129"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 273",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3690,7 +4492,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The best object to use for sajdah is soil and earth, because it is a sign of humility before God, the Almighty, and no soil approaches the great merits of the blessed soil of the grave of Imam al-Husayn (a)."
+          en: "The best object to use for sajdah is soil and earth, because it is a sign of humility before God, the Almighty, and no soil approaches the great merits of the blessed soil of the grave of Imam al-Husayn (a).",
+          ur: "مٹی اور زمین پر سجدہ کرنا سب سے بہترین سجدہ ہے جو خدا کے حضور خضوع و خشوع کی علامت ہے اور سجدے کے لئےکوئی بھی مٹی تربت مقدس سید الشہداء علیہ السلام کے برابر فضیلت نہیں رکھتی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3698,8 +4501,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "277.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 278",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31129"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 278",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3735,7 +4547,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person does not have anything on which he is allowed to perform sajdah, or he has such a thing but cannot perform sajdah on it due to severe heat or cold, he should perform sajdah on his clothes or something else made of flax or cotton. By obligatory caution, if it is possible to prostrate on clothes made of cotton or flax, a person should not prostrate on clothes which are not made of cotton or flax. If, however, he does not have these things, he may perform sajdah on the back of his hand, by obligatory caution."
+          en: "If a person does not have anything on which he is allowed to perform sajdah, or he has such a thing but cannot perform sajdah on it due to severe heat or cold, he should perform sajdah on his clothes or something else made of flax or cotton. By obligatory caution, if it is possible to prostrate on clothes made of cotton or flax, a person should not prostrate on clothes which are not made of cotton or flax. If, however, he does not have these things, he may perform sajdah on the back of his hand, by obligatory caution.",
+          ur: "اگر ایسی چیز نہ ہو جس پر سجدہ صحیح ہے یا سردی یا گرمی وغیرہ کی وجہ سے اس پر سجدہ کرنا ممکن نہ ہو چنانچہ روئی یا پٹ سن سے تیار شدہ لباس یا روئی اور پٹ سن سے تیار شدہ کوئی اور چیز ہو تو اس پر سجدہ کرے اور احتیاط واجب یہ ہے کہ جب تک روئی اور پٹ سن سے تیارشدہ لباس ممکن ہو دوسری جنس سے تیار شدہ لباس پر سجدہ نہ کرے اور ایسی اشیاء اختیار میں نہ ہوں تو احتیاط واجب کی بناپر ہاتھ کی پشت پر سجدہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -3743,8 +4556,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "273.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 274",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31129"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 274",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3780,7 +4602,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "When a person has to observe taqiyyah, he can perform sajdah on a carpet or other similar objects, and it is not necessary for him to go somewhere else to perform the prayer. In case, however, he can perform sajdah in the same place on a straw mat, stone, or the like without any difficulty, he should do so by obligatory caution."
+          en: "When a person has to observe taqiyyah, he can perform sajdah on a carpet or other similar objects, and it is not necessary for him to go somewhere else to perform the prayer. In case, however, he can perform sajdah in the same place on a straw mat, stone, or the like without any difficulty, he should do so by obligatory caution.",
+          ur: "جہاں تقیہ واجب ہو فرش وغیرہ پر سجدہ کرسکتا ہے اور نماز کے لئے دوسری جگہ جانا لازم نہیں ہے لیکن اگر اسی جگہ کسی زحمت کے بغیر چٹائی یا پتھر وغیرہ پر سجدہ کرسکتا ہو تو احتیاط واجب کی بناپر ان اشیاء پر سجدہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -3788,8 +4611,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "275.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 276",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31129"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 276",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3827,7 +4659,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is forbidden to perform sajdah for anyone other than the Almighty God. Regarding placing the forehead on the earth before the last entrance to the shrine — i.e. under the dome — of the Imams (a), if this is done with the intention of prostrating to thank God Almighty, there is no problem with it; otherwise, it is forbidden."
+          en: "It is forbidden to perform sajdah for anyone other than the Almighty God. Regarding placing the forehead on the earth before the last entrance to the shrine — i.e. under the dome — of the Imams (a), if this is done with the intention of prostrating to thank God Almighty, there is no problem with it; otherwise, it is forbidden.",
+          ur: "اللہ تعالی کے علاوہ کسی اور کو سجدہ کرنا حرام ہے اور بعض لوگ ائمہ علیہم السلام کے مزارات کے سامنے پیشانی کو زمین پر رکھتے ہیں، اگر اللہ تعالی کا شکر ادا کرنے کی نیت سے ایسا کریں تو اشکال نہیں ہے ورنہ حرام ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3835,8 +4668,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "280.",
           url: "https://www.leader.ir/en/book/241?sn=32516"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 281",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31129"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 281",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30794"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3871,7 +4713,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In each of the four chapters of the holy Qur’an — chapter al-Sajdah, chapter Fuṣṣilat, chapter al-Najm, and chapter al-‘Alaq — there is a verse of obligatory sajdah. If you recite the whole verse or listen to it, you are immediately required to make sajdah. if you forget to perform it, you should do so when you remember.*\n\n* The verses of obligatory sajdah are 32:15, 41:37, 53:62, and 96:19."
+          en: "In each of the four chapters of the holy Qur’an — chapter al-Sajdah, chapter Fuṣṣilat, chapter al-Najm, and chapter al-‘Alaq — there is a verse of obligatory sajdah. If you recite the whole verse or listen to it, you are immediately required to make sajdah. if you forget to perform it, you should do so when you remember.*\n\n* The verses of obligatory sajdah are 32:15, 41:37, 53:62, and 96:19.",
+          ur: "چار سوروں سورہ سجدہ (الم تنزیل)، فصلت (حم سجدہ)، نجم اور علق میں سے ہر ایک میں واجب سجدے کی ایک آیت ہے جسےاگر انسان پڑھے یا سنے تو اس کے ختم ہونے کے فوراً بعد سجدہ کرنا ضروری ہے اور اگرسجدہ کرنا بھول جائے تو جب بھی یاد آئے سجدے کو انجام دے۔\n* سجدے والی آیات: 1۔ سورہ سجدہ، آیت 15۔ 2۔ سورہ فصلت، آیت37۔ 3۔ سورہ نجم، آیت62۔ 4۔ سورہ علق، آیت19"
         },
         basis: "fatwa",
         source: {
@@ -3879,8 +4722,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "281.",
           url: "https://www.leader.ir/en/book/241?sn=32517"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 282",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31130"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 282",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30795"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3916,7 +4768,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The obligatory dhikr in tashahhud is:\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِیکَ لَهُ وَ أَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَ رَسُولُهُ اللَّهُمَّ صَلِّ عَلَی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ"
+          en: "The obligatory dhikr in tashahhud is:\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِیکَ لَهُ وَ أَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَ رَسُولُهُ اللَّهُمَّ صَلِّ عَلَی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ",
+          ur: "تشہد کی حالت میں واجب ذکر یہ ہے: اَشْهَدُ اَنْ لاَ اِلهَ اِلاَّ اللهُ وَحْدَهُ لاَ شَریْکَ لَهُ و اَشْهَدُ اَنَّ مُحَمَّداً عَبْدُهُ وَ رَسُولُهُ، اللّهُمَّ صَلِّ عَلی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ"
         },
         basis: "fatwa",
         source: {
@@ -3924,9 +4777,18 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "289.",
           url: "https://www.leader.ir/en/book/241?sn=32518"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 290",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31131"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 290",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30796"
+        },
         verification: "A",
-        arabicInSource: true,
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        arabicInSource: true
       }
     ]
   },
@@ -3962,7 +4824,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who forgets tashahhud and stands up for the third rak‘ah, if he remembers that he has not recited tashahhud before going to rukū‘, he has to sit, recite tashahhud, stand up again, say tasbīḥ of the third rak‘ah, and finish the prayer. Then, based on mustaḥabb caution, he performs two sahw sajdah because of his wrongly standing."
+          en: "A person who forgets tashahhud and stands up for the third rak‘ah, if he remembers that he has not recited tashahhud before going to rukū‘, he has to sit, recite tashahhud, stand up again, say tasbīḥ of the third rak‘ah, and finish the prayer. Then, based on mustaḥabb caution, he performs two sahw sajdah because of his wrongly standing.",
+          ur: "اگر تشہد پڑھنا بھول جائے اور تیسری رکعت کے لئے کھڑا ہوجائے لیکن رکوع سے پہلے یاد آئے تو بیٹھ جائے اور تشہد پڑھے اور دوبارہ کھڑے ہوکر تیسری رکعت کی تسبیحات کو دوبارہ پڑھے اور نماز جاری رکھے اور نماز کے بعد بے جا قیام کے لئے احتیاط مستحب کی بناپر دو سجدہ سہو بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3970,8 +4833,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "292.",
           url: "https://www.leader.ir/en/book/241?sn=32518"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 293",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31131"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 293",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30796"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -4009,7 +4881,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The last part of prayer, with the recitation of which the prayer ends, is salām. The obligatory salām of prayer is to say assalāmu ‘alaykum, and it is better to add to it, wa raḥmatullāhi wa barakātuh, or to say assalāmu ‘alaynā wa ‘alā ‘ibādillāhiṣ ṣāliḥīn."
+          en: "The last part of prayer, with the recitation of which the prayer ends, is salām. The obligatory salām of prayer is to say assalāmu ‘alaykum, and it is better to add to it, wa raḥmatullāhi wa barakātuh, or to say assalāmu ‘alaynā wa ‘alā ‘ibādillāhiṣ ṣāliḥīn.",
+          ur: "سلام نماز کا آخری جزء ہے جس کو کہنے کے بعد نماز ختم ہوجاتی ہے۔ نماز کا واجب سلام یہ ہے کہ کہے: اَلسَّلاَمُ عَلَیْکُم اور بہتر ہے کہ وَ رَحْمَةُ اللهِ وَ بَرَکاتُهُ کو بھی اضافہ کرے یا کہے: اَلسَّلاَمُ عَلَیْنَا وَ عَلی عِبادِ اللهِ الصّالِحینَ."
         },
         basis: "fatwa",
         source: {
@@ -4017,8 +4890,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "294.",
           url: "https://www.leader.ir/en/book/241?sn=32519"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 295",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31132"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 295",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30798"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4053,7 +4935,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person forgets to recite the salām of prayer, and remembers before the form of the prayer is disturbed and before performing any acts that invalidate the prayer both intentionally and inadvertently — such as turning away from the qiblah, he should recite salām, and his prayer is correct."
+          en: "If a person forgets to recite the salām of prayer, and remembers before the form of the prayer is disturbed and before performing any acts that invalidate the prayer both intentionally and inadvertently — such as turning away from the qiblah, he should recite salām, and his prayer is correct.",
+          ur: "اگر نماز کا سلام کہنا بھول جائے اور اس وقت یاد آئے کہ ابھی نماز کی شکل ختم نہ ہوئی ہو اور ایسا کام بھی نہ کیا ہو جس کو عمداً یا بھول کر انجام دینے سے نماز باطل ہوجاتی ہے مثلا ًقبلے سے رخ موڑنا، تو سلام کہے اور نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4061,8 +4944,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "297.",
           url: "https://www.leader.ir/en/book/241?sn=32519"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 298",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31132"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 298",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30798"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4097,7 +4989,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who is offering the prayer should observe the sequence of the acts of prayer. Therefore, if he intentionally does not observe the sequence of acts in the prayer, for example, if he recites the second chapter before chapter al-Fātiḥah or if he performs the two sajdah before rukū‘, his prayer is void."
+          en: "A person who is offering the prayer should observe the sequence of the acts of prayer. Therefore, if he intentionally does not observe the sequence of acts in the prayer, for example, if he recites the second chapter before chapter al-Fātiḥah or if he performs the two sajdah before rukū‘, his prayer is void.",
+          ur: "نماز پڑھنے والے کے لئے ضروری ہے کہ نماز کو بتائی گئی ترتیب کے مطابق پڑھے اور ہر جزء کو اس کے مخصوص مقام پر ادا کرے بنابرایں اگر کوئی عمداً اس ترتیب کی رعایت نہ کرے مثلا ًالحمد سے پہلے سورہ پڑھے یا رکوع سے پہلے سجدہ کرے تو اس کی نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4105,8 +4998,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "298.",
           url: "https://www.leader.ir/en/book/241?sn=32520"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 299",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31133"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 299",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30799"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4141,7 +5043,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The praying person should perform the acts of the prayer successively, meaning that he should not leave a lengthy unusual gap between the acts of prayer, such as rukū‘, sajdah and tashahhud. Therefore, if a person leaves a lengthy break between the acts of prayer so that, according to an onlooker, it seems like he is not praying, the prayer is void."
+          en: "The praying person should perform the acts of the prayer successively, meaning that he should not leave a lengthy unusual gap between the acts of prayer, such as rukū‘, sajdah and tashahhud. Therefore, if a person leaves a lengthy break between the acts of prayer so that, according to an onlooker, it seems like he is not praying, the prayer is void.",
+          ur: "نماز پڑھنےوالے کو چاہئے کہ نماز کے اجزاء مثلا ًرکوع، سجدہ اور تشہد وغیرہ کو پے در پے بجالائے اور ان کے درمیان طویل اور غیرمعمولی فاصلہ نہ ڈالے۔ اس عمل کو موالات کہتے ہیں۔ بنابرایں اگر نماز کے اجزاء کے درمیان اتنا فاصلہ ڈالے کہ دیکھنے والے کی نظر میں نماز کی حالت سے خارج ہوجائے تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4149,8 +5052,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "303.",
           url: "https://www.leader.ir/en/book/241?sn=32521"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 304",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31134"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 304",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30800"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4186,7 +5098,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In all obligatory and mustaḥabb prayers, it is mustaḥabb to raise the hands and recite supplication in the second rak‘ah, after recitation of chapter al-Fātiḥah and the second chapter but before rukū‘. This action is called qunūt."
+          en: "In all obligatory and mustaḥabb prayers, it is mustaḥabb to raise the hands and recite supplication in the second rak‘ah, after recitation of chapter al-Fātiḥah and the second chapter but before rukū‘. This action is called qunūt.",
+          ur: "مستحب ہے کہ تمام واجب اور مستحب نمازوں کی دوسری رکعت میں الحمد اور سورے کے بعد اور رکوع سے پہلے ہاتھوں کو بلند کرے اور دعا پڑھے۔ اس عمل کو قنوت کہتے ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -4194,8 +5107,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "306.",
           url: "https://www.leader.ir/en/book/241?sn=32522"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 307",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31136"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 307",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30801"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4231,7 +5153,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In qunūt, any dhikr, supplication or verse of the Qur’an can be recited. One can suffice with reciting one salāwāt, subḥānallāh, bismillāh, or bismillāhir raḥmānir raḥīm; but it is better to recite the supplications which are mentioned in the Holy Qur’an, such as\nرَبَّنَا آتِنَا فِی الدُّنْیَا حَسَنَةً وَفِی الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nor dhikr transmitted from Imams (a) such as\nلا اِلَهَ اِلاّ اللهُ الحَلِیمُ الکَرِیمُ، لا اِلهَ اِلاّ اللهُ العَلِیُّ العَظِیمُ، سُبْحَانَ اللهِ رَبِّ السَّمَاوَاتِ السَّبْعِ وَ رَبِّ الْاَرَضِینَ السَّبْعِ وَ مَا فِیهِنَّ وَ مَا بَیْنَهُنَّ وَ رَبِّ الْعَرْشِ العَظِیمِ وَ الْحَمْدُ لِلهِ رَبِّ العَالَمینَ"
+          en: "In qunūt, any dhikr, supplication or verse of the Qur’an can be recited. One can suffice with reciting one salāwāt, subḥānallāh, bismillāh, or bismillāhir raḥmānir raḥīm; but it is better to recite the supplications which are mentioned in the Holy Qur’an, such as\nرَبَّنَا آتِنَا فِی الدُّنْیَا حَسَنَةً وَفِی الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ\nor dhikr transmitted from Imams (a) such as\nلا اِلَهَ اِلاّ اللهُ الحَلِیمُ الکَرِیمُ، لا اِلهَ اِلاّ اللهُ العَلِیُّ العَظِیمُ، سُبْحَانَ اللهِ رَبِّ السَّمَاوَاتِ السَّبْعِ وَ رَبِّ الْاَرَضِینَ السَّبْعِ وَ مَا فِیهِنَّ وَ مَا بَیْنَهُنَّ وَ رَبِّ الْعَرْشِ العَظِیمِ وَ الْحَمْدُ لِلهِ رَبِّ العَالَمینَ",
+          ur: "قنوت میں کوئی بھی ذکر، دعا یا قرآن کی آیت پڑھ سکتا ہے حتی کہ ایک صلوات یا سُبْحَانَ اللهِ یا بِسْمِ اللهِ یا بِسْمِ اللهِ الرَّحْمنِ الرَّحیمِ پر بھی اکتفا کرسکتا ہے لیکن بہترہے قرآن میں موجود دعائیں پڑھے مثلا رَبَّنا آتِنَا فِی الدُّنْیَا حَسَنَةً وَ فِی الْآخِرَةِ حَسَنَةً وَ قِنَا عَذابَ النَّار یا معصومین علیہم السلام سے منقول دعائیں اور اذکار پڑھے مثلا لا اِلَهَ اِلاّ اللهُ الحَلِیمُ الکَرِیمُ، لا اِلهَ اِلاّ اللهُ العَلِیُّ العَظِیمُ، سُبْحَانَ اللهِ رَبِّ السَّمَاوَاتِ السَّبْعِ وَ رَبِّ الْاَرَضِینَ السَّبْعِ وَ مَا فِیهِنَّ وَ مَا بَیْنَهُنَّ وَ رَبِّ الْعَرْشِ العَظِیمِ وَ الْحَمْدُ لِلهِ رَبِّ العَالَمینَ."
         },
         basis: "fatwa",
         source: {
@@ -4239,9 +5162,18 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "309.",
           url: "https://www.leader.ir/en/book/241?sn=32522"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 310",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31136"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 310",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30801"
+        },
         verification: "A",
-        arabicInSource: true,
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        arabicInSource: true
       }
     ]
   },
@@ -4276,7 +5208,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "After finishing the prayer, it is mustaḥabb to recite Qur'an, dhikr, or supplications. This act is called prayer’s ta‘qīb and it is better to do it while sitting facing the qiblah and being in the state of wuḍū’, ghusl, or tayammum."
+          en: "After finishing the prayer, it is mustaḥabb to recite Qur'an, dhikr, or supplications. This act is called prayer’s ta‘qīb and it is better to do it while sitting facing the qiblah and being in the state of wuḍū’, ghusl, or tayammum.",
+          ur: "نماز پڑھنے کے بعد مستحب ہے کہ دعا، ذکر یا قرآن پڑھے اس عمل کو تعقیبات نماز کہتے ہیں اور بہتر ہے کہ اسی حالت میں جب قبلہ رخ اور وضو یاغسل یا تیمم کے ساتھ ہو اس عمل کو انجام دے۔"
         },
         basis: "fatwa",
         source: {
@@ -4284,8 +5217,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "312.",
           url: "https://www.leader.ir/en/book/241?sn=32523"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 313",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31137"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 313",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30802"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4321,7 +5263,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The prayer is invalidated in the following cases:\n1. When one of the conditions of prayer ceases to exist during prayer;\n2. When wuḍū’ or ghusl is invalidated;\n3. To turn away from the qiblah;\n4. Talking;\n5. Laughing;\n6. Weeping;\n7. When the form of the prayer is disrupted;\n8. Eating and drinking;\n9. Doubts which invalidate the prayer;\n10. To repeat a foundational element or to neglect it;\n11. Saying āmīn after chapter al-Fātiḥah;\n12. Placing one hand on the other in a certain manner which is called takattuf."
+          en: "The prayer is invalidated in the following cases:\n1. When one of the conditions of prayer ceases to exist during prayer;\n2. When wuḍū’ or ghusl is invalidated;\n3. To turn away from the qiblah;\n4. Talking;\n5. Laughing;\n6. Weeping;\n7. When the form of the prayer is disrupted;\n8. Eating and drinking;\n9. Doubts which invalidate the prayer;\n10. To repeat a foundational element or to neglect it;\n11. Saying āmīn after chapter al-Fātiḥah;\n12. Placing one hand on the other in a certain manner which is called takattuf.",
+          ur: "مبطلات نماز درج ذیل ہیں :\n1۔ ان شرائط میں سے کسی کا مفقود ہونا جن کی نماز میں رعایت کرنا ضروری ہے۔\n\n2۔ وضو یا غسل کا باطل ہونا۔\n\n3۔ قبلے سے رخ پھیرنا\n\n4۔ بات کرنا\n\n5۔ ہنسنا\n\n6۔ رونا\n\n7۔ نماز کی شکل باقی نہ رہنا\n\n8۔ کھانا اور پینا\n\n9۔ وہ شک جو نماز کو باطل کرتا ہے\n\n10۔ ارکان نماز کو کم کرنا اور بڑھانا\n\n11۔ الحمد کے بعد آمین کہنا\n\n12۔ پیٹ پر ہاتھوں کو باندھنا (تکتف)\n* ۔ شکیات نماز میں بیان کئے جائیں گے۔"
         },
         basis: "fatwa",
         source: {
@@ -4329,8 +5272,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "322.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 323",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 323",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4367,7 +5319,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person intentionally turns his face or his body from the qiblah so that he can see the right or left easily, his prayer is invalidated. If a person does so unintentionally, by obligatory caution, his prayer becomes invalidated. However, if a person turns his face a little to each side, his prayer is not invalidated."
+          en: "If a person intentionally turns his face or his body from the qiblah so that he can see the right or left easily, his prayer is invalidated. If a person does so unintentionally, by obligatory caution, his prayer becomes invalidated. However, if a person turns his face a little to each side, his prayer is not invalidated.",
+          ur: "اگر جان بوجھ کر قبلے سے اس حد تک اپنا بدن یا رخ پھیرے کہ دائیں اور بائیں طرف آسانی سے دیکھ سکتا ہو تو نماز باطل ہے اور اگر بھول کربھی ایسا کرے تو احتیاط واجب کی بناپر نماز باطل ہے لیکن اگر چہرے کو ایک طرف تھوڑا پھیرے تو نماز باطل نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4375,8 +5328,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "325.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 326",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 326",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -4413,7 +5375,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person intentionally talks, even to the extent of one word, the prayer is invalidated."
+          en: "If a person intentionally talks, even to the extent of one word, the prayer is invalidated.",
+          ur: "اگر نماز کے دوران جان بوجھ کر بات کرے تو چاہے ایک کلمہ ہی کیوں نہ ہو، نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4421,8 +5384,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "326.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 327",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 327",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4457,7 +5429,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is obligatory to answer the salām immediately. If for any reason someone delays it to such an extent that the answer is not considered answer to the salām, then if he is praying, he should not give the answer to the salām and if he is not praying, it is not obligatory to answer it. In case of doubt regarding the delay the same rule applies. If delaying the greeting is intentional, it is a sin."
+          en: "It is obligatory to answer the salām immediately. If for any reason someone delays it to such an extent that the answer is not considered answer to the salām, then if he is praying, he should not give the answer to the salām and if he is not praying, it is not obligatory to answer it. In case of doubt regarding the delay the same rule applies. If delaying the greeting is intentional, it is a sin.",
+          ur: "سلام کا جواب فوراً دینا واجب ہے اگر کوئی کسی بھی وجہ سے اتنی تاخیر کرے کہ اس سلام کا جواب شمار نہ کیا جائے چنانچہ نماز کی حالت میں ہو تو سلام کا جواب نہیں دینا چاہئے اور اگر نماز کی حالت میں نہ ہو تو بھی جواب دینا واجب نہیں ہے اور اگر تاخیر کی مقدار میں شک کرے تو بھی یہی حکم ہے ، تاہم جان بوجھ کر جواب دینے میں تاخیر کی ہے تو گناہ کیا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4465,8 +5438,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "332.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 333",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 333",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4502,7 +5484,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Intentional loud laughter (guffawing) invalidates the prayer. But inadvertent or silent laughter does not."
+          en: "Intentional loud laughter (guffawing) invalidates the prayer. But inadvertent or silent laughter does not.",
+          ur: "جان بوجھ کر اور آواز کے ساتھ ہنسنا (قہقہہ لگانا) نماز کو باطل کرتا ہے لیکن بھول کر یا بغیر آواز کے ہنسنے سے نماز باطل نہیں ہوتی ۔"
         },
         basis: "fatwa",
         source: {
@@ -4510,8 +5493,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "334.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 335",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 335",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4546,7 +5538,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "To eat or drink, whether a little or a lot, during prayer does invalidate the prayer. However, swallowing food particles left here and there in the mouth or sucking the sweet of sugar remained in the mouth does not invalidate prayer. Also, if one absentmindedly or forgetfully eats or drinks something during prayer, the latter is not invalidated provided that prayer's form is not disturbed."
+          en: "To eat or drink, whether a little or a lot, during prayer does invalidate the prayer. However, swallowing food particles left here and there in the mouth or sucking the sweet of sugar remained in the mouth does not invalidate prayer. Also, if one absentmindedly or forgetfully eats or drinks something during prayer, the latter is not invalidated provided that prayer's form is not disturbed.",
+          ur: "نماز کی حالت میں کھانا اور پینا نماز کو باطل کرتا ہے چاہے کم ہو یا زیادہ لیکن منہ کے اطراف میں باقی بچ جانے والی غذا کے ذرات کو نگلنا یا ذرا سی قند یا شکر کو چوسنا نماز باطل ہونے کا باعث نہیں ہے۔ اسی طرح اگر سہوا ًیا فراموشی سے کوئی چیز کھائے یا پیئے تو نماز باطل نہیں ہوتی ہےبشرطیکہ نماز کی شکل سے خارج نہ ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -4554,8 +5547,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "341.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 342",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 342",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4570,7 +5572,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is not permissible to say \"āmīn\" after reciting chapter al- Fātiḥah and it invalidates the prayer. But if it is because of taqiyyah, there is no problem. Also, putting folded-hands on one's chest while standing during prayer (putting hands together in front of the body) invalidates the prayer if it is done with the intention that it is a part of prayer. By obligatory caution, one should avoid it even without this intention."
+          en: "It is not permissible to say \"āmīn\" after reciting chapter al- Fātiḥah and it invalidates the prayer. But if it is because of taqiyyah, there is no problem. Also, putting folded-hands on one's chest while standing during prayer (putting hands together in front of the body) invalidates the prayer if it is done with the intention that it is a part of prayer. By obligatory caution, one should avoid it even without this intention.",
+          ur: "سورہ حمد پڑھنے کے بعد آمین کہنا جائز نہیں اور نماز باطل ہونے کا سبب ہے لیکن اگر تقیہ کی خاطر ہوتو کوئی اشکال نہیں ہے۔ اسی طرح سینے پر ہاتھ رکھ کر کھڑا ہونا اگر اس نیت سے ہو کہ یہ عمل نماز کا جزءہے تو نماز باطل کردیتا ہے اور احتیاط واجب یہ ہے کہ اس نیت کے بغیر بھی اس عمل کو انجام نہ دے۔"
         },
         basis: "fatwa",
         source: {
@@ -4578,8 +5581,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "343.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 344",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 344",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -4615,7 +5627,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is not permissible to cut obligatory prayers without an excuse."
+          en: "It is not permissible to cut obligatory prayers without an excuse.",
+          ur: "بغیر کسی عذر کے واجب نماز کو توڑنا جائز نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4623,8 +5636,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "344.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 345",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 345",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4659,7 +5681,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If it is not possible, without cutting the prayer, to save life or property when it is obligatory, then the prayer should be abandoned. In general, it is permissible to cut the prayer to avoid life and financial risks that are significant and important for the praying person."
+          en: "If it is not possible, without cutting the prayer, to save life or property when it is obligatory, then the prayer should be abandoned. In general, it is permissible to cut the prayer to avoid life and financial risks that are significant and important for the praying person.",
+          ur: "اگر نماز توڑے بغیر جان یا ایسے مال کی حفاظت کرنا ممکن نہ ہو کہ جسے بچانا واجب ہے تو ضروری ہے کہ نماز کو توڑدے اور مجموعی طور ان تمام جانی و مالی خطرات سے بچنے کے لئے نماز توڑنا جائز ہے جو نماز پڑھنے والے کے لئے قابل توجہ اور اہم ہوں۔"
         },
         basis: "fatwa",
         source: {
@@ -4667,8 +5690,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "345.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 346",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 346",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30804"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4703,7 +5735,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Among the obligatory daily prayers, a traveler must perform four-rak‘ah prayers in two rak‘ah in some conditions."
+          en: "Among the obligatory daily prayers, a traveler must perform four-rak‘ah prayers in two rak‘ah in some conditions.",
+          ur: "مسافر کے لئے ضروری ہے کہ اگر قصر کی شرائط موجود ہوں تو یومیہ واجب نمازوں میں سے چار رکعت والی نمازوں کو دو رکعت پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -4711,8 +5744,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "407.",
           url: "https://www.leader.ir/en/book/241?sn=32547"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 408",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31195"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 408",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30826"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4727,7 +5769,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Prayer during travel is shortened under eight conditions, which are as follows:\n1. Shar‘ī distance;\n2. Intention to travel the shar‘ī distance;\n3. Continuity of intention (not giving up on the intention of the shar‘ī distance nor having doubts about it);\n4. Not crossing the watan nor deciding to stay ten days in a place during the trip;\n5. The travel is not a sin;\n6. Not being at home;\n7. Traveling is not their job;\n8. Reaching the tarakhkhuṣ point."
+          en: "Prayer during travel is shortened under eight conditions, which are as follows:\n1. Shar‘ī distance;\n2. Intention to travel the shar‘ī distance;\n3. Continuity of intention (not giving up on the intention of the shar‘ī distance nor having doubts about it);\n4. Not crossing the watan nor deciding to stay ten days in a place during the trip;\n5. The travel is not a sin;\n6. Not being at home;\n7. Traveling is not their job;\n8. Reaching the tarakhkhuṣ point.",
+          ur: "آٹھ شرائط کے ساتھ سفر میں نماز قصر ہوتی ہے جو مندرجہ ذیل ہیں:\n1۔ شرعی مسافت پوری ہو؛\n2۔ مسافت شرعی طے کرنے کا قصد ہو؛\n3۔ آخر تک اپنے قصد پر باقی رہے (مسافت شرعی تک جانے کے ارادے سے باز نہ آئے یا اس میں تردد کا شکار نہ ہوجائے)\n4۔ سفر کے دوران اپنے وطن سے نہ گزرے یا کسی جگہ دس دن یا اس سے زیادہ رہنے کا قصدنہ کرے۔\n5۔ سفر حرام نہ ہو۔\n6۔ خانہ بدوش نہ ہو\n7۔ سفر اس کا پیشہ نہ ہو\n8۔ حد ترخص تک پہنچ جائے"
         },
         basis: "fatwa",
         source: {
@@ -4735,8 +5778,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "408.",
           url: "https://www.leader.ir/en/book/241?sn=32547"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 409",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31195"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 409",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30826"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4771,7 +5823,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The distance that shortens the prayer must be at least eight farsakhs, so if the journey is less than this distance, the prayer is not shortened."
+          en: "The distance that shortens the prayer must be at least eight farsakhs, so if the journey is less than this distance, the prayer is not shortened.",
+          ur: "نماز قصر ہونے کے لئے مسافت کم از کم آٹھ فرسخ ہونی چاہئے بنابراین اگر سفر اس مسافت سے کم ہوتو نماز، قصر نہیں ہوگی۔"
         },
         basis: "fatwa",
         source: {
@@ -4779,8 +5832,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "409.",
           url: "https://www.leader.ir/en/book/241?sn=32548"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 410",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31196"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 410",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30827"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4795,7 +5857,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Shar‘ī distance (eight farsakhs) which shortens the prayers (according to the reliable research), is equivalent to 41 kilometers."
+          en: "Shar‘ī distance (eight farsakhs) which shortens the prayers (according to the reliable research), is equivalent to 41 kilometers.",
+          ur: "شرعی مسافت (آٹھ فرسخ) جس سے نماز قصر ہوتی ہے، (اطمینان بخش تحقیق کے مطابق) 41 کلومیٹر کے برابر ہوتی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4803,8 +5866,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "410.",
           url: "https://www.leader.ir/en/book/241?sn=32548"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 411",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31196"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 411",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30827"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4836,7 +5908,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The criterion for calculating the shar‘ī distance is the distance between the end of the city of departure and the beginning of the city of destination*; whether the city is large or not.\n* i.e. from the last houses in the city of departure till the first houses of the city of destination."
+          en: "The criterion for calculating the shar‘ī distance is the distance between the end of the city of departure and the beginning of the city of destination*; whether the city is large or not.\n* i.e. from the last houses in the city of departure till the first houses of the city of destination.",
+          ur: "مسافت شرعی کو حساب کرنے کا معیار جس شہر سے سفر شروع کررہا ہے اس کے آخر سے لے کر جس شہر کی طرف سفر کررہا ہے اس کی ابتدا تک کا فاصلہ ہے اس میں کوئی فرق نہیں کہ شہر بڑا ہو یا نہ ہو۔\n* ۔ یعنی جس شہر سے سفر شروع کررہا ہے اس کے آخری گھروں سے منزل مقصود والے شہر کے ابتدائی گھروں تک کا فاصلہ حساب کیا جائے گا۔"
         },
         basis: "fatwa",
         source: {
@@ -4844,8 +5917,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "411.",
           url: "https://www.leader.ir/en/book/241?sn=32548"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 412",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31196"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 412",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30827"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4880,7 +5962,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "When leaving the city, the mukallaf must intend to travel eight farsakhs, one way or combined (see 413 to 415). Therefore, if at first, he intends to travel less than the shar‘ī distance; like if he plans to go three farsakhs and after reaching his destination (three farsakhs), he decides to go another five farsakhs and stay there for ten days, such a journey (even though eight farsakhs have been traveled) does not shorten the prayers."
+          en: "When leaving the city, the mukallaf must intend to travel eight farsakhs, one way or combined (see 413 to 415). Therefore, if at first, he intends to travel less than the shar‘ī distance; like if he plans to go three farsakhs and after reaching his destination (three farsakhs), he decides to go another five farsakhs and stay there for ten days, such a journey (even though eight farsakhs have been traveled) does not shorten the prayers.",
+          ur: "مکلف کے لئے ضروری ہے کہ شہر سے خارج ہوتے وقت آٹھ فرسخ (یک طرفہ یا مجموعی طورپر ) طے کرنے کا قصد رکھتا ہو بنابرایں اگر سفر کے شروع میں شرعی مسافت سے کم طے کرنے کا ارادہ ہو مثلاً تین فرسخ تک جانے کا قصد ہو اور منزل (تین فرسخ) تک پہنچنے کے بعد مزید پانچ فرسخ سفر کرنے کا ارادہ کرے اور اس جگہ دس دن قیام کرے تو ایسا سفر (اگرچہ آٹھ فرسخ طے کیا ہے) نماز قصر ہونے کا باعث نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -4888,8 +5971,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "430.",
           url: "https://www.leader.ir/en/book/241?sn=32550"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 431",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31198"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 431",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30829"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4924,7 +6016,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Another condition for shortening the prayer is that the journey is permissible (not ḥarām). Therefore, if a person goes on a ḥarām journey, whether the journey itself is ḥarām, such as fleeing from war or traveling to do a ḥarām act, like to steal, then his prayer is complete."
+          en: "Another condition for shortening the prayer is that the journey is permissible (not ḥarām). Therefore, if a person goes on a ḥarām journey, whether the journey itself is ḥarām, such as fleeing from war or traveling to do a ḥarām act, like to steal, then his prayer is complete.",
+          ur: "نماز قصر ہونے کی ایک شرط یہ ہے کہ سفر جائز ہو (حرام نہ ہو) بنابرایں اگر کوئی حرام سفر کرے چاہے خودسفر حرام ہو مثلاً جنگ سے بھاگنے کےلئے سفر کرے یا کسی حرام کام کو انجام دینے کے لئے سفر کرے مثلاً چوری کے لئے سفر کرے تو نماز پوری ہوگی۔"
         },
         basis: "fatwa",
         source: {
@@ -4932,8 +6025,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "452.",
           url: "https://www.leader.ir/en/book/241?sn=32554"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 453",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31202"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 453",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30833"
+        },
+        verification: "A"
       }
     ]
   },
@@ -4963,6 +6065,32 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3639/"
         },
         verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Traveling for fun/recreation is not ḥarām, and prayer during such a travel is not shortened.",
+          ur: "تفریح کے لئے سفر کرنا حرام نہیں ہے اور اس میں نماز قصر ہوگی۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rules on Prayer & Fasting 2023",
+          reference: "465.",
+          url: "https://www.leader.ir/en/book/241?sn=32555"
+        },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 466",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31203"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 466",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30834"
+        },
+        verification: "A",
+        englishWithheld: "P15: the English says prayer on a leisure trip 'is not shortened'; the Persian (مسأله 466) and the Urdu (مسئلہ 466) say it is shortened (قصر), as do Rules 452/462. Mistranslation."
       }
     ]
   },
@@ -4997,7 +6125,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "One of the conditions for shortening the prayer while traveling is that the trip is not for work, so if the trip is for work, whether travel constitute the work, such as driving or piloting, or whether traveling is a preliminary to the job, such as the travel of a doctor or a teacher who travels for his job, prayer is complete during that trip and fasting is correct."
+          en: "One of the conditions for shortening the prayer while traveling is that the trip is not for work, so if the trip is for work, whether travel constitute the work, such as driving or piloting, or whether traveling is a preliminary to the job, such as the travel of a doctor or a teacher who travels for his job, prayer is complete during that trip and fasting is correct.",
+          ur: "سفر میں نماز قصر ہونے کی شرائط میں سے ایک یہ ہے کہ سفر اس کا پیشہ نہ ہو ، بنابرایں اگر کسی شخص کا پیشہ سفر ہو چاہے اس کے پیشے کا وجود سفر سےہو (یعنی سفر اس کی درآمد کا ذریعہ ہو) مثلاً ڈرائیور اور پائلٹ یا سفر اس کے پیشے کا مقدمہ(ضروری تمہید) ہو مثلاً ڈاکٹر یا معلم جو اپنے پیشے کے لئے سفر کرتے ہیں، اس سفر میں نماز پوری ہوگی اور روزہ صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5005,8 +6134,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "478.",
           url: "https://www.leader.ir/en/book/241?sn=32559"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 479",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31207"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 479",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30838"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5041,7 +6179,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A traveler who leaves his watan and intends to travel a shar‘ī distance, his prayer is shortened from the time he reaches a certain point, and on his return, when he reaches the same point, he must complete the prayer. They call this point \"tarakhkhuṣ point\". However, there is mustaḥabb caution to perform the prayer in both forms, complete and shortened, in the place between tarakhkhuṣ point and city entrance.\nThe criterion for determining the tarakhkhuṣ point is to be far from the last house of city so that one does not hear the sound of adhān said in the city without a loudspeaker, whether he sees the city walls or not."
+          en: "A traveler who leaves his watan and intends to travel a shar‘ī distance, his prayer is shortened from the time he reaches a certain point, and on his return, when he reaches the same point, he must complete the prayer. They call this point \"tarakhkhuṣ point\". However, there is mustaḥabb caution to perform the prayer in both forms, complete and shortened, in the place between tarakhkhuṣ point and city entrance.\nThe criterion for determining the tarakhkhuṣ point is to be far from the last house of city so that one does not hear the sound of adhān said in the city without a loudspeaker, whether he sees the city walls or not.",
+          ur: "جو مسافر وطن سے خارج ہوتا ہے اور مسافت شرعی طے کرنے کا قصد رکھتا ہے اس کی نماز اس وقت قصر ہوگی جب ایک معین حد تک پہنچے اسی طرح واپسی کے دوران جب اس حد تک پہنچ جائے توضروری ہے کہ نماز کو پوری پڑھے۔ اس حد کو حد ترخص کہتے ہیں اگرچہ احتیاط مستحب یہ ہے کہ حد ترخص اور شہر میں داخل ہونےکے درمیانی فاصلے میں نماز کو قصر کرکے بھی پڑھے اور پوری بھی پڑھے۔\nحد ترخص کو تشخیص دینے کا معیار یہ ہے کہ شہر کے آخری گھر سے اس قدر دور ہوجائے کہ لاوڈسپیکر کے بغیر شہر سے دی جانے والی اذان نہ سنے چاہے شہر کی دیوار یں دیکھے یا نہ دیکھے۔"
         },
         basis: "fatwa",
         source: {
@@ -5049,8 +6188,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "506.",
           url: "https://www.leader.ir/en/book/241?sn=32560"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 508، 509",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31208"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 508، 509",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30839"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -5086,7 +6234,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "According to common view, watan is a place where a person resides and lives, whether it is a city or a village or else."
+          en: "According to common view, watan is a place where a person resides and lives, whether it is a city or a village or else.",
+          ur: "عرف میں وطن اس جگہ کو کہا جاتا ہے جہاں انسان زندگی گزارے اور سکونت و رہائش اختیار کرے، چاہے شہر ہو یا دیہات یا کوئی اور جگہ۔"
         },
         basis: "fatwa",
         source: {
@@ -5094,8 +6243,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "529.",
           url: "https://www.leader.ir/en/book/241?sn=32562"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 531",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31210"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 531",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30841"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5130,7 +6288,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a traveler intends to stay in a place for ten days, he must perform complete prayer there. But if he stays for ten days without intention or in doubt, his prayer is short."
+          en: "If a traveler intends to stay in a place for ten days, he must perform complete prayer there. But if he stays for ten days without intention or in doubt, his prayer is short.",
+          ur: "اگر مسافر قصد کرے کہ کسی جگہ دس دن قیام کرے گا تو ضروری ہے کہ اس جگہ نماز پوری پڑھے لیکن اگر قصد کے بغیر یا تردید کی حالت میں دس دن قیام کرے تو اس کی نماز قصر ہوگی۔"
         },
         basis: "fatwa",
         source: {
@@ -5138,8 +6297,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "558.",
           url: "https://www.leader.ir/en/book/241?sn=32568"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 560",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31216"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 560",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30847"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5174,7 +6342,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If, after going eight farsakhs, one remains in a place for thirty days without intention to stay, he should perform complete prayers after the thirtieth day until he leaves the place (even if it is half a day)."
+          en: "If, after going eight farsakhs, one remains in a place for thirty days without intention to stay, he should perform complete prayers after the thirtieth day until he leaves the place (even if it is half a day).",
+          ur: "اگر آٹھ فرسخ طے کرنے کے بعد کسی جگہ تیس دن تردید کی حالت میں رہے تو اکتیسویں دن کے بعد جب تک اس جگہ سے خارج نہ ہوجائے (اگرچہ آدھا دن ہی کیوں نہ ہو) ضروری ہے کہ نماز کو پوری پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -5182,8 +6351,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "588.",
           url: "https://www.leader.ir/en/book/241?sn=32572"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 590",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31219"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 590",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30850"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5218,7 +6396,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In the four places of choice, i.e. the city of Mecca, Medina, the masjid of Kūfah and Hā’ir Hosseini (peace be upon him), a traveler can pray the four-rak‘ah prayers shortened or in full, and it is better to perform them in full, but it is mustaḥabb caution to perform them in short form."
+          en: "In the four places of choice, i.e. the city of Mecca, Medina, the masjid of Kūfah and Hā’ir Hosseini (peace be upon him), a traveler can pray the four-rak‘ah prayers shortened or in full, and it is better to perform them in full, but it is mustaḥabb caution to perform them in short form.",
+          ur: "مسافر چار مقامات پر( یعنی شہر مکہ، مدینہ، مسجد کوفہ اور حرم حضرت امام حسین علیہ السلام میں ) چار رکعتی نمازوں کو قصرکرکے اور پوری پڑھنے میں اختیار رکھتا ہے اور اگر پوری پڑھے تو افضل ہے لیکن قصر کرکے پڑھنا احتیاط مستحب ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5226,8 +6405,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "620.",
           url: "https://www.leader.ir/en/book/241?sn=32576"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 622",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31223"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 622",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30854"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -5263,7 +6451,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A traveler who does not know that the prayer is short while traveling, and performs complete prayer contrary to his duty while he is qāṣir* ignorant, then after understanding the ruling, he does not need to repeat the prayer.\n* It means that he does not know the ruling nor aware of his ignorance."
+          en: "A traveler who does not know that the prayer is short while traveling, and performs complete prayer contrary to his duty while he is qāṣir* ignorant, then after understanding the ruling, he does not need to repeat the prayer.\n* It means that he does not know the ruling nor aware of his ignorance.",
+          ur: "جو مسافر نہ جانتا ہو کہ سفر میں نماز قصر ہوتی ہے اور اپنے وظیفے کے برعکس نماز کو پوری پڑھتا ہو چنانچہ جاہل قاصر ہو تو حکم کو جاننے کے بعد نماز کو دوبارہ یا قضا کرنا لازمی نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5271,8 +6460,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "604.",
           url: "https://www.leader.ir/en/book/241?sn=32574"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 606",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31221"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 606",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30852"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5308,7 +6506,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person, who has not performed the obligatory daily prayer at its specified time intentionally or due to forgetfulness or ignorance, or who realizes, after the prayer's time, that his prayer was invalid, must perform its qaḍā’."
+          en: "A person, who has not performed the obligatory daily prayer at its specified time intentionally or due to forgetfulness or ignorance, or who realizes, after the prayer's time, that his prayer was invalid, must perform its qaḍā’.",
+          ur: "اگر کسی نے یومیہ واجب نماز جان بوجھ کر یا بھولے سے یا لاعلمی کی بنا پر اس کے معین وقت میں نہ پڑھی ہویا وقت گزرنے کے بعد متوجہ ہوا ہو کہ نماز باطل ہوئی تھی تو ضروری ہے کہ اس کی قضا بجالائے ۔"
         },
         basis: "fatwa",
         source: {
@@ -5316,8 +6515,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "627.",
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 629",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31224"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 629",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30855"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5352,7 +6560,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who owes some prayer is not obligated to perform them right away. However, negligence in performing them is not allowed."
+          en: "A person who owes some prayer is not obligated to perform them right away. However, negligence in performing them is not allowed.",
+          ur: "جس شخص پر قضا نماز واجب ہو اس کو فوراً پڑھنا واجب نہیں ہے البتہ اس کو پڑھنے میں کوتاہی نہیں کرنی چاہئے۔"
         },
         basis: "fatwa",
         source: {
@@ -5360,8 +6569,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "633.",
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 635",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31224"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 635",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30855"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5396,7 +6614,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is not obligatory to observe the order in reading the qaḍā’ prayer; except for qaḍā’ of ẓuhr and ‘aṣr prayers of one day and qaḍā’ of maghrib and ‘ishā’ prayers of one day."
+          en: "It is not obligatory to observe the order in reading the qaḍā’ prayer; except for qaḍā’ of ẓuhr and ‘aṣr prayers of one day and qaḍā’ of maghrib and ‘ishā’ prayers of one day.",
+          ur: "نماز کی قضا بجالاتے ہوئے ترتیب کی رعایت واجب نہیں ہے مگر یہ کہ ایک دن کی نماز ظہر اور عصر اور ایک دن کی نماز مغرب و عشاء ہو(تو رعایت واجب ہے)"
         },
         basis: "fatwa",
         source: {
@@ -5404,8 +6623,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "638.",
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 640",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31224"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 640",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30855"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5440,7 +6668,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who does not know the number of his qaḍā’ prayers, it suffices to settle them for the amount that he is sure he has missed."
+          en: "A person who does not know the number of his qaḍā’ prayers, it suffices to settle them for the amount that he is sure he has missed.",
+          ur: "اگر کسی شخص کو قضا ہونے والی نمازوں کی تعداد کے بارے میں علم نہ ہو تو جتنی مقدار کے قضا ہونے پر یقین ہے اس پر اکتفا کرسکتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5448,8 +6677,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "639.",
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 641",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31224"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 641",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30855"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5484,7 +6722,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who owes some qaḍā’ prayers can perform nāfilah and mustaḥabb prayers."
+          en: "A person who owes some qaḍā’ prayers can perform nāfilah and mustaḥabb prayers.",
+          ur: "جس شخص پر قضا نماز واجب ہو، نافلہ اور مستحب نماز پڑھ سکتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5492,8 +6731,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "641.",
           url: "https://www.leader.ir/en/book/241?sn=32577"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 643",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31224"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 643",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30855"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5554,7 +6802,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is the elder son’s duty to make up in qaḍā’ for the missed prayers of his late father and, as per obligatory caution, those of his mother."
+          en: "It is the elder son’s duty to make up in qaḍā’ for the missed prayers of his late father and, as per obligatory caution, those of his mother.",
+          ur: "بڑے بیٹے پر واجب ہے کہ باپ سے قضا ہونے والی نمازوں اور احتیاط واجب کی بناپر ماں سے قضا ہونے والی نمازوں کی قضا بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -5562,8 +6811,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "651.",
           url: "https://www.leader.ir/en/book/241?sn=32579"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 653",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31226"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 653",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30857"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording. Data note (P14, not shown in the UI): the footnote to Ruling 656 in the same book describes this same duty as just \"a caution\" rather than \"an obligatory caution\". This is a plain caution in a footnote, not a second source to reconcile with 651 (which agrees with the Q&A book, Q 540) — so 651 is quoted verbatim and the footnote is left unshown."
       }
     ],
@@ -5600,7 +6858,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The eldest son means the oldest son who is alive when his parents die, whether he is an adult or minor."
+          en: "The eldest son means the oldest son who is alive when his parents die, whether he is an adult or minor.",
+          ur: "بڑے بیٹے سے مراد وہ سب سے بڑا بیٹا ہے جو ماں باپ کے مرتے وقت زندہ ہو ، خواہ بالغ ہو یا نہ ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -5608,8 +6867,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "653.",
           url: "https://www.leader.ir/en/book/241?sn=32579"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 655",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31226"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 655",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30857"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5644,7 +6912,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is mustaḥabb to perform the daily obligatory prayers in congregation, and it is more mustaḥabb to perform morning, maghrib and ‘ishā’ prayers in congregation."
+          en: "It is mustaḥabb to perform the daily obligatory prayers in congregation, and it is more mustaḥabb to perform morning, maghrib and ‘ishā’ prayers in congregation.",
+          ur: "یومیہ واجب نمازوں کو جماعت کے ساتھ بجالانا مستحب ہے اور نماز صبح ، نماز مغرب اور نماز عشاء کے بارے میں زیادہ تاکید کی گئی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5652,8 +6921,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "692.",
           url: "https://www.leader.ir/en/book/241?sn=32586"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 694",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31233"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 694",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30864"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5688,7 +6966,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is not nice in shar‘ to not participate in the Friday prayer because of not attaching importance to it."
+          en: "It is not nice in shar‘ to not participate in the Friday prayer because of not attaching importance to it.",
+          ur: "نماز جمعہ کو اہمیت نہ دیتے ہوئے اس میں شرکت نہ کرنا شرعی طور پر ناپسند ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5696,8 +6975,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "763.",
           url: "https://www.leader.ir/en/book/241?sn=32599"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 765",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31246"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 765",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30876"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5729,7 +7017,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "No mustaḥabb prayer can be recited in congregation except for ‘īd of Fitṛ and ‘Īd of Aḍḥā prayers (which are mustaḥabb during absence of the last Imam) and istisqā’ prayer (said to ask Allah for rain)."
+          en: "No mustaḥabb prayer can be recited in congregation except for ‘īd of Fitṛ and ‘Īd of Aḍḥā prayers (which are mustaḥabb during absence of the last Imam) and istisqā’ prayer (said to ask Allah for rain).",
+          ur: "نماز عید فطر و عید قربان (جو زمان غیبت میں مستحب ہیں) اور نماز استسقاء (طلب باران) کے علاوہ کسی بھی مستحب نماز کو جماعت کے ساتھ نہیں پڑھا جاسکتا۔"
         },
         basis: "fatwa",
         source: {
@@ -5737,8 +7026,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "707.",
           url: "https://www.leader.ir/en/book/241?sn=32588"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 709",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31235"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 709",
+          url: "https://www.leader.ir/fa/book/180/1?sn=31064"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5774,7 +7072,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The imam of congregational prayer should be sane, Twelver Shiite, just (‘ādil), legally born, can perform prayer correctly and by obligatory caution Islamically pubescent (bāligh). Also, if the congregant is a male, the imam should be a male."
+          en: "The imam of congregational prayer should be sane, Twelver Shiite, just (‘ādil), legally born, can perform prayer correctly and by obligatory caution Islamically pubescent (bāligh). Also, if the congregant is a male, the imam should be a male.",
+          ur: "امام جماعت کے لئے ضروری ہے کہ عاقل، عادل، شیعہ اثناء عشری، حلال زادہ اور احتیاط کی بناپر بالغ ہو اور نماز کو صحیح پڑھتا ہو اور اگر ماموم مرد ہو تو امام بھی مرد ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -5782,9 +7081,19 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "711.",
           url: "https://www.leader.ir/en/book/241?sn=32589"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 713",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31236"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 713",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30866"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        englishWithheld: "English says 'by obligatory caution' (bāligh); the Persian and Urdu say only 'by caution' (بنابر احتیاط) without 'obligatory'. The type is unspecified in the source.",
+        note: "Part of this text says 'caution' (احتیاط) without stating whether it is obligatory or recommended (decision P5)."
       }
     ]
   },
@@ -5819,7 +7128,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Except for chapter al-Fātiḥah and the other chapter, a ma‘mūm should read all the prayers' dhikr himself. But if one joins the prayer while imam is in the third or fourth rak‘ah of his prayer, the ma‘mūm should recite chapter al-Fātiḥah and the other chapter."
+          en: "Except for chapter al-Fātiḥah and the other chapter, a ma‘mūm should read all the prayers' dhikr himself. But if one joins the prayer while imam is in the third or fourth rak‘ah of his prayer, the ma‘mūm should recite chapter al-Fātiḥah and the other chapter.",
+          ur: "ماموم کے لئے ضروری ہے کہ الحمد اور سورہ کے علاوہ نماز کے تمام اذکار کو خود پڑھے لیکن اگر تیسری یا چوتھی رکعت میں امام کی اقتدا کی ہو تو ضروری ہے کہ الحمد اور سورہ پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -5827,8 +7137,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "728.",
           url: "https://www.leader.ir/en/book/241?sn=32591"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 730",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31238"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 730",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30868"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5863,7 +7182,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "During the first two rak‘ahs of the ẓuhr and ‘aṣr prayers, by obligatory caution, a ma‘mūm should not recite chapter al-Fātiḥah and another chapter and it is mustaḥabb to say dhikr instead."
+          en: "During the first two rak‘ahs of the ẓuhr and ‘aṣr prayers, by obligatory caution, a ma‘mūm should not recite chapter al-Fātiḥah and another chapter and it is mustaḥabb to say dhikr instead.",
+          ur: "نماز ظہر اور عصر کی پہلی اور دوسری رکعت میں احتیاط واجب کی بناپر ماموم کو چاہئے کہ الحمد اور سورہ نہ پڑھے اور مستحب ہے کہ اس کے بجائے ذکر پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -5871,8 +7191,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "730.",
           url: "https://www.leader.ir/en/book/241?sn=32591"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 732",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31238"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 732",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30868"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -5909,7 +7238,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A ma‘mūm should not perform the takbīrah al-iḥrām before the imam; rather, by obligatory caution, he is not to say the takbīr until the imam's takbīr is finished."
+          en: "A ma‘mūm should not perform the takbīrah al-iḥrām before the imam; rather, by obligatory caution, he is not to say the takbīr until the imam's takbīr is finished.",
+          ur: "ماموم کے لئے ضروری ہے کہ امام سے پہلے تکبیرہ الاحرام نہ کہے بلکہ احتیاط واجب یہ ہے کہ جب تک امام کی تکبیر ختم نہ ہوجائے ماموم تکبیر نہ کہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5917,8 +7247,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "726.",
           url: "https://www.leader.ir/en/book/241?sn=32591"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 728",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31238"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 728",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30868"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -5954,7 +7293,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one joins the prayer while the imam is in rukū‘, one of the following situations may occur:\n1. If one reaches the imam's rukū‘, the congregational prayer is valid and counts as one rak‘ah even if the imam's dhikr is over.\n2. If the imam is getting up from rukū‘ or is in standing posture when the ma‘mūm starts to be in rukū‘, then the prayer in furādā form is valid and is considered as the first rak‘ah of his prayer. So, he must continue the prayer.\n3. If one bows to the extent of rukū‘ but doubts whether he has reached the imam's rukū‘ or not, his prayer is valid in the form of furādā, it is counted as the first rak‘ah of his prayer and he should continue the prayer.\n4. If the imam raises from rukū‘ before the ma‘mūm’s being in rukū‘ posture, then he can make furādā intention."
+          en: "If one joins the prayer while the imam is in rukū‘, one of the following situations may occur:\n1. If one reaches the imam's rukū‘, the congregational prayer is valid and counts as one rak‘ah even if the imam's dhikr is over.\n2. If the imam is getting up from rukū‘ or is in standing posture when the ma‘mūm starts to be in rukū‘, then the prayer in furādā form is valid and is considered as the first rak‘ah of his prayer. So, he must continue the prayer.\n3. If one bows to the extent of rukū‘ but doubts whether he has reached the imam's rukū‘ or not, his prayer is valid in the form of furādā, it is counted as the first rak‘ah of his prayer and he should continue the prayer.\n4. If the imam raises from rukū‘ before the ma‘mūm’s being in rukū‘ posture, then he can make furādā intention.",
+          ur: "اگر کوئی شخص اس وقت اقتدا کرے کہ جب امام رکوع میں ہو تو مندرجہ ذیل صورتیں ممکن ہیں :\n1 ۔ اگ اس وقت رکوع میں پہنچے کہ جب امام رکوع کی حالت میں ہو تو نماز جماعت صحیح ہے اور ایک رکعت شمار ہوگی اگرچہ امام کا ذکر ختم ہوچکا ہو۔\n\n2 ۔ اگر اس وقت رکوع میں پہنچے کہ جب امام رکوع سے کھڑا ہورہا ہو یا کھڑا ہوچکا ہو تو نماز فرادی کی حیثیت سے صحیح ہے اور پہلی رکعت شمار ہوگی اور ضروری ہے کہ نماز کو جاری رکھے۔\n\n3 ۔ اگر رکوع کے برابر جھک جائے اور شک کرے کہ امام کے ساتھ رکوع میں پہنچا یا نہیں تو اس کی نماز فرادی کی حیثیت سے صحیح ہے اور پہلی رکعت شمار ہوگی اور ضروری ہے کہ نماز کو جاری رکھے۔\n\n4 ۔ اگر امام اس کے رکوع کے برابر جھکنے سے پہلے رکوع سے سر اٹھالے تو اس صورت میں فرادی کی نیت کرسکتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -5962,8 +7302,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "745.",
           url: "https://www.leader.ir/en/book/241?sn=32594"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 747",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31241"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 747",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30871"
+        },
+        verification: "A"
       }
     ]
   },
@@ -5999,7 +7348,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The followings terms should be observed in congregational prayer:\n1- A ma‘mūm should not stand in front of the imam. Rather, it is an obligatory caution to stand a little behind.\n2- The imam’s place should not be higher than that of ma‘mūms. Of course, a little difference, less than one handspan, is no problem.\n3- There should not be a long gap between the imam and the ma‘mūm nor among different rows.\n4- There should not be a barrier, like a wall or a curtain, between the imam and the ma‘mūm nor among the rows. However, putting a curtain or the like between the rows of men and women is no problem."
+          en: "The followings terms should be observed in congregational prayer:\n1- A ma‘mūm should not stand in front of the imam. Rather, it is an obligatory caution to stand a little behind.\n2- The imam’s place should not be higher than that of ma‘mūms. Of course, a little difference, less than one handspan, is no problem.\n3- There should not be a long gap between the imam and the ma‘mūm nor among different rows.\n4- There should not be a barrier, like a wall or a curtain, between the imam and the ma‘mūm nor among the rows. However, putting a curtain or the like between the rows of men and women is no problem.",
+          ur: "نماز جماعت میں مندرجہ ذیل شرائط کا خیال رکھنا ضروری ہے :\n1 ۔ مقتدی امام سے آگے کھڑ انہ ہو اور احتیاط واجب یہ ہے کہ امام سے تھوڑا پیچھے کھڑا ہو۔\n2 ۔ امام کی جگہ مقتدی کی جگہ سے بلند نہ ہو البتہ تھوڑی بلند ہونا (ایک بالشت سے کم) اشکال نہیں رکھتا۔\n3 ۔ امام اور مقتدی اور اسی طرح صفوں کے درمیان زیادہ فاصلہ نہ ہو۔\n4 ۔ امام اور مقتدی کے درمیان اور اسی طرح صفوں کے درمیان دیوار یا پردہ جیسی کوئی چیز حائل نہ ہو، البتہ مردوں اور عورتوں کی صف کے درمیان پردہ حائل ہونا کوئی اشکال نہیں رکھتا۔"
         },
         basis: "fatwa",
         source: {
@@ -6007,8 +7357,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "717.",
           url: "https://www.leader.ir/en/book/241?sn=32590"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 719",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31237"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 719",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30867"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -6045,7 +7404,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If all ma‘mūms are women, it is permissible for their imam to be a woman."
+          en: "If all ma‘mūms are women, it is permissible for their imam to be a woman.",
+          ur: "اگر تمام مامومین خواتین ہوں تو عورت کا امام جماعت ہونا جائز ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -6053,8 +7413,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "712.",
           url: "https://www.leader.ir/en/book/241?sn=32589"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 714",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31236"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 714",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30866"
+        },
+        verification: "A"
       }
     ]
   },
@@ -6090,7 +7459,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Āyāt prayer becomes obligatory for one of the following four reasons:\n1. Solar eclipse, even if only a very small part of sun is not visible;\n2. lunar eclipse, even if only a very small part of moon is not visible;\n3. Earthquake;\n4. Any abnormal event in the sky that causes fear to most of the people, such as black and red winds and lightning."
+          en: "Āyāt prayer becomes obligatory for one of the following four reasons:\n1. Solar eclipse, even if only a very small part of sun is not visible;\n2. lunar eclipse, even if only a very small part of moon is not visible;\n3. Earthquake;\n4. Any abnormal event in the sky that causes fear to most of the people, such as black and red winds and lightning.",
+          ur: "نماز آیات مندرجہ ذیل چار میں سے کسی ایک کے سبب واجب ہوتی ہے؛\n1۔ کسوف (سورج گرہن) اگر چہ کچھ حصے کو ہی گرہن لگے۔\n2۔ خسوف (چاند گرہن) اگرچہ کچھ حصے کو ہی گرہن لگے۔\n3۔ زلزلہ\n4۔ ہر غیر معمولی حادثہ جس کے باعث لوگوں کی اکثریت خوف میں مبتلا ہوجائے مثلاً سیاہ و سرخ آندھی اور بجلی کی کڑک۔"
         },
         basis: "fatwa",
         source: {
@@ -6098,8 +7468,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "660.",
           url: "https://www.leader.ir/en/book/241?sn=32580"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 662",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31227"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 662",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30858"
+        },
+        verification: "A"
       }
     ]
   },
@@ -6134,7 +7513,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The āyāt prayer consists of two rak‘ahs, each rak‘ah consists of five rukū‘ and two sajdah, and it can be performed in several ways:\nThe first form: in each rak‘ah, chapter al-Fātiḥah and another chapter are recited five times. In this way, after the intention and takbīrah al-iḥrām, he recites the chapter al-Fātiḥah and another complete chapter and goes to rukū‘, then lifts his head from rukū‘, recites chapter al-Fātiḥah and another chapter again and goes to the second rukū‘, and again lifts his head from rukū‘ and so on. He continues until five rukū‘ are performed, then he goes to prostration, and after performing two prostrations, he performs the second rak‘ah like the first rak‘ah, and after performing two prostrations, he recites tashahhud and salām.\nThe second form: only the chapter al-Fātiḥah and another complete chapter is recited in each rak‘ah. In this way, he divides the second chapter into five parts, and after the intention and takbīrah al-iḥrām, recites the chapter al-Fātiḥah and a part of the other chapter (whether it is one verse, less or more) and goes to rukū‘, and after rukū‘ without reciting chapter al-Fātiḥah he recites the second part of the other chapter and then performs the second rukū‘, and continues in this way until the chapter of which he recited a part before each rukū‘, is finished before the last rukū‘, then he performs the fifth rukū‘ and two sajdah, then he performs the second rak‘ah like the first rak‘ah and recites tashahhud and salām."
+          en: "The āyāt prayer consists of two rak‘ahs, each rak‘ah consists of five rukū‘ and two sajdah, and it can be performed in several ways:\nThe first form: in each rak‘ah, chapter al-Fātiḥah and another chapter are recited five times. In this way, after the intention and takbīrah al-iḥrām, he recites the chapter al-Fātiḥah and another complete chapter and goes to rukū‘, then lifts his head from rukū‘, recites chapter al-Fātiḥah and another chapter again and goes to the second rukū‘, and again lifts his head from rukū‘ and so on. He continues until five rukū‘ are performed, then he goes to prostration, and after performing two prostrations, he performs the second rak‘ah like the first rak‘ah, and after performing two prostrations, he recites tashahhud and salām.\nThe second form: only the chapter al-Fātiḥah and another complete chapter is recited in each rak‘ah. In this way, he divides the second chapter into five parts, and after the intention and takbīrah al-iḥrām, recites the chapter al-Fātiḥah and a part of the other chapter (whether it is one verse, less or more) and goes to rukū‘, and after rukū‘ without reciting chapter al-Fātiḥah he recites the second part of the other chapter and then performs the second rukū‘, and continues in this way until the chapter of which he recited a part before each rukū‘, is finished before the last rukū‘, then he performs the fifth rukū‘ and two sajdah, then he performs the second rak‘ah like the first rak‘ah and recites tashahhud and salām.",
+          ur: "نماز آیات کی دو رکعت ہیں ۔ ہر رکعت میں پانچ رکوع اور دو سجدے ہیں اور اسے کئی طریقوں سے بجالاسکتے ہیں:\nپہلا طریقہ: ہر رکعت میں پانچ دفعہ الحمد اور سورہ پڑھے اس طرح کہ نیت اور تکبیر ہ الاحرام کہنے کے بعد ایک مرتبہ سورہ حمد اور پورا سورہ پڑھے، اس کے بعد رکوع کرے پھر سر اٹھا کر دوبارہ الحمد اور سورہ پڑھے اوردوسرے رکوع میں جائے پھر رکوع سے سر اٹھائے اور اسی طرح جاری رکھے یہاں تک کہ پانچ مرتبہ رکوع پورے ہوجائیں اور اس کے بعد سجدے میں جائے اور دو سجدے بجالانے کے بعد دوسری رکعت کو بھی پہلی رکعت کی طرح بجالائے اور دو سجدے انجام دینے کے بعد تشہد اور سلام پڑھے۔\nدوسرا طریقہ: ہر رکعت میں صرف ایک مرتبہ سورہ حمد اور سورہ پڑھے اس طرح کہ سورے کو پانچ حصوں میں تقسیم کرے اور نیت اور تکبیرہ الاحرام کے بعد الحمد اور سورہ کا ایک حصہ(ایک آیت یا اس سے کم یا زیادہ) پڑھے اور رکوع میں جائے اور رکوع سے سر اٹھانے کے بعد الحمد پڑھے بغیر سورے کا دوسرا حصہ پڑھے اور دوسرے رکوع میں جائے اور اسی طرح جاری رکھے اور ہر رکوع سے پہلے جس سورے کا ایک حصہ پڑھا ہے، آخری رکوع سے پہلے وہ سورہ ختم ہوجائے ،اس کے بعد پانچویں رکوع کو بجالائے اور سجدے میں جائے ۔ دونوں سجدوں کے بعد دوسری رکعت کو بھی پہلی رکعت کی طرح انجام دے اور تشہد اور سلام پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -6142,8 +7522,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "673.",
           url: "https://www.leader.ir/en/book/241?sn=32582"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 675",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31229"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 675",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30860"
+        },
+        verification: "A"
       }
     ]
   },
@@ -6210,7 +7599,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Each rukū‘ in āyāt prayer is rukn (a fundamental part), i.e. if one performs less/more rukū‘ intentionally or by mistake, the prayer is invalidated."
+          en: "Each rukū‘ in āyāt prayer is rukn (a fundamental part), i.e. if one performs less/more rukū‘ intentionally or by mistake, the prayer is invalidated.",
+          ur: "نماز آیات کا ہر رکوع رکن ہے لہذا اگر عمدا یا بھولے سے کم یا زیادہ ہوجائے تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -6218,8 +7608,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "679.",
           url: "https://www.leader.ir/en/book/241?sn=32583"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 681",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31230"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 681",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30861"
+        },
+        verification: "A"
       }
     ]
   },
@@ -6254,7 +7653,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "‘Īd of Fitṛ and ‘Īd of Aḍḥā prayers are obligatory during the presence of the infallible Imam (peace be upon him) and should be performed in congregation. However, it is mustaḥabb at the present time (which is the time of his long absence)."
+          en: "‘Īd of Fitṛ and ‘Īd of Aḍḥā prayers are obligatory during the presence of the infallible Imam (peace be upon him) and should be performed in congregation. However, it is mustaḥabb at the present time (which is the time of his long absence).",
+          ur: "عید فطر اور عید قربان کی نماز یں معصوم علیہ السلام کے زمانہ حضور میں واجب ہیں اور ضروری ہے کہ جماعت کے ساتھ پڑھی جائیں اور آج کے زمانے میں (زمانہ غیبت کبری میں) مستحب ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -6262,8 +7662,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "681.",
           url: "https://www.leader.ir/en/book/241?sn=32584"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 683",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31231"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 683",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30862"
+        },
+        verification: "A"
       }
     ]
   },
@@ -6298,7 +7707,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "‘Īd of Fitṛ or ‘Īd of Aḍḥā prayer's time is from sunrise to shar‘ī noon."
+          en: "‘Īd of Fitṛ or ‘Īd of Aḍḥā prayer's time is from sunrise to shar‘ī noon.",
+          ur: "نماز عید فطر و عید قربان کا وقت عید کے دن اول طلوع آفتاب سے ظہر تک ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -6306,8 +7716,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "682.",
           url: "https://www.leader.ir/en/book/241?sn=32584"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 684",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31231"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 684",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30862"
+        },
+        verification: "A"
       }
     ]
   },
@@ -6343,7 +7762,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The Friday prayer which replaces the ẓuhr prayer on Fridays is a takhyīrī (optionally incumbent) obligation* at the present time, i.e. during the occultation of Imam Mahdi (a). However, at a time when a just Islamic government is ruling in Iran, the mustaḥabb caution is not to miss it if possible.\n* Takhyīrī obligation means that the person is allowed to offer either the Friday prayer or ẓuhr prayer."
+          en: "The Friday prayer which replaces the ẓuhr prayer on Fridays is a takhyīrī (optionally incumbent) obligation* at the present time, i.e. during the occultation of Imam Mahdi (a). However, at a time when a just Islamic government is ruling in Iran, the mustaḥabb caution is not to miss it if possible.\n* Takhyīrī obligation means that the person is allowed to offer either the Friday prayer or ẓuhr prayer.",
+          ur: "موجودہ زمانے (زمانہ غیبت امام عجل اللہ فرجہ الشریف) میں نماز جمعہ پڑھنا کہ جو جمعے کے روز نماز ظہر کے جگہ پڑھی جاتی ہے، واجب تخییری ہے اور احتیاط مستحب یہ ہے کہ آج کے دور میں کہ جب ایران میں اسلامی عادل حکومت قائم ہے حتی الامکان نماز جمعہ کو ترک نہ کیا جائے۔\n* ۔ واجب تخییری سے مراد یہ ہے کہ مکلف کو روز جمعہ کے ظہر کے وقت واجب فریضے کی ادائیگی میں نماز جمعہ یا نماز ظہر پڑھنے کے مابین اختیار حاصل ہے کہ کسی ایک کو واجب کی نیت سے پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -6351,8 +7771,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "762.",
           url: "https://www.leader.ir/en/book/241?sn=32599"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 764",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31246"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 764",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30876"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -6388,7 +7817,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The required term for a Friday prayer to be valid are as follows:\n1. It should be in congregation;\n2. There must be five person, Imam and four ma‘mūms;\n3. observing all requirements for a congregational prayer, like valid connection among imam and ma‘mūms;\n4. The distance between this Friday prayer and the nearest one should not be less than 5125 meter (one farsakh)."
+          en: "The required term for a Friday prayer to be valid are as follows:\n1. It should be in congregation;\n2. There must be five person, Imam and four ma‘mūms;\n3. observing all requirements for a congregational prayer, like valid connection among imam and ma‘mūms;\n4. The distance between this Friday prayer and the nearest one should not be less than 5125 meter (one farsakh).",
+          ur: "نماز جمعہ کی شرائط مندرجہ ذیل ہیں :\n1 ۔ جماعت کے ساتھ ہو۔\n2 ۔ کم از کم پانچ افراد ہوں(ایک امام اور چار ماموم)\n3 ۔ نماز جماعت کی تمام شرائط کی رعایت کرنا مثلاً صفوں کا متصل ہونا۔\n4 ۔ دو نماز جمعہ کے درمیان کم از کم ایک فرسخ فاصلہ ہو۔\n* ۔ ایک فرسخ تقریباً 5125 میٹر (5/125 کلو میٹر) ہوتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -6396,8 +7826,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "764.",
           url: "https://www.leader.ir/en/book/241?sn=32600"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 766",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31247"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 766",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30877"
+        },
+        verification: "A"
       }
     ]
   },
@@ -6432,7 +7871,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who is not participating in the Friday prayer can perform ẓuhr prayer at the beginning of its time and it is not obligatory to wait until the Friday prayer ends."
+          en: "A person who is not participating in the Friday prayer can perform ẓuhr prayer at the beginning of its time and it is not obligatory to wait until the Friday prayer ends.",
+          ur: "جس شخص نے نماز جمعہ میں شرکت نہ کی ہو، نماز ظہر کو اول وقت میں پڑھ سکتا ہے اور نماز جمعہ ختم ہونے تک انتظار کرنا واجب نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -6440,8 +7880,17 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "784.",
           url: "https://www.leader.ir/en/book/241?sn=32605"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 786",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31253"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 786",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30883"
+        },
+        verification: "A"
       }
     ]
   }

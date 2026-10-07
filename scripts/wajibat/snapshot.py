@@ -8,6 +8,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 from src import SIS_EN, SIS_UR, KH_EN, KH_UR, KH_EN_PRAYER, KH_UR_PRAYER, _qa_index, _read, HERE
 from kh_rpf import RPF
 from gen_kqa import qa_unit
+from align_rules import flat
+_FA, U_RULES, _FASEC = flat()   # official Urdu Rules (book 197) by ruling number
 nfc = lambda s: unicodedata.normalize("NFC", s) if s else s
 TR = str.maketrans("۰۱۲۳۴۵۶۷۸۹", "0123456789")
 KH_EN_T = _qa_index("kh_en_taqlid.txt", r"^Q ?(\d+)[:.]\s*", r"^A\s*:\s*")
@@ -26,6 +28,9 @@ def num(ref):
 def numbered_unit(r, e, lang, field):
     src = e["source"] if lang == "en" else e.get("urSource")
     n, t = num(src["reference"]), src["title"]
+    if t == "نماز اور روزه کی احکام":   # Khamenei's official Urdu Rules: «مسئلہ 466» or a merge «مسئلہ 508، 509»
+        nums = [int(x.translate(TR)) for x in re.findall(r"[0-9۰-۹]+", src["reference"])]
+        return nfc("\n".join(U_RULES[m][0] for m in nums)) if all(m in U_RULES for m in nums) else None
     if n is None or not re.match(r"^(Ruling \d+\*?|مسئلہ \(\d+\)|\d+\.|Q \d+|س \d+)$", src["reference"]): return None
     if e["marjaId"] == "sistani":
         u = (SIS_EN if lang == "en" else SIS_UR).get(n)

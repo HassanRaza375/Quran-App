@@ -50,6 +50,13 @@
           </p>
         </div>
 
+        <!-- Decision R11: the official English differs from the Persian original, so only the Urdu is shown. -->
+        <p v-if="entry.englishWithheld !== undefined" class="withheld-notice text-body-2 mb-2" role="note">
+          <v-icon size="16" aria-hidden="true">mdi-translate</v-icon>
+          The official English edition of this ruling differs from the Persian original, so only the official Urdu
+          text (which matches the Persian) is shown. The app does not translate rulings itself.
+        </p>
+
         <!-- Urdu — only from the marja's official Urdu book (decision R1) -->
         <div v-if="showUrdu" class="lang-block" :class="{ 'mt-4': showEnglish }">
           <div v-if="entry.question?.ur" class="qa-question">
@@ -59,6 +66,11 @@
           <span v-if="entry.question?.ur" class="qa-label urdu-inline" lang="ur" dir="rtl">جواب</span>
           <p class="ruling-text urdu-text" lang="ur">{{ entry.text.ur }}</p>
           <SourceLine :source="entry.urSource" :marja-name="marja.name.en" urdu />
+          <p v-if="entry.persianSource" class="text-caption text-medium-emphasis mt-1 mb-0">
+            <v-icon size="14" aria-hidden="true">mdi-check-decagram-outline</v-icon>
+            Compared with the Persian original:
+            <a :href="entry.persianSource.url" target="_blank" rel="noopener noreferrer">{{ entry.persianSource.reference }}</a>
+          </p>
         </div>
 
         <!-- Decision P6a: app-written Urdu notice when the Urdu edition lags the revised ruling -->
@@ -108,8 +120,10 @@ const recitations = computed(() =>
     .filter((r) => r && r.marjaId === props.marja.id)
 );
 const hasUrdu = computed(() => !!entry.value?.text.ur);
-const showUrdu = computed(() => props.lang !== "en" && hasUrdu.value);
-const showEnglish = computed(() => props.lang !== "ur" || !hasUrdu.value);
+const englishWithheld = computed(() => entry.value?.englishWithheld !== undefined);
+// Withheld English (R11): the Urdu is the only text shown, in every language mode.
+const showUrdu = computed(() => hasUrdu.value && (props.lang !== "en" || englishWithheld.value));
+const showEnglish = computed(() => !englishWithheld.value && (props.lang !== "ur" || !hasUrdu.value));
 const urduUnavailable = computed(() => props.lang !== "en" && !hasUrdu.value);
 
 const missingMessage = computed(() =>
@@ -145,6 +159,10 @@ const missingMessage = computed(() =>
   letter-spacing: 0.06em;
   color: rgba(var(--v-theme-on-surface), 0.6);
   margin-bottom: 2px;
+}
+.withheld-notice {
+  border-inline-start: 3px solid rgba(var(--v-theme-warning), 0.6);
+  padding-inline-start: 10px;
 }
 .lag-notice {
   border: 1px dashed rgba(var(--v-theme-on-surface), 0.25);

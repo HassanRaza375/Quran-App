@@ -128,6 +128,15 @@ export interface MarjaRuling {
   verification: VerificationLevel;
   /** Why no official Urdu text is shown for this ruling (listed in the phase summary). */
   urduNote?: string;
+  /** Decision R11 (Khamenei only): his English and Urdu books both translate the same Persian
+   * original. Where the official English text differs from the Persian, the English is withheld:
+   * `text.en` stays in the data for audit but is never displayed, the official Urdu (which matches
+   * the Persian) is shown in every language mode, and the app never translates it itself.
+   * The value is the audit reason (data/log only, not shown). */
+  englishWithheld?: string;
+  /** Where the Persian original of this ruling was read to compare the English and Urdu editions
+   * (decision R11). Metadata only: the Persian text itself is never displayed. */
+  persianSource?: SourceCitation;
   /** The official Urdu edition still has the pre-revision text of this ruling (decision P6):
    * Urdu is withheld, and the Urdu view shows URDU_EDITION_LAG_NOTICE instead. */
   urduEditionLag?: boolean;

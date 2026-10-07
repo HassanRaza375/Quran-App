@@ -90,3 +90,6 @@ To check the supplementary Q&A entries word for word against the cited leader.ir
 | `dump_dataset.mjs`, `snapshot.py` | Dataset dump, then the snapshot fixture |
 | `fetch_sources.py`, `crawl_book.py`, `h2t.py` | Re-create the source cache |
 | `verify_live_qa.py` | Q&A entries vs the live leader.ir pages |
+| `align_rules.py` | Aligns Khamenei's *Rules* across the Persian original (book 180), the official Urdu (197) and the English (241); English-to-Persian numbering |
+| `rules_verdicts.py` | The R11 verdicts: where the English or Urdu differs from the Persian, which one is withheld, and why |
+| `review_rules.py`, `fa_view.py` | Print the three editions side by side for review (not part of the build) |

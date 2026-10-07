@@ -15,9 +15,14 @@ SIS_UR_URL = "https://www.sistani.org/urdu/book/61/{}/"
 RPF_URL = "https://www.leader.ir/en/book/241?sn={}"
 LAG_NOTE = "Marked * (revised) in the 4th edition. The official Urdu توضیح المسائل still has the earlier wording, so only the revised English is shown (decision P6)."
 MATCH_NOTE = "Marked * (revised) in the 4th edition. The Urdu text was compared and matches in substance."
-# Corrected 2026-10-07: leader.ir does have an official Urdu edition (book 197, numbered like the Persian original);
-# matching it to these rulings is pending the user's decision (P18), so the English is shown alone until then.
-RPF_NO_URDU = "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+# Decision R11: every Khamenei Rules entry is read against the Persian original and its official
+# Urdu edition (leader.ir book 197); see rules_verdicts.py and align_rules.py.
+UR_RPF_BOOK = "نماز اور روزه کی احکام"
+FA_RPF_BOOK = "رساله نماز و روزه"
+UR_RPF_URL = "https://www.leader.ir/ur/book/197/1?sn={}"
+FA_RPF_URL = "https://www.leader.ir/fa/book/180/1?sn={}"
+RPF_NO_URDU = "The official Urdu edition of this book has no counterpart to this ruling in the same section, so only the English is shown (decision R1)."
+URDU_WITHHELD_NOTE = "The official Urdu edition differs from the Persian original in this ruling, so only the English, which matches the Persian, is shown (decision R11)."
 
 def infer_basis(text):
     t = text.strip()
@@ -105,33 +110,73 @@ def S(n=None, *, intro=None, cut=None, urdu="auto", hukm=None, basis=None, note=
     if notes: r["note"] = " ".join(notes)
     return r
 
-# Rulings withheld from display, with the reason (recorded here so a regeneration can't bring them back).
-# The marja's other entries in the same Ruling stay; his followers see "not added yet — refer to his risala".
-HIDDEN_RPF = {
-    465: "P15 (2026-10-07): the English reads 'prayer during such a travel is not shortened', contradicting "
-         "Rules 452 and 462 (tourism is a permissible purpose). It is not about a specific trip: it sits under "
-         "'Continuation of the Travel's Permissibility', and amusement hunting is ruled separately (469-471). "
-         "The Persian original, رساله نماز و روزه مسأله 466 (leader.ir sn=30834), says the prayer is shortened (قصر). "
-         "Mistranslation in the English edition, so hidden; our own translation is never shown.",
-}
+from align_rules import en_to_fa, flat
+from rules_verdicts import VERDICTS, MERGES
+_FA, _UR, _FASEC = flat()
+
+def _urdu_basis(ur):
+    """Basis from the opening words of the official Urdu text (used where the English is withheld)."""
+    t = ur.strip()
+    if re.match(r"^(احتیاط واجب کی بنا\s?پر|احتیاط واجب یہ|احتیاط لازم)", t): return "ihtiyat_wajib"
+    if re.match(r"^(احتیاط مستحب)", t): return "ihtiyat_mustahab"
+    if re.match(r"^(احتیاط کی بنا\s?پر|احتیاط یہ)", t): return "ihtiyat_unspecified"
+    return "fatwa"
+
+def _urdu_notes(ur, basis):
+    body = ur if basis == "fatwa" else ur[40:]
+    notes = []
+    if re.search(r"احتیاط\s+(واجب|لازم)", body): notes.append("Part of this ruling is stated as an obligatory precaution; see the wording.")
+    if re.search(r"احتیاط\s+مستحب", body): notes.append("Part of this ruling is stated as a recommended precaution; see the wording.")
+    if re.search(r"احتیاط(?!\s+(واجب|لازم|مستحب))", body): notes.append("Part of this text says 'caution' (احتیاط) without stating whether it is obligatory or recommended (decision P5).")
+    return notes
+
+def _rules_pair(n):
+    """(persian numbers, urdu text, urdu citation, persian citation) for English ruling n, or None."""
+    nums = MERGES.get(n) or ([en_to_fa(n)] if en_to_fa(n) else [])
+    if not nums or any(m not in _UR for m in nums): return None
+    ur = "\n".join(_UR[m][0] for m in nums)
+    lab = "، ".join(str(m) for m in nums)
+    return (nums, nfc(ur),
+            {"title": UR_RPF_BOOK, "reference": f"مسئلہ {lab}", "url": UR_RPF_URL.format(_UR[nums[0]][1])},
+            {"title": FA_RPF_BOOK, "reference": f"مسأله {lab}", "url": FA_RPF_URL.format(_FASEC[nums[0]])})
 
 def K(n, *, cut=None, hukm=None, basis=None, note=None):
-    """Khamenei entry from The Rules on Prayer & Fasting 2023 (English only, R1)."""
-    if n in HIDDEN_RPF:
-        return None
+    """Khamenei entry from The Rules on Prayer & Fasting 2023. The English is quoted from that book;
+    the official Urdu (book 197) is attached where it agrees with the Persian original, and the
+    English is withheld where it does not (decision R11, rules_verdicts.py)."""
     t, sn = nfc(RPF[n]["text"]), RPF[n]["sn"]
+    verdict, reason = VERDICTS.get(n, (None, None))
+    pair = _rules_pair(n)
+    assert not (cut and verdict), n
     excerpt = False
     if cut:
         t = _cut(t, cut[0], cut[1], n); excerpt = True
+    if verdict == "footnote-trim":
+        main = t.split("\n* ")[0]
+        assert main != t, ("no footnote to trim", n)
+        t, excerpt = main, True
     r = {"marjaId": "khamenei", "format": "issue", "text": {"en": t}}
     b = basis or infer_basis(t)
+    ur = None
+    if pair and verdict != "urdu-withheld":
+        ur = pair[1]
+        r["text"]["ur"] = ur
+    if verdict == "english-withheld":
+        b = basis or _urdu_basis(ur)
     if hukm: r["hukm"] = hukm
     r["basis"] = b
     if excerpt: r["excerpt"] = True
     r["source"] = {"title": KH_RPF_BOOK, "reference": f"{n}.", "url": RPF_URL.format(sn)}
+    if ur: r["urSource"] = pair[2]
+    if pair: r["persianSource"] = pair[3]
     r["verification"] = "A"
-    r["urduNote"] = RPF_NO_URDU
-    notes = [x for x in [note, auto_note(t, b)] if x]
+    if verdict == "english-withheld": r["englishWithheld"] = reason
+    if verdict == "urdu-withheld": r["urduNote"] = URDU_WITHHELD_NOTE
+    elif not pair: r["urduNote"] = RPF_NO_URDU
+    notes = [note] if note else []
+    notes += (_urdu_notes(ur, b) if verdict == "english-withheld" else [x for x in [auto_note(t, b)] if x])
+    if verdict == "footnote-trim":
+        notes.append("The English edition's footnote differs from the Persian original and the official Urdu edition, so it is not shown here; the Urdu text carries the footnote.")
     if notes: r["note"] = " ".join(notes)
     return r
 
@@ -149,7 +194,7 @@ def R(id_, topic, subject, *entries, differs=False, sensitive=False, see_also=No
 
 # ---- Shared output steps ----
 ARABIC = re.compile(r"[\u0600-\u06FF]")
-ORDER = ["marjaId", "format", "question", "text", "hukm", "basis", "excerpt", "source", "urSource", "verification", "arabicInSource", "urduNote", "urduEditionLag", "note"]
+ORDER = ["marjaId", "format", "question", "text", "hukm", "basis", "excerpt", "source", "urSource", "persianSource", "verification", "arabicInSource", "englishWithheld", "urduNote", "urduEditionLag", "note"]
 
 def finalize(rulings):
     """Flags `arabicInSource` and fixes the field order. The generators only ever copy text from

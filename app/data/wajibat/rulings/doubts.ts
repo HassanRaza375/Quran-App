@@ -20,7 +20,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "There are three types of doubt* in prayer:\na. Doubt about prayer itself,\nb. Doubt about a part of prayer,\nc. Doubt about prayer’s rak‘ah.\n* Here by doubt we mean probability of fifty percent. If it is more than fifty percent, it is called ẓan with different rules."
+          en: "There are three types of doubt* in prayer:\na. Doubt about prayer itself,\nb. Doubt about a part of prayer,\nc. Doubt about prayer’s rak‘ah.\n* Here by doubt we mean probability of fifty percent. If it is more than fifty percent, it is called ẓan with different rules.",
+          ur: "نماز میں شک کی تین قسمیں ہیں:\n1۔ خود نماز میں شک؛\n2۔ نماز کے اجزاء میں شک؛\n3۔ نماز کی رکعتوں میں شک؛\n* ۔ شک سے مراد دو یا دو سے زائد چیزوں کے مابین مساوی طور پر تردید کا شکار ہونا ہے اس طرح کہ کوئی ایک بھی کسی دوسرے پر ترجیح نہ رکھتا ہو اور اگر ایک طرف دوسرے پر کوئی رجحان یا برتری رکھتا ہو تو برتری رکھنے والا طرف ظن (گمان) اور کمزور طرف وہم کہلاتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -28,8 +29,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "346.",
           url: "https://www.leader.ir/en/book/241?sn=32526"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 347",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31174"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 347",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30805"
+        },
+        verification: "A"
       }
     ],
     seeAlso: [
@@ -70,7 +80,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If, after the prayer’s time, one doubts whether he has performed it or not, or thinks (more than fifty percent) that he has not performed, it is not necessary to perform it. However, if before the end of prayer’s time, he doubts whether he has performed the prayer or not, he should pray. Rather, if one thinks (i.e. more than fifty percent) that he has performed it, he should pray."
+          en: "If, after the prayer’s time, one doubts whether he has performed it or not, or thinks (more than fifty percent) that he has not performed, it is not necessary to perform it. However, if before the end of prayer’s time, he doubts whether he has performed the prayer or not, he should pray. Rather, if one thinks (i.e. more than fifty percent) that he has performed it, he should pray.",
+          ur: "اگر وقت گزرنے کے بعد شک کرے کہ نماز پڑھی ہے یا نہیں یا گمان کرے کہ نہیں پڑھی ہے تو نماز پڑھنا لازم نہیں لیکن اگر وقت ختم ہونے سے پہلے شک کرے کہ نماز پڑھی ہے یا نہیں تو ضروری ہے نماز پڑھے بلکہ نماز پڑھنے کا گمان ہوجائے تو بھی پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -78,8 +89,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "347.",
           url: "https://www.leader.ir/en/book/241?sn=32527"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 348",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31175"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 348",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30806"
+        },
+        verification: "A"
       }
     ]
   },
@@ -114,7 +134,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Doubt about the number of rak‘ah makes the prayer invalid in the following cases:\n1. Doubt about the number of rak‘ah of two-rak‘ah prayers, such as fajr prayer or the traveler’s shortened prayer. (However, doubt in the number of rak‘ah of caution prayers, does not invalidate them.\n2. Doubt about the number of rak‘ah of a three-rak‘ah prayer (maghrib prayer).\n3. Doubt occurring in a four-rak‘ah prayer as to whether one has performed one rak‘ah or more, such as when a person doubts whether he has performed one rak‘ah or two rak‘ah or whether he has performed one rak‘ah or three rak‘ah.\n4. Doubt in four-rak‘ah prayers before finishing the second sajdah, as to whether he has performed two rak‘ah or more, such as doubting between two or three rak‘ah before completing both sajdah or between two or four rak‘ah before completing both sajdah.\n5. Doubts in the number of rak‘ah in prayer when the person does not know at all how many rak‘ah he has performed."
+          en: "Doubt about the number of rak‘ah makes the prayer invalid in the following cases:\n1. Doubt about the number of rak‘ah of two-rak‘ah prayers, such as fajr prayer or the traveler’s shortened prayer. (However, doubt in the number of rak‘ah of caution prayers, does not invalidate them.\n2. Doubt about the number of rak‘ah of a three-rak‘ah prayer (maghrib prayer).\n3. Doubt occurring in a four-rak‘ah prayer as to whether one has performed one rak‘ah or more, such as when a person doubts whether he has performed one rak‘ah or two rak‘ah or whether he has performed one rak‘ah or three rak‘ah.\n4. Doubt in four-rak‘ah prayers before finishing the second sajdah, as to whether he has performed two rak‘ah or more, such as doubting between two or three rak‘ah before completing both sajdah or between two or four rak‘ah before completing both sajdah.\n5. Doubts in the number of rak‘ah in prayer when the person does not know at all how many rak‘ah he has performed.",
+          ur: "مندرجہ ذیل صورتوں میں نماز کی رکعتوں کی تعداد میں شک سے نماز باطل ہوجاتی ہے:\n\n1۔ دو رکعتی واجب نمازوں میں شک مثلاً نماز صبح اور نماز مسافر لیکن دو رکعتی نماز احتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا ۔\n\n2۔ نماز مغرب میں شک؛\n\n3۔ چار رکعتی نمازوں میں شک جب شک کی ایک طرف ایک کا عدد ہو مثلاً ایک اور دو رکعتوں میں شک یا ایک اور تین رکعتوں میں شک؛\n\n4۔ چار رکعتی نمازوں میں دوسرا سجدہ ختم ہونے سے پہلے شک کہ ایک طرف دورکا عدد ہو اور دوسری طرف دو سے زیادہ مثلاً دو اور تین یا دو اور چار میں شک؛\n\n5۔ نماز کی رکعتوں میں اس طرح شک کرے کہ یاد نہ آئے کہ کتنی رکعتیں پڑھی ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -122,8 +143,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "362.",
           url: "https://www.leader.ir/en/book/241?sn=32530"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 363",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31178"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 363",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30809"
+        },
+        verification: "A"
       }
     ],
     differsBetweenMaraji: true
@@ -159,7 +189,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one of the doubts, which invalidate the prayer, arises for the praying person, one, according to caution, is not allowed to cut the prayer immediately. Rather, they should think about it for a while until it seems that the doubt is not removable (i.e. none of the two choices seems more probable), in case of which one may cut the prayer."
+          en: "If one of the doubts, which invalidate the prayer, arises for the praying person, one, according to caution, is not allowed to cut the prayer immediately. Rather, they should think about it for a while until it seems that the doubt is not removable (i.e. none of the two choices seems more probable), in case of which one may cut the prayer.",
+          ur: "اگر نماز پڑھنے والے کو ایسا شک ہوجائے جو نماز کو باطل کرتا ہے تو احتیاط کی بناپر نماز کو فورا ً نہیں توڑ سکتا ہے بلکہ تھوڑی دیر غور وفکر کرے تاکہ اس کا شک مستحکم ہوجائے (یعنی کسی ایک طرف یقین یا گمان پیدا نہ ہو) اس وقت نماز توڑ سکتا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -167,8 +198,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "363.",
           url: "https://www.leader.ir/en/book/241?sn=32530"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 364",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31178"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 364",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30809"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5)."
       }
     ]
@@ -184,7 +224,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a praying person doubts about the no. of rak‘ah, e.g. they do not know whether they offered three or four rak‘ah, they should think about it and if one side seems more probable, one should complete the prayer according to it and the prayer is alright. Otherwise, if it remains fifty-fifty, one should act according to the following rulings."
+          en: "If a praying person doubts about the no. of rak‘ah, e.g. they do not know whether they offered three or four rak‘ah, they should think about it and if one side seems more probable, one should complete the prayer according to it and the prayer is alright. Otherwise, if it remains fifty-fifty, one should act according to the following rulings.",
+          ur: "اگر نماز کی رکعتوں کی تعداد میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار تو پہلے تھوڑی دیر غور کرنا چاہئےاگر کسی طرف یقین یا گمان ہوجائے تو اسی کے مطابق نماز کو جاری رکھے اور نماز صحیح ہے اور اگر کسی طرف یقین یا گمان نہ ہو تو ان احکام کے مطابق عمل کرے جو بعد میں بیان کئے جائیں گے۔"
         },
         basis: "fatwa",
         source: {
@@ -192,8 +233,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "360.",
           url: "https://www.leader.ir/en/book/241?sn=32529"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 361",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31177"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 361",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30808"
+        },
+        verification: "A"
       }
     ],
     seeAlso: [
@@ -235,7 +285,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In a four-rak‘ah prayer, if a doubt arises about number of rak‘ah and, after thinking about it, one of the two choices seems more probable (e.g. he thinks it is 60 percent probable that he is in the 4th rak‘ah), one should act according to it and finish the prayer and the prayer is valid. However, if none of them seems more than fifty percent (e.g. he thinks he is in the 4th rak‘ah 50 percent or in the 5th rak‘ah 50 percent), one must act as we will mention.\n1. If, after the 2nd sajdah, they doubt (fifty-fifty) as to whether they have offered three or four rak‘ah, they should consider it as the 3th rak‘ah, perform another rak‘ah, and complete the prayer. Then one must perform a one-rak‘ah caution prayer (as we will mention later) in standing position or a two-rak‘ah caution prayer in sitting position.\n2. After lifting head from the 2nd sajdah, if one doubts [fifty-fifty] as to whether they have completed two or four rak‘ah, they should consider it as the fourth rak‘ah, complete the prayer and offer a two-rak‘ah standing caution prayer.\n3. For the doubt between the 2nd, 3rd and 4th rak‘ah after completing the 2nd sajdah, one should consider it as the 4th rak‘ah, complete the prayer and perform a two-rak‘ah standing caution prayer and a two-rak‘ah sitting one.*\n* Before, it is mentioned that if one of these three doubts arises before finishing the second sajdah, the prayer is void.\n4. If, at any part of the four-rak‘ah prayer, one doubts as to whether they have completed three or four rak‘ah, they should consider it as the 4th rak‘ah, complete the prayer and perform a one-rak‘ah standing or two-rak‘ah sitting caution prayer.\n5. After second sajdah, if one doubts as to whether it is the fourth or the fifth rak‘ah, one must consider it as the fourth rak‘ah and finish the prayer. Then, one must perform two sajdahs of sahw (inadvertence).\n6. Before rukū‘ in standing position, if one doubts (fifty-fifty) whether it is the 4th and 5th rak‘ah, one should sit down (without performing rukū‘), recite tashahhud, say taslīm and thereafter perform a one-rak‘ah standing or two-rak‘ah sitting caution prayer.*\n* Ther are some other cases of valid doubts which are mentioned in detailed fiqhī books but normally one does not doubt like that."
+          en: "In a four-rak‘ah prayer, if a doubt arises about number of rak‘ah and, after thinking about it, one of the two choices seems more probable (e.g. he thinks it is 60 percent probable that he is in the 4th rak‘ah), one should act according to it and finish the prayer and the prayer is valid. However, if none of them seems more than fifty percent (e.g. he thinks he is in the 4th rak‘ah 50 percent or in the 5th rak‘ah 50 percent), one must act as we will mention.\n1. If, after the 2nd sajdah, they doubt (fifty-fifty) as to whether they have offered three or four rak‘ah, they should consider it as the 3th rak‘ah, perform another rak‘ah, and complete the prayer. Then one must perform a one-rak‘ah caution prayer (as we will mention later) in standing position or a two-rak‘ah caution prayer in sitting position.\n2. After lifting head from the 2nd sajdah, if one doubts [fifty-fifty] as to whether they have completed two or four rak‘ah, they should consider it as the fourth rak‘ah, complete the prayer and offer a two-rak‘ah standing caution prayer.\n3. For the doubt between the 2nd, 3rd and 4th rak‘ah after completing the 2nd sajdah, one should consider it as the 4th rak‘ah, complete the prayer and perform a two-rak‘ah standing caution prayer and a two-rak‘ah sitting one.*\n* Before, it is mentioned that if one of these three doubts arises before finishing the second sajdah, the prayer is void.\n4. If, at any part of the four-rak‘ah prayer, one doubts as to whether they have completed three or four rak‘ah, they should consider it as the 4th rak‘ah, complete the prayer and perform a one-rak‘ah standing or two-rak‘ah sitting caution prayer.\n5. After second sajdah, if one doubts as to whether it is the fourth or the fifth rak‘ah, one must consider it as the fourth rak‘ah and finish the prayer. Then, one must perform two sajdahs of sahw (inadvertence).\n6. Before rukū‘ in standing position, if one doubts (fifty-fifty) whether it is the 4th and 5th rak‘ah, one should sit down (without performing rukū‘), recite tashahhud, say taslīm and thereafter perform a one-rak‘ah standing or two-rak‘ah sitting caution prayer.*\n* Ther are some other cases of valid doubts which are mentioned in detailed fiqhī books but normally one does not doubt like that.",
+          ur: "اگر چار رکعتی نماز کی رکعتوں کی تعداد میں شک کرے اور غور و فکر کے بعد کسی ایک طرف یقین یا گمان ہوجائے تو اسی کے مطابق نماز کو جاری رکھے اور نماز صحیح ہے اور اگر کسی ایک طرف گمان نہ ہو تو ان احکام کے مطابق عمل کرے جو بیان کئے جائیں گے:\n\n1۔ اگر دوسرے سجدے سے سر اٹھانے کے بعد شک کرے کہ دو رکعتیں پڑھی ہیں یا تین، تو یہ فرض کرے کہ تین رکعتیں پڑھی ہیں اور مزید ایک رکعت پڑھے اور نماز کو تمام کرے۔ نماز کے بعد کھڑے ہوکر ایک رکعت یا بیٹھ کر دو رکعت نماز احتیاط (اس طریقے کے مطابق جو بعد میں بیان کیا جائے گا) بجالائے۔\n\n2۔ اگر دوسرے سجدے سے سر اٹھانے کے بعد شک کرے کہ دو رکعتیں پڑھی ہیں یا چار تو یہ سمجھنا چاہئے کہ چار رکعتیں پڑھی ہیں اور نماز کو تمام کرے اور نماز کے بعد کھڑے ہوکر دو رکعت نماز احتیاط پڑھے۔\n\n3۔ اگر دوسرے سجدے کے بعد شک کرے کہ دو رکعتیں پڑھی ہیں یا تین یا چار تو یہ فرض کرے کہ چار رکعتیں پڑھی ہیں اور نماز کے بعد دو رکعت نماز احتیاط کھڑے ہوکر اور دو رکعت بیٹھ کر بجالائے۔\n\n4۔ نماز کے دوران جس وقت بھی شک کرے کہ تین رکعتیں پڑھی ہیں یا چار تو بنا رکھے کہ چار رکعتیں پڑھی ہیں اور نماز کو تمام کرے۔ نماز کے بعد کھڑے ہوکر ایک رکعت یا بیٹھ کر دو رکعت نماز احتیاط پڑھے۔\n\n5۔ اگر دوسرے سجدے کے بعد شک کرے کہ چار رکعتیں پڑھی ہیں یا پانچ توبنا رکھے کہ چار رکعتیں پڑھی ہیں اور نماز کو تمام کرے اور نماز کے بعد دو سجدہ سہو (جس کا طریقہ بعد میں بیان کیا جائے گا) بجالائے۔\n\n6۔ اگر قیام کی حالت میں شک کرے کہ چار رکعتیں پڑھی ہیں یا پانچ تو رکوع کئے بغیر بیٹھ جائے اور تشہد اور سلام پڑھے اور کھڑے ہوکر ایک رکعت یا بیٹھ کر دو رکعت نماز احتیاط پڑھے۔\n* ۔ پہلے بیان کیا جاچکا ہے کہ اگر ان تین شکوک میں سے کوئی شک دوسرا سجدہ مکمل ہونے سے پہلے پیش آئے تو نماز باطل ہے۔\n* ۔ صحیح شکوک کی مزید صورتیں بھی ہیں کہ جو فقہ کی مفصل کتابوں میں درج ہیں اور کمتر پیش آتی ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -243,8 +294,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "364.",
           url: "https://www.leader.ir/en/book/241?sn=32531"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 365",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31179"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 365",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30810"
+        },
+        verification: "A"
       }
     ],
     differsBetweenMaraji: true
@@ -277,7 +337,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The probability of more than fifty percent regarding number of rak‘ah in a prayer is just like the `certainty`. For example, when one doubts as to whether they have finished three or four rak‘ah, in case that the probability of one of the choices seems more, one should act accordingly and the prayer is alright."
+          en: "The probability of more than fifty percent regarding number of rak‘ah in a prayer is just like the `certainty`. For example, when one doubts as to whether they have finished three or four rak‘ah, in case that the probability of one of the choices seems more, one should act accordingly and the prayer is alright.",
+          ur: "نماز کی رکعتوں کے بارے میں گمان کا حکم یقین کی طرح ہے یعنی جب تین یا چار رکعت پڑھنے میں شک ہوجائے اور کسی ایک طرف زیادہ گمان ہوجائے تو اسی کے مطابق عمل کرے اور نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -285,8 +346,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "368.",
           url: "https://www.leader.ir/en/book/241?sn=32531"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 369",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31179"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 369",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30810"
+        },
+        verification: "A"
       }
     ]
   },
@@ -321,7 +391,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If at first one thinks that one side of the doubt is more probable, then both sides becomes equal in his opinion, he must act according to the rule of doubt. But if at first both sides are equal in his opinion and he decides to act according to his duty, then he thinks one side is more probable, he should act according to it and finish the prayer."
+          en: "If at first one thinks that one side of the doubt is more probable, then both sides becomes equal in his opinion, he must act according to the rule of doubt. But if at first both sides are equal in his opinion and he decides to act according to his duty, then he thinks one side is more probable, he should act according to it and finish the prayer.",
+          ur: "اگر شروع میں شک کے ایک جانب اس کا گمان زیادہ ہو پھر اس کے بعد دونوں جانب کے متعلق اس کی رائے مساوی ہوجائے تو شک کے دستور پر عمل کرے اور جب شروع میں دونوں جانب اس کی نظر میں مساوی ہوں اور اپنے وظیفے پر عمل کرنے کا قصد کرے پھر اس کے بعد دوسری طرف گمان ہوجائے تو اپنے گمان کے مطابق عمل کرے اور نماز کو تمام کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -329,8 +400,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "369.",
           url: "https://www.leader.ir/en/book/241?sn=32531"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 370",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31179"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 370",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30810"
+        },
+        verification: "A"
       }
     ]
   },
@@ -394,7 +474,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one of the valid doubts, i.e. a doubt which does not invalidate prayer - occurs to the praying person, he should not abandon the prayer. If he does so, he has committed a sin. In this case, if before doing something that invalidates the prayer like turning away from the qiblah, he renews his prayer, his second prayer is also invalid.\nHowever, if he starts the second prayer after performing one of the prayer invalidators, the second prayer is valid."
+          en: "If one of the valid doubts, i.e. a doubt which does not invalidate prayer - occurs to the praying person, he should not abandon the prayer. If he does so, he has committed a sin. In this case, if before doing something that invalidates the prayer like turning away from the qiblah, he renews his prayer, his second prayer is also invalid.\nHowever, if he starts the second prayer after performing one of the prayer invalidators, the second prayer is valid.",
+          ur: "اگر نماز پڑھنے والے کو صحیح شکوک میں سے کوئی شک ہوجائے تو نماز کو نہیں توڑنا چاہئے۔ اگر ایسا کرے تو گناہ کا مرتکب ہوگا اور اگر نماز کو باطل کرنے والا کوئی کام کرنے سے پہلے مثلاً قبلے سے رخ پھیرنے سے پہلے نماز کو شروع سے بجالائے تو دوسری نماز باطل ہے لیکن اگر نماز کو باطل کرنے والے کام کو انجام دینے کے بعد دوسری نماز شروع کرے تو دوسری نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -402,8 +483,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "366.",
           url: "https://www.leader.ir/en/book/241?sn=32531"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 367",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31179"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 367",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30810"
+        },
+        verification: "A"
       }
     ]
   },
@@ -439,7 +529,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one of the doubts, for which caution prayer is required, arises, if he finishes the current prayer without reciting the caution prayer and then resumes the prayer, he has committed a sin. If he does so before doing a prayer invalidator, the second prayer is also void.\nBut if he engages in the second prayer after performing one of the prayer invalidator, the second prayer is valid."
+          en: "If one of the doubts, for which caution prayer is required, arises, if he finishes the current prayer without reciting the caution prayer and then resumes the prayer, he has committed a sin. If he does so before doing a prayer invalidator, the second prayer is also void.\nBut if he engages in the second prayer after performing one of the prayer invalidator, the second prayer is valid.",
+          ur: "اگر ان شکوک میں سے کوئی پیش آئے جن کے لئے نماز احتیاط واجب ہوتی ہے چنانچہ نماز کے بعد نماز احتیاط پڑھے بغیر دوبارہ نماز شروع سے پڑھے تو گناہ گار ہوگا اور اگر نماز کو باطل کرنے والا کوئی کام کرنے سے پہلے نماز کو دوبارہ پڑھے تو دوسری نماز باطل ہے اور اگر مبطلات نماز میں سے کوئی کام انجام دینے کے بعد دوسری نماز پڑھنا شروع کرے تو دوسری نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -447,8 +538,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "367.",
           url: "https://www.leader.ir/en/book/241?sn=32531"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 368",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31179"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 368",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30810"
+        },
+        verification: "A"
       }
     ],
     differsBetweenMaraji: true
@@ -716,7 +816,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Doubts which are invalid and should be ignored are as follows:\n1. Doubt about an act after passing its due place,\n2. Doubt after salām of prayer.\n3. Doubt after the time of prayer has already passed.\n4. Doubt by an imam (one who leads the prayer) or a ma‘mūm (the follower of an imam in congregational prayer),\n5. Doubt of a person who doubts too much,\n6. Doubt which arises in a mustaḥabb prayers."
+          en: "Doubts which are invalid and should be ignored are as follows:\n1. Doubt about an act after passing its due place,\n2. Doubt after salām of prayer.\n3. Doubt after the time of prayer has already passed.\n4. Doubt by an imam (one who leads the prayer) or a ma‘mūm (the follower of an imam in congregational prayer),\n5. Doubt of a person who doubts too much,\n6. Doubt which arises in a mustaḥabb prayers.",
+          ur: "وہ شکوک جن کی پروا نہیں کرنی چاہئے، مندرجہ ذیل ہیں:\n1۔ اس چیز کے بارے میں شک کہ جس کا موقع گزر گیا ہو؛\n2۔ سلام کے بعد شک؛\n3۔ نماز کا وقت گزرجانے کے بعد شک؛\n4۔ امام اور ماموم کا شک؛\n5۔ کثیر الشک کا شک؛\n6۔ مستحب نمازوں میں شک؛"
         },
         basis: "fatwa",
         source: {
@@ -724,8 +825,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "373.",
           url: "https://www.leader.ir/en/book/241?sn=32533"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 374",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31181"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 374",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30812"
+        },
+        verification: "A"
       }
     ]
   },
@@ -761,7 +871,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "During prayer, if someone doubts whether he has performed one of the obligatory acts of prayer or not, then if he has not started the next part, he should perform it, and if he has started the next part (even if it is a mustaḥabb part), he should not pay attention to his doubt."
+          en: "During prayer, if someone doubts whether he has performed one of the obligatory acts of prayer or not, then if he has not started the next part, he should perform it, and if he has started the next part (even if it is a mustaḥabb part), he should not pay attention to his doubt.",
+          ur: "اگر کسی کو نماز کی حالت میں شک ہوجائے کہ نماز کے واجب کاموں میں سے کسی کو انجام دیا ہے یا نہیں، چنانچہ اس کے بعد کے جز ءمیں داخل نہ ہوا ہو تو اس کو بجالائے اور اگر بعد کے جزء میں(اگرچہ وہ جزء مستحب ہی کیوں نہ ہو ) داخل ہوچکا ہو تو اپنے شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -769,8 +880,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "348.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 349",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 349",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ]
   },
@@ -785,7 +905,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If before starting the recitation including\nاعوذ باللَّه من الشیطان الرجیم\n(which means “I seek refuge in Allah from Satan the rejected one”), one doubts whether he has said takbīrah al-iḥrām or not, he should say it."
+          en: "If before starting the recitation including\nاعوذ باللَّه من الشیطان الرجیم\n(which means “I seek refuge in Allah from Satan the rejected one”), one doubts whether he has said takbīrah al-iḥrām or not, he should say it.",
+          ur: "اگر قرائت کو شروع کرنے سے پہلے بلکہ \"اعوذ باللَّه من الشیطان الرجیم\" سے پہلے شک کرے کہ تکبیرہ الاحرام کہی ہے یا نہیں تو ضروری ہے کہ تکبیرہ الاحرام کہے۔"
         },
         basis: "fatwa",
         source: {
@@ -793,9 +914,18 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "349.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 350",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 350",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
         verification: "A",
-        arabicInSource: true,
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        arabicInSource: true
       }
     ],
     seeAlso: [
@@ -836,7 +966,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one doubts whether he has recited chapter al- Fātiḥah or not, if he has not started the next part (even though a mustaḥabb part), such as\nالحمد لله رب العالمین\nhe should read it."
+          en: "If one doubts whether he has recited chapter al- Fātiḥah or not, if he has not started the next part (even though a mustaḥabb part), such as\nالحمد لله رب العالمین\nhe should read it.",
+          ur: "اگر شک کرے کہ سورہ حمد پڑھا ہے یا نہیں چنانچہ بعد کے جزء میں (اگرچہ مستحب ہی کیوں نہ ہو )داخل نہ ہوا ہو مثلاً \" الحمد للہ رب العالمین\" نہ پڑھا ہو تو ضروری ہے کہ سورہ حمد کو پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -844,9 +975,18 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "350.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 351",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 351",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
         verification: "A",
-        arabicInSource: true,
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        arabicInSource: true
       }
     ]
   },
@@ -881,7 +1021,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one doubts whether he has recited the second chapter or not, if he has not started the next part, he should perform it, and if he is already in rukū‘ or qunūt or mustaḥabb dhikr after the second chapter, he should not pay attention to his doubt."
+          en: "If one doubts whether he has recited the second chapter or not, if he has not started the next part, he should perform it, and if he is already in rukū‘ or qunūt or mustaḥabb dhikr after the second chapter, he should not pay attention to his doubt.",
+          ur: "اگر شک کرے کہ سورہ پڑھا ہے یا نہیں چنانچہ بعد کے جزء میں داخل نہ ہوا ہو تو اس کو پڑھے اور اگر سورہ کے بعد رکوع، قنوت یا مستحب اذکار میں مشغول ہوچکا ہو تو اپنے شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -889,8 +1030,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "351.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 352",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 352",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ]
   },
@@ -925,7 +1075,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If, while reciting a verse, one doubts whether he has read the previous verse or not, or when he is reciting the last part of a verse, he doubts whether he has read the beginning of the verse or not, he should not pay attention to his doubt."
+          en: "If, while reciting a verse, one doubts whether he has read the previous verse or not, or when he is reciting the last part of a verse, he doubts whether he has read the beginning of the verse or not, he should not pay attention to his doubt.",
+          ur: "اگر کوئی آیت پڑھتے وقت شک کرے کہ اس سے پہلی آیت پڑھی ہے یا نہیں یا آیت کا آخری حصہ پڑھتے ہوئے شک کرے کہ پہلا حصہ پڑھا ہے یا نہیں تو اپنے شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -933,8 +1084,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "356.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 357",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 357",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ]
   },
@@ -969,7 +1129,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If, after performing one of the acts of prayer, one doubts whether they have performed it correctly or not, they should not pay attention to their doubt whether or not they have started the next part."
+          en: "If, after performing one of the acts of prayer, one doubts whether they have performed it correctly or not, they should not pay attention to their doubt whether or not they have started the next part.",
+          ur: "اگر نماز کا کوئی عمل انجام دینے کے بعد شک کرے کہ اس کو صحیح طور پر انجام دیا ہے یا نہیں تو اپنے شک کی پروا نہ کرے اگرچہ بعد کے جزء میں داخل نہ ہوا ہو۔"
         },
         basis: "fatwa",
         source: {
@@ -977,8 +1138,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "357.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 358",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 358",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1013,7 +1183,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If before bending down for sajdah, one doubts whether he has performed rukū‘ or not, he must perform rukū‘."
+          en: "If before bending down for sajdah, one doubts whether he has performed rukū‘ or not, he must perform rukū‘.",
+          ur: "اگر سجدے کے لئے جھکنے سے پہلے شک کرے کہ رکوع بجالایا ہے یا نہیں توضروری ہے کہ رکوع بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -1021,8 +1192,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "352.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 353",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 353",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1058,7 +1238,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If before getting up for the second/fourth rak‘ah or before starting tashahhud, one doubts whether he has performed one or two sajdah, he must perform another sajdah. The same rule applies if it occurs while getting up, i.e. before being in a standing position."
+          en: "If before getting up for the second/fourth rak‘ah or before starting tashahhud, one doubts whether he has performed one or two sajdah, he must perform another sajdah. The same rule applies if it occurs while getting up, i.e. before being in a standing position.",
+          ur: "اگر دوسری اور چوتھی رکعت کے لئے اٹھنے سے پہلے یا تشہد سے پہلے شک کرے کہ ایک سجدہ بجالایا ہے یا دو سجدے تو مزید ایک سجدہ بجالائے ۔ اسی طرح اگر کھڑے ہوتے ہوئے (پوری طرح قیام میں پہنچنے سے پہلے) شک کرے تو سجدہ بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -1066,8 +1247,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "353.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 354",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 354",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1102,7 +1292,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Before standing up, if one doubts whether they have said tashahhud or not, they should say it. However, if this doubt arises while getting up, or if they have started the next, even mustaḥabb, part of the prayer, they should not pay attention to it."
+          en: "Before standing up, if one doubts whether they have said tashahhud or not, they should say it. However, if this doubt arises while getting up, or if they have started the next, even mustaḥabb, part of the prayer, they should not pay attention to it.",
+          ur: "اگر کھڑے ہونے سے پہلے شک کرے کہ تشہد پڑھا ہے یا نہیں تو ضروری ہے کہ تشہد پڑھے لیکن اگر کھڑے ہوتے وقت شک کرے کہ اسے پڑھا ہے یا نہیں تو اپنے شک کی پروا نہ کرے ، نیز اگر بعد کے جزء میں داخل ہوا ہو اگرچہ مستحب ہی کیوں نہ ہو تو شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1110,8 +1301,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "354.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 355",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 355",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "For a doubt about the sajdahs while getting up, see Ruling 353 in “Doubting a rukn before starting the act after it” on this page."
       }
     ],
@@ -1157,7 +1357,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one doubts about one of the parts of the prayer before starting the next part and performs it, then it turns out that he has performed it twice, if that part is not a rukn of prayer, his prayer is not void."
+          en: "If one doubts about one of the parts of the prayer before starting the next part and performs it, then it turns out that he has performed it twice, if that part is not a rukn of prayer, his prayer is not void.",
+          ur: "اگر نماز کے کسی جزء میں شک کرے جبکہ بعد کے جزء میں داخل نہ ہوا ہو اور اس کو انجام دے تاہم بعد میں یاد آئے کہ اس جزء کو دوبار انجام دیا ہے چنانچہ وہ جزء ارکان نماز میں سے نہ ہو تو نماز باطل نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1165,8 +1366,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "358.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 359",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 359",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ],
     seeAlso: [
@@ -1208,7 +1418,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If, after starting the next part, one doubts about doing the previous part and does not pay attention to his doubt, then he realizes that he did not perform that part, then if he has not started the next rukn, he should perform it and then what he has performed before by mistake. If he has started/performed the next rukn, then if the neglected part is a rukn, the prayer is void. If it is not a rukn, the prayer is valid. If the neglected part is sajdah or tashahhud, he must, after the prayer, perform missed sajdah and by obligatory caution missed tashahhud and then two sajdah of sahw."
+          en: "If, after starting the next part, one doubts about doing the previous part and does not pay attention to his doubt, then he realizes that he did not perform that part, then if he has not started the next rukn, he should perform it and then what he has performed before by mistake. If he has started/performed the next rukn, then if the neglected part is a rukn, the prayer is void. If it is not a rukn, the prayer is valid. If the neglected part is sajdah or tashahhud, he must, after the prayer, perform missed sajdah and by obligatory caution missed tashahhud and then two sajdah of sahw.",
+          ur: "اگر کسی جزء میں شک کرے جبکہ بعد کے جزء میں داخل ہوچکا ہو اور اپنے شک کی پروا نہ کرے تاہم اس کے بعد یاد آئے کہ اس جزء کو بجا نہیں لایا ہے تو اگر بعد کے رکن میں مشغول نہ ہوا ہو تو اس جزء کو بجالائے اور پہلے جو غلطی سے پڑھا ہے دوبارہ پڑھے اور اگر بعد کے رکن میں مشغول ہوچکا ہو تو چنانچہ ترک ہونے والا جزء رکن ہو تو نماز باطل ہے اور اگر رکن نہیں تو نماز صحیح ہے۔ اگر ترک ہونے والا جزء ایک سجدہ یا تشہد ہے تو نماز کے بعد سجدے کی قضا اور احتیاط واجب کی بناپر تشہد کی قضا بجالائے اور اس کے بعد دو سجدہ سہو بھی انجام دے۔"
         },
         basis: "fatwa",
         source: {
@@ -1216,8 +1427,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "359.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 360",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 360",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -1253,7 +1473,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who doubts whether he has said salām or not, if he is engaged in saying ta‘qīb or another prayer, or he is not in state of prayer because of something that disrupts the prayer; like turning away from the qiblah, he should not pay attention to doubts and if he doubts before doing these things, he should say salām."
+          en: "A person who doubts whether he has said salām or not, if he is engaged in saying ta‘qīb or another prayer, or he is not in state of prayer because of something that disrupts the prayer; like turning away from the qiblah, he should not pay attention to doubts and if he doubts before doing these things, he should say salām.",
+          ur: "اگر شک کرے کہ نماز کا سلام پڑھا ہے یا نہیں چنانچہ تعقیبات نماز یا دوسری نماز میں مشغول ہو یا کسی کام کی وجہ سے نماز کی حالت سے خارج ہوا ہو مثلاً قبلے سے رخ پھیر لیا ہو تو اپنے شک کی پروا نہ کرے اور اگر ان کاموں کو انجام دینے سے پہلے شک کرے تو ضروری ہے کہ سلام پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -1261,8 +1482,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "355.",
           url: "https://www.leader.ir/en/book/241?sn=32528"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 356",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31176"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 356",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30807"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1297,7 +1527,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "After salām, if one doubts whether his prayer was correct or not such as if he doubts whether he has performed rukū‘, or if he doubts after salām in a four-rak‘ah prayer whether he has said four rak‘ah or five rak‘ah, he should not pay attention to his doubt, i.e. in the first cast, he considers that he has made rukū‘ and in the second case that he has performed four rak‘ah."
+          en: "After salām, if one doubts whether his prayer was correct or not such as if he doubts whether he has performed rukū‘, or if he doubts after salām in a four-rak‘ah prayer whether he has said four rak‘ah or five rak‘ah, he should not pay attention to his doubt, i.e. in the first cast, he considers that he has made rukū‘ and in the second case that he has performed four rak‘ah.",
+          ur: "اگر نماز کے سلام کے بعد شک کرے کہ نماز صحیح پڑھی ہے یا نہیں مثلاً شک کرے کہ رکوع انجام دیا ہے یا نہیں یا چار رکعتی نماز میں سلام کے بعد شک کرے کہ چار رکعتیں پڑھی ہیں یا پانچ تو اپنے شک کی پروا نہ کرے اور بنا رکھے کہ نماز صحیح پڑھی ہے یعنی پہلی مثال میں یوں سمجھے کہ رکوع انجام دیا ہے اور دوسری مثال میں یوں سمجھے کہ چار رکعتیں پڑھی ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -1305,8 +1536,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "375.",
           url: "https://www.leader.ir/en/book/241?sn=32535"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 376",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31183"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 376",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30814"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1321,7 +1561,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The prayer is invalid if one doubts about the number of rak‘ah of his prayer after salām of the prayer but both sides of the doubt cause the prayer to be invalid. For example, if, after salām of a four-rak‘ah prayer, he doubts whether he prayed three rak‘ah or five rak‘ah, the prayer is invalid."
+          en: "The prayer is invalid if one doubts about the number of rak‘ah of his prayer after salām of the prayer but both sides of the doubt cause the prayer to be invalid. For example, if, after salām of a four-rak‘ah prayer, he doubts whether he prayed three rak‘ah or five rak‘ah, the prayer is invalid.",
+          ur: "اگر نماز کے سلام کے بعد رکعتوں کی تعداد کے بارے میں شک کرے لیکن شک کی دو نوں طرف نماز باطل ہوتی ہو مثلاً چار رکعتی نماز کے سلام کے بعد شک کرے کہ تین رکعتیں پڑھی ہیں یا پانچ تو نماز باطل ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1329,8 +1570,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "376.",
           url: "https://www.leader.ir/en/book/241?sn=32535"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 377",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31183"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 377",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30814"
+        },
+        verification: "A"
       }
     ],
     seeAlso: [
@@ -1458,7 +1708,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person, who usually doubts three times in one prayer, or in three consecutive prayers usually doubts at least once in each prayer, if his doubting a lot is not due to an incident that causes fear or anger, or distracts the attention, then he is considered as 'a person who doubts too much' and should not pay attention to his doubt."
+          en: "A person, who usually doubts three times in one prayer, or in three consecutive prayers usually doubts at least once in each prayer, if his doubting a lot is not due to an incident that causes fear or anger, or distracts the attention, then he is considered as 'a person who doubts too much' and should not pay attention to his doubt.",
+          ur: "جو شخص معمولاً ایک نماز میں تین مرتبہ شک کرتا ہو یا معمولاً مسلسل تین نمازوں میں کم از کم ایک مرتبہ شک کرتا ہو، اگر زیادہ شک کرنے کہ وجہ ڈر یا غصہ یا پریشانی کا باعث بننے والا کوئی سانحہ نہ ہو تو ایسا شخص کثیر الشک ہے اور اپنے شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1466,8 +1717,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "379.",
           url: "https://www.leader.ir/en/book/241?sn=32538"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 380",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31186"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 380",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30817"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1502,7 +1762,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "'A person who doubts too much' must assume the occurrence of the act about which he doubts if performing it does not invalidate his prayer. For example, if a person doubts whether he has performed sajdah or not, he should assume that he has performed it.\nIf doing it invalidates prayer, he must assume that he has not performed it, like if he doubts whether he has performed one rukū‘ or two, he should posit that he has performed one rukū‘ because making two rukū‘ invalidates prayer."
+          en: "'A person who doubts too much' must assume the occurrence of the act about which he doubts if performing it does not invalidate his prayer. For example, if a person doubts whether he has performed sajdah or not, he should assume that he has performed it.\nIf doing it invalidates prayer, he must assume that he has not performed it, like if he doubts whether he has performed one rukū‘ or two, he should posit that he has performed one rukū‘ because making two rukū‘ invalidates prayer.",
+          ur: "اگر کثیر الشک کسی عمل کے بجالانے کے بارے میں شک کرے چنانچہ اس عمل کو انجام دینے سے نماز باطل نہ ہوتی ہو تو یوں سمجھنا چاہئے کہ اسے انجام دیا ہے مثلاً شک کرے کہ سجدہ بجالایا ہے یا نہیں تو سمجھے کہ سجدہ بجالاچکا ہے اور اگر اس کو انجام دینے سے نماز باطل ہوتی ہو تو سمجھے کہ وہ کام انجام نہیں دیا ہے مثلاً شک کرے کہ ایک رکوع کیا ہے یا زیادہ تو چونکہ رکوع زیادہ ہونے سے نماز باطل ہوتی جاتی ہے لہذا یوں سمجھے کہ ایک رکوع کیا ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1510,8 +1771,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "380.",
           url: "https://www.leader.ir/en/book/241?sn=32538"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 381",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31186"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 381",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30817"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1546,7 +1816,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who doubts too much about only one part of prayer, he is ruled as 'a person who doubts too much' in that case, and if he doubts about other parts of the prayer, he should act according to the duties of ordinary people. For instance, 'a person who doubts too much' about performing sajdah, if he doubts about performing rukū‘, he should follow the rule of that doubt, that is, if he is standing, he should perform rukū‘ and if he is in sajdah, he should not pay attention."
+          en: "A person who doubts too much about only one part of prayer, he is ruled as 'a person who doubts too much' in that case, and if he doubts about other parts of the prayer, he should act according to the duties of ordinary people. For instance, 'a person who doubts too much' about performing sajdah, if he doubts about performing rukū‘, he should follow the rule of that doubt, that is, if he is standing, he should perform rukū‘ and if he is in sajdah, he should not pay attention.",
+          ur: "جو شخص نماز کے صرف ایک جزء میں زیادہ شک کرتا ہو تو اسی جزء میں کثیر الشک کا حکم رکھے گا اور چنانچہ نماز کے دوسرے اجزاء میں شک کرے تو عام لوگوں کے حکم کے مطابق عمل کرے مثلاً جو شخص سجدے کو انجام دینے کے بارے میں زیادہ شک کرتا ہو اگر رکوع کو بجالانے کے بارے میں شک کرے تو اس شک کے حکم پر عمل کرے یعنی اگر کھڑا ہے تو رکوع کو بجالائے اور اگر سجدے میں پہنچا چکا ہے تو شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1554,8 +1825,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "381.",
           url: "https://www.leader.ir/en/book/241?sn=32538"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 382",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31186"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 382",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30817"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1590,7 +1870,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The one, who doubts too much in a special prayer, like in loud prayers*, if he doubts in another prayer, such as in a whispering prayer**, he should act according to the rule of doubt.\n\n* Jahr prayers, i.e. those in which chapter al-Fātiḥah and the second chapter are recited aloud.\n\n** Ikhfāt prayers, i.e. those in which chapter al-Fātiḥah and the second chapter are recited whispering."
+          en: "The one, who doubts too much in a special prayer, like in loud prayers*, if he doubts in another prayer, such as in a whispering prayer**, he should act according to the rule of doubt.\n\n* Jahr prayers, i.e. those in which chapter al-Fātiḥah and the second chapter are recited aloud.\n\n** Ikhfāt prayers, i.e. those in which chapter al-Fātiḥah and the second chapter are recited whispering.",
+          ur: "جو شخص کسی مخصوص نماز مثلاً جہریہ نمازوں میں زیادہ شک کرتا ہو اگر دوسری نماز مثلاً اخفاتی نماز میں شک کرے تو اس شک کے حکم پر عمل کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1598,8 +1879,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "382.",
           url: "https://www.leader.ir/en/book/241?sn=32538"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 383",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31186"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 383",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30817"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1634,7 +1924,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The one, who doubts too much in a special place, if he performs his prayer in another place and doubts, must act according to the rule doubt."
+          en: "The one, who doubts too much in a special place, if he performs his prayer in another place and doubts, must act according to the rule doubt.",
+          ur: "جو شخص کسی مخصوص جگہ نماز پڑھتے ہوئے زیادہ شک کرتا ہو اگر دوسری جگہ نماز پڑھے اور شک کرے تو اس شک کے حکم پر عمل کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1642,8 +1933,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "383.",
           url: "https://www.leader.ir/en/book/241?sn=32538"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 384",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31186"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 384",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30817"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1678,7 +1978,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person does not know whether he has become 'a person who doubts too much' or not, is not ruled as such a person and must act in accordance with the rule of doubt.\n'A person who doubts too much' should not pay attention to his doubts unless he becomes sure that he has become a normal person."
+          en: "If a person does not know whether he has become 'a person who doubts too much' or not, is not ruled as such a person and must act in accordance with the rule of doubt.\n'A person who doubts too much' should not pay attention to his doubts unless he becomes sure that he has become a normal person.",
+          ur: "اگر انسان کو اس بارے میں شک ہو کہ وہ کثیر الشک ہوگیا ہے یا نہیں تو کثیر الشک کا حکم نہیں آئے گا اور ضروری ہے کہ اس شک کے حکم پر عمل کرے اور کثیر الشک شخص کو جب تک یقین نہ ہوجائے کہ وہ لوگوں کی عام حالت پر لوٹ آیا ہے اپنے شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1686,8 +1987,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "384.",
           url: "https://www.leader.ir/en/book/241?sn=32538"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 385",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31186"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 385",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30817"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1781,7 +2091,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If an imam of congregation doubts the number of rak‘ah; for example, if he doubts whether he prayed three rak‘ah or four rak‘ah, if the ma‘mūm is sure or thinks that more probably he prayed four rak‘ah and informs the imam that he has prayed four rak‘ah, the imam must finish the prayer and it is not necessary to perform the caution prayer. Also, if the imam is certain or thinks that more than fifty percent he has prayed a certain number of rak‘ah and the ma‘mūm doubts about the number of rak‘ah of the prayer, he should not pay attention to his doubt."
+          en: "If an imam of congregation doubts the number of rak‘ah; for example, if he doubts whether he prayed three rak‘ah or four rak‘ah, if the ma‘mūm is sure or thinks that more probably he prayed four rak‘ah and informs the imam that he has prayed four rak‘ah, the imam must finish the prayer and it is not necessary to perform the caution prayer. Also, if the imam is certain or thinks that more than fifty percent he has prayed a certain number of rak‘ah and the ma‘mūm doubts about the number of rak‘ah of the prayer, he should not pay attention to his doubt.",
+          ur: "اگر امام جماعت رکعتوں کی تعداد کے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار، چنانچہ ماموم کو یقین یا گمان ہو کہ چار رکعتیں پڑھی ہیں اور یہ بات امام کے علم میں لائے کہ چار رکعتیں پڑھی ہیں تو امام کو چاہئے نماز کو تمام کرے اور نماز احتیاط پڑھنا لازم نہیں ہے۔ اسی طرح اگر امام کو رکعتوں کی تعداد کے بارے میں یقین یا گمان ہو اور ماموم کو رکعتوں کی تعداد کے بارے میں شک ہوجائے تو اپنے شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1789,8 +2100,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "378.",
           url: "https://www.leader.ir/en/book/241?sn=32537"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 379",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31185"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 379",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30816"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1825,7 +2145,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one doubts about the number of rak‘ah of a mustaḥabb prayer, he may assume as he likes unless the bigger number invalidates the prayer, in which case he assumes the smaller number, for example, if he doubts whether he has said two rak‘ah or three rak‘ah during the morning nāfilah, he should assume that he said two rak‘ah, and if he doubts whether he prayed one rak‘ah or two rak‘ah, he may assume either side and his prayer is valid."
+          en: "If one doubts about the number of rak‘ah of a mustaḥabb prayer, he may assume as he likes unless the bigger number invalidates the prayer, in which case he assumes the smaller number, for example, if he doubts whether he has said two rak‘ah or three rak‘ah during the morning nāfilah, he should assume that he said two rak‘ah, and if he doubts whether he prayed one rak‘ah or two rak‘ah, he may assume either side and his prayer is valid.",
+          ur: "اگر مستحب نمازوں کی رکعتوں کی تعداد میں شک کرے تو اختیار ہے کہ کم پر بنا رکھے یا زیادہ والی طرف پر، البتہ اگر زیادہ والا عدد نماز کو باطل کرتا ہو تو یہ سمجھے کہ کم رکعتیں پڑھی ہیں مثلاً صبح کی نافلہ میں شک کرے کہ دو رکعتیں پڑھیں ہیں یا تین تو یہ سمجھے کہ دو رکعتیں پڑھی ہیں اور اگر شک کرے کہ ایک رکعت پڑھی ہے یا دو تو جس طرف پر بھی عمل کرے اس کی نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1833,8 +2154,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "385.",
           url: "https://www.leader.ir/en/book/241?sn=32539"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 386",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31187"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 386",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30818"
+        },
+        verification: "A"
       }
     ]
   },
@@ -1869,7 +2199,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "An increase in the rukn does not invalidate a mustaḥabb prayer, but a decrease in it invalidates the prayer by obligatory caution. Therefore, if one forgets a part of nāfilah and remembers it after being engaged in the next rukn, he should perform the missed part first and then perform the rukn again. For example, if he remembers in the middle of rukū‘ that he has not recited the second chapter, he should go back and recite it and then make rukū‘ again."
+          en: "An increase in the rukn does not invalidate a mustaḥabb prayer, but a decrease in it invalidates the prayer by obligatory caution. Therefore, if one forgets a part of nāfilah and remembers it after being engaged in the next rukn, he should perform the missed part first and then perform the rukn again. For example, if he remembers in the middle of rukū‘ that he has not recited the second chapter, he should go back and recite it and then make rukū‘ again.",
+          ur: "رکن زیادہ ہونے سے مستحب نماز باطل نہیں ہوتی ہے لیکن کم ہو تو احتیاط واجب کی بناپر نماز باطل ہوتی جاتی ہے پس اگر نماز نافلہ کے افعال میں سے کوئی فعل بھول جائے اور اس وقت یاد آئے جب اس کے بعد والے رکن میں مشغول ہوچکا ہو تو ضروری ہے کہ پہلے اس فعل کو انجام دے اور اس کے بعد دوبارہ رکن کو بجالائے مثلاً رکوع کے دوران یا د آئے کہ سورہ نہیں پڑھا ہے تو ضروری ہے کہ واپس لوٹے اور سورہ پڑھے اور دوبارہ رکوع میں جائے۔"
         },
         basis: "fatwa",
         source: {
@@ -1877,8 +2208,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "387.",
           url: "https://www.leader.ir/en/book/241?sn=32539"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 388",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31187"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 388",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30818"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ],
@@ -1915,7 +2255,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one doubts about a part of a mustaḥabb prayer, whether it is a rukn (a fundamental part of the prayer) or not, if he has not passed its place, he should perform it, and if he has passed, he should not pay attention to his doubt."
+          en: "If one doubts about a part of a mustaḥabb prayer, whether it is a rukn (a fundamental part of the prayer) or not, if he has not passed its place, he should perform it, and if he has passed, he should not pay attention to his doubt.",
+          ur: "اگر مستحب نماز کے کسی جزء میں شک کرے خواہ وہ فعل رکن ہو یا غیر رکن چنانچہ اس کا موقع نہ گزرا ہو تو ضروری ہے کہ بجالائے اور اگر اس کا موقع گزرگیا ہو تو اپنے شک کی پروا نہ کرے۔"
         },
         basis: "fatwa",
         source: {
@@ -1923,8 +2264,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "386.",
           url: "https://www.leader.ir/en/book/241?sn=32539"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 387",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31187"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 387",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30818"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2076,7 +2426,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person, for whom caution prayer is obligatory, should immediately make the intention of caution prayer after salām (without disturbing the state of prayer), say takbīr, recite chapter al- Fātiḥah (without the second chapter), make rukū‘ and perform two prostrations. Then, if he is obligated to perform one rak‘ah of caution prayer, he should say tashahhud after prostrations and then salām. However, if two rak‘ah of caution prayer are obligatory for him, after performing the prostrations, he should perform another rak‘ah like the first rak‘ah, and then recite tashahhud and offer salām."
+          en: "A person, for whom caution prayer is obligatory, should immediately make the intention of caution prayer after salām (without disturbing the state of prayer), say takbīr, recite chapter al- Fātiḥah (without the second chapter), make rukū‘ and perform two prostrations. Then, if he is obligated to perform one rak‘ah of caution prayer, he should say tashahhud after prostrations and then salām. However, if two rak‘ah of caution prayer are obligatory for him, after performing the prostrations, he should perform another rak‘ah like the first rak‘ah, and then recite tashahhud and offer salām.",
+          ur: "جس شخص پر نماز احتیاط واجب ہو ضروری ہے کہ سلام کے بعد (نماز کی حالت سے خارج ہوئے بغیر) فوراً نماز احتیاط کی نیت کرے اور تکبیر کہے، اس کے بعد الحمد کو (سورے کے بغیر) پڑھے اور رکوع میں جائے اور دونوں سجدے بجالائے۔ اگر ایک رکعت نماز احتیاط واجب ہو تو سجدوں کے بعد تشہد اور سلام پڑھے لیکن اگر دو رکعت نماز احتیاط واجب ہو تو سجدوں کے بعد پہلی رکعت کی طرح ایک اور رکعت بجالائے اس کے بعد تشہد اور سلام پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2084,8 +2435,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "370.",
           url: "https://www.leader.ir/en/book/241?sn=32532"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 371",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31180"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 371",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30811"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2121,7 +2481,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "There is no second chapter nor qunūt in a caution prayer. One should not say its intention. By obligatory caution, one must recite its al- Fātiḥah chapter — including bismillāhir raḥmānir raḥīm — whispering."
+          en: "There is no second chapter nor qunūt in a caution prayer. One should not say its intention. By obligatory caution, one must recite its al- Fātiḥah chapter — including bismillāhir raḥmānir raḥīm — whispering.",
+          ur: "نماز احتیاط میں سورہ اور قنوت نہیں ہیں اور ضروری ہے کہ اس کی نیت کو زبان پر نہ لائے اور احتیاط واجب یہ ہے کہ سورہ حمد بلکہ \"بسم اللہ الرحمن الرحیم\" کو بھی آہستہ پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -2129,8 +2490,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "371.",
           url: "https://www.leader.ir/en/book/241?sn=32532"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 372",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31180"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 372",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30811"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ],
@@ -2167,7 +2537,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If he realizes that his prayer was correct before performing caution prayer, he does not need to perform the caution prayer. Also, during the caution prayer, if he notices that, it is not obligatory to finish it."
+          en: "If he realizes that his prayer was correct before performing caution prayer, he does not need to perform the caution prayer. Also, during the caution prayer, if he notices that, it is not obligatory to finish it.",
+          ur: "اگر نماز احتیاط پڑھنے سے پہلےمعلوم ہوجائے کہ پڑھی گئی نماز صحیح تھی تو نماز احتیاط پڑھنا واجب نہیں ہے اور اگر نماز احتیاط کے دوران پتا چلے تو اس کو تمام کرنا واجب نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2175,8 +2546,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "372.",
           url: "https://www.leader.ir/en/book/241?sn=32532"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 373",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31180"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 373",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30811"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2770,7 +3150,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In the following cases, it is required to perform the two sajdahs of inadvertence (sajdatay al-sahw) after saying salām of prayer:\n\n1. Talking absent-mindedly during prayer;\n\n2. when, after finishing the second sajdah, one doubts as to whether they are in the 4th or the 5th rak`ah of the prayer;\n\n3. if one forgets to say tashahhud,\n\nby obligatory caution, one should perform them in two cases:\n\n1. If one forgets one sajdah,\n\n2. When one says salām of prayer at a wrong position absent-mindedly."
+          en: "In the following cases, it is required to perform the two sajdahs of inadvertence (sajdatay al-sahw) after saying salām of prayer:\n\n1. Talking absent-mindedly during prayer;\n\n2. when, after finishing the second sajdah, one doubts as to whether they are in the 4th or the 5th rak`ah of the prayer;\n\n3. if one forgets to say tashahhud,\n\nby obligatory caution, one should perform them in two cases:\n\n1. If one forgets one sajdah,\n\n2. When one says salām of prayer at a wrong position absent-mindedly.",
+          ur: "نماز پڑھنے والے کو چاہئے کہ تین مواقع پر سلام کے بعد دو سجدہ سہو (اس طریقے کے مطابق جو بیان کیا جائے گا) بجالائے:\n\n1۔ نماز کے دوران بھول کر بات کرے۔\n\n2۔ چار رکعتی نماز میں دوسرے سجدے کے بعد شک کرے کہ چار رکعتیں پڑھی ہیں یا پانچ۔\n\n3۔ تشہد کو فراموش کرے۔\n\nدو صورتوں میں احتیاط واجب کی بناپر دو سجدہ سہو بجالائے:\n\n4۔ ایک سجدہ فراموش کرے۔\n\n5۔ جہاں سلام نہ پڑھنا ضروری ہو وہاں بھولے سے سلام پڑھ لے۔"
         },
         basis: "fatwa",
         source: {
@@ -2778,8 +3159,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "388.",
           url: "https://www.leader.ir/en/book/241?sn=32540"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 389",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31188"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 389",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30819"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ],
@@ -2825,8 +3215,13 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "390.",
           url: "https://www.leader.ir/en/book/241?sn=32541"
         },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 391",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30820"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urduNote: "The official Urdu edition differs from the Persian original in this ruling, so only the English, which matches the Persian, is shown (decision R11)."
       }
     ],
     differsBetweenMaraji: true
@@ -2863,7 +3258,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Sajdah of inadvertence is not obligatory for what is produced from sighing and coughing. But if, for example, one says \"ach\" or \"ah\" unintentionally, he should perform two sajdahs of inadvertence."
+          en: "Sajdah of inadvertence is not obligatory for what is produced from sighing and coughing. But if, for example, one says \"ach\" or \"ah\" unintentionally, he should perform two sajdahs of inadvertence.",
+          ur: "آہ بھرنے اور کھانسنے سے پیدا ہونے والی آواز کے لئے سجدہ سہو واجب نہیں لیکن اگر مثلا غلطی سے \"آخ\" یا \"آہ\" کہے تو ضروری ہے کہ سجدہ سہو بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -2871,8 +3267,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "391.",
           url: "https://www.leader.ir/en/book/241?sn=32541"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 392",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31189"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 392",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30820"
+        },
+        verification: "A"
       }
     ],
     differsBetweenMaraji: true
@@ -2908,7 +3313,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one recites a word incorrectly, and then he recites it correctly again, it is not obligatory to perform two sajdahs of inadvertence for reciting it again."
+          en: "If one recites a word incorrectly, and then he recites it correctly again, it is not obligatory to perform two sajdahs of inadvertence for reciting it again.",
+          ur: "اگر ایسا کلمہ جو بھولے سے غلط پڑھا ہو دوبارہ صحیح طور پر پڑھے تو اس کے دوبارہ پڑھنے پر سجدہ سہو واجب نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -2916,8 +3322,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "392.",
           url: "https://www.leader.ir/en/book/241?sn=32541"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 393",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31189"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 393",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30820"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2952,7 +3367,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one accidentally says several words in prayer, but all of them are considered to be considered as one speech, two sajdahs of inadvertence are sufficient."
+          en: "If one accidentally says several words in prayer, but all of them are considered to be considered as one speech, two sajdahs of inadvertence are sufficient.",
+          ur: "اگر نماز میں غلطی سے کئی کلمات ادا کرے اور وہ سارے کلمات ایک گفتگو شمار ہوتے ہوں تو دو سجدہ سہو کافی ہیں۔"
         },
         basis: "fatwa",
         source: {
@@ -2960,8 +3376,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "393.",
           url: "https://www.leader.ir/en/book/241?sn=32541"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 394",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31189"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 394",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30820"
+        },
+        verification: "A"
       }
     ]
   },
@@ -2997,7 +3422,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "It is mustaḥabb caution to make two sajdahs of inadvertence for any unintentional addition or defect in prayer (other than above-mentioned cases) and one comes to know about it after its place, e.g. one does not say the four tasbīḥ and remember it in/after rukū‘."
+          en: "It is mustaḥabb caution to make two sajdahs of inadvertence for any unintentional addition or defect in prayer (other than above-mentioned cases) and one comes to know about it after its place, e.g. one does not say the four tasbīḥ and remember it in/after rukū‘.",
+          ur: "احتیاط مستحب یہ ہے کہ ہر اس چیز کے لئے جو غلطی سے نماز میں کم یا زیادہ ہوجائے (مذکورہ بالاصورتوں کے علاوہ) اور موقع گزرجانے کے بعد متوجہ ہوجائے تو دو سجدہ سہو کرے مثلاً سہواً تسبیحات اربعہ نہ پڑھے اور رکوع میں یا اس کے بعد یاد آئے۔"
         },
         basis: "fatwa",
         source: {
@@ -3005,8 +3431,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "389.",
           url: "https://www.leader.ir/en/book/241?sn=32540"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 390",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31188"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 390",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30819"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
@@ -3043,7 +3478,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one accidentally says: Assalāmu ‘alaynā wa ‘alā ‘ibādillāhiṣ ṣāliḥīn or says Assalāmu alaykum wa raḥmatullāh wa barakātuh in a place where he should not say the salām of the prayer, he should perform two sajdahs of inadvertence. But if he accidentally says a part of salām, the mustaḥabb caution is to make two sajdah of inadvertence."
+          en: "If one accidentally says: Assalāmu ‘alaynā wa ‘alā ‘ibādillāhiṣ ṣāliḥīn or says Assalāmu alaykum wa raḥmatullāh wa barakātuh in a place where he should not say the salām of the prayer, he should perform two sajdahs of inadvertence. But if he accidentally says a part of salām, the mustaḥabb caution is to make two sajdah of inadvertence.",
+          ur: "اگر کوئی شخص جہاں نماز کا سلام نہیں کہنا چاہئے، بھولے سے کہے: السلام علینا و علی عباد اللَّه الصالحین یا کہے: السلام علیکم و رحمة اللَّه و برکاته تو احتیاط واجب کی بناپر دو سجدہ سہو بجالائے لیکن اگر سلام کا کچھ حصہ کہے تو احتیاط مستحب یہ ہے کہ دو سجدہ سہو بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3051,9 +3487,19 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "394.",
           url: "https://www.leader.ir/en/book/241?sn=32542"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 395",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31190"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 395",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30821"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        englishWithheld: "English says flatly 'he should perform two sajdahs of inadvertence'; the Persian and Urdu say by obligatory caution (بنابر احتیاط واجب) for the full salam.",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ]
   },
@@ -3088,7 +3534,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If he accidentally says all three salām in a place where he is not supposed to, performing two sajdah of inadvertence is sufficient."
+          en: "If he accidentally says all three salām in a place where he is not supposed to, performing two sajdah of inadvertence is sufficient.",
+          ur: "جہاں سلام نہیں پڑھنا چاہئے اگر کوئی شخص وہاں بھول کر تینوں سلام پڑھے تو دو سجدہ بجالانا کافی ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3096,8 +3543,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "395.",
           url: "https://www.leader.ir/en/book/241?sn=32542"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 396",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31190"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 396",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30821"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3133,7 +3589,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one forgets a sajdah or tashahhud and remembers before rukū‘ of the next rak‘ah, he should immediately sit down and perform sajdah or tashahhud."
+          en: "If one forgets a sajdah or tashahhud and remembers before rukū‘ of the next rak‘ah, he should immediately sit down and perform sajdah or tashahhud.",
+          ur: "اگر کوئی شخص ایک سجدہ یا تشہد کو فراموش کردے اور بعد والی رکعت کے رکوع سے پہلے یاد آئے تو فوراً بیٹھ جائے اور سجدہ یا تشہد کو بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3141,8 +3598,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "396.",
           url: "https://www.leader.ir/en/book/241?sn=32543"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 397",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31191"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 397",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30822"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3177,7 +3643,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one forgets one sajdah or tashahhud and realizes it during rukū‘ of the next rak‘ah or after it, he should perform the sajdah after the salām of the prayer and by obligatory caution perform the tashahhud, and after that he should perform two sajdah of inadvertence for the tashahhud and by obligatory caution two sajdah of inadvertence for the sajdah."
+          en: "If one forgets one sajdah or tashahhud and realizes it during rukū‘ of the next rak‘ah or after it, he should perform the sajdah after the salām of the prayer and by obligatory caution perform the tashahhud, and after that he should perform two sajdah of inadvertence for the tashahhud and by obligatory caution two sajdah of inadvertence for the sajdah.",
+          ur: "اگر کوئی شخص ایک سجدہ یا تشہد کو فراموش کردے اور بعد والی رکعت کے رکوع میں یا اس کے بعد متوجہ ہو تو ضروری ہے کہ سلام کے بعد سجدے اور احتیاط واجب کی بناپر تشہد کی قضا کرے اور اس کے بعد تشہد کے لئے دو سجدہ سہو اور احتیاط واجب کی بناپر سجدے کے لئے بھی دو سجدہ سہو بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3185,8 +3652,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "397.",
           url: "https://www.leader.ir/en/book/241?sn=32543"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 398",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31191"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 398",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30822"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3202,7 +3678,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one of the two sajdah is left by mistake and he realizes it during rukū‘ of the next rak‘ah or after it, he must make up for it after the prayer."
+          en: "If one of the two sajdah is left by mistake and he realizes it during rukū‘ of the next rak‘ah or after it, he must make up for it after the prayer.",
+          ur: "اگر ایک سجدہ بھول جائے اور اگلی رکعت کے رکوع میں یا اس کے بعد یاد آئے تو ضروری ہے کہ نماز کے بعد اس کی قضا بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3210,8 +3687,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "401.",
           url: "https://www.leader.ir/en/book/241?sn=32546"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 402",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31194"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 402",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30825"
+        },
+        verification: "A"
       }
     ],
     seeAlso: [
@@ -3232,7 +3718,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one forgets tashahhud and realizes it during rukū‘ of the next rak‘ah or after it, his prayer is not void. However, by obligatory caution, he should perform its qaḍā’ after salām of the prayer."
+          en: "If one forgets tashahhud and realizes it during rukū‘ of the next rak‘ah or after it, his prayer is not void. However, by obligatory caution, he should perform its qaḍā’ after salām of the prayer.",
+          ur: "اگر تشہد پڑھنا بھول جائے اور اگلی رکعت کے رکوع میں یا اس کے بعد متوجہ ہوجائے تو نماز باطل نہیں ہے لیکن احتیاط واجب کی بناپر ضروری ہے کہ نماز کے بعد اس کی قضا بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3240,8 +3727,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "402.",
           url: "https://www.leader.ir/en/book/241?sn=32546"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 403",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31194"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 403",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30825"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ],
@@ -3263,7 +3759,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one of the obligatory acts of prayer, which is not a rukn, is inadvertently left out, the prayer is not invalidated, and it is not necessary to make up for it; except for sajdah and by obligatory caution for tashahhud, both of which should be performed after prayer as qaḍā’."
+          en: "If one of the obligatory acts of prayer, which is not a rukn, is inadvertently left out, the prayer is not invalidated, and it is not necessary to make up for it; except for sajdah and by obligatory caution for tashahhud, both of which should be performed after prayer as qaḍā’.",
+          ur: "اگر کوئی شخص نماز کا ایسا واجب فعل بھول کر انجام نہ دے جو رکن نہ ہو تو نماز باطل نہیں ہے اور اس کی قضا بھی لازم نہیں البتہ سجدہ اور احتیاط واجب کی بناپر تشہد میں ضروری ہے کہ نماز کے بعد ان دونوں کی قضا بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3271,8 +3768,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "400.",
           url: "https://www.leader.ir/en/book/241?sn=32546"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 401",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31194"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 401",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30825"
+        },
         verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
@@ -3309,7 +3815,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one intentionally does not perform two sajdah of inadvertence after salām of prayer, he has committed a sin and it is obligatory to do it as soon as possible. If one forgets to perform them, he must immediately perform them when he remembers. In any case, there is no need to repeat the prayer."
+          en: "If one intentionally does not perform two sajdah of inadvertence after salām of prayer, he has committed a sin and it is obligatory to do it as soon as possible. If one forgets to perform them, he must immediately perform them when he remembers. In any case, there is no need to repeat the prayer.",
+          ur: "اگر نماز کے سلام کے فوراً بعد عمداً سجدہ سہو بجا نہ لائے تو اس نے گناہ کیا ہے اور واجب ہے کہ جس قدر جلدی ہوسکے اسے ادا کرے اور اگر بھول کر سجدہ سہو نہیں کیا تو جس وقت بھی یاد آئے فورا انجام دے اور ہر صورت میں نماز کو دوبارہ پڑھنا ضروری نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3317,8 +3824,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "399.",
           url: "https://www.leader.ir/en/book/241?sn=32545"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 400",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31193"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 400",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30824"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3442,7 +3958,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "For sajdah of inadvertence, immediately after salām of prayer one must - intending sajdah of inadvertence - put their forehead on something on which it is correct to do sajdah and say - by caution -\nبسم اللَّه و باللَّه، السلام علیک ایها النّبیُّ و رحمة اللَّه و برکاته\nThen they raise their forehead from sajdah and do it again, repeat the dhikr, says tashahhud and then salām."
+          en: "For sajdah of inadvertence, immediately after salām of prayer one must - intending sajdah of inadvertence - put their forehead on something on which it is correct to do sajdah and say - by caution -\nبسم اللَّه و باللَّه، السلام علیک ایها النّبیُّ و رحمة اللَّه و برکاته\nThen they raise their forehead from sajdah and do it again, repeat the dhikr, says tashahhud and then salām.",
+          ur: "سجدہ سہو کرنے کے لئے نماز کے سلام کے فورا بعد سجدہ سہو کی نیت سے پیشانی کو ایسی چیز پر رکھے جس پر سجدہ صحیح ہو اور احتیاط کی بناپر کہے \" بسم اللَّه و باللَّه، السلام علیک ایها النّبیُّ و رحمة اللَّه و برکاته\" اس کے بعد سجدے سے سر اٹھائے اور دوبارہ سجدے میں جائے اور اسی ذکر کو تکرار کرے۔ اس کے بعد تشہد اور سلام پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -3450,9 +3967,18 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "398.",
           url: "https://www.leader.ir/en/book/241?sn=32544"
         },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 399",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31192"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 399",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30823"
+        },
         verification: "A",
         arabicInSource: true,
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1).",
         note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5)."
       }
     ]
@@ -3488,7 +4014,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "In qaḍā’ of sajdah and tashahhud that are performed after the prayer, all conditions of prayer must be fulfilled; such as purity of the body and clothes, facing the qiblah and other conditions."
+          en: "In qaḍā’ of sajdah and tashahhud that are performed after the prayer, all conditions of prayer must be fulfilled; such as purity of the body and clothes, facing the qiblah and other conditions.",
+          ur: "بھولے ہوئے سجدے اور تشہد کی قضا میں ضروری ہے کہ نماز کی تمام شرائط کی رعایت کرے مثلاً بدن اور لباس کا پاک ہونا اور رو بقبلہ ہونا وغیرہ"
         },
         basis: "fatwa",
         source: {
@@ -3496,8 +4023,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "403.",
           url: "https://www.leader.ir/en/book/241?sn=32546"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 404",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31194"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 404",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30825"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3512,7 +4048,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who performs qaḍā’ of tashahhud after prayer does not need to say salām after the qaḍā’ of tashahhud, and a person who performs the qaḍā’ of sajdah does not need to say the qaḍā’ of tashahhud and salām after that."
+          en: "A person who performs qaḍā’ of tashahhud after prayer does not need to say salām after the qaḍā’ of tashahhud, and a person who performs the qaḍā’ of sajdah does not need to say the qaḍā’ of tashahhud and salām after that.",
+          ur: "نماز کے سلام کے بعد تشہد کی قضا بجالانے والے شخص کے لئے ضروری نہیں ہے کہ تشہد کی قضا بجالانے کے بعد سلام بھی کہے اور سجدے کی قضا بجالانے والے کے لئے بھی لازم نہیں ہے کہ سجدے کی قضا بجالانے کے بعد تشہد اور سلام پڑھے۔"
         },
         basis: "fatwa",
         source: {
@@ -3520,8 +4057,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "404.",
           url: "https://www.leader.ir/en/book/241?sn=32546"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 405",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31194"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 405",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30825"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3645,7 +4191,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one of the invalidators of prayer, such as turning his face away from the qiblah, occurs in the interval between the salām of the prayer and qaḍā’ of sajdah or tashahhud, he must perform the qaḍā’ of sajdah and tashahhud, and his prayer is valid."
+          en: "If one of the invalidators of prayer, such as turning his face away from the qiblah, occurs in the interval between the salām of the prayer and qaḍā’ of sajdah or tashahhud, he must perform the qaḍā’ of sajdah and tashahhud, and his prayer is valid.",
+          ur: "اگر نماز کے سلام اور سجدے یا تشہد کی قضا بجالانے کے درمیان کوئی ایسا کام انجام دے جو نماز کو باطل کرتا ہو مثلا قبلے سے رخ موڑلے تو ضروری ہے کہ سجدے اور تشہد کی قضا بجالائے اور نماز صحیح ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -3653,8 +4200,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "405.",
           url: "https://www.leader.ir/en/book/241?sn=32546"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 406",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31194"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 406",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30825"
+        },
+        verification: "A"
       }
     ]
   },
@@ -3839,7 +4395,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A person who has to perform missed sajdah or tashahhud, if it becomes obligatory for them to perform sajdah of inadvertence for something else as well, after prayer they must perform sajdah or tashahhud first, and then perform the sajdah of inadvertence."
+          en: "A person who has to perform missed sajdah or tashahhud, if it becomes obligatory for them to perform sajdah of inadvertence for something else as well, after prayer they must perform sajdah or tashahhud first, and then perform the sajdah of inadvertence.",
+          ur: "جس شخص پر سجدے یا تشہد کی قضا واجب ہو اگر اس پر کسی اور کام کی وجہ سے سجدہ سہو واجب ہوجائے تو نماز کے بعد ضروری ہے کہ پہلے سجدے یا تشہد کی قضا کرے اس کے بعد سجدہ سہو کو بجالائے۔"
         },
         basis: "fatwa",
         source: {
@@ -3847,8 +4404,17 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "406.",
           url: "https://www.leader.ir/en/book/241?sn=32546"
         },
-        verification: "A",
-        urduNote: "The official Urdu edition of this book (نماز اور روزه کی احکام, leader.ir) has not yet been matched to this ruling, so only the English is shown for now (decision R1)."
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 407",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31194"
+        },
+        persianSource: {
+          title: "رساله نماز و روزه",
+          reference: "مسأله 407",
+          url: "https://www.leader.ir/fa/book/180/1?sn=30825"
+        },
+        verification: "A"
       }
     ]
   },

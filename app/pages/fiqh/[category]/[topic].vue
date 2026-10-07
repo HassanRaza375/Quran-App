@@ -224,7 +224,7 @@ const marja = computed(() => getMarjaById(marjaId.value));
 useHead(() => ({ title: topic.value ? `${topic.value.title.en} — Daily Fiqh` : "Not found" }));
 useSeoMeta({ description: () => topic.value?.summary.text.en });
 
-const rulings = computed(() => (topic.value ? rulingsFor(topic.value) : []));
+const rulings = computed(() => (topic.value ? rulingsFor(topic.value, marjaId.value) : []));
 const mainRulings = computed(() => rulings.value.filter((r) => !r.sensitive && !r.panel));
 // Other collapsed panels (decision P8), each with a neutral heading and no app commentary.
 const panels = computed(() =>

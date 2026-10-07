@@ -19,17 +19,24 @@ const findChunkUrls = (): string[] => {
   return [...new Set([...fromPerf, ...fromScripts])].filter((u) => CHUNK_RE.test(u));
 };
 
+/** True only when *this build's* chunk is cached — a copy from an earlier build (stale ruling
+ * text, different content hash) doesn't count. */
 export const isWajibatDataCached = async (): Promise<boolean> => {
   if (typeof caches === "undefined") return false;
   try {
     const cache = await caches.open(CACHE_NAME);
-    return (await cache.keys()).length > 0;
+    const urls = findChunkUrls();
+    if (!urls.length) return (await cache.keys()).length > 0;
+    for (const url of urls) if (!(await cache.match(url))) return false;
+    return true;
   } catch {
     return false;
   }
 };
 
-/** Best-effort, idempotent: fetches and caches the chunk if it isn't already. */
+/** Best-effort, idempotent: fetches and caches the chunk if it isn't already, then drops copies
+ * left by earlier builds. The chunk's filename carries a content hash (nuxt.config.ts), so a
+ * corrected ruling ships under a new URL; pruning keeps the old text from lingering in storage. */
 export const ensureWajibatDataCached = async (): Promise<boolean> => {
   if (typeof caches === "undefined") return false;
   try {
@@ -42,6 +49,10 @@ export const ensureWajibatDataCached = async (): Promise<boolean> => {
       const res = await fetch(url);
       if (res.ok) await cache.put(url, res.clone());
       else ok = false;
+    }
+    if (ok) {
+      const current = new Set(urls);
+      for (const req of await cache.keys()) if (!current.has(req.url)) await cache.delete(req);
     }
     return ok;
   } catch {

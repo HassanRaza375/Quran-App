@@ -280,7 +280,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Which prayers are obligatory, and the five daily prayers with the number of rakʿahs in each."
     ),
-    rulingIds: ["obligatoryprayers", "dailyrakat", "importanceofprayer"],
+    rulingIds: ["obligatoryprayers", "dailyrakat", "importanceofprayer", "khqa337"],
     relatedTopicIds: ["prayertimes", "guidedprayers"],
     glossaryIds: ["rakah", "nafilah"],
     lastSourceCheck: "2026-10-02",
@@ -295,7 +295,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
       "When each daily prayer may be performed, the shared and specific times of ẓuhr/ʿaṣr and maghrib/ʿishāʾ, and the order between them. Today's times are shown live from the app's Prayer Times feature; nothing is recalculated here."
     ),
     liveTool: "prayertimes",
-    rulingIds: ["zuhrasrtime", "maghribishatime", "fajrtime", "missedbymidnight", "certaintyoftime", "onerakahintime", "prayingearly", "orderzuhrasr"],
+    rulingIds: ["zuhrasrtime", "khqa361", "maghribishatime", "fajrtime", "khqa350", "missedbymidnight", "certaintyoftime", "khqa358", "onerakahintime", "khqa348", "prayingearly", "orderzuhrasr", "khqa360"],
     relatedTopicIds: ["dailyprayers", "qibla"],
     glossaryIds: ["zawal", "ada", "qada"],
     lastSourceCheck: "2026-10-02",
@@ -310,7 +310,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
       "Facing the Kaʿbah in prayer and what to do when its direction is uncertain. The app's Qibla tool shows the direction from your location."
     ),
     liveTool: "qibla",
-    rulingIds: ["qibladirection", "qiblaeffort", "qiblaeffortqa", "qiblanomeans", "qiblanomeansqa", "qiblarecommended"],
+    rulingIds: ["qibladirection", "qiblaeffort", "qiblaeffortqa", "qiblanomeans", "khqa364", "qiblanomeansqa", "qiblarecommended"],
     relatedTopicIds: ["prayertimes", "placeofprayer"],
     glossaryIds: ["qibla"],
     lastSourceCheck: "2026-10-02",
@@ -324,7 +324,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "What men and women must cover in prayer, and the conditions of the clothing: pure, not usurped, not from a non-slaughtered or ḥarām-meat animal, and no gold or pure silk for men."
     ),
-    rulingIds: ["coveringmen", "coveringwomen", "coveringintentional", "clothingconditions", "clothingpure", "impureunaware", "impurityexemptions", "woundblood", "usurpedclothing", "nonslaughtered", "haramanimal", "goldmen", "goldjewellerymen", "silkmen", "silkwomen"],
+    rulingIds: ["coveringmen", "coveringwomen", "khqa435", "coveringintentional", "clothingconditions", "clothingpure", "impureunaware", "khqa428", "impurityexemptions", "woundblood", "usurpedclothing", "nonslaughtered", "haramanimal", "khqa439", "goldmen", "goldjewellerymen", "khqa440", "khqa443", "silkmen", "silkwomen", "khqa429"],
     relatedTopicIds: ["placeofprayer", "najasat"],
     glossaryIds: ["najis", "tahir"],
     lastSourceCheck: "2026-10-02",
@@ -338,7 +338,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Conditions of the place where one prays: permitted to use, still, and the rules on mosques."
     ),
-    rulingIds: ["usurpedplace", "stillplace", "vehicleprayer", "aheadofgrave", "menwomengap", "insidekaba", "mosquevirtue", "mosqueimpure"],
+    rulingIds: ["usurpedplace", "khqa382", "stillplace", "vehicleprayer", "khqa386", "khqa723", "aheadofgrave", "menwomengap", "khqa372", "insidekaba", "mosquevirtue", "khqa384", "mosqueimpure"],
     relatedTopicIds: ["clothing", "sajdahplace"],
     glossaryIds: [],
     lastSourceCheck: "2026-10-02",
@@ -352,7 +352,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "The call to prayer and the call to stand for prayer: their status, wording and conditions."
     ),
-    rulingIds: ["adhanrecommended", "adhanwording", "shahadathalithah", "adhancongregation", "adhanafter", "iqamahstanding"],
+    rulingIds: ["adhanrecommended", "adhanwording", "shahadathalithah", "khqa454", "adhancongregation", "adhanafter", "iqamahstanding"],
     relatedTopicIds: ["obligatoryparts"],
     glossaryIds: ["adhan", "iqamah"],
     lastSourceCheck: "2026-10-02",
@@ -366,7 +366,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "The eleven obligatory parts of the prayer, which of them are elemental (rukn), and the rulings on intention, takbīrat al-iḥrām and standing."
     ),
-    rulingIds: ["elevencomponents", "rukns", "intention", "intentionspecified", "riya", "takbir", "takbirstill", "qiyam", "qiyamstill", "unabletostand"],
+    rulingIds: ["elevencomponents", "rukns", "intention", "intentionspecified", "riya", "takbir", "takbirstill", "qiyam", "qiyamstill", "unabletostand", "khqa455"],
     relatedTopicIds: ["qiraah", "rukusujud", "tashahhudsalam", "guidedprayers"],
     glossaryIds: ["rukn", "niyyah", "takbiratalihram"],
     lastSourceCheck: "2026-10-02",
@@ -380,7 +380,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Reciting al-Ḥamd and another surah, reciting aloud or quietly, and what is recited in the third and fourth rakʿahs."
     ),
-    rulingIds: ["fatihasurah", "shorttimesurah", "forgotrecitation", "sajdahsurahs", "ikhlaskafirun", "aloudmen", "aloudsubhmaghrib", "aloudwomen", "aloudmistake", "correctrecitation", "thirdfourthrakah", "thirdfourthquiet"],
+    rulingIds: ["fatihasurah", "khqa473", "shorttimesurah", "forgotrecitation", "sajdahsurahs", "ikhlaskafirun", "aloudmen", "khqa456", "aloudsubhmaghrib", "aloudwomen", "khqa469", "aloudmistake", "correctrecitation", "khqa465", "thirdfourthrakah", "khqa481", "thirdfourthquiet"],
     relatedTopicIds: ["obligatoryparts", "rukusujud"],
     glossaryIds: ["qiraah", "jahr", "ikhfat"],
     lastSourceCheck: "2026-10-02",
@@ -394,7 +394,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Bowing and prostrating: how they are done, their dhikr, stillness, and what happens if one is forgotten."
     ),
-    rulingIds: ["ruku", "rukudhikr", "rukustill", "afterruku", "forgotruku", "twosajdahs", "sevenparts", "sajdahrukn", "sajdahdhikr", "dhikrwording", "rukusajdahdhikrqa", "betweensajdahs", "sajdahheight", "sajdahbarrier", "turbahpure"],
+    rulingIds: ["ruku", "rukudhikr", "rukusajdahdhikrqa", "rukustill", "afterruku", "forgotruku", "twosajdahs", "sevenparts", "sajdahrukn", "sajdahdhikr", "dhikrwording", "betweensajdahs", "sajdahheight", "sajdahbarrier", "khqa489", "turbahpure"],
     relatedTopicIds: ["sajdahplace", "obligatoryparts"],
     glossaryIds: ["ruku", "sajdah", "rukn"],
     lastSourceCheck: "2026-10-02",
@@ -408,7 +408,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Earth and what grows from it that is neither eaten nor worn, and the obligatory sajdahs of the Qur'an."
     ),
-    rulingIds: ["sajdahearth", "sajdahfodder", "sajdahbuilding", "sajdahpaper", "sajdahbest", "sajdahnothing", "sajdahtaqiyyah", "sajdahforother", "quransajdah"],
+    rulingIds: ["sajdahearth", "khqa493", "sajdahfodder", "sajdahbuilding", "khqa487", "sajdahpaper", "sajdahbest", "sajdahnothing", "sajdahtaqiyyah", "sajdahforother", "quransajdah", "khqa498"],
     relatedTopicIds: ["rukusujud", "placeofprayer"],
     glossaryIds: ["turbah", "sajdah"],
     lastSourceCheck: "2026-10-02",
@@ -436,7 +436,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "What breaks the prayer, replying to a greeting during prayer, and when a prayer may or must be broken."
     ),
-    rulingIds: ["mubtilatlist", "turningface", "speaking", "replyingsalam", "laughing", "eatingdrinking", "amin", "breakingprayer", "breakingnecessity"],
+    rulingIds: ["mubtilatlist", "turningface", "speaking", "replyingsalam", "khqa510", "laughing", "khqa503", "eatingdrinking", "amin", "khqa501", "breakingprayer", "breakingnecessity"],
     relatedTopicIds: ["obligatoryparts"],
     glossaryIds: ["mubtilat"],
     lastSourceCheck: "2026-10-02",
@@ -450,7 +450,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "When a traveller shortens the four-rakʿah prayers to two (qaṣr): the distance, intention, purpose of the journey, the permitted limit, and what ends the journey."
     ),
-    rulingIds: ["qasrintro", "qasrconditions", "qasrdistance", "qasrkm", "qasrdistancestart", "qasrintention", "qasrsinful", "qasrleisure", "qasrjob", "qasrlimit", "qasrwatan", "qasrtendays", "qasrthirtydays", "qasrfourplaces", "qasrignorance"],
+    rulingIds: ["qasrintro", "khqa637", "qasrconditions", "khqa638", "qasrdistance", "qasrkm", "qasrdistancestart", "qasrintention", "qasrsinful", "qasrleisure", "qasrjob", "khqa641", "qasrlimit", "khqa674", "qasrwatan", "qasrtendays", "qasrthirtydays", "khqa671", "qasrfourplaces", "qasrignorance"],
     relatedTopicIds: ["qadaprayers"],
     glossaryIds: ["qasr", "tamam", "watan"],
     lastSourceCheck: "2026-10-02",
@@ -464,7 +464,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Making up missed prayers, their order, and the eldest son's duty for his parents' missed prayers."
     ),
-    rulingIds: ["qadaobligation", "qadanotdelay", "qadaorder", "qadaunknownnumber", "qadanafilah", "qadaliving", "eldestson", "eldestsonwho"],
+    rulingIds: ["qadaobligation", "qadanotdelay", "qadaorder", "khqa531", "qadaunknownnumber", "khqa536", "qadanafilah", "qadaliving", "eldestson", "khqa540", "eldestsonwho"],
     relatedTopicIds: ["travellerprayer", "dailyprayers"],
     glossaryIds: ["qada", "ada"],
     lastSourceCheck: "2026-10-02",
@@ -478,7 +478,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "The basics of praying in congregation: which prayers, the conditions of the imam, what the follower recites, and joining late."
     ),
-    rulingIds: ["jamaahvirtue", "jamaahneglect", "jamaahwhichprayers", "imamconditions", "followerrecites", "followerquietprayers", "takbirbeforeimam", "joiningruku", "followerahead", "womenimam"],
+    rulingIds: ["jamaahvirtue", "jamaahneglect", "khqa607", "jamaahwhichprayers", "imamconditions", "followerrecites", "khqa577", "followerquietprayers", "khqa563", "takbirbeforeimam", "joiningruku", "followerahead", "khqa574", "womenimam", "khqa594"],
     relatedTopicIds: ["otherprayers"],
     glossaryIds: ["jamaah", "mamum", "furada"],
     lastSourceCheck: "2026-10-02",
@@ -492,7 +492,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "The prayer of signs (ṣalāt al-āyāt), the Eid prayers, and the Friday prayer."
     ),
-    rulingIds: ["ayatcauses", "ayatmethod", "ayatshort", "ayatruku", "eidstatus", "eidtime", "fridayprayer", "fridaybest", "fridayzuhr"],
+    rulingIds: ["ayatcauses", "khqa707", "ayatmethod", "ayatshort", "ayatruku", "eidstatus", "khqa631", "eidtime", "fridayprayer", "khqa605", "fridaybest", "khqa622", "fridayzuhr", "khqa629"],
     relatedTopicIds: ["jamaah", "dailyprayers"],
     glossaryIds: ["salatalayat"],
     lastSourceCheck: "2026-10-02",

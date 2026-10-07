@@ -172,6 +172,21 @@ export const validateWajibatDataset = (
     if (!hasD && r.status === "disputed") push(r.id, "status: disputed without a level-D entry");
     for (const rec of r.recitationIds ?? []) if (!recitationIds.has(rec)) push(r.id, `recitationIds references unknown recitation "${rec}"`);
     for (const m of r.rulings) validateMarjaRuling(m, r.id, maraji, push);
+
+    // Decision P13 / rule R7: a supplementary Q&A entry is one marja's own, compared with (and
+    // agreeing with) cited rulings of his — never another marja's, never a gap for anyone else.
+    if (r.supplementary) {
+      const s = r.supplementary;
+      const marja = maraji.find((m) => m.id === s.marjaId);
+      if (r.rulings.length !== 1 || r.rulings[0]?.marjaId !== s.marjaId) push(r.id, "a supplementary ruling holds exactly one entry, for its own marja'");
+      if (r.rulings[0] && r.rulings[0].format !== "qa") push(r.id, "a supplementary ruling must be a Q&A entry");
+      if (r.differsBetweenMaraji) push(r.id, "a supplementary ruling has one marja' only, so it cannot be differsBetweenMaraji");
+      if (!s.agreesWith?.length) push(r.id, "a supplementary ruling must cite the ruling(s) it was compared with and agrees with");
+      for (const c of s.agreesWith ?? []) {
+        if (!c.title?.trim() || !c.reference?.trim() || !c.url?.trim()) push(r.id, "agreesWith citation needs title, reference and url");
+        else if (marja && !isOfficialUrl(c.url, marja)) push(r.id, `agreesWith citation is not on ${marja.officialSite}`);
+      }
+    }
   }
 
   // Procedures: ordered steps, each quoting its cited ruling verbatim for the same marja'.
@@ -214,5 +229,50 @@ export const validateWajibatDataset = (
     if (!g.term?.trim() || !g.definition?.en?.trim()) push(g.id, "glossary term needs term and English definition");
   }
 
+  return issues;
+};
+
+/** One source unit from the snapshot: the whole numbered ruling / Q&A answer (`numbered`), or
+ * the enclosing passage of an unnumbered section introduction/condition. */
+export interface SourceUnit {
+  unit: string;
+  numbered: boolean;
+}
+/** Keyed `${rulingId}|${marjaId}|${lang}|${"text" | "question"}` and `recitation|${id}`. */
+export type SourceSnapshot = Record<string, SourceUnit>;
+
+const nfc = (s: string) => s.normalize("NFC");
+
+/** Every quoted ruling text must match the official source it was extracted from, as recorded
+ * in the source snapshot (tests/fixtures/wajibatSourceSnapshot.json, built by script from the
+ * downloaded official pages): equal to the whole numbered unit, or — only when the entry is
+ * marked `excerpt`, or the unit is an unnumbered passage — a verbatim part of it. This catches
+ * any hand edit, paraphrase or splice into a quote (decision P12 follow-up). */
+export const validateSourceSnapshot = (data: WajibatDataset, snapshot: SourceSnapshot): WajibatIssue[] => {
+  const issues: WajibatIssue[] = [];
+  const check = (key: string, quoted: string, excerpt: boolean) => {
+    const src = snapshot[key];
+    if (!src) return issues.push({ id: key, message: "no source unit in the snapshot — quote not traceable to an extracted source" });
+    const q = nfc(quoted);
+    const u = nfc(src.unit);
+    const ok = src.numbered && !excerpt ? q === u : u.includes(q);
+    if (!ok) {
+      issues.push({
+        id: key,
+        message: src.numbered && !excerpt
+          ? "text differs from its numbered source unit (not verbatim)"
+          : "text is not a verbatim part of its source passage",
+      });
+    }
+  };
+  for (const r of data.rulings) {
+    for (const e of r.rulings) {
+      for (const lang of ["en", "ur"] as const) {
+        if (e.text[lang]) check(`${r.id}|${e.marjaId}|${lang}|text`, e.text[lang]!, !!e.excerpt);
+        if (e.question?.[lang]) check(`${r.id}|${e.marjaId}|${lang}|question`, e.question[lang]!, false);
+      }
+    }
+  }
+  for (const rec of data.recitations) check(`recitation|${rec.id}`, rec.arabic, true);
   return issues;
 };

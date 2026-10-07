@@ -11,12 +11,13 @@ import { TAHARAT_RULINGS } from "./rulings/taharat";
 import { TAHARAT_PROCEDURES } from "./procedures/taharat";
 import { SALAT_RULINGS } from "./rulings/salat";
 import { SALAT_PROCEDURES } from "./procedures/salat";
+import { SALAT_QA_RULINGS } from "./rulings/salatQa";
 
 export * from "./types";
 export { MARAJI, getMarjaById, isMarjaId } from "./marja";
 export { WAJIBAT_CATEGORIES, WAJIBAT_TOPICS, WAJIBAT_GLOSSARY, WAJIBAT_RECITATIONS };
 
-export const WAJIBAT_RULINGS: Ruling[] = [...FOUNDATIONS_RULINGS, ...TAHARAT_RULINGS, ...SALAT_RULINGS];
+export const WAJIBAT_RULINGS: Ruling[] = [...FOUNDATIONS_RULINGS, ...TAHARAT_RULINGS, ...SALAT_RULINGS, ...SALAT_QA_RULINGS];
 export const WAJIBAT_PROCEDURES: Procedure[] = [...TAHARAT_PROCEDURES, ...SALAT_PROCEDURES];
 
 export interface WajibatDataset {
@@ -48,3 +49,8 @@ export const getRecitationById = (id: string) => WAJIBAT_RECITATIONS.find((r) =>
  * fallback to another marja' (decision P1 / spec §2 consequences). */
 export const getMarjaRuling = (ruling: Ruling, marjaId: MarjaId): MarjaRuling | undefined =>
   ruling.rulings.find((r) => r.marjaId === marjaId);
+
+/** Whether a ruling is shown to followers of `marjaId`. Supplementary Q&A entries (P13 / R7)
+ * belong to one marja' and are hidden from everyone else — never shown as "not added yet". */
+export const isRulingVisibleFor = (ruling: Ruling, marjaId: MarjaId | null | undefined): boolean =>
+  !ruling.supplementary || ruling.supplementary.marjaId === marjaId;

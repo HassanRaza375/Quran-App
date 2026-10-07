@@ -172,7 +172,7 @@ onMounted(() => {
 
 const marja = computed(() => getMarjaById(marjaId.value));
 const query = ref("");
-const results = computed(() => search(query.value ?? ""));
+const results = computed(() => search(query.value ?? "", marjaId.value));
 const resultCount = computed(() => results.value.topics.length + results.value.rulings.length + results.value.glossary.length);
 
 const categoryTitle = (id) => getCategoryById(id)?.title.en ?? id;

@@ -23,17 +23,19 @@ export const computeCoverage = (data: WajibatDataset, marjaIds: MarjaId[]): Topi
       .map((id) => data.rulings.find((r) => r.id === id))
       .filter((r): r is NonNullable<typeof r> => !!r);
     for (const marjaId of marjaIds) {
+      // Another marja's supplementary Q&A entries (P13 / R7) are not gaps for this one.
+      const own = rulings.filter((r) => !r.supplementary || r.supplementary.marjaId === marjaId);
       const row: TopicCoverage = {
         topicId: topic.id,
         marjaId,
-        total: rulings.length,
+        total: own.length,
         sourced: 0,
         missingRulingIds: [],
         byLevel: { A: 0, B: 0, D: 0 },
         withUrdu: 0,
         englishOnlyRulingIds: [],
       };
-      for (const r of rulings) {
+      for (const r of own) {
         const entry = r.rulings.find((m) => m.marjaId === marjaId);
         if (!entry) {
           row.missingRulingIds.push(r.id);

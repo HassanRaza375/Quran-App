@@ -87,9 +87,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s6",
@@ -126,9 +128,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s9",
@@ -190,9 +194,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s14",
@@ -229,9 +235,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s17",
@@ -345,9 +353,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s6",
@@ -384,9 +394,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s9",
@@ -448,9 +460,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s14",
@@ -487,9 +501,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s17",
@@ -552,9 +568,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s22",
@@ -591,9 +609,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s25",
@@ -707,9 +727,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s6",
@@ -746,9 +768,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s9",
@@ -810,9 +834,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s14",
@@ -849,9 +875,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s17",
@@ -914,9 +942,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s22",
@@ -953,9 +983,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s25",
@@ -1005,9 +1037,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "It is better that when one has the option to, he says in rukūʿ:\n...although saying any dhikr suffices; and based on obligatory precaution, [the other dhikr] must be of this length. However, if time is short or one is compelled, then saying subḥānal lāh once suffices. Someone who cannot say subḥāna rabbiyal ʿaẓīmi wa biḥamdih properly must say another dhikr, such as subḥānal lāh, three times."
         },
         rulingId: "rukudhikr",
-        recitationIds: ["rukudhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "rukudhikrarabic"
+        ]
       },
       {
         id: "s29",
@@ -1044,9 +1078,11 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         rulingId: "sajdahdhikr",
-        recitationIds: ["sajdahdhikrarabic"],
         hukm: "wajib",
-        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction)."
+        note: "Marked wājib because it is one of the eleven obligatory components listed in “Obligatory Components of the Prayer” (section introduction).",
+        recitationIds: [
+          "sajdahdhikrarabic"
+        ]
       },
       {
         id: "s32",

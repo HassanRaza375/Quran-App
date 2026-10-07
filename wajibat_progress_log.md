@@ -600,6 +600,11 @@ The Wajibat ruling/procedure text (~730 KiB) is no longer in the install-time do
 
 ## P13 completion — in progress, 2026-10-04
 
+> **Correction (2026-10-07):** two claims in this section were wrong, and its entries were not verbatim.
+> (1) The Q&A book **does** cover qaḍāʾ, parents' qaḍāʾ, congregational, Friday, ʿĪd, traveller's and āyāt prayers, in both English
+> (sn=5271–5289) and Urdu (sn=11402–11421). (2) The Urdu texts for س 365/368 were available. (3) `qiblaeffortqa`, `qiblanomeansqa`
+> and `rukusajdahdhikrqa` were paraphrases labelled level A. All three are replaced with verbatim quotes. See the 2026-10-07 section below.
+
 **Chapter map found** (Khamenei's *Practical Laws of Islam* Q&A, English chapter sn=5197 / Urdu chapter sn=11341): the English edition's Prayer chapter is Q337–Q506+, in 13 named sections; the Urdu edition has the same 13 plus 4 more (جواب سلام, شکیات نماز, قضا نماز, ماں باپ کی قضا نمازیں) that don't exist as named English sections. Checked directly (fetched sn=5269 and sn=5290, which list the chapter's own Q-range): confirmed the **English book has no Q&A coverage at all for qaḏāʾ prayers, traveller's prayer, or congregational prayer** — not a truncated fetch, the chapter's Q-range genuinely has nothing there. Per decision P13/R7 (supplementary entries need the book's own English citation, same as every other ruling), these three topics plus "Other obligatory prayers" get **no supplementary entries**: 0 available, not 0 found-but-skipped.
 
 **Topics done this session (2 of 16, including the rukūʿ/sajdah dhikr entry from the Phase 3 follow-up above):**
@@ -607,3 +612,148 @@ The Wajibat ruling/procedure text (~730 KiB) is no longer in the install-time do
 - **Qibla**: two new entries. `qiblaeffortqa` (Q 363, agrees with Ruling 44 — compass/sun for certainty, else the most likely direction). `qiblanomeansqa` (Q 366, agrees with Ruling 45 — four directions, obligatory caution, when none is more likely). Both **English only**: the Urdu equivalents (س 365, س 368) exist but this session's fetch of that page returned an English paraphrase of them, not quotable Urdu script — rather than guess at the Urdu wording, only the English Q&A is shown, same as any ruling with no official Urdu available (decision R1). `urduNote` on each entry records this so a later session can go back and read the Urdu properly instead of re-deciding whether to.
 
 **Honest pace note:** this cross-check is slow by nature — each topic needs its own live read of the matching English and Urdu Q&A sections, not just a lookup, to avoid guessing at either language's wording. Two topics took a full research pass each. At this rate the other 13 are a multi-session effort, not something to compress into one sitting without risking exactly the kind of shortcut (inventing Urdu wording, assuming a match without reading both sides) that decision P13 exists to prevent. Remaining, in the order their Q&A coverage is already confirmed to exist: the obligatory prayers (Q337–343), prayer times (Q344–362), place of prayer (Q368–425), covering and clothing (Q426–447), adhān/iqāmah (Q448–455), recitation (Q456–476), what sajdah may be on (within Q478–497), tashahhud/salām/qunūt (within Q478–497, plus جواب سلام in Urdu only), things that invalidate (Q498–506+). Confirmed with no Q&A coverage, nothing further to do: qaḏāʾ prayers, traveller's prayer, congregational prayer, other obligatory prayers.
+
+---
+
+## Pre-commit fixes and P13 completion — 2026-10-07
+
+### 1. Source-snapshot validator (your item 1)
+- **What it is:** `validateSourceSnapshot()` in `app/utils/wajibatValidate.ts`, plus `tests/fixtures/wajibatSourceSnapshot.json` (test-only, ~590 KB, never shipped).
+  - For every quoted text the fixture holds the official unit it came from: 1,227 numbered rulings / Q&As, 8 marked excerpts, 37 unnumbered passages (section intros, "conditions") and 2 recitations.
+  - The units are built by script (`snapshot.py`) from the downloaded official pages, never from the dataset.
+- **The rule:** a quote must equal its numbered unit. It may be a verbatim part of it only when it's marked `excerpt`, or when the source is an unnumbered passage. A quote with no unit fails.
+- **What it caught straight away:** the three Q&A entries hand-added on 2026-10-04 (`qiblaeffortqa`, `qiblanomeansqa`, `rukusajdahdhikrqa`) were **paraphrases labelled level A**. For example, Q 485's answer was rewritten, and its Urdu cut short. All three are now verbatim (section 3).
+- **New tests:**
+  - the check passes on the dataset, with exactly one unit per quote;
+  - it flags a paraphrased answer;
+  - it flags Arabic spliced into Sistani's rukūʿ ruling (both by the snapshot and by the existing `arabicInSource` rule);
+  - it flags a quote with no unit.
+- **Also fixed (P12):** the hand edit had put `recitationIds` on the per-marja' entry, but `RulingCard` reads it from the ruling. So the sourced Arabic dhikr showed in the guided-prayer steps but **never on the ruling cards**. It's now on the ruling, and the browser check confirms the card shows سُبْحَانَ رَبِّیَ الْعَظِیْمِ وَبِحَمْدِہٖ cited to مسئلہ (1014).
+- **Reproducibility:** every 2026-10-04 hand edit to the generated `salat.ts` / `procedures/salat.ts` is now applied by the generator: `arabicInSource`, the P12 notes and recitation links, and the P14 data note. Regenerating reproduces the committed files exactly, apart from the two fixes above.
+
+### 2. Install-size and offline (your item 2), Playwright + Chromium against `node .output/server/index.mjs`
+`verify4.cjs`: **22/22 checks passed.**
+- **Fresh install:**
+  - the service worker is active and controlling the page;
+  - the ruling chunk is requested **0** times on `/prayerTime`;
+  - of the 240 cached precache entries, **0** are ruling text.
+- **Visited category works offline:**
+  - opening `/fiqh/salat` caches exactly this build's chunk;
+  - offline, a Salat topic renders, and so do never-visited Taharat and Foundations topics (one chunk holds the whole module).
+- **"Save all for offline":** on a profile with the cache cleared, the button caches the chunk and shows "Saved for offline". Offline, Foundations, Taharat, the traveller's prayer and the guided prayers all render.
+- **Content-hashed filename, and stale copies:** the chunk is `/_nuxt/wajibat-data-<8-char content hash>.js`.
+  - The hash changed with every data change today: `CShtccx7` → `Ca4vWSkt` after adding one Q&A entry. Earlier it was `BoKr4D3N`.
+  - **Gap found and fixed:** the old copy was never deleted, and "Saved for offline" was true if *any* copy was cached, even a stale one. `ensureWajibatDataCached()` now deletes copies from earlier builds once this build's chunk is cached, and `isWajibatDataCached()` checks this build's URL.
+  - Verified by planting a fake `wajibat-data-OLDBUILD.js`: after the next `/fiqh` visit only the current chunk remains.
+- **Not verified (unchanged from 2026-10-04):** a hard reload / new-tab navigation while offline. Offline tests use in-app navigation, because Playwright's `setOffline` blocks top-level navigations for every page of this app, not just Fiqh.
+- **Regressions:** Salat `verify3.cjs` 35/35, Taharat `verify2.cjs` 37/37.
+
+### Install-size (R5) — running total
+| Point | PWA install-time precache | Ruling chunk (runtime-cached, not at install) |
+|---|---|---|
+| Before the module | 5,469.06 KiB | — |
+| After Phase 3, before R8 | 6,165.09 KiB | in precache |
+| After R8 (2026-10-04) | 240 entries / 5,431.94 KiB | ~730 KB |
+| **Now** | **240 entries / 5,432.20 KiB** | **859 KB (181 KB gzip)**, `wajibat-data-Ca4vWSkt.js` |
+
+The install-time download is **37 KiB smaller than before the module started**: the 156 KiB Urdu font is still in it, but no ruling text. The +0.26 KiB since R8 is code (the visibility filter and cache pruning). The chunk grew ~129 KB with the 53 Q&A entries; it downloads only when Fiqh is opened.
+
+### 3. P13 — Khamenei's Q&A book for the Salat topics
+- **Method:**
+  - Read every Q&A in the Prayer chapter's sections that map to the 16 Salat subject topics: 359 Q&As in 34 sections, plus the 3 "Miscellaneous" Q&As that touch them.
+  - Picked those that answer the **same point** as a *Rules on Prayer & Fasting 2023* ruling, and compared the two. Then matched each to its Urdu counterpart **by content**: the Urdu numbering runs 1–4 ahead and drifts within sections.
+  - Checked the Urdu agrees too.
+  - Every question and answer (EN + UR) is verified word for word against the live leader.ir section page (`verify_kqa.py`: 53/53 entries, 0 mismatches).
+- **Display:** each entry is a `supplementary` ruling, shown only to Khamenei's followers, with `agreesWith` citing the *Rules* rulings it was compared with. Sistani's followers don't see it at all: no "not added yet" card, not in search, not counted in coverage.
+
+| Topic | Q&As read | Same point as a *Rules* ruling | Agree (shown) | Differ (not shown) | With official Urdu | Pairs (Q → *Rules* n.) |
+|---|---|---|---|---|---|---|
+| Daily prayers | 7 | 1 | 1 | 0 | 1 | Q 337→2 |
+| Prayer times | 19 | 5 | 5 | 0 | 5 | Q 348→24, Q 350→4, Q 358→18, Q 360→27, Q 361→8/13 |
+| Qibla | 5 | 3 | 3 | 0 | 3 | Q 363→44, Q 364→45, Q 366→45 |
+| Covering and clothing | 21 | 6 | 6 | 0 | 6 | Q 428→59, Q 435→51, Q 440→90, Q 443→90, Q 429→84, Q 439→85 |
+| Place of prayer | 57 (+3 misc.) | 5 | 5 | 0 | 5 | Q 382→100, Q 372→112, Q 386→107, Q 723→107, Q 384→114 |
+| Adhān and iqāmah | 8 | 1 | 1 | 0 | 1 | Q 454→131 |
+| Obligatory parts | (in other sections) | 1 | 1 | 0 | 1 | Q 455→162/163 |
+| Recitation | 21 | 5 | 5 | 0 | 5 | Q 456→190/197, Q 469→191, Q 473→172, Q 465→200, Q 481→184 |
+| Rukūʿ and sajdah | 9 | 3 | 2 | **1** | 2 | Q 485→221/243, Q 489→260; **Q 342→223 differs** |
+| What sajdah may be on | 11 | 3 | 3 | 0 | 3 | Q 487→267, Q 493→265, Q 498→281 |
+| Tashahhud, salām, qunūt | 6 | 0 | 0 | 0 | 0 | the Q&A section is about returning greetings; Q 510 matches the *Rules* ruling in "invalidators" |
+| Things that invalidate | 9 | 3 | 3 | 0 | 3 | Q 503→334, Q 501→343, Q 510→332 |
+| Traveller's prayer | 67 | 5 | 5 | 0 | 5 | Q 637→407, Q 638→408, Q 674→506, Q 671→588/558, Q 641→478 |
+| Qaḍāʾ prayers | 26 | 3 | 3 | 0 | 3 | Q 531→638/639, Q 536→639, Q 540→651 |
+| Congregational prayer | 55 | 5 | 5 | 0 | 4 | Q 563→730, Q 594→712, Q 574→717, Q 577→728, Q 607→763 |
+| Other obligatory prayers | 38 | 5 | 5 | 0 | 5 | Q 605→762, Q 622→764, Q 629→784, Q 631→681, Q 707→660 |
+| **Total** | **359 (+3)** | **54** | **53** | **1** | **52** | |
+
+- **The one that differs:** Q 342 (س 343) says stillness is required for recommended dhikrs as a flat ruling. *Rules* 223 says it **by obligatory caution**, and only when the dhikr is intended as part of the rukūʿ. Not shown.
+- **English only:** Q 594 (a woman leading women in congregation). The Urdu section has no counterpart in that position (its س 596 is a sajdah question), so it gets the R1 `urduNote`.
+- **Urdu less specific, still shown:** Q 364/366 and Q 455. The Urdu says "بنابر احتیاط" / "احتیاط یہ ہے" where the English answer and the *Rules* say "obligatory caution". It's the same kind of difference as Sistani 978 (R4), and each entry's note says so.
+- **Footnotes:** Q 428's `<sup>1</sup>` marker and the section footnote that the parser had attached to Q 439's answer ("1. Except for cases mentioned in fiqhī books…") are dropped. That's the same rule as every other quote (footnote markers are never part of the text). The live-page check strips `<sup>` and confirms the rest is verbatim.
+- **Not compared yet:**
+  - "Doubt in Prayers" (8 Q&As) goes with Phase 4.
+  - "Prayer Performed by Hiring" (2) and "Nāfilahs" (6) have no matching *Rules* ruling in the current topics.
+  - Of "Miscellaneous" (7), only Q 723 matched.
+- **New question found while reading:** *Rules* 465 contradicts *Rules* 452 (leisure travel "not shortened"). See P15. Nothing changed yet.
+
+### Tests / lint / build
+- `npm test`: 26 files, **418 tests passed** (wajibat: 45, up from 38).
+- `npx eslint` on every changed file: clean.
+- `npm run build`: OK.
+
+### Files created / changed
+- **Created:**
+  - `app/data/wajibat/rulings/salatQa.ts` (53 entries, generated);
+  - `tests/fixtures/wajibatSourceSnapshot.json`.
+- **Changed:**
+  - data: `types.ts` (`Ruling.supplementary`), `index.ts` (`isRulingVisibleFor`), `rulings/salat.ts`, `procedures/salat.ts` (regenerated), `topics.ts`;
+  - logic: `wajibatValidate.ts` (snapshot check, supplementary rules), `wajibatSearch.ts`, `wajibatCoverage.ts`, `useWajibat.ts`, `useFiqhOfflineCache.ts`;
+  - pages and tests: `fiqh/index.vue`, `fiqh/[category]/[topic].vue`, `tests/wajibatDataset.test.ts`.
+- **Generators (scratchpad, not committed):** `gen_salat.py` (review data folded in), `gen_kqa.py`, `qa_sections.py`, `picks.py`, `snapshot.py`, `verify_kqa.py`, `verify4.cjs`.
+
+---
+
+## Phase 4 — scope (awaiting your review; nothing built)
+
+**Goal (spec §12 Phase 4 + P11):** salat doubts and corrections, plus the "Is my wuḍūʾ still valid?" helper. Every leaf of every helper must cite level-A rulings of the chosen marja'. A branch that can't be sourced isn't shipped; it shows "Please refer to your marja's risala, Issue n" instead.
+
+**1. Content: three new Salat topics**
+| Topic | Sistani (*Islamic Laws* + Urdu *Tawzih*) | Khamenei (*Rules* 2023 first, R6; Q&A per R7) |
+|---|---|---|
+| Doubts in prayer (shakkiyyāt): doubt about the prayer itself, a part, the number of rakʿahs; invalidating vs valid doubts; doubts to ignore (after passing the place, after salām, after the time, kathīr al-shakk, imam/follower, recommended prayers) | The doubts chapter (around Rulings 1144–1255). **Not downloaded yet**: my copy has only 94 of Rulings 1100–1300. First step: download it (EN + UR), then the R4 spot-check and a revised-(*) comparison | *Rules* 346–387 (42 rulings, already downloaded) + Q&A "Doubt in Prayers" Q 514–521 / س 516–523 |
+| Ṣalāt al-iḥtiyāṭ | Same chapter | *Rules* 370–372 |
+| Sajdat al-sahw, and making up a forgotten sajdah/tashahhud | Same chapter | *Rules* 388–406 |
+
+**2. "I have a doubt in my prayer" helper, one tree per marja'** (spec §7.1 `DecisionTree` / `DecisionNode`)
+- Asks, one step at a time:
+  - when (during the prayer / after salām / after the time);
+  - what about (whether I prayed / a part / the number of rakʿahs);
+  - which prayer (2/3/4-rakʿah, āyāt);
+  - for rakʿah doubts: which numbers, and at which point (e.g. after completing the second sajdah).
+- Each leaf shows that marja's ruling(s) **quoted verbatim**, with the remedy and its source.
+- **Validator:** every node reachable; no cycles; every option points to an existing node; every leaf cites ≥ 1 level-A ruling of the tree's marja' (or is a "refer to risala, Issue n" leaf); no leaf cites another marja's ruling.
+- **Tests walk every path** (spec), checking each one ends at a sourced leaf.
+- The trees will differ between the maraji'. For example, which rakʿah doubts are valid, and the exact point at which a doubt counts as "after the second sajdah", come from each marja's own list.
+
+**3. "Is my wuḍūʾ still valid?" helper (P11)**
+- **Sistani:** "Things that invalidate wuḍūʾ" (downloaded) + his doubt-about-wuḍūʾ rulings (already in the dataset from Phase 2).
+- **Khamenei:** neither English book has an invalidator list. His *Practical Laws* purity chapter only answers individual cases, e.g. Q 101, Q 130, Q 140, plus glossary notes on madhī/wadhī/wadī. See **P16** for the options; my recommendation is (a), sourced branches only.
+
+**4. UI**
+- A `DecisionHelper` component on the topic page:
+  - one question at a time, with Back and Start over;
+  - an accessible radio group with a live region for the result;
+  - Urdu supported, phone width supported.
+- The leaf shows the quoted ruling card(s) and a "your marja's risala, Issue n" link.
+- Question wording is app-written (`kind: "explanation"`), see **P17**.
+
+**5. Checks (same as earlier phases):**
+- the R4 spot-check per topic, plus the revised-(*) comparison for Sistani;
+- the R6 conflict check between Khamenei's two books;
+- the source snapshot extended to the new rulings;
+- R5 size reporting;
+- Playwright at 1280/768/390.
+
+**Decisions I need before building:** P15 (*Rules* 465), P16 (Khamenei's wuḍūʾ helper), P17 (helper wording in Urdu).
+
+**Size estimate:** the largest content phase so far. Around 110 Sistani rulings + ~60 Khamenei rulings, plus 4 trees (2 doubt trees, 2 wuḍūʾ trees) and their path tests. The trees, not the extraction, are where most of the time goes.

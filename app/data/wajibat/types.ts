@@ -160,6 +160,12 @@ export interface Ruling {
    * itself (e.g. the marja's Urdu book, when his English book shows the
    * same dhikr only as an image). */
   recitationIds?: string[];
+  /** Decision P13 / rule R7: an extra entry from one marja's own Q&A book, quoted under its
+   * own number. It holds that marja's entry only and is shown only to his followers — other
+   * maraji' never see it (not even as "not added yet"), and it is never a translation of the
+   * ruling(s) it was compared with. `agreesWith` cites those rulings; a Q&A that differs from
+   * them is not added at all. */
+  supplementary?: { marjaId: MarjaId; agreesWith: SourceCitation[] };
 }
 
 /** A recited Arabic text (dhikr, tashahhud, etc.) shown separately from

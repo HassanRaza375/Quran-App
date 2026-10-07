@@ -10,8 +10,9 @@ import {
   getMarjaRuling,
   getRulingById,
   getTopicById,
+  isRulingVisibleFor,
 } from "~/data/wajibat";
-import type { Ruling, WajibatTopic } from "~/data/wajibat/types";
+import type { MarjaId, Ruling, WajibatTopic } from "~/data/wajibat/types";
 import { searchWajibat } from "~/utils/wajibatSearch";
 import { ensureWajibatDataCached } from "~/composables/useFiqhOfflineCache";
 
@@ -29,10 +30,13 @@ export const useWajibat = () => {
       .map((id) => getTopicById(id))
       .filter((t): t is WajibatTopic => !!t);
 
-  const rulingsFor = (topic: WajibatTopic): Ruling[] =>
-    topic.rulingIds.map((id) => getRulingById(id)).filter((r): r is Ruling => !!r);
+  /** A topic's rulings as followers of `marjaId` see them (other maraji' supplementary Q&A hidden). */
+  const rulingsFor = (topic: WajibatTopic, marjaId?: MarjaId | null): Ruling[] =>
+    topic.rulingIds
+      .map((id) => getRulingById(id))
+      .filter((r): r is Ruling => !!r && isRulingVisibleFor(r, marjaId));
 
-  const search = (query: string) => searchWajibat(WAJIBAT_DATASET, query);
+  const search = (query: string, marjaId?: MarjaId | null) => searchWajibat(WAJIBAT_DATASET, query, marjaId);
 
   return {
     maraji: MARAJI,

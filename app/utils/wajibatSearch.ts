@@ -4,7 +4,7 @@
 // "ihtiyat" finds "iḥtiyāṭ" and "تقليد" finds "تقلید". Separate from the
 // site-wide /search page, same as every other module (Shared Foundation #8).
 import type { WajibatDataset } from "~/data/wajibat";
-import type { GlossaryTerm, Ruling, WajibatTopic } from "~/data/wajibat/types";
+import type { GlossaryTerm, MarjaId, Ruling, WajibatTopic } from "~/data/wajibat/types";
 
 export interface WajibatSearchResults {
   topics: WajibatTopic[];
@@ -29,13 +29,14 @@ export const normalizeWajibatText = (s: string): string =>
 const matches = (query: string, ...fields: (string | undefined)[]) =>
   fields.some((f) => f !== undefined && normalizeWajibatText(f).includes(query));
 
-export const searchWajibat = (data: WajibatDataset, rawQuery: string): WajibatSearchResults => {
+/** `marjaId`: hides other maraji' supplementary Q&A entries (P13 / R7). */
+export const searchWajibat = (data: WajibatDataset, rawQuery: string, marjaId?: MarjaId | null): WajibatSearchResults => {
   const q = normalizeWajibatText(rawQuery);
   if (!q) return { topics: [], rulings: [], glossary: [] };
 
   return {
     topics: data.topics.filter((t) => matches(q, t.title.en, t.title.ur, t.arabicTerm, t.summary.text.en)),
-    rulings: data.rulings.filter((r) => matches(q, r.subject.en, r.subject.ur)),
+    rulings: data.rulings.filter((r) => (!r.supplementary || r.supplementary.marjaId === marjaId) && matches(q, r.subject.en, r.subject.ur)),
     glossary: data.glossary.filter((g) => matches(q, g.term, g.arabic, g.urdu, g.definition.en, g.definition.ur)),
   };
 };

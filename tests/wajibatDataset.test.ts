@@ -4,12 +4,16 @@
 // Urdu books, no fallback between maraji').
 import { describe, expect, it } from "vitest";
 import surahList from "../app/assets/data/surah.json";
-import { MARAJI, WAJIBAT_DATASET, WAJIBAT_RULINGS, getMarjaRuling, getRulingById } from "../app/data/wajibat";
+import { MARAJI, WAJIBAT_DATASET, WAJIBAT_RULINGS, getMarjaRuling, getRulingById, isRulingVisibleFor } from "../app/data/wajibat";
 import type { WajibatDataset } from "../app/data/wajibat";
-import { validateWajibatDataset } from "../app/utils/wajibatValidate";
+import { validateSourceSnapshot, validateWajibatDataset, type SourceSnapshot } from "../app/utils/wajibatValidate";
+import { searchWajibat } from "../app/utils/wajibatSearch";
+import { computeCoverage } from "../app/utils/wajibatCoverage";
+import sourceSnapshot from "./fixtures/wajibatSourceSnapshot.json";
 
 const surahs = surahList.map((s: { surahNo: number; totalAyah: number }) => ({ surahNo: s.surahNo, totalAyah: s.totalAyah }));
 const clone = (): WajibatDataset => JSON.parse(JSON.stringify(WAJIBAT_DATASET));
+const snapshot = sourceSnapshot as SourceSnapshot;
 
 describe("Wajibat dataset integrity", () => {
   it("has no validation issues", () => {
@@ -129,19 +133,51 @@ describe("Wajibat dataset integrity", () => {
     }
   });
 
-  it("Khamenei's supplementary Urdu Q&A salat entries are labelled as Q&A, not a translation of the 2023 Rules (decision P13, rule R7)", () => {
-    const salatTopics = new Set(WAJIBAT_DATASET.topics.filter((t) => t.categoryId === "salat").map((t) => t.id));
-    const entries = WAJIBAT_RULINGS.filter((r) => salatTopics.has(r.topicId)).flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei" && m.format === "qa");
-    expect(entries.length).toBeGreaterThan(0);
-    for (const e of entries) {
-      expect(e.source.title).toBe("Practical Laws of Islam (Q&A)");
-      expect(e.question?.en).toBeTruthy();
-      // Urdu is included only where it was actually read verbatim; otherwise
-      // English only, same as any other ruling with no official Urdu text.
-      if (e.text.ur) expect(e.urSource?.reference).toBeTruthy();
+  it("Khamenei's supplementary Q&A salat entries: own Q numbers, compared with the 2023 Rules, his followers only (P13, R7)", () => {
+    const supp = WAJIBAT_RULINGS.filter((r) => r.supplementary);
+    expect(supp.length).toBe(53);
+    expect(supp.filter((r) => r.rulings[0]!.text.ur).length).toBe(52);
+    for (const r of supp) {
+      const e = r.rulings[0]!;
+      expect(r.rulings).toHaveLength(1);
+      expect(r.supplementary!.marjaId).toBe("khamenei");
+      expect(e.format).toBe("qa");
+      expect(e.source.title).toBe("Practical Laws of Islam");
+      expect(e.source.reference).toMatch(/^Q \d+$/);
+      expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/32\/Practical-Laws-of-Islam\?sn=\d+$/);
+      if (e.text.ur) expect(e.urSource?.reference).toMatch(/^س \d+$/);
       else expect(e.urduNote).toBeTruthy();
       expect(e.note).toMatch(/not a translation/);
+      for (const c of r.supplementary!.agreesWith) {
+        expect(c.title).toBe("The Rules on Prayer & Fasting 2023");
+        expect(c.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/241\?sn=\d+$/);
+      }
     }
+    // Q 342 differs from Ruling 223 (stillness in recommended dhikr: flat duty vs obligatory caution) — not shown.
+    expect(supp.some((r) => r.rulings[0]!.source.reference === "Q 342")).toBe(false);
+  });
+
+  it("a supplementary Q&A entry is hidden from other maraji' — in topics, search and coverage", () => {
+    const qa = getRulingById("qiblaeffortqa")!;
+    expect(isRulingVisibleFor(qa, "khamenei")).toBe(true);
+    expect(isRulingVisibleFor(qa, "sistani")).toBe(false);
+    expect(isRulingVisibleFor(qa, null)).toBe(false);
+    expect(isRulingVisibleFor(getRulingById("qiblaeffort")!, "sistani")).toBe(true);
+    expect(searchWajibat(WAJIBAT_DATASET, "compass", "sistani").rulings.map((r) => r.id)).not.toContain("qiblaeffortqa");
+    expect(searchWajibat(WAJIBAT_DATASET, "compass", "khamenei").rulings.map((r) => r.id)).toContain("qiblaeffortqa");
+    const rows = computeCoverage(WAJIBAT_DATASET, ["sistani", "khamenei"]).filter((r) => r.topicId === "qibla");
+    expect(rows.find((r) => r.marjaId === "sistani")!.missingRulingIds).not.toContain("qiblaeffortqa");
+    expect(rows.find((r) => r.marjaId === "khamenei")!.total).toBeGreaterThan(rows.find((r) => r.marjaId === "sistani")!.total);
+  });
+
+  it("every quoted text matches the official source it was extracted from (source snapshot)", () => {
+    expect(validateSourceSnapshot(WAJIBAT_DATASET, snapshot)).toEqual([]);
+    // Every quote is covered: one snapshot unit per text/question per language, plus recitations.
+    const quotes = WAJIBAT_RULINGS.flatMap((r) => r.rulings).reduce(
+      (n, e) => n + ["en", "ur"].filter((l) => e.text[l as "en"]).length + ["en", "ur"].filter((l) => e.question?.[l as "en"]).length,
+      0
+    );
+    expect(Object.keys(snapshot).length).toBe(quotes + WAJIBAT_DATASET.recitations.length);
   });
 
   it("the prayer-times and qibla topics show live data from Module 5 rather than any computed times", () => {
@@ -226,5 +262,35 @@ describe("validateWajibatDataset catches broken data", () => {
     const data = clone();
     data.glossary[0]!.id = "ihtiyat-wajib";
     expect(messages(data).some((m) => m.includes("lowercase ASCII"))).toBe(true);
+  });
+  it("flags a paraphrased ruling text against the source snapshot", () => {
+    const data = clone();
+    const e = getMarjaRuling(data.rulings.find((r) => r.id === "qiblaeffortqa")!, "khamenei")!;
+    e.text.en = "If using a pole or a compass gives certainty about the direction of qiblah, relying on it is correct.";
+    expect(validateSourceSnapshot(data, snapshot).map((i) => i.message)).toContain("text differs from its numbered source unit (not verbatim)");
+  });
+
+  it("flags Arabic from another book spliced into an English quote (P12)", () => {
+    const data = clone();
+    const e = getMarjaRuling(data.rulings.find((r) => r.id === "rukudhikr")!, "sistani")!;
+    e.text.en = e.text.en.replace("subḥāna", "سُبْحَانَ");
+    expect(validateSourceSnapshot(data, snapshot).some((i) => i.id === "rukudhikr|sistani|en|text")).toBe(true);
+    expect(messages(data).some((m) => m.includes("arabicInSource"))).toBe(true);
+  });
+
+  it("flags a quote with no traceable source unit", () => {
+    const data = clone();
+    data.rulings[0]!.id = "untraceable";
+    expect(validateSourceSnapshot(data, snapshot).some((i) => i.id.startsWith("untraceable|"))).toBe(true);
+  });
+
+  it("flags a malformed supplementary entry", () => {
+    const data = clone();
+    const r = data.rulings.find((x) => x.id === "qiblaeffortqa")!;
+    r.rulings.push({ ...getMarjaRuling(data.rulings.find((x) => x.id === "qiblaeffort")!, "sistani")! });
+    r.supplementary!.agreesWith = [];
+    const msgs = messages(data);
+    expect(msgs).toContain("a supplementary ruling holds exactly one entry, for its own marja'");
+    expect(msgs).toContain("a supplementary ruling must cite the ruling(s) it was compared with and agrees with");
   });
 });

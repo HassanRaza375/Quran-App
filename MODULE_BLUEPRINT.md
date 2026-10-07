@@ -1340,8 +1340,9 @@ responsive layout at 1280/768/390px) passed without defects.
 
 ## Module 18 — Wajibat & Daily Fiqh (Ja'fari)
 
-**Status: Phases 0–2 shipped; Phase 3 (Salat core) built and awaiting the user's review.
-Phases 4–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
+**Status: Phases 0–3 built (Phase 3 on branch `wajibat-module`, with the P12–P14 fixes and Khamenei's
+Q&A supplementary entries, P13). Phase 4 is scoped and awaiting the user's review. Phases 5–8 and 10 are
+pending; Phase 9 (tracker) is deferred.** Spec:
 `wajibat-fiqh-jafari-module.md`. Decisions and official sources: `wajibat_decisions.md`. Phase
 reports: `wajibat_progress_log.md`.
 
@@ -1395,9 +1396,15 @@ reminder system.
 - `WajibatTopic { id, fiqh, categoryId, title, arabicTerm?, summary, explanations?, quranicBasis?, quranicBasisNotes?, rulingIds, procedureIds?, relatedTopicIds?, glossaryIds?, liveTool?, sensitive?, reviewedBy?, lastSourceCheck }`.
   - `quranicBasisNotes` (P9): a one-line explanation on a basis ayah, with a verbatim tafsir quote and its source.
   - `liveTool` shows live data from Module 5 (today's prayer times, a Qibla link). It never recomputes it.
-- `Ruling { id, topicId, subject, rulings: MarjaRuling[], differsBetweenMaraji?, status?: "disputed", sensitive? }`.
+- `Ruling { id, topicId, subject, rulings: MarjaRuling[], differsBetweenMaraji?, status?: "disputed", sensitive?, panel?, recitationIds?, supplementary? }`.
   `sensitive` places the ruling in the collapsed women-specific panel.
-- `MarjaRuling { marjaId, format: "issue"|"qa", question?, text: {en, ur?}, hukm?, basis, excerpt?, source, urSource?, verification: "A"|"B"|"D", urduNote?, urduEditionLag?, note? }`:
+  - `recitationIds` (P12): Arabic shown next to the ruling as a separate `Recitation { id, marjaId, arabic, transliteration?, source }`,
+    used when the Arabic comes from a different official book than the quote (e.g. Sistani's Urdu Tawzih, when his English book
+    prints the dhikr as an image). Never spliced into the quote.
+  - `supplementary: { marjaId, agreesWith: SourceCitation[] }` (P13/R7): one marja's own Q&A answer, added only where it agrees
+    with the cited rulings of his main book. Shown only to his followers (topic page, search and coverage all filter it), so
+    no other marja' ever sees a "not added yet" gap for it.
+- `MarjaRuling { marjaId, format: "issue"|"qa", question?, text: {en, ur?}, hukm?, basis, excerpt?, source, urSource?, verification: "A"|"B"|"D", arabicInSource?, urduNote?, urduEditionLag?, note? }`:
   - `hukm` is set only when the source states it.
   - `urSource` carries the Urdu book's **own** number, because the Urdu and English books number rulings differently.
 - `Procedure { id, topicId, marjaId, title, steps: ProcedureStep[] }`, where
@@ -1455,7 +1462,7 @@ reminder system.
   - Some rulings are unnumbered, like Sistani's "conditions for the validity of wuḍūʾ". Cite them
     with a descriptive reference, and extract them separately.
 
-### Phase 3 — Salat core (built; awaiting review)
+### Phase 3 — Salat core (built; on branch `wajibat-module`)
 - **Content:** 17 topics, 149 rulings with 287 entries, all level A, and 67 glossary terms.
 - **Guided prayers:** ṣubḥ, maghrib and ẓuhr for each marja' (6 procedures, 160 steps). They are generated from a rakʿah template, each step quoting that marja's ruling, with Rukn and wājib marks citing each marja's own lists.
 - **Khamenei's source:** *The Rules on Prayer & Fasting 2023* (first priority, R6), read through leader.ir's own contents endpoint (`POST /ajax/book`, 165 sections, 1,003 rulings). It has no Urdu edition, so his Salat entries are English only.
@@ -1464,6 +1471,17 @@ reminder system.
   - (b) Normalise Unicode (NFC) before verbatim comparisons. The same letter can be stored precomposed or decomposed.
   - (c) An official site may publish key Arabic (here, the rukūʿ/sajdah dhikr) as images. Don't transcribe them; show the source's own transliteration or find a text source.
   - (d) Shared glossary definitions come from one marja's book. Leave out terms whose meaning differs by marja' (e.g. the farsakh in km).
+- **Source-snapshot check (added after review):** `tests/fixtures/wajibatSourceSnapshot.json` holds, for every quoted text, the
+  official source unit it was extracted from (built by script from the downloaded pages, never from the dataset).
+  `validateSourceSnapshot()` requires each quote to equal its numbered unit, or to be a verbatim part of it when marked
+  `excerpt` or when the source is an unnumbered passage. It is test-only (~590 KB), never shipped.
+  - (e) It caught three hand-added Q&A entries that were paraphrases labelled level A. A validator that only checks
+    shape (citation present, URL official) can't see this; only comparing the text with the source can.
+  - (f) Keep every review-time data change in the generator, not as hand edits to generated files. Otherwise the next
+    regeneration silently drops it, and the snapshot can't tell a correction from a corruption.
+- **Offline (R8):** the ruling chunk (`wajibat-data-<content-hash>.js`) is excluded from the install-time precache and
+  cached by app code on any `/fiqh` visit or by "Save all for offline". After caching this build's chunk, copies left by
+  earlier builds are deleted, and "Saved for offline" checks this build's URL, so a corrected ruling never lingers.
 
 ### Rebuild notes
 - Store rulings **per marja'** from day one (`Ruling.rulings: MarjaRuling[]`). A single-ruling

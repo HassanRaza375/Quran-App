@@ -1011,3 +1011,68 @@ They sit on the *Doubts in prayer* and *Wuḍūʾ* topic pages under "Find your 
 
 ### Not done in this phase
 - Makarem (no sources). Phase 9 (tracker) is deferred. Phases 5–8 and 10 are pending.
+
+## Phase 4b follow-up: review round (2026-10-08)
+
+Your seven points after the Phase 4b review. Decisions A1–A8 are in `wajibat_decisions.md`.
+
+### 1. Automated mismatch check (A1): run, 526 pending your decision
+- **What:** for every ruling with more than one language version, it compares the **numbers, ordinal words and negation words**. It covers the English and Urdu of every dataset entry, English/Persian and Urdu/Persian for Khamenei's *Rules on Prayer & Fasting*, and the four Urdu treatise entries against the Persian treatise. 1,279 pairs compared.
+- **Result:** **551 flagged** (340 high, 211 low). **25 are already decided** (rulings handled under R11, shown as `decided`). **526 are pending a person's decision** (321 high, 205 low).
+
+  | Pair | High | Low |
+  |---|---|---|
+  | English / Urdu | 238 | 155 |
+  | English / Persian | 53 | 22 |
+  | Urdu / Persian | 30 | 28 |
+- **High** = a number or ordinal appears on one side only, or a negation appears on one side only. **Low** = same values (or negation on both sides) but a different count, usually translation style.
+- **Where to read it:** `wajibat_mismatch_report.md` (one table per severity, with a decision column). Statuses go in `tests/fixtures/wajibatMismatchDecisions.json`: `pending`, `accepted` (the versions say the same), `fix`, `withhold`, `decided`.
+- **The test** (`tests/wajibatMismatch.test.ts`): the TypeScript check and the Python report must agree on every English/Urdu pair (so the fixture cannot go stale), and every reported mismatch must have a decision entry with a valid status; a new, unlisted mismatch fails the run. `pending` is a valid status, so the suite is green while your decisions are open.
+- **What it cannot see (stated in the report):** a changed meaning with the same numbers and negations. **English 465 (the leisure-travel mistranslation) is not caught**: the Urdu also contains one negation. The two Khamenei slips that reading missed, 364 and 588, **are** caught (unit tests check both). So treat it as a net for slips, not proof that the other pairs agree.
+- **Noise I tuned out, and what remains:**
+  - Left out of the tables on purpose: "one"/ایک, "first"/پہلا/اول, and "second"/دوسرا/دوسری, because Urdu دوسری is usually "the other".
+  - Reference numbers ("Ruling 413", "مسئلہ 413") are stripped, and the Arabic yeh and kaf are folded.
+  - Persian negation matches verb prefixes (نکردن, نبودن, …).
+  - A good share of what is left is still translation style: the English adds "fifty percent", Urdu uses "both" for "two", the Persian omits a word. That is why I did not auto-accept any of it.
+- **A suggestion for deciding 526 rows:** start with the 53 + 30 Persian rows, since the Persian decides for Khamenei (R11); then the English/Urdu high rows for Sistani (where the English edition is newer and wins, P6, so those are mostly Urdu lag). I can sort the report by marja' and pair if that helps.
+
+### 2. The four *Aḥkām-e Āmūzishī* entries against the Persian *Risāla-yi Āmūzishī* (A2): all agree
+- Found the Persian treatise on leader.ir (book 137), read lesson 16 (مبطلات وضو, احکام وضو), and compared item by item:
+  - the seven invalidators, including the seventh (everything that causes ghusl, such as janābah, ḥayḍ and touching a corpse);
+  - finding out afterwards that the wuḍūʾ was invalid;
+  - excessive doubters;
+  - the three cases of doubt about whether wuḍūʾ was performed (before, during, after the prayer).
+- **No difference.** Each entry now records the Persian passage as `persianSource` (metadata and the "Compared with the Persian original" caption; the Persian is never displayed), and the entries' note says so. The automated check also ran on these four pairs (Urdu against Persian); its remaining flag there is signal noise (the invalidators' "نہ" count against Persian verb forms).
+
+### 3. Issue 1154 note on the helper answer (A3): done
+The helper now shows the ruling entry's own note under a quote, as the ruling card does. For 1154 that is: *"Quoted exactly as published: the official page prints 'Sūrat al-Ḥamd00' (a typing slip on sistani.org, page 8298); the text is not corrected here."* The Urdu-only label is not repeated as a note. Any other entry note, such as the P5 "caution" notes, now shows on helper answers too.
+
+### 4. Install-size script (A4): `npm run size`
+- `scripts/measure-install-size.mjs` reads `.output/public/sw.js`, sums the real size of every file in the precache manifest (raw and gzip, KiB = 1024 bytes), and reports the Wajibat ruling chunk separately (it is deliberately not precached, R8). `--json` prints JSON.
+- **Current build: 5,444.87 KiB raw (2,734.41 KiB gzip) across 240 precache files; ruling chunk 1,278.05 KiB (252.05 KiB gzip).**
+- The earlier figures (5,433.61 and 5,442.9) came from other methods; **only figures from this script are comparable from now on.**
+
+### 5. The transient test failure (A5): logged, not reproduced
+- Once, `npm test` reported "27 failed (27), no tests" right after a Playwright run and a production build; the next run, seconds later, passed with no change. It has not recurred in about ten full runs since.
+- Likely cause (not proven): the Vitest run overlapped a still-running build or Node process holding files. If it recurs, capture the first error line of the run before rerunning.
+
+### 6. Review pack (A6): generated
+- `node scripts/wajibat/review.mjs pack [--pdf]` writes `review_pack/<helper>.md`, `.html` and, with `--pdf`, `.pdf` for each of the four helpers (Sistani doubts 138 paths, Khamenei doubts 81, Sistani wuḍūʾ 26, Khamenei wuḍūʾ 17). Each has an index table (path id, the situation, the answer, tick boxes, notes), then every path in full:
+  - each question and the answer chosen, and the ruling and phrase each option rests on;
+  - the outcome quote with the answer phrase marked, its citation and official link, and any note shown with it;
+  - **the official Urdu of the same ruling** where one exists, and the Urdu-only quote itself where there is no English;
+  - a tick box ("OK" / "Changes needed") and a notes line.
+- **How I read "Urdu and English":** the helper shows an English quote (Urdu where the English is withheld or does not exist), so the pack prints the matching official Urdu of the whole ruling next to the English quote for the Urdu reader. It does not translate anything.
+- **Sign-off is stored per path in data:** `app/data/wajibat/treeReviews.json`, keyed by helper and path id, each record `{hash, status: approved | changes-needed, reviewer, date, note}`. The hash covers everything a reviewer sees on the path (questions, answers, quotes, citation basis). **If a path is edited after sign-off, the record no longer matches and the path counts as "changed since review".**
+- Record sign-offs with `node scripts/wajibat/review.mjs approve <helper> --reviewer "Name" [--paths all|id,id|@file] [--status approved|changes-needed] [--note ...]`, and check them with `... status`.
+- The PDFs need Playwright and Chromium (`PLAYWRIGHT_MODULE=… node scripts/wajibat/review.mjs pack --pdf`); they are not a repo dependency. The packs are about 0.2–1 MB each.
+
+### 7. Feature flag (A7): done
+- **A helper is shown only when every one of its paths has a current approval,** or the dev flag is on: set `NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS=true` (runtime config `wajibatShowUnreviewedHelpers`, default false). Topic pages stay visible with all their rulings.
+- **Today no path is signed off, so all four helpers are hidden in a normal build.**
+- **Tests (new):** path ids unique and the 262-path total; stored sign-offs refer to real paths; an empty record hides the helper and the dev flag shows it; one missing path hides it; a "changes needed" path hides it; editing a path after sign-off makes it stale and hides it; the hash changes with any question, answer or outcome change.
+
+### Tests and checks
+- **Unit tests: 483 pass** (467 before): the mismatch suite (8) and the review/flag suite (8) are new. Lint is clean on every file touched.
+- **Browser, production build:** helper suite **90/90** at 1280, 768 and 390 px with the dev flag on (87 before plus the Issue 1154 note check at each width); **flag off 9/9** (all four topic pages show their rulings and no helper); regressions Taharat 37/37, Salat 35/35, offline/install 22/22, Phase 4a 34/34, P18 30/30.
+- **Source snapshot:** 0 problems after the treatise `persianSource` change.

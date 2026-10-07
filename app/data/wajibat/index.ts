@@ -2,6 +2,7 @@
 // (./rulings/*.ts) so later phases can lazy-load them per category (spec
 // Phase 10); for now every category's file is small enough to import eagerly.
 import type { Ruling, WajibatCategory, WajibatTopic, GlossaryTerm, MarjaId, MarjaRuling, Procedure, Recitation, DecisionTree } from "./types";
+import type { TreeReviews } from "../../utils/wajibatReview";
 import { WAJIBAT_CATEGORIES } from "./categories";
 import { WAJIBAT_TOPICS } from "./topics";
 import { WAJIBAT_GLOSSARY } from "./glossary";
@@ -14,6 +15,7 @@ import { SALAT_PROCEDURES } from "./procedures/salat";
 import { SALAT_QA_RULINGS } from "./rulings/salatQa";
 import { DOUBTS_RULINGS } from "./rulings/doubts";
 import { DECISION_TREES } from "./decisionTrees";
+import treeReviewsJson from "./treeReviews.json";
 
 export * from "./types";
 export { MARAJI, getMarjaById, isMarjaId } from "./marja";
@@ -47,6 +49,8 @@ export const getTopicById = (id: string) => WAJIBAT_TOPICS.find((t) => t.id === 
 export const getRulingById = (id: string) => WAJIBAT_RULINGS.find((r) => r.id === id);
 export const getGlossaryTermById = (id: string) => WAJIBAT_GLOSSARY.find((g) => g.id === id);
 export const getProcedureById = (id: string) => WAJIBAT_PROCEDURES.find((p) => p.id === id);
+/** Reviewer sign-offs per tree and path (decision A6); see app/utils/wajibatReview.ts. */
+export const TREE_REVIEWS = treeReviewsJson as unknown as TreeReviews;
 export const getDecisionTreeById = (id: string) => DECISION_TREES.find((t) => t.id === id);
 export const getRecitationById = (id: string) => WAJIBAT_RECITATIONS.find((r) => r.id === id);
 

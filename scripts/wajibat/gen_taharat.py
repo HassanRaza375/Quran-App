@@ -121,7 +121,7 @@ def K(n, *, ur=None, hukm=None, basis=None, note=None, cut=None):
     if notes: r["note"] = " ".join(notes)
     return r
 
-TREATISE_NOTE = "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found."
+TREATISE_NOTE = "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A, the 2023 Rules and the Persian original (Risāla-yi Āmūzishī): no conflict found."
 RULINGS = []
 def R(id_, topic, subject, *entries, sensitive=False, differs=False, panel=None):
     r = {"id": id_, "topicId": topic, "subject": {"en": subject}, "rulings": [e for e in entries if e]}

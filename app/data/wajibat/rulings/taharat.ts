@@ -3411,7 +3411,12 @@ export const TAHARAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         urduOnly: true,
-        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found."
+        persianSource: {
+          title: "رساله آموزشی",
+          reference: "درس 16 — احکام وضو، 3 (الف)",
+          url: "https://www.leader.ir/fa/book/137/1?sn=29552"
+        },
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A, the 2023 Rules and the Persian original (Risāla-yi Āmūzishī): no conflict found."
       }
     ]
   },
@@ -3462,7 +3467,12 @@ export const TAHARAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         urduOnly: true,
-        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found. Compared with his Q&A, Q 136 (س 137): the same ruling."
+        persianSource: {
+          title: "رساله آموزشی",
+          reference: "درس 16 — احکام وضو، 1",
+          url: "https://www.leader.ir/fa/book/137/1?sn=29552"
+        },
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A, the 2023 Rules and the Persian original (Risāla-yi Āmūzishī): no conflict found. Compared with his Q&A, Q 136 (س 137): the same ruling."
       }
     ]
   },
@@ -3513,7 +3523,12 @@ export const TAHARAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         urduOnly: true,
-        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found."
+        persianSource: {
+          title: "رساله آموزشی",
+          reference: "درس 16 — احکام وضو، 2",
+          url: "https://www.leader.ir/fa/book/137/1?sn=29552"
+        },
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A, the 2023 Rules and the Persian original (Risāla-yi Āmūzishī): no conflict found."
       }
     ]
   },
@@ -3765,7 +3780,12 @@ export const TAHARAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         urduOnly: true,
-        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found. His English books and his Q&A have no list of invalidators; his Q&A (Q 92, س 93) agrees that madhī, wadhī and wadī do not invalidate wuḍūʾ."
+        persianSource: {
+          title: "رساله آموزشی",
+          reference: "درس 16 — مبطلات وضو",
+          url: "https://www.leader.ir/fa/book/137/1?sn=29551"
+        },
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A, the 2023 Rules and the Persian original (Risāla-yi Āmūzishī): no conflict found. His English books and his Q&A have no list of invalidators; his Q&A (Q 92, س 93) agrees that madhī, wadhī and wadī do not invalidate wuḍūʾ."
       }
     ]
   },

@@ -9,11 +9,14 @@ import {
   getMarjaById,
   getMarjaRuling,
   getRulingById,
+  getDecisionTreeById,
   getTopicById,
   isRulingVisibleFor,
+  TREE_REVIEWS,
 } from "~/data/wajibat";
 import type { MarjaId, Ruling, WajibatTopic } from "~/data/wajibat/types";
 import { searchWajibat } from "~/utils/wajibatSearch";
+import { isHelperVisible } from "~/utils/wajibatReview";
 import { ensureWajibatDataCached } from "~/composables/useFiqhOfflineCache";
 
 export const useWajibat = () => {
@@ -36,6 +39,14 @@ export const useWajibat = () => {
       .map((id) => getRulingById(id))
       .filter((r): r is Ruling => !!r && isRulingVisibleFor(r, marjaId));
 
+  /** Decision helpers of a topic that may be shown: fully reviewed, or the dev flag is on (decision A7). */
+  const helpersFor = (topic: WajibatTopic, marjaId?: MarjaId | null) => {
+    const dev = !!useRuntimeConfig().public.wajibatShowUnreviewedHelpers;
+    return (topic.decisionTreeIds ?? [])
+      .map((id) => getDecisionTreeById(id))
+      .filter((t) => !!t && !!marjaId && t.marjaId === marjaId && isHelperVisible(t, TREE_REVIEWS, dev));
+  };
+
   const search = (query: string, marjaId?: MarjaId | null) => searchWajibat(WAJIBAT_DATASET, query, marjaId);
 
   return {
@@ -49,6 +60,7 @@ export const useWajibat = () => {
     getMarjaRuling,
     topicsFor,
     rulingsFor,
+    helpersFor,
     search,
   };
 };

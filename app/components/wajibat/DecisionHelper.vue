@@ -58,6 +58,9 @@
               <template v-for="(seg, j) in segments(q.text)" :key="j"><mark v-if="seg.hit">{{ seg.text }}</mark><template v-else>{{ seg.text }}</template></template>
             </blockquote>
             <SourceLine :source="quoteMeta(q).source" :marja-name="marja.name.en" :verification="quoteMeta(q).verification" :urdu="q.lang === 'ur'" />
+            <p v-if="lastOf(i) && quoteMeta(q).note" class="text-caption text-medium-emphasis mb-1">
+              <v-icon size="14" aria-hidden="true">mdi-information-outline</v-icon> {{ quoteMeta(q).note }}
+            </p>
             <a v-if="lastOf(i)" :href="`#${q.rulingId}`" class="text-caption" @click="openRuling(q.rulingId, $event)">Open the full ruling on this page</a>
           </div>
           <p v-if="seeTitles.length" class="text-body-2 mb-2">
@@ -140,6 +143,7 @@ const quoteMeta = (q) => {
     verification: e.verification,
     urduOnly: !!e.urduOnly,
     englishWithheld: e.englishWithheld !== undefined,
+    note: e.urduOnly ? undefined : e.note, // the Urdu-only label is already shown above
   };
 };
 

@@ -194,6 +194,9 @@ export default defineNuxtConfig({
     public: {
       quranApiBase: process.env.QURAN_API_BASE,
       quranApiBase2: process.env.QURAN_API_BASE2,
+      // Wajibat decision helpers are shown only when every path is marked reviewed (decision A7).
+      // Dev flag: set NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS=true to show them anyway.
+      wajibatShowUnreviewedHelpers: false,
     },
   },
 });

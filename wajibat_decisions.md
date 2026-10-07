@@ -83,6 +83,19 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | P18 result | — | **Done (2026-10-07):** all 200 Khamenei *Rules* entries read against the Persian original and his official Urdu edition. 188 agree; 7 English withheld (Urdu shown); 3 Urdu withheld; 2 footnote trims (updated in Phase 4b: 364 and 588 were found later by a numeric comparison). Borderline cases (rulings 138, 141) treated as agreeing; details and the question to confirm are in the progress log. |
 | R12 | **Phase 4b conditions** | Every question offers an **"I'm not sure"** option that leads to the risala pointer, never to a guessed outcome. One question per screen, a visible "Start over", and the marja's name and the "Not scholar-reviewed" label on every result. P17's conditions stay (questions describe the situation only; each node lists the rulings its options rely on; tests check the branch logic, not just verbatim leaves). Tests walk every path for every marja'. Commit and push to `wajibat-module` only; stop for review after 4b; never merge to `main`. |
 
+## Answered questions (2026-10-07, third round: Phase 4b approved)
+
+| # | Topic | Decision |
+|---|---|---|
+| A1 | Automated mismatch check | New test over the **whole dataset, all phases**: for every ruling with more than one language version (English / Urdu / Persian where available), compare numbers, ordinal words and negation words (not / نہیں / نه). **Report every mismatch; a person decides each.** Run now and report before Phase 5. |
+| A2 | Treatise against the Persian | Check the four *Aḥkām-e Āmūzishī* entries against the Persian *Risāla-yi Āmūzishī*. |
+| A3 | Issue 1154 "00" | Show the same "as printed in the official text" note on the helper answer as on the ruling card. |
+| A4 | Install size | A script that measures install size reproducibly; **use it for all future figures.** |
+| A5 | Transient test failure | Log it (27 files failed to load once, then passed on rerun); investigate if it recurs. |
+| A6 | Review pack | Generate a printable review document (Markdown + PDF, Urdu and English) per marja' and helper, listing every path (questions, chosen answers, outcome quote, citation) with a tick box and notes column. Store reviewed status **per path in data** so a reviewer's sign-off can be recorded. |
+| A7 | Feature flag | Helpers are hidden unless **all** their paths are marked reviewed (or a dev flag is on). Topic pages stay visible. |
+| A8 | Git | Commit and push to `wajibat-module`; **do not merge to `main`** until the user has seen the mismatch report. |
+
 ## Phase 0 findings (2026-09-25)
 
 - **Q5 UI kit: Vuetify 3.** `package.json` has `vuetify` + `vite-plugin-vuetify` and no shadcn-vue,

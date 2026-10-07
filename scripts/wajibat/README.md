@@ -96,3 +96,13 @@ To check the supplementary Q&A entries word for word against the cited leader.ir
 | `align_rules.py` | Aligns Khamenei's *Rules* across the Persian original (book 180), the official Urdu (197) and the English (241); English-to-Persian numbering |
 | `rules_verdicts.py` | The R11 verdicts: where the English or Urdu differs from the Persian, which one is withheld, and why |
 | `review_rules.py`, `fa_view.py` | Print the three editions side by side for review (not part of the build) |
+
+## Review round tools (Phase 4b follow-up)
+
+| Command | What it does |
+|---|---|
+| `python scripts/wajibat/mismatch.py` | Automated mismatch check (decision A1): numbers, ordinal words and negation words across every language version of every ruling (English/Urdu from the dataset, Persian from the downloaded pages). Writes `tests/fixtures/wajibatMismatches.json`, adds new mismatches to `tests/fixtures/wajibatMismatchDecisions.json` as `pending`, and rewrites `wajibat_mismatch_report.md`. `build.py` runs it. A person decides each row; `tests/wajibatMismatch.test.ts` fails on any mismatch that has no decision entry. |
+| `node scripts/wajibat/review.mjs pack [--pdf]` | Review pack per helper in `review_pack/` (Markdown, HTML, PDF with `--pdf`; PDFs need Playwright, set `PLAYWRIGHT_MODULE` to its `index.js` if it is not installed). |
+| `node scripts/wajibat/review.mjs status` / `approve <helper> --reviewer "Name" [--paths all\|ids\|@file]` | Show or record per-path sign-offs in `app/data/wajibat/treeReviews.json`. A helper is shown only when every path has a current approval, or the dev flag `NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS=true` is set. |
+| `npm run size` | Install size from the built service worker's precache manifest (run `npm run build` first). The only source of install-size figures. |
+

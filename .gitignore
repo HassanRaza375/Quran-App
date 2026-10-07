@@ -26,3 +26,6 @@ logs
 # Wajibat generator source cache (raw downloaded pages are never committed; see scripts/wajibat/README.md)
 scripts/wajibat/.cache/
 scripts/wajibat/__pycache__/
+
+# review pack: the HTML is an intermediate for the PDF
+review_pack/*.html

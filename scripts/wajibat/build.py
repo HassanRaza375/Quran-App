@@ -41,6 +41,10 @@ dump()
 # written to decisionTrees.ts; dump again so the snapshot and tests see the trees too.
 run([PY, "gen_helpers.py"], env=env)
 dump()
+# Automated mismatch check over every language version (decision A1): refreshes
+# tests/fixtures/wajibatMismatches.json (the test requires it to match the TypeScript twin),
+# adds new mismatches to wajibatMismatchDecisions.json as "pending" and rewrites wajibat_mismatch_report.md.
+run([PY, "mismatch.py"], env=env)
 # Snapshot of every quote's source unit, read from the downloaded pages (never from the dataset).
 run([PY, "snapshot.py", FIXTURE], env=env)
 print("done — now run `npm test`")

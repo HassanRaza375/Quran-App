@@ -1,0 +1,2206 @@
+{
+ "actionswithouttaqlid|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "actionswithouttaqlid|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "adhanafter|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "adhanrecommended|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "adhanwording|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "adhanwording|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "aheadofgrave|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "aloudmen|khamenei|text|en-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "aloudmen|khamenei|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "aloudmen|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "aloudmistake|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "aloudmistake|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "aloudmistake|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "aloudmistake|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "aloudwomen|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "amin|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "amin|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "anusthreetimes|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "anuswithwater|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "asphalt|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ayatcauses|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "ayatcauses|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ayatcauses|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "ayatcauses|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ayatmethod|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ayatshort|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "becomingjunub|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "birddroppings|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "birddroppings|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "bleedingbeforenine|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "bleedingbeforenine|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "blood|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "breakingnecessity|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "breakingnecessity|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "bulughsigns|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "certaintyoftime|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "clothingconditions|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "clothingconditions|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "clothingconditions|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "corpse|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "correctrecitation|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringintentional|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringintentional|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringintentional|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringmen|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringmen|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringmen|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringprivateparts|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringprivateparts|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "coveringwomen|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "dailyrakat|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "dailyrakat|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "dailyrakat|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "deceasedmujtahid|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "dischargesmadhi|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "dogpig|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtafterprayerkind|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtafterprayertwo|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtafterprayerunsure|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtaftersalaminvalid|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtaftersalaminvalid|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtaftersalam|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtaftersalam|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtaftersalam|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtaftersalam|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtbeforetashahhud|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtchanges|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtfatiha|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtfatiha|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtfatiha|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtforgotsajdahstanding|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtimam|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtimam|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtimam|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtinvalidthink|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtinvalidthink|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtinvalidthink|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtkinds|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtkinds|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtkinds|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtknowsnextstage|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtmaghribisha|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtmustahabnumber|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtmustahabpart|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtmustahabpart|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtmustahabprayed|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtmustahabrukn|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtmustahabsupposition|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtotherprayers|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtpartgeneral|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtpartgeneral|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtpartgeneral|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtprayeritself|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtprayeritself|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtprayeritself|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrakahhow|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrakahhow|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtremembermissing|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtremembermissing|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtremembermissing|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrepeated|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrepeated|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrepeated|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrising|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrising|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrising|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrising|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtrukn|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsajdahandrakah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsalam|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsalam|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsalam|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsdismissedlist|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsdismissedlist|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsdismissedlist|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsinvalidating|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsinvalidating|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsinvalidating|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsinvalidating|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsittingprayer|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsuppositionchange|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsuppositionunsure|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsupposition|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsupposition|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsurah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtsvalid|khamenei|text|en-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "doubtsvalid|khamenei|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "doubtsvalid|khamenei|text|ur-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "doubtsvalid|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "doubtvaliddontbreak|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtvaliddontbreak|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtvaliddontbreak|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtvalidrestart|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "doubtzuhrasr|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "earthpurifies|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "eidstatus|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "eldestsonwho|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "eldestsonwho|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "eldestsonwho|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "elevencomponents|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "elevencomponents|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "elevencomponents|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "elevencomponents|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "establishingimpurity|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessiveact|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessiveact|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessiveact|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessiveact|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessivedoubter|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessivedoubter|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessivedoubter|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessivenonrukn|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessivepart|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessiveprayer|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessiveprayer|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "excessiverukn|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "fajrtime|khamenei|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "fajrtime|khamenei|text|ur-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "flowingwater|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "followerahead|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "followerahead|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "followerahead|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "followerquietprayers|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "followerquietprayers|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "followerrecites|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "followingthealam|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "followingthealam|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotbeforeruku|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotnonrukn|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotnonrukn|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotrecitation|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotrecitation|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotruku|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotruku|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotruku|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotsajdahqada|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "forgotsajdahqada|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "fridaybest|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "fridaybest|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "fridaybest|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "fridaybest|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "fridayprayer|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "fridayprayer|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "fridayprayer|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghusleventduring|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghusleventduring|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghuslhair|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghuslirtimasi|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghuslmassmayyit|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghuslobstruction|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghuslreplaceswudu|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghuslseveral|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghusltypes|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ghuslwholebody|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "goldjewellerymen|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "goldjewellerymen|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "goldmen|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "goldsilverutensils|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haramanimal|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydcategories|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydduration|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydduration|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydduration|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydpregnancy|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydpregnancy|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydpregnancy|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "haydunlawful|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "identifyingmujtahid|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatadded|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatdifferentshortfall|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatdoubtnumber|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatdoubtpart|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatdoubtperformed|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatless|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatmethod|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatmore|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatmustahab|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatnosahw|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatrecitation|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatrecitation|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatrecitation|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatremembersduring|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatremembersthree|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatsame|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatsitting|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyattwothreefour|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatwajib|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "ihtiyatwajib|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "imamconditions|khamenei|text|en-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "imamconditions|khamenei|text|ur-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "imamconditions|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "importanceofprayer|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "importanceofprayer|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "importedleather|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "importedleather|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "impureunaware|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "impureunaware|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "impurityexemptions|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "impuritytransfer|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "impuritytransfer|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "impuritytransfer|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "intentionspecified|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "intentionspecified|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "intention|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "islampurifies|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "istibradoubt|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "istibradoubt|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "istibrawomen|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "istibra|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "istihadamedium|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "istinjadoubt|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "jabirauncovered|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "jamaahneglect|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "jamaahneglect|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "jamaahneglect|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "jamaahneglect|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "joiningruku|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "joiningruku|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "junubunlawful|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa337|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa360|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa364|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa364|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa372|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa382|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa428|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa428|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa443|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa454|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa455|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa455|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa456|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa487|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa498|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa503|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa514|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa515|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa517|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa518|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa518|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa519|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa520|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa521|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa521|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa531|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa536|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa563|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa574|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa577|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa607|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa631|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa631|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa637|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa638|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa638|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa674|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa674|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa707|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "khqa723|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "kurrdefinition|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "kurrdoubt|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "laughing|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "laughing|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "laughing|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "learningrulings|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "maghribishatime|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "maghribishatime|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "maghribishatime|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "maghribishatime|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "menopause|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "menwomengap|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "menwomengap|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "menwomengap|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "menwomengap|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "missedbymidnight|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "mixedwateruse|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "mosqueimpure|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "mubtilatlist|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "mubtilatlist|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "mubtilatlist|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "mubtilatlist|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "mujtahidconditions|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "muwalat|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "muwalat|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "muwalat|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "nifasdefinition|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "nifasrulings|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "nonslaughtered|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "nonslaughtered|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "nonslaughtered|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "nonslaughtered|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "obligatoryprayers|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "obligatoryprayers|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "obligatoryprayers|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "obligatoryprayers|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "obtainingfatwa|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "omitignorance|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "omitintentional|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "omitlastsajdahs|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "omitsajdahsafter|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "omittimeqibla|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "omittwosajdahs|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "omitwudu|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "personsnonkitabi|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "personsnonkitabi|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "personsnotbelieving|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "personsrejecting|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "personsrejecting|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "personsunknown|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "personsunknown|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "prayingearly|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "prayingearly|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "purityestablished|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "purityimpuritydoubt|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qadadoubtforgot|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qadadoubtremembered|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qadalastrakah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qadaliving|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qadaobligation|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qadasajdahorder|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qadaseveral|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qalilwater|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrconditions|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrconditions|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrdistancestart|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrdistancestart|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrdistancestart|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrdistance|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrfourplaces|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrfourplaces|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrfourplaces|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrignorance|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrignorance|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrignorance|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrintention|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrintention|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrintention|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrintro|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrintro|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrintro|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrjob|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrjob|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrleisure|khamenei|text|en-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qasrleisure|khamenei|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qasrlimit|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrlimit|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrlimit|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrtendays|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qasrthirtydays|khamenei|text|en-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qasrthirtydays|khamenei|text|ur-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qasrthirtydays|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qasrwatan|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiblaeffortqa|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiblaeffort|khamenei|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qiblaeffort|khamenei|text|ur-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qiblaeffort|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "qiblanomeansqa|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiblanomeansqa|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiblanomeans|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiblanomeans|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiblanomeans|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiblarecommended|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiyamstill|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiyamstill|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "qiyamstill|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "qunutdhikr|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "quranimpure|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "quransajdah|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "quransajdah|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "quransajdah|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "quransajdah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "replyingsalam|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "replyingsalam|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "replyingsalam|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "riya|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "rukns|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "rukns|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "rukns|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "rukusajdahdhikrqa|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwcases|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwcases|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwcases|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwdoubttwofour|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwintentional|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwintentional|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwintentional|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwintentional|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwonemissed|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwrecitedagain|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwrecitedagain|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwsalamall|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwsalamall|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwsalamall|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwsalampart|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "sahwsounds|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwsounds|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwtalking|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "sahwtasbihat|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sahwtasbihat|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahdhikr|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahearth|khamenei|text|ur-fa": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "sajdahearth|sistani|text|en-ur": {
+  "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
+  "status": "decided"
+ },
+ "sajdahforother|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahheight|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahheight|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahheight|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahnothing|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahnothing|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahnothing|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahrukn|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahrukn|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahrukn|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahsurahs|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sajdahtaqiyyah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "salamforgot|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "salamforgot|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "salamforgot|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "semen|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "semen|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sevenparts|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "sevenparts|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sevenparts|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "shahadathalithah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "shorttimesurah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "silkmen|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "speaking|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "speaking|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "stillplace|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "stillplace|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "stillplace|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "stillplace|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sunpurifies|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "sunpurifies|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "takbirbeforeimam|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "takbirbeforeimam|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "takbirstill|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "takbirstill|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "takbir|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "taqibat|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "taqlidoptions|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tartib|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "tartib|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tashahhudforgot|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "tashahhudforgot|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "tashahhudforgot|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tashahhud|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumcomplete|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumgypsum|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumhardship|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumhardship|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumhardship|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumharm|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammuminsteadofghusl|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammuminvalidators|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammuminvalidators|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumneither|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumnoaccess|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumobligatory|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumpure|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tayammumsurfaces|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "tennajasat|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "thirdfourthquiet|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "thirdfourthquiet|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "thirdfourthquiet|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "thirdfourthrakah|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "thirdfourthrakah|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "thirdfourthrakah|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "toiletprohibitedplaces|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "toiletqibla|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "turbahpure|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "turbahpure|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "turbahpure|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "turningface|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "turningface|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "turningface|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "twosajdahs|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "unabletostand|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "urinaryoutlet|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "urinefaeces|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "urinequalilwater|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "usurpedclothing|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "usurpedclothing|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "usurpedclothing|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "utensilwashing|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "vehicleprayer|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "waterchangedbyimpurity|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "waterconditions|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "waterpuritydoubt|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "watertypes|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "womenjanabah|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wududoubtperformed|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wududoubtvoid|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduface|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wudufeet|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wudufeet|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduimmersive|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduinvalidators|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduobstruction|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduorderunknown|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wudusocks|khamenei|question|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wudusocks|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wudusuccession|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wudusuccession|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduunaware|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduusurpedwater|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduwashingcount|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "wuduwhenwajib|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "zuhrasrtime|khamenei|text|en-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "zuhrasrtime|khamenei|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ },
+ "zuhrasrtime|khamenei|text|ur-fa": {
+  "note": "",
+  "status": "pending"
+ },
+ "zuhrasrtime|sistani|text|en-ur": {
+  "note": "",
+  "status": "pending"
+ }
+}

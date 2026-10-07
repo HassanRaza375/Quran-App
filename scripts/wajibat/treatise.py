@@ -44,12 +44,25 @@ def units():
     }
 
 
+# The Persian original, رساله آموزشی (leader.ir book 137), read against each Urdu unit (decision A2,
+# 2026-10-07): all four agree item by item. Metadata only; the Persian is never displayed.
+FA_BOOK = "رساله آموزشی"
+FA_URL = "https://www.leader.ir/fa/book/137/1?sn={}"
+PERSIAN = {
+    "invalidators": ("درس 16 — مبطلات وضو", 29551),
+    "unaware": ("درس 16 — احکام وضو، 1", 29552),
+    "excessive": ("درس 16 — احکام وضو، 2", 29552),
+    "doubtperformed": ("درس 16 — احکام وضو، 3 (الف)", 29552),
+}
+
+
 def KT(key, note=None):
     """Khamenei's entry from the treatise: Urdu only (P19). `note` is shown under the ruling."""
     ref, text = units()[key]
     cite = {"title": BOOK, "reference": ref, "url": URL.format(LESSON16_SN)}
     r = {"marjaId": "khamenei", "format": "issue", "text": {"en": "", "ur": nfc(text)}, "basis": "fatwa",
-         "source": cite, "urSource": dict(cite), "verification": "A", "urduOnly": True}
+         "source": cite, "urSource": dict(cite), "verification": "A", "urduOnly": True,
+         "persianSource": {"title": FA_BOOK, "reference": PERSIAN[key][0], "url": FA_URL.format(PERSIAN[key][1])}}
     if note:
         r["note"] = note
     return r

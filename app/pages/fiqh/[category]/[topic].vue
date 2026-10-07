@@ -208,12 +208,12 @@ import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
 import ProcedureStepper from "~/components/wajibat/ProcedureStepper.vue";
 import DecisionHelper from "~/components/wajibat/DecisionHelper.vue";
 import LiveToolPanel from "~/components/wajibat/LiveToolPanel.vue";
-import { getDecisionTreeById, getProcedureById } from "~/data/wajibat";
+import { getProcedureById } from "~/data/wajibat";
 import { PANEL_META } from "~/utils/wajibatLabels";
 
 const route = useRoute();
 useUrduFont();
-const { getCategoryById, getTopicById, getGlossaryTermById, getMarjaById, getMarjaRuling, rulingsFor } = useWajibat();
+const { getCategoryById, getTopicById, getGlossaryTermById, getMarjaById, getMarjaRuling, rulingsFor, helpersFor } = useWajibat();
 const { marjaId, lang, loaded, load } = useFiqhPrefs();
 const { load: loadBookmarks, has, toggle } = useBookmarks();
 onMounted(() => {
@@ -248,12 +248,8 @@ const procedures = computed(() =>
     .filter((p) => p && marja.value && p.marjaId === marja.value.id)
 );
 
-// Only the chosen marja's helper — never another marja's (decision P1).
-const helpers = computed(() =>
-  (topic.value?.decisionTreeIds ?? [])
-    .map(getDecisionTreeById)
-    .filter((t) => t && marja.value && t.marjaId === marja.value.id)
-);
+// Only the chosen marja's helper (decision P1), and only when it is fully reviewed or the dev flag is on (A7).
+const helpers = computed(() => (topic.value ? helpersFor(topic.value, marja.value?.id) : []));
 
 const relatedTopics = computed(() => (topic.value?.relatedTopicIds ?? []).map(getTopicById).filter(Boolean));
 const terms = computed(() => (topic.value?.glossaryIds ?? []).map(getGlossaryTermById).filter(Boolean));

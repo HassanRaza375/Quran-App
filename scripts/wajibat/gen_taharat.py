@@ -4,6 +4,7 @@
 # ruling they cite (the dataset validator re-checks this).
 import json, re, sys
 from src import SIS_EN, SIS_UR, KH_EN, KH_UR, condition_en, condition_ur
+from treatise import KT   # Khamenei's Urdu practical treatise (P19)
 
 sys.stdout.reconfigure(encoding="utf-8")
 OUT_RULINGS, OUT_PROCS = sys.argv[1], sys.argv[2]
@@ -120,6 +121,7 @@ def K(n, *, ur=None, hukm=None, basis=None, note=None, cut=None):
     if notes: r["note"] = " ".join(notes)
     return r
 
+TREATISE_NOTE = "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found."
 RULINGS = []
 def R(id_, topic, subject, *entries, sensitive=False, differs=False, panel=None):
     r = {"id": id_, "topicId": topic, "subject": {"en": subject}, "rulings": [e for e in entries if e]}
@@ -231,11 +233,16 @@ R("wudusequence", T, "Sequence (tartīb) of wuḍūʾ", S(cond=(8295, "seventh",
 R("wudusuccession", T, "Close succession (muwālāh)", S(282), K(126))
 R("wuduobstruction", T, "Obstructions such as nail polish", S(cond=(8295, "eleventh", "گیارہویں", "Conditions of wuḍūʾ — 11th condition")), K(113))
 R("wududoubtvoid", T, "Doubt whether wuḍūʾ has become void", S(299), K(122))
-R("wududoubtperformed", T, "Doubt whether wuḍūʾ was performed", S(300))
+R("wududoubtperformed", T, "Doubt whether wuḍūʾ was performed", S(300), KT("doubtperformed", note=TREATISE_NOTE))
+R("wuduunaware", T, "Finding out afterwards that one's wuḍūʾ was invalid", S(1251), KT("unaware", note=TREATISE_NOTE + " Compared with his Q&A, Q 136 (س 137): the same ruling."))
+R("wuduexcessive", T, "A person who doubts excessively about wuḍūʾ", S(298), KT("excessive", note=TREATISE_NOTE))
 R("wududoubtafterprayer", T, "Doubt after prayers about wuḍūʾ", S(303))
+R("wududoubtduring", T, "Doubt during prayers whether wuḍūʾ was performed", S(304))
+R("wuduorderunknown", T, "Knowing both wuḍūʾ and an invalidator, not which came first", S(301))
+R("wuduvoidtime", T, "Finding wuḍūʾ void after prayers, not knowing when", S(305))
 R("wuduwhenwajib", T, "When wuḍūʾ is obligatory", S(315, hukm="wajib"))
 R("touchingquran", T, "Touching the writing of the Qur'an", S(316), K(153))
-R("wuduinvalidators", T, "Things that invalidate wuḍūʾ", S(322))
+R("wuduinvalidators", T, "Things that invalidate wuḍūʾ", S(322), KT("invalidators", note=TREATISE_NOTE + " His English books and his Q&A have no list of invalidators; his Q&A (Q 92, س 93) agrees that madhī, wadhī and wadī do not invalidate wuḍūʾ."))
 R("jabirauncovered", T, "Wounds and fractures (jabīrah): uncovered", S(324), K(134))
 R("jabiracovered", T, "Wounds and fractures (jabīrah): covered", S(327))
 

@@ -50,6 +50,14 @@
           </p>
         </div>
 
+        <!-- Decision P19: the marja's only official text is Urdu. -->
+        <p v-if="urduOnly" class="withheld-notice text-body-2 mb-2" role="note">
+          <v-icon size="16" aria-hidden="true">mdi-translate</v-icon>
+          The official text of this ruling is in Urdu only: there is no official English translation, and the app does
+          not translate rulings itself. To check it, see {{ marja.name.en }}'s own book ({{ entry.source.title }}) or
+          ask his office through
+          <a :href="marja.officialSite" target="_blank" rel="noopener noreferrer">his official website</a>.
+        </p>
         <!-- Decision R11: the official English differs from the Persian original, so only the Urdu is shown. -->
         <p v-if="entry.englishWithheld !== undefined" class="withheld-notice text-body-2 mb-2" role="note">
           <v-icon size="16" aria-hidden="true">mdi-translate</v-icon>
@@ -120,10 +128,12 @@ const recitations = computed(() =>
     .filter((r) => r && r.marjaId === props.marja.id)
 );
 const hasUrdu = computed(() => !!entry.value?.text.ur);
+const urduOnly = computed(() => !!entry.value?.urduOnly);
 const englishWithheld = computed(() => entry.value?.englishWithheld !== undefined);
-// Withheld English (R11): the Urdu is the only text shown, in every language mode.
-const showUrdu = computed(() => hasUrdu.value && (props.lang !== "en" || englishWithheld.value));
-const showEnglish = computed(() => !englishWithheld.value && (props.lang !== "ur" || !hasUrdu.value));
+// Withheld English (R11) or no official English (P19): the Urdu is the only text shown, in every language mode.
+const urduIsOnlyText = computed(() => englishWithheld.value || urduOnly.value);
+const showUrdu = computed(() => hasUrdu.value && (props.lang !== "en" || urduIsOnlyText.value));
+const showEnglish = computed(() => !urduIsOnlyText.value && (props.lang !== "ur" || !hasUrdu.value));
 const urduUnavailable = computed(() => props.lang !== "en" && !hasUrdu.value);
 
 const missingMessage = computed(() =>

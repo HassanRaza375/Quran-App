@@ -27,11 +27,20 @@ for script, *outs in STEPS:
         continue
     run([PY, script, *outs], env=env)
 
-# Snapshot of every quote's source unit, read from the downloaded pages (never from the dataset).
+# Dump the dataset to JSON (the decision helpers and the snapshot read it).
 bundle = os.path.join(TMP, "wdata.mjs")
 npx = "npx.cmd" if os.name == "nt" else "npx"
-run([npx, "esbuild", os.path.join(DATA, "index.ts"), "--bundle", "--format=esm", "--platform=node",
-     "--alias:~=" + os.path.join(REPO, "app"), "--outfile=" + bundle, "--log-level=warning"])
-run(["node", "dump_dataset.mjs", bundle, os.path.join(TMP, "wdata.json")])
+
+def dump():
+    run([npx, "esbuild", os.path.join(DATA, "index.ts"), "--bundle", "--format=esm", "--platform=node",
+         "--alias:~=" + os.path.join(REPO, "app"), "--outfile=" + bundle, "--log-level=warning"])
+    run(["node", "dump_dataset.mjs", bundle, os.path.join(TMP, "wdata.json")])
+
+dump()
+# Phase 4b decision helpers: authored in tree_*.py, quotes cut verbatim from the dump above, then
+# written to decisionTrees.ts; dump again so the snapshot and tests see the trees too.
+run([PY, "gen_helpers.py"], env=env)
+dump()
+# Snapshot of every quote's source unit, read from the downloaded pages (never from the dataset).
 run([PY, "snapshot.py", FIXTURE], env=env)
 print("done — now run `npm test`")

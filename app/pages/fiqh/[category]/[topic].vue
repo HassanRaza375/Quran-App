@@ -71,6 +71,12 @@
       </div>
     </section>
 
+    <!-- 2b. Decision helper (Phase 4b): the chosen marja's own helper only (decision P1) -->
+    <section v-if="marja && helpers.length" class="mb-6" aria-labelledby="sec-helper">
+      <h2 id="sec-helper" class="section-title">Find your answer</h2>
+      <DecisionHelper v-for="h in helpers" :key="h.id" :tree="h" :marja="marja" />
+    </section>
+
     <!-- 3. Rulings -->
     <section class="mb-6" aria-labelledby="sec-rulings">
       <h2 id="sec-rulings" class="section-title">Rulings</h2>
@@ -200,8 +206,9 @@ import ExplanationBlock from "~/components/wajibat/ExplanationBlock.vue";
 import RulingCard from "~/components/wajibat/RulingCard.vue";
 import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
 import ProcedureStepper from "~/components/wajibat/ProcedureStepper.vue";
+import DecisionHelper from "~/components/wajibat/DecisionHelper.vue";
 import LiveToolPanel from "~/components/wajibat/LiveToolPanel.vue";
-import { getProcedureById } from "~/data/wajibat";
+import { getDecisionTreeById, getProcedureById } from "~/data/wajibat";
 import { PANEL_META } from "~/utils/wajibatLabels";
 
 const route = useRoute();
@@ -239,6 +246,13 @@ const procedures = computed(() =>
   (topic.value?.procedureIds ?? [])
     .map(getProcedureById)
     .filter((p) => p && marja.value && p.marjaId === marja.value.id)
+);
+
+// Only the chosen marja's helper — never another marja's (decision P1).
+const helpers = computed(() =>
+  (topic.value?.decisionTreeIds ?? [])
+    .map(getDecisionTreeById)
+    .filter((t) => t && marja.value && t.marjaId === marja.value.id)
 );
 
 const relatedTopics = computed(() => (topic.value?.relatedTopicIds ?? []).map(getTopicById).filter(Boolean));

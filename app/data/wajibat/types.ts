@@ -88,7 +88,8 @@ export interface WajibatTopic {
   rulingIds: string[];
   /** Step-by-step guides; each belongs to one marja' (the UI shows only the chosen marja's). */
   procedureIds?: string[];
-  decisionTreeId?: string;
+  /** Decision helpers shown on this topic page (each belongs to one marja'; the UI shows only the chosen marja's). */
+  decisionTreeIds?: string[];
   relatedTopicIds?: string[];
   glossaryIds?: string[];
   /** Live data from another app module shown on the topic page, never recomputed here (spec §6.3). */
@@ -128,6 +129,11 @@ export interface MarjaRuling {
   verification: VerificationLevel;
   /** Why no official Urdu text is shown for this ruling (listed in the phase summary). */
   urduNote?: string;
+  /** Decision P19: the marja's only official text for this ruling is Urdu (e.g. Khamenei's
+   * *Ahkam-e Amozeshi*, the official Urdu translation of his Persian practical treatise; no
+   * official English exists). `text.en` is then "", the Urdu is shown in every language mode with
+   * a "no official English translation" label, and the app never translates it. */
+  urduOnly?: boolean;
   /** Decision R11 (Khamenei only): his English and Urdu books both translate the same Persian
    * original. Where the official English text differs from the Persian, the English is withheld:
    * `text.en` stays in the data for audit but is never displayed, the official Urdu (which matches
@@ -220,6 +226,55 @@ export interface Procedure {
   marjaId: MarjaId;
   title: LocalizedText;
   steps: ProcedureStep[];
+}
+
+/** An option of a helper question. Questions describe the user's situation only and never state a
+ * ruling (decision P17a); `basedOn` lists the ruling(s) that make this option lead where it does
+ * (P17b), each with the exact phrase of the marja's text that states the condition. */
+export interface DecisionOption {
+  id: string;
+  label: LocalizedText;
+  nextId: string;
+  basedOn: { rulingId: string; phrase: string }[];
+}
+
+/** A quoted part of one of the marja's rulings, shown as the answer. `text` is a verbatim
+ * substring of that marja's entry (English, or Urdu where the entry is Urdu-only). */
+export interface DecisionQuote {
+  rulingId: string;
+  text: string;
+  lang: "en" | "ur";
+}
+
+export interface DecisionNode {
+  id: string;
+  /** Question node: one question per screen; an "I'm not sure" option is always offered and leads to `notSureId`. */
+  question?: Explanation;
+  options?: DecisionOption[];
+  notSureId?: string;
+  /** Outcome nodes. "ruling": the marja's own words; "refer": a pointer to his risala, never a guessed answer. */
+  outcome?:
+    | {
+        kind: "ruling";
+        quotes: DecisionQuote[];
+        /** Phrases that must occur in the quotes: what this outcome says, checked by the tests (P17c). */
+        verdictPhrases: string[];
+        /** Related rulings to open in full (not quotes). */
+        seeRulingIds?: string[];
+      }
+    | { kind: "refer"; reason: Explanation };
+}
+
+export interface DecisionTree {
+  id: string;
+  topicId: string;
+  marjaId: MarjaId;
+  title: LocalizedText;
+  intro: Explanation;
+  rootId: string;
+  /** Where to look in his own book when the helper can't answer (shown on every "refer" outcome). */
+  risala: { book: string; location: string; url: string };
+  nodes: DecisionNode[];
 }
 
 export interface GlossaryTerm {

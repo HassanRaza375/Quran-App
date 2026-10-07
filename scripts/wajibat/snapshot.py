@@ -9,6 +9,7 @@ from src import SIS_EN, SIS_UR, KH_EN, KH_UR, KH_EN_PRAYER, KH_UR_PRAYER, _qa_in
 from kh_rpf import RPF
 from gen_kqa import qa_unit
 from align_rules import flat
+import treatise
 _FA, U_RULES, _FASEC = flat()   # official Urdu Rules (book 197) by ruling number
 nfc = lambda s: unicodedata.normalize("NFC", s) if s else s
 TR = str.maketrans("۰۱۲۳۴۵۶۷۸۹", "0123456789")
@@ -71,6 +72,10 @@ for r in data["rulings"]:
                 txt = (e.get(field) or {}).get(lang)
                 if not txt: continue
                 key = f'{r["id"]}|{e["marjaId"]}|{lang}|{field}'
+                if (e.get("urSource") or {}).get("title") == "احکام آموزشی" and lang == "ur":
+                    # Khamenei's Urdu treatise: an unnumbered passage; the whole lesson is the source unit
+                    lt = treatise.lesson_text()
+                    if nfc(txt) in lt: put(key, lt, False, "treatise-passage"); continue
                 u = numbered_unit(r, e, lang, field)
                 if u is not None and (nfc(txt) == u or (e.get("excerpt") and nfc(txt) in u)):
                     put(key, u, True, "numbered-exact" if nfc(txt) == u else "numbered-excerpt"); continue

@@ -210,8 +210,9 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
         },
       },
     ],
-    rulingIds: ["wuduobligatoryacts", "wuduface", "wududirection", "wuduarms", "wuduwashingcount", "wuduhead", "wuduheadarea", "wudufeet", "wudusocks", "wuduimmersive", "wuduwaterimpure", "wuduusurpedwater", "wuduintention", "wudusequence", "wudusuccession", "wuduobstruction", "wududoubtvoid", "wududoubtperformed", "wududoubtafterprayer", "wuduwhenwajib", "touchingquran", "wuduinvalidators", "jabirauncovered", "jabiracovered"],
+    rulingIds: ["wuduobligatoryacts", "wuduface", "wududirection", "wuduarms", "wuduwashingcount", "wuduhead", "wuduheadarea", "wudufeet", "wudusocks", "wuduimmersive", "wuduwaterimpure", "wuduusurpedwater", "wuduintention", "wudusequence", "wudusuccession", "wuduobstruction", "wududoubtvoid", "wududoubtperformed", "wududoubtafterprayer", "wududoubtduring", "wuduorderunknown", "wuduvoidtime", "wuduunaware", "wuduexcessive", "wuduwhenwajib", "touchingquran", "wuduinvalidators", "jabirauncovered", "jabiracovered"],
     procedureIds: ["wudusistani"],
+    decisionTreeIds: ["sistaniwudu", "khameneiwudu"],
     relatedTopicIds: ["ghusl", "tayammum", "istinja"],
     glossaryIds: ["wudu", "jabirah", "tartib", "muwalah"],
     lastSourceCheck: "2026-09-25",
@@ -451,6 +452,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
       "Doubting whether you prayed, whether you did a part of the prayer, or how many rakʿahs you have prayed: which doubts invalidate the prayer, which are dismissed, and which are valid and how to act on them."
     ),
     rulingIds: ["doubtkinds", "doubtprayeritself", "doubtsinvalidating", "doubtinvalidthink", "doubtrakahhow", "doubtsvalid", "doubtsupposition", "doubtsuppositionchange", "doubtsuppositionunsure", "doubtvaliddontbreak", "doubtvalidrestart", "doubtknowsnextstage", "doubtafterprayerunsure", "doubtsajdahandrakah", "doubtbeforetashahhud", "doubtforgotsajdahstanding", "doubtchanges", "doubtafterprayertwo", "doubtafterprayerkind", "doubtsdismissedlist", "doubtpartgeneral", "khqa514", "doubttakbir", "doubtfatiha", "doubtsurah", "doubtverse", "doubtcorrectness", "doubtruku", "doubtrukn", "doubtrising", "doubtsittingprayer", "doubtrepeated", "doubtremembermissing", "doubtsalam", "doubtaftersalam", "khqa517", "doubtaftersalaminvalid", "doubtaftertime", "doubtzuhrasr", "doubtmaghribisha", "excessivedoubter", "excessiveact", "khqa516", "excessivepart", "excessiveprayer", "excessiveplace", "excessiveunsure", "excessiverukn", "excessivenonrukn", "doubtimam", "doubtmustahabnumber", "doubtmustahabrukn", "doubtmustahabpart", "khqa515", "doubtmustahabsupposition", "doubtmustahabsahw", "doubtmustahabprayed", "doubtotherprayers"],
+    decisionTreeIds: ["sistanidoubts", "khameneidoubts"],
     relatedTopicIds: ["ihtiyatprayer", "sahwforgotten", "mubtilat"],
     glossaryIds: ["shakk", "shakkiyyat", "zann", "kathiralshakk", "rakah", "rukn"],
     lastSourceCheck: "2026-10-07",

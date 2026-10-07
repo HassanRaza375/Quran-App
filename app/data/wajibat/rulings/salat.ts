@@ -6342,8 +6342,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If, after going eight farsakhs, one remains in a place for thirty days without intention to stay, he should perform complete prayers after the thirtieth day until he leaves the place (even if it is half a day).",
-          ur: "اگر آٹھ فرسخ طے کرنے کے بعد کسی جگہ تیس دن تردید کی حالت میں رہے تو اکتیسویں دن کے بعد جب تک اس جگہ سے خارج نہ ہوجائے (اگرچہ آدھا دن ہی کیوں نہ ہو) ضروری ہے کہ نماز کو پوری پڑھے۔"
+          en: "If, after going eight farsakhs, one remains in a place for thirty days without intention to stay, he should perform complete prayers after the thirtieth day until he leaves the place (even if it is half a day)."
         },
         basis: "fatwa",
         source: {
@@ -6351,17 +6350,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "588.",
           url: "https://www.leader.ir/en/book/241?sn=32572"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 590",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31219"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 590",
           url: "https://www.leader.ir/fa/book/180/1?sn=30850"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The official Urdu edition differs from the Persian original in this ruling, so only the English, which matches the Persian, is shown (decision R11)."
       }
     ]
   },

@@ -1,7 +1,7 @@
 // Aggregated Wajibat dataset + lookups. Rulings are split per category
 // (./rulings/*.ts) so later phases can lazy-load them per category (spec
 // Phase 10); for now every category's file is small enough to import eagerly.
-import type { Ruling, WajibatCategory, WajibatTopic, GlossaryTerm, MarjaId, MarjaRuling, Procedure, Recitation } from "./types";
+import type { Ruling, WajibatCategory, WajibatTopic, GlossaryTerm, MarjaId, MarjaRuling, Procedure, Recitation, DecisionTree } from "./types";
 import { WAJIBAT_CATEGORIES } from "./categories";
 import { WAJIBAT_TOPICS } from "./topics";
 import { WAJIBAT_GLOSSARY } from "./glossary";
@@ -13,6 +13,7 @@ import { SALAT_RULINGS } from "./rulings/salat";
 import { SALAT_PROCEDURES } from "./procedures/salat";
 import { SALAT_QA_RULINGS } from "./rulings/salatQa";
 import { DOUBTS_RULINGS } from "./rulings/doubts";
+import { DECISION_TREES } from "./decisionTrees";
 
 export * from "./types";
 export { MARAJI, getMarjaById, isMarjaId } from "./marja";
@@ -28,6 +29,7 @@ export interface WajibatDataset {
   glossary: GlossaryTerm[];
   procedures: Procedure[];
   recitations: Recitation[];
+  decisionTrees: DecisionTree[];
 }
 
 export const WAJIBAT_DATASET: WajibatDataset = {
@@ -37,6 +39,7 @@ export const WAJIBAT_DATASET: WajibatDataset = {
   glossary: WAJIBAT_GLOSSARY,
   procedures: WAJIBAT_PROCEDURES,
   recitations: WAJIBAT_RECITATIONS,
+  decisionTrees: DECISION_TREES,
 };
 
 export const getCategoryById = (id: string) => WAJIBAT_CATEGORIES.find((c) => c.id === id);
@@ -44,6 +47,7 @@ export const getTopicById = (id: string) => WAJIBAT_TOPICS.find((t) => t.id === 
 export const getRulingById = (id: string) => WAJIBAT_RULINGS.find((r) => r.id === id);
 export const getGlossaryTermById = (id: string) => WAJIBAT_GLOSSARY.find((g) => g.id === id);
 export const getProcedureById = (id: string) => WAJIBAT_PROCEDURES.find((p) => p.id === id);
+export const getDecisionTreeById = (id: string) => DECISION_TREES.find((t) => t.id === id);
 export const getRecitationById = (id: string) => WAJIBAT_RECITATIONS.find((r) => r.id === id);
 
 /** The chosen marja's entry for a ruling, or undefined. Deliberately has no

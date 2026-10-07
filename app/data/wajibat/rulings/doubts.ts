@@ -304,7 +304,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 365",
           url: "https://www.leader.ir/fa/book/180/1?sn=30810"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "English item 1 says 'three or four rak'ahs ... consider it the 3rd rak'ah, perform another rak'ah'; the Persian and Urdu say two or three (دو رکعت خوانده یا سه رکعت), which is what the rest of the item requires. The English is internally inconsistent: a mistranslation.",
+        note: "Part of this text says 'caution' (احتیاط) without stating whether it is obligatory or recommended (decision P5)."
       }
     ],
     differsBetweenMaraji: true

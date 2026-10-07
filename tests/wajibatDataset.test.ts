@@ -41,7 +41,8 @@ describe("Wajibat dataset integrity", () => {
     for (const entry of WAJIBAT_RULINGS.flatMap((r) => r.rulings)) {
       if (entry.text.ur) {
         expect(entry.urSource?.reference).toBeTruthy();
-        expect(entry.urSource?.title).not.toBe(entry.source.title);
+        // An Urdu-only ruling (P19) has a single official text, so its one citation serves both.
+        if (!entry.urduOnly) expect(entry.urSource?.title).not.toBe(entry.source.title);
       }
     }
   });
@@ -126,7 +127,7 @@ describe("Wajibat dataset integrity", () => {
     expect(entries.length).toBe(200);
     const withUrdu = entries.filter((e) => e.text.ur);
     const urduWithheld = entries.filter((e) => !e.text.ur);
-    expect(withUrdu.length).toBe(198);
+    expect(withUrdu.length).toBe(197);
     for (const e of entries) {
       expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/241\?sn=\d+$/);
       // Every pair was read against the Persian original, which is never displayed (R11).
@@ -139,13 +140,13 @@ describe("Wajibat dataset integrity", () => {
       expect(e.urSource!.url).toMatch(/^https:\/\/www\.leader\.ir\/ur\/book\/197\/1\?sn=\d+$/);
     }
     // Urdu differs from the Persian here, so only the English (which matches it) is shown.
-    expect(urduWithheld.map((e) => e.source.reference).sort()).toEqual(["265.", "390."]);
+    expect(urduWithheld.map((e) => e.source.reference).sort()).toEqual(["265.", "390.", "588."]);
     for (const e of urduWithheld) expect(e.urduNote).toMatch(/differs from the Persian original/);
   });
 
   it("R11: where the English differs from the Persian original the English is withheld and the official Urdu is what is shown", () => {
     const withheld = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.englishWithheld !== undefined);
-    expect(withheld.map((e) => e.source.reference).sort()).toEqual(["190.", "221.", "394.", "465.", "711.", "89."].sort());
+    expect(withheld.map((e) => e.source.reference).sort()).toEqual(["190.", "221.", "364.", "394.", "465.", "711.", "89."].sort());
     for (const e of withheld) {
       expect(e.marjaId).toBe("khamenei");
       expect(e.text.ur).toBeTruthy();
@@ -395,6 +396,6 @@ describe("validateWajibatDataset catches broken data", () => {
     const step = data.procedures.find((p) => p.marjaId === "khamenei")!.steps[0]!;
     const target = getMarjaRuling(data.rulings.find((x) => x.id === step.rulingId)!, "khamenei")!;
     target.englishWithheld = "x";
-    expect(messages(data).some((m) => m.includes("which is withheld (decision R11)"))).toBe(true);
+    expect(messages(data).some((m) => m.includes("which is withheld or does not exist (decisions R11, P19)"))).toBe(true);
   });
 });

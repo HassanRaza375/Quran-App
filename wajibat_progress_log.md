@@ -894,24 +894,26 @@ Phase 4b, the helpers, after your review of 4a and your answers to P18/P19. P19 
 ### Result (rule R11: the Persian decides)
 | Verdict | Entries | What the user sees |
 |---|---|---|
-| **English, Urdu and Persian agree** | **190** | English; the official Urdu too in Urdu mode |
-| **English differs from the Persian (Urdu matches)** | **6** | English **hidden**; the official Urdu is shown in **every** language mode, with a notice that the English edition differs from the Persian and that the app does not translate |
-| **Urdu differs from the Persian (English matches)** | **2** | the English; in Urdu mode, the English with a notice (no Urdu shown) |
+| **English, Urdu and Persian agree** | **188** | English; the official Urdu too in Urdu mode |
+| **English differs from the Persian (Urdu matches)** | **7** | English **hidden**; the official Urdu is shown in **every** language mode, with a notice that the English edition differs from the Persian and that the app does not translate |
+| **Urdu differs from the Persian (English matches)** | **3** | the English; in Urdu mode, the English with a notice (no Urdu shown) |
 | **Only a footnote differs** | **2** | the English ruling text only (a verbatim excerpt), with a note; the Urdu carries its footnote |
 
-**English hidden (6).** The reasons are in `scripts/wajibat/rules_verdicts.py`:
+**English hidden (7).** The reasons are in `scripts/wajibat/rules_verdicts.py`:
 | English ruling | Where | Why the English differs from the Persian |
 |---|---|---|
 | **465** (P15) | leisure travel | says the prayer is **not** shortened; the Persian (مسأله 466) and the Urdu (مسئلہ 466) say it **is** shortened |
 | 89 | clothes woven with gold | says "woven with gold"; the Persian and Urdu add "or in which gold is used" |
 | 190 | loud/quiet recitation | the English drops "first two rakʿahs" and says only men for ẓuhr/ʿaṣr; the Persian and Urdu say **men and women** |
 | 221 | dhikr of rukūʿ | the English allows any other dhikr; the Persian and Urdu exclude the dhikr specific to sajdah |
+| 364 | the valid doubts (item 1) | the English says "three or four rakʿahs … consider it the 3rd rakʿah, perform another rakʿah"; the Persian and Urdu say **two or three**, which is what the rest of the item requires. The English is internally inconsistent. (Found in Phase 4b, while building the doubts helper.) |
 | 394 | a part of the salām said by mistake | the English says flatly "should perform sajdatā al-sahw"; the Persian and Urdu say **by obligatory caution** |
 | 711 | imam's conditions | the English says "obligatory caution" for bāligh; the Persian and Urdu say only "caution", with the type **unspecified**, so the P5 note applies |
 
-**Urdu hidden (2).**
+**Urdu hidden (3).**
 - **265:** the Urdu gives "gold, silver and glass" as its examples where the Persian says metals and glass.
 - **390:** the Urdu merges two conditions (unwillingly, or thinking the prayer is over) into one.
+- **588:** the Urdu says the full prayer is due "after the 31st day" (اکتیسویں دن کے بعد); the Persian and the English say after the 30th day. (Found in Phase 4b by a numeric comparison.)
 
 **Footnote only (2).**
 - **Ruling 4** (fajr): the English footnote leaves out the practical guidance of about ten minutes after the adhān that the Persian and Urdu give.
@@ -929,14 +931,14 @@ Phase 4b, the helpers, after your review of 4a and your answers to P18/P19. P19 
 ### How reliable is this?
 - The checks were **read by me, side by side, not computed**.
 - I first tried automatic signals (obligatory-caution counts, numbers, negations). They were too noisy to trust on their own.
-- Reading missed one of the six on the first pass (394: an omitted "by obligatory caution"); it showed up when a signal flagged it. So **qualifier-level differences are the place I could have missed something.** I recommend a second reader on the 190 "agree" entries before release. The Phase 10 audit already plans one.
+- Reading missed one entry on the first pass (394: an omitted "by obligatory caution"); it showed up when a signal flagged it. **Two more were missed in two full reading passes and only found later by a numeric ordered-sequence comparison: English 364 ("three or four") and Urdu 588 ("31st day").** Both are now logged above. So **qualifier-level differences are the place I could have missed something.** I recommend a second reader on the 188 "agree" entries before release. The Phase 10 audit already plans one.
 - The Persian footnotes were compared only where the English and Urdu footnotes differ.
 - Sistani is **not** affected: his English 4th edition is newer than his Urdu, so the English wins there (P6, unchanged).
 
 ### Tests and checks
 - **Dataset tests:** 425 pass.
-  - New: every Khamenei Rules entry cites its Urdu and Persian rulings (200 entries, 198 with Urdu).
-  - New: exactly the six English-withheld and two Urdu-withheld entries.
+  - New: every Khamenei Rules entry cites its Urdu and Persian rulings (200 entries, 197 with Urdu).
+  - New: exactly the seven English-withheld and three Urdu-withheld entries (updated in Phase 4b from six and two).
   - New: 465 shows the Urdu مسئلہ 466 and not the English.
   - New: the footnote trims.
   - New: the validator catches a withheld English without its Urdu or Persian check, and a guided-prayer step that quotes withheld English.
@@ -950,3 +952,62 @@ Phase 4b, the helpers, after your review of 4a and your answers to P18/P19. P19 
 
   Regressions: Phase 4a 34/34, Salat 35/35 (its Urdu-note assertion updated), Taharat 37/37, offline/install 22/22.
 - **Install-size (R5):** the install-time download is **5,433.61 KiB** (it was 5,432.58). The ruling chunk is 1,191 KB (240 KB gzip), up 99 KB with the ~198 Urdu Rules texts, and still downloads only when Fiqh is opened.
+
+## Phase 4b — the decision helpers (2026-10-07)
+
+Four helpers, each for **one** marja' and shown only to his followers: prayer doubts and wuḍūʾ, for Sistani and for Khamenei.
+They sit on the *Doubts in prayer* and *Wuḍūʾ* topic pages under "Find your answer". Makarem has none (no sources yet, P1).
+
+### What they do
+- One question per screen. Every question has an **"I'm not sure"** option (R12) that goes to a pointer to the marja's own book (book, issue range, official link, his office), never to a guessed answer. There is a visible **Back** and **Start over**, and an answer trail.
+- Every result shows the marja's name and the **"Not scholar-reviewed"** label, the marja's own words as a verbatim quote with its citation and an official link, the phrase that states the answer highlighted, and a link to open the full ruling on the same page.
+- Questions only describe the user's situation (P17a). Each option stores the ruling and the exact phrase of the marja's text it rests on (P17b).
+- Nothing is a ruling written by the app, and nothing is translated. Question screens are English only.
+
+| Helper | Questions | Ruling answers | Pointer answers | Root-to-answer paths |
+|---|---|---|---|---|
+| Sistani, prayer doubts | 23 | 43 | 2 | 138 |
+| Khamenei, prayer doubts | 20 | 40 | 2 | 81 |
+| Sistani, wuḍūʾ | 7 | 19 | 1 | 26 |
+| Khamenei, wuḍūʾ | 4 | 13 | 1 | 17 |
+
+**Doubts.** Both trees cover: whether I prayed (still in time, time over), an act of the prayer (before or after the next act; rukn or not; verses; correctness), the salām, a doubt after the salām, excessive doubters, imam and follower, recommended prayers, and the number of rakʿahs (invalid cases; leaning versus equal; each pair of numbers with the position that changes the answer: after the second sajdah, standing, and so on). Sistani's tree uses his nine valid cases (Issue 1185) and Khamenei's six (Rules 364, quoted from the official Urdu because the English is withheld, R11). Cases a marja's book does not address go to the pointer, not to a guess.
+- **Where Khamenei has no counterpart, the helper does not offer the branch:** Sistani's Issues 1168, 1169, 1190 and the 4-or-6 and 3-or-5 cases. Those answers go to "another case", which points to his book.
+
+**Wuḍūʾ.**
+- **Sistani** (new rulings quoted: 301, 304, 305, which were added to the dataset for this): whether I performed wuḍūʾ (before, during, after the prayer), whether it became void (including the istibrāʾ exception), not knowing which came first, finding out afterwards, what invalidates it (his seven things, and the fluids: madhī, wadhī, wadī, istibrāʾ doubts, women), and excessive doubters.
+- **Khamenei:** from his official Urdu treatise *Aḥkām-e Āmūzishī*, lesson 16 (P16, P19), and his Q&A: whether I performed wuḍūʾ (the treatise's before, during and after rules), doubt after performing (Q 122), finding out afterwards, excessive doubters, what invalidates it (his seven things from the treatise, plus Q 90, 91, 92 on fluids).
+  - The treatise answers are **Urdu only**. Each result says *"No official English translation exists for this text… English readers can check it in his own risala or ask his office"*, with a link to his official site. The app does not translate it.
+
+### Conflict check (P19): none found
+- **Treatise against his Q&A and the 2023 Rules.** His 2023 *Rules* cover prayer and fasting only, so they have nothing on wuḍūʾ; the comparison was against his Q&A. No conflict with: Q 92 (madhī, wadhī and wadī are pure and do not invalidate wuḍūʾ, against the treatise's list of invalidators), Q 122 (no attention to a doubt after wuḍūʾ), and Q 136 (س 137, finding out afterwards that the wuḍūʾ was invalid). The other two treatise entries (the before/during/after rules for doubting whether one performed wuḍūʾ, and excessive doubters) have no Q&A counterpart to compare with.
+- **Difference between maraji', not a conflict:** Khamenei's seventh invalidator is "everything that causes ghusl, such as janābah, ḥayḍ, touching a corpse" (stated as a ruling). Sistani gives janābah as a ruling and the rest "based on recommended precaution". Each is shown as that marja's own text.
+- I did **not** compare the Urdu treatise with the Persian original *Risāla-yi Āmūzishī* (I stopped that crawl once the Urdu was the only text displayed and no English exists to disagree with). If you want the R11 Persian check applied to these four entries too, I can do it.
+
+### Tests
+- **Unit tests: 467 pass** (425 before; 42 new in `tests/wajibatDecisionTrees.test.ts`). For each of the four trees:
+  - every one of the 262 root-to-answer paths ends at an answer;
+  - "I'm not sure" on every question ends at the pointer;
+  - **every quoted ruling is named by an option on the path it was reached by, and the last choice rests on a ruling the answer quotes** (P17c);
+  - every quote is a verbatim part of that marja's own text, in Urdu where the English is withheld or does not exist;
+  - questions contain no ruling language.
+- Golden scenarios: Sistani's 3-or-4, 2-or-3 (after and before the second sajdah), 4-or-5 standing, leaning, two- and three-rakʿah prayers, time over, act before and after the next act; Khamenei's 3-or-4 (Urdu), 2-or-3 before the second sajdah, within time; wuḍūʾ during the prayer, sleep, Khamenei's Urdu-only text and his Q&A answer; and Makarem has none.
+- **Validator:** new tree rules (unique ids, root, no cycles, no unreachable nodes, ≥2 options, a pointer behind every "I'm not sure", `basedOn` phrases present, quotes verbatim and from the same marja', verdict phrases present).
+- **Generation:** `gen_helpers.py` fails with the full list of authoring errors if any quote or phrase is not found in the marja's own text. `build.py` now dumps the dataset twice (before and after the trees) and the source snapshot reports 0 problems.
+- **Browser, Playwright against the production build:** `verify7.cjs` **87/87** at 1280, 768 and 390 px. It covers:
+  - Sistani's and Khamenei's doubts helpers and both wuḍūʾ helpers;
+  - Start, Back, Start over;
+  - "I'm not sure" leading to the pointer, the Urdu-only label, the right-to-left quote, the highlight, and the label and marja's name on every result;
+  - Makarem seeing no helper;
+  - no horizontal scroll and no console errors.
+- **Regression suites (same production build):** Taharat 37/37 (the wuḍūʾ card count updated from 24 to 29), Salat 35/35, offline/install 22/22, Phase 4a 34/34 (its Rules 364 check now expects the Urdu, since the English is withheld) and P18 30/30.
+
+### Things to know
+- **Sistani Issue 1154 prints "Sūrat al-Ḥamd00" in the source text** (a footnote marker that the official page leaves in). It is quoted exactly, so the "00" shows in one answer; the validator and snapshot require exact quotes. Known issue, not fixed (X1).
+- **Five wuḍūʾ rulings were added** to the dataset and the wuḍūʾ topic, so the helpers have each marja's text to quote: Sistani's Issues 301, 304 and 305, and two rulings that pair Sistani's Issues 1251 and 298 with Khamenei's Urdu treatise (finding out afterwards that wuḍūʾ was invalid; excessive doubters). The topic now shows 29 rulings for Sistani (it showed 24).
+- **"Where English readers can check"** points to the marja's official website and his risala, not to a specific istiftāʾ page: I did not verify an English istiftāʾ URL, so none is shown.
+- **Reliability:** my reading of the 4b trees is checked by the tests and by exact-quote validation, but whether each *option leads to the right answer* is judged by me from his text. I recommend a scholar or second reader goes through the 262 paths, which the test enumerates, before release.
+- **Install-size (R5):** the install-time download is **5,442.9 KiB** by my sum of the built precache entries (the last logged figure was 5,433.61 KiB, so about +9 KiB, which is the helper component; I could not recover the exact method of the earlier figure, so treat the difference as approximate). The ruling chunk grew from 1,191 KB to 1,308 KB (260 KB gzip) with the helpers and three rulings; it still downloads only when Fiqh is opened.
+
+### Not done in this phase
+- Makarem (no sources). Phase 9 (tracker) is deferred. Phases 5–8 and 10 are pending.

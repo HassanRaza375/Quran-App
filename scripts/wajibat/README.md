@@ -17,6 +17,8 @@ Every ruling text in `app/data/wajibat/rulings/*.ts`, `procedures/*.ts` and `glo
 | `app/data/wajibat/rulings/salatQa.ts` | `gen_kqa.py`: Khamenei's Q&A book as supplementary entries (P13/R7) |
 | `app/data/wajibat/rulings/doubts.ts` | `gen_doubts.py`: doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw (Phase 4a) |
 | `app/data/wajibat/glossary.ts` | `gen_glossary.py` |
+| `app/data/wajibat/decisionTrees.ts` | `gen_helpers.py` (Phase 4b): the four decision helpers, authored as data in `tree_sd.py` (Sistani doubts), `tree_kd.py` (Khamenei doubts) and `tree_w.py` (wuḍūʾ, both), using `helpers_dsl.py`. Every quote is cut verbatim from the dataset dump and every option's `basedOn` phrase is checked against the marja's text; the generator reports all authoring errors at once. |
+| `scripts/wajibat/treatise.py` | not a generator: reads Khamenei's Urdu treatise (*Aḥkām-e Āmūzishī*, lesson 16) for the Urdu-only wuḍūʾ entries `gen_taharat.py` uses (P19) |
 | `tests/fixtures/wajibatSourceSnapshot.json` | `snapshot.py`: the source unit of every quote, read from the downloaded pages |
 | `app/data/wajibat/topics.ts`, `categories.ts`, `recitations.ts`, `marja.ts` | **authored** (app-written summaries). Exceptions: `gen_doubts.py` keeps its topics' `rulingIds` in sync, and `place_qa_ids.py` places the Q&A ids. |
 
@@ -33,7 +35,8 @@ git diff app/data/wajibat tests/fixtures  # review every changed quote before co
 ```
 
 `build.py` also needs Node and the repo's `esbuild` (`npm install`), because it dumps the dataset
-for the snapshot.
+for the snapshot. It dumps twice: once before `gen_helpers.py` (the trees quote the dump) and once after (so the
+snapshot and tests see the trees).
 
 To check the supplementary Q&A entries word for word against the cited leader.ir pages:
 `python scripts/wajibat/verify_live_qa.py`.

@@ -40,6 +40,7 @@ const isOfficialUrl = (url: string, marja: Marja): boolean => {
   }
 };
 
+const nfc = (s: string) => s.normalize("NFC");
 const findDuplicates = (ids: string[]) => ids.filter((id, i) => ids.indexOf(id) !== i);
 
 const validateMarjaRuling = (
@@ -55,7 +56,11 @@ const validateMarjaRuling = (
     return;
   }
   if (marja.status === "pending-sources") push(label, `${marja.id} is pending sources and must not have rulings yet`);
-  if (!entry.text?.en?.trim()) push(label, "missing English text");
+  if (entry.urduOnly) {
+    // Decision P19: the only official text is Urdu; the English is empty and never translated by the app.
+    if (entry.text?.en?.trim()) push(label, "urduOnly entry must have an empty English text (no official English exists; the app never translates)");
+    if (!entry.text?.ur?.trim() || !entry.urSource) push(label, "urduOnly entry needs the official Urdu text with its citation");
+  } else if (!entry.text?.en?.trim()) push(label, "missing English text");
   if (entry.hukm !== undefined && !HUKMS.has(entry.hukm)) push(label, `invalid hukm "${entry.hukm}"`);
   if (!BASES.has(entry.basis)) push(label, `invalid basis "${entry.basis}"`);
   if (!LEVELS.has(entry.verification)) push(label, `invalid verification level "${entry.verification}"`);
@@ -238,7 +243,7 @@ export const validateWajibatDataset = (
       if (!ruling) push(label, `rulingId references unknown ruling "${s.rulingId}"`);
       else if (!entry) push(label, `ruling "${s.rulingId}" has no entry for ${p.marjaId}`);
       else {
-        if (entry.englishWithheld !== undefined) push(label, `step quotes the English of "${s.rulingId}", which is withheld (decision R11)`);
+        if (entry.englishWithheld !== undefined || entry.urduOnly) push(label, `step quotes the English of "${s.rulingId}", which is withheld or does not exist (decisions R11, P19)`);
         if (!s.instruction.en?.trim() || !entry.text.en.includes(s.instruction.en)) push(label, "instruction is not a verbatim excerpt of the cited ruling");
         if (s.instruction.ur && !(entry.text.ur ?? "").includes(s.instruction.ur)) push(label, "Urdu instruction is not a verbatim excerpt of the cited ruling");
       }
@@ -249,6 +254,90 @@ export const validateWajibatDataset = (
 
   for (const g of glossary) {
     if (!g.term?.trim() || !g.definition?.en?.trim()) push(g.id, "glossary term needs term and English definition");
+  }
+
+  // Decision helpers (Phase 4b; decisions P17, R11, R12, P19).
+  const trees = data.decisionTrees ?? [];
+  const marjaIds = new Set(maraji.map((m) => m.id));
+  const treeIds = trees.map((t) => t.id);
+  for (const dup of findDuplicates(treeIds)) push(dup, "duplicate decision tree id");
+  for (const id of treeIds) if (!/^[a-z0-9]+$/.test(id)) push(id, "decision tree id must be lowercase ASCII letters/digits only");
+  for (const topic of topics) {
+    for (const tid of topic.decisionTreeIds ?? []) {
+      const tr = trees.find((t) => t.id === tid);
+      if (!tr) push(topic.id, `decisionTreeIds references unknown tree "${tid}"`);
+      else if (tr.topicId !== topic.id) push(tid, `tree belongs to topic "${tr.topicId}", but is listed on "${topic.id}"`);
+    }
+  }
+  for (const tr of trees) {
+    const tp = tr.id;
+    if (!topicIds.has(tr.topicId)) push(tp, `unknown topicId "${tr.topicId}"`);
+    else if (!(topics.find((t) => t.id === tr.topicId)?.decisionTreeIds ?? []).includes(tr.id)) push(tp, "tree is not listed in its topic's decisionTreeIds");
+    if (!marjaIds.has(tr.marjaId)) push(tp, `unknown marjaId "${tr.marjaId}"`);
+    if (!tr.title?.en?.trim() || !tr.intro?.text?.en?.trim()) push(tp, "tree needs a title and an introduction");
+    if (!tr.risala?.book?.trim() || !tr.risala?.location?.trim() || !/^https:\/\//.test(tr.risala?.url ?? "")) push(tp, "tree needs a risala pointer (book, location, https url)");
+    const nodeIds = tr.nodes.map((n) => n.id);
+    for (const dup of findDuplicates(nodeIds)) push(tp, `duplicate node id "${dup}"`);
+    for (const id of nodeIds) if (!/^[a-z0-9]+$/.test(id)) push(`${tp}/${id}`, "node id must be lowercase ASCII letters/digits only");
+    const byId = new Map(tr.nodes.map((n) => [n.id, n]));
+    if (!byId.has(tr.rootId)) push(tp, `rootId "${tr.rootId}" is not a node`);
+    const optionIds: string[] = [];
+    const entryOf = (rid: string) => rulings.find((r) => r.id === rid)?.rulings.find((m) => m.marjaId === tr.marjaId);
+    for (const n of tr.nodes) {
+      const label = `${tp}/${n.id}`;
+      const isQuestion = n.question !== undefined;
+      if (isQuestion === (n.outcome !== undefined)) push(label, "a node is either a question or an outcome");
+      if (isQuestion) {
+        if (!n.question?.text?.en?.trim()) push(label, "question needs English text");
+        if ((n.options?.length ?? 0) < 2) push(label, "a question needs at least two options");
+        // R12: every question offers "I'm not sure", which leads to a refer outcome, never to a guess.
+        const ns = n.notSureId ? byId.get(n.notSureId) : undefined;
+        if (!ns || ns.outcome?.kind !== "refer") push(label, "question needs notSureId pointing at a refer outcome (decision R12)");
+        for (const o of n.options ?? []) {
+          optionIds.push(o.id);
+          if (!o.label?.en?.trim()) push(`${label}/${o.id}`, "option needs a label");
+          if (!byId.has(o.nextId)) push(`${label}/${o.id}`, `nextId "${o.nextId}" is not a node`);
+          if (!o.basedOn?.length) push(`${label}/${o.id}`, "option must list the ruling it is based on (decision P17b)");
+          for (const b of o.basedOn ?? []) {
+            const e = entryOf(b.rulingId);
+            if (!e) push(`${label}/${o.id}`, `basedOn ruling "${b.rulingId}" has no entry for ${tr.marjaId}`);
+            else if (!nfc(e.text.en ?? "").includes(nfc(b.phrase)) && !nfc(e.text.ur ?? "").includes(nfc(b.phrase)))
+              push(`${label}/${o.id}`, `basedOn phrase is not in ${tr.marjaId}'s text of "${b.rulingId}": ${b.phrase.slice(0, 50)}`);
+          }
+        }
+      } else if (n.outcome?.kind === "ruling") {
+        const oc = n.outcome;
+        if (!oc.quotes.length) push(label, "a ruling outcome needs at least one quote");
+        for (const q of oc.quotes) {
+          const e = entryOf(q.rulingId);
+          if (!e) { push(label, `quote cites ruling "${q.rulingId}", which has no entry for ${tr.marjaId} (never another marja')`); continue; }
+          const hidden = e.englishWithheld !== undefined || e.urduOnly;
+          if (hidden && q.lang !== "ur") push(label, `"${q.rulingId}" has no shown English (decisions R11, P19): quote the Urdu`);
+          if (!q.text.trim() || !nfc(e.text[q.lang] ?? "").includes(nfc(q.text))) push(label, `quote is not a verbatim part of ${tr.marjaId}'s ${q.lang} text of "${q.rulingId}"`);
+        }
+        const joined = nfc(oc.quotes.map((q) => q.text).join("\n"));
+        if (!oc.verdictPhrases.length) push(label, "a ruling outcome needs verdictPhrases");
+        for (const v of oc.verdictPhrases) if (!joined.includes(nfc(v))) push(label, `verdict phrase is not in the quotes: ${v.slice(0, 50)}`);
+        for (const sid of oc.seeRulingIds ?? []) if (!entryOf(sid)) push(label, `seeRulingIds "${sid}" has no entry for ${tr.marjaId}`);
+      } else if (n.outcome?.kind === "refer") {
+        if (!n.outcome.reason?.text?.en?.trim()) push(label, "a refer outcome needs a reason");
+      }
+    }
+    for (const dup of findDuplicates(optionIds)) push(tp, `duplicate option id "${dup}"`);
+    // Reachability, and no cycles (every walk must end at an outcome).
+    const seen = new Set<string>();
+    const stack = new Set<string>();
+    const walk = (id: string) => {
+      if (stack.has(id)) { push(tp, `cycle through node "${id}"`); return; }
+      if (seen.has(id)) return;
+      seen.add(id);
+      stack.add(id);
+      const n = byId.get(id);
+      for (const nx of [...(n?.options ?? []).map((o) => o.nextId), ...(n?.notSureId ? [n.notSureId] : [])]) if (byId.has(nx)) walk(nx);
+      stack.delete(id);
+    };
+    if (byId.has(tr.rootId)) walk(tr.rootId);
+    for (const id of nodeIds) if (!seen.has(id)) push(`${tp}/${id}`, "node is not reachable from the root");
   }
 
   return issues;
@@ -263,7 +352,6 @@ export interface SourceUnit {
 /** Keyed `${rulingId}|${marjaId}|${lang}|${"text" | "question"}` and `recitation|${id}`. */
 export type SourceSnapshot = Record<string, SourceUnit>;
 
-const nfc = (s: string) => s.normalize("NFC");
 
 /** Every quoted ruling text must match the official source it was extracted from, as recorded
  * in the source snapshot (tests/fixtures/wajibatSourceSnapshot.json, built by script from the

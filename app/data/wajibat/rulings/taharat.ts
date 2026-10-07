@@ -3390,6 +3390,130 @@ export const TAHARAT_RULINGS: Ruling[] = [
           url: "https://www.sistani.org/urdu/book/61/3630/"
         },
         verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "",
+          ur: "اصل وضو میں شک (یعنی شک کرے کہ وضو کیا ہے یا نہیں)\nنماز سے پہلے ہوتو وضو کرنا چاہئے\nنماز کے دوران ہوتو اس کی نماز باطل ہے اور دوبارہ وضو کرکے دوبارہ نماز پڑھے\nنماز کے بعد (شک کرے کہ وضو کے ساتھ نماز پڑھی ہے یا نہیں) تو جو نماز پڑھی ہے وہ صحیح ہے لیکن بعد والی نمازوں کے لئے وضو کرنا چاہئے"
+        },
+        basis: "fatwa",
+        source: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — وضو میں شک (اصل وضو)",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        urSource: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — وضو میں شک (اصل وضو)",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        verification: "A",
+        urduOnly: true,
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found."
+      }
+    ]
+  },
+  {
+    id: "wuduunaware",
+    topicId: "wudu",
+    subject: {
+      en: "Finding out afterwards that one's wuḍūʾ was invalid"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If during or after prayers one learns that his wuḍūʾ or ghusl was invalid, or that he started performing prayers without wuḍūʾ or ghusl, he must perform the prayer again with wuḍūʾ or ghusl; and if the time for the prayer has expired, he must make it up.",
+          ur: "اگرنمازکے دوران کسی شخص کا دھیان اس طرف جائے کہ اس کا وضو یا غسل باطل تھایا وضویاغسل کئے بغیرنمازپڑھنے لگاہے توضروری ہے دوبارہ وضویاغسل کے ساتھ نماز پڑھے اوراگرنمازکاوقت گزرگیاہو تواس کی قضاکرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 1251",
+          url: "https://www.sistani.org/english/book/48/2263/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (1251)",
+          url: "https://www.sistani.org/urdu/book/61/3638/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "",
+          ur: "1۔ جو شخص اپنا وضو باطل ہونے کے بارے میں جاہل ہو اور وضو کے بعد متوجہ ہوجائے تو واجب ہے کہ وضو سے مشروط اعمال کے لئے دوبارہ وضو کرے اور باطل وضو کے ساتھ نماز پڑھی ہے تو اس کو بھی دوبارہ پڑھنا واجب ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — وضو کے احکام، 1",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        urSource: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — وضو کے احکام، 1",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        verification: "A",
+        urduOnly: true,
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found. Compared with his Q&A, Q 136 (س 137): the same ruling."
+      }
+    ]
+  },
+  {
+    id: "wuduexcessive",
+    topicId: "wudu",
+    subject: {
+      en: "A person who doubts excessively about wuḍūʾ"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "Someone who frequently doubts about the acts of wuḍūʾ and its conditions – such as the water being pure and not being usurped – must not heed his doubts.",
+          ur: "اگرکوئی شخص وضوکے افعال اورشرائط مثلاً پانی کے پاک ہونے یا غصبی نہ ہونے کے بارے میں بہت زیادہ شک کرے تواسے چاہئے کہ اپنے شک کی پروا نہ کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 298",
+          url: "https://www.sistani.org/english/book/48/2157/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (298)",
+          url: "https://www.sistani.org/urdu/book/61/3630/"
+        },
+        verification: "A"
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "",
+          ur: "2۔ جو شخص وضو کے افعال اور شرائط مثلا پانی کا پاک ہونا اور غصبی نہ ہونا میں زیادہ شک کرتا ہے اس کو چاہئے کہ اپنے شک پر اعتناء نہ کرے"
+        },
+        basis: "fatwa",
+        source: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — وضو کے احکام، 2",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        urSource: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — وضو کے احکام، 2",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        verification: "A",
+        urduOnly: true,
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found."
       }
     ]
   },
@@ -3416,6 +3540,94 @@ export const TAHARAT_RULINGS: Ruling[] = [
         urSource: {
           title: "توضیح المسائل",
           reference: "مسئلہ (303)",
+          url: "https://www.sistani.org/urdu/book/61/3630/"
+        },
+        verification: "A"
+      }
+    ]
+  },
+  {
+    id: "wududoubtduring",
+    topicId: "wudu",
+    subject: {
+      en: "Doubt during prayers whether wuḍūʾ was performed"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person doubts during prayers whether or not he had performed wuḍūʾ, then based on obligatory precaution, he must perform wuḍūʾ and perform the prayer again.",
+          ur: "اگرکسی شخص کونماز کے دوران شک ہوکہ آیااس نے وضو کیا تھا یا نہیں تو (احتیاط واجب کی بناء پر) وضو کرے اور دوبارہ نماز پڑھے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 304",
+          url: "https://www.sistani.org/english/book/48/2157/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (304)",
+          url: "https://www.sistani.org/urdu/book/61/3630/"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ]
+  },
+  {
+    id: "wuduorderunknown",
+    topicId: "wudu",
+    subject: {
+      en: "Knowing both wuḍūʾ and an invalidator, not which came first"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If someone knows he has performed wuḍūʾ and also knows that he has done something that invalidates wuḍūʾ – for example, he has urinated – but he does not know which one was first [i.e. he does not know whether he performed wuḍūʾ and then urinated, for example, or he urinated and then performed wuḍūʾ], then in the event that he has this doubt before prayers, he must perform wuḍūʾ for those prayers. If he has this doubt during prayers, he must break his prayer and perform wuḍūʾ. And if he has this doubt after prayers, the prayer he performed is valid but he must perform wuḍūʾ for subsequent prayers.",
+          ur: "جس شخص کومعلوم ہوکہ اس نے وضوکیاہے اوراس سے حدث بھی واقع ہوگیاہے( مثلاً اس نے پیشاب کیاہے) لیکن اسے یہ معلوم نہ ہوکہ کون سی بات پہلے واقع ہوئی ہے اگریہ صورت نماز سے پہلے پیش آئے تواسے چاہئے کہ وضوکرے اوراگرنماز کے دوران پیش آئے تونمازتوڑکروضوکرناضروری ہے اوراگرنماز کے بعدپیش آئے تو جو نمازوہ پڑھ چکاہے وہ صحیح ہے البتہ دوسری نمازوں کے لئے وضوکرناضروری ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 301",
+          url: "https://www.sistani.org/english/book/48/2157/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (301)",
+          url: "https://www.sistani.org/urdu/book/61/3630/"
+        },
+        verification: "A"
+      }
+    ]
+  },
+  {
+    id: "wuduvoidtime",
+    topicId: "wudu",
+    subject: {
+      en: "Finding wuḍūʾ void after prayers, not knowing when"
+    },
+    rulings: [
+      {
+        marjaId: "sistani",
+        format: "issue",
+        text: {
+          en: "If a person realises after prayers that his wuḍūʾ has become void but doubts whether his wuḍūʾ became void before or after prayers, the prayers performed by him are valid.",
+          ur: "اگرکوئی شخص نمازکے بعدیہ سمجھے کہ اس کاوضوباطل ہوگیاتھا، لیکن شک ہو کہ اس کاوضو نماز سے پہلے باطل ہواتھایابعدمیں توجونمازپڑھ چکاہے وہ صحیح ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "Islamic Laws (4th edition)",
+          reference: "Ruling 305",
+          url: "https://www.sistani.org/english/book/48/2157/"
+        },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (305)",
           url: "https://www.sistani.org/urdu/book/61/3630/"
         },
         verification: "A"
@@ -3532,6 +3744,28 @@ export const TAHARAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      },
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "",
+          ur: "1۔ پیشاب نکلنا\n2۔ پاخانہ نکلنا\n3۔ معدہ یا انتڑیوں سے ہوا نکلنا\n4۔ اس طرح نیند آنا کہ آنکھ نہ دیکھے اور کان نہ سنے\n5۔ وہ چیزیں جو عقل کو زائل کرتی ہیں مثلا دیوانگی، مستی اور بے ہوشی\n6۔ عورتوں کا استحاضہ\n7۔ ہر وہ چیز جو غسل کا باعث بنتی ہے مثلا جنابت، حیض اور مس میت"
+        },
+        basis: "fatwa",
+        source: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — مبطلات وضو",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        urSource: {
+          title: "احکام آموزشی",
+          reference: "سبق 16 — مبطلات وضو",
+          url: "https://www.leader.ir/ur/book/201/1?sn=32120"
+        },
+        verification: "A",
+        urduOnly: true,
+        note: "Khamenei's official text for this is in Urdu only: his practical treatise (Risāla-yi Āmūzishī) in its official Urdu translation, with no official English translation (decision P19). Compared with his Q&A and the 2023 Rules: no conflict found. His English books and his Q&A have no list of invalidators; his Q&A (Q 92, س 93) agrees that madhī, wadhī and wadī do not invalidate wuḍūʾ."
       }
     ]
   },

@@ -22,10 +22,13 @@ def run(cmd, **kw):
     subprocess.run(cmd, check=True, cwd=HERE, **kw)
 
 env = dict(os.environ, PYTHONIOENCODING="utf-8")
-for script, *outs in STEPS:
-    if not os.path.exists(os.path.join(HERE, script)):
-        continue
-    run([PY, script, *outs], env=env)
+def generate(holds):
+    """Run every generator. holds="0" writes the full data (every language version, no display
+    holds); holds="1" applies the display holds from the mismatch triage (holds.py, decision B1)."""
+    for script, *outs in STEPS:
+        if not os.path.exists(os.path.join(HERE, script)):
+            continue
+        run([PY, script, *outs], env=dict(env, WAJIBAT_HOLDS=holds))
 
 # Dump the dataset to JSON (the decision helpers and the snapshot read it).
 bundle = os.path.join(TMP, "wdata.mjs")
@@ -36,15 +39,21 @@ def dump():
          "--alias:~=" + os.path.join(REPO, "app"), "--outfile=" + bundle, "--log-level=warning"])
     run(["node", "dump_dataset.mjs", bundle, os.path.join(TMP, "wdata.json")])
 
+# Pass 1: the full data, so the mismatch check sees every language version, and the triage
+# (triage_mismatch.py) turns its High rows into display holds. Pass 2: the data as displayed.
+generate("0")
+dump()
+# Automated mismatch check over every language version (decision A1) and its safe-default triage (B1):
+# refreshes tests/fixtures/wajibatMismatches.json (the test requires it to match the TypeScript twin),
+# adds/updates rows in wajibatMismatchDecisions.json (human decisions are never touched) and rewrites
+# wajibat_mismatch_report.md and wajibat_needs_human.md.
+run([PY, "mismatch.py"], env=env)
+generate("1")
 dump()
 # Phase 4b decision helpers: authored in tree_*.py, quotes cut verbatim from the dump above, then
 # written to decisionTrees.ts; dump again so the snapshot and tests see the trees too.
 run([PY, "gen_helpers.py"], env=env)
 dump()
-# Automated mismatch check over every language version (decision A1): refreshes
-# tests/fixtures/wajibatMismatches.json (the test requires it to match the TypeScript twin),
-# adds new mismatches to wajibatMismatchDecisions.json as "pending" and rewrites wajibat_mismatch_report.md.
-run([PY, "mismatch.py"], env=env)
 # Snapshot of every quote's source unit, read from the downloaded pages (never from the dataset).
 run([PY, "snapshot.py", FIXTURE], env=env)
 print("done — now run `npm test`")

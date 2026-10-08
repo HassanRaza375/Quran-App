@@ -10,6 +10,15 @@ import { validateSourceSnapshot, validateWajibatDataset, type SourceSnapshot } f
 import { searchWajibat } from "../app/utils/wajibatSearch";
 import { computeCoverage } from "../app/utils/wajibatCoverage";
 import sourceSnapshot from "./fixtures/wajibatSourceSnapshot.json";
+import mismatchDecisions from "./fixtures/wajibatMismatchDecisions.json";
+
+// Display holds from the mismatch triage (decision B1): ruling|marja' -> which version is hidden.
+const HOLD_STATUSES = new Set(["hidden-pending-review", "persian-decided-pending-review"]);
+const HOLDS = new Map<string, string>();
+for (const [key, rec] of Object.entries(mismatchDecisions as Record<string, { status: string; hold?: string }>)) {
+  if (HOLD_STATUSES.has(rec.status) && rec.hold) HOLDS.set(key.split("|").slice(0, 2).join("|"), rec.hold);
+}
+const heldWith = (hold: string) => [...HOLDS].filter(([, h]) => h === hold).map(([k]) => k);
 
 const surahs = surahList.map((s: { surahNo: number; totalAyah: number }) => ({ surahNo: s.surahNo, totalAyah: s.totalAyah }));
 const clone = (): WajibatDataset => JSON.parse(JSON.stringify(WAJIBAT_DATASET));
@@ -126,8 +135,12 @@ describe("Wajibat dataset integrity", () => {
     const entries = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei" && m.source.title === "The Rules on Prayer & Fasting 2023");
     expect(entries.length).toBe(200);
     const withUrdu = entries.filter((e) => e.text.ur);
-    const urduWithheld = entries.filter((e) => !e.text.ur);
-    expect(withUrdu.length).toBe(197);
+    const noUrdu = entries.filter((e) => !e.text.ur);
+    // Without Urdu: the three R11 cases, plus Urdu held back by the mismatch triage (B1).
+    const urduWithheld = noUrdu.filter((e) => !/held back/.test(e.urduNote ?? ""));
+    const urduHeld = noUrdu.filter((e) => /held back/.test(e.urduNote ?? ""));
+    expect(withUrdu.length + urduHeld.length).toBe(197);
+    for (const e of urduHeld) expect(e.urSource).toBeUndefined();
     for (const e of entries) {
       expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/241\?sn=\d+$/);
       // Every pair was read against the Persian original, which is never displayed (R11).
@@ -145,7 +158,12 @@ describe("Wajibat dataset integrity", () => {
   });
 
   it("R11: where the English differs from the Persian original the English is withheld and the official Urdu is what is shown", () => {
-    const withheld = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.englishWithheld !== undefined);
+    const all = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.englishWithheld !== undefined);
+    // English held back by the mismatch triage (B1) is a separate, reversible kind of withholding.
+    const held = all.filter((e) => /^Held for review/.test(e.englishWithheld!));
+    const withheld = all.filter((e) => !/^Held for review/.test(e.englishWithheld!));
+    expect(held.length).toBe(heldWith("hide-en").length);
+    for (const e of held) expect(e.text.ur).toBeTruthy();
     expect(withheld.map((e) => e.source.reference).sort()).toEqual(["190.", "221.", "364.", "394.", "465.", "711.", "89."].sort());
     for (const e of withheld) {
       expect(e.marjaId).toBe("khamenei");
@@ -230,7 +248,9 @@ describe("Wajibat dataset integrity", () => {
     const s1220 = getMarjaRuling(getRulingById("doubtsupposition")!, "sistani")!;
     expect(s1220.urduEditionLag).toBe(true);
     expect(s1220.text.ur).toBeUndefined();
-    expect(getMarjaRuling(getRulingById("sahwcases")!, "sistani")!.text.ur).toBeTruthy();
+    // 1222* matches the Urdu; it has Urdu unless the mismatch triage holds it back (B1).
+    const held1222 = HOLDS.get("sahwcases|sistani") === "hide-ur";
+    expect(!!getMarjaRuling(getRulingById("sahwcases")!, "sistani")!.text.ur).toBe(!held1222);
   });
 
   it("P15: Khamenei's Rules 465 (mistranslated in the English edition) shows the Persian-matching official Urdu, not the English", () => {

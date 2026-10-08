@@ -289,6 +289,8 @@ import type { Ruling } from "../types";
 export const FOUNDATIONS_RULINGS: Ruling[] = """
 
 sys.stdout.reconfigure(encoding="utf-8")
+from holds import apply_holds
+apply_holds(RULINGS)
 body = json.dumps(RULINGS, ensure_ascii=False, indent=2)
 body = re.sub(r'^(\s*)"([A-Za-z_][A-Za-z0-9_]*)":', r"\1\2:", body, flags=re.M)
 with open(OUT, "w", encoding="utf-8", newline="\n") as f:

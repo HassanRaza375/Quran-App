@@ -3,7 +3,7 @@
 - Marja': **Ayatullah al-Sayyid Ali al-Husayni al-Sistani**
 - Helper: `sistaniwudu` on topic `wudu`
 - His own book for "I'm not sure": Islamic Laws (4th edition), Issues 298–305 and 322 (doubts about wuḍūʾ; things that invalidate wuḍūʾ) (https://www.sistani.org/english/book/48/2157/)
-- Paths: **26**. Generated 2026-10-07. Status: **Not scholar-reviewed** until every path below is signed off.
+- Paths: **26**. Generated 2026-10-08. Status: **Not scholar-reviewed** until every path below is signed off.
 
 How to review: for each path, read the questions and the answers chosen, then read the quoted outcome and its citation, and decide whether **that answer is right for that situation**. Tick **OK** or **Changes**, write notes. Sign-offs are recorded by path id (`node scripts/wajibat/review.mjs approve sistaniwudu --reviewer "Name" --paths id,id`), and a path edited after sign-off must be reviewed again.
 
@@ -54,10 +54,6 @@ How to review: for each path, read the questions and the answers chosen, then re
 > If a person doubts whether he has performed wuḍūʾ or not, he must [deem that he has not and] **perform wuḍūʾ**.
 >
 > *Citation (wududoubtperformed):* Islamic Laws (4th edition), Ruling 300 · https://www.sistani.org/english/book/48/2157/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرکسی شخص کوشک ہوکہ اس نے وضوکیاہے یانہیں توضروری ہے کہ وضوکرے۔
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -307,10 +303,6 @@ Related rulings linked: istibradoubt
 > If during or after prayers one learns that his wuḍūʾ or ghusl was invalid, or that he started performing prayers without wuḍūʾ or ghusl, **he must perform the prayer again with wuḍūʾ or ghusl**; and if the time for the prayer has expired, he must make it up.
 >
 > *Citation (wuduunaware):* Islamic Laws (4th edition), Ruling 1251 · https://www.sistani.org/english/book/48/2263/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرنمازکے دوران کسی شخص کا دھیان اس طرف جائے کہ اس کا وضو یا غسل باطل تھایا وضویاغسل کئے بغیرنمازپڑھنے لگاہے توضروری ہے دوبارہ وضویاغسل کے ساتھ نماز پڑھے اوراگرنمازکاوقت گزرگیاہو تواس کی قضاکرے۔
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -572,10 +564,6 @@ Related rulings linked: istibradoubt
 > The fluid that sometimes comes out of the penis due to sexual arousal, called ‘madhī’, **is pure**. The fluid that sometimes comes out after the ejaculation of semen, called ‘wadhī’, is also pure. As for fluid that sometimes comes out after urinating and which is called ‘wadī’, it **is pure** if it has not come into contact with urine. Furthermore, in the event that a man performs istibrāʾ after urinating and then fluid comes out and he doubts whether it is urine or one of these three fluids, it **is pure**.
 >
 > *Citation (dischargesmadhi):* Islamic Laws (4th edition), Ruling 70 · https://www.sistani.org/english/book/48/2126/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> وہ رطوبت جوکبھی کبھی شہوت کی بنا پر مرد کے آلۂ تناسل سے خارج ہوتی ہے اسے مذی کہتے ہیں اوروہ پاک ہے۔اس کے علاوہ وہ رطوبت جوکبھی کبھی منی کے بعدخارج ہوتی ہے، جسے وذی کہاجاتاہے یاوہ رطوبت جوبعض اوقات پیشاب کے بعدنکلتی ہے اوراسے ودی کہاجاتاہے پاک ہے، بشرطیکہ اس میں پیشاب کی آمیزش نہ ہو۔مزیدیہ کہ جب کسی شخص نے پیشاب کے بعد استبراء کیاہواوراس کے بعدرطوبت خارج ہوجس کے بارے میں شک ہوکہ وہ پیشاب ہے یامذکورہ بالاتین رطوبتوں میں سے کوئی ایک تووہ بھی پاک ہے۔
 >
 Related rulings linked: wuduinvalidators
 

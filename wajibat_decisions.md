@@ -96,6 +96,15 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | A7 | Feature flag | Helpers are hidden unless **all** their paths are marked reviewed (or a dev flag is on). Topic pages stay visible. |
 | A8 | Git | Commit and push to `wajibat-module`; **do not merge to `main`** until the user has seen the mismatch report. |
 
+## Answered questions (2026-10-08, fourth round: mismatch triage and merge preparation)
+
+| # | Topic | Decision |
+|---|---|---|
+| B1 | Safe-default triage of the mismatch report | **No row is "accepted" by this.** It only decides what is *displayed* until a person reviews it. (a) **Sistani, High rows (English/Urdu):** hide the Urdu, show the English with the Urdu notice. Status `hidden-pending-review`. (b) **Khamenei, High rows:** compare each version's numbers and negations with the Persian; show the version that matches the Persian, hide the other (`persian-decided-pending-review`). Rows where both or neither match the Persian: `needs-human`. (c) **Low rows:** keep the current display, `low-pending-review`. **Report:** rows per status; Urdu texts now hidden per marja' and per topic; the `needs-human` rows as a short list with both texts side by side (English/Urdu rows first; the user reads Urdu). **Restoring a hidden version must be a recorded decision in `wajibatMismatchDecisions.json`, never a hand edit.** |
+| B2 | Playwright | Add as a devDependency (or document in `scripts/wajibat/README.md`) so the review-pack PDFs can be regenerated. |
+| B3 | Production guard | A check (test or build-time failure) that **fails a production build if `NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS` is true.** The setting must never be on in Vercel's production settings. |
+| B4 | Merge to `main` | After B1–B3, **prepare** a merge of `wajibat-module` into `main` (helpers hidden, all checks green, a short release note of what is live). **Show the plan and wait for the user's go-ahead before merging.** Phase 5 (Sawm) starts after the merge. |
+
 ## Phase 0 findings (2026-09-25)
 
 - **Q5 UI kit: Vuetify 3.** `package.json` has `vuetify` + `vite-plugin-vuetify` and no shadcn-vue,

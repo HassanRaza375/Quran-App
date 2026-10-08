@@ -132,6 +132,8 @@ def ts(obj):
     body = json.dumps(obj, ensure_ascii=False, indent=2)
     return re.sub(r'^(\s*)"([A-Za-z_][A-Za-z0-9_]*)":', r"\1\2:", body, flags=re.M)
 
+from holds import apply_holds
+apply_holds(RULINGS)
 if OUT:
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write("""// Salat — Khamenei's Q&A book as supplementary entries (decision P13 / rule R7).

@@ -3,7 +3,7 @@
 - Marja': **Ayatullah al-Sayyid Ali Khamenei**
 - Helper: `khameneiwudu` on topic `wudu`
 - His own book for "I'm not sure": Aḥkām-e Āmūzishī (official Urdu translation of Risāla-yi Āmūzishī), Lesson 16 (wuḍūʾ) and Practical Laws of Islam Q 90–92, 122 (https://www.leader.ir/ur/book/201/1?sn=32120)
-- Paths: **17**. Generated 2026-10-07. Status: **Not scholar-reviewed** until every path below is signed off.
+- Paths: **17**. Generated 2026-10-08. Status: **Not scholar-reviewed** until every path below is signed off.
 
 How to review: for each path, read the questions and the answers chosen, then read the quoted outcome and its citation, and decide whether **that answer is right for that situation**. Tick **OK** or **Changes**, write notes. Sign-offs are recorded by path id (`node scripts/wajibat/review.mjs approve khameneiwudu --reviewer "Name" --paths id,id`), and a path edited after sign-off must be reviewed again.
 

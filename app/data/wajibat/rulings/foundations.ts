@@ -186,8 +186,7 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In cases where a person knows, albeit vaguely, that there are differences in the fatwas [as defined in Ruling 4 below] of mujtahids in matters that are commonly encountered, even though he may not know what these differences are, it is necessary for him to follow the mujtahid who is the most learned (aʿlam), i.e. the one most capable of understanding the law (ḥukm) of Allah the Exalted from among all the mujtahids of his time.",
-          ur: "اگریہ بات(اگرچہ اجمالاً)معلوم ہوکہ درپیش مسائل میں مجتہدین کے فتوے ایک دوسرے سے مختلف ہیں توضروری ہے کہ اس مجتہدکی تقلید کی جائے جو ’’اعلم‘‘ ہویعنی اپنے زمانے کے دوسرے مجتہدوں کے مقابلے میں احکام الٰہی کوسمجھنے میں سب سے بہتر صلاحیت رکھتا ہو۔"
+          en: "In cases where a person knows, albeit vaguely, that there are differences in the fatwas [as defined in Ruling 4 below] of mujtahids in matters that are commonly encountered, even though he may not know what these differences are, it is necessary for him to follow the mujtahid who is the most learned (aʿlam), i.e. the one most capable of understanding the law (ḥukm) of Allah the Exalted from among all the mujtahids of his time."
         },
         hukm: "wajib",
         basis: "fatwa",
@@ -197,12 +196,8 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 2",
           url: "https://www.sistani.org/english/book/48/2117/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (2)",
-          url: "https://www.sistani.org/urdu/book/61/3332/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -242,8 +237,7 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A mujtahid or the most learned can be identified in one of three ways:\n1. a duty-bound person (mukallaf) is certain himself [that someone is a mujtahid or the most learned]. For example, the person is a scholar himself and is able to identify a mujtahid and the most learned;\n2. two learned and dutiful people who are able to distinguish a mujtahid and the most learned confirm that someone is a mujtahid or the most learned, provided that two other learned and dutiful people do not disagree with their statement. In fact, being a mujtahid or the most learned is also established by even one expert (ahl al‑khibrah) whom one trusts;\n3. a mukallaf attains confidence (iṭmiʾnān) that a person is a mujtahid or the most learned by rational means. For example, a group of scholars who are able to distinguish a mujtahid and the most learned and from whose statements one gains confidence confirm that someone is a mujtahid or the most learned.",
-          ur: "مجتہد اوراعلم کی شناخت تین طریقوں سے ممکن ہے:\n۱:) اول یہ کہ انسان کو خود یقین ہو جائے کہ فلاں شخص مجتہدیااعلم ہے مثلاًوہ خود اہل علم ہو اورمجتہد اور اعلم کوپہچاننے کی صلاحیت رکھتا ہو۔\n۲:) دوایسے اشخاص جوخود عالم اور عادل ہوں نیز مجتہد اور اعلم کو پہچاننے کی صلاحیت رکھتے ہوں ، کسی کے مجتہد یااعلم ہونے کی تصدیق کریں ،بشرطیکہ دودوسرے عالم اور عادل ان کی تردید نہ کریں اور بظاہر کسی کامجتہد یااعلم ہوناایک قابل اعتماداہل خبرہ(ماہر صاحب علم) شخص کے قول سے بھی ثابت ہو جاتا ہے۔\n۳:) کوئی شخص عاقلانہ روش کے تحت کسی فردکے اجتہاد یا اعلمیت کے بارےمیں مطمئن ہوجائے مثلاً کچھ اہل علم جومجتہد اور اعلم کوپہچاننے کی صلاحیت رکھتے ہوں ،کسی کے مجتہد یااعلم ہونے کی تصدیق کریں اور ان کی تصدیق سے انسان مطمئن ہو جائے۔"
+          en: "A mujtahid or the most learned can be identified in one of three ways:\n1. a duty-bound person (mukallaf) is certain himself [that someone is a mujtahid or the most learned]. For example, the person is a scholar himself and is able to identify a mujtahid and the most learned;\n2. two learned and dutiful people who are able to distinguish a mujtahid and the most learned confirm that someone is a mujtahid or the most learned, provided that two other learned and dutiful people do not disagree with their statement. In fact, being a mujtahid or the most learned is also established by even one expert (ahl al‑khibrah) whom one trusts;\n3. a mukallaf attains confidence (iṭmiʾnān) that a person is a mujtahid or the most learned by rational means. For example, a group of scholars who are able to distinguish a mujtahid and the most learned and from whose statements one gains confidence confirm that someone is a mujtahid or the most learned."
         },
         basis: "fatwa",
         source: {
@@ -251,12 +245,8 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 3",
           url: "https://www.sistani.org/english/book/48/2117/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (3)",
-          url: "https://www.sistani.org/urdu/book/61/3332/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -271,8 +261,7 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "There are four ways to obtain a fatwa, i.e. an edict issued by a mujtahid:\n1. hearing it from the mujtahid himself;\n2. hearing it from two dutiful people who narrate the mujtahid’s fatwa;\n3. hearing it from someone whose word one trusts;\n4. reading it in the manual of Islamic rulings (risālah) of the mujtahid, on condition that one has confidence in the manual being correct.",
-          ur: "کسی مجتہد کافتویٰ حاصل کرنے کے چار طریقے ہیں : (اول:) خود مجتہد سے (اس کافتویٰ) سننا۔ (دوم:): ایسے دوعادل اشخاص سے سنناجومجتہد کافتویٰ بیان کریں ۔(سوم:) مجتہد کافتویٰ کسی ایسے شخص سے سنناجس کے قول پراطمینان ہو۔ (چہارم:) مجتہد کی کتاب (مثلاً توضیح المسائل) میں پڑھنابشرطیکہ اس کتاب کی صحت کے بارے میں اطمینان ہو۔"
+          en: "There are four ways to obtain a fatwa, i.e. an edict issued by a mujtahid:\n1. hearing it from the mujtahid himself;\n2. hearing it from two dutiful people who narrate the mujtahid’s fatwa;\n3. hearing it from someone whose word one trusts;\n4. reading it in the manual of Islamic rulings (risālah) of the mujtahid, on condition that one has confidence in the manual being correct."
         },
         basis: "fatwa",
         source: {
@@ -280,12 +269,8 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 4",
           url: "https://www.sistani.org/english/book/48/2117/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (4)",
-          url: "https://www.sistani.org/urdu/book/61/3332/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -353,8 +338,7 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If before or after giving a fatwa on a matter, the most learned mujtahid expresses precaution – for example, he says: ‘An impure (najis) utensil that is washed once in kurr water becomes pure (ṭāhir), although based on precaution it should be washed three times’ – his follower does not have to perform this precautionary measure [but is recommended to]. This is called ‘recommended precaution’ (al‑iḥtiyāṭ al‑mustaḥabb).",
-          ur: "اگرمجتہد اعلم کسی مسئلے کے بارے میں فتویٰ دینے کے بعدیااس سے پہلے احتیاط لگائے مثلاً یہ کہے کہ: نجس برتن کرپانی میں ایک مرتبہ دھونے سے پاک ہوجاتا ہے اگرچہ احتیاط اس میں ہے کہ تین مرتبہ دھوئے تومقلدایسی احتیاط کوترک کر سکتاہے۔ اس قسم کی احتیاط کواحتیاط مستحب کہتے ہیں ۔"
+          en: "If before or after giving a fatwa on a matter, the most learned mujtahid expresses precaution – for example, he says: ‘An impure (najis) utensil that is washed once in kurr water becomes pure (ṭāhir), although based on precaution it should be washed three times’ – his follower does not have to perform this precautionary measure [but is recommended to]. This is called ‘recommended precaution’ (al‑iḥtiyāṭ al‑mustaḥabb)."
         },
         basis: "fatwa",
         source: {
@@ -362,12 +346,8 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 7",
           url: "https://www.sistani.org/english/book/48/2117/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (7)",
-          url: "https://www.sistani.org/urdu/book/61/3332/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -466,8 +446,7 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If for some time a mukallaf performs his actions without following a mujtahid, there are two situations to consider: the first is that his actions were in actual fact correctly performed, or they happened to be in accordance with the fatwa of a mujtahid who at present could be his marjaʿ; in this case, his actions are valid (ṣaḥīḥ). The second is that he was inculpably ignorant (al‑jāhil al‑qāṣir), and his defective actions were not elemental actions (arkān) and suchlike; in this case as well, his actions are valid.\nSimilarly, [one’s actions are deemed to be valid] if he was culpably ignorant (al‑jāhil al‑muqaṣṣir) and his defective actions were of the type that if performed unknowingly they are valid, such as reciting [Sūrat al-Ḥamd and the second surah in prayers] aloud (jahr) instead of reciting them in a whisper (ikhfāt), or vice versa.\nSimilarly, if a person does not know how he performed his actions, they are deemed to have been performed correctly, apart from a few cases that are mentioned in Minhāj al-Ṣāliḥīn.",
-          ur: "اگرکوئی مکلف ایک مدت تک کسی کی تقلید کئے بغیر اعمال بجالاتا رہے،اگر اس کا عمل واقعیت کے مطابق تھا یاجس کی ابھی تقلید کررہا ہے اس مجتہد کے فتویٰ کے مطابق تھا تو صحیح ہے۔ اس کے علاوہ دوسری صورت میں اگر جاہل قاصر تھا اور عمل میں نقص، ارکان وغیرہ میں نہیں تھا تو عمل صحیح ہے اسی طرح (عمل صحیح ہے) اگر جاہل مقصر تھا اور عمل کا نقص اس طرح کاتھا کہ جاہل ہونے کی صورت میں عمل صحیح مانا جاتاہے (جیسے اخفات کی جگہ جہر سے پڑھنا یا برعکس) یا اسی طرح (عمل صحیح ہے) اگر گذشتہ ان اعمال کی کیفیت کے بارے میں نہ جانتا ہوجو صحیح ہونے کا حکم رکھتے ہیں سوائے ان مقامات کے جن کاذکر منہاج الصالحین میں ہواہے۔"
+          en: "If for some time a mukallaf performs his actions without following a mujtahid, there are two situations to consider: the first is that his actions were in actual fact correctly performed, or they happened to be in accordance with the fatwa of a mujtahid who at present could be his marjaʿ; in this case, his actions are valid (ṣaḥīḥ). The second is that he was inculpably ignorant (al‑jāhil al‑qāṣir), and his defective actions were not elemental actions (arkān) and suchlike; in this case as well, his actions are valid.\nSimilarly, [one’s actions are deemed to be valid] if he was culpably ignorant (al‑jāhil al‑muqaṣṣir) and his defective actions were of the type that if performed unknowingly they are valid, such as reciting [Sūrat al-Ḥamd and the second surah in prayers] aloud (jahr) instead of reciting them in a whisper (ikhfāt), or vice versa.\nSimilarly, if a person does not know how he performed his actions, they are deemed to have been performed correctly, apart from a few cases that are mentioned in Minhāj al-Ṣāliḥīn."
         },
         basis: "fatwa",
         excerpt: true,
@@ -476,13 +455,9 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 12*",
           url: "https://www.sistani.org/english/book/48/2117/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (12)",
-          url: "https://www.sistani.org/urdu/book/61/3332/"
-        },
         verification: "A",
-        note: "Marked * in the 4th edition (revised to the 36th Persian edition). The Urdu text was compared and matches in substance."
+        note: "Marked * in the 4th edition (revised to the 36th Persian edition). The Urdu text was compared and matches in substance.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -600,8 +575,7 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The sign of having reached the age of legal responsibility (bulūgh) for a girl is the completion of nine lunar years. For boys, it is one of three things:\n1. growth of thick hair below the navel and above the genitalia, [and on the face and above the lips (see next ruling)];\n2. ejaculation of semen;\n3. completion of fifteen lunar years.",
-          ur: "لڑکی میں بالغ ہونے کی علامت یہ ہے کہ وہ نوقمری سال پورے کرلے اور لڑکے کے بالغ ہونے کی علامت تین چیزوں میں سے ایک ہوتی ہے:\n۱:) ناف کے نیچے اورشرم گاہ سے اوپرسخت بالوں کااگنا۔\n۲:)منی کاخارج ہونا۔\n۳:)عمرکے پندرہ قمری سال پورے کرنا۔"
+          en: "The sign of having reached the age of legal responsibility (bulūgh) for a girl is the completion of nine lunar years. For boys, it is one of three things:\n1. growth of thick hair below the navel and above the genitalia, [and on the face and above the lips (see next ruling)];\n2. ejaculation of semen;\n3. completion of fifteen lunar years."
         },
         basis: "fatwa",
         excerpt: true,
@@ -610,13 +584,9 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 2270*",
           url: "https://www.sistani.org/english/book/48/2355/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (2270)",
-          url: "https://www.sistani.org/urdu/book/61/3648/"
-        },
         verification: "A",
-        note: "Marked * in the 4th edition. The Urdu wording of this excerpt was compared and matches; another part of Ruling 2270 (not shown here) differs in the Urdu edition."
+        note: "Marked * in the 4th edition. The Urdu wording of this excerpt was compared and matches; another part of Ruling 2270 (not shown here) differs in the Urdu edition.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -714,8 +684,7 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Bleeding that a girl experiences before the age of nine is not ḥayḍ.",
-          ur: "اگرکسی لڑکی کونوسال کی عمرتک پہنچنے سے پہلے خون آئے تووہ حیض نہیں ہے۔"
+          en: "Bleeding that a girl experiences before the age of nine is not ḥayḍ."
         },
         basis: "fatwa",
         source: {
@@ -723,12 +692,8 @@ export const FOUNDATIONS_RULINGS: Ruling[] = [
           reference: "Ruling 434",
           url: "https://www.sistani.org/english/book/48/2171/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (434)",
-          url: "https://www.sistani.org/urdu/book/61/3632/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",

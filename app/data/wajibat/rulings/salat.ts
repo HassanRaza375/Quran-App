@@ -23,8 +23,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "There are six obligatory prayers in the period of the Imam of the Time’s (ʿA) occultation (ghaybah):\n1. the daily prayers;\n2. the prayer of signs (ṣalāt al‑āyāt);\n3. the funeral prayer (ṣalāt al‑mayyit);\n4. the prayer for the obligatory circumambulation (ṭawāf) of the Kaʿbah;\n5. the lapsed (qaḍāʾ) prayers of one’s father that, based on obligatory precaution (al‑iḥtiyāṭ al‑wājib), are obligatory for the eldest son to perform;\n6. prayers that become obligatory on account of hire (ijārah), vow (nadhr), oath (qasam), and covenant (ʿahd).\nThe Friday prayer (ṣalāt al‑jumuʿah) is regarded as one of the daily prayers.",
-          ur: "چھ نمازیں واجب ہیں :\n۱:) روزانہ کی نمازیں\n۲:) نمازآیات\n۳:) نمازمیت\n۴:) خانۂ کعبہ کے واجب طواف کی نماز\n۵:) باپ کی قضانمازیں جوبڑے بیٹے پر(احتیاط واجب کی بناءپر) واجب ہیں ۔\n۶:) جونمازیں اجارہ،منت،قسم اور عہدسے واجب ہوجاتی ہیں اورنماز جمعہ روزانہ کی نمازوں میں سے ہے۔"
+          en: "There are six obligatory prayers in the period of the Imam of the Time’s (ʿA) occultation (ghaybah):\n1. the daily prayers;\n2. the prayer of signs (ṣalāt al‑āyāt);\n3. the funeral prayer (ṣalāt al‑mayyit);\n4. the prayer for the obligatory circumambulation (ṭawāf) of the Kaʿbah;\n5. the lapsed (qaḍāʾ) prayers of one’s father that, based on obligatory precaution (al‑iḥtiyāṭ al‑wājib), are obligatory for the eldest son to perform;\n6. prayers that become obligatory on account of hire (ijārah), vow (nadhr), oath (qasam), and covenant (ʿahd).\nThe Friday prayer (ṣalāt al‑jumuʿah) is regarded as one of the daily prayers."
         },
         basis: "fatwa",
         source: {
@@ -32,13 +31,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "The Obligatory (Wājib) Prayers — section introduction",
           url: "https://www.sistani.org/english/book/48/2207/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "(تمہید)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -79,8 +74,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "There are five obligatory daily prayers: (1) midday (ẓuhr) and (2) afternoon (ʿaṣr) prayers – each of these consists of four units (rakʿahs); (3) after sunset (maghrib), which is three rakʿahs; (4) evening (ʿishāʾ), which is four rakʿahs; and (5) morning (ṣubḥ), which is two rakʿahs.",
-          ur: "روزانہ کی واجب نمازیں پانچ ہیں :\nظہراورعصر(ہرایک چاررکعت) مغرب (تین رکعت) عشا (چاررکعت) اور فجر (دورکعت)۔"
+          en: "There are five obligatory daily prayers: (1) midday (ẓuhr) and (2) afternoon (ʿaṣr) prayers – each of these consists of four units (rakʿahs); (3) after sunset (maghrib), which is three rakʿahs; (4) evening (ʿishāʾ), which is four rakʿahs; and (5) morning (ṣubḥ), which is two rakʿahs."
         },
         basis: "fatwa",
         source: {
@@ -88,12 +82,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "The Obligatory Daily Prayers — section introduction",
           url: "https://www.sistani.org/english/book/48/2208/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "(تمہید)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -167,8 +157,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The time for ẓuhr and ʿaṣr prayers is from zawāl [i.e. the time after midday when the sun begins to decline] (known as the ‘legal midday’ (al‑ẓuhr al‑sharʿī)) until sunset (ghurūb). However, in the event that one intentionally (ʿamdan) performs the ʿaṣr prayer before the ẓuhr prayer, his prayer is invalid (bāṭil), except if this happens at the end of the prescribed time and there is scope for performing only one prayer, in which case if someone has not performed the ẓuhr prayer by then, his ẓuhr prayer is deemed to have become qaḍāʾ and he must perform the ʿaṣr prayer. If before this time someone mistakenly performs the whole of the ʿaṣr prayer before the ẓuhr prayer, his prayer is valid (ṣaḥīḥ), and he must then perform the ẓuhr prayer. And the recommended precaution (al‑iḥtiyāṭ al‑mustaḥabb) is that he should perform the second set of four rakʿahs with the intention (niyyah) to fulfil whatever his legal obligation happens to be (mā fī al‑dhimmah).",
-          ur: "نماز ظہر اور عصر کا وقت زوال (ظہر شرعی) کے بعد سے غروب آفتاب تک ہے۔ لیکن اگرکوئی شخص جان بوجھ کرعصر کی نماز کوظہر کی نماز سے پہلے پڑھے تواس کی عصر کی نماز باطل ہے سوائے اس کے کہ آخری وقت تک ایک نمازسے زیادہ پڑھنے کا وقت باقی نہ ہوکیوں کہ ایسی صورت میں اگراس نے ظہر کی نماز نہیں پڑھی تواس کی ظہر کی نماز قضا ہوگی اور اسے چاہئے کہ عصر کی نماز پڑھے اوراگرکوئی شخص اس وقت سے پہلے غلط فہمی کی بناپر عصر کی پوری نماز ظہر کی نمازسے پہلے پڑھ لے تواس کی نماز صحیح ہے اور نماز ظہر پڑھنا ضروی ہے اور احتیاط مستحب یہ ہے کہ مافی الذمہ کی نیت سے چاررکعت نماز پڑھے۔"
+          en: "The time for ẓuhr and ʿaṣr prayers is from zawāl [i.e. the time after midday when the sun begins to decline] (known as the ‘legal midday’ (al‑ẓuhr al‑sharʿī)) until sunset (ghurūb). However, in the event that one intentionally (ʿamdan) performs the ʿaṣr prayer before the ẓuhr prayer, his prayer is invalid (bāṭil), except if this happens at the end of the prescribed time and there is scope for performing only one prayer, in which case if someone has not performed the ẓuhr prayer by then, his ẓuhr prayer is deemed to have become qaḍāʾ and he must perform the ʿaṣr prayer. If before this time someone mistakenly performs the whole of the ʿaṣr prayer before the ẓuhr prayer, his prayer is valid (ṣaḥīḥ), and he must then perform the ẓuhr prayer. And the recommended precaution (al‑iḥtiyāṭ al‑mustaḥabb) is that he should perform the second set of four rakʿahs with the intention (niyyah) to fulfil whatever his legal obligation happens to be (mā fī al‑dhimmah)."
         },
         basis: "fatwa",
         source: {
@@ -176,13 +165,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 717",
           url: "https://www.sistani.org/english/book/48/2209/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (717)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -388,8 +373,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "One can start performing prayers when he attains certainty (yaqīn) that the time has set in or when two dutiful men inform him that the time has set in. In fact, one can conclude that the time for the morning prayer has set in if he hears the adhān said by someone whom he knows is extremely careful in observing the time of prayers, or if he is informed by such a person, provided that he derives confidence (iṭmiʾnān) from it.",
-          ur: "انسان نمازمیں اس وقت مشغول ہوسکتاہے جب اسے یقین ہو جائے کہ وقت داخل ہوگیاہے یادوعادل مردوقت داخل ہونے کی خبردیں بلکہ اذان یا ایسے شخص کی خبر سے جس کے بارے میں مکلف جانتا ہو کہ وقت داخل ہونے کی پوری رعایت کرتا ہے چنانچہ اطمینان کا سبب قرار پائے تو اس پر اکتفا کرسکتا ہے۔"
+          en: "One can start performing prayers when he attains certainty (yaqīn) that the time has set in or when two dutiful men inform him that the time has set in. In fact, one can conclude that the time for the morning prayer has set in if he hears the adhān said by someone whom he knows is extremely careful in observing the time of prayers, or if he is informed by such a person, provided that he derives confidence (iṭmiʾnān) from it."
         },
         basis: "fatwa",
         source: {
@@ -397,12 +381,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 729",
           url: "https://www.sistani.org/english/book/48/5418/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (729)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -770,8 +750,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A recommended prayer can be performed while walking and riding, and if a person performs a recommended prayer in either of these ways, it is not necessary that he face qibla.",
-          ur: "مستحب نمازراستہ چلتے ہوئے اورسواری کی حالت میں پڑھی جا سکتی ہے اوراگرانسان ان دونوں حالتوں میں مستحب نمازپڑھے توضروری نہیں کہ اس کامنہ قبلے کی طرف ہو۔"
+          en: "A recommended prayer can be performed while walking and riding, and if a person performs a recommended prayer in either of these ways, it is not necessary that he face qibla."
         },
         basis: "fatwa",
         source: {
@@ -779,12 +758,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 768",
           url: "https://www.sistani.org/english/book/48/2218/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (768)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -824,8 +799,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "While performing prayers, a man must cover his private parts even if no one sees him; and it is better that he cover his body from the navel to the knees.",
-          ur: "ضروری ہے کہ مردخواہ اسے کوئی بھی نہ دیکھ رہاہونماز کی حالت میں اپنی دونوں شرم گاہوں کو ڈھانپے اوربہتریہ ہے کہ ناف سے گھٹنوں تک بدن بھی ڈھانپے۔"
+          en: "While performing prayers, a man must cover his private parts even if no one sees him; and it is better that he cover his body from the navel to the knees."
         },
         basis: "fatwa",
         source: {
@@ -833,19 +807,14 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 775",
           url: "https://www.sistani.org/english/book/48/2219/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (775)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "A man should cover his private parts in the prayer, even if no one sees him, and it is better for him to cover from the navel down to the knees.",
-          ur: "مرد نماز کی حالت میں اپنی دونوں شرمگاہوں کو چھپائے اگرچہ کوئی اس کو نہ دیکھے اور بہترہے کہ ناف سے زانو تک بھی چھپائے۔"
+          en: "A man should cover his private parts in the prayer, even if no one sees him, and it is better for him to cover from the navel down to the knees."
         },
         basis: "fatwa",
         source: {
@@ -853,17 +822,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "50.",
           url: "https://www.leader.ir/en/book/241?sn=32489"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 50",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31075"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 50",
           url: "https://www.leader.ir/fa/book/180/1?sn=30767"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -988,8 +953,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The clothing worn by someone performing prayers must meet six conditions:\n1. it must be pure (ṭāhir);\n2. it must be permissible (mubāḥ) [i.e. it must not be usurped], as an obligatory precaution;\n3. it must not be made from the parts of the carcass [of an animal that has not been slaughtered according to Islamic law];\n4. it must not be from a predatory animal; and based on obligatory precaution, nor must it be from an animal whose meat is unlawful to eat;\n5.–6. if the person performing prayers is male, it must not be made from pure silk nor embroidered with gold.\nThe details of these conditions will be explained in the following rulings.",
-          ur: "نماز پڑھنے والے کے لباس کی چھ شرطیں ہیں :\n(اول:) پاک ہو۔\n(دوم:) مباح ہو احتیاط واجب کی بناپر۔\n(سوم:) مردارکے اجزاسے نہ بناہو۔\n(چہارم:) (درندہ )پھاڑ کھانے والے حیوان کے اجزاء سے نہ ہو بلکہ( احتیاط واجب کی بنا پر)حرام گوشت حیوان کے اجزا سے بھی نہ بناہو۔\n(پنجم اورششم:)اگرنماز پڑھنے والامردہوتواس کالباس خالص ریشم اور سونے کے تاروں کابناہوانہ ہو۔ان شرطوں کی تفصیل آئندہ مسائل میں بتائی جائے گی۔"
+          en: "The clothing worn by someone performing prayers must meet six conditions:\n1. it must be pure (ṭāhir);\n2. it must be permissible (mubāḥ) [i.e. it must not be usurped], as an obligatory precaution;\n3. it must not be made from the parts of the carcass [of an animal that has not been slaughtered according to Islamic law];\n4. it must not be from a predatory animal; and based on obligatory precaution, nor must it be from an animal whose meat is unlawful to eat;\n5.–6. if the person performing prayers is male, it must not be made from pure silk nor embroidered with gold.\nThe details of these conditions will be explained in the following rulings."
         },
         basis: "fatwa",
         source: {
@@ -997,13 +961,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 785",
           url: "https://www.sistani.org/english/book/48/2220/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (785)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1151,8 +1111,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In three cases – the details of which will follow afterwards – if the body or clothing of someone performing prayers is impure, his prayers are valid:\n1. if due to a wound, sore, or boil on his body the clothing or his body has become impure with blood;\n2. if the amount of blood that has made his body or clothing impure is less than the area covered by a dirham. Based on obligatory precaution, a dirham is equal to the size of the upper joint of the thumb;\n3. if he is compelled to perform prayers with an impure body or clothing.\nIn one case, [despite not falling under any of the three cases above,] if the clothing of someone performing prayers is impure, his prayers are valid, and that is when his small items of clothing – such as his socks and cap – are impure.\nThe laws (aḥkām) of these four situations will be explained in detail in the following rulings.",
-          ur: "تین صورتوں میں جن کی تفصیل نیچے بیان کی جارہی ہے اگر نماز پڑھنے والے کابدن یا لباس نجس بھی ہوتواس کی نماز صحیح ہے :\n(اول:)اس کے بدن کے زخم، جراحت یاپھوڑے کی وجہ سے اس کے لباس یا بدن پرخون لگ جائے۔\n(دوم:) اس کے بدن یالباس پردرہم(جس کی مقدارتقریباً انگوٹھے کے اوپر والی گرہ کے برابرہے )کی مقدار سے کم خون لگ جائے (احتیاط واجب کی بنا پر) درہم کی مقدار انگوٹھے کے پور کے برابر ہونا ضروری ہے۔\n(سوم:) وہ نجس بدن یالباس کے ساتھ نماز پڑھنے پرمجبورہو۔\nاس کےعلاوہ ایک اورصورت میں اگر نماز پڑھنے والے کا لباس نجس بھی ہوتواس کی نماز صحیح ہے اور وہ صورت یہ ہے کہ اس کاچھوٹالباس مثلاً موزہ اورٹوپی نجس ہو۔\nان چاروں صورتوں کے مفصل احکام آئندہ مسئلوں میں بیان کئے جائیں گے۔"
+          en: "In three cases – the details of which will follow afterwards – if the body or clothing of someone performing prayers is impure, his prayers are valid:\n1. if due to a wound, sore, or boil on his body the clothing or his body has become impure with blood;\n2. if the amount of blood that has made his body or clothing impure is less than the area covered by a dirham. Based on obligatory precaution, a dirham is equal to the size of the upper joint of the thumb;\n3. if he is compelled to perform prayers with an impure body or clothing.\nIn one case, [despite not falling under any of the three cases above,] if the clothing of someone performing prayers is impure, his prayers are valid, and that is when his small items of clothing – such as his socks and cap – are impure.\nThe laws (aḥkām) of these four situations will be explained in detail in the following rulings."
         },
         basis: "fatwa",
         source: {
@@ -1160,13 +1119,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 834",
           url: "https://www.sistani.org/english/book/48/2221/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (834)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1260,8 +1215,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The second condition: based on obligatory precaution, the clothing with which a person performing prayers covers his private parts must be permissible (mubāḥ) [i.e. it must not be usurped (ghaṣbī)]. If a person knows that wearing usurped clothing is unlawful, or he does not know the ruling due to his negligence, and he intentionally performs prayers with that clothing, then based on obligatory precaution, his prayers are invalid. However, with regard to usurped things that do not on their own cover the private parts, and things that the person performing prayers is not currently wearing – such as a big handkerchief or a loincloth in his pocket, even though they could cover his private parts – and things that he is currently wearing but under which he has some other clothes that are not usurped and which cover his private parts, in all of these cases, the fact that these things are usurped do not affect the validity of the prayer, although as a recommended precaution using such things should be avoided.",
-          ur: "(احتیاط واجب کی بناء پر)نماز پڑھنے والے کا وہ لباس مباح ہونا ضروری ہےجس سے اپنی دونوں شرم گاہ کو چھپاتا ہے پس اگرایک ایسا شخص جوجانتاہوکہ غصبی لباس پہنناحرام ہے یاکوتاہی کی وجہ سے مسئلہ کاحکم نہ جانتاہواور جان بوجھ کراس لباس کے ساتھ نماز پڑھے تواحتیاط کی بناپراس کی نماز باطل ہے۔ لیکن اگر لباس میں وہ چیزیں شامل ہوں جو تنہاشرم گاہ کونہیں ڈھانپ سکتیں اوراسی طرح وہ چیزیں جن سے اگرچہ شرم گاہ کوڈھانپاجاسکتاہولیکن نماز پڑھنے والے نے انہیں حالت نماز میں نہ پہن رکھاہومثلاً بڑارومال یالنگوٹی جوجیب میں رکھی ہواوراسی طرح وہ چیزیں جنہیں نمازی نے پہن رکھاہواگرچہ اس کے پاس ایک دوسرا مباح سترپوش ہو۔ ایسی تمام صورتوں میں ان (اضافی) چیزوں کے غصبی ہونے سے نمازمیں کوئی فرق نہیں پڑتا اگرچہ احتیاط ان کے ترک کردینے میں ہے۔"
+          en: "The second condition: based on obligatory precaution, the clothing with which a person performing prayers covers his private parts must be permissible (mubāḥ) [i.e. it must not be usurped (ghaṣbī)]. If a person knows that wearing usurped clothing is unlawful, or he does not know the ruling due to his negligence, and he intentionally performs prayers with that clothing, then based on obligatory precaution, his prayers are invalid. However, with regard to usurped things that do not on their own cover the private parts, and things that the person performing prayers is not currently wearing – such as a big handkerchief or a loincloth in his pocket, even though they could cover his private parts – and things that he is currently wearing but under which he has some other clothes that are not usurped and which cover his private parts, in all of these cases, the fact that these things are usurped do not affect the validity of the prayer, although as a recommended precaution using such things should be avoided."
         },
         basis: "fatwa",
         source: {
@@ -1269,13 +1223,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 802",
           url: "https://www.sistani.org/english/book/48/2220/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (802)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1315,8 +1265,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The third condition: the clothing that is large enough to cover the private parts on its own of someone performing prayers must not be made from the carcass [of an animal that has not been slaughtered according to Islamic law] and whose blood gushes out when its jugular vein is cut. Based on obligatory precaution, this condition also applies to clothing that cannot cover the private parts on its own. And the recommended precaution is that one should not perform prayers with clothing that has been made from an animal whose blood does not gush out, such as a snake.",
-          ur: "ضروری ہے کہ نمازپڑھنے والے کالباس اورہروہ چیزجوشرم گاہ چھپانے کے لئے تنہاکافی ہےضروری ہے کہ جہندہ خون والے مردہ حیوان (یعنی ایسا حیوان جس کا خون ذبح کرتے وقت اچھل کر نکلے) کے اجزاء سے نہ بنی ہواور یہ شرط( احتیاط واجب کی بنا پر) ایسے کپڑےجو صرف شرم گاہ کو نہ چھپا سکتے ہوں میں بھی ثابت ہے اور احتیاط مستحب یہ ہے کہ اس لباس میں جو ایسے حیوان کے مردار سےبنا ہو جو خون جہندہ نہیں رکھتا (جیسے سانپ) تو اس کے ساتھ نماز نہ پڑھی جائے۔"
+          en: "The third condition: the clothing that is large enough to cover the private parts on its own of someone performing prayers must not be made from the carcass [of an animal that has not been slaughtered according to Islamic law] and whose blood gushes out when its jugular vein is cut. Based on obligatory precaution, this condition also applies to clothing that cannot cover the private parts on its own. And the recommended precaution is that one should not perform prayers with clothing that has been made from an animal whose blood does not gush out, such as a snake."
         },
         basis: "fatwa",
         source: {
@@ -1324,13 +1273,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 808",
           url: "https://www.sistani.org/english/book/48/2220/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (808)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1371,8 +1316,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The fourth condition: the clothing of a person performing prayers – apart from things that do not cover the private parts on their own, such as socks – must not be made from a predatory animal; in fact, based on obligatory precaution, it must not be made from an animal whose blood gushes out when its jugular vein is cut. Similarly, a person’s body and clothing must not be tainted with the urine, faeces, sweat, milk, or hair of such an animal. However, there is no problem if, for example, one strand of hair of such an animal is on his clothing, and the same applies if he carries something on his person from that animal; for example, in a container or box.",
-          ur: "ضروری ہے کہ نماز پڑھنے والے کالباس ان چیزوں کے علاوہ جو صرف شرم گاہ چھپانے کے لئے ناکافی ہے مثلاً جوراب (درندوں کے اجزاسے تیار کیا ہوا نہ ہوبلکہ احتیاط لازم کی بناپر)ہر اس جانور کے اجزاسے بناہوانہ ہوجس کاگوشت کھانا حرام ہے۔اسی طرح ضروری ہے کہ نماز پڑھنے والے کالباس اوربدن حرام گوشت جانور کے پیشاب،پاخانے،پسینے،دودھ اوربال سے آلودہ نہ ہولیکن اگرحرام گوشت جانور کاایک بال اس کے لباس پرلگاہوتوکوئی حرج نہیں ہے۔ اسی طرح نمازگزارکے ہمراہ ان میں سے کوئی چیز اگرڈبیہ (یابوتل وغیرہ) میں بندرکھی ہوتب بھی کوئی حرج نہیں ہے۔"
+          en: "The fourth condition: the clothing of a person performing prayers – apart from things that do not cover the private parts on their own, such as socks – must not be made from a predatory animal; in fact, based on obligatory precaution, it must not be made from an animal whose blood gushes out when its jugular vein is cut. Similarly, a person’s body and clothing must not be tainted with the urine, faeces, sweat, milk, or hair of such an animal. However, there is no problem if, for example, one strand of hair of such an animal is on his clothing, and the same applies if he carries something on his person from that animal; for example, in a container or box."
         },
         basis: "fatwa",
         source: {
@@ -1380,13 +1324,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 811",
           url: "https://www.sistani.org/english/book/48/2220/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (811)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1501,8 +1441,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Wearing a gold chain, gold ring, as well as a gold wrist watch is forbidden for men even for a short period, such as the moment of reading the marriage contract, even for a purpose other than using it as an adornment and hidden from the sight of people. By obligatory caution, prayer performed with them is invalid.",
-          ur: "مرد کے لئے سونے کی زنجیر، انگوٹھی اور ہاتھ کی گھڑی استعمال کرنا حرام ہے اگرچہ زینت کی نیت کے بغیر اور دوسروں کی نظروں سے مخفی اور مختصر مدت مثلا ًنکاح کے وقت ہی کیوں نہ ہو اور احتیاط واجب کی بناپر اس کے ساتھ نماز بھی باطل ہے۔"
+          en: "Wearing a gold chain, gold ring, as well as a gold wrist watch is forbidden for men even for a short period, such as the moment of reading the marriage contract, even for a purpose other than using it as an adornment and hidden from the sight of people. By obligatory caution, prayer performed with them is invalid."
         },
         basis: "fatwa",
         source: {
@@ -1510,18 +1449,14 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "90.",
           url: "https://www.leader.ir/en/book/241?sn=32496"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 91",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31082"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 91",
           url: "https://www.leader.ir/fa/book/180/1?sn=30774"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -1536,8 +1471,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The sixth condition: the clothing of a man performing prayers that can cover the private parts on its own must not be made of pure silk. Furthermore, it is unlawful for a man to wear such clothing at other times.",
-          ur: "نماز پڑھنے والے مردکالباس جو صرف شرم گاہ کو چھپا سکتا ہو ضروری ہے کہ خالص ریشم کا نہ ہو اورنماز کے علاوہ بھی مردوں کے لئے اس کا پہننا حرام ہے۔"
+          en: "The sixth condition: the clothing of a man performing prayers that can cover the private parts on its own must not be made of pure silk. Furthermore, it is unlawful for a man to wear such clothing at other times."
         },
         basis: "fatwa",
         source: {
@@ -1545,12 +1479,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 821",
           url: "https://www.sistani.org/english/book/48/2220/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (821)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1699,8 +1629,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The second condition: the place where obligatory prayers are performed must not move so vigorously that it would prevent the person from performing prayers from standing and performing rukūʿ and sujūd normally; in fact, based on obligatory precaution, the movement must not prevent his body from being steady. If one is compelled to perform prayers in such a place due to shortage of time or any other reason – for example, in certain types of cars or on a ship or train – he must remain still and face qibla as much as possible. If the vehicle moves away from the direction of qibla, he must turn and face the qibla again; and if it is not possible to face qibla precisely, he must try to ensure that the difference is less than ninety degrees; and if this is not possible, he must face qibla at least while performing takbīrat al‑iḥrām; and if even this is not possible, it is not necessary for him to face qibla.",
-          ur: "(دوسری شرط:) ضروری ہے کہ نمازی کی جگہ واجب نمازوں میں ایسی نہ ہوکہ تیزحرکت نمازی کے کھڑے ہونے یارکوع اورسجود کرنے میں اختیاری طور سے مانع ہوبلکہ (احتیاط لازم کی بناپر)ضروری ہے کہ اس کے بدن کوساکن رکھنے میں بھی مانع نہ ہواور اگر وقت کی تنگی یاکسی اوروجہ سے ایسی جگہ مثلاً بس، ٹرک،کشتی یاریل گاڑی میں نماز پڑھنے پر مجبور ہو تو جس قدرممکن ہوبدن کے ٹھہراؤ اورقبلے کی سمت کاخیال رکھے اوراگر سواری قبلے سے کسی دوسری طرف مڑجائے تواپنامنہ قبلے کی جانب موڑدے اور اگر قبلہ کی رعایت پورے طور سے ممکن نہ ہو تو کوشش کرے کہ اس کا (قبلہ)سےانحراف (۹۰) درجہ سے کم ہو اور اگر یہ بھی ممکن نہ ہو تو صرف تکبیرۃ الاحرام کہتے وقت قبلہ کی رعایت کرے اور اگر یہ بھی ممکن نہ ہوتوقبلہ کی رعایت ضروری نہیں ہے۔"
+          en: "The second condition: the place where obligatory prayers are performed must not move so vigorously that it would prevent the person from performing prayers from standing and performing rukūʿ and sujūd normally; in fact, based on obligatory precaution, the movement must not prevent his body from being steady. If one is compelled to perform prayers in such a place due to shortage of time or any other reason – for example, in certain types of cars or on a ship or train – he must remain still and face qibla as much as possible. If the vehicle moves away from the direction of qibla, he must turn and face the qibla again; and if it is not possible to face qibla precisely, he must try to ensure that the difference is less than ninety degrees; and if this is not possible, he must face qibla at least while performing takbīrat al‑iḥrām; and if even this is not possible, it is not necessary for him to face qibla."
         },
         basis: "fatwa",
         source: {
@@ -1708,13 +1637,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 866",
           url: "https://www.sistani.org/english/book/48/2224/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (866)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1808,8 +1733,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In prayers and other situations, it is unlawful to turn one’s back to the grave of the Prophet (Ṣ) or the Infallible Imams (ʿA) if it amounts to disrespecting them. However, if it would not amount to disrespecting them due to there being a large distance or an obstacle like a wall between the person and the grave, then there is no problem. Of course, on its own, the distance between the person and the sacred coffin, or the cloth that is placed over it, or the sacred lattice enclosure of the tomb (ḍarīḥ), would not be sufficient for discounting any disrespectful behaviour towards them; but in either case, if the person establishes an intention to attain proximity to Allah, his prayer will be valid.",
-          ur: "ضروری ہے کہ پیغمبراکرم ﷺ اور ائمہ اہل بیت علیھم السلام کی قبر کے آگے اگران کی بے حرمتی ہوتی ہوتونماز نہ پڑھے۔ اس کے علاوہ کسی اور صورت میں اشکال نہیں ۔لیکن دونوں صورتوں میں نماز صحیح ہے۔"
+          en: "In prayers and other situations, it is unlawful to turn one’s back to the grave of the Prophet (Ṣ) or the Infallible Imams (ʿA) if it amounts to disrespecting them. However, if it would not amount to disrespecting them due to there being a large distance or an obstacle like a wall between the person and the grave, then there is no problem. Of course, on its own, the distance between the person and the sacred coffin, or the cloth that is placed over it, or the sacred lattice enclosure of the tomb (ḍarīḥ), would not be sufficient for discounting any disrespectful behaviour towards them; but in either case, if the person establishes an intention to attain proximity to Allah, his prayer will be valid."
         },
         basis: "fatwa",
         source: {
@@ -1817,12 +1741,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 872",
           url: "https://www.sistani.org/english/book/48/2224/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (872)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1862,8 +1782,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a woman stands level with or in front of a man and they both start prayers together, then based on obligatory precaution, they must perform the prayer again. If one of them starts prayers before the other, then based on obligatory precaution, the prayer of the one who performed takbīrat al‑iḥrām second is invalid, and the prayer of the one who performed takbīrat al‑iḥrām first is valid provided that what is mentioned in the next ruling is observed; if it is not observed, the prayer of the first person who performed takbīrat al‑iḥrām will also be invalid. However, if observing what is mentioned in the next ruling is not possible, then the person should continue with the prayer and it will be valid.",
-          ur: "اگرکوئی عورت مرد کے برابریاآگے کھڑی ہواوردونوں بیک وقت نماز پڑھنے لگیں تو(احتیاط واجب کی بنا پر)ضروری ہے کہ نمازکودوبارہ پڑھیں اوریہی حکم ہے اگرایک، دوسرے سے پہلے نماز کے لئے کھڑاہو۔"
+          en: "If a woman stands level with or in front of a man and they both start prayers together, then based on obligatory precaution, they must perform the prayer again. If one of them starts prayers before the other, then based on obligatory precaution, the prayer of the one who performed takbīrat al‑iḥrām second is invalid, and the prayer of the one who performed takbīrat al‑iḥrām first is valid provided that what is mentioned in the next ruling is observed; if it is not observed, the prayer of the first person who performed takbīrat al‑iḥrām will also be invalid. However, if observing what is mentioned in the next ruling is not possible, then the person should continue with the prayer and it will be valid."
         },
         basis: "fatwa",
         source: {
@@ -1871,13 +1790,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 873",
           url: "https://www.sistani.org/english/book/48/2224/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (873)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1902,7 +1817,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 113",
           url: "https://www.leader.ir/fa/book/180/1?sn=30783"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -2056,8 +1972,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "It is recommended for both men and women to say adhān and then iqāmah before the daily obligatory prayers; however, they have not been sanctioned in Islamic law (they are not mashrūʿ) for other obligatory prayers or for recommended prayers. If Eid al-Fiṭr and Eid al-Aḍḥā prayers are performed in congregation, it is recommended to say ‘aṣṣalāh’ three times before commencing them.",
-          ur: "ہرمرداورعورت کے لئے مستحب ہے کہ شب وروز کی(روزانہ) کی واجب نمازوں سے پہلے اذان اور اقامت کہے اورایساکرنادوسری واجب یامستحب نمازوں کے لئےجائز نہیں لیکن عیدفطراورعیدقربان سے پہلے جب کہ نمازباجماعت پڑھیں تومستحب ہے کہ تین مرتبہ ’’الصلوٰۃ‘‘ کہیں ۔"
+          en: "It is recommended for both men and women to say adhān and then iqāmah before the daily obligatory prayers; however, they have not been sanctioned in Islamic law (they are not mashrūʿ) for other obligatory prayers or for recommended prayers. If Eid al-Fiṭr and Eid al-Aḍḥā prayers are performed in congregation, it is recommended to say ‘aṣṣalāh’ three times before commencing them."
         },
         basis: "fatwa",
         source: {
@@ -2065,12 +1980,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 902",
           url: "https://www.sistani.org/english/book/48/2228/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (902)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2149,7 +2060,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 131",
           url: "https://www.leader.ir/fa/book/180/1?sn=30786"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -2164,8 +2076,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The sentence:\nأَشْهَدُ أَنَّ عَلِيًّا وَلِيُّ اللهِ\nashhadu anna ʿaliyyan waliyyul lāh\n...is not a part of adhān and iqāmah, but it is good to say it after the sentence ‘ashhadu anna muḥammadar rasūlul lāh’ with the intention of attaining proximity to Allah.\nTranslation of the sentences of adhān and iqāmah:",
-          ur: "اَشْھَدُاَنَّ عَلِیًّاوَلِیُّ اللہِ اذان اوراقامت کاجزنہیں ہے، لیکن اگر اَشْھَدُاَنَّ مُحَمَّدًارَّسُوْلُ اللہِ کے بعدقربت کی نیت سے کہاجائے تواچھاہے۔"
+          en: "The sentence:\nأَشْهَدُ أَنَّ عَلِيًّا وَلِيُّ اللهِ\nashhadu anna ʿaliyyan waliyyul lāh\n...is not a part of adhān and iqāmah, but it is good to say it after the sentence ‘ashhadu anna muḥammadar rasūlul lāh’ with the intention of attaining proximity to Allah.\nTranslation of the sentences of adhān and iqāmah:"
         },
         basis: "fatwa",
         source: {
@@ -2173,13 +2084,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 905",
           url: "https://www.sistani.org/english/book/48/2228/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (905)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        arabicInSource: true
+        arabicInSource: true,
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2273,8 +2180,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Adhān and iqāmah must be said after the time for prayer has set in. If a person says them before that time – whether intentionally or forgetfully – they are invalid, except in the case when the time of prayer sets in during a prayer and the prayer is ruled to be valid, as explained in Ruling 731.",
-          ur: "ضروری ہے کہ اذان اوراقامت، نماز کاوقت داخل ہونے کے بعد کہی جائیں اوراگرکوئی شخص عمداً یابھول کروقت سے پہلے کہے توباطل ہے مگرایسی صورت میں جب کہ وسط نماز میں وقت داخل ہوتواس نمازپرصحیح کاحکم لگے گاکہ جس کا مسئلہ ( ۷۳۱) میں ذکرہوچکاہے۔"
+          en: "Adhān and iqāmah must be said after the time for prayer has set in. If a person says them before that time – whether intentionally or forgetfully – they are invalid, except in the case when the time of prayer sets in during a prayer and the prayer is ruled to be valid, as explained in Ruling 731."
         },
         basis: "fatwa",
         source: {
@@ -2282,12 +2188,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 921",
           url: "https://www.sistani.org/english/book/48/2228/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (921)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2331,8 +2233,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "There are eleven obligatory components of the prayer:\n1. intention (niyyah);\n2. standing (qiyām);\n3. takbīrat al‑iḥrām, i.e. saying ‘allāhu akbar’ at the beginning of the prayer;\n4. bowing (rukūʿ);\n5. prostrating (sujūd);\n6. recitation (qirāʾah);\n7. declaring in rukūʿ and sujūd that Allah is free from imperfections (dhikr);\n8. testifying (tashahhud);\n9. salutation (salām);\n10. sequence (tartīb);\n11. close succession (muwālāh).",
-          ur: "واجبات نمازگیارہ ہیں :\n۱) نیت ۲) قیام یعنی کھڑے ہونا\n۳) تکبیرۃ الاحرام یعنی نماز کے شروع میں اللہ اکبر کہنا ۴)رکوع ۵)سجود\n۶) قرأت ۷)ذکر ۸)تشہد ۹) سلام ۱۰) ترتیب\n۱۱) موالات یعنی اجزائے نماز کا پے درپے بجالانا۔"
+          en: "There are eleven obligatory components of the prayer:\n1. intention (niyyah);\n2. standing (qiyām);\n3. takbīrat al‑iḥrām, i.e. saying ‘allāhu akbar’ at the beginning of the prayer;\n4. bowing (rukūʿ);\n5. prostrating (sujūd);\n6. recitation (qirāʾah);\n7. declaring in rukūʿ and sujūd that Allah is free from imperfections (dhikr);\n8. testifying (tashahhud);\n9. salutation (salām);\n10. sequence (tartīb);\n11. close succession (muwālāh)."
         },
         basis: "fatwa",
         source: {
@@ -2340,12 +2241,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Obligatory Components of the Prayer — section introduction",
           url: "https://www.sistani.org/english/book/48/2229/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "(تمہید)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2370,7 +2267,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 139",
           url: "https://www.leader.ir/fa/book/180/1?sn=30787"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -2385,8 +2283,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Some of the obligatory components of the prayer are elemental (rukn), i.e. if one does not perform them – whether intentionally or mistakenly – the prayer is invalid. Some other obligatory components are not elemental, i.e. if they are omitted mistakenly, the prayer is not invalid. There are five rukns of the prayer:\n1. intention;\n2. takbīrat al‑iḥrām while standing;\n3. standing that is joined to rukūʿ, i.e. standing before rukūʿ;\n4. rukūʿ;\n5. two sajdahs in one rakʿah.\nIf a rukn is intentionally performed more than the prescribed number of times, the prayer is invalid. If it is done mistakenly, and if the additional act is a rukūʿ or two sajdahs in one rakʿah, then based on obligatory precaution, the prayer is invalid; otherwise [i.e. if the additional act is not a rukūʿ or two sajdahs in one rakʿah], it is not invalid.",
-          ur: "نماز کے واجبات میں سے بعض اس کے رکن ہیں یعنی انسان انہیں بجانہ لائے توخواہ ایساکرنا(عمداً ہویاغلطی سے) ہونمازباطل ہوجاتی ہے اوربعض واجبات رکن نہیں ہیں یعنی اگروہ غلطی سے چھوٹ جائیں تو نماز باطل نہیں ہوتی۔\nنماز کے ارکان پانچ ہیں :\n۱:) نیت"
+          en: "Some of the obligatory components of the prayer are elemental (rukn), i.e. if one does not perform them – whether intentionally or mistakenly – the prayer is invalid. Some other obligatory components are not elemental, i.e. if they are omitted mistakenly, the prayer is not invalid. There are five rukns of the prayer:\n1. intention;\n2. takbīrat al‑iḥrām while standing;\n3. standing that is joined to rukūʿ, i.e. standing before rukūʿ;\n4. rukūʿ;\n5. two sajdahs in one rakʿah.\nIf a rukn is intentionally performed more than the prescribed number of times, the prayer is invalid. If it is done mistakenly, and if the additional act is a rukūʿ or two sajdahs in one rakʿah, then based on obligatory precaution, the prayer is invalid; otherwise [i.e. if the additional act is not a rukūʿ or two sajdahs in one rakʿah], it is not invalid."
         },
         basis: "fatwa",
         source: {
@@ -2394,13 +2291,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 928",
           url: "https://www.sistani.org/english/book/48/2229/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (928)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2425,7 +2318,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 141",
           url: "https://www.leader.ir/fa/book/180/1?sn=30787"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -2440,8 +2334,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "One must perform prayers with the intention of qurbah, i.e. in humility and obedience to the Lord of the worlds. It is not necessary for him to make the intention pass through his heart or, for example, to say ‘I am performing four rakʿahs of the ẓuhr prayer qurbatan ilal lāh [to attain proximity to Allah]’.",
-          ur: "ضروری ہے کہ انسان نماز قربت کی نیت سے( یعنی تذلل اور خدا کےمقابل سرجھکانے کے لئے ہی) بجالائے اوریہ ضروری نہیں کہ نیت کواپنے دل سے گزارے یامثلاً زبان سے کہے کہ چاررکعت نمازظہرپڑھتاہوں قربۃً الی اللہ۔"
+          en: "One must perform prayers with the intention of qurbah, i.e. in humility and obedience to the Lord of the worlds. It is not necessary for him to make the intention pass through his heart or, for example, to say ‘I am performing four rakʿahs of the ẓuhr prayer qurbatan ilal lāh [to attain proximity to Allah]’."
         },
         basis: "fatwa",
         source: {
@@ -2449,12 +2342,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 929",
           url: "https://www.sistani.org/english/book/48/2230/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (929)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2533,7 +2422,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 144",
           url: "https://www.leader.ir/fa/book/180/1?sn=30788"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -2548,8 +2438,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "One must only perform prayers in humility to the Lord of the worlds; therefore, if one performs prayers ostentatiously – i.e. to show off to people – his prayer is invalid, irrespective of whether he does so solely for people or partly for Allah the Exalted and partly for people.",
-          ur: "ضروری ہے کہ انسان فقط خداوندعالم کی بارگاہ میں تذلل کے لئے نمازپڑھے پس جو شخص ریاکرے (یعنی لوگوں کودکھانے کے لئے نمازپڑھے) تو اس کی نمازباطل ہے خواہ یہ نماز پڑھنافقط لوگوں کویاخدااورلوگوں دونوں کودکھانے کے لئے ہو۔"
+          en: "One must only perform prayers in humility to the Lord of the worlds; therefore, if one performs prayers ostentatiously – i.e. to show off to people – his prayer is invalid, irrespective of whether he does so solely for people or partly for Allah the Exalted and partly for people."
         },
         basis: "fatwa",
         source: {
@@ -2557,12 +2446,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 932",
           url: "https://www.sistani.org/english/book/48/2230/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (932)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2602,8 +2487,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Saying ‘allāhu akbar’ at the beginning of every prayer is obligatory and an elementary part of the prayer. The letters in ‘allāh’ and ‘akbar’, as well as the two words ‘allāh’ and ‘akbar’, must be said in succession. Furthermore, these two words must be pronounced in correct Arabic; if someone pronounces them in incorrect Arabic or, for example, says their translation in English, it is not correct.",
-          ur: "ہرنماز کے شروع میں ’’اللہ اکبر‘‘ کہناواجب اوررکن ہے اورضروری ہے کہ انسان’’ اللہ‘‘ کے حروف اور’’اکبر‘‘کے حروف اوردوکلمے اللہ اوراکبرپے درپے کہے اور یہ بھی ضروری ہے کہ یہ دوکلمے صحیح عربی میں کہے جائیں اوراگرکوئی شخص غلط عربی میں کہے مثلاً ان کاکسی زبان میں ترجمہ کرکے کہے توصحیح نہیں ہے۔"
+          en: "Saying ‘allāhu akbar’ at the beginning of every prayer is obligatory and an elementary part of the prayer. The letters in ‘allāh’ and ‘akbar’, as well as the two words ‘allāh’ and ‘akbar’, must be said in succession. Furthermore, these two words must be pronounced in correct Arabic; if someone pronounces them in incorrect Arabic or, for example, says their translation in English, it is not correct."
         },
         basis: "fatwa",
         source: {
@@ -2611,12 +2495,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 934",
           url: "https://www.sistani.org/english/book/48/2231/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (934)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2695,7 +2575,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 169",
           url: "https://www.leader.ir/fa/book/180/1?sn=30790"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -3003,8 +2884,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person forgets to recite chapter al-Fātiḥah and the other chapter, or one of them, and after he goes to rukū‘, he realizes it, his prayer is correct.",
-          ur: "اگر الحمد اور سورہ دونوں یا کسی ایک کو فراموش کردے اور رکوع میں پہنچنے کے بعد یاد آئے تو نماز صحیح ہے۔"
+          en: "If a person forgets to recite chapter al-Fātiḥah and the other chapter, or one of them, and after he goes to rukū‘, he realizes it, his prayer is correct."
         },
         basis: "fatwa",
         source: {
@@ -3012,17 +2892,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "176.",
           url: "https://www.leader.ir/en/book/241?sn=32513"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 177",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31100"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 177",
           url: "https://www.leader.ir/fa/book/180/1?sn=30791"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -3037,8 +2913,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If during obligatory prayers one intentionally recites one of the four surahs that contain an obligatory sajdah – as mentioned in Ruling 354 – it is obligatory that he perform sajdah after reciting the verse of sajdah. However, based on obligatory precaution, by performing the sajdah his prayer becomes invalid, and it is obligatory that he perform the prayer again unless he performed the sajdah forgetfully. If he does not perform the sajdah, he can continue with the prayer but he will have sinned for not performing the sajdah.",
-          ur: "اگرکوئی شخص جان بوجھ کرفریضہ نماز میں ان چارسوروں میں سے کوئی ایک سورہ پڑھے جن میں آیۂ سجدہ ہواورجن کاذکرمسئلہ (۳۵۴ )میں کیاگیاہے توواجب ہے کہ آیۂ سجدہ پڑھنے کے بعدسجدہ کرے لیکن اگرسجدہ بجالائے تو(احتیاط کی بناپر) اس کی نماز باطل ہے اورضروری ہے کہ اسے دوبارہ پڑھے لیکن یہ کہ بھول کر سجدہ کرے اور اگرسجدہ نہ کرے تواپنی نمازجاری رکھ سکتاہے اگرچہ سجدہ نہ کرکے اس نے گناہ کیاہے۔"
+          en: "If during obligatory prayers one intentionally recites one of the four surahs that contain an obligatory sajdah – as mentioned in Ruling 354 – it is obligatory that he perform sajdah after reciting the verse of sajdah. However, based on obligatory precaution, by performing the sajdah his prayer becomes invalid, and it is obligatory that he perform the prayer again unless he performed the sajdah forgetfully. If he does not perform the sajdah, he can continue with the prayer but he will have sinned for not performing the sajdah."
         },
         basis: "fatwa",
         source: {
@@ -3046,13 +2921,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 969",
           url: "https://www.sistani.org/english/book/48/2233/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (969)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3229,8 +3100,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A woman can recite Sūrat al-Ḥamd and the other surah in ṣubḥ, maghrib, and ʿishāʾ prayers aloud or in a whisper. However, if someone who is not her maḥram is able to hear her voice and the situation is such that it would be unlawful for her to make her voice heard by a non-maḥram man, then she must recite them in a whisper. And if she intentionally recites them aloud, her prayer will be invalid based on obligatory precaution.",
-          ur: "صبح کی نمازاورمغرب وعشاکی نماز میں عورت الحمداورسورہ بلندآواز سے یاآہستہ جیساچاہے پڑھ سکتی ہے۔ لیکن اگرنامحرم اس کی آوازسن رہاہواورایسی جگہ ہو جہاں نامحرم کو آواز سنانا حرام ہوتوضروری ہے آہستہ پڑھے اور اگر جان بوجھ کر بلند آواز سے پڑھے تو (احتیاط واجب کی بناپر) اسکی نمازباطل ہے۔"
+          en: "A woman can recite Sūrat al-Ḥamd and the other surah in ṣubḥ, maghrib, and ʿishāʾ prayers aloud or in a whisper. However, if someone who is not her maḥram is able to hear her voice and the situation is such that it would be unlawful for her to make her voice heard by a non-maḥram man, then she must recite them in a whisper. And if she intentionally recites them aloud, her prayer will be invalid based on obligatory precaution."
         },
         basis: "fatwa",
         source: {
@@ -3238,13 +3108,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 980",
           url: "https://www.sistani.org/english/book/48/2233/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (980)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3324,7 +3190,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 198",
           url: "https://www.leader.ir/fa/book/180/1?sn=30791"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -3395,8 +3262,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In the third and fourth rakʿahs of prayers, a person can either recite one Sūrat al-Ḥamd or say one al‑tasbīḥāt al‑arbaʿah, i.e. he can say once:\nسُبْحَانَ اللهِ وَالْحَمْدُ لِلّٰهِ وَلَا إِلٰهَ إِلَّا اللهُ وَاللهُ أَكْبَرُ\nsubḥānal lāhi wal ḥamdu lillāhi wa lā ilāha illal lāhu wallāhu akbar\nI declare emphatically that Allah is free from imperfections, and all praise is for Allah, and there is no god but Allah, and Allah is greater [than what He is described as].\n...and it is better that he says this three times. A person can recite Sūrat al-Ḥamd in one rakʿah and say al‑tasbīḥāt al‑arbaʿah in the second rakʿah, although it is better that he says al‑tasbīḥāt al‑arbaʿah in both the rakʿahs.",
-          ur: "نماز کی تیسری اورچوتھی رکعت میں فقط ایک دفعہ الحمدیاایک دفعہ تسبیحات اربعہ پڑھی جاسکتی ہے یعنی نماز پڑھنے والاایک دفعہ کہے ’’سُبْحَانَ اللہِ وَالْحَمْدُ للّٰہِ وَلَااِلٰہَ اِلَّااللہُ وَاللہُ اَکْبَرُ‘‘اوربہتریہ ہے کہ تین دفعہ کہے اور وہ ایک رکعت میں الحمد اور دوسری رکعت میں تسبیحات بھی پڑھ سکتاہے اوربہتریہ ہے کہ دونوں رکعتوں میں تسبیحات پڑھے۔"
+          en: "In the third and fourth rakʿahs of prayers, a person can either recite one Sūrat al-Ḥamd or say one al‑tasbīḥāt al‑arbaʿah, i.e. he can say once:\nسُبْحَانَ اللهِ وَالْحَمْدُ لِلّٰهِ وَلَا إِلٰهَ إِلَّا اللهُ وَاللهُ أَكْبَرُ\nsubḥānal lāhi wal ḥamdu lillāhi wa lā ilāha illal lāhu wallāhu akbar\nI declare emphatically that Allah is free from imperfections, and all praise is for Allah, and there is no god but Allah, and Allah is greater [than what He is described as].\n...and it is better that he says this three times. A person can recite Sūrat al-Ḥamd in one rakʿah and say al‑tasbīḥāt al‑arbaʿah in the second rakʿah, although it is better that he says al‑tasbīḥāt al‑arbaʿah in both the rakʿahs."
         },
         basis: "fatwa",
         source: {
@@ -3404,13 +3270,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 991",
           url: "https://www.sistani.org/english/book/48/2233/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (991)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        arabicInSource: true
+        arabicInSource: true,
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3451,8 +3313,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Based on obligatory precaution, it is obligatory for men and women to recite Sūrat al-Ḥamd and to say al‑tasbīḥāt al‑arbaʿah in a whisper in the third and fourth rakʿahs of the prayer.",
-          ur: "(احتیاط کی بناپر) مرداورعورت دونوں پرواجب ہے کہ نماز کی تیسری اور چوتھی رکعت میں الحمد یاتسبیحات اربعہ آہستہ پڑھیں ۔"
+          en: "Based on obligatory precaution, it is obligatory for men and women to recite Sūrat al-Ḥamd and to say al‑tasbīḥāt al‑arbaʿah in a whisper in the third and fourth rakʿahs of the prayer."
         },
         basis: "ihtiyat_wajib",
         source: {
@@ -3460,12 +3321,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 993",
           url: "https://www.sistani.org/english/book/48/2233/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (993)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3491,7 +3348,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30791"
         },
         verification: "A",
-        note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5)."
+        note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5).",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -3880,7 +3738,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 238",
           url: "https://www.leader.ir/fa/book/180/1?sn=30793"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -3950,8 +3809,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times.",
-          ur: "بہتریہ ہے کہ اختیارکی حالت میں سجدے میں تین دفعہ ’’سُبْحَانَ اللہ‘‘یاایک دفعہ ’’سُبْحَانَ رَبِّیَ الْاَعْلیٰ وَبِحَمْدِہٖ‘‘ پڑھے اورضروری ہے کہ یہ جملے مسلسل اور صحیح عربی میں کہے جائیں اورظاہر یہ ہے کہ ہرذکرکاپڑھناکافی ہے لیکن (احتیاط لازم کی بنا پر)ضروری ہے کہ اتنی ہی مقدار میں ہواور مستحب ہے کہ’’سُبْحَانَ رَبِّیَ الْاَعْلیٰ وَبِحَمْدِہٖ‘‘ تین یا پانچ یاسات دفعہ یااس سے بھی زیادہ مرتبہ پڑھے۔"
+          en: "When one has the option to, it is better that in sajdah he says:\n...and these words must be said consecutively and in correct Arabic. Saying any dhikr suffices, but it must be of this length based on obligatory precaution. And it is recommended that one say subḥāna rabbiyal aʿlā wa biḥamdih three, five, seven, or even more times."
         },
         basis: "fatwa",
         source: {
@@ -3959,13 +3817,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1035",
           url: "https://www.sistani.org/english/book/48/2235/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1035)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. The English 4th edition publishes this dhikr only as an image, so it is quoted here exactly as the English book has it (with the image left unretyped); the Arabic itself is shown separately as a sourced recitation (P12), taken from the official Urdu edition, not spliced into this English quote."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. The English 4th edition publishes this dhikr only as an image, so it is quoted here exactly as the English book has it (with the image left unretyped); the Arabic itself is shown separately as a sourced recitation (P12), taken from the official Urdu edition, not spliced into this English quote.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4098,8 +3952,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In sajdah, the difference in height between the place where one places his forehead and where he places his knees and toes must not be more than the height of four closed fingers. In fact, the obligatory precaution is that the difference in height between the place where he places his forehead and the place where he stands must also not be more than four closed fingers.",
-          ur: "نمازپڑھنے والے کی پیشانی رکھنے کی جگہ گھٹنوں اورپاؤں کی انگلیوں کے سروں کی جگہ سے چارملی ہوئی انگلیوں سے زیادہ بلندیاپست نہیں ہونی چاہئے۔ بلکہ احتیاط واجب یہ ہے اس کی پیشانی کی جگہ اس کے کھڑے ہونے کی جگہ سے چارملی ہوئی انگلیوں سے زیادہ نیچی یااونچی بھی نہ ہو۔"
+          en: "In sajdah, the difference in height between the place where one places his forehead and where he places his knees and toes must not be more than the height of four closed fingers. In fact, the obligatory precaution is that the difference in height between the place where he places his forehead and the place where he stands must also not be more than four closed fingers."
         },
         basis: "fatwa",
         source: {
@@ -4107,13 +3960,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1043",
           url: "https://www.sistani.org/english/book/48/2235/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1043)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4693,8 +4542,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In each of the four surahs al-Sajdah, Fuṣṣilat, al-Najm, and al-ʿAlaq, there is a verse of sajdah, which means that if one recites this verse or listens to it, he must immediately perform sajdah after the verse has finished. If he forgets to do this, he must perform sajdah whenever he remembers. Performing sajdah is not obligatory if one hears such a verse involuntarily, although it is better that he does.",
-          ur: "قرآن مجیدکی چارسورتوں یعنی سورۂ ’’ سجدہ‘‘،’’ فصلت‘‘، ’’النجم‘‘، ’’العلق‘‘ میں سے ہرایک میں ایک آیۂ سجدہ ہے جسے اگرانسان پڑھے یاسنے توآیت ختم ہونے کے بعدفوراً سجدہ کرناضروری ہے اوراگرسجدہ کرنابھول جائے توجب بھی اسے یاد آئے سجدہ کرے اور آیۂ سجدہ غیر اختیاری حالت میں سنے توسجدہ واجب نہیں ہے اگرچہ بہتریہ ہے کہ سجدہ کیاجائے۔"
+          en: "In each of the four surahs al-Sajdah, Fuṣṣilat, al-Najm, and al-ʿAlaq, there is a verse of sajdah, which means that if one recites this verse or listens to it, he must immediately perform sajdah after the verse has finished. If he forgets to do this, he must perform sajdah whenever he remembers. Performing sajdah is not obligatory if one hears such a verse involuntarily, although it is better that he does."
         },
         basis: "fatwa",
         source: {
@@ -4702,12 +4550,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1079",
           url: "https://www.sistani.org/english/book/48/2238/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1079)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4747,8 +4591,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In the second rakʿah of all obligatory and recommended prayers, and in the third rakʿah of maghrib prayers, and in the fourth rakʿah of ẓuhr, ʿaṣr and ʿishāʾ prayers, one must sit [in a kneeling type of position] after the second sajdah; and while his body is still, he must say tashahhud, i.e.:\nأَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ، اَللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِ مُحَمَّدٍ\nashhadu an lā ilāha illal lāhu waḥdahu lā sharīka lah, wa ashhadu anna muḥammadan ʿabduhu wa rasūluh, allāhumma ṣalli ʿalā muḥammadin wa āli muḥammad\nI testify that there is no god but Allah, He alone, for whom there is no partner. And I testify that Muḥammad is His servant and His messenger. O Allah! Bless Muḥammad and the progeny of Muḥammad.\nAnd it is sufficient for one to say:\nأَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا صَلَّى اللهُ عَلَيْهِ وَآلِهِ عَبْدُهُ وَرَسُوْلُهُ\nashhadu an lā ilāha illal lāh, wa ashhadu anna muḥammadan ṣallal lāhu ʿalayhi wa ālihi ʿabduhu wa rasūluh\nI testify that there is no god but Allah. And I testify that Muḥammad – may Allah shower His blessings upon him and his progeny – is His servant and His messenger.\nTashahhud is also necessary in the witr prayer.",
-          ur: "تمام واجب اورمستحب نمازوں کی دوسری رکعت میں اورنماز مغرب کی تیسری رکعت میں اورظہر،عصراورعشاکی چوتھی رکعت میں انسان کے لئے ضروری ہے کہ دوسرے سجدے کے بعدبیٹھ جائے اور بدن کے سکون کی حالت میں تشہد پڑھے یعنی کہے:\n’’اَشْھَدُاَنْ لَّااِلٰہَ اِلَّا اللہُ وَحْدَہٗ لَاشَرِیْکَ لَہٗ وَاَشْھَدُاَنَّ مُحَمَّدًاعَبْدُہٗ وَرَسُوْلُہٗ اَللّٰھُمَّ صَلِّ عَلیٰ مُحَمَّدٍ وَّاٰلِ مُحَمَّدٍ‘‘ اوراگرکہے: ’’اَشْھَدُ اَنْ لَّااِلٰہَ اِلَّااللہُ وَاَشْھَدُاَنَّ مُحَمَّدًاصَلَّی اللہُ عَلَیْہِ وَاٰلِہٖ عَبْدُہٗ وَرَسُوْلُہٗ‘‘\nتو کافی ہے اورنماز وترمیں بھی تشہدپڑھناضروری ہے۔"
+          en: "In the second rakʿah of all obligatory and recommended prayers, and in the third rakʿah of maghrib prayers, and in the fourth rakʿah of ẓuhr, ʿaṣr and ʿishāʾ prayers, one must sit [in a kneeling type of position] after the second sajdah; and while his body is still, he must say tashahhud, i.e.:\nأَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ، اَللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِ مُحَمَّدٍ\nashhadu an lā ilāha illal lāhu waḥdahu lā sharīka lah, wa ashhadu anna muḥammadan ʿabduhu wa rasūluh, allāhumma ṣalli ʿalā muḥammadin wa āli muḥammad\nI testify that there is no god but Allah, He alone, for whom there is no partner. And I testify that Muḥammad is His servant and His messenger. O Allah! Bless Muḥammad and the progeny of Muḥammad.\nAnd it is sufficient for one to say:\nأَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا صَلَّى اللهُ عَلَيْهِ وَآلِهِ عَبْدُهُ وَرَسُوْلُهُ\nashhadu an lā ilāha illal lāh, wa ashhadu anna muḥammadan ṣallal lāhu ʿalayhi wa ālihi ʿabduhu wa rasūluh\nI testify that there is no god but Allah. And I testify that Muḥammad – may Allah shower His blessings upon him and his progeny – is His servant and His messenger.\nTashahhud is also necessary in the witr prayer."
         },
         basis: "fatwa",
         source: {
@@ -4756,13 +4599,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1086",
           url: "https://www.sistani.org/english/book/48/2239/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1086)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        arabicInSource: true
+        arabicInSource: true,
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4803,8 +4642,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person forgets tashahhud, stands up, and remembers before going into rukūʿ that he has not performed it, he must sit down, say tashahhud, stand up again, recite everything that must be recited in that rakʿah, and complete the prayer. And based on recommended precaution, after completing the prayer, he should perform sajdatā al‑sahw for standing without due reason. However, if he remembers [that he has not said tashahhud] during or after performing rukūʿ, then he must complete the prayer. And based on recommended precaution, after the salām of the prayer, he should perform qaḍāʾ of the tashahhud, and he must perform sajdatā al‑sahw for the forgotten tashahhud.",
-          ur: "اگرکوئی شخص تشہد پڑھنابھول جائے اور کھڑاہوجائے اوررکوع سے پہلے اسے یادآئے کہ اس نے تشہدنہیں پڑھاتوضروری ہے کہ بیٹھ جائے اورتشہدپڑھے اور پھردوبارہ کھڑاہواوراس رکعت میں جوکچھ پڑھناضروری ہے پڑھے اورنماز ختم کرے اور (احتیاط مستحب کی بناپر)نماز کے بعدبے جاقیام کے لئے دو سجدئہ سہوبجالائے اور اگر اسے رکوع میں یااس کے بعدیاد آئے توضروری ہے کہ نماز تمام کرے اورنماز کے سلام کے بعد(احتیاط مستحب کی بنا)پرتشہدکی قضاکرے اورضروری ہے کہ بھولے ہوئے تشہد کے لئے دوسجدۂ سہوبجالائے۔"
+          en: "If a person forgets tashahhud, stands up, and remembers before going into rukūʿ that he has not performed it, he must sit down, say tashahhud, stand up again, recite everything that must be recited in that rakʿah, and complete the prayer. And based on recommended precaution, after completing the prayer, he should perform sajdatā al‑sahw for standing without due reason. However, if he remembers [that he has not said tashahhud] during or after performing rukūʿ, then he must complete the prayer. And based on recommended precaution, after the salām of the prayer, he should perform qaḍāʾ of the tashahhud, and he must perform sajdatā al‑sahw for the forgotten tashahhud."
         },
         basis: "fatwa",
         source: {
@@ -4812,13 +4650,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1088",
           url: "https://www.sistani.org/english/book/48/2239/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1088)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4954,7 +4788,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 298",
           url: "https://www.leader.ir/fa/book/180/1?sn=30798"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -5008,7 +4843,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 299",
           url: "https://www.leader.ir/fa/book/180/1?sn=30799"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -5132,8 +4968,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In qunūt, it is sufficient to say any dhikr, even if it is one ‘subḥānal lāh’, and it is better if one says the following:\nلَا إِلٰهَ إِلَّا اللهُ الْحَلِيْمُ الْكَرِيْمُ، لَا إِلٰهَ إِلَّا اللهُ الْعَلِيُّ الْعَظِيْمُ، سُبْحَانَ اللهِ رَبِّ السَّمَاوَاتِ السَّبْعِ، وَرَبِّ الْأَرَضِيْنَ السَّبْعِ، وَمَا فِيْهِنَّ وَمَا بَيْنَهُنَّ وَرَبِّ الْعَرْشِ الْعَظِیْم، وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ\nlā ilāha illal lāhul ḥalīmul karīm, lā ilāha illal lāhul ʿaliyyul ʿaẓīm, subḥānal lāhi rabbis samāwātis sabʿ, wa rabbil araḍīnas sabʿ, wa mā fīhinna wa mā baynahunna wa rabbil ʿarshil ʿaẓīm, wal ḥamdu lillāhi rabbil ʿālamīn\nThere is no god but Allah, the Forbearing, the Generous. There is no god but Allah, the High, the Great. I declare emphatically that Allah is free from imperfections, [Allah,] Lord of the seven skies and all that is in them and all that is between them, and Lord of the Great Throne. And all praise is for Allah, Lord of the worlds.",
-          ur: "قنوت میں انسان جوذکربھی پڑھے خواہ ایک دفعہ’’سُبْحَانَ اللہِ‘‘ ہی کہے کافی ہے اوربہترہے کہ یہ دعاپڑھے :\n’’لَااِلٰہَ اِلَّا اللہُ الْحَلِیْمُ الْکَرِیْمُ،لَااِلٰہَ اِلَّااللہُ الْعَلِیُّ الْعَظِیْمُ،سُبْحَانَ اللہِ رَبِّ السَّمٰوَاتِ السَّبْعِ وَرَبِّ الْاَرَضِیْنَ السَّبْعِ وَمَافِیْھِنَّ وَمَابَیْنَھُنَّ وَ رَبِّ الْعَرْشِ الْعَظِیْمِ، وَالْحَمْدُلِلّٰہِ رَبِّ الْعَالَمِیْنَ‘‘۔"
+          en: "In qunūt, it is sufficient to say any dhikr, even if it is one ‘subḥānal lāh’, and it is better if one says the following:\nلَا إِلٰهَ إِلَّا اللهُ الْحَلِيْمُ الْكَرِيْمُ، لَا إِلٰهَ إِلَّا اللهُ الْعَلِيُّ الْعَظِيْمُ، سُبْحَانَ اللهِ رَبِّ السَّمَاوَاتِ السَّبْعِ، وَرَبِّ الْأَرَضِيْنَ السَّبْعِ، وَمَا فِيْهِنَّ وَمَا بَيْنَهُنَّ وَرَبِّ الْعَرْشِ الْعَظِیْم، وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ\nlā ilāha illal lāhul ḥalīmul karīm, lā ilāha illal lāhul ʿaliyyul ʿaẓīm, subḥānal lāhi rabbis samāwātis sabʿ, wa rabbil araḍīnas sabʿ, wa mā fīhinna wa mā baynahunna wa rabbil ʿarshil ʿaẓīm, wal ḥamdu lillāhi rabbil ʿālamīn\nThere is no god but Allah, the Forbearing, the Generous. There is no god but Allah, the High, the Great. I declare emphatically that Allah is free from imperfections, [Allah,] Lord of the seven skies and all that is in them and all that is between them, and Lord of the Great Throne. And all praise is for Allah, Lord of the worlds."
         },
         basis: "fatwa",
         source: {
@@ -5141,13 +4976,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1105",
           url: "https://www.sistani.org/english/book/48/2243/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1105)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        arabicInSource: true
+        arabicInSource: true,
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5188,8 +5019,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "After prayers, it is recommended that one engage himself in taʿqībāt, i.e. saying dhikr, reciting duʿāʾs, and reciting the Qur’an. It is better that he recite taʿqībāt facing qibla before he moves from his place and before his wuḍūʾ, ghusl, or tayammum becomes invalid. It is not necessary that the taʿqībāt be in Arabic, but it is better to recite what has been instructed in the books of duʿāʾs. One of the taʿqībāt that has been highly recommended is the tasbīḥ of Her Eminence [Fāṭimah] al-Zahrāʾ (ʿA), which must be said in this order: thirty-four times ‘allāhu akbar’, then thirty-three times ‘alḥamdu lillāh’, and then thirty-three times ‘subḥānal lāh’. It is possible to say the ‘subḥānal lāh’ before ‘alḥamdu lillāh’, but it is better to say it after it.",
-          ur: "مستحب ہے کہ نماز پڑھنے کے بعدانسان کچھ دیرکے لئے تعقیبات (یعنی ذکر، دعااور قرآن مجید)پڑھنے میں مشغول رہے اوربہترہے کہ اس سے پہلے کہ وہ اپنی جگہ سے اٹھے کہ اس کاوضو،غسل یاتیمم باطل ہوجائے روبہ قبلہ ہوکرتعقیبات پڑھے اوریہ ضروری نہیں کہ تعقیبات عربی میں ہوں لیکن بہترہے کہ انسان وہ دعائیں پڑھے جودعاؤں کی کتابوں میں بتائی گئی ہیں اورتسبیح فاطمہ ؑ ان تعقیبات میں سے ہے جن کی بہت زیادہ تاکیدکی گئی ہے۔یہ تسبیح اس ترتیب سے پڑھنی چاہئے : ۳۴ دفعہ ’’اَللہُ اَکْبَرُ‘‘۔ اس کے بعد ۳۳دفعہ’’اَلْحَمْدُلِلّٰہِ‘‘ اوراس کے بعد۳۳ دفعہ’’سُبْحَانَ اللہِ‘‘ اور سُبْحَانَ اللہِ،اَلْحَمْدُلِلّٰہِ سے پہلے بھی پڑھاجاسکتاہے لیکن بہترہے کہ اَلْحَمْدُلِلّٰہِ کے بعد پڑھے۔"
+          en: "After prayers, it is recommended that one engage himself in taʿqībāt, i.e. saying dhikr, reciting duʿāʾs, and reciting the Qur’an. It is better that he recite taʿqībāt facing qibla before he moves from his place and before his wuḍūʾ, ghusl, or tayammum becomes invalid. It is not necessary that the taʿqībāt be in Arabic, but it is better to recite what has been instructed in the books of duʿāʾs. One of the taʿqībāt that has been highly recommended is the tasbīḥ of Her Eminence [Fāṭimah] al-Zahrāʾ (ʿA), which must be said in this order: thirty-four times ‘allāhu akbar’, then thirty-three times ‘alḥamdu lillāh’, and then thirty-three times ‘subḥānal lāh’. It is possible to say the ‘subḥānal lāh’ before ‘alḥamdu lillāh’, but it is better to say it after it."
         },
         basis: "fatwa",
         source: {
@@ -5197,12 +5027,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1108",
           url: "https://www.sistani.org/english/book/48/2245/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1108)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5297,8 +5123,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person turns only his face away from qibla and his body remains facing qibla, in the event that he turns his neck to such an extent that he can see a little of what is behind him, the rule of turning away from qibla – which was mentioned earlier – applies. However, if his turning is not to this extent but is commonly considered a lot, then based on obligatory precaution, he must perform his prayer again. If he turns his neck a little, his prayer does not become invalid, although this action is disapproved.\nSixth: one intentionally speaks, even if what he says is only one letter, as long as it conveys a meaning; for example, he says ‘ قِ’ (qi), which in Arabic means ‘keep safe’. The same applies if what he says only means something in a particular context; for example, he says ‘ باء ’ (bāʾ) in response to someone who asks what the second letter of the Arabic alphabet is. In the event that what he intentionally says conveys no meaning at all but consists of two or more letters, then based on obligatory precaution, it also invalidates prayers.",
-          ur: "اگرفقط اپنے چہرے کوقبلے سے گھمائے لیکن اس کابدن قبلے کی طرف ہوچنانچہ اس حدتک گردن کوموڑے کہ اپنے سرکے پیچھے کچھ دیکھ سکے تواس کے لئے بھی وہی حکم ہے جوقبلے سے پھرجانے والے کے لئے ہے جس کاذکر پہلے کیاجاچکا ہے اوراگراپنی گردن کوموڑنا اتنا زیادہ نہ ہو لیکن عرفاً زیادہ انحراف کہا جائے تو( احتیاط واجب کی بناء پر) دوبارہ نماز پڑھنا ضروری ہے لیکن اگر اپنی گردن کو تھوڑاسا موڑے تواس کی نمازباطل نہیں ہوگی اگرچہ یہ کام مکروہ ہے۔\n(ششم:) مبطلات نمازمیں سے ایک یہ ہے کہ عمداًبات کرے اگرچہ ایساکلمہ ہو کہ جس میں ایک حرف سے زیادہ نہ ہواگروہ حرف بامعنی ہومثلاً(ق) کہ جس کے عربی زبان میں معنی( حفاظت کرو)کے ہیں یا کوئی اورمعنی سمجھ میں آتے ہوں مثلاً (ب) اس شخص کے جواب میں کہ جوحروف تہجی کے حرف دوم کے بارے میں سوال کرے اوراگراس لفظ سے کوئی معنی بھی سمجھ میں نہ آتے ہوں اوروہ دویادوسے زیادہ حرفوں سے مرکب ہو تب بھی( احتیاط کی بناپر) (وہ لفظ) نماز کوباطل کردیتاہے۔"
+          en: "If a person turns only his face away from qibla and his body remains facing qibla, in the event that he turns his neck to such an extent that he can see a little of what is behind him, the rule of turning away from qibla – which was mentioned earlier – applies. However, if his turning is not to this extent but is commonly considered a lot, then based on obligatory precaution, he must perform his prayer again. If he turns his neck a little, his prayer does not become invalid, although this action is disapproved.\nSixth: one intentionally speaks, even if what he says is only one letter, as long as it conveys a meaning; for example, he says ‘ قِ’ (qi), which in Arabic means ‘keep safe’. The same applies if what he says only means something in a particular context; for example, he says ‘ باء ’ (bāʾ) in response to someone who asks what the second letter of the Arabic alphabet is. In the event that what he intentionally says conveys no meaning at all but consists of two or more letters, then based on obligatory precaution, it also invalidates prayers."
         },
         basis: "fatwa",
         source: {
@@ -5306,14 +5131,10 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1117",
           url: "https://www.sistani.org/english/book/48/2247/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1117)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
         arabicInSource: true,
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5375,8 +5196,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If a person intentionally talks, even to the extent of one word, the prayer is invalidated.",
-          ur: "اگر نماز کے دوران جان بوجھ کر بات کرے تو چاہے ایک کلمہ ہی کیوں نہ ہو، نماز باطل ہے۔"
+          en: "If a person intentionally talks, even to the extent of one word, the prayer is invalidated."
         },
         basis: "fatwa",
         source: {
@@ -5384,17 +5204,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "326.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 327",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 327",
           url: "https://www.leader.ir/fa/book/180/1?sn=30804"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -5463,8 +5279,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If on account of refraining oneself from laughing aloud one’s condition changes – for example, the colour of his face turns red – the obligatory precaution is that he must perform his prayer again.\nEighth: based on obligatory precaution, intentionally crying loudly or silently over a worldly matter. However, if one cries silently or loudly out of fear of Allah the Exalted, or in eagerness for Him or the Hereafter, there is no problem; indeed, it is among the best actions. If one cries in asking Allah the Exalted for a worldly matter in humility to Him, there is no problem.\nNinth: doing something that breaks the form of the prayer, such as jumping in the air and suchlike, whether intentionally or forgetfully. However, doing something that does not break the form of the prayer, such as indicating with one’s hand, is not a problem.",
-          ur: "اگرہنسی کی آواز روکنے کے لئے کسی شخص کی حالت بدل جائے مثلاً اس کارنگ سرخ ہوجائے تو(احتیاط واجب )یہ ہے کہ وہ نمازدوبارہ پڑھے۔\n(ہشتم:)( احتیاط واجب کی بناپر)یہ نماز کے مبطلات میں سے ہے کہ انسان دنیاوی کام کے لئے جان بوجھ کرآواز سے یابغیر آواز کے روئے لیکن اگرخوف خدا سے یا شوقِ خدا یا آخرت کے لئے روئے توخواہ آہستہ روئے یابلندآواز سے روئے کوئی حرج نہیں بلکہ یہ بہترین اعمال میں سے ہے لیکن اگر دنیوی حاجت کو حاصل کرنے کے لئے بارگاہ خدا میں تذلل(خشوع وخضوع) کی نیت سے روئے تو کوئی حرج نہیں ہے۔\n(نہم:) نمازباطل کرنے والی چیزوں میں سے ہے کہ کوئی ایساکام کرے جس سے نمازکی شکل باقی نہ رہے مثلاًاچھلناکودنااوراسی طرح کاکوئی عمل انجام دینا۔ایسا کرنا عمداً ہویابھول چوک کی وجہ سے ہو۔لیکن جس کام سے نمازکی شکل تبدیل نہ ہوتی ہو مثلاً ہاتھ سے اشارہ کرنااس میں کوئی حرج نہیں ہے۔"
+          en: "If on account of refraining oneself from laughing aloud one’s condition changes – for example, the colour of his face turns red – the obligatory precaution is that he must perform his prayer again.\nEighth: based on obligatory precaution, intentionally crying loudly or silently over a worldly matter. However, if one cries silently or loudly out of fear of Allah the Exalted, or in eagerness for Him or the Hereafter, there is no problem; indeed, it is among the best actions. If one cries in asking Allah the Exalted for a worldly matter in humility to Him, there is no problem.\nNinth: doing something that breaks the form of the prayer, such as jumping in the air and suchlike, whether intentionally or forgetfully. However, doing something that does not break the form of the prayer, such as indicating with one’s hand, is not a problem."
         },
         basis: "fatwa",
         source: {
@@ -5472,13 +5287,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1137",
           url: "https://www.sistani.org/english/book/48/2247/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1137)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5715,8 +5526,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "While travelling, one must perform the four rakʿah prayers as two rakʿahs in accordance with the conditions that will be mentioned later.",
-          ur: "انسان سفرمیں ہوتوضروری ہے کہ چار رکعتی نمازیں ان شرائط کے ساتھ جوبعدمیں بیان ہوں گی دورکعت پڑھے۔"
+          en: "While travelling, one must perform the four rakʿah prayers as two rakʿahs in accordance with the conditions that will be mentioned later."
         },
         basis: "fatwa",
         source: {
@@ -5724,12 +5534,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 716",
           url: "https://www.sistani.org/english/book/48/2208/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (716)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5754,7 +5560,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 408",
           url: "https://www.leader.ir/fa/book/180/1?sn=30826"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -5803,8 +5610,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person’s outward and return journey totals eight farsakhs – irrespective of whether or not the outward or the return journey on its own is less than four farsakhs – he must perform qaṣr prayers. Therefore, if his outward journey is three farsakhs and his return is five, or vice versa, he must perform qaṣr prayers, i.e. [he must perform the four rakʿah prayers] as two rakʿah prayers.",
-          ur: "جس شخص کے جانے اورواپس آنے کی مجموعی مسافت ملاکرآٹھ فرسخ ہواورخواہ اس کے جانے یاواپسی کی مسافت چارفرسخ سے کم ہویانہ ہوضروری ہے کہ نمازقصرکرکے پڑھے۔ اس بناپراگرجانے کی مسافت تین فرسخ اور واپسی کی پانچ فرسخ یااس کے برعکس ہوتوضروری ہے کہ نمازقصریعنی( دورکعتی) پڑھے۔"
+          en: "If a person’s outward and return journey totals eight farsakhs – irrespective of whether or not the outward or the return journey on its own is less than four farsakhs – he must perform qaṣr prayers. Therefore, if his outward journey is three farsakhs and his return is five, or vice versa, he must perform qaṣr prayers, i.e. [he must perform the four rakʿah prayers] as two rakʿah prayers."
         },
         basis: "fatwa",
         source: {
@@ -5812,12 +5618,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1258",
           url: "https://www.sistani.org/english/book/48/2264/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1258)",
-          url: "https://www.sistani.org/urdu/book/61/3639/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5981,7 +5783,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 431",
           url: "https://www.leader.ir/fa/book/180/1?sn=30829"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -6159,8 +5962,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The permitted limit is the place where the people of a town – including those who live on its outskirts and are considered residents of the town – cannot see a traveller due to the distance he has travelled. A traveller would know he has reached this point when he can no longer see the people of the town nor those living on its outskirts.",
-          ur: "حدترخص وہ جگہ ہے جہاں سے اہل شہر اور یہاں تک کہ شہر اور اطراف شہر کے باہر رہنے والے افراد مسافرکونہ دیکھ سکیں اوراس کی علامت یہ ہے کہ وہ اہل شہرکونہ دیکھ سکے۔"
+          en: "The permitted limit is the place where the people of a town – including those who live on its outskirts and are considered residents of the town – cannot see a traveller due to the distance he has travelled. A traveller would know he has reached this point when he can no longer see the people of the town nor those living on its outskirts."
         },
         basis: "fatwa",
         source: {
@@ -6168,12 +5970,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1304",
           url: "https://www.sistani.org/english/book/48/2264/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1304)",
-          url: "https://www.sistani.org/urdu/book/61/3639/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -6199,7 +5997,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30839"
         },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -6214,8 +6013,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A place that one adopts as his permanent residence is his home town, irrespective of whether he was born there or not, or it was the home of his parents, or he selected it himself for his residence.",
-          ur: "جس جگہ کوانسان نے اپنی مستقل سکونت اوربودوباش کے لئے منتخب کیاہووہ اس کا وطن ہے خواہ وہ وہاں پیداہواہواوروہ اس کے والدین کا وطن ہویااس نے خود اس جگہ کوزندگی بسرکرنے کے لئے اختیارکیاہو۔"
+          en: "A place that one adopts as his permanent residence is his home town, irrespective of whether he was born there or not, or it was the home of his parents, or he selected it himself for his residence."
         },
         basis: "fatwa",
         source: {
@@ -6223,12 +6021,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1314",
           url: "https://www.sistani.org/english/book/48/2264/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1314)",
-          url: "https://www.sistani.org/urdu/book/61/3639/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -6268,8 +6062,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A traveller who has the intention of staying somewhere for ten consecutive days, or knows that he has no choice but to stay somewhere for ten days, must perform tamām prayers in that place.",
-          ur: "اگرکسی مسافرکاکسی جگہ پرمسلسل دس دن رہنے کاارادہ ہویاوہ جانتا ہو کہ بہ امرمجبوری دس دن تک ایک جگہ رہناپڑے گاتووہاں اسے پوری نمازپڑھنی ضروری ہے۔"
+          en: "A traveller who has the intention of staying somewhere for ten consecutive days, or knows that he has no choice but to stay somewhere for ten days, must perform tamām prayers in that place."
         },
         basis: "fatwa",
         source: {
@@ -6277,12 +6070,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1320",
           url: "https://www.sistani.org/english/book/48/2264/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1320)",
-          url: "https://www.sistani.org/urdu/book/61/3639/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -6371,8 +6160,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A traveller can perform tamām prayers in the entire city of Mecca, Medina, and Kufa, and in the shrine (ḥaram) of His Eminence Sayyid al-Shuhadāʾ [Imam al-Ḥusayn] (ʿA) up to a distance of approximately 11.5 metres from the sacred grave [i.e. the area known as the ‘ḥāʾir’].",
-          ur: "مکہ،مدینہ اور کوفے کے پورے شہر میں نیزحضرت سیدالشہداء علیہ السلام کے حرم میں بھی قبرمطہر سے تقریباً ساڑھے گیارہ میٹر تک مسافراپنی نمازپوری پڑھ سکتاہے۔"
+          en: "A traveller can perform tamām prayers in the entire city of Mecca, Medina, and Kufa, and in the shrine (ḥaram) of His Eminence Sayyid al-Shuhadāʾ [Imam al-Ḥusayn] (ʿA) up to a distance of approximately 11.5 metres from the sacred grave [i.e. the area known as the ‘ḥāʾir’]."
         },
         basis: "fatwa",
         source: {
@@ -6380,12 +6168,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1341",
           url: "https://www.sistani.org/english/book/48/2265/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1341)",
-          url: "https://www.sistani.org/urdu/book/61/3639/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -6853,8 +6637,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The eldest son means the oldest son who is alive when his parents die, whether he is an adult or minor.",
-          ur: "بڑے بیٹے سے مراد وہ سب سے بڑا بیٹا ہے جو ماں باپ کے مرتے وقت زندہ ہو ، خواہ بالغ ہو یا نہ ہو۔"
+          en: "The eldest son means the oldest son who is alive when his parents die, whether he is an adult or minor."
         },
         basis: "fatwa",
         source: {
@@ -6862,17 +6645,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "653.",
           url: "https://www.leader.ir/en/book/241?sn=32579"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 655",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31226"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 655",
           url: "https://www.leader.ir/fa/book/180/1?sn=30857"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -7103,8 +6882,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A follower must say everything in congregational prayers except the recitation of Sūrat al-Ḥamd and the other surah; however, if the first or second rakʿah of the follower is the third or fourth rakʿah of the imam, then he must recite Sūrat al-Ḥamd and the other surah.",
-          ur: "ضروری ہے کہ مقتدی الحمد اورسورہ کے علاوہ نمازکی سب چیزیں خود پڑھے لیکن اگراس کی پہلی اوردوسری رکعت امام کی تیسری اورچھوتھی رکعت ہوتوضروری ہے کہ الحمداورسورہ بھی پڑھے۔"
+          en: "A follower must say everything in congregational prayers except the recitation of Sūrat al-Ḥamd and the other surah; however, if the first or second rakʿah of the follower is the third or fourth rakʿah of the imam, then he must recite Sūrat al-Ḥamd and the other surah."
         },
         basis: "fatwa",
         source: {
@@ -7112,12 +6890,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1441",
           url: "https://www.sistani.org/english/book/48/2270/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1441)",
-          url: "https://www.sistani.org/urdu/book/61/3640/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -7197,7 +6971,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30868"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -7288,8 +7063,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If one joins the prayer while the imam is in rukū‘, one of the following situations may occur:\n1. If one reaches the imam's rukū‘, the congregational prayer is valid and counts as one rak‘ah even if the imam's dhikr is over.\n2. If the imam is getting up from rukū‘ or is in standing posture when the ma‘mūm starts to be in rukū‘, then the prayer in furādā form is valid and is considered as the first rak‘ah of his prayer. So, he must continue the prayer.\n3. If one bows to the extent of rukū‘ but doubts whether he has reached the imam's rukū‘ or not, his prayer is valid in the form of furādā, it is counted as the first rak‘ah of his prayer and he should continue the prayer.\n4. If the imam raises from rukū‘ before the ma‘mūm’s being in rukū‘ posture, then he can make furādā intention.",
-          ur: "اگر کوئی شخص اس وقت اقتدا کرے کہ جب امام رکوع میں ہو تو مندرجہ ذیل صورتیں ممکن ہیں :\n1 ۔ اگ اس وقت رکوع میں پہنچے کہ جب امام رکوع کی حالت میں ہو تو نماز جماعت صحیح ہے اور ایک رکعت شمار ہوگی اگرچہ امام کا ذکر ختم ہوچکا ہو۔\n\n2 ۔ اگر اس وقت رکوع میں پہنچے کہ جب امام رکوع سے کھڑا ہورہا ہو یا کھڑا ہوچکا ہو تو نماز فرادی کی حیثیت سے صحیح ہے اور پہلی رکعت شمار ہوگی اور ضروری ہے کہ نماز کو جاری رکھے۔\n\n3 ۔ اگر رکوع کے برابر جھک جائے اور شک کرے کہ امام کے ساتھ رکوع میں پہنچا یا نہیں تو اس کی نماز فرادی کی حیثیت سے صحیح ہے اور پہلی رکعت شمار ہوگی اور ضروری ہے کہ نماز کو جاری رکھے۔\n\n4 ۔ اگر امام اس کے رکوع کے برابر جھکنے سے پہلے رکوع سے سر اٹھالے تو اس صورت میں فرادی کی نیت کرسکتا ہے۔"
+          en: "If one joins the prayer while the imam is in rukū‘, one of the following situations may occur:\n1. If one reaches the imam's rukū‘, the congregational prayer is valid and counts as one rak‘ah even if the imam's dhikr is over.\n2. If the imam is getting up from rukū‘ or is in standing posture when the ma‘mūm starts to be in rukū‘, then the prayer in furādā form is valid and is considered as the first rak‘ah of his prayer. So, he must continue the prayer.\n3. If one bows to the extent of rukū‘ but doubts whether he has reached the imam's rukū‘ or not, his prayer is valid in the form of furādā, it is counted as the first rak‘ah of his prayer and he should continue the prayer.\n4. If the imam raises from rukū‘ before the ma‘mūm’s being in rukū‘ posture, then he can make furādā intention."
         },
         basis: "fatwa",
         source: {
@@ -7297,17 +7071,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "745.",
           url: "https://www.leader.ir/en/book/241?sn=32594"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 747",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31241"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 747",
           url: "https://www.leader.ir/fa/book/180/1?sn=30871"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -7433,8 +7203,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Ṣalāt al‑āyāt, for which the method of performance will be explained later, becomes obligatory when the following three phenomena occur:\n1. solar eclipse;\n2. lunar eclipse;\nand with the occurrence of these two phenomena, ṣalāt al‑āyāt becomes obligatory even if the eclipse is partial and one is not frightened by it;\n3. earthquake, based on obligatory precaution, even if one is not frightened by it.\nBased on recommended precaution, ṣalāt al‑āyāt should be performed when thunder and lightning, gales that make the sky look black or red, and other similar natural celestial phenomena occur, provided that most people are frightened by them. Similarly, [the prayer should be performed] when natural terrestrial phenomena occur that cause most people to fear, such as sinkholes and rock-slides.",
-          ur: "نمازآیات جس کے پڑھنے کاطریقہ بعدمیں بیان ہوگاتین چیزوں کی وجہ سے واجب ہوتی ہے :\n۱:) سورج گرہن\n۲:)چاند گرہن، اگرچہ ان کے کچھ حصے کوہی گرہن لگے اورخواہ انسان پراس کی وجہ سے خوف بھی طاری نہ ہواہوتو پھر بھی نماز آیات واجب ہے۔\n۳:)زلزلہ( احتیاط واجب کی بناپر)اگرچہ اس سے کوئی بھی خوف زدہ نہ ہواہو۔\nالبتہ بادلوں کی گرج،بجلی کی کڑک، سرخ وسیاہ آندھی اورانہی جیسی دوسری آسمانی نشانیاں جن سے اکثر لوگ خوف زدہ ہوجائیں اوراسی طرح زمین کے حادثات مثلاً زمین کا دھنس جانا اور پہاڑ کا ٹکڑے ٹکڑے ہوجاناجن سے اکثرلوگ خوف زدہ ہو جاتے ہیں ان صورتوں میں بھی (احتیاط مستحب کی بناپر)نماز آیات ترک نہیں کرنی چاہئے۔"
+          en: "Ṣalāt al‑āyāt, for which the method of performance will be explained later, becomes obligatory when the following three phenomena occur:\n1. solar eclipse;\n2. lunar eclipse;\nand with the occurrence of these two phenomena, ṣalāt al‑āyāt becomes obligatory even if the eclipse is partial and one is not frightened by it;\n3. earthquake, based on obligatory precaution, even if one is not frightened by it.\nBased on recommended precaution, ṣalāt al‑āyāt should be performed when thunder and lightning, gales that make the sky look black or red, and other similar natural celestial phenomena occur, provided that most people are frightened by them. Similarly, [the prayer should be performed] when natural terrestrial phenomena occur that cause most people to fear, such as sinkholes and rock-slides."
         },
         basis: "fatwa",
         source: {
@@ -7442,13 +7211,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1470",
           url: "https://www.sistani.org/english/book/48/2273/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1470)",
-          url: "https://www.sistani.org/urdu/book/61/3641/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -7488,8 +7253,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Ṣalāt al‑āyāt consists of two rakʿahs, and in each rakʿah there are five rukūʿs. The method of performing the prayer is as follows: after one has made the intention [of performing the prayer], he says takbīr, recites one Sūrat al-Ḥamd and one other complete surah, goes into rukūʿ, and raises his head from rukūʿ; then, he again recites one Sūrat al-Ḥamd and one other complete surah, goes into rukūʿ again, and so on until he has done this a total of five times. After getting up from the fifth rukūʿ, he performs two sajdahs, stands up, and proceeds to perform the second rakʿah in the same way as the first; he then says tashahhud and the salām of the prayer.",
-          ur: "نمازآیات کی دورکعتیں ہیں اورہررکعت میں پانچ رکوع ہیں ۔ اس کے پڑھنے کاطریقہ یہ ہے کہ نیت کرنے کے بعدانسان تکبیرکہے اور ایک دفعہ الحمد اور ایک پوراسورہ پڑھے اوررکوع میں جائے اورپھررکوع سے سراٹھائے پھردوبارہ ایک دفعہ الحمداورایک سورہ پڑھے اور پھررکوع میں جائے۔اس عمل کوپانچ دفعہ انجام دے اور پانچویں رکوع سے قیام کی حالت میں آنے کے بعددوسجدے بجالائے اور پھر اٹھ کھڑا ہو اور پہلی رکعت کی طرح دوسری رکعت بجالائے اورتشہداورسلام پڑھ کرنمازتمام کرے۔"
+          en: "Ṣalāt al‑āyāt consists of two rakʿahs, and in each rakʿah there are five rukūʿs. The method of performing the prayer is as follows: after one has made the intention [of performing the prayer], he says takbīr, recites one Sūrat al-Ḥamd and one other complete surah, goes into rukūʿ, and raises his head from rukūʿ; then, he again recites one Sūrat al-Ḥamd and one other complete surah, goes into rukūʿ again, and so on until he has done this a total of five times. After getting up from the fifth rukūʿ, he performs two sajdahs, stands up, and proceeds to perform the second rakʿah in the same way as the first; he then says tashahhud and the salām of the prayer."
         },
         basis: "fatwa",
         source: {
@@ -7497,12 +7261,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1486",
           url: "https://www.sistani.org/english/book/48/2274/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1486)",
-          url: "https://www.sistani.org/urdu/book/61/3641/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -7542,8 +7302,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "[A shorter method of performing ṣalāt al‑āyāt is as follows:] after one has made the intention [of performing the prayer], he says takbīr and recites Sūrat al-Ḥamd; then, he divides the verses of the other surah into five parts and recites one verse or more, or even less, provided that – based on obligatory precaution – it is a complete sentence. He must start from the beginning of the surah and must not suffice with reciting bismillāh [on its own and count that as one verse]. Then, he goes into rukūʿ, raises his head, and without reciting Sūrat al-Ḥamd he recites the second part of the other surah. He then goes into rukūʿ again, and so on until he completes the other surah before he goes into the fifth rukūʿ. For example, if the other surah is Sūrat al-Falaq, he first says:\nبِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ۞ قُلْ أَعُوْذُ بِرَبِّ الْفَلَقِ\nbismil lāhir raḥmānir raḥīm. qul aʿūdhu birabbil falaq\nIn the Name of Allah, the All-Beneficent, the Ever-Merciful. Say, ‘I seek refuge in the Lord of the daybreak,\n...and goes into rukūʿ [for the first time]; he then stands up and says:\nمِنْ شَرِّ مَا خَلَقَ\nmin sharri mā khalaq\nfrom the evil of what He created,\n...and goes into rukūʿ again [for the second time]; he then stands up and says:\nوَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ\nwa min sharri ghāsiqin idhā waqab\nand from the evil of the darkness of night when it settles,\n...and goes into rukūʿ again [for the third time]; he then stands up and says:\nوَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nwa min sharrin naffāthāti fil ʿuqad\nand from the evil of those who blow on knots,\n...and goes into rukūʿ again [for the fourth time]; he then stands up and says:\nوَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ\nwa min sharri ḥāsidin idhā ḥasad\nand from the evil of an envier when he envies.’\n...and goes into rukūʿ for the fifth time. He then stands up, performs two sajdahs, and proceeds to perform the second rakʿah in the same way as the first. After the second sajdah [of the second rakʿah], he says tashahhud and the salām of the prayer. It is permitted for one to divide the surah into less than five parts, but whenever he completes the surah, it is necessary that he recite Sūrat al-Ḥamd before performing the next rukūʿ.",
-          ur: "نمازآیات میں یہ بھی ممکن ہے کہ انسان نیت کرنے اورتکبیر اور الحمد پڑھنے کے بعد ایک سورے کی آیتوں کے پانچ حصے کرے اورایک آیت یااس سے کچھ زیادہ پڑھے بلکہ ایک آیت سے کم بھی پڑھ سکتاہے لیکن( احتیاط کی بناپر) ضروری ہے کہ مکمل جملہ ہو اور سورہ کے شروع سے ابتداء کرے اور’’ بسم اللہ‘‘ کہنے پر اکتفا نہ کرےاوراس کے بعدرکوع میں جائے اور پھرکھڑاہوجائے اور الحمدپڑھے بغیر اسی سورہ کادوسراحصہ پڑھے اور رکوع میں جائے اور اسی طرح اس عمل کو دہراتا رہے حتیٰ کہ پانچویں رکوع سے پہلے سورے کو ختم کردے مثلاً سورۂ فلق میں پہلے بِسْمِ اللہِ الرَّحْمٰنِ الرَّحِیْمِض قُلْ اَعُوْذُ بِرَبِّ الْفَلَقِ پڑھے: اور رکوع میں جائے۔ اس کے بعد کھڑاہواور پڑھے: مِنْ شَرِّ مَاخَلَقَ اور دوبارہ رکوع میں جائے اور رکوع کے بعدکھڑاہواورپڑھے: وَمِنْ شَرِّ غَاسِقٍ اِذَاوَقَبَ پھر رکوع میں جائے اورپھرکھڑاہواورپڑھے: وَمِنْ شَرِّ النَّفّٰثٰتِ فِی الْعُقَدِ اور رکوع میں چلاجائے اورپھر کھڑا ہوجائے اور پڑھے: وَمِنْ شَرِّحَاسِدٍ اِذَاحَسَدَ اور اس کے بعدپانچویں رکوع میں جائے اور (رکوع سے) کھڑاہونے کے بعددوسجدے کرے اور دوسری رکعت بھی پہلی رکعت کی طرح بجالائے اوراس کے دوسرے سجدے کے بعدتشہداورسلام پڑھے اور یہ بھی جائزہے کہ سورے کوپانچ سے کم حصوں میں تقسیم کرے لیکن جس وقت بھی سورہ ختم کرے لازم ہے کہ بعدوالے رکوع سے پہلے الحمدپڑھے۔"
+          en: "[A shorter method of performing ṣalāt al‑āyāt is as follows:] after one has made the intention [of performing the prayer], he says takbīr and recites Sūrat al-Ḥamd; then, he divides the verses of the other surah into five parts and recites one verse or more, or even less, provided that – based on obligatory precaution – it is a complete sentence. He must start from the beginning of the surah and must not suffice with reciting bismillāh [on its own and count that as one verse]. Then, he goes into rukūʿ, raises his head, and without reciting Sūrat al-Ḥamd he recites the second part of the other surah. He then goes into rukūʿ again, and so on until he completes the other surah before he goes into the fifth rukūʿ. For example, if the other surah is Sūrat al-Falaq, he first says:\nبِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ۞ قُلْ أَعُوْذُ بِرَبِّ الْفَلَقِ\nbismil lāhir raḥmānir raḥīm. qul aʿūdhu birabbil falaq\nIn the Name of Allah, the All-Beneficent, the Ever-Merciful. Say, ‘I seek refuge in the Lord of the daybreak,\n...and goes into rukūʿ [for the first time]; he then stands up and says:\nمِنْ شَرِّ مَا خَلَقَ\nmin sharri mā khalaq\nfrom the evil of what He created,\n...and goes into rukūʿ again [for the second time]; he then stands up and says:\nوَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ\nwa min sharri ghāsiqin idhā waqab\nand from the evil of the darkness of night when it settles,\n...and goes into rukūʿ again [for the third time]; he then stands up and says:\nوَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nwa min sharrin naffāthāti fil ʿuqad\nand from the evil of those who blow on knots,\n...and goes into rukūʿ again [for the fourth time]; he then stands up and says:\nوَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ\nwa min sharri ḥāsidin idhā ḥasad\nand from the evil of an envier when he envies.’\n...and goes into rukūʿ for the fifth time. He then stands up, performs two sajdahs, and proceeds to perform the second rakʿah in the same way as the first. After the second sajdah [of the second rakʿah], he says tashahhud and the salām of the prayer. It is permitted for one to divide the surah into less than five parts, but whenever he completes the surah, it is necessary that he recite Sūrat al-Ḥamd before performing the next rukūʿ."
         },
         basis: "fatwa",
         source: {
@@ -7551,14 +7310,10 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1487",
           url: "https://www.sistani.org/english/book/48/2274/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1487)",
-          url: "https://www.sistani.org/urdu/book/61/3641/"
-        },
         verification: "A",
         arabicInSource: true,
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -7628,8 +7383,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The Eid al-Fiṭr and Eid al-Aḍḥā prayer is obligatory during the presence of the Imam (ʿA) and must be performed in congregation. In our time, when the Imam (ʿA) is in occultation, the prayer is recommended and it can be performed in congregation or on one’s own.",
-          ur: "امام عصرعلیہ السلام کے زمانۂ حضورمیں فطروعیدقربان کی نمازیں واجب ہیں اوران کاجماعت کے ساتھ پڑھناضروری ہے لیکن ہمارے زمانے میں جب کہ امام عصر علیہ السلام غیبت کبریٰ میں ہیں یہ نمازیں مستحب ہیں اورباجماعت وفرادیٰ دونوں طرح پڑھی جاسکتی ہیں ۔"
+          en: "The Eid al-Fiṭr and Eid al-Aḍḥā prayer is obligatory during the presence of the Imam (ʿA) and must be performed in congregation. In our time, when the Imam (ʿA) is in occultation, the prayer is recommended and it can be performed in congregation or on one’s own."
         },
         basis: "fatwa",
         source: {
@@ -7637,12 +7391,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 1495",
           url: "https://www.sistani.org/english/book/48/2275/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1495)",
-          url: "https://www.sistani.org/urdu/book/61/3642/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -7736,8 +7486,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The Friday prayer consists of two rakʿahs like the ṣubḥ prayer, with the difference that in the Friday prayer, two sermons must be delivered before it. The Friday prayer is an optional obligation (al‑wājib al‑takhyīrī), meaning that on Fridays, someone who is duty-bound (mukallaf) has the option to either perform the Friday prayer – if all its conditions are fulfilled – or the ẓuhr prayer; and if he performs the Friday prayer, it will suffice in place of the ẓuhr prayer.\nSome conditions must be met for the Friday prayer to be obligatory:\n1. the time for the prayer must have set in. This refers to the time of zawāl, or in other words, the time of ẓuhr. Furthermore, the time for the Friday prayer is that which is commonly regarded to be the beginning of zawāl; therefore, if the Friday prayer is delayed beyond this time, its time will be deemed over and the ẓuhr prayer must be performed instead;\n2. the number of people must be at least five, including the imam. If five Muslims do not gather, the Friday prayer does not become obligatory;\n3. there must be an imam who meets all the conditions, such as being dutiful (ʿādil) and all the other qualities that are required of an imam, which will be mentioned in the section on congregational (jamāʿah) prayers. In the absence of an imam, the Friday prayer does not become obligatory.\nSome conditions must be met for the Friday prayer to be valid:\n1. it must be performed in congregation; therefore, it is not correct (ṣaḥīḥ) to perform the Friday prayer on one’s own (furādā). If the follower (maʾmūm) of an imam in congregational prayers joins the prayer before the rukūʿ of the second rakʿah of the Friday prayer and performs one more rakʿah on his own, his Friday prayer is valid. However, if one joins in the rukūʿ of the second rakʿah, then based on obligatory precaution, he cannot suffice with this Friday prayer and must perform ẓuhr prayers;\n2. the imam must deliver two sermons before the prayer. In the first sermon, he must praise (ḥamd) and eulogise (thanāʾ) Allah, exhort the congregation to God-wariness (taqwā), and recite a short chapter (surah) from the Qur’an. In the second sermon, again he must praise and eulogise Allah and invoke blessings (ṣalawāt) upon the Most Noble Messenger (Ṣ) and the Infallible Imams (ʿA); and the recommended precaution is that he should also seek forgiveness for the believers. Furthermore, it is necessary that the sermons be delivered before the prayer; therefore, if the imam starts the prayer before the two sermons, it is incorrect. Delivering the sermons before ẓuhr time is problematic (maḥall al‑ishkāl) [i.e. based on obligatory precaution, it is not correct]. In addition, it is necessary that the person delivering the sermons be in a standing position; therefore, if he delivers the sermons in a sitting position, it is incorrect. It is also necessary that he sit down a little between the two sermons and that his sitting be short and light. Furthermore, it is necessary that the imam of the congregation deliver the sermons himself, and based on obligatory precaution, he must praise Allah and pray for blessings to be showered upon the Most Noble Messenger (Ṣ) and the Infallible Imams (ʿA) in the Arabic language; however, saying other parts of the sermons in Arabic, such as eulogising Allah and exhorting the congregation to God-wariness, is not a requirement. Indeed, if most of the congregation do not understand Arabic, then the obligatory precaution is that exhorting the congregation to God-wariness must be said in the language of the attendees;\n3. the distance between two Friday prayers must not be less than one farsakh; therefore, if another Friday prayer takes place at a distance of less than 3.4 miles, then in the event that both prayers commenced together, both are invalid. If one of them commences before the other – even to the extent of the takbīrat al‑iḥrām – it is valid and the second one is invalid. However, if after a Friday prayer has taken place it becomes known that another Friday prayer took place at the same time or before it at a distance of less than 3.4 miles, it is not obligatory to perform the ẓuhr prayer. Furthermore, a Friday prayer can only have a prohibitive effect on another one taking place within the stipulated distance if it is a valid Friday prayer and fulfils all the conditions; otherwise, it does not have any prohibitive effect.",
-          ur: "جمعہ کی نماز صبح کی نماز کی طرح دو رکعت ہے۔اس میں اور صبح کی نماز میں فرق یہ ہے کہ اس نماز سے پہلے دوخطبے ضروری ہیں ۔ جمعہ کی نمازواجب تخییری ہے۔ اس سے مراد یہ ہے کہ جمعہ کے دن مکلف کواختیار ہے کہ( اگرنماز جمعہ کی شرائط موجود ہوں ) تو جمعہ کی نماز پڑھے یاظہر کی نماز پڑھے۔ لہٰذا اگرانسان جمعہ کی نماز پڑھے تووہ ظہر کی نماز سے کفایت کرتی ہے (یعنی پھرظہر کی نماز پڑھناضروری نہیں )۔\nجمعہ کی نمازواجب ہونے کی چندشرطیں ہیں :\n(اول:) وقت کاداخل ہوناجو زوال آفتاب ہے اور اس کاوقت اول زوال عرفی ہے پس جب بھی اس سے تاخیرہوجائے،اس کاوقت ختم ہوجاتاہے اورپھر ظہر کی نماز اداکرنی چاہئے۔\n(دوم:) نماز پڑھنے والوں کی تعدادجو بمع امام پانچ افراد ہے اورجب تک پانچ مسلمان اکٹھے نہ ہوں جمعہ کی نماز واجب نہیں ہوتی۔\n(سوم:) امام کاجامع شرائط امامت ہونامثلاً عدالت وغیرہ جوامام جماعت میں معتبرہیں اور نماز جماعت کی بحث میں بتایاجائے گا۔اگریہ شرط پوری نہ ہوتوجمعہ کی نماز واجب نہیں ہوتی۔\nجمعہ کی نماز کے صحیح ہونے کی چندشرطیں ہیں :\n(اول:) باجماعت پڑھاجانا۔پس یہ نمازفرادیٰ اداکرناصحیح نہیں اورجب مقتدی نماز کی دوسری رکعت کے رکوع سے پہلے امام کے ساتھ شامل ہوجائے تواس کی نمازجمعہ صحیح ہے اوروہ اس نماز پرایک فرادیٰ رکعت کااضافہ کرے گااوراگروہ دوسری رکعت کے رکوع میں امام کوپالےتو (احتیاط واجب کی بناء پر) اس نماز جمعہ پر اکتفا نہیں کرسکتا بلکہ نمازظہر پڑھنا ضروری ہے۔\n(دوم:) امام جماعت کانماز سے پہلے دوخطبے پڑھنا۔ پہلے خطبے میں خطیب اللہ تعالیٰ کی حمد و ثنا بیان کرے نیزنمازیوں کوتقویٰ اورپرہیزگاری کی تلقین کرے۔پھرقرآن مجید کاایک چھوٹا سورہ پڑھےاور دوسرے خطبہ میں دوبارہ اللہ تعالیٰ کی حمدوثنابجا لائے۔ پھرحضرت رسول اکرم صلی اللہ علیہ وآلہٖ وسلم اور ائمہ طاہرین علیہم السلام پردرود بھیجے اوراحتیاط مستحب یہ ہے کہ مومنین اورمومنات کے لئے استغفار (بخشش کی دعاء) کرے۔ ضروری ہے کہ خطبے نمازسے پہلے پڑھے جائیں ۔پس اگرنمازدو خطبوں سے پہلے شروع کرلی جائے تو صحیح نہیں ہوگی اور زوال (ظہر شرعی) سے پہلے خطبے پڑھنے میں اشکال ہے اور ضروری ہے کہ جوشخص خطبے پڑھے وہ خطبے پڑھنے کے وقت کھڑاہو۔لہٰذا اگر وہ بیٹھ کرخطبے پڑھے گاتوصحیح نہیں ہوگااوردوخطبوں کے درمیان بیٹھ کرفاصلہ دینالازم اورواجب ہے اورضروری ہے کہ مختصر لمحوں کے لئے بیٹھے اوریہ بھی ضروری ہے کہ امام جماعت اور خطیب یعنی جوشخص خطبے پڑھے ایک ہی شخص ہو(احتیاط کی بناپر ) اللہ تعالیٰ کی حمدوثنااسی طرح پیغمبراکرمؐ اورائمۃ المسلمین ؑ پرعربی زبان میں درودبھیجنا ضروری ہے اوراس سے زیادہ میں عربی معتبرنہیں ہے۔ بلکہ اگرحاضرین کی اکثریت عربی نہ جانتی ہوتواحتیاط لازم یہ ہے کہ تقویٰ کے بارے میں وعظ ونصیحت کرتے وقت جو زبان حاضرین جانتے ہیں اسی میں تقویٰ کی نصیحت کرے۔\n(سوم:) یہ کہ جمعہ کی دونمازوں کے درمیان ایک فرسخ سے کم فاصلہ نہ ہو۔ پس جب جمعہ کی دوسری نمازایک فرسخ سے کم فاصلہ پرقائم ہواوردونمازیں بیک وقت پڑھی جائیں تودونوں باطل ہوں گی اوراگرایک نمازکودوسری پرسبقت حاصل ہوخواہ وہ تکبیرۃُالاحرام کی حدتک ہی کیوں نہ ہوتووہ (نمازجسے سبقت حاصل ہو) صحیح ہوگی اور دوسری باطل ہوگی، لیکن اگرنماز کے بعدپتا چلے کہ ایک فرسخ سے کم فاصلہ پرجمعہ کی ایک اور نماز اس نماز سے پہلے یااس کے ساتھ ساتھ قائم ہوئی تھی توظہر کی نماز واجب نہیں ہوگی اور جمعہ کی نماز کاقائم کرنامذکورہ فاصلے کے اندرجمعہ کی دوسری نماز قائم کرنے میں اس وقت مانع ہوتاہے جب وہ نماز خودصحیح اور جامع الشرائط ہوورنہ وہ مانع نہیں ہوگی۔"
+          en: "The Friday prayer consists of two rakʿahs like the ṣubḥ prayer, with the difference that in the Friday prayer, two sermons must be delivered before it. The Friday prayer is an optional obligation (al‑wājib al‑takhyīrī), meaning that on Fridays, someone who is duty-bound (mukallaf) has the option to either perform the Friday prayer – if all its conditions are fulfilled – or the ẓuhr prayer; and if he performs the Friday prayer, it will suffice in place of the ẓuhr prayer.\nSome conditions must be met for the Friday prayer to be obligatory:\n1. the time for the prayer must have set in. This refers to the time of zawāl, or in other words, the time of ẓuhr. Furthermore, the time for the Friday prayer is that which is commonly regarded to be the beginning of zawāl; therefore, if the Friday prayer is delayed beyond this time, its time will be deemed over and the ẓuhr prayer must be performed instead;\n2. the number of people must be at least five, including the imam. If five Muslims do not gather, the Friday prayer does not become obligatory;\n3. there must be an imam who meets all the conditions, such as being dutiful (ʿādil) and all the other qualities that are required of an imam, which will be mentioned in the section on congregational (jamāʿah) prayers. In the absence of an imam, the Friday prayer does not become obligatory.\nSome conditions must be met for the Friday prayer to be valid:\n1. it must be performed in congregation; therefore, it is not correct (ṣaḥīḥ) to perform the Friday prayer on one’s own (furādā). If the follower (maʾmūm) of an imam in congregational prayers joins the prayer before the rukūʿ of the second rakʿah of the Friday prayer and performs one more rakʿah on his own, his Friday prayer is valid. However, if one joins in the rukūʿ of the second rakʿah, then based on obligatory precaution, he cannot suffice with this Friday prayer and must perform ẓuhr prayers;\n2. the imam must deliver two sermons before the prayer. In the first sermon, he must praise (ḥamd) and eulogise (thanāʾ) Allah, exhort the congregation to God-wariness (taqwā), and recite a short chapter (surah) from the Qur’an. In the second sermon, again he must praise and eulogise Allah and invoke blessings (ṣalawāt) upon the Most Noble Messenger (Ṣ) and the Infallible Imams (ʿA); and the recommended precaution is that he should also seek forgiveness for the believers. Furthermore, it is necessary that the sermons be delivered before the prayer; therefore, if the imam starts the prayer before the two sermons, it is incorrect. Delivering the sermons before ẓuhr time is problematic (maḥall al‑ishkāl) [i.e. based on obligatory precaution, it is not correct]. In addition, it is necessary that the person delivering the sermons be in a standing position; therefore, if he delivers the sermons in a sitting position, it is incorrect. It is also necessary that he sit down a little between the two sermons and that his sitting be short and light. Furthermore, it is necessary that the imam of the congregation deliver the sermons himself, and based on obligatory precaution, he must praise Allah and pray for blessings to be showered upon the Most Noble Messenger (Ṣ) and the Infallible Imams (ʿA) in the Arabic language; however, saying other parts of the sermons in Arabic, such as eulogising Allah and exhorting the congregation to God-wariness, is not a requirement. Indeed, if most of the congregation do not understand Arabic, then the obligatory precaution is that exhorting the congregation to God-wariness must be said in the language of the attendees;\n3. the distance between two Friday prayers must not be less than one farsakh; therefore, if another Friday prayer takes place at a distance of less than 3.4 miles, then in the event that both prayers commenced together, both are invalid. If one of them commences before the other – even to the extent of the takbīrat al‑iḥrām – it is valid and the second one is invalid. However, if after a Friday prayer has taken place it becomes known that another Friday prayer took place at the same time or before it at a distance of less than 3.4 miles, it is not obligatory to perform the ẓuhr prayer. Furthermore, a Friday prayer can only have a prohibitive effect on another one taking place within the stipulated distance if it is a valid Friday prayer and fulfils all the conditions; otherwise, it does not have any prohibitive effect."
         },
         basis: "fatwa",
         source: {
@@ -7745,13 +7494,9 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 719*",
           url: "https://www.sistani.org/english/book/48/2210/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (719)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
         verification: "A",
-        note: "Marked * (revised) in the 4th edition. The Urdu text was compared and matches in substance. Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Marked * (revised) in the 4th edition. The Urdu text was compared and matches in substance. Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -7792,8 +7537,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Whenever the Friday prayer takes place with all its conditions fulfilled, if the one establishing it is the infallible Imam (ʿA) or his specific representative, it is obligatory to attend it; otherwise, it is not obligatory. In the first situation, however, it is not obligatory for the following groups of people to attend:\n1. women;\n2. slaves;\n3. travellers, even those travellers whose duty is to perform the complete (tamām) form of the prayer, such as those who have made an intention to stay [at their destination for ten or more days];\n4. the sick, blind, and aged;\n5. those who are more than two farsakhs [6.8 miles] from a place of Friday prayer;\n6. those who find it difficult and hard to attend the Friday prayer on account of rain, severe cold, and suchlike.",
-          ur: "جب جمعہ کی ایک ایسی نماز قائم ہوجوشرائط کوپوراکرتی ہواورنماز قائم کرنے والاامام وقت یااس کا خاص نائب ہوتواس صورت میں نمازجمعہ کے لئے حاضر ہونا واجب ہے اوراس صورت کے علاوہ حاضرہوناواجب نہیں ہے۔پہلی صورت میں چند گروہ کےلئے نماز جمعہ میں حاضر ہونا واجب نہیں :\n(اول:) عورتیں ۔\n(دوم:) غلام۔\n(سوم:) مسافر۔ خواہ ایسا مسافر کیوں نہ ہو جس کا فریضہ پوری نماز پڑھناہوجیسے کسی مسافر نے ایک جگہ پر قصد اقامت کیاہے۔\n(چہارم:) بیمار اوراندھا اور بوڑھا ہو۔\n(پنجم:) وہ افراد جو ایسی جگہ رہتے ہیں جس کا فاصلہ نماز جمعہ کے قائم ہونے کی جگہ سے دو شرعی فرسخ سے زیادہ دوری پر ہو۔\n(ششم:)اسی طرح وہ شخص جس کے لئے جمعہ کی نمازمیں بارش یاسخت سردی وغیرہ کی وجہ سے حاضر ہونامشکل یادشوارہو۔"
+          en: "Whenever the Friday prayer takes place with all its conditions fulfilled, if the one establishing it is the infallible Imam (ʿA) or his specific representative, it is obligatory to attend it; otherwise, it is not obligatory. In the first situation, however, it is not obligatory for the following groups of people to attend:\n1. women;\n2. slaves;\n3. travellers, even those travellers whose duty is to perform the complete (tamām) form of the prayer, such as those who have made an intention to stay [at their destination for ten or more days];\n4. the sick, blind, and aged;\n5. those who are more than two farsakhs [6.8 miles] from a place of Friday prayer;\n6. those who find it difficult and hard to attend the Friday prayer on account of rain, severe cold, and suchlike."
         },
         basis: "fatwa",
         source: {
@@ -7801,12 +7545,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 720",
           url: "https://www.sistani.org/english/book/48/2210/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (720)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",

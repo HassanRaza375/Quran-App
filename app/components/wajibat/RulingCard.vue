@@ -59,10 +59,17 @@
           <a :href="marja.officialSite" target="_blank" rel="noopener noreferrer">his official website</a>.
         </p>
         <!-- Decision R11: the official English differs from the Persian original, so only the Urdu is shown. -->
-        <p v-if="entry.englishWithheld !== undefined" class="withheld-notice text-body-2 mb-2" role="note">
+        <p v-if="entry.englishWithheld !== undefined && !englishHeld" class="withheld-notice text-body-2 mb-2" role="note">
           <v-icon size="16" aria-hidden="true">mdi-translate</v-icon>
           The official English edition of this ruling differs from the Persian original, so only the official Urdu
           text (which matches the Persian) is shown. The app does not translate rulings itself.
+        </p>
+        <!-- Decision B1: an automated comparison found a difference; the version that matches the Persian is shown until a person checks. -->
+        <p v-if="englishHeld" class="withheld-notice text-body-2 mb-2" role="note">
+          <v-icon size="16" aria-hidden="true">mdi-translate</v-icon>
+          An automated comparison found a difference in numbers or negation between the official English of this
+          ruling and the Persian original, so only the official Urdu (which matches the Persian) is shown until a
+          person has checked it. The app does not translate rulings itself.
         </p>
 
         <!-- Urdu — only from the marja's official Urdu book (decision R1) -->
@@ -128,6 +135,7 @@ const recitations = computed(() =>
     .filter((r) => r && r.marjaId === props.marja.id)
 );
 const hasUrdu = computed(() => !!entry.value?.text.ur);
+const englishHeld = computed(() => /^Held for review/.test(entry.value?.englishWithheld ?? ""));
 const urduOnly = computed(() => !!entry.value?.urduOnly);
 const englishWithheld = computed(() => entry.value?.englishWithheld !== undefined);
 // Withheld English (R11) or no official English (P19): the Urdu is the only text shown, in every language mode.

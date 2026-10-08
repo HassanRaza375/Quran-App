@@ -334,6 +334,8 @@ HDR = """// GENERATED from the official texts, do not hand-edit the quoted strin
 // Revised (*) Sistani rulings were compared with the Urdu one by one (decision P6).
 // `basis` comes from the ruling's own opening words — never inferred beyond them (R3).
 """
+from holds import apply_holds, apply_holds_procs
+apply_holds(RULINGS); apply_holds_procs(PROCS)
 with open(OUT_RULINGS, "w", encoding="utf-8", newline="\n") as f:
     f.write("// Salat (§6.3, excluding doubts) rulings — Phase 3.\n//\n" + HDR + 'import type { Ruling } from "../types";\n\nexport const SALAT_RULINGS: Ruling[] = ' + ts(RULINGS) + ";\n")
 with open(OUT_PROCS, "w", encoding="utf-8", newline="\n") as f:

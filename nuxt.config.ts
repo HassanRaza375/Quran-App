@@ -1,4 +1,8 @@
 import vuetify from "vite-plugin-vuetify";
+import { assertNoUnreviewedHelpersInProduction } from "./app/utils/wajibatBuildGuard";
+
+// Decision B3: fails a production build if the Wajibat "show unreviewed helpers" dev flag is on.
+assertNoUnreviewedHelpersInProduction(process.env);
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

@@ -77,8 +77,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Kurr water is an amount of water that fills a container with dimensions [i.e. length, breadth, and depth] totalling thirty-six cubic hand spans, which is equivalent to approximately 384 litres.",
-          ur: "کُر پانی کی مقدار ظرف کی مساحت کے لحاظ سے ۳۶ بالشتہے جو تقریباً ۳۸۴ لیٹر ہوتا ہے۔"
+          en: "Kurr water is an amount of water that fills a container with dimensions [i.e. length, breadth, and depth] totalling thirty-six cubic hand spans, which is equivalent to approximately 384 litres."
         },
         basis: "fatwa",
         source: {
@@ -86,12 +85,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 14",
           url: "https://www.sistani.org/english/book/48/2119/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (14)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -188,8 +183,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If qalīl water is poured onto an impure object or an impure object comes into contact with qalīl water, the qalīl water becomes impure. However, if qalīl water is poured over an impure object from above, then the amount that comes into contact with the object is impure, and the amount that does not come into contact with it is pure.",
-          ur: "جب قلیل پانی کسی نجس چیز پرگرے یاکوئی نجس چیزاس پرگرے تو پانی نجس ہوجائے گا۔البتہ اگرپانی نجس چیزپراوپرسے گرے تواس کاجتناحصہ اس نجس چیز سے ملے گانجس ہوجائے گا،لیکن باقی پاک ہوگا۔"
+          en: "If qalīl water is poured onto an impure object or an impure object comes into contact with qalīl water, the qalīl water becomes impure. However, if qalīl water is poured over an impure object from above, then the amount that comes into contact with the object is impure, and the amount that does not come into contact with it is pure."
         },
         basis: "fatwa",
         source: {
@@ -197,12 +191,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 24",
           url: "https://www.sistani.org/english/book/48/2120/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (24)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -349,8 +339,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Mixed water – the meaning of which was mentioned in Ruling 13 – does not purify an impure object, and ritual bathing (ghusl) and ablution (wuḍūʾ) performed with it are invalid (bāṭil).",
-          ur: "مضاف پانی (جس کے معنی مسئلہ نمبر(۱۳ )میں بیان ہوچکے ہیں ) کسی نجس چیز کوپاک نہیں کرتا۔ایسے پانی سے وضواورغسل کرنابھی باطل ہے۔"
+          en: "Mixed water – the meaning of which was mentioned in Ruling 13 – does not purify an impure object, and ritual bathing (ghusl) and ablution (wuḍūʾ) performed with it are invalid (bāṭil)."
         },
         basis: "fatwa",
         source: {
@@ -358,12 +347,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 44",
           url: "https://www.sistani.org/english/book/48/2124/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (44)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -378,8 +363,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If an intrinsic impurity like blood or urine comes into contact with water and changes its smell, colour, or taste, it becomes impure even if it is kurr or flowing water. In fact, based on obligatory precaution, the water also becomes impure even if the smell, colour, or taste of the water changes by means of an impurity that is outside it; for example, an impure carcass that is lying by the side of the water changes the water’s smell.",
-          ur: "ایساپانی جس میں خون یاپیشاب جیسی عین نجاست مل جائے اور اس کی بو، رنگ یاذائقے کوتبدیل کردے نجس ہوجاتاہے خواہ وہ کر کے برابر یاجاری پانی ہی کیوں نہ ہو۔ تاہم اگراس پانی کی بو، رنگ یاذائقہ کسی ایسی نجاست سے تبدیل ہوجائے جو اس سے باہر ہے مثلاً قریب پڑے ہوئے مردار کی وجہ سے اس کی بوبدل جائے تو (احتیاط لازم کی بناپر)وہ نجس ہوجائے گا۔"
+          en: "If an intrinsic impurity like blood or urine comes into contact with water and changes its smell, colour, or taste, it becomes impure even if it is kurr or flowing water. In fact, based on obligatory precaution, the water also becomes impure even if the smell, colour, or taste of the water changes by means of an impurity that is outside it; for example, an impure carcass that is lying by the side of the water changes the water’s smell."
         },
         basis: "fatwa",
         source: {
@@ -387,13 +371,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 49",
           url: "https://www.sistani.org/english/book/48/2124/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (49)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -544,8 +524,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "It is unlawful (ḥarām) for one to empty his bowels and/or bladder in four places:\n1. in dead-end alleys without the owner’s consent. The same applies to public alleys and roads in the event that it causes harm to pedestrians;\n2. on the property of someone who has not given his consent for one to empty his bowels and/or bladder on it;\n3. in a place that is a charitable endowment (waqf) for use by particular groups, such as some schools;\n4. on the graves of believers, whether it is disrespectful to them or not, except if the land is al‑mubāḥāt al‑aṣliyyah. The same applies to any place where emptying one’s bowels and/or bladder causes dishonour to one of the sacred things of the religion or faith.",
-          ur: "چارجگہوں پررفع حاجت حرام ہے:\n(۱) بندگلی میں جب کہ وہاں رہنے والوں نے اس کی اجازت نہ دے رکھی ہواسی طرح عام راستوں اور گلیوں میں جب گزرنے والوں کے لئے تکلیف کاسبب ہو۔\n(۲) اس قطعۂ زمین میں جوکسی کی نجی ملکیت ہوجب کہ اس نے رفع حاجت کی اجازت نہ دے رکھی ہو۔\n(۳) ان جگہوں میں جومخصوص لوگوں کے لئے وقف ہوں ، مثلاً بعض مدرسے۔\n(۴) مومنین کی قبروں کے پاس جب کہ اس فعل سے ان کی بے حرمتی ہوتی ہوبلکہ بے حرمتی نہ بھی ہوتی ہو مگر یہ کہ زمین عام تصرفات اور مباحات میں ہو۔یہی صورت ہراس جگہ کی ہے جہاں رفع حاجت دین یامذہب کے مقدسات کی توہین کاموجب ہو۔"
+          en: "It is unlawful (ḥarām) for one to empty his bowels and/or bladder in four places:\n1. in dead-end alleys without the owner’s consent. The same applies to public alleys and roads in the event that it causes harm to pedestrians;\n2. on the property of someone who has not given his consent for one to empty his bowels and/or bladder on it;\n3. in a place that is a charitable endowment (waqf) for use by particular groups, such as some schools;\n4. on the graves of believers, whether it is disrespectful to them or not, except if the land is al‑mubāḥāt al‑aṣliyyah. The same applies to any place where emptying one’s bowels and/or bladder causes dishonour to one of the sacred things of the religion or faith."
         },
         hukm: "haram",
         basis: "fatwa",
@@ -554,12 +533,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 60",
           url: "https://www.sistani.org/english/book/48/2125/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (60)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -603,8 +578,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The urinary outlet does not become pure with anything other than water and washing it once is sufficient, although the recommended precaution is that it should be washed twice, and it is even better to wash it three times.",
-          ur: "پیشاب کامخرج پانی کے علاوہ کسی چیز سے پاک نہیں ہوتا۔اورایک مرتبہ دھوناکافی ہے،اگرچہ احتیاط مستحب کی بناپر دومرتبہ دھوناچاہئے اوربہتریہ ہے کہ تین مرتبہ دھوئیں ۔"
+          en: "The urinary outlet does not become pure with anything other than water and washing it once is sufficient, although the recommended precaution is that it should be washed twice, and it is even better to wash it three times."
         },
         basis: "fatwa",
         source: {
@@ -612,13 +586,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 62",
           url: "https://www.sistani.org/english/book/48/2125/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (62)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -769,8 +739,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether or not he has purified the anus or urinary outlet, it is necessary that he purify it even if he habitually purifies it immediately after emptying his bowels and/or bladder.",
-          ur: "اگرایک شخص کوشک ہوکہ مقعد پاک کیاہے یانہیں تواس پرلازم ہے کہ اسے پاک کرے اگرچہ پیشاب یاپاخانہ کرنے کے بعدوہ ہمیشہ متعلقہ مقام کوفوراً پاک کرتاہو۔"
+          en: "If a person doubts whether or not he has purified the anus or urinary outlet, it is necessary that he purify it even if he habitually purifies it immediately after emptying his bowels and/or bladder."
         },
         basis: "fatwa",
         source: {
@@ -778,12 +747,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 67",
           url: "https://www.sistani.org/english/book/48/2125/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (67)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -798,8 +763,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Istibrāʾ is a recommended (mustaḥabb) act performed by men after urinating in order to be confident that no urine is left in the urethra. It is performed in a number of ways; one way is as follows: after urinating, the anus is first purified if it has become impure; then, the middle finger of the left hand is slid three times from the anus up to the scrotum; then, the thumb is placed on the penis, and the forefinger is placed under the penis, and the thumb and forefinger are pulled three times along the penis up to the point of circumcision; finally, the end of the penis is pressed three times.",
-          ur: "استبراء ایک مستحب عمل ہے جومردپیشاب کرنے کے بعداس غرض سے انجام دیتے ہیں تاکہ اطمینان ہوجائے کہ اب پیشاب نلی میں باقی نہیں رہا۔ اس کی کئی ترکیبیں ہیں جن میں سے بہترین یہ ہے کہ پیشاب سے فارغ ہوجانے کے بعداگر مقعدنجس ہوگیاہوتوپہلے اسے پاک کرے اورپھرتین دفعہ بائیں ہاتھ کی درمیانی انگلی کے ساتھ مقعد سے لے کرعضوتناسل کی جڑتک سونتے اوراس کے بعدانگوٹھے کوعضو تناسل کے اوپراورانگوٹھے کے ساتھ والی انگلی کواس کے نیچے رکھے اورتین دفعہ سپاری تک سونتے اورپھرتین دفعہ سپاری کوفشار دیں ۔"
+          en: "Istibrāʾ is a recommended (mustaḥabb) act performed by men after urinating in order to be confident that no urine is left in the urethra. It is performed in a number of ways; one way is as follows: after urinating, the anus is first purified if it has become impure; then, the middle finger of the left hand is slid three times from the anus up to the scrotum; then, the thumb is placed on the penis, and the forefinger is placed under the penis, and the thumb and forefinger are pulled three times along the penis up to the point of circumcision; finally, the end of the penis is pressed three times."
         },
         hukm: "mustahab",
         basis: "fatwa",
@@ -808,12 +772,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 69",
           url: "https://www.sistani.org/english/book/48/2126/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (69)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -852,8 +812,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The fluid that sometimes comes out of the penis due to sexual arousal, called ‘madhī’, is pure. The fluid that sometimes comes out after the ejaculation of semen, called ‘wadhī’, is also pure. As for fluid that sometimes comes out after urinating and which is called ‘wadī’, it is pure if it has not come into contact with urine. Furthermore, in the event that a man performs istibrāʾ after urinating and then fluid comes out and he doubts whether it is urine or one of these three fluids, it is pure.",
-          ur: "وہ رطوبت جوکبھی کبھی شہوت کی بنا پر مرد کے آلۂ تناسل سے خارج ہوتی ہے اسے مذی کہتے ہیں اوروہ پاک ہے۔اس کے علاوہ وہ رطوبت جوکبھی کبھی منی کے بعدخارج ہوتی ہے، جسے وذی کہاجاتاہے یاوہ رطوبت جوبعض اوقات پیشاب کے بعدنکلتی ہے اوراسے ودی کہاجاتاہے پاک ہے، بشرطیکہ اس میں پیشاب کی آمیزش نہ ہو۔مزیدیہ کہ جب کسی شخص نے پیشاب کے بعد استبراء کیاہواوراس کے بعدرطوبت خارج ہوجس کے بارے میں شک ہوکہ وہ پیشاب ہے یامذکورہ بالاتین رطوبتوں میں سے کوئی ایک تووہ بھی پاک ہے۔"
+          en: "The fluid that sometimes comes out of the penis due to sexual arousal, called ‘madhī’, is pure. The fluid that sometimes comes out after the ejaculation of semen, called ‘wadhī’, is also pure. As for fluid that sometimes comes out after urinating and which is called ‘wadī’, it is pure if it has not come into contact with urine. Furthermore, in the event that a man performs istibrāʾ after urinating and then fluid comes out and he doubts whether it is urine or one of these three fluids, it is pure."
         },
         basis: "fatwa",
         source: {
@@ -861,12 +820,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 70",
           url: "https://www.sistani.org/english/book/48/2126/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (70)",
-          url: "https://www.sistani.org/urdu/book/61/3627/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -987,8 +942,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Ten things are impure [intrinsically]:\n1. urine;\n2. faeces;\n3. semen;\n4. corpse;\n5. blood;\n6. dog;\n7. pig;\n8. disbeliever (kāfir);\n9. wine;\n10. the sweat of an excrement-eating animal.",
-          ur: "دس چیزیں نجس ہیں :\n۱)پیشاب\n۲)پاخانہ\n۳)منی\n۴)مردار\n۵)خون\n۶،۷)کتااورسور\n۸)کافر\n۹)شراب\n۱۰)نجاست خورحیوان کاپسینہ۔"
+          en: "Ten things are impure [intrinsically]:\n1. urine;\n2. faeces;\n3. semen;\n4. corpse;\n5. blood;\n6. dog;\n7. pig;\n8. disbeliever (kāfir);\n9. wine;\n10. the sweat of an excrement-eating animal."
         },
         basis: "fatwa",
         source: {
@@ -996,12 +950,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 80",
           url: "https://www.sistani.org/english/book/48/2128/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (80)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -1046,8 +996,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The urine and droppings of birds whose meat is unlawful are pure, but it is better to avoid them [i.e. it is better not to treat them as being pure].",
-          ur: "جن پرندوں کاگوشت حرام ہے ان کاپیشاب اورفضلہ پاک ہے، لیکن اس سے پرہیز بہترہے۔"
+          en: "The urine and droppings of birds whose meat is unlawful are pure, but it is better to avoid them [i.e. it is better not to treat them as being pure]."
         },
         basis: "fatwa",
         source: {
@@ -1055,12 +1004,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 82",
           url: "https://www.sistani.org/english/book/48/2129/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (82)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1099,8 +1044,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The semen of a man and every male animal whose meat is unlawful and whose blood gushes out is impure. The fluid that comes out of a woman following sexual arousal and causes her to be in a state of ritual impurity (janābah) – as per the details that will be mentioned in Ruling 345 – has the ruling of semen. Furthermore, based on obligatory precaution, the semen of an animal whose meat is lawful (ḥalāl) and whose blood gushes out must be avoided [i.e. it is ruled to be impure].",
-          ur: "مرد کی اورہراس حرام گوشت نر جانور کی منی نجس ہے جس کاخون جہندہ (ذبح ہوتے وقت اس کی شہ رگ سے اچھل کرنکلے۔)ہو اور وہ رطوبت جو شہوت کے وقت عورتوں سے خارج ہوتی ہے اور اس کی جنابت کاسبب قرار پاتی ہے(جس کاتفصیلی بیان مسئلہ ( ۳۴۵ )میں آئے گا) منی کے حکم میں ہےاور احتیاط واجب کی بناپروہ حلال گوشت نر حیوان جس کا خون جہندہ ہے اس کی منی سے پرہیز کرناچاہیے۔"
+          en: "The semen of a man and every male animal whose meat is unlawful and whose blood gushes out is impure. The fluid that comes out of a woman following sexual arousal and causes her to be in a state of ritual impurity (janābah) – as per the details that will be mentioned in Ruling 345 – has the ruling of semen. Furthermore, based on obligatory precaution, the semen of an animal whose meat is lawful (ḥalāl) and whose blood gushes out must be avoided [i.e. it is ruled to be impure]."
         },
         basis: "fatwa",
         source: {
@@ -1108,13 +1052,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 84",
           url: "https://www.sistani.org/english/book/48/2130/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (84)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1288,8 +1228,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The blood of a human being and every animal whose blood gushes out (i.e. an animal whose blood runs out with a gush when its jugular vein is cut) is impure. Therefore, the blood of an animal whose blood does not gush out, such as fish or mosquitoes, is pure.",
-          ur: "انسان اورخون جہندہ رکھنے والے(یعنی اگر اس کی رگ کاٹی جائے تو خون اچھل کرنکلتا ہو) ہرحیوان کاخون نجس ہے۔ پس ایسے جانوروں ، مثلاً مچھلی اورمچھرکاخون جواچھل کرنہیں نکلتاپاک ہے۔"
+          en: "The blood of a human being and every animal whose blood gushes out (i.e. an animal whose blood runs out with a gush when its jugular vein is cut) is impure. Therefore, the blood of an animal whose blood does not gush out, such as fish or mosquitoes, is pure."
         },
         basis: "fatwa",
         source: {
@@ -1297,12 +1236,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 93",
           url: "https://www.sistani.org/english/book/48/2132/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (93)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1498,8 +1433,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "There are three ways to establish the impurity of an object:\n1. one is certain, or is confident by rational means, that the object is impure. If one only supposes (i.e. has a ẓann) that an object is impure, it is not necessary for him to avoid it and it is ruled to be pure. Therefore, there is no problem in eating in public places, restaurants, and guesthouses where the people who eat there are unconcerned about religious matters and who do not observe laws relating to what is pure and what is impure, as long as one is not confident that the food brought to him is impure;\n2. someone who is in possession of an object says it is impure; for example, one’s spouse or domestic worker says that a utensil or something else that they have in their possession is impure;\n3. two dutiful men say that an object is impure, on condition that they give the reason for its impurity; for example, they say that the object has come into contact with blood or urine. If one dutiful man, or another reliable person, says something is impure but one does not attain confidence in what he says, the obligatory precaution is that one must avoid that thing [i.e. it is ruled to be impure].",
-          ur: "ہرچیز کی نجاست تین طریقوں سے ثابت ہوتی ہے:\n(اول:) خودانسان کویقین ہو یا عاقلانہ روش کی بنا پر اطمینان ہوکہ فلاں چیز نجس ہے۔ اگرکسی چیز کے متعلق محض گمان ہوکہ نجس ہے تواس سے پرہیزکرنالازم نہیں ۔ لہٰذاقہوہ خانوں اور ہوٹلوں میں جہاں لاپروا لوگ اورایسے افراد کھاتے پیتے ہیں جونجاست اورطہارت کالحاظ نہیں کرتے کھاناکھانے کی صورت یہ ہے کہ جب تک انسان کو اطمینان نہ ہوکہ جو کھانااس کے لئے لایاگیاہے وہ نجس ہے اس کے کھانے میں کوئی حرج نہیں ۔\n(دوم:) کسی کے پاس کوئی چیزہواوروہ اس چیز کے بارے میں کہے کہ نجس ہے مثلاً کسی شخص کی بیوی یانوکریاملازمہ کہے کہ برتن یاکوئی دوسری چیزجواس کے پاس ہے نجس ہے تووہ نجس شمارہوگی۔\n(سوم:) اگردوعادل آدمی کہیں کہ ایک چیزنجس ہے تووہ نجس شمار ہوگی بشرطیکہ وہ اس کے نجس ہونے کی وجہ بیان کریں ۔جیسے یہ کہیں کہ یہ چیز خون یا پیشاب سےمل گئی ہے اور اگر ایک عادل مرد یا قابل اعتماد شخص خبر دے اور اس کے کہنے سےاطمینان پیدا نہ ہوتو احتیاط واجب کی بنا پر اس چیز سے پرہیز کیاجائے۔"
+          en: "There are three ways to establish the impurity of an object:\n1. one is certain, or is confident by rational means, that the object is impure. If one only supposes (i.e. has a ẓann) that an object is impure, it is not necessary for him to avoid it and it is ruled to be pure. Therefore, there is no problem in eating in public places, restaurants, and guesthouses where the people who eat there are unconcerned about religious matters and who do not observe laws relating to what is pure and what is impure, as long as one is not confident that the food brought to him is impure;\n2. someone who is in possession of an object says it is impure; for example, one’s spouse or domestic worker says that a utensil or something else that they have in their possession is impure;\n3. two dutiful men say that an object is impure, on condition that they give the reason for its impurity; for example, they say that the object has come into contact with blood or urine. If one dutiful man, or another reliable person, says something is impure but one does not attain confidence in what he says, the obligatory precaution is that one must avoid that thing [i.e. it is ruled to be impure]."
         },
         basis: "fatwa",
         source: {
@@ -1507,13 +1441,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 115",
           url: "https://www.sistani.org/english/book/48/2137/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (115)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -1581,8 +1511,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a pure object touches an impure object and both or one of them is wet – such that the wetness of one transfers onto the other – the pure object also becomes impure; however, it does not become impure through multiple intermediaries [i.e. the spread of impurity is limited to two intermediaries].\nAn example: if the right hand has become impure (mutanajjis) with urine, and [after drying,] that hand touches the left hand with a new wetness, this touching causes the left hand to become impure; and if after drying, the left hand touches something else, such as some clothing, with a new wetness, the clothing also becomes impure; but, if the clothing touches some other object with a new wetness, that other object is not ruled to be impure. Therefore, the third intermediary [the clothing in the example above] is impure but it does not make anything impure. Furthermore, if the wetness is so little that it does not transfer onto another object, the pure object does not become impure even if it touches an intrinsic impurity.",
-          ur: "اگرکوئی پاک چیز کسی نجس چیز سے لگ جائے اوردونوں یاان میں سے ایک اس قدرترہوکہ ایک کی تری دوسری تک پہنچ جائے توپاک چیزبھی نجس ہوجائے گی لیکن کئی واسطوں سے چیز نجس نہیں ہوگی۔ مثلاً اگردایاں ہاتھ پیشاب سے نجس ہوجائے اورپھریہ ہاتھ نئی رطوبت کے ساتھ بائیں ہاتھ کو چھو جائے توبایاں ہاتھ نجس ہوجائے گا۔اب اگربایاں ہاتھ خشک ہونے کے بعدمثلاً تر لباس سے چھوجائے تووہ لباس بھی نجس ہوجائے گالیکن اگراب وہ ترلباس کسی دوسری تر چیز کولگ جائے تووہ چیزنجس نہیں ہوگی اوراگرتری اتنی کم ہوکہ دوسری چیزکونہ لگے توپاک چیز نجس نہیں ہوگی خواہ وہ عین نجس کوہی کیوں نہ لگی ہو۔"
+          en: "If a pure object touches an impure object and both or one of them is wet – such that the wetness of one transfers onto the other – the pure object also becomes impure; however, it does not become impure through multiple intermediaries [i.e. the spread of impurity is limited to two intermediaries].\nAn example: if the right hand has become impure (mutanajjis) with urine, and [after drying,] that hand touches the left hand with a new wetness, this touching causes the left hand to become impure; and if after drying, the left hand touches something else, such as some clothing, with a new wetness, the clothing also becomes impure; but, if the clothing touches some other object with a new wetness, that other object is not ruled to be impure. Therefore, the third intermediary [the clothing in the example above] is impure but it does not make anything impure. Furthermore, if the wetness is so little that it does not transfer onto another object, the pure object does not become impure even if it touches an intrinsic impurity."
         },
         basis: "fatwa",
         source: {
@@ -1590,12 +1519,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 119",
           url: "https://www.sistani.org/english/book/48/2138/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (119)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1719,8 +1644,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A person who does not believe in Allah or His oneness is impure.",
-          ur: "کافریعنی وہ شخص جوباری تعالیٰ کے وجود یااس کی وحدانیت کامنکر ہو نجس ہے"
+          en: "A person who does not believe in Allah or His oneness is impure."
         },
         basis: "fatwa",
         excerpt: true,
@@ -1729,12 +1653,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 103",
           url: "https://www.sistani.org/english/book/48/2134/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (103)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     panel: "persons"
@@ -1805,8 +1725,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The same applies to a person who rejects prophethood or any one of the indispensable aspects of the religion – such as prayers (ṣalāh) and fasting (ṣawm) – if it is in a way that it amounts to refuting Prophet Muḥammad (Ṣ), albeit in a general manner.",
-          ur: "اسی طرح وہ شخص جوکسی نبی کی نبوت یاضروریات دین یعنی وہ چیزیں جنہیں مسلمان دین کاجزسمجھتے ہیں ، مثلاً نمازاورروزےمیں سے کسی ایک کایہ جانتے ہوئے کہ یہ ضروریات دین ہیں ،منکرہو اگر اس طرح انکار کریں کہ اس سے پیغمبر کی تکذیب لازم قرار پائے خواہ اجمالی طور سے ہی کیوں نہ ہو"
+          en: "The same applies to a person who rejects prophethood or any one of the indispensable aspects of the religion – such as prayers (ṣalāh) and fasting (ṣawm) – if it is in a way that it amounts to refuting Prophet Muḥammad (Ṣ), albeit in a general manner."
         },
         basis: "fatwa",
         excerpt: true,
@@ -1815,12 +1734,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 103",
           url: "https://www.sistani.org/english/book/48/2134/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (103)",
-          url: "https://www.sistani.org/urdu/book/61/3628/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2133,8 +2048,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Water makes an impure object pure provided that four conditions are met:\n1. the water must be unmixed; therefore, mixed water such as rose water and willow essence does not make an impure object pure;\n2. the water must be pure;\n3. when an impure object is washed, the water must not turn into mixed water before the object has become pure; and in cases where only one wash is required, the water must not attain the smell, colour, or taste of the impurity. However, in other cases, there is no problem if the water changes; for example, if a person washes an object with kurr or qalīl water and it is necessary to wash that object twice, then even if in the first wash the water changes its colour, smell, or taste because of the impurity, if in the second wash he purifies the object with water that does not change, the object becomes pure;\n4. after washing an impure object, small particles of the intrinsic impurity must not remain on the object. Purifying an impure object with qalīl water – i.e. water that is less than kurr – has other conditions, which will be mentioned later.",
-          ur: "پانی چارشرطوں کے ساتھ نجس چیز کوپاک کرتاہے:\n۱:) پانی مطلق ہو۔ مضاف پانی مثلاً عرق گلاب یاعرق بیدمشک سے نجس چیز پاک نہیں ہوتی۔\n۲:) پانی پاک ہو۔\n۳:) نجس چیزکودھونے کے دوران پانی مضاف نہ بن جائے۔اور وہ دھونا جسکے بعد دوبارہ دھونا ضروری نہیں ہے اس صورت میں اس کا رنگ مزہ اور نجاست کی بو نہ تبدیل ہوئی ہو اس کے علاوہ اگردھونے کی صورت اس سے مختلف ہو (یعنی وہ آخری دھونانہ ہو) اورپانی کی بو، رنگ یا ذائقہ بدل جائے تواس میں کوئی حرج نہیں ۔ مثلاً، اگرکوئی چیزکرپانی یاقلیل پانی سے دھوئی جائے اور اسے دومرتبہ دھوناضروری ہوتوخواہ پانی کی بو،رنگ یاذائقہ پہلی دفعہ دھونے کے وقت بدل جائے، لیکن دوسری دفعہ استعمال کئے جانے والے پانی میں ایسی کوئی تبدیلی رونمانہ ہو تووہ چیزپاک ہو جائے گی۔\n۴:) نجس چیزکوپانی سے دھونے کے بعداس میں عین نجاست کے ذرات باقی نہ رہیں ۔\nنجس چیز کوقلیل پانی یعنی ایک کرسے کم پانی سے پاک کرنے کی کچھ اورشرائط بھی ہیں جن کاذکربعد میں آئے گا:"
+          en: "Water makes an impure object pure provided that four conditions are met:\n1. the water must be unmixed; therefore, mixed water such as rose water and willow essence does not make an impure object pure;\n2. the water must be pure;\n3. when an impure object is washed, the water must not turn into mixed water before the object has become pure; and in cases where only one wash is required, the water must not attain the smell, colour, or taste of the impurity. However, in other cases, there is no problem if the water changes; for example, if a person washes an object with kurr or qalīl water and it is necessary to wash that object twice, then even if in the first wash the water changes its colour, smell, or taste because of the impurity, if in the second wash he purifies the object with water that does not change, the object becomes pure;\n4. after washing an impure object, small particles of the intrinsic impurity must not remain on the object. Purifying an impure object with qalīl water – i.e. water that is less than kurr – has other conditions, which will be mentioned later."
         },
         basis: "fatwa",
         source: {
@@ -2142,12 +2056,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 143",
           url: "https://www.sistani.org/english/book/48/2141/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (143)",
-          url: "https://www.sistani.org/urdu/book/61/3629/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2162,8 +2072,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The impure inside of a utensil must be washed three times with qalīl water. Similarly, [it must be washed three times] with kurr, flowing, or rainwater, based on obligatory precaution. A utensil that a dog has licked or drank water or some other liquid out of must first be scrubbed with pure soil; then, that soil must be discarded and the utensil washed twice with qalīl, kurr, or flowing water. If a dog’s saliva falls into a utensil or its sweat, urine, or excrement touches the inside of it, or if a wet part of a dog’s body touches the inside of a utensil, then based on obligatory precaution, the utensil must first be scrubbed with soil and then washed three times with water. If a dog licks something other than a utensil, such as a person’s hand, the rule for utensils does not apply and scrubbing it with soil is not necessary; instead, washing it once is sufficient.",
-          ur: "نجس برتن کے اندرونی حصے کوقلیل پانی سے تین دفعہ دھوناضروری ہے اورکریاجاری پانی یا بارش کا بھی احتیاط واجب کی بناپریہی حکم ہے، لیکن جس برتن سے کتے نے پانی یاکوئی اورمائع چیزپی ہواسے پہلے پاک مٹی سے مانجھناچاہئے پھراس برتن سے مٹی کودورکرناچاہئے، اس کے بعدقلیل یاکریاجاری پانی سے دودفعہ دھوناچاہئے۔ اسی طرح اگرکتے نے کسی برتن کوچاٹاہو تواسے دھونے سے پہلے مٹی سے مانجھ لیناضروری ہے، البتہ اگرکتے کالعاب کسی برتن میں گرجائے یا بدن کا کوئی حصہ اس سے چھو جائے تو احتیاط لازم کی بناپراسے مٹی سے مانجھنے کے بعدتین دفعہ پانی سے دھوناضروری ہے۔"
+          en: "The impure inside of a utensil must be washed three times with qalīl water. Similarly, [it must be washed three times] with kurr, flowing, or rainwater, based on obligatory precaution. A utensil that a dog has licked or drank water or some other liquid out of must first be scrubbed with pure soil; then, that soil must be discarded and the utensil washed twice with qalīl, kurr, or flowing water. If a dog’s saliva falls into a utensil or its sweat, urine, or excrement touches the inside of it, or if a wet part of a dog’s body touches the inside of a utensil, then based on obligatory precaution, the utensil must first be scrubbed with soil and then washed three times with water. If a dog licks something other than a utensil, such as a person’s hand, the rule for utensils does not apply and scrubbing it with soil is not necessary; instead, washing it once is sufficient."
         },
         basis: "fatwa",
         source: {
@@ -2171,13 +2080,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 144",
           url: "https://www.sistani.org/english/book/48/2141/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (144)",
-          url: "https://www.sistani.org/urdu/book/61/3629/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2222,8 +2127,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person wants to wash with qalīl water an object that has become impure with urine, in the event that water is poured over it once and separates from it and urine does not remain on the object, it becomes pure. However, with clothing and a person’s body, water must be poured over it twice for it to become pure. As for washing clothing, rugs, and similar things with qalīl water, one must wring them until the remaining water comes out. (The meaning of ‘the remaining water’ is water that usually drips out by itself or by wringing at the time of washing and after washing.)",
-          ur: "اگرکسی ایسی چیزکوجوپیشاب سے نجس ہوگئی ہوقلیل پانی سے دھونا مقصود ہوتواس پرایک دفعہ یوں پانی بہادیں کہ پیشاب اس چیز میں باقی نہ رہے تووہ چیز پاک ہوجائے گی۔ البتہ لباس اوربدن پردودفعہ پانی بہاناضروری ہے تاکہ پاک ہو جائیں ۔ لیکن جہاں تک لباس، قالین، دری اوران سے ملتی جلتی چیزوں کاتعلق ہے انہیں ہر دفعہ پانی ڈالنے کے بعدنچوڑناچاہئے تاکہ غسالہ(دھوون) ان میں سے نکل جائے۔ (غسالہ یادھوون اس پانی کوکہتے ہیں جوکسی دھوئی جانے والی چیز سے دھلنے کے دوران یادھل جانے کے بعدخودبخودیانچوڑنے سے نکلتاہے)۔"
+          en: "If a person wants to wash with qalīl water an object that has become impure with urine, in the event that water is poured over it once and separates from it and urine does not remain on the object, it becomes pure. However, with clothing and a person’s body, water must be poured over it twice for it to become pure. As for washing clothing, rugs, and similar things with qalīl water, one must wring them until the remaining water comes out. (The meaning of ‘the remaining water’ is water that usually drips out by itself or by wringing at the time of washing and after washing.)"
         },
         basis: "fatwa",
         source: {
@@ -2231,12 +2135,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 154",
           url: "https://www.sistani.org/english/book/48/2141/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (154)",
-          url: "https://www.sistani.org/urdu/book/61/3629/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2465,8 +2365,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The sun purifies earth, buildings, and walls on five conditions:\n1. the impure object is sufficiently wet, such that were something else to come into contact with it, the latter would become wet. Therefore, if the object is dry, it must be wetted by some means so that the sun can then dry it;\n2. no intrinsic impurity remains on the impure object;\n3. nothing prevents the sun from shining on the impure object. Therefore, if the sun shines on the impure object from behind a curtain or cloud etc. and makes it dry, the object does not become pure. However, there is no problem if the cloud is so thin that it does not prevent the sun from shining on the object;\n4. the sun must dry the impure object by itself. Therefore, if, for example, an impure object is dried by both the wind and the sun, it does not become pure. However, there is no problem if the drying of the object can be commonly attributed to the sun shining on it;\n5. the sun must dry the building that is impure in one go. Therefore, if one time the sun shines on impure earth or a building and it dries its surface and another time it dries its underside, then only its surface becomes pure and its underside remains impure.",
-          ur: "سورج :زمین، عمارت اوردیوارکوپانچ شرطوں کے ساتھ پاک کرتاہے:\n(اول:)نجس چیزاس طرح ترہوکہ اگردوسری چیزاس سے لگے توترہوجائے، لہٰذااگروہ چیزخشک ہوتواسے کسی طرح ترکرلیناچاہئے تاکہ دھوپ سے خشک ہو۔\n(دوم:) اگرکسی چیز میں عین نجاست ہوتودھوپ سے خشک کرنے سے پہلے اس چیزسے نجاست کودورکرلیاجائے۔\n(سوم:) کوئی چیز دھوپ میں رکاوٹ نہ ڈالے۔ پس اگردھوپ پردے، بادل یا ایسی ہی کسی چیز کے پیچھے سے نجس چیزپرپڑے اوراسے خشک کردے تووہ چیزپاک نہیں ہوگی البتہ اگربادل اتناہلکاہوکہ دھوپ کونہ روکے توکوئی حرج نہیں ۔\n(چہارم:) فقط سورج نجس چیزکوخشک کرے۔ لہٰذامثال کے طورپراگرنجس چیز ہوا اوردھوپ سے خشک ہوتوپاک نہیں ہوتی۔ ہاں اگراس کے خشک ہونے کی نسبت سورج کی طرف دی جائے تو اس کے پاک ہونے میں اشکال نہیں ہے۔\n(پنجم:) بنیاداورعمارت کے جس حصے میں نجاست سرایت کرگئی ہے دھوپ سے ایک ہی مرتبہ خشک ہوجائے۔ پس اگرایک دفعہ دھوپ نجس زمین اورعمارت پرپڑے اور اس کاسامنے والاحصہ خشک کرے اوردوسری دفعہ نچلے حصے کوخشک کرے تواس کاسامنے والا حصہ پاک ہوگااورنچلاحصہ نجس رہے گا۔"
+          en: "The sun purifies earth, buildings, and walls on five conditions:\n1. the impure object is sufficiently wet, such that were something else to come into contact with it, the latter would become wet. Therefore, if the object is dry, it must be wetted by some means so that the sun can then dry it;\n2. no intrinsic impurity remains on the impure object;\n3. nothing prevents the sun from shining on the impure object. Therefore, if the sun shines on the impure object from behind a curtain or cloud etc. and makes it dry, the object does not become pure. However, there is no problem if the cloud is so thin that it does not prevent the sun from shining on the object;\n4. the sun must dry the impure object by itself. Therefore, if, for example, an impure object is dried by both the wind and the sun, it does not become pure. However, there is no problem if the drying of the object can be commonly attributed to the sun shining on it;\n5. the sun must dry the building that is impure in one go. Therefore, if one time the sun shines on impure earth or a building and it dries its surface and another time it dries its underside, then only its surface becomes pure and its underside remains impure."
         },
         basis: "fatwa",
         source: {
@@ -2474,12 +2373,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 185",
           url: "https://www.sistani.org/english/book/48/2143/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (185)",
-          url: "https://www.sistani.org/urdu/book/61/3629/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2571,8 +2466,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a disbeliever declares in any language the shahādatayn (two testimonies) – i.e. he testifies to the oneness of Allah the Exalted and to the prophethood of the Seal of the Prophets [Prophet Muḥammad (Ṣ)] – he becomes a Muslim. In the event that he was previously ruled to be impure based on obligatory precaution, then, after becoming a Muslim, his body, saliva, nasal mucus, and sweat are pure. However, if at the time of becoming a Muslim an intrinsic impurity is on his body, it must be removed and that part of his body must be washed; and if the intrinsic impurity is removed before he becomes a Muslim, then based on obligatory precaution, that part of his body must be washed.",
-          ur: "اگرکوئی کافرشہادتین پڑھ لے (یعنی کسی بھی زبان میں اللہ کی وحدانیت اورخاتم الانبیاء حضرت محمدصلی اللہ علیہ وآلہٖ وسلم کی نبوت کی گواہی دے دے) تو مسلمان ہوجاتاہے اوراگرچہ وہ مسلمان ہونے سے پہلے نجس کے حکم میں تھا، لیکن مسلمان ہو جانے کے بعداس کابدن، تھوک، ناک کاپانی اور پسینہ پاک ہوجاتاہے۔ لیکن مسلمان ہونے کے وقت اگراس کے بدن پرکوئی عین نجاست ہوتواسے دور کرنااوراس مقام کو پانی سے دھوناضروری ہے، بلکہ اگرمسلمان ہونے سے پہلے ہی عین نجاست دورہوچکی ہو تب بھی احتیاط واجب یہ ہے کہ اس مقام کوپانی سے دھوڈالے۔"
+          en: "If a disbeliever declares in any language the shahādatayn (two testimonies) – i.e. he testifies to the oneness of Allah the Exalted and to the prophethood of the Seal of the Prophets [Prophet Muḥammad (Ṣ)] – he becomes a Muslim. In the event that he was previously ruled to be impure based on obligatory precaution, then, after becoming a Muslim, his body, saliva, nasal mucus, and sweat are pure. However, if at the time of becoming a Muslim an intrinsic impurity is on his body, it must be removed and that part of his body must be washed; and if the intrinsic impurity is removed before he becomes a Muslim, then based on obligatory precaution, that part of his body must be washed."
         },
         basis: "fatwa",
         source: {
@@ -2580,13 +2474,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 205",
           url: "https://www.sistani.org/english/book/48/2147/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (205)",
-          url: "https://www.sistani.org/urdu/book/61/3629/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2601,8 +2491,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person is certain or confident that an impure object has become pure, or two dutiful (ʿādil) people testify to it having become pure and their testimony concerns the reason for it having become pure, then the object is pure; for example, they testify that an item of clothing that had become impure with urine has been washed twice. The same applies if a person who is in possession of an impure object says that it has become pure, and he is not suspected to be someone whose word in this case cannot be accepted; or, if a Muslim washes an impure object with the intention of making it pure, even if it is not known whether he has washed it properly or not.",
-          ur: "اگرکسی شخص کویقین یااطمینان ہوکہ جوچیزپہلے نجس تھی اب پاک ہے یا دوعادل اشخاص اس کے پاک ہونے کی خبردیں اوران کی شہادت اس چیزکی پاکیزگی کا جواز بنے تووہ چیزپاک ہے اسی طرح اگروہ شخص جس کے پاس کوئی نجس چیزہو کہے کہ وہ چیزپاک ہوگئی ہےمثلاً کوئی اس بات کےلئے گواہی دے کہ پیشاب سےنجس کپڑے کو دوبار دھویا گیاہے اور وہ غلط بیان نہ ہویاکسی مسلمان نے ایک نجس چیز کودھویا ہو اگرچہ یہ معلوم نہ ہوکہ اس نے اسے ٹھیک طرح سے دھویاہے یانہیں تووہ چیزبھی پاک ہے۔"
+          en: "If a person is certain or confident that an impure object has become pure, or two dutiful (ʿādil) people testify to it having become pure and their testimony concerns the reason for it having become pure, then the object is pure; for example, they testify that an item of clothing that had become impure with urine has been washed twice. The same applies if a person who is in possession of an impure object says that it has become pure, and he is not suspected to be someone whose word in this case cannot be accepted; or, if a Muslim washes an impure object with the intention of making it pure, even if it is not known whether he has washed it properly or not."
         },
         basis: "fatwa",
         source: {
@@ -2610,12 +2499,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 221",
           url: "https://www.sistani.org/english/book/48/2151/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (221)",
-          url: "https://www.sistani.org/urdu/book/61/3629/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2779,8 +2664,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In wuḍūʾ, washing the face and arms once is obligatory, twice recommended, and three times or more unlawful. The first washing is complete when one pours – with the intention (qaṣd) of performing wuḍūʾ – an amount of water onto the face or arms that covers them completely, such that there is no need to take any further measures to ensure that the water has reached the required area. Therefore, if, for example, one pours water ten times onto his face until the water covers his face completely, and he does this with the intention of the first wash, there is no problem [i.e. the first wash will be deemed to have taken place correctly]. Until he does not make the intention of performing wuḍūʾ and washing his face, for example, the first wash is not deemed to have taken place. Therefore, he can pour water onto his entire face a number of times and on the last time he pours water, he can make the intention of a wuḍūʾ washing. However, the validity of such an intention for the second washing is problematic, and the obligatory precaution is that one must not pour water onto his face and arms more than one time after the first washing, even if it is not with the intention of performing wuḍūʾ.",
-          ur: "وضو میں چہرے اورہاتھوں کاایک دفعہ دھوناواجب، دوسری دفعہ دھونا مستحب اورتیسری دفعہ یااس سے زیادہ باردھوناحرام ہے۔ ایک دفعہ دھونااس وقت مکمل ہوگاجب وضو کی نیت سے اتنا پانی چہرے یاہاتھ پرڈالے کہ وہ پانی پورے چہرے یا ہاتھ پرپہنچ جائے اوراحتیاطاً کوئی جگہ باقی نہ رہے، لہٰذا اگرپہلی دفعہ دھونے کی نیت سے دس باربھی پانی ڈالےتاکہ پانی ہر جگہ پہنچ جائے تواس میں کوئی حرج نہیں ہے یعنی جب تک مثلاً وضوکرنے یاچہرہ دھونے کی نیت نہ کرے پہلی باردھوناشمارنہیں ہوگا۔ لہٰذا اگر چاہے توچندبار چہرہ کودھولے اور آخری بارچہرہ دھوتے وقت وضوکی نیت کرسکتاہے، لیکن دوسری دفعہ دھونے میں نیت کا معتبرہونااشکال سے خالی نہیں ہے اوراحتیاط لازم یہ ہے کہ اگرچہ وضو کی نیت سے نہ بھی ہوایک دفعہ دھونے کے بعدایک بارسے زائد چہرے یاہاتھوں کونہ دھوئے۔"
+          en: "In wuḍūʾ, washing the face and arms once is obligatory, twice recommended, and three times or more unlawful. The first washing is complete when one pours – with the intention (qaṣd) of performing wuḍūʾ – an amount of water onto the face or arms that covers them completely, such that there is no need to take any further measures to ensure that the water has reached the required area. Therefore, if, for example, one pours water ten times onto his face until the water covers his face completely, and he does this with the intention of the first wash, there is no problem [i.e. the first wash will be deemed to have taken place correctly]. Until he does not make the intention of performing wuḍūʾ and washing his face, for example, the first wash is not deemed to have taken place. Therefore, he can pour water onto his entire face a number of times and on the last time he pours water, he can make the intention of a wuḍūʾ washing. However, the validity of such an intention for the second washing is problematic, and the obligatory precaution is that one must not pour water onto his face and arms more than one time after the first washing, even if it is not with the intention of performing wuḍūʾ."
         },
         basis: "fatwa",
         source: {
@@ -2788,13 +2672,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 247",
           url: "https://www.sistani.org/english/book/48/2154/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (247)",
-          url: "https://www.sistani.org/urdu/book/61/3630/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2972,8 +2852,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Wiping performed on socks or shoes is invalid. However, if one is unable to remove his socks or shoes on account of severe cold, or fear of thieves or predatory animals etc., then the obligatory precaution is that after he has wiped on his shoes or socks, he must also perform tayammum. If it is a matter of taqiyyah, it is sufficient if he only wipes over his socks or shoes.",
-          ur: "موزے اورجوتے پرمسح کرناباطل ہے۔ ہاں اگرسخت سردی کی وجہ سے یاچوریادرندے وغیرہ کے خوف سے جوتے یاموزے نہ اتارے جاسکیں تواحتیاط واجب یہ ہے کہ موزے اورجوتے پرمسح کرے اورتیمم بھی کرے اورتقیہ کی صورت میں موزے اورجوتے پرمسح کرناکافی ہے۔"
+          en: "Wiping performed on socks or shoes is invalid. However, if one is unable to remove his socks or shoes on account of severe cold, or fear of thieves or predatory animals etc., then the obligatory precaution is that after he has wiped on his shoes or socks, he must also perform tayammum. If it is a matter of taqiyyah, it is sufficient if he only wipes over his socks or shoes."
         },
         basis: "fatwa",
         source: {
@@ -2981,13 +2860,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 258",
           url: "https://www.sistani.org/english/book/48/2154/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (258)",
-          url: "https://www.sistani.org/urdu/book/61/3630/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3108,8 +2983,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Performing wuḍūʾ with usurped (ghaṣbī) water, or with water about which it is not known if its owner consents to its use or not, is unlawful and invalid. Furthermore, if wuḍūʾ water drips from one’s face or arms onto a usurped place, or if the place in which one performs wuḍūʾ is usurped, in the event that he cannot perform wuḍūʾ in any other place, his responsibility (taklīf) is to perform tayammum; and if he can perform wuḍūʾ in another place, it is necessary for him to perform wuḍūʾ in that other place. However, in the event that he performs wuḍūʾ in the usurped place, thus committing a sin, his wuḍūʾ is still valid.",
-          ur: "ایسے پانی سے وضوکرناجوغصبی ہویاجس کے بارے میں علم نہ ہوکہ اس کامالک اس کے استعمال پرراضی ہے یانہیں حرام اورباطل ہے۔اس کےعلاوہ اگرچہرے اورہاتھوں سے وضوکاپانی غصب کی ہوئی جگہ پرگرتاہویاوہ جگہ جس میں وضو کر رہاہے غصبی ہے اوروضوکرنے کے لئے کوئی اور جگہ بھی نہ ہوتومتعلقہ شخص کافریضہ تیمم ہے اوراگرکسی دوسری جگہ وضوکرسکتاہوتوضروری ہے کہ دوسری جگہ وضوکرے۔لیکن اگر دونوں صورتوں میں گناہ کاارتکاب کرتے ہوئے اسی جگہ وضوکرلے تواس کاوضو صحیح ہے۔"
+          en: "Performing wuḍūʾ with usurped (ghaṣbī) water, or with water about which it is not known if its owner consents to its use or not, is unlawful and invalid. Furthermore, if wuḍūʾ water drips from one’s face or arms onto a usurped place, or if the place in which one performs wuḍūʾ is usurped, in the event that he cannot perform wuḍūʾ in any other place, his responsibility (taklīf) is to perform tayammum; and if he can perform wuḍūʾ in another place, it is necessary for him to perform wuḍūʾ in that other place. However, in the event that he performs wuḍūʾ in the usurped place, thus committing a sin, his wuḍūʾ is still valid."
         },
         basis: "fatwa",
         source: {
@@ -3117,12 +2991,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 266",
           url: "https://www.sistani.org/english/book/48/8295/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (266)",
-          url: "https://www.sistani.org/urdu/book/61/3630/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -3216,8 +3086,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If there is a gap in between the acts of wuḍūʾ to the extent that the acts of wuḍūʾ cannot be commonly regarded as being performed in close succession, the wuḍūʾ is invalid. However, this does not apply if a legitimate excuse (ʿudhr) arises; for example, one forgets that he is performing wuḍūʾ, or the water runs out. In fact, when one wants to wash or wipe a place, if the moisture on all the places he has already washed or wiped has dried up, the wuḍūʾ is invalid. If only the moisture on the place that comes before the area he wants to wash or wipe has dried up – for example, when he wants to wash his left arm, the moisture on his right arm has dried up but his face is still wet – then his wuḍūʾ is valid.",
-          ur: "اگروضوکے افعال کے درمیان اتنافاصلہ ہوجائے کہ عرف عام میں متواتردھونانہ کہلائے تو وضوباطل ہے، لیکن اگرکسی شخص کوکوئی عذرپیش آجائے( مثلاً یہ کہ بھول جائے یاپانی ختم ہوجائے) تواس صورت میں بلافاصلہ دھونے کی شرط معتبرنہیں ہے۔ بلکہ وضوکرنے والاشخص جس وقت چاہے کسی عضو کودھولے یااس کامسح کرلے تواس اثنا میں اگران مقامات کی تری خشک ہوجائے جنہیں وہ پہلے دھوچکاہویاجس کامسح کرچکا ہو تووضوباطل ہوگا،لیکن اگرجس عضوکودھوناہے یامسح کرناہے صرف اس سے پہلے دھوئے ہوئے یامسح کئے ہوئے عضوکی تری خشک ہوگئی ہومثلاً جب بایاں ہاتھ دھوتے وقت دائیں ہاتھ کی تری خشک ہوچکی ہولیکن چہرہ ترہوتووضو صحیح ہے۔"
+          en: "If there is a gap in between the acts of wuḍūʾ to the extent that the acts of wuḍūʾ cannot be commonly regarded as being performed in close succession, the wuḍūʾ is invalid. However, this does not apply if a legitimate excuse (ʿudhr) arises; for example, one forgets that he is performing wuḍūʾ, or the water runs out. In fact, when one wants to wash or wipe a place, if the moisture on all the places he has already washed or wiped has dried up, the wuḍūʾ is invalid. If only the moisture on the place that comes before the area he wants to wash or wipe has dried up – for example, when he wants to wash his left arm, the moisture on his right arm has dried up but his face is still wet – then his wuḍūʾ is valid."
         },
         basis: "fatwa",
         source: {
@@ -3225,12 +3094,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 282",
           url: "https://www.sistani.org/english/book/48/8295/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (282)",
-          url: "https://www.sistani.org/urdu/book/61/3630/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3375,8 +3240,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether he has performed wuḍūʾ or not, he must [deem that he has not and] perform wuḍūʾ.",
-          ur: "اگرکسی شخص کوشک ہوکہ اس نے وضوکیاہے یانہیں توضروری ہے کہ وضوکرے۔"
+          en: "If a person doubts whether he has performed wuḍūʾ or not, he must [deem that he has not and] perform wuḍūʾ."
         },
         basis: "fatwa",
         source: {
@@ -3384,12 +3248,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 300",
           url: "https://www.sistani.org/english/book/48/2157/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (300)",
-          url: "https://www.sistani.org/urdu/book/61/3630/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3431,8 +3291,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If during or after prayers one learns that his wuḍūʾ or ghusl was invalid, or that he started performing prayers without wuḍūʾ or ghusl, he must perform the prayer again with wuḍūʾ or ghusl; and if the time for the prayer has expired, he must make it up.",
-          ur: "اگرنمازکے دوران کسی شخص کا دھیان اس طرف جائے کہ اس کا وضو یا غسل باطل تھایا وضویاغسل کئے بغیرنمازپڑھنے لگاہے توضروری ہے دوبارہ وضویاغسل کے ساتھ نماز پڑھے اوراگرنمازکاوقت گزرگیاہو تواس کی قضاکرے۔"
+          en: "If during or after prayers one learns that his wuḍūʾ or ghusl was invalid, or that he started performing prayers without wuḍūʾ or ghusl, he must perform the prayer again with wuḍūʾ or ghusl; and if the time for the prayer has expired, he must make it up."
         },
         basis: "fatwa",
         source: {
@@ -3440,12 +3299,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 1251",
           url: "https://www.sistani.org/english/book/48/2263/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1251)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3660,8 +3515,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "It is obligatory to perform wuḍūʾ for six things:\n1. for obligatory prayers – except the funeral prayer (ṣalāt al‑mayyit) – and for recommended prayers;\n2. for a sajdah and tashahhud that have been forgotten if between them and the prayer one has done something that invalidates wuḍūʾ; for example, he has urinated. It is not obligatory, however, to perform wuḍūʾ for the two prostrations for inadvertence (sajdatā al‑sahw);\n3. for the obligatory circumambulation (ṭawāf) of the Kaʿbah that is part of hajj or ʿumrah;\n4. if one had made a vow (nadhr) or a covenant (ʿahd) or had taken an oath (qasam) that he would perform wuḍūʾ;\n5. if one had made a vow that, for example, he would kiss the writing of the Qur’an;\n6. for washing a copy of the Qur’an that has become impure or for taking it out from a lavatory and such places, in the event that he is obliged to touch the writing of the Qur’an with his hand or with some other part of his body. However, in the event that the delay that would be caused by performing wuḍūʾ would result in further disrespect to the Qur’an, one must take the Qur’an out from the lavatory and such places – or wash it if it has become impure – without performing wuḍūʾ.",
-          ur: "چھ چیزوں کے لئے وضوکرناواجب ہے:\n(اول:)واجب نمازوں کے لئے سوائے نمازمیت کے اورمستحب نمازوں میں وضوشرط صحت ہے۔\n(دوم:) اس سجدے اورتشہدکے لئے جوایک شخص بھول گیاہوجب کہ ان کے اور نماز کے درمیان کوئی حدث اس سے سرزدہواہومثلاً اس نے پیشاب کیاہو، لیکن سجدئہ سہو کے لئے وضوکرناواجب نہیں ۔\n(سوم:) خانۂ کعبہ کے واجب طواف کے لئے جو حج اورعمرہ کاجزہو۔\nچہارم:) وضوکرنے کی منت مانی ہو یاعہدکیاہویاقسم کھائی ہو۔\n(پنجم:) جب کسی نے منت مانی ہوکہ مثلاً قرآن مجید کابوسہ لے گا۔\n(ششم:) نجس شدہ قرآن مجیدکودھونے کے لئے یابیت الخلاء وغیرہ سے نکالنے کے لئے جب کہ متعلقہ شخص مجبورہوکراس مقصدکے لئے اپناہاتھ یابدن کاکوئی اور حصہ قرآن مجید کے الفاظ سے مس کرے لیکن، وضومیں صرف ہونے والاوقت اگرقرآن مجید کو دھونے یااسے بیت الخلاء سے نکالنے میں اتنی تاخیر کاباعث ہوجس سے کلام اللہ کی بے حرمتی ہوتی ہوتوضروری ہے کہ وہ وضو کئے بغیر قرآن مجید کوبیت الخلاء وغیرہ سے باہر نکال لے یا اگرنجس ہوگیاہوتواسے دھوڈالے۔"
+          en: "It is obligatory to perform wuḍūʾ for six things:\n1. for obligatory prayers – except the funeral prayer (ṣalāt al‑mayyit) – and for recommended prayers;\n2. for a sajdah and tashahhud that have been forgotten if between them and the prayer one has done something that invalidates wuḍūʾ; for example, he has urinated. It is not obligatory, however, to perform wuḍūʾ for the two prostrations for inadvertence (sajdatā al‑sahw);\n3. for the obligatory circumambulation (ṭawāf) of the Kaʿbah that is part of hajj or ʿumrah;\n4. if one had made a vow (nadhr) or a covenant (ʿahd) or had taken an oath (qasam) that he would perform wuḍūʾ;\n5. if one had made a vow that, for example, he would kiss the writing of the Qur’an;\n6. for washing a copy of the Qur’an that has become impure or for taking it out from a lavatory and such places, in the event that he is obliged to touch the writing of the Qur’an with his hand or with some other part of his body. However, in the event that the delay that would be caused by performing wuḍūʾ would result in further disrespect to the Qur’an, one must take the Qur’an out from the lavatory and such places – or wash it if it has become impure – without performing wuḍūʾ."
         },
         hukm: "wajib",
         basis: "fatwa",
@@ -3670,12 +3524,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 315",
           url: "https://www.sistani.org/english/book/48/2158/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (315)",
-          url: "https://www.sistani.org/urdu/book/61/3630/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -3884,8 +3734,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A person becomes junub in two ways:\n1. sexual intercourse;\n2. ejaculation of semen, whether he is asleep or awake, and whether it is a little or a lot, with or without lust, voluntarily or involuntarily.",
-          ur: "دوچیزوں سے انسان مجنب ہوجاتاہے: اول: جماع اور دوم: منی کے خارج ہونے خواہ وہ نیند کی حالت میں نکلے یاجاگتے میں ، کم ہویازیادہ، شہوت کے ساتھ نکلے یابغیر شہوت کے اور اس کانکلنامتعلقہ شخص کے اختیار میں ہویانہ ہو۔"
+          en: "A person becomes junub in two ways:\n1. sexual intercourse;\n2. ejaculation of semen, whether he is asleep or awake, and whether it is a little or a lot, with or without lust, voluntarily or involuntarily."
         },
         basis: "fatwa",
         source: {
@@ -3893,12 +3742,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 344",
           url: "https://www.sistani.org/english/book/48/2162/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (344)",
-          url: "https://www.sistani.org/urdu/book/61/3631/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4023,8 +3868,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Five things are unlawful for a junub:\n1. touching the writing of the Qur’an or the name of Allah the Exalted with any part of the body as per the details that were mentioned in the section on wuḍūʾ;\n2. entering Masjid al-Ḥarām and the Mosque of the Prophet (Ṣ), even to the extent of entering from one door and exiting from another;\n3. staying in other mosques; and similarly, based on obligatory precaution, staying in the shrines of the Infallible Imams (ʿA). However, there is no problem if a junub passes through a mosque; for example, by entering from one door and exiting from another;\n4. entering a mosque to take something from it; and similarly, based on obligatory precaution, placing something in it even if he does not enter the mosque himself [but places something in it from outside];\n5. reciting any of the verses for which sajdah is obligatory. These verses are found in four chapters (surahs) of the Qur’an:\na. Sūrat al-Sajdah (Chapter 32), verse 15;\nb. Sūrat Fuṣṣilat (Chapter 41), verse 37;\nc. Sūrat al-Najm (Chapter 53), verse 62;\nd. Sūrat al-ʿAlaq (Chapter 96), verse 19.",
-          ur: "پانچ چیزیں جُنُب شخص پرحرام ہیں :\n(اول:) اپنے بدن کاکوئی حصہ قرآن مجیدکے الفاظ یااللہ تعالیٰ کے نام سے خواہ وہ کسی بھی زبان میں ہومس کرنااوربہتریہ ہے کہ پیغمبروں ، اماموں اور حضرت زہرا علیہم السلام کے ناموں سے بھی اپنابدن مس نہ کرے۔\n(دوم:) مسجدالحرام اورمسجدنبویؐ میں جاناخواہ ایک دروازے سے داخل ہو کر دوسرے دروازے سے نکل آئے۔\n(سوم:) مسجدوں میں ٹھہرنااور( احتیاط واجب کی بناپر)اماموں کے حرم میں ٹھہرنے کابھی یہی حکم ہے، لیکن اگران مسجدوں میں سے کسی مسجد کوعبور کرے مثلاً ایک دروازے سے داخل ہوکردوسرے سے باہر نکل جائے تو کوئی حرج نہیں ۔\n(چہارم:) احتیاط لازم کی بناپرکسی مسجدمیں کوئی چیزرکھنے یا کوئی چیزاٹھانے کے لئے داخل ہونااگرچہ اس کام کےلئے خودمسجد میں داخل نہ ہو۔\n(پنجم:) ان آیات میں سے کسی آیت کاپڑھناجن کے پڑھنے سے سجدہ واجب ہو جاتاہے اوروہ آیتیں چارسورتوں میں ہیں :\n(۱) قرآن مجیدکا ۳۲ واں سورۂ سجدہ(الٓمّٓ تنزیل)،پندرہویں آیت\n(۲) ۴۱ واں سورۂ فصّلت(حٰمٓ سجدہ)، آیت نمبر۳۷\n(۳)۵۳ واں سورۂ( وَالنَّجْم)، آیت نمبر۔۶۲\n(۴) ۹۲ واں سورۂ (عَلَق)، آیت نمبر۱۹"
+          en: "Five things are unlawful for a junub:\n1. touching the writing of the Qur’an or the name of Allah the Exalted with any part of the body as per the details that were mentioned in the section on wuḍūʾ;\n2. entering Masjid al-Ḥarām and the Mosque of the Prophet (Ṣ), even to the extent of entering from one door and exiting from another;\n3. staying in other mosques; and similarly, based on obligatory precaution, staying in the shrines of the Infallible Imams (ʿA). However, there is no problem if a junub passes through a mosque; for example, by entering from one door and exiting from another;\n4. entering a mosque to take something from it; and similarly, based on obligatory precaution, placing something in it even if he does not enter the mosque himself [but places something in it from outside];\n5. reciting any of the verses for which sajdah is obligatory. These verses are found in four chapters (surahs) of the Qur’an:\na. Sūrat al-Sajdah (Chapter 32), verse 15;\nb. Sūrat Fuṣṣilat (Chapter 41), verse 37;\nc. Sūrat al-Najm (Chapter 53), verse 62;\nd. Sūrat al-ʿAlaq (Chapter 96), verse 19."
         },
         hukm: "haram",
         basis: "fatwa",
@@ -4033,13 +3877,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 354",
           url: "https://www.sistani.org/english/book/48/2163/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (354)",
-          url: "https://www.sistani.org/urdu/book/61/3631/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4109,8 +3949,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Two types of ghusls for janābah can be performed: sequential (tartībī) and immersive (irtimāsī).",
-          ur: "غسل جنابت دوطریقوں سے انجام دیاجاسکتاہے: ترتیبی اور ارتماسی۔"
+          en: "Two types of ghusls for janābah can be performed: sequential (tartībī) and immersive (irtimāsī)."
         },
         basis: "fatwa",
         source: {
@@ -4118,12 +3957,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 359",
           url: "https://www.sistani.org/english/book/48/2165/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (359)",
-          url: "https://www.sistani.org/urdu/book/61/3631/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4193,8 +4028,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In instantaneous immersive ghusl, water must cover the entire body in one go. However, it is not necessary for the entire body to be out of the water before starting the ghusl; rather, it is sufficient if part of the body is out of the water and the person goes under the water completely with the intention of performing ghusl.",
-          ur: "غسل ارتماسی دفعی میں ضروری ہے کہ ایک لمحے میں پورے بدن کے ساتھ پانی میں ڈبکی لگائے، لیکن غسل کرنے سے پہلے ایک شخص کے سارے بدن کا پانی سے باہر ہونامعتبرنہیں ہے۔بلکہ اگربدن کاکچھ حصہ پانی سے باہرہو اورغسل کی نیت سے پانی میں غوطہ لگائے توکافی ہے۔"
+          en: "In instantaneous immersive ghusl, water must cover the entire body in one go. However, it is not necessary for the entire body to be out of the water before starting the ghusl; rather, it is sufficient if part of the body is out of the water and the person goes under the water completely with the intention of performing ghusl."
         },
         basis: "fatwa",
         source: {
@@ -4202,12 +4036,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 366",
           url: "https://www.sistani.org/english/book/48/2167/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (366)",
-          url: "https://www.sistani.org/urdu/book/61/3631/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4515,8 +4345,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Someone who must perform a number of obligatory ghusls can perform one ghusl with the intention of all of them. Similarly, if he makes the intention of one of the ghusls, it is sufficient for the others [and he does not have to make separate intentions].",
-          ur: "جس شخص پرکئی غسل واجب ہوں وہ ان سب کی نیت کرکے ایک غسل کر سکتاہے اور ظاہر یہ ہے کہ اگران میں سے کسی ایک مخصوص غسل کاقصد کرے تو وہ باقی غسلوں کے لئے بھی کافی ہے۔"
+          en: "Someone who must perform a number of obligatory ghusls can perform one ghusl with the intention of all of them. Similarly, if he makes the intention of one of the ghusls, it is sufficient for the others [and he does not have to make separate intentions]."
         },
         basis: "fatwa",
         source: {
@@ -4524,12 +4353,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 387",
           url: "https://www.sistani.org/english/book/48/2168/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (387)",
-          url: "https://www.sistani.org/urdu/book/61/3631/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4568,8 +4393,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Someone who has performed the ghusl for janābah must not perform wuḍūʾ for prayers. He can perform prayers without performing wuḍūʾ after other obligatory ghusls as well, except the ghusl for medium istiḥāḍah. Furthermore, [he can perform prayers without performing wuḍūʾ] with recommended ghusls – which will be discussed in Ruling 633 – although the recommended precaution is that [if he has performed a recommended ghusl], he should also perform wuḍūʾ.",
-          ur: "جس شخص نے غسل جنابت کیاہوضروری نہیں ہے کہ نماز کے لئے وضو بھی کرے بلکہ دوسرے واجب غسلوں کے بعدبھی( سوائے غسل استحاضۂ متوسطہ کے) اور مستحب غسلوں کے جن کاذکرمسئلہ (۶۳۳ )میں آئے گابغیر وضو نماز پڑھ سکتاہے اگرچہ احتیاط مستحب یہ ہے کہ وضو بھی کرے۔"
+          en: "Someone who has performed the ghusl for janābah must not perform wuḍūʾ for prayers. He can perform prayers without performing wuḍūʾ after other obligatory ghusls as well, except the ghusl for medium istiḥāḍah. Furthermore, [he can perform prayers without performing wuḍūʾ] with recommended ghusls – which will be discussed in Ruling 633 – although the recommended precaution is that [if he has performed a recommended ghusl], he should also perform wuḍūʾ."
         },
         basis: "fatwa",
         source: {
@@ -4577,13 +4401,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 389",
           url: "https://www.sistani.org/english/book/48/2168/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (389)",
-          url: "https://www.sistani.org/urdu/book/61/3631/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4830,8 +4650,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Ḥayḍ cannot last for less than three days or more than ten days; if bleeding lasts for even a little less than three days, it is not ḥayḍ.",
-          ur: "حیض کی مدت تین دن سے کم اوردس دن سے زیادہ نہیں ہوتی اور اگرخون آنے کی مدت تین دن سے بھی کم ہوتووہ حیض نہیں ہوگا۔"
+          en: "Ḥayḍ cannot last for less than three days or more than ten days; if bleeding lasts for even a little less than three days, it is not ḥayḍ."
         },
         basis: "fatwa",
         source: {
@@ -4839,12 +4658,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 438",
           url: "https://www.sistani.org/english/book/48/2171/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (438)",
-          url: "https://www.sistani.org/urdu/book/61/3632/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -4884,8 +4699,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Certain things are unlawful for a ḥāʾiḍ:\n1. to perform those ritual acts of worship that must be performed with wuḍūʾ, ghusl, or tayammum – such as prayers – if she does so with the intention of performing a valid act. However, there is no problem if she performs ritual acts of worship for which wuḍūʾ, ghusl, or tayammum is not necessary, such as ṣalāt al‑mayyit;\n2. all the things that are unlawful for a junub, as mentioned in the rules of janābah;\n3. vaginal intercourse, which is unlawful for both the man and the woman even if the penis penetrates only to the point of circumcision and the man does not ejaculate. In fact, the obligatory precaution is that the penis must not penetrate even less than the point of circumcision. This law does not apply to anal intercourse; however, based on obligatory precaution, anal intercourse with a woman without her consent – whether she is ḥāʾiḍ or not – is not permitted.",
-          ur: "چندچیزیں حائض پرحرام ہیں :\n۱:) نمازاوراس جیسی دیگرعبادتیں جنہیں وضویاغسل یاتیمم کے ساتھ اداکرنا ضروری ہے۔اگر حائض عورت ان جیسے اعمال کو عمل صحیح کے طورپر بجالائے تو جائز نہیں ہے لیکن ان عبادتوں کے اداکرنے میں کوئی حرج نہیں جن کے لئے وضو، غسل یا تیمم کرناضروری نہیں (جیسے نماز میت)۔\n۲:) وہ تمام چیزیں جومجنب پرحرام ہیں اوران کاذکرجنابت کے احکام میں آچکاہے۔\n۳:) عورت کی شرم گاہ میں جماع کرناجومرداورعورت دونوں کے لئے حرام ہے خواہ دخول صرف سپاری کی حد تک ہی ہواورمنی بھی خارج نہ ہوبلکہ احتیاط واجب یہ ہے کہ سپاری سے کم مقدارمیں بھی دخول نہ کیاجائےاور یہ حکم دبر(پیچھے کی شرم گاہ) میں مجامعت کو شامل نہیں کرتا لیکن احتیاط کی بناء پر عورت کی دبر میں اگر راضی نہ ہوتو چاہے حائض ہو یا نہ ہو جائز نہیں ہے۔"
+          en: "Certain things are unlawful for a ḥāʾiḍ:\n1. to perform those ritual acts of worship that must be performed with wuḍūʾ, ghusl, or tayammum – such as prayers – if she does so with the intention of performing a valid act. However, there is no problem if she performs ritual acts of worship for which wuḍūʾ, ghusl, or tayammum is not necessary, such as ṣalāt al‑mayyit;\n2. all the things that are unlawful for a junub, as mentioned in the rules of janābah;\n3. vaginal intercourse, which is unlawful for both the man and the woman even if the penis penetrates only to the point of circumcision and the man does not ejaculate. In fact, the obligatory precaution is that the penis must not penetrate even less than the point of circumcision. This law does not apply to anal intercourse; however, based on obligatory precaution, anal intercourse with a woman without her consent – whether she is ḥāʾiḍ or not – is not permitted."
         },
         hukm: "haram",
         basis: "fatwa",
@@ -4894,13 +4708,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 448",
           url: "https://www.sistani.org/english/book/48/2172/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (448)",
-          url: "https://www.sistani.org/urdu/book/61/3632/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5069,8 +4879,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "It is possible for a pregnant woman and a breastfeeding woman to menstruate. The ruling of a pregnant woman and a non-pregnant woman is the same except that if a pregnant woman who has a habit of time experiences bleeding with the attributes of ḥayḍ after the passing of twenty days from the first day of her habit, it is necessary for her, based on obligatory precaution, to do the things that a mustaḥāḍah must do and refrain from doing the things that are unlawful for a ḥāʾiḍ to do.",
-          ur: "حاملہ اوربچے کودودھ پلانے والی عورت کوبھی حیض آناممکن ہے اور حاملہ اور غیر حاملہ کا حکم ایک ہی ہے۔ بس فرق یہ ہے کہ حاملہ عورت اپنی عادت کے ایام شروع ہونے کے بیس روزبعد بھی اگرحیض کی علامتوں کے ساتھ خون دیکھے تواس کے لئے (احتیاط کی بناپر)ضروری ہے کہ وہ ان کاموں کوترک کردے جنہیں حائض ترک کرتی ہے اور مستحاضہ کے افعال بھی بجالائے۔"
+          en: "It is possible for a pregnant woman and a breastfeeding woman to menstruate. The ruling of a pregnant woman and a non-pregnant woman is the same except that if a pregnant woman who has a habit of time experiences bleeding with the attributes of ḥayḍ after the passing of twenty days from the first day of her habit, it is necessary for her, based on obligatory precaution, to do the things that a mustaḥāḍah must do and refrain from doing the things that are unlawful for a ḥāʾiḍ to do."
         },
         basis: "fatwa",
         source: {
@@ -5078,13 +4887,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 435",
           url: "https://www.sistani.org/english/book/48/2171/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (435)",
-          url: "https://www.sistani.org/urdu/book/61/3632/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5124,8 +4929,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "There are six categories of women in menstruation:\n1. a woman with a habit of time and duration: this is a woman who on two consecutive months starts her period at a fixed time, and the number of days on which she has her period is the same in each of the two months. For example, in two consecutive months she experiences bleeding from the first of the month until the seventh;\n2. a woman with a habit of time: this is a woman who on two consecutive months starts her period at a fixed time but the number of days on which she has her period is not the same in each of the two months. For example, in two consecutive months she experiences bleeding on the first of the month, but in the first month her bleeding stops on the seventh day and in the second month it stops on the eighth day;\n3. a woman with a habit of duration: this is a woman who has her period for the same number of days on two consecutive months but the time when her bleeding starts in each of the two months is not the same. For example, in the first month she experiences bleeding from the fifth to the tenth of the month and in the second month from the twelfth to the seventeenth;\n4. a woman with a disordered habit (muḍṭaribah): this is a woman who, for several months, experiences a period but does not have a fixed habit with regard to this [neither of time nor duration], or her habit has been disturbed and she has not yet formed a new habit;\n5. a menarcheal woman (mubtadiʾah): this is a woman who experiences bleeding for the first time;\n6. a forgetful woman (nāsiyah): this is a woman who has forgotten the habit of her period.\nSpecific rules apply to each of these categories, which will be discussed in the following rulings.",
-          ur: "حائض کی چھ قسمیں ہیں :\n۱): وقت اور عددکی عادت رکھنے والی عورت: یہ وہ عورت ہے جسے یکے بعد دیگرے دو مہینوں میں ایک معین وقت پرحیض آئے اور اس کے حیض کے دنوں کی تعداد بھی دونوں مہینوں میں ایک جیسی ہو۔مثلاً اسے یکے بعددیگرے دومہینوں میں مہینے کی پہلی تاریخ سے ساتویں تاریخ تک خون آتاہو۔\n۲): وقت کی عادت رکھنے والی عورت : یہ وہ عورت ہے جسے یکے بعددیگرے دو مہینوں میں معین وقت پر حیض آئے، لیکن اس کے حیض کے دنوں کی تعداد دونوں مہینوں میں ایک جیسی نہ ہو۔مثلاً یکے بعددیگرے دو مہینوں میں اسے مہینے کی پہلی تاریخ سے خون آناشروع ہولیکن وہ پہلے مہینے میں ساتویں دن اور دوسرے مہینے میں آٹھویں دن خون سے پاک ہو۔\n۳): عددکی عادت رکھنے والی عورت: یہ وہ عورت ہے جس کے حیض کے دنوں کی تعداد یکے بعددیگرے دومہینوں میں ایک جیسی ہولیکن ہرمہینے خون آنے کاوقت یکساں نہ ہو۔ مثلاً پہلے مہینے میں اسے پانچویں سے دسویں تاریخ تک اور دوسرے مہینے میں بارھویں سے سترھویں تاریخ تک خون آتاہو۔\n۴): مضطربہ : یہ وہ عورت ہے جسے چندمہینے خون آیاہولیکن اس کی عادت معین نہ ہوئی ہویااس کی سابقہ عادت بگڑ گئی ہواورنئی عادت نہ بنی ہو۔\n۵): مبتدئہ: یہ وہ عورت ہے جسے پہلی دفعہ خون آیاہو۔\n۶): ناسیہ : یہ وہ عورت ہے جواپنی عادت بھول چکی ہو۔\nان میں سے ہرقسم کی عورت کے لئے علیٰحدہ علیٰحدہ احکام ہیں جن کاذکرآئندہ مسائل میں کیاجائے گا۔"
+          en: "There are six categories of women in menstruation:\n1. a woman with a habit of time and duration: this is a woman who on two consecutive months starts her period at a fixed time, and the number of days on which she has her period is the same in each of the two months. For example, in two consecutive months she experiences bleeding from the first of the month until the seventh;\n2. a woman with a habit of time: this is a woman who on two consecutive months starts her period at a fixed time but the number of days on which she has her period is not the same in each of the two months. For example, in two consecutive months she experiences bleeding on the first of the month, but in the first month her bleeding stops on the seventh day and in the second month it stops on the eighth day;\n3. a woman with a habit of duration: this is a woman who has her period for the same number of days on two consecutive months but the time when her bleeding starts in each of the two months is not the same. For example, in the first month she experiences bleeding from the fifth to the tenth of the month and in the second month from the twelfth to the seventeenth;\n4. a woman with a disordered habit (muḍṭaribah): this is a woman who, for several months, experiences a period but does not have a fixed habit with regard to this [neither of time nor duration], or her habit has been disturbed and she has not yet formed a new habit;\n5. a menarcheal woman (mubtadiʾah): this is a woman who experiences bleeding for the first time;\n6. a forgetful woman (nāsiyah): this is a woman who has forgotten the habit of her period.\nSpecific rules apply to each of these categories, which will be discussed in the following rulings."
         },
         basis: "fatwa",
         source: {
@@ -5133,12 +4937,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 468",
           url: "https://www.sistani.org/english/book/48/2173/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (468)",
-          url: "https://www.sistani.org/urdu/book/61/3632/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     sensitive: true
@@ -5222,8 +5022,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "From the time the first part of a baby’s body comes out of its mother’s womb, the bleeding that a woman experiences for ten days is the bleeding of nifās, on condition that it can be called ‘the bleeding of childbirth’. A woman in the state of nifās is called a ‘nufasāʾ’.",
-          ur: "بچے کاپہلاجزءماں کے پیٹ سے باہر آنے کے وقت سے جو خون عورت کودس دن کے دوران آتا ہے تووہ خون نفاس ہے اس شرط کے ساتھ کہ ولادت کا خون اس پر صادق آئے اور نفاس کی حالت میں عورت کو’’ نفساء‘‘ کہتے ہیں ۔"
+          en: "From the time the first part of a baby’s body comes out of its mother’s womb, the bleeding that a woman experiences for ten days is the bleeding of nifās, on condition that it can be called ‘the bleeding of childbirth’. A woman in the state of nifās is called a ‘nufasāʾ’."
         },
         basis: "fatwa",
         source: {
@@ -5231,12 +5030,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 497",
           url: "https://www.sistani.org/english/book/48/2181/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (497)",
-          url: "https://www.sistani.org/urdu/book/61/3632/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5306,8 +5101,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The things that are obligatory for a ḥāʾiḍ are also obligatory for a nufasāʾ. And based on obligatory precaution, the following are unlawful for a nufasāʾ: entering a mosque (however, merely passing through a mosque is permitted), staying in a mosque, passing through the ‘Two Mosques’ (i.e. Masjid al-Ḥarām and the Mosque of the Prophet (Ṣ)), reciting the verses that have obligatory sajdah, and touching the writing of the Qur’an and the name of Allah the Exalted.",
-          ur: "جو چیز حائض پر واجب ہے وہ نفساء پربھی واجب ہے اور بنا بر احتیاط واجب مسجد میں ٹھہرنا،عبور کئے بغیر داخل ہونا، دو مسجدوں (مسجد الحرام، مسجد پیغمبرؐ)سے عبور کرنا،آیات سجدۂ واجب کا پڑھنا اور قرآنی الفاظ و نام خدا کامس کرنا نفساء پر حرام ہے۔"
+          en: "The things that are obligatory for a ḥāʾiḍ are also obligatory for a nufasāʾ. And based on obligatory precaution, the following are unlawful for a nufasāʾ: entering a mosque (however, merely passing through a mosque is permitted), staying in a mosque, passing through the ‘Two Mosques’ (i.e. Masjid al-Ḥarām and the Mosque of the Prophet (Ṣ)), reciting the verses that have obligatory sajdah, and touching the writing of the Qur’an and the name of Allah the Exalted."
         },
         basis: "fatwa",
         source: {
@@ -5315,13 +5109,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 502",
           url: "https://www.sistani.org/english/book/48/2181/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (502)",
-          url: "https://www.sistani.org/urdu/book/61/3632/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     sensitive: true
@@ -5474,8 +5264,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If procuring water or using it causes someone hardship or excessive difficulty that cannot normally be endured, he can perform tayammum. However, if he endures it and performs wuḍūʾ or ghusl, his wuḍūʾ or ghusl is valid.",
-          ur: "اگر پانی کا مہیا یااستعمال کرنا اس کےلئے مشقت و دشواری کا سبب ہوجو عام طور سے برداشت نہیں کیا جاتا تو تیمم کرسکتا ہے لیکن اگر وہ برداشت کرے اور وضو یا غسل کرے تو اس کا وضو یا غسل صحیح ہے۔\nتیمم کی پانچویں صورت: پیاس بجھانے کےلئے پانی کی ضرورت"
+          en: "If procuring water or using it causes someone hardship or excessive difficulty that cannot normally be endured, he can perform tayammum. However, if he endures it and performs wuḍūʾ or ghusl, his wuḍūʾ or ghusl is valid."
         },
         basis: "fatwa",
         source: {
@@ -5483,12 +5272,8 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 662",
           url: "https://www.sistani.org/english/book/48/2199/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (662)",
-          url: "https://www.sistani.org/urdu/book/61/3636/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -5742,8 +5527,7 @@ export const TAHARAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Three things are obligatory when performing tayammum in place of wuḍūʾ or ghusl:\n1. striking or placing the palms of both hands on something with which tayammum can be validly performed; and based on obligatory precaution, the striking of both palms must be done simultaneously;\n2. wiping the palms of both hands over the entire forehead – and based on obligatory precaution, over the two sides of the forehead as well – from the place where the hair of the head grows to the eyebrows and above the nose; and the recommended precaution is that the palms should be wiped over the eyebrows as well;\n3. wiping the palm of the left hand over the whole of the back of the right hand from the wrist to the fingertips, and wiping the palm of the right hand over the whole of the back of the left hand from the wrist to the fingertips; and the obligatory precaution is that that the order mentioned above must be observed [i.e. first the back of the right hand must be wiped, then the back of the left].\nIt is necessary that tayammum be performed with the intention of attaining proximity to Allah, just as was mentioned with regard to performing wuḍūʾ.",
-          ur: "وضویاغسل کے بدلے کئے جانے والے تیمم میں تین چیزیں واجب ہیں :\n۱): دونوں ہتھیلیوں کوایک ساتھ ایسی چیزپرمارنایارکھناجس پرتیمم کرناصحیح ہو اور (احتیاط لازم کی بناپر)دونوں ہاتھ ایک ساتھ زمین پرمارنے یارکھنے چاہئیں ۔\n۲): پوری پیشانی پردونوں ہتھیلیوں کوپھیرناجہاں سرکے بال اگتے ہیں بھنوؤں اور ناک کے اوپرتک (احتیاط واجب کی بنا پر) پیشانی کے دونوں طرف دونوں ہتھیلیوں کو پھیرنااوراحتیاط مستحب یہ ہے کہ ہاتھ بھنوؤں پربھی پھیرے جائیں ۔\n۳): بائیں ہتھیلی کودائیں ہاتھ کی تمام پشت پراوراس کے بعددائیں ہتھیلی کوبائیں ہاتھ کی تمام پشت پرپھیرنا۔احتیاط واجب کی بناء پر داہنے اور بائیں کے درمیان ترتیب کی رعایت کی جائے اور تیمم نیت اور قصد قربت کے ساتھ انجام دینا ضروری ہے جیساکہ وضو میں بتایا گیا ہے"
+          en: "Three things are obligatory when performing tayammum in place of wuḍūʾ or ghusl:\n1. striking or placing the palms of both hands on something with which tayammum can be validly performed; and based on obligatory precaution, the striking of both palms must be done simultaneously;\n2. wiping the palms of both hands over the entire forehead – and based on obligatory precaution, over the two sides of the forehead as well – from the place where the hair of the head grows to the eyebrows and above the nose; and the recommended precaution is that the palms should be wiped over the eyebrows as well;\n3. wiping the palm of the left hand over the whole of the back of the right hand from the wrist to the fingertips, and wiping the palm of the right hand over the whole of the back of the left hand from the wrist to the fingertips; and the obligatory precaution is that that the order mentioned above must be observed [i.e. first the back of the right hand must be wiped, then the back of the left].\nIt is necessary that tayammum be performed with the intention of attaining proximity to Allah, just as was mentioned with regard to performing wuḍūʾ."
         },
         hukm: "wajib",
         basis: "fatwa",
@@ -5752,13 +5536,9 @@ export const TAHARAT_RULINGS: Ruling[] = [
           reference: "Ruling 689",
           url: "https://www.sistani.org/english/book/48/2204/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (689)",
-          url: "https://www.sistani.org/urdu/book/61/3636/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",

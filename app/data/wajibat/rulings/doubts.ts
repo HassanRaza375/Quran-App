@@ -114,8 +114,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The following are doubts that invalidate prayers:\n1. a doubt about the number of rakʿahs performed in obligatory prayers consisting of two rakʿahs, such as ṣubḥ prayers and the prayer of a traveller. However, a doubt about the number of rakʿahs performed in recommended prayers and ṣalāt al‑iḥtiyāṭ does not invalidate them;\n2. a doubt about the number of rakʿahs performed in prayers consisting of three rakʿahs;\n3. a doubt about whether one has performed one rakʿah or more in a prayer consisting of four rakʿahs;\n4. in a prayer consisting of four rakʿahs, before going into the second sajdah, one doubts whether he has performed two rakʿahs or more;\n5. a doubt about whether one has performed two or five rakʿahs, or, two or more than five rakʿahs;\n6. a doubt about whether one has performed three or six rakʿahs, or, three or more than six rakʿahs;\n7. a doubt about the number of rakʿahs when one does not know at all how many rakʿahs he has performed;\n8. a doubt about whether one has performed four or six rakʿahs, or four or more than six rakʿahs, as per the details that will be mentioned later.",
-          ur: "جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :\n۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔\n۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔\n۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔\n۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔\n۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔\n۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔\n۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔\n۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔"
+          en: "The following are doubts that invalidate prayers:\n1. a doubt about the number of rakʿahs performed in obligatory prayers consisting of two rakʿahs, such as ṣubḥ prayers and the prayer of a traveller. However, a doubt about the number of rakʿahs performed in recommended prayers and ṣalāt al‑iḥtiyāṭ does not invalidate them;\n2. a doubt about the number of rakʿahs performed in prayers consisting of three rakʿahs;\n3. a doubt about whether one has performed one rakʿah or more in a prayer consisting of four rakʿahs;\n4. in a prayer consisting of four rakʿahs, before going into the second sajdah, one doubts whether he has performed two rakʿahs or more;\n5. a doubt about whether one has performed two or five rakʿahs, or, two or more than five rakʿahs;\n6. a doubt about whether one has performed three or six rakʿahs, or, three or more than six rakʿahs;\n7. a doubt about the number of rakʿahs when one does not know at all how many rakʿahs he has performed;\n8. a doubt about whether one has performed four or six rakʿahs, or four or more than six rakʿahs, as per the details that will be mentioned later."
         },
         basis: "fatwa",
         source: {
@@ -123,12 +122,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1151",
           url: "https://www.sistani.org/english/book/48/2251/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1151)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -169,8 +164,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person has a doubt that invalidates prayers, it is better that he does not break his prayer as soon as the doubt arises; rather, he should think [about the doubt] to the extent that the form of the prayer breaks up or until he loses hope in attaining certainty or a supposition [about what he has or has not performed].",
-          ur: "اگرانسان کونمازباطل کرنے والے شکوک میں سے کوئی شک پیش آئے توبہتریہ ہے کہ جیسے ہی اسے شک ہونمازنہ توڑے بلکہ اس قدرغوروفکرکرے کہ نماز کی شکل برقرارنہ رہے یایقین یاگمان حاصل ہونے سے ناامیدہوجائے۔"
+          en: "If a person has a doubt that invalidates prayers, it is better that he does not break his prayer as soon as the doubt arises; rather, he should think [about the doubt] to the extent that the form of the prayer breaks up or until he loses hope in attaining certainty or a supposition [about what he has or has not performed]."
         },
         basis: "fatwa",
         source: {
@@ -178,12 +172,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1152",
           url: "https://www.sistani.org/english/book/48/2251/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1152)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -209,7 +199,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30809"
         },
         verification: "A",
-        note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5)."
+        note: "Part of this text says 'caution' without stating whether it is obligatory or recommended (decision P5).",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -427,8 +418,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Someone who does not know if his supposition is inclined more towards one of two possibilities or if both possibilities are equal must act according to the instructions concerning that doubt.",
-          ur: "جوشخص یہ نہ جانتاہوکہ اس کاگمان ایک طرف زیادہ ہے یادونوں اطراف اس کی نظر میں برابر ہیں توضروری ہے کہ شک کے احکام پرعمل کرے۔"
+          en: "Someone who does not know if his supposition is inclined more towards one of two possibilities or if both possibilities are equal must act according to the instructions concerning that doubt."
         },
         basis: "fatwa",
         source: {
@@ -436,12 +426,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1190",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1190)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -510,8 +496,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If one has a doubt in prayers for which it is obligatory to perform ṣalāt al‑iḥtiyāṭ, in the event that he completes the prayer, the recommended precaution is that he should perform ṣalāt al‑iḥtiyāṭ; he should not start performing the prayer again from the beginning without performing ṣalāt al‑iḥtiyāṭ. If he starts performing the prayer again from the beginning before he does something that invalidates prayers, then based on obligatory precaution, his second prayer is also invalid. However, if he starts performing the prayer again after doing something that invalidates prayers, his second prayer is valid.",
-          ur: "اگرنمازکے دوران انسان کوان شکوک میں سے کوئی شک لاحق ہو جائے جن کے لئے نمازاحتیاط واجب ہے اوروہ نمازکوتمام کرے تواحتیاط مستحب یہ ہے کہ نمازاحتیاط پڑھے اوربغیرنمازاحتیاط پڑھے ازسرنونمازنہ پڑھے اوراگروہ کوئی ایسا فعل انجام دینے سے پہلے جونمازکوباطل کرتاہوازسر نو نمازپڑھے تو(احتیاط واجب کی بناپر)اس کی دوسری نماز بھی باطل ہے لیکن اگرکوئی ایسافعل انجام دینے کے بعدجونماز کوباطل کرتاہونمازمیں مشغول ہوجائے تواس کی دوسری نمازصحیح ہے۔"
+          en: "If one has a doubt in prayers for which it is obligatory to perform ṣalāt al‑iḥtiyāṭ, in the event that he completes the prayer, the recommended precaution is that he should perform ṣalāt al‑iḥtiyāṭ; he should not start performing the prayer again from the beginning without performing ṣalāt al‑iḥtiyāṭ. If he starts performing the prayer again from the beginning before he does something that invalidates prayers, then based on obligatory precaution, his second prayer is also invalid. However, if he starts performing the prayer again after doing something that invalidates prayers, his second prayer is valid."
         },
         basis: "fatwa",
         source: {
@@ -519,13 +504,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1187",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1187)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -566,8 +547,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person has a doubt that invalidates prayers and he knows that if he continues to the next stage of the prayer he will either be certain or have a supposition [about the thing he is currently doubting], then in case his doubt arises in the first two rakʿahs of the prayer, it is not permitted for him to continue the prayer in the state of doubt. For example, if while standing he doubts whether he has performed one rakʿah or more and knows that if he goes into rukūʿ one of the possibilities of his doubt will become a certainty or a supposition, it is not permitted for him to perform rukūʿ in that state. As for all other doubts that invalidate prayers, one can continue the prayer until he becomes certain or has a supposition.",
-          ur: "جب نمازکوباطل کرنے والے شکوک میں سے کوئی شک انسان کو لاحق ہوجائے اوروہ جانتاہوکہ بعدکی حالت میں منتقل ہوجانے پراس کے لئے یقین یا گمان پیداہوجائے گاتواس صورت میں جب کہ اس کاباطل شک شروع کی دورکعت میں ہو اس کے لئے شک کی حالت میں نمازجاری رکھناجائز نہیں ہے۔ مثلاً اگرقیام کی حالت میں اسے شک ہوکہ ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں اوروہ جانتاہوکہ اگررکوع میں جائے توکسی ایک طرف یقین یاگمان پیداکرے گاتواس حالت میں اس کے لئے رکوع کرناجائزنہیں ہے اورباقی باطل شکوک میں بظاہر اپنی نمازجاری رکھ سکتاہے تاکہ اسے یقین یاگمان حاصل ہوجائے۔"
+          en: "If a person has a doubt that invalidates prayers and he knows that if he continues to the next stage of the prayer he will either be certain or have a supposition [about the thing he is currently doubting], then in case his doubt arises in the first two rakʿahs of the prayer, it is not permitted for him to continue the prayer in the state of doubt. For example, if while standing he doubts whether he has performed one rakʿah or more and knows that if he goes into rukūʿ one of the possibilities of his doubt will become a certainty or a supposition, it is not permitted for him to perform rukūʿ in that state. As for all other doubts that invalidate prayers, one can continue the prayer until he becomes certain or has a supposition."
         },
         basis: "fatwa",
         source: {
@@ -575,12 +555,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1188",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1188)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -595,8 +571,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after prayers one realises that he was in a state of doubt during his prayer – for example, he doubted whether he had performed two rakʿahs or three rakʿahs – and he assumed that he had performed three, but now he does not know whether his supposition was actually inclined towards performing three rakʿahs or if both possibilities appeared equal to him, it is not necessary for him to perform ṣalāt al‑iḥtiyāṭ.",
-          ur: "اگرکسی شخص کونمازکے بعدمعلوم ہوکہ نمازکے دوران وہ شک کی حالت میں تھامثلاً اسے شک تھاکہ اس نے دورکعتیں پڑھی ہیں یاتین رکعتیں اور اس نے اپنے افعال کی بنیاد تین رکعتوں پررکھی ہولیکن اسے یہ علم نہ ہوکہ اس کے گمان میں یہ تھاکہ اس نے تین رکعتیں پڑھی ہیں یادونوں اطراف اس کی نظرمیں برابرتھے تونماز احتیاط پڑھناضروری نہیں ہے۔"
+          en: "If after prayers one realises that he was in a state of doubt during his prayer – for example, he doubted whether he had performed two rakʿahs or three rakʿahs – and he assumed that he had performed three, but now he does not know whether his supposition was actually inclined towards performing three rakʿahs or if both possibilities appeared equal to him, it is not necessary for him to perform ṣalāt al‑iḥtiyāṭ."
         },
         basis: "fatwa",
         source: {
@@ -604,12 +579,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1191",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1191)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -624,8 +595,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after standing up one doubts whether or not he performed two sajdahs, and at the same time a doubt arises, which, were it to have arisen after completing two sajdahs it would be valid – for example, he doubts whether he has performed two rakʿahs or three rakʿahs – then, in the event that he acts according to the instructions concerning that doubt, his prayer is valid. However, if when he is saying tashahhud one of these doubts arises, then, if his doubt is about whether he has performed two or three rakʿahs, his prayer is invalid, but if it is about whether he has performed two or four rakʿahs, or two, three, or four rakʿahs, his prayer is valid and he must act according to the instructions concerning that doubt.",
-          ur: "اگرقیام کے بعدشک کرے کہ دوسجدے اداکئے تھے یانہیں اوراسی وقت اسے ان شکوک میں سے کوئی شک ہوجائے جودوسجدے تمام ہونے کے بعد لاحق ہوتاتوصحیح ہوتامثلاً وہ شک کرے کہ میں نے دورکعت پڑھی ہیں یاتین اوروہ اس شک کے مطابق عمل کرے تواس کی نمازصحیح ہے لیکن اگراسے تشہدپڑھتے وقت ان شکوک میں سے کوئی شک لاحق ہوجائےاگر اس کا شک دو اور تین کے درمیان ہوتو اس کی نماز باطل ہےاور اگر دو اور چار کے درمیان یا دو اور تین اور چار کے درمیان ہوتو اس کی نماز صحیح ہے اور ضروری ہےکہ شک کے وظیفہ کے مطابق عمل کرے۔"
+          en: "If after standing up one doubts whether or not he performed two sajdahs, and at the same time a doubt arises, which, were it to have arisen after completing two sajdahs it would be valid – for example, he doubts whether he has performed two rakʿahs or three rakʿahs – then, in the event that he acts according to the instructions concerning that doubt, his prayer is valid. However, if when he is saying tashahhud one of these doubts arises, then, if his doubt is about whether he has performed two or three rakʿahs, his prayer is invalid, but if it is about whether he has performed two or four rakʿahs, or two, three, or four rakʿahs, his prayer is valid and he must act according to the instructions concerning that doubt."
         },
         basis: "fatwa",
         source: {
@@ -633,12 +603,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1192",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1192)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -653,8 +619,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If before one starts saying tashahhud, or before standing up in those rakʿahs that do not have tashahhud, he doubts whether or not he performed one or two sajdahs, and at the same time he has one of the doubts that is valid after completing two sajdahs, his prayer is invalid.",
-          ur: "اگرکوئی شخص تشہدمیں مشغول ہونے سے پہلے یاان رکعتوں میں (جن میں تشہدنہیں ہے) قیام سے پہلے شک کرے کہ ایک یادوسجدے بجالایاہے یانہیں اور اسی وقت اسے ان شکوک میں سے کوئی شک لاحق ہوجائے جودوسجدے تمام ہونے کے بعد صحیح ہوتواس کی نمازباطل ہے۔"
+          en: "If before one starts saying tashahhud, or before standing up in those rakʿahs that do not have tashahhud, he doubts whether or not he performed one or two sajdahs, and at the same time he has one of the doubts that is valid after completing two sajdahs, his prayer is invalid."
         },
         basis: "fatwa",
         source: {
@@ -662,12 +627,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1193",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1193)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -682,8 +643,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If while standing one doubts whether he has performed three or four rakʿahs, or three, four, or five rakʿahs, and he remembers that he did not perform one or two sajdahs in the previous rakʿah, his prayer is invalid.",
-          ur: "اگرکوئی شخص قیام کی حالت میں تین اورچاررکعتوں کے بارے میں یاتین اورچاراورپانچ رکعتوں کے بارے میں شک کرے اوراسے یہ بھی یادآجائے کہ اس نے اس سے پہلی رکعت کاایک سجدہ یادونوں سجدے ادانہیں کئے تواس کی نمازباطل ہے۔"
+          en: "If while standing one doubts whether he has performed three or four rakʿahs, or three, four, or five rakʿahs, and he remembers that he did not perform one or two sajdahs in the previous rakʿah, his prayer is invalid."
         },
         basis: "fatwa",
         source: {
@@ -691,12 +651,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1194",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1194)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -711,8 +667,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If someone’s doubt is allayed and another doubt arises – for example, he first doubts whether he has performed two rakʿahs or three rakʿahs, and then he doubts whether he has performed three rakʿahs or four rakʿahs – he must act according to the instructions concerning the second doubt.",
-          ur: "اگرکسی کاشک زائل ہوجائے اورکوئی دوسراشک لاحق ہوجائے مثلاً پہلے شک کرے کہ دورکعتیں پڑھی ہیں یاتین رکعتیں اوربعدمیں شک کرے کہ تین رکعتیں پڑھی ہیں یاچار رکعتیں توضروری ہے کہ دوسرے شک کے مطابق احکام پر عمل کرے۔"
+          en: "If someone’s doubt is allayed and another doubt arises – for example, he first doubts whether he has performed two rakʿahs or three rakʿahs, and then he doubts whether he has performed three rakʿahs or four rakʿahs – he must act according to the instructions concerning the second doubt."
         },
         basis: "fatwa",
         source: {
@@ -720,12 +675,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1195",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1195)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -740,8 +691,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after prayers one doubts that while performing the prayer he doubted about, for example, whether he had performed two or four rakʿahs, or three or four rakʿahs, then in such a case, he can act according to the instructions relating to both doubts, and after doing something that invalidates prayers, he can perform the prayer again.",
-          ur: "جوشخص نماز کے بعدشک کرے کہ نماز کی حالت میں مثال کے طور پر اس نے دواورچار رکعتوں کے بارے میں شک کیاتھایاتین اورچاررکعتوں کے بارے میں شک کیاتھاتوہردوشک کے حکم پرعمل کرسکتاہے نیزجوکام نماز کو باطل کرتاہے اسے کرنے کے بعدنمازدوبارہ پڑھے۔"
+          en: "If after prayers one doubts that while performing the prayer he doubted about, for example, whether he had performed two or four rakʿahs, or three or four rakʿahs, then in such a case, he can act according to the instructions relating to both doubts, and after doing something that invalidates prayers, he can perform the prayer again."
         },
         basis: "fatwa",
         source: {
@@ -749,12 +699,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1196",
           url: "https://www.sistani.org/english/book/48/2258/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1196)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -798,8 +744,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Doubts that must be dismissed are as follows:\n1. a doubt about an act for which the time of performance has passed. For example, in rukūʿ, one doubts whether he recited Sūrat al-Ḥamd or not;\n2. a doubt that arises after the salām of the prayer;\n3. a doubt that arises after the time of prayers has expired;\n4. a doubt of one who doubts excessively (kathīr al‑shakk);\n5. a doubt held by an imam of congregational prayers about the number of rakʿahs performed when a follower is sure about it; and similarly, a doubt held by a follower when the imam is sure of the number of rakʿahs performed;\n6. a doubt in recommended prayers and ṣalāt al‑iḥtiyāṭ.\nThese six types of doubt will now be dealt with in sequence.",
-          ur: "وہ شکوک جن کی پروانہیں کرنی چاہئے مندرجہ ذیل ہیں :\n۱:) اس فعل میں شک جس کے بجالانے کاموقع گزرگیاہومثلاًانسان رکوع میں شک کرے کہ اس نے الحمدپڑھی ہے یانہیں ۔\n۲:)سلام نماز کے بعدشک۔\n۳:)نمازکاوقت گزرجانے کے بعدشک۔\n۴:)کثیرالشک کاشک۔یعنی اس شخص کاشک جوبہت زیادہ شک کرتاہے۔\n۵:)رکعتوں کی تعداد کے بارے میں امام کاشک جب کہ ماموم ان کی تعدادجانتا ہو اوراسی طرح ماموم کاشک جب کہ امام نمازکی رکعتوں کی تعداد جانتاہو۔\n۶:)مستحب نمازوں اورنمازاحتیاط کے بارے میں شک۔"
+          en: "Doubts that must be dismissed are as follows:\n1. a doubt about an act for which the time of performance has passed. For example, in rukūʿ, one doubts whether he recited Sūrat al-Ḥamd or not;\n2. a doubt that arises after the salām of the prayer;\n3. a doubt that arises after the time of prayers has expired;\n4. a doubt of one who doubts excessively (kathīr al‑shakk);\n5. a doubt held by an imam of congregational prayers about the number of rakʿahs performed when a follower is sure about it; and similarly, a doubt held by a follower when the imam is sure of the number of rakʿahs performed;\n6. a doubt in recommended prayers and ṣalāt al‑iḥtiyāṭ.\nThese six types of doubt will now be dealt with in sequence."
         },
         basis: "fatwa",
         source: {
@@ -807,12 +752,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1153",
           url: "https://www.sistani.org/english/book/48/2252/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1153)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -852,8 +793,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If during prayers one doubts whether or not he performed a certain obligatory act of the prayer– for example, he doubts whether or not he recited Sūrat al-Ḥamd – then, in the event that he has started to perform an act that he must not legally (sharʿan) perform if he intentionally misses that previous act – for example, while reciting the other surah he doubts whether or not he recited Sūrat al-Ḥamd00 – in such a case, he must dismiss his doubt; otherwise [i.e. if he has not started to perform the other act], he must perform the act about which he doubts.",
-          ur: "اگرنمازی نمازکے دوران شک کرے کہ اس نے نماز کاایک واجب فعل انجام دیاہے یا نہیں مثلاً اسے شک ہوکہ الحمدپڑھی ہے یانہیں جب کہ اس سابق کام کو عمداً ترک کرکے جس کام میں مشغول ہواس کام میں شرعاً مشغول نہیں ہوناچاہئے تھا مثلاً سورہ پڑھتے وقت شک کرے کہ الحمد پڑھی ہے یانہیں توضروری ہے کہ اپنے شک کی پروا نہ کرے۔ اس صورت کے علاوہ ضروری ہے کہ جس چیز کی انجام دہی کے بارے میں شک ہو، بجالائے۔"
+          en: "If during prayers one doubts whether or not he performed a certain obligatory act of the prayer– for example, he doubts whether or not he recited Sūrat al-Ḥamd – then, in the event that he has started to perform an act that he must not legally (sharʿan) perform if he intentionally misses that previous act – for example, while reciting the other surah he doubts whether or not he recited Sūrat al-Ḥamd00 – in such a case, he must dismiss his doubt; otherwise [i.e. if he has not started to perform the other act], he must perform the act about which he doubts."
         },
         basis: "fatwa",
         source: {
@@ -861,13 +801,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1154",
           url: "https://www.sistani.org/english/book/48/8298/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1154)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Quoted exactly as published: the official page prints \"Sūrat al-Ḥamd00\" (a typing slip on sistani.org, page 8298); the text is not corrected here."
+        note: "Quoted exactly as published: the official page prints \"Sūrat al-Ḥamd00\" (a typing slip on sistani.org, page 8298); the text is not corrected here.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1219,8 +1155,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether or not he performed one of the rukns of prayers, in the event that he has not started to perform the act after it, he must perform it. For example, before saying tashahhud, if he doubts whether or not he performed two sajdahs, he must perform them. In the event that afterwards he remembers that he had performed that rukn, then based on obligatory precaution, his prayer is invalid as he will have performed an additional rukn.",
-          ur: "اگرنمازی شک کرے کہ نمازکاکوئی ایک رکن بجالایاہے یانہیں اور اس کے بعدآنے والے فعل میں مشغول نہ ہواہوتوضروری ہے اسے بجالائے مثلاًاگر تشہد پڑھنے سے پہلے شک کرے کہ دوسجدے بجالایاہے یانہیں توضروری ہے کہ بجا لائے اوراگربعدمیں اسے یاد آئے کہ وہ اس رکن کو بجالایاتھاتوایک رکن بڑھ جانے کی وجہ سے (احتیاط لازم کی بناپر)اس کی نمازباطل ہے۔"
+          en: "If a person doubts whether or not he performed one of the rukns of prayers, in the event that he has not started to perform the act after it, he must perform it. For example, before saying tashahhud, if he doubts whether or not he performed two sajdahs, he must perform them. In the event that afterwards he remembers that he had performed that rukn, then based on obligatory precaution, his prayer is invalid as he will have performed an additional rukn."
         },
         basis: "fatwa",
         source: {
@@ -1228,13 +1163,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1160",
           url: "https://www.sistani.org/english/book/48/8298/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1160)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1399,8 +1330,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether or not he performed a rukn of the prayer – for example, while saying tashahhud he doubts whether or not he performed the two sajdahs – and he then dismisses his doubt but later remembers that he had not performed that rukn, then in case he has not started to perform the next rukn, he must perform it. However, if he has started to perform the next rukn, his prayer is invalid based on obligatory precaution. For example, if before he performs the rukūʿ of the next rakʿah he remembers that he did not perform the two sajdahs, he must perform them; but, if he remembers this while performing rukūʿ or after it, his prayer is invalid, as mentioned earlier.",
-          ur: "اگرنمازی شک کرے کہ ایک رکن بجالایاہے یانہیں مثلاً جب تشہد پڑھ رہاہوشک کرے کہ دوسجدے بجالایاہے یانہیں اوراپنے شک کی پروانہ کرے اوربعد میں اسے یادآئے کہ اس رکن کوبجانہیں لایاتواگروہ بعدوالے رکن میں مشغول نہ ہواہو تو ضروری ہے کہ اس رکن کوبجالائے اور اگربعدوالے رکن میں مشغول ہوگیاہوتواس کی نماز( احتیاط لازم کی بناپر)باطل ہے مثلاً اگربعدوالی رکعت کے رکوع سے پہلے اسے یاد آئے کہ دوسجدے نہیں بجالایاتوضروری ہے کہ بجالائے اوراگررکوع میں یااس کے بعد اسے یادآئے تواس کی نمازجیساکہ بتایاگیا،باطل ہے۔"
+          en: "If a person doubts whether or not he performed a rukn of the prayer – for example, while saying tashahhud he doubts whether or not he performed the two sajdahs – and he then dismisses his doubt but later remembers that he had not performed that rukn, then in case he has not started to perform the next rukn, he must perform it. However, if he has started to perform the next rukn, his prayer is invalid based on obligatory precaution. For example, if before he performs the rukūʿ of the next rakʿah he remembers that he did not perform the two sajdahs, he must perform them; but, if he remembers this while performing rukūʿ or after it, his prayer is invalid, as mentioned earlier."
         },
         basis: "fatwa",
         source: {
@@ -1408,13 +1338,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1162",
           url: "https://www.sistani.org/english/book/48/8298/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1162)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1509,8 +1435,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts after the salām of the prayer whether or not his prayer was valid – for example, he doubts whether or not he performed rukūʿ, or after the salām of a four rakʿah prayer he doubts whether he performed four or five rakʿahs – he must dismiss his doubt. However, if both sides of his doubt are such that each possibility would mean his prayer is invalid – for example, after the salām of a four rakʿah prayer he doubts whether he performed three or five rakʿahs, his prayer is invalid.",
-          ur: "اگرنمازی سلام نمازکے بعدشک کرے کہ اس نے نمازصحیح طورپر پڑھی ہے یانہیں مثلاًشک کرے کہ رکوع اداکیاہے یانہیں یاچاررکعتی نمازکے سلام کے بعدشک کرے کہ چاررکعتیں پڑھی ہیں یاپانچ،تووہ اپنے شک کی پروانہ کرے لیکن اگر اسے دونوں طرف نمازکے باطل ہونے کاشک ہومثلاًچاررکعتی نمازکے سلام کے بعد شک کرے کہ تین رکعت پڑھی ہیں یاپانچ تواس کی نمازباطل ہے۔"
+          en: "If a person doubts after the salām of the prayer whether or not his prayer was valid – for example, he doubts whether or not he performed rukūʿ, or after the salām of a four rakʿah prayer he doubts whether he performed four or five rakʿahs – he must dismiss his doubt. However, if both sides of his doubt are such that each possibility would mean his prayer is invalid – for example, after the salām of a four rakʿah prayer he doubts whether he performed three or five rakʿahs, his prayer is invalid."
         },
         basis: "fatwa",
         source: {
@@ -1518,12 +1443,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1165",
           url: "https://www.sistani.org/english/book/48/2253/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1165)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -1661,8 +1582,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after the time for maghrib and ʿishāʾ has expired one knows that he has performed a prayer but he does not know whether he performed a three or four rakʿah prayer, he must make up both the maghrib and ʿishāʾ prayers.",
-          ur: "اگرمغرب اورعشاکی نمازکاوقت گزرنے کے بعدنمازی کو پتا چلے کہ اس نے ایک نمازپڑھی ہے لیکن یہ علم نہ ہوکہ تین رکعتی نمازپڑھی ہے یاچاررکعتی، تو ضروری ہے کہ مغرب اورعشادونوں کی قضاکرے۔"
+          en: "If after the time for maghrib and ʿishāʾ has expired one knows that he has performed a prayer but he does not know whether he performed a three or four rakʿah prayer, he must make up both the maghrib and ʿishāʾ prayers."
         },
         basis: "fatwa",
         source: {
@@ -1670,12 +1590,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1169",
           url: "https://www.sistani.org/english/book/48/2254/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1169)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -1744,8 +1660,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If someone who doubts excessively doubts whether or not he has performed an obligatory component of the prayer, he must assume he has performed it. For example, if he doubts whether or not he has performed rukūʿ, he must assume he has performed rukūʿ. If he doubts whether or not he has performed an act that invalidates prayers – for example, he doubts whether he performed ṣubḥ prayers as a two rakʿah prayer or a three rakʿah prayer – he must assume he has performed it correctly.",
-          ur: "اگرکثیرالشک نمازکے اجزاء میں سے کسی جزکے انجام دینے کے بارے میں شک کرے تواسے یوں سمجھناچاہئے کہ اس جزکوانجام دے دیاہے۔ مثلاً اگر شک کرے کہ رکوع کیاہے یانہیں تواسے سمجھناچاہئے کہ رکوع کرلیاہے اوراگرکسی ایسی چیز کے بارے میں شک کرے جومبطل نمازہے مثلاً شک کرے کہ صبح کی نماز دورکعت پڑھی ہے یاتین رکعت تویہی سمجھے نمازٹھیک پڑھی ہے۔"
+          en: "If someone who doubts excessively doubts whether or not he has performed an obligatory component of the prayer, he must assume he has performed it. For example, if he doubts whether or not he has performed rukūʿ, he must assume he has performed rukūʿ. If he doubts whether or not he has performed an act that invalidates prayers – for example, he doubts whether he performed ṣubḥ prayers as a two rakʿah prayer or a three rakʿah prayer – he must assume he has performed it correctly."
         },
         basis: "fatwa",
         source: {
@@ -1753,12 +1668,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1171",
           url: "https://www.sistani.org/english/book/48/2255/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1171)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2073,8 +1984,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If an imam of a congregational prayer has a doubt about the number of rakʿahs – for example, he doubts whether he has performed three rakʿahs or four rakʿahs – then, in the event that a follower is certain or supposes that he has performed four rakʿahs and makes it known to the imam that he has performed four rakʿahs, the imam must complete the prayer and it is not necessary for him to perform ṣalāt al‑iḥtiyāṭ. Similarly, if the imam is certain or supposes that he has performed a certain number of rakʿahs and a follower has a doubt about the number of rakʿahs, the follower must dismiss his doubt. The same applies with regard to a doubt that they may have about the acts of prayers, such as a doubt about the number of sajdahs performed.",
-          ur: "اگرامام جماعت نمازکی رکعتوں کی تعدادکے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یاچاررکعتیں اورمقتدی کویقین یاگمان ہوکہ چاررکعتیں پڑھی ہیں اوروہ یہ بات امام جماعت کے علم میں لے آئے کہ چار رکعتیں پڑھی ہیں توامام کوچاہئے کہ نمازکوتمام کرے اورنماز احتیاط کاپڑھناضروری نہیں اوراگر امام کو یقین یاگمان ہوکہ چند رکعتیں پڑھی ہیں اورمقتدی نمازکی رکعتوں کے بارے میں شک کرے تواسے چاہئے کہ اپنے شک کی پروا نہ کرے اور یہی حکم ہے دونوں کے لئے جب ہر ایک نماز کےافعال میں شک کرے جیسے سجدے کی تعداد میں شک کرنا۔"
+          en: "If an imam of a congregational prayer has a doubt about the number of rakʿahs – for example, he doubts whether he has performed three rakʿahs or four rakʿahs – then, in the event that a follower is certain or supposes that he has performed four rakʿahs and makes it known to the imam that he has performed four rakʿahs, the imam must complete the prayer and it is not necessary for him to perform ṣalāt al‑iḥtiyāṭ. Similarly, if the imam is certain or supposes that he has performed a certain number of rakʿahs and a follower has a doubt about the number of rakʿahs, the follower must dismiss his doubt. The same applies with regard to a doubt that they may have about the acts of prayers, such as a doubt about the number of sajdahs performed."
         },
         basis: "fatwa",
         source: {
@@ -2082,12 +1992,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1178",
           url: "https://www.sistani.org/english/book/48/2256/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1178)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2127,8 +2033,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person has a doubt about the number of rakʿahs he has performed in a recommended prayer, in the event that the greater of the two numbers he is doubtful about would invalidate the prayer, he must assume the lesser number is correct. For example, in the nāfilah of ṣubḥ, if one doubts whether he has performed two rakʿahs or three rakʿahs, he must assume he has performed two rakʿahs. However, if the greater of the two numbers would not invalidate the prayer – for example, he doubts whether he has performed two rakʿahs or one rakʿah – then his prayer is valid whichever side of the doubt he acts upon.",
-          ur: "اگرکوئی شخص مستحب نمازکی رکعتوں میں شک کرے اورشک عدد کی زیادتی کی طرف ہوجونمازکوباطل کرتی ہے تواسے چاہئے کہ یہ سمجھ لے کہ کم رکعتیں پڑھی ہیں مثلاًاگرصبح کی نافلہ میں شک کرے کہ دورکعتیں پڑھی ہیں یاتین تویہی سمجھے کہ دو پڑھی ہیں اوراگرتعدادکی زیادتی والاشک نمازکو باطل نہ کرے مثلاً اگرنمازی شک کرے کہ دورکعتیں پڑھی ہیں یاایک پڑھی ہے توشک کے جس طرف پربھی عمل کرے اس کی نماز صحیح ہے۔"
+          en: "If a person has a doubt about the number of rakʿahs he has performed in a recommended prayer, in the event that the greater of the two numbers he is doubtful about would invalidate the prayer, he must assume the lesser number is correct. For example, in the nāfilah of ṣubḥ, if one doubts whether he has performed two rakʿahs or three rakʿahs, he must assume he has performed two rakʿahs. However, if the greater of the two numbers would not invalidate the prayer – for example, he doubts whether he has performed two rakʿahs or one rakʿah – then his prayer is valid whichever side of the doubt he acts upon."
         },
         basis: "fatwa",
         source: {
@@ -2136,12 +2041,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1179",
           url: "https://www.sistani.org/english/book/48/2257/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1179)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2291,8 +2192,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If in a two rakʿah recommended prayer one supposes that he has performed three rakʿahs or more, he must dismiss his doubt and his prayer is valid. However, if he supposes he has performed two rakʿahs or less, he must act according to that supposition based on obligatory precaution. For example, if he supposes that he has performed one rakʿah, he must as a precautionary measure perform another rakʿah.",
-          ur: "اگرکسی شخص کودورکعتی مستحب نمازمیں تین یازیادہ رکعتوں کے پڑھ لینے کاگمان ہوتو چاہئے کہ اس گمان کی پروا نہ کرے اوراس کی نمازصحیح ہے لیکن اگراس کا گمان دورکعتوں کایااس سے کم کاہوتو(احتیاط واجب کی بناپر)اسی گمان پرعمل کرے مثلاً اگر اسے گمان ہوکہ ایک رکعت پڑھی ہے توضروری ہے کہ احتیاط کے طورپرایک رکعت اور پڑھے۔"
+          en: "If in a two rakʿah recommended prayer one supposes that he has performed three rakʿahs or more, he must dismiss his doubt and his prayer is valid. However, if he supposes he has performed two rakʿahs or less, he must act according to that supposition based on obligatory precaution. For example, if he supposes that he has performed one rakʿah, he must as a precautionary measure perform another rakʿah."
         },
         basis: "fatwa",
         source: {
@@ -2300,13 +2200,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1182",
           url: "https://www.sistani.org/english/book/48/2257/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1182)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2379,8 +2275,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "There is no difference in the rules for doubt, inadvertence, and supposition in the daily obligatory prayers and the other obligatory prayers. For example, if in ṣalāt al‑āyāt one doubts whether he has performed one rakʿah or two, then as his doubt is in a two rakʿah prayer, his prayer becomes invalid. If he has a supposition that he has performed two rakʿahs or that he has performed one rakʿah, he must complete his prayer in accordance with his supposition.",
-          ur: "روزانہ کی واجب نمازوں اوردوسری واجب نمازوں کے بارے میں شک اورسہواور گمان کے حکم میں کوئی فرق نہیں ہے مثلاً اگرکسی شخص کونمازآیات کے دوران شک ہوکہ ایک رکعت پڑھی ہے یادورکعتیں توچونکہ اس کاشک دورکعتی نمازمیں ہے لہٰذااس کی نمازباطل ہے اوراگروہ گمان کرے کہ یہ دوسری رکعت ہے یاپہلی تواپنے گمان کے مطابق نمازکوتمام کرے۔"
+          en: "There is no difference in the rules for doubt, inadvertence, and supposition in the daily obligatory prayers and the other obligatory prayers. For example, if in ṣalāt al‑āyāt one doubts whether he has performed one rakʿah or two, then as his doubt is in a two rakʿah prayer, his prayer becomes invalid. If he has a supposition that he has performed two rakʿahs or that he has performed one rakʿah, he must complete his prayer in accordance with his supposition."
         },
         basis: "fatwa",
         source: {
@@ -2388,12 +2283,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1221",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1221)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2408,8 +2299,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "A person on whom ṣalāt al‑iḥtiyāṭ is obligatory must make the intention of performing ṣalāt al‑iḥtiyāṭ immediately after the salām of the prayer. He must then say takbīr, recite Sūrat al-Ḥamd, and perform rukūʿ and two sajdahs. If one rakʿah of ṣalāt al‑iḥtiyāṭ is obligatory for him, then after performing the two sajdahs he must say tashahhud and the salām. If two rakʿahs of ṣalāt al‑iḥtiyāṭ are obligatory for him, then after performing the two sajdahs he must perform another rakʿah in the same way as the first, and after tashahhud he must say the salām.",
-          ur: "جس شخص پرنمازاحتیاط واجب ہوضروری ہے کہ نمازکے سلام کے فوراًبعدنمازاحتیاط کی نیت کرے اورتکبیر کہے پھرالحمدپڑھے اوررکوع میں جائے اور دوسجدے بجالائے۔پس اگراس پرایک رکعت نمازاحتیاط واجب ہوتودوسجدوں کے بعد تشہداورسلام پڑھے اوراگراس پردورکعت نمازاحتیاط واجب ہوتودوسجدوں کے بعد پہلی رکعت کی طرح ایک اوررکعت بجالائے اورتشہدکے بعدسلام پڑھے۔"
+          en: "A person on whom ṣalāt al‑iḥtiyāṭ is obligatory must make the intention of performing ṣalāt al‑iḥtiyāṭ immediately after the salām of the prayer. He must then say takbīr, recite Sūrat al-Ḥamd, and perform rukūʿ and two sajdahs. If one rakʿah of ṣalāt al‑iḥtiyāṭ is obligatory for him, then after performing the two sajdahs he must say tashahhud and the salām. If two rakʿahs of ṣalāt al‑iḥtiyāṭ are obligatory for him, then after performing the two sajdahs he must perform another rakʿah in the same way as the first, and after tashahhud he must say the salām."
         },
         basis: "fatwa",
         source: {
@@ -2417,12 +2307,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1201",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1201)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2603,8 +2489,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was the same as the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ – for example, for the doubt between three and four rakʿahs, he performs one rakʿah of ṣalāt al‑iḥtiyāṭ and later realises that he had performed three rakʿahs – in such a case, his prayer is valid.",
-          ur: "اگرکسی شخص کونمازاحتیاط کے بعدپتا چلے کہ اس کی نمازمیں کمی نماز احتیاط کے برابرتھی مثلاًتین رکعتوں اورچاررکعتوں کے درمیان شک کی صورت میں ایک رکعت نمازاحتیاط پڑھے اوربعد میں پتا چلے کہ اس نے نمازکی تین رکعتیں پڑھی تھیں تواس کی نمازصحیح ہے۔"
+          en: "If after performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was the same as the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ – for example, for the doubt between three and four rakʿahs, he performs one rakʿah of ṣalāt al‑iḥtiyāṭ and later realises that he had performed three rakʿahs – in such a case, his prayer is valid."
         },
         basis: "fatwa",
         source: {
@@ -2612,12 +2497,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1205",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1205)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2632,8 +2513,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was less than the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ – for example, for the doubt between two and four rakʿahs, he performs two rakʿahs of ṣalāt al‑iḥtiyāṭ and later realises that he had performed three rakʿahs – in such a case, he must perform the [original] prayer again.",
-          ur: "اگرکسی شخص کونمازاحتیاط پڑھنے کے بعدپتا چلے کہ نمازمیں جوکمی ہوئی تھی وہ نمازاحتیاط سے کم تھی مثلاً دورکعتوں اورچاررکعتوں کے مابین شک کی صورت میں دورکعت نمازاحتیاط پڑھے اوربعدمیں معلوم ہوکہ اس نے نمازکی تین رکعتیں پڑھی تھیں توضروری ہے کہ نمازدوبارہ پڑھے۔"
+          en: "If after performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was less than the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ – for example, for the doubt between two and four rakʿahs, he performs two rakʿahs of ṣalāt al‑iḥtiyāṭ and later realises that he had performed three rakʿahs – in such a case, he must perform the [original] prayer again."
         },
         basis: "fatwa",
         source: {
@@ -2641,12 +2521,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1206",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1206)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2661,8 +2537,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was more than the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ – for example, for the doubt between three and four rakʿahs, he performs one rakʿah of ṣalāt al‑iḥtiyāṭ and later realises that he had performed two rakʿahs – then, in the event that after performing ṣalāt al‑iḥtiyāṭ he did something that invalidates prayers, such as turning his back to qibla, he must perform the prayer again. However, if he did not do anything that invalidates prayers, the obligatory precaution is that he must perform the prayer again, and he must not suffice with joining one rakʿah to the prayer.",
-          ur: "اگرکسی شخص کونمازاحتیاط پڑھنے کے بعدپتا چلے کہ نمازمیں جوکمی ہوئی تھی وہ نمازاحتیاط سے زیادہ تھی مثلاًتین رکعتوں اورچاررکعتوں کے مابین شک کی صورت میں ایک رکعت نماز احتیاط پڑھے اوربعدمیں معلوم ہوکہ نمازکی دورکعتیں پڑھی تھیں اورنمازاحتیاط کے بعدکوئی ایساکام کیا ہوجونمازکوباطل کرتاہومثلاًقبلے کی جانب پیٹھ کی ہوتوضروری ہے کہ نمازدوبارہ پڑھے اوراگرکوئی ایسا کام نہ کیاہوجونماز کوباطل کرتا ہو تواس صورت میں بھی احتیاط لازم یہ ہے کہ نماز دوبارہ پڑھے اورباقی ماندہ ایک رکعت ملانے پراکتفانہ کرے۔"
+          en: "If after performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was more than the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ – for example, for the doubt between three and four rakʿahs, he performs one rakʿah of ṣalāt al‑iḥtiyāṭ and later realises that he had performed two rakʿahs – then, in the event that after performing ṣalāt al‑iḥtiyāṭ he did something that invalidates prayers, such as turning his back to qibla, he must perform the prayer again. However, if he did not do anything that invalidates prayers, the obligatory precaution is that he must perform the prayer again, and he must not suffice with joining one rakʿah to the prayer."
         },
         basis: "fatwa",
         source: {
@@ -2670,13 +2545,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1207",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1207)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2691,8 +2562,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether he has performed two, three, or four rakʿahs, and after performing two rakʿahs of ṣalāt al‑iḥtiyāṭ in a standing position he remembers that he had actually performed two rakʿahs, it is not necessary for him to perform two rakʿahs of ṣalāt al‑iḥtiyāṭ from a sitting position.",
-          ur: "اگرکوئی شخص دواورتین اورچاررکعتوں میں شک کرے اور کھڑے ہوکر دورکعت نماز احتیاط پڑھنے کے بعداسے یادآئے کہ اس نے نمازکی دورکعتیں پڑھی تھیں تواس کے لئے بیٹھ کردو رکعت نماز احتیاط پڑھناضروری نہیں ۔"
+          en: "If a person doubts whether he has performed two, three, or four rakʿahs, and after performing two rakʿahs of ṣalāt al‑iḥtiyāṭ in a standing position he remembers that he had actually performed two rakʿahs, it is not necessary for him to perform two rakʿahs of ṣalāt al‑iḥtiyāṭ from a sitting position."
         },
         basis: "fatwa",
         source: {
@@ -2700,12 +2570,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1208",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1208)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2720,8 +2586,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether he has performed three or four rakʿahs, and while performing one rakʿah of ṣalāt al‑iḥtiyāṭ in a standing position he remembers that he had performed three rakʿahs, he must abandon his ṣalāt al‑iḥtiyāṭ; and in the event that he remembers this before going into rukūʿ, he must perform one rakʿah in a way that it connects with his prayer, and his prayer will be valid. And for performing an additional salām, based on obligatory precaution, he must perform sajdatā al‑sahw. However, if he remembers [that he had performed three rakʿahs] after going into rukūʿ, he must perform the prayer again; and based on obligatory precaution, he cannot suffice with joining the remaining rakʿah to his prayer.",
-          ur: "اگرکوئی شخص تین اورچاررکعتوں میں شک کرے اورجس وقت وہ ایک رکعت نمازاحتیاط کھڑے ہوکرپڑھ رہاہواسے یادآئے کہ اس نے نمازکی تین رکعتیں پڑھی تھیں توضروری ہے کہ نمازاحتیاط کوچھوڑدے چنانچہ رکوع میں داخل ہونے سے پہلے اسے یادآیاہوتوایک رکعت ملاکر پڑھے اوراس کی نمازصحیح ہے اور( احتیاط لازم کی بناپر)زائدسلام کے لئے دوسجدئہ سہوبجالائے اوراگر رکوع میں داخل ہونے کے بعدیاد آئے توضروری ہے کہ نمازکودوبارہ پڑھے اوراحتیاط کی بناپرباقی ماندہ رکعت ملانے پر اکتفانہیں کرسکتا۔"
+          en: "If a person doubts whether he has performed three or four rakʿahs, and while performing one rakʿah of ṣalāt al‑iḥtiyāṭ in a standing position he remembers that he had performed three rakʿahs, he must abandon his ṣalāt al‑iḥtiyāṭ; and in the event that he remembers this before going into rukūʿ, he must perform one rakʿah in a way that it connects with his prayer, and his prayer will be valid. And for performing an additional salām, based on obligatory precaution, he must perform sajdatā al‑sahw. However, if he remembers [that he had performed three rakʿahs] after going into rukūʿ, he must perform the prayer again; and based on obligatory precaution, he cannot suffice with joining the remaining rakʿah to his prayer."
         },
         basis: "fatwa",
         source: {
@@ -2729,13 +2594,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1209",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1209)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2750,8 +2611,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether he has performed two, three, or four rakʿahs, and while performing two rakʿahs of ṣalāt al‑iḥtiyāṭ in a standing position he remembers that he has performed three rakʿahs, then what was said in the previous ruling applies here as well.",
-          ur: "اگرکوئی شخص دواورتین اورچاررکعتوں میں شک کرے اورجس وقت وہ دورکعت نمازاحتیاط کھڑے ہوکرپڑھ رہاہواسے یاد آئے کہ اس نے نماز کی تین رکعتیں پڑھی تھیں تویہاں بھی بالکل وہی حکم جاری ہوگاجس کاذکرسابقہ مسئلے میں کیاگیا ہے۔"
+          en: "If a person doubts whether he has performed two, three, or four rakʿahs, and while performing two rakʿahs of ṣalāt al‑iḥtiyāṭ in a standing position he remembers that he has performed three rakʿahs, then what was said in the previous ruling applies here as well."
         },
         basis: "fatwa",
         source: {
@@ -2759,12 +2619,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1210",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1210)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2779,8 +2635,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If while performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was more or less than the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ, then what was mentioned in Ruling 1209 applies here as well.",
-          ur: "اگرکسی شخص کونمازاحتیاط کے دوران پتا چلے کہ اس کی نمازمیں کمی نماز احتیاط سے زیادہ یاکم تھی تویہاں بھی بالکل وہی حکم جاری ہوگاجس کاذکر مسئلہ ( ۱۲۰۹) میں کیاگیاہے۔"
+          en: "If while performing ṣalāt al‑iḥtiyāṭ one realises that the deficiency in the number of rakʿahs in his prayer was more or less than the number of rakʿahs in his ṣalāt al‑iḥtiyāṭ, then what was mentioned in Ruling 1209 applies here as well."
         },
         basis: "fatwa",
         source: {
@@ -2788,12 +2643,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1211",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1211)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2838,8 +2689,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If in ṣalāt al‑iḥtiyāṭ a person performs two rakʿahs instead of one, his ṣalāt al‑iḥtiyāṭ becomes invalid and he must perform his original prayer again. The same applies, based on obligatory precaution, if one adds a rukn to ṣalāt al‑iḥtiyāṭ.",
-          ur: "اگرایک شخص نمازاحتیاط میں ایک رکعت کے بجائے دورکعت پڑھ لے تونمازاحتیاط باطل ہوجاتی ہے اورضروری ہے کہ دوبارہ اصل نمازپڑھے اوراگروہ نماز میں کوئی رکن بڑھادے تو(احتیاط لازم کی بناپر)اس کابھی یہی حکم ہے۔"
+          en: "If in ṣalāt al‑iḥtiyāṭ a person performs two rakʿahs instead of one, his ṣalāt al‑iḥtiyāṭ becomes invalid and he must perform his original prayer again. The same applies, based on obligatory precaution, if one adds a rukn to ṣalāt al‑iḥtiyāṭ."
         },
         basis: "fatwa",
         source: {
@@ -2847,13 +2697,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1213",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1213)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -2897,8 +2743,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person has a doubt about the number of rakʿahs he has performed in ṣalāt al‑iḥtiyāṭ, in the event that the greater of the two numbers he is doubtful about would invalidate the prayer, he must assume the lesser number is correct. However, if the greater of the two numbers would not invalidate the prayer, he must assume the greater number is correct. For example, if while performing two rakʿahs of ṣalāt al‑iḥtiyāṭ he doubts whether he has performed two or three rakʿahs, as the greater of the two numbers would invalidate the prayer, he must assume that he has performed two rakʿahs; but if he doubts whether he has performed one or two rakʿahs, then as the greater number would not invalidate the prayer, he must assume that he has performed two rakʿahs.",
-          ur: "اگرکوئی شخص نمازاحتیاط کی رکعتوں کے بارے میں شک کرے اور زیادہ رکعتوں کی طرف شک کرنانمازکوباطل کرتاہوتوضروری ہے کہ شک کی بنیاد کم پر رکھے اوراگرزیادہ رکعتوں کی طرف شک کرنانمازکوباطل نہ کرتاہوتوضروری ہے کہ اس کی بنیادزیادہ پررکھے مثلاً جب وہ دورکعت نمازاحتیاط پڑھ رہاہواگرشک کرے کہ دورکعتیں پڑھی ہیں یاتین توچونکہ زیادتی کی طرف شک کرنانمازکوباطل کرتاہے اس لئے اسے چاہئے کہ سمجھ لے کہ اس نے دورکعتیں پڑھی ہیں اوراگرشک کرے کہ ایک رکعت پڑھی ہے یا دو رکعتیں پڑھی ہیں توچونکہ زیادتی کی طرف شک کرنانمازکوباطل نہیں کرتااس لئے اسے سمجھناچاہئے کہ دورکعتیں پڑھی ہیں ۔"
+          en: "If a person has a doubt about the number of rakʿahs he has performed in ṣalāt al‑iḥtiyāṭ, in the event that the greater of the two numbers he is doubtful about would invalidate the prayer, he must assume the lesser number is correct. However, if the greater of the two numbers would not invalidate the prayer, he must assume the greater number is correct. For example, if while performing two rakʿahs of ṣalāt al‑iḥtiyāṭ he doubts whether he has performed two or three rakʿahs, as the greater of the two numbers would invalidate the prayer, he must assume that he has performed two rakʿahs; but if he doubts whether he has performed one or two rakʿahs, then as the greater number would not invalidate the prayer, he must assume that he has performed two rakʿahs."
         },
         basis: "fatwa",
         source: {
@@ -2906,12 +2751,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1215",
           url: "https://www.sistani.org/english/book/48/2259/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1215)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -3131,8 +2972,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "In the following two situations, one must perform sajdatā al‑sahw after the salām of the prayer in a manner that will be explained later:\n1. one forgets to say the entire tashahhud;\n2. in a four rakʿah prayer after going into the second sajdah, one doubts whether he has performed four or five rakʿahs, or he doubts whether he has performed four or six rakʿahs, as mentioned earlier in the fourth situation in the section on valid doubts.\nAlso, performing sajdatā al‑sahw is necessary in three further situations, based on obligatory precaution:\n1. one generally knows that he has mistakenly omitted or added something in a prayer and the prayer is ruled to be valid;\n2. one inadvertently talks during prayers;\n3. one says the salām of the prayer at a time when he must not; for example, in the first rakʿah he inadvertently says the salām. The recommended precaution is that if he forgets one sajdah, or when he must stand – for example, while reciting Sūrat al-Ḥamd and the other surah – he mistakenly sits down, or when he must sit – for example, while saying tashahhud – he mistakenly stands up, then in these cases, he should perform sajdatā al‑sahw. In fact, for anything that is mistakenly omitted or added in prayer, he should perform sajdatā al‑sahw. The rules of these situations will be explained in the following rulings.",
-          ur: "ضروری ہے کہ انسان نمازکے سلام کے بعدمندرجہ ذیل امور کے لئے اس طریقے کے مطابق جس کاآئندہ ذکرہوگادوسجدئہ سہوبجالائے :\n۱:) تشہد کا بھول جانا۔\n۲:)چاررکعتی نمازمیں دوسرے سجدے کے دوران شک کرناکہ چاررکعتیں پڑھی ہیں یاپانچ یاشک کرناکہ چاررکعتیں پڑھی ہیں یاچھ، بالکل اسی طرح جیسا کہ صحیح شکوک کے نمبر(۴ )میں گزرچکاہے۔\nاور تین جگہوں پر( احتیاط واجب کی بناء پر) سجدۂ سہو لازم ہے:\n۱:) اجمالاً جانتاہو کہ نماز میں کوئی ایسی چیز کی کمی یا زیادتی غلطی سے کردی ہے جب کہ نماز اس صورت میں صحیح رہتی ہے۔\n۲:) نماز کےدرمیان بھولے سے بات کرلے۔\n۳:) جن جگہوں پر سلام نہیں پڑھنا چاہیے وہاں سلام پڑھ دے۔ مثلاً بھول کر پہلی رکعت میں سلام پڑھنا۔ اور احتیاط مستحب یہ ہے کہ اگر ایک سجدہ کو بھول گیاہے یا اس جگہ جہاں کھڑے رہنا ضروری ہے مثلاً سورۂ حمدیا دوسرا سورہ پڑھتے وقت وہاں غلطی سے بیٹھ جائے اور وہ جگہ جہاں بیٹھنا ضروری ہے مثلاً تشہد کےموقع پر غلطی سے کھڑا ہوجائے تو دوسجدہ سہو بجالائے بلکہ نماز میں ہر چیز کی غلطی سے کمی یا زیادتی کی بناپر دو سجدہ سہو بجالائے اور ان چند صورتوں کے احکام آئندہ مسائل میں بیان کئے جائیں گے۔"
+          en: "In the following two situations, one must perform sajdatā al‑sahw after the salām of the prayer in a manner that will be explained later:\n1. one forgets to say the entire tashahhud;\n2. in a four rakʿah prayer after going into the second sajdah, one doubts whether he has performed four or five rakʿahs, or he doubts whether he has performed four or six rakʿahs, as mentioned earlier in the fourth situation in the section on valid doubts.\nAlso, performing sajdatā al‑sahw is necessary in three further situations, based on obligatory precaution:\n1. one generally knows that he has mistakenly omitted or added something in a prayer and the prayer is ruled to be valid;\n2. one inadvertently talks during prayers;\n3. one says the salām of the prayer at a time when he must not; for example, in the first rakʿah he inadvertently says the salām. The recommended precaution is that if he forgets one sajdah, or when he must stand – for example, while reciting Sūrat al-Ḥamd and the other surah – he mistakenly sits down, or when he must sit – for example, while saying tashahhud – he mistakenly stands up, then in these cases, he should perform sajdatā al‑sahw. In fact, for anything that is mistakenly omitted or added in prayer, he should perform sajdatā al‑sahw. The rules of these situations will be explained in the following rulings."
         },
         basis: "fatwa",
         source: {
@@ -3140,13 +2980,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1222*",
           url: "https://www.sistani.org/english/book/48/2260/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1222)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Marked * (revised) in the 4th edition. The Urdu text was compared and matches in substance. Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Marked * (revised) in the 4th edition. The Urdu text was compared and matches in substance. Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3172,7 +3008,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30819"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     differsBetweenMaraji: true
@@ -3279,7 +3116,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 392",
           url: "https://www.leader.ir/fa/book/180/1?sn=30820"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     differsBetweenMaraji: true
@@ -3334,7 +3172,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 393",
           url: "https://www.leader.ir/fa/book/180/1?sn=30820"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -3444,7 +3283,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30819"
         },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -3516,8 +3356,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person mistakenly says all three sentences of salām at a time when he must not say salām, sajdatā al‑sahw will suffice.",
-          ur: "جہاں سلام نہیں پڑھناچاہئے اگرکوئی شخص وہاں غلطی سے تینوں سلام پڑھ لے تواس کے لئے دوسجدئہ سہوکافی ہیں ۔"
+          en: "If a person mistakenly says all three sentences of salām at a time when he must not say salām, sajdatā al‑sahw will suffice."
         },
         basis: "fatwa",
         source: {
@@ -3525,19 +3364,14 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1229",
           url: "https://www.sistani.org/english/book/48/2260/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1229)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "If he accidentally says all three salām in a place where he is not supposed to, performing two sajdah of inadvertence is sufficient.",
-          ur: "جہاں سلام نہیں پڑھنا چاہئے اگر کوئی شخص وہاں بھول کر تینوں سلام پڑھے تو دو سجدہ بجالانا کافی ہے۔"
+          en: "If he accidentally says all three salām in a place where he is not supposed to, performing two sajdah of inadvertence is sufficient."
         },
         basis: "fatwa",
         source: {
@@ -3545,17 +3379,13 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "395.",
           url: "https://www.leader.ir/en/book/241?sn=32542"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 396",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31190"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 396",
           url: "https://www.leader.ir/fa/book/180/1?sn=30821"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -3570,8 +3400,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person forgets one sajdah or tashahhud and remembers it before performing rukūʿ of the next rakʿah, he must go back and perform it; and based on recommended precaution, he should perform sajdatā al‑sahw for the additional standing.",
-          ur: "اگرکوئی شخص ایک سجدہ یاتشہدبھول جائے اوربعدکی رکعت کے رکوع سے پہلے اسے یاد آئے توضروری ہے کہ پلٹے اور(سجدہ یاتشہد) بجالائے اور نماز کے بعد(احتیاط مستحب کی بناپر)بے جاقیام کے لئے دوسجدئہ سہوکرے۔"
+          en: "If a person forgets one sajdah or tashahhud and remembers it before performing rukūʿ of the next rakʿah, he must go back and perform it; and based on recommended precaution, he should perform sajdatā al‑sahw for the additional standing."
         },
         basis: "fatwa",
         source: {
@@ -3579,13 +3408,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1230",
           url: "https://www.sistani.org/english/book/48/2260/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1230)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -3699,7 +3524,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 402",
           url: "https://www.leader.ir/fa/book/180/1?sn=30825"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     seeAlso: [
@@ -3836,7 +3662,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 400",
           url: "https://www.leader.ir/fa/book/180/1?sn=30824"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -3880,8 +3707,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person doubts whether, for example, sajdatā al‑sahw [i.e. two of them] have become obligatory for him or four, it is sufficient if he performs sajdatā al‑sahw.",
-          ur: "اگرکوئی شخص شک کرے کہ مثلاً اس پردوسجدئہ سہوواجب ہوئے ہیں یاچارتواس کادوسجدے اداکرناکافی ہے۔"
+          en: "If a person doubts whether, for example, sajdatā al‑sahw [i.e. two of them] have become obligatory for him or four, it is sufficient if he performs sajdatā al‑sahw."
         },
         basis: "fatwa",
         source: {
@@ -3889,12 +3715,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1234",
           url: "https://www.sistani.org/english/book/48/2260/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1234)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4143,8 +3965,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person forgets two sajdahs from two rakʿahs, it is not necessary for him to observe sequence when making them up.",
-          ur: "اگرانسان دورکعتوں میں سے دوسجدے بھول جائے تواس کے لئے ضروری نہیں کہ قضا کرتے وقت ترتیب سے بجالائے۔"
+          en: "If a person forgets two sajdahs from two rakʿahs, it is not necessary for him to observe sequence when making them up."
         },
         basis: "fatwa",
         source: {
@@ -4152,12 +3973,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1240",
           url: "https://www.sistani.org/english/book/48/2262/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1240)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4227,8 +4044,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person remembers after the salām of the prayer that he has forgotten one sajdah from the last rakʿah, in the event that he does not do anything that invalidates prayers, he must perform it and all that follows it, i.e. tashahhud and salām. And based on obligatory precaution, he must perform sajdatā al‑sahw for saying an additional salām.",
-          ur: "اگرکسی شخص کونمازکے سلام کے بعدیادآئے کہ آخری رکعت کاایک سجدہ بھول گیاہے چنانچہ نماز کے منافی حدث جیسی کوئی چیز انجام نہ پائی ہو تو اس کو اور جو اس کے بعد کی چیزیں ہیں یعنی تشہد وسلام بجالائے اور( احتیاط واجب کی بناء پر) بے جاسلام کے لئے دو سجدۂ سہو بجالائے۔"
+          en: "If a person remembers after the salām of the prayer that he has forgotten one sajdah from the last rakʿah, in the event that he does not do anything that invalidates prayers, he must perform it and all that follows it, i.e. tashahhud and salām. And based on obligatory precaution, he must perform sajdatā al‑sahw for saying an additional salām."
         },
         basis: "fatwa",
         source: {
@@ -4236,13 +4052,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1242",
           url: "https://www.sistani.org/english/book/48/2262/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1242)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4346,8 +4158,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person knows he has forgotten to perform a sajdah but doubts whether or not he remembered before performing rukūʿ of the next rakʿah and then performed it, the recommended precaution is that he should make it up.",
-          ur: "اگرکسی شخص کوعلم ہوکہ سجدہ بھول گیاہے اورشک کرے کہ بعدکی رکعت کے رکوع سے پہلے اسے یاد آیاتھااوراسے بجالایاتھایانہیں تواحتیاط مستحب یہ ہے کہ قضاکرے۔"
+          en: "If a person knows he has forgotten to perform a sajdah but doubts whether or not he remembered before performing rukūʿ of the next rakʿah and then performed it, the recommended precaution is that he should make it up."
         },
         basis: "fatwa",
         source: {
@@ -4355,13 +4166,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1246",
           url: "https://www.sistani.org/english/book/48/2262/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1246)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4461,8 +4268,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Whenever a person intentionally omits or adds something that is an obligatory component of the prayer, even to the extent of one word, the prayer is invalid.",
-          ur: "جب نمازکے واجبات میں سے کوئی چیزجان بوجھ کرکم یازیادہ کی جائے توخواہ ایک حرف ہی کیوں نہ ہونمازباطل ہے۔"
+          en: "Whenever a person intentionally omits or adds something that is an obligatory component of the prayer, even to the extent of one word, the prayer is invalid."
         },
         basis: "fatwa",
         source: {
@@ -4470,12 +4276,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1249",
           url: "https://www.sistani.org/english/book/48/2263/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1249)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4519,8 +4321,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If during or after prayers one learns that his wuḍūʾ or ghusl was invalid, or that he started performing prayers without wuḍūʾ or ghusl, he must perform the prayer again with wuḍūʾ or ghusl; and if the time for the prayer has expired, he must make it up.",
-          ur: "اگرنمازکے دوران کسی شخص کا دھیان اس طرف جائے کہ اس کا وضو یا غسل باطل تھایا وضویاغسل کئے بغیرنمازپڑھنے لگاہے توضروری ہے دوبارہ وضویاغسل کے ساتھ نماز پڑھے اوراگرنمازکاوقت گزرگیاہو تواس کی قضاکرے۔"
+          en: "If during or after prayers one learns that his wuḍūʾ or ghusl was invalid, or that he started performing prayers without wuḍūʾ or ghusl, he must perform the prayer again with wuḍūʾ or ghusl; and if the time for the prayer has expired, he must make it up."
         },
         basis: "fatwa",
         source: {
@@ -4528,12 +4329,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1251",
           url: "https://www.sistani.org/english/book/48/2263/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1251)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4548,8 +4345,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If after going into rukūʿ one remembers that he forgot to perform the two sajdahs in the previous rakʿah, then based on obligatory precaution, his prayer is invalid. However, if he remembers this before going into rukūʿ, he must go back, perform the two sajdahs, stand up, recite Sūrat al-Ḥamd and the other surah or al‑tasbīḥāt al‑arbaʿah, and then complete the prayer. After prayers, based on recommended precaution, he should perform sajdatā al‑sahw for the additional standing.",
-          ur: "اگرکسی شخص کورکوع میں پہنچنے کے بعدیادآئے کہ پہلے والی رکعت کے دو سجدے بھول گیاہے تو اس کی نماز(احتیاط واجب کی بناپر )باطل ہے اوراگریہ بات اسے رکوع میں پہنچنے سے پہلے یادآئے توضروری ہے کہ واپس آئے اوردوسجدے بجالائے اورپھر کھڑاہوجائے اورالحمداورسورہ یاتسبیحات پڑھے اورنمازکوتمام کرے اورنمازکے بعد (احتیاط مستحب کی بناپر)بے محل قیام کے لئے دوسجدئہ سہوکرے۔"
+          en: "If after going into rukūʿ one remembers that he forgot to perform the two sajdahs in the previous rakʿah, then based on obligatory precaution, his prayer is invalid. However, if he remembers this before going into rukūʿ, he must go back, perform the two sajdahs, stand up, recite Sūrat al-Ḥamd and the other surah or al‑tasbīḥāt al‑arbaʿah, and then complete the prayer. After prayers, based on recommended precaution, he should perform sajdatā al‑sahw for the additional standing."
         },
         basis: "fatwa",
         source: {
@@ -4557,13 +4353,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1252",
           url: "https://www.sistani.org/english/book/48/2263/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1252)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4578,8 +4370,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If before saying ‘assalāmu ʿalaynā’ and ‘assalāmu ʿalaykum’ [in the salām of the prayer] one remembers that he has not performed the two sajdahs in the last rakʿah, he must perform the two sajdahs and then say tashahhud and the salām of the prayer again.",
-          ur: "اگرکسی شخص کو’’اَلسَّلَامُ عَلَیْنَااوراَلسَّلَامُ عَلَیْکُمْ‘‘کہنے سے پہلے یاد آئے کہ وہ آخری رکعت کے دوسجدے بجانہیں لایاتوضروری ہے کہ دوسجدے بجالائے اور دوبارہ تشہداورسلام پڑھے۔"
+          en: "If before saying ‘assalāmu ʿalaynā’ and ‘assalāmu ʿalaykum’ [in the salām of the prayer] one remembers that he has not performed the two sajdahs in the last rakʿah, he must perform the two sajdahs and then say tashahhud and the salām of the prayer again."
         },
         basis: "fatwa",
         source: {
@@ -4587,12 +4378,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1253",
           url: "https://www.sistani.org/english/book/48/2263/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1253)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4666,8 +4453,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Whenever after the salām of the prayer one does something that were he to do it intentionally or inadvertently during prayers it would invalidate them – such as turning his back to qibla – and he later remembers that he has not performed the two last sajdahs, his prayer is invalid. However, if he remembers this before doing something that invalidates prayers, he must perform the two sajdahs that he had forgotten and say tashahhud and the salām of the prayer again; and based on obligatory precaution, he must perform sajdatā al‑sahw for the salām that he first said.",
-          ur: "جب کوئی شخص نمازکے سلام کے بعدایک کام انجام دے جو اگر نماز کے دوران عمداً یاسہواً کیاجائے تونمازکوباطل کردیتاہومثلاً پیٹھ قبلے کی طرف کرے اور بعدمیں اسے یادآئے کہ وہ دوآخری سجدے بجانہیں لایاتواس کی نمازباطل ہے اوراگر نمازکوباطل کرنے والاکوئی کام کرنے سے پہلے اسے یہ بات یادآئے توضروری ہے کہ جو دوسجدے اداکرنابھول گیاہے انہیں بجالائے اوردوبارہ تشہداورسلام پڑھے اورجو سلام پہلے پڑھاہواس کے لئے (احتیاط واجب کی بناپر)دوسجدئہ سہوکرے۔"
+          en: "Whenever after the salām of the prayer one does something that were he to do it intentionally or inadvertently during prayers it would invalidate them – such as turning his back to qibla – and he later remembers that he has not performed the two last sajdahs, his prayer is invalid. However, if he remembers this before doing something that invalidates prayers, he must perform the two sajdahs that he had forgotten and say tashahhud and the salām of the prayer again; and based on obligatory precaution, he must perform sajdatā al‑sahw for the salām that he first said."
         },
         basis: "fatwa",
         source: {
@@ -4675,13 +4461,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1256",
           url: "https://www.sistani.org/english/book/48/2263/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1256)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -4696,8 +4478,7 @@ export const DOUBTS_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "If a person realises that he has performed a prayer before its prescribed time, he must perform it again; and if its time has expired, he must make it up. If he realises that he performed it with his back to qibla or had turned ninety degrees or more [away from qibla], in the event that its time has not expired, he must perform it again. However, if its time has expired, then in the event that he was uncertain or was ignorant about the rule, it is obligatory for him to make it up; otherwise, it is not. If he realises that he had turned less than ninety degrees, and he did not have a legitimate excuse for turning away from qibla – for example, he was searching for the direction of qibla, or he was negligent in learning the ruling – then based on obligatory precaution, he must perform the prayer again, irrespective of whether there is time or not. However, if he did have a legitimate excuse, it is not necessary for him to perform the prayer again.",
-          ur: "اگرکسی شخص کوپتا چلے کہ اس نے نمازوقت سے پہلے پڑھ لی ہے تو ضروری ہے کہ دوبارہ پڑھے اوراگروقت گزرگیاہوتوقضاکرے اور اگریہ پتا چلے کہ قبلے کی طرف پیٹھ کرکے پڑھی ہے یا( ۹۰) درجہ یا اس سے زیادہ انحراف کرتے ہوئے نماز پڑھی ہے اور ابھی وقت نہ گزراہوتوضروری ہے کہ دوبارہ پڑھے اور اگروقت گزرچکا ہواور ترددکاشکارہو یاحکم سے ناواقف رہاہوتوقضا ضروری ہے ورنہ قضاضروری نہیں اوراگرپتا چلے کہ( ۹۰)؍درجہ سے کم انحراف تھا اورقبلےکے انحراف سے معذورنہ رہا ہومثلاً قبلے کی سمت تلاش کرنے میں کوتاہی کی ہویا مسئلہ جاننے میں کوتاہی کی ہو(احتیاط کی بناپر) ضروری ہے کہ نماز دوبارہ پڑھے چاہے وقت کےاندر ہو یا وقت کے باہر اور اگر معذور رہا ہوتوقضا ضروری نہیں ہے۔\nظہر شرعی سے مراد آدھے دن کا گزرنا ہے مثلاً اگر بارہ گھنٹے کا دن ہے تو طلوع آفتاب سے چھ گھنٹے کےگزرنے کے بعد ظہر شرعی ہوتا ہے اور اگر تیرہ گھنٹےکا دن ہے تو طلوع آفتاب سے ساڑھے چھ گھنٹہ گزر جانے کے بعد ظہر شرعی ہوجاتا ہے اور ظہر شرعی کے جو طلوع آفتاب سے آدھا دن گزر جانے کے بعد اس کے غروب تک رہتا ہے یہ سال کے کچھ مواقع پر تہران کے افق کے مطابق بارہ بجنے سےچند منٹ پہلے اور کبھی بارہ بجنے کے چند منٹ بعد ظہر شرعی ہوتا ہے۔"
+          en: "If a person realises that he has performed a prayer before its prescribed time, he must perform it again; and if its time has expired, he must make it up. If he realises that he performed it with his back to qibla or had turned ninety degrees or more [away from qibla], in the event that its time has not expired, he must perform it again. However, if its time has expired, then in the event that he was uncertain or was ignorant about the rule, it is obligatory for him to make it up; otherwise, it is not. If he realises that he had turned less than ninety degrees, and he did not have a legitimate excuse for turning away from qibla – for example, he was searching for the direction of qibla, or he was negligent in learning the ruling – then based on obligatory precaution, he must perform the prayer again, irrespective of whether there is time or not. However, if he did have a legitimate excuse, it is not necessary for him to perform the prayer again."
         },
         basis: "fatwa",
         source: {
@@ -4705,13 +4486,9 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "Ruling 1257",
           url: "https://www.sistani.org/english/book/48/2263/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (1257)",
-          url: "https://www.sistani.org/urdu/book/61/3638/"
-        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   }

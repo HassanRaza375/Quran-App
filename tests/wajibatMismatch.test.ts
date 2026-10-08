@@ -6,12 +6,12 @@
 //  - every reported mismatch to have a decision entry with a valid status (a new, unlisted mismatch fails).
 // "pending" is a valid status: the report lists them for a person to decide.
 import { describe, expect, it } from "vitest";
-import { WAJIBAT_RULINGS } from "../app/data/wajibat";
+import { WAJIBAT_RULINGS, getMarjaRuling, getRulingById } from "../app/data/wajibat";
 import { compareVersions, signals } from "../app/utils/wajibatMismatch";
 import fixture from "./fixtures/wajibatMismatches.json";
 import decisions from "./fixtures/wajibatMismatchDecisions.json";
 
-const STATUSES = new Set(["pending", "accepted", "fix", "withhold", "decided"]);
+const STATUSES = new Set(["pending", "accepted", "fix", "withhold", "decided", "restored", "needs-human", "low-pending-review", "hidden-pending-review", "persian-decided-pending-review"]);
 type Row = { key: string; pair: string; severity: string; kinds: { kind: string; severity: string; left: unknown; right: unknown }[] };
 const rows = fixture.mismatches as Row[];
 
@@ -56,7 +56,10 @@ describe("mismatch signals", () => {
 describe("mismatch report over the whole dataset", () => {
   it("the TypeScript check agrees with the generated report on every English/Urdu pair", () => {
     const ts = computeEnUr();
-    const py = Object.fromEntries(rows.filter((r) => r.pair === "en-ur").map((r) => [r.key, r.kinds]));
+    // Rows whose Urdu is held back (decision B1) cannot be recomputed from the shipped data: the Urdu is not in it.
+    const dec = decisions as Record<string, { status: string; hold?: string }>;
+    const heldUrdu = (k: string) => ["hidden-pending-review", "persian-decided-pending-review"].includes(dec[k]?.status) && dec[k]?.hold === "hide-ur";
+    const py = Object.fromEntries(rows.filter((r) => r.pair === "en-ur" && !heldUrdu(r.key)).map((r) => [r.key, r.kinds]));
     expect(Object.keys(ts).sort()).toEqual(Object.keys(py).sort());
     for (const k of Object.keys(ts)) expect(JSON.parse(JSON.stringify(ts[k]))).toEqual(py[k]);
   });
@@ -77,3 +80,64 @@ describe("mismatch report over the whole dataset", () => {
     expect(rows.length).toBeGreaterThan(0);
   });
 });
+
+describe("safe-default triage and display holds (decision B1)", () => {
+  type Dec = { status: string; hold?: string; note?: string };
+  const dec = decisions as Record<string, Dec>;
+  const HOLD = new Set(["hidden-pending-review", "persian-decided-pending-review"]);
+  const held = Object.entries(dec).filter(([, d]) => HOLD.has(d.status));
+
+  it("the triage accepts nothing: every automatic status is a hold, a needs-human, or a low-pending-review", () => {
+    for (const [k, d] of Object.entries(dec)) {
+      if (["hidden-pending-review", "persian-decided-pending-review"].includes(d.status)) expect(["hide-ur", "hide-en"], k).toContain(d.hold);
+      else expect(d.hold, `${k} has a hold but status ${d.status}`).toBeUndefined();
+    }
+    expect(Object.values(dec).filter((d) => d.status === "pending").length).toBe(0);
+  });
+
+  it("Sistani high rows hide the Urdu; Khamenei holds follow the Persian; low rows hold nothing", () => {
+    for (const [k, d] of held) {
+      const [rid, marja] = k.split("|");
+      const row = rows.find((r) => r.key === k)!;
+      expect(row.severity, k).toBe("high");
+      if (marja === "sistani") expect(d.hold).toBe("hide-ur");
+      else expect(row.pair === "en-ur" || row.pair === "en-fa" || row.pair === "ur-fa").toBe(true);
+      expect(rid.length).toBeGreaterThan(0);
+    }
+    for (const r of rows.filter((x) => x.severity === "low")) expect(dec[r.key].status === "low-pending-review" || !HOLD.has(dec[r.key].status), r.key).toBe(true);
+  });
+
+  it("all rows of one ruling and marja' carry the same hold", () => {
+    const by = new Map<string, Set<string>>();
+    for (const [k, d] of held) {
+      const g = k.split("|").slice(0, 2).join("|");
+      by.set(g, (by.get(g) ?? new Set()).add(d.hold!));
+    }
+    for (const [g, hs] of by) expect(hs.size, g).toBe(1);
+  });
+
+  it("the shipped data follows the holds: held Urdu is absent with its notice, held English is withheld with the Urdu present", () => {
+    for (const [k, d] of held) {
+      const [rid, marja] = k.split("|");
+      const e = getMarjaRuling(getRulingById(rid)!, marja as "sistani" | "khamenei")!;
+      expect(e.text.en.length, k).toBeGreaterThan(0);
+      if (d.hold === "hide-ur") {
+        expect(e.text.ur, k).toBeUndefined();
+        expect(e.urSource, k).toBeUndefined();
+        expect(e.urduNote, k).toMatch(/held back/);
+      } else {
+        expect(e.englishWithheld, k).toMatch(/^Held for review/);
+        expect(e.text.ur, k).toBeTruthy();
+        expect(e.persianSource, k).toBeTruthy();
+      }
+    }
+  });
+
+  it("a restored row carries no hold (restoring is a recorded decision with a reviewer and date)", () => {
+    for (const [k, d] of Object.entries(dec).filter(([, x]) => x.status === "restored")) {
+      expect(d.hold, k).toBeUndefined();
+      expect((d as { reviewer?: string }).reviewer, k).toBeTruthy();
+    }
+  });
+});
+

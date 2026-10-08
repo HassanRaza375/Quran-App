@@ -3,7 +3,7 @@
 - Marja': **Ayatullah al-Sayyid Ali al-Husayni al-Sistani**
 - Helper: `sistanidoubts` on topic `doubts`
 - His own book for "I'm not sure": Islamic Laws (4th edition), Issues 1151–1257, "Doubts that arise in prayers" (https://www.sistani.org/english/book/48/2251/)
-- Paths: **138**. Generated 2026-10-07. Status: **Not scholar-reviewed** until every path below is signed off.
+- Paths: **138**. Generated 2026-10-08. Status: **Not scholar-reviewed** until every path below is signed off.
 
 How to review: for each path, read the questions and the answers chosen, then read the quoted outcome and its citation, and decide whether **that answer is right for that situation**. Tick **OK** or **Changes**, write notes. Sign-offs are recorded by path id (`node scripts/wajibat/review.mjs approve sistanidoubts --reviewer "Name" --paths id,id`), and a path edited after sign-off must be reviewed again.
 
@@ -263,10 +263,6 @@ How to review: for each path, read the questions and the answers chosen, then re
 >
 > *Citation (doubtmaghribisha):* Islamic Laws (4th edition), Ruling 1169 · https://www.sistani.org/english/book/48/2254/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرمغرب اورعشاکی نمازکاوقت گزرنے کے بعدنمازی کو پتا چلے کہ اس نے ایک نمازپڑھی ہے لیکن یہ علم نہ ہوکہ تین رکعتی نمازپڑھی ہے یاچاررکعتی، تو ضروری ہے کہ مغرب اورعشادونوں کی قضاکرے۔
->
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
 
@@ -310,10 +306,6 @@ How to review: for each path, read the questions and the answers chosen, then re
 >
 > *Note shown with it:* Part of this ruling is stated as an obligatory precaution; see the wording.
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرنمازی شک کرے کہ نمازکاکوئی ایک رکن بجالایاہے یانہیں اور اس کے بعدآنے والے فعل میں مشغول نہ ہواہوتوضروری ہے اسے بجالائے مثلاًاگر تشہد پڑھنے سے پہلے شک کرے کہ دوسجدے بجالایاہے یانہیں توضروری ہے کہ بجا لائے اوراگربعدمیں اسے یاد آئے کہ وہ اس رکن کو بجالایاتھاتوایک رکن بڑھ جانے کی وجہ سے (احتیاط لازم کی بناپر)اس کی نمازباطل ہے۔
->
 Related rulings linked: doubtremembermissing
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -340,19 +332,11 @@ Related rulings linked: doubtremembermissing
 >
 > *Note shown with it:* Quoted exactly as published: the official page prints "Sūrat al-Ḥamd00" (a typing slip on sistani.org, page 8298); the text is not corrected here.
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرنمازی نمازکے دوران شک کرے کہ اس نے نماز کاایک واجب فعل انجام دیاہے یا نہیں مثلاً اسے شک ہوکہ الحمدپڑھی ہے یانہیں جب کہ اس سابق کام کو عمداً ترک کرکے جس کام میں مشغول ہواس کام میں شرعاً مشغول نہیں ہوناچاہئے تھا مثلاً سورہ پڑھتے وقت شک کرے کہ الحمد پڑھی ہے یانہیں توضروری ہے کہ اپنے شک کی پروا نہ کرے۔ اس صورت کے علاوہ ضروری ہے کہ جس چیز کی انجام دہی کے بارے میں شک ہو، بجالائے۔
->
 > If a person doubts whether or not he performed a rukn of the prayer – for example, while saying tashahhud he doubts whether or not he performed the two sajdahs – and he then dismisses his doubt but later remembers that he had not performed that rukn, then in case he has not started to perform the next rukn, he must perform it. However, if he has started to perform the next rukn, his prayer is invalid based on obligatory precaution. For example, if before he performs the rukūʿ of the next rakʿah he remembers that he did not perform the two sajdahs, he must perform them; but, if he remembers this while performing rukūʿ or after it, his prayer is invalid, as mentioned earlier.
 >
 > *Citation (doubtremembermissing):* Islamic Laws (4th edition), Ruling 1162 · https://www.sistani.org/english/book/48/8298/
 >
 > *Note shown with it:* Part of this ruling is stated as an obligatory precaution; see the wording.
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرنمازی شک کرے کہ ایک رکن بجالایاہے یانہیں مثلاً جب تشہد پڑھ رہاہوشک کرے کہ دوسجدے بجالایاہے یانہیں اوراپنے شک کی پروانہ کرے اوربعد میں اسے یادآئے کہ اس رکن کوبجانہیں لایاتواگروہ بعدوالے رکن میں مشغول نہ ہواہو تو ضروری ہے کہ اس رکن کوبجالائے اور اگربعدوالے رکن میں مشغول ہوگیاہوتواس کی نماز( احتیاط لازم کی بناپر)باطل ہے مثلاً اگربعدوالی رکعت کے رکوع سے پہلے اسے یاد آئے کہ دوسجدے نہیں بجالایاتوضروری ہے کہ بجالائے اوراگررکوع میں یااس کے بعد اسے یادآئے تواس کی نمازجیساکہ بتایاگیا،باطل ہے۔
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -563,18 +547,6 @@ Related rulings linked: doubtremembermissing
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
->
 > 1. **a doubt about the number of rakʿahs performed in obligatory prayers consisting of two rakʿahs**, such as ṣubḥ prayers and the prayer of a traveller. However, a doubt about the number of rakʿahs performed in recommended prayers and ṣalāt al‑iḥtiyāṭ does not invalidate them;
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
@@ -599,18 +571,6 @@ Related rulings linked: doubtinvalidthink
 > The following are doubts that invalidate prayers:
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
 >
 > 2. **a doubt about the number of rakʿahs performed in prayers consisting of three rakʿahs**;
 >
@@ -1681,18 +1641,6 @@ Related rulings linked: sahwmethod, doubtvaliddontbreak
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
->
 > 3. **a doubt about whether one has performed one rakʿah or more in a prayer consisting of four rakʿahs**;
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
@@ -1723,18 +1671,6 @@ Related rulings linked: doubtinvalidthink
 > The following are doubts that invalidate prayers:
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
 >
 > 5. **a doubt about whether one has performed two or five rakʿahs**, or, two or more than five rakʿahs;
 >
@@ -1767,18 +1703,6 @@ Related rulings linked: doubtinvalidthink
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
->
 > 6. **a doubt about whether one has performed three or six rakʿahs**, or, three or more than six rakʿahs;
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
@@ -1809,18 +1733,6 @@ Related rulings linked: doubtinvalidthink
 > The following are doubts that invalidate prayers:
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
 >
 > 7. a doubt about the number of rakʿahs when one **does not know at all how many rakʿahs he has performed**;
 >
@@ -2889,18 +2801,6 @@ Related rulings linked: sahwmethod, doubtvaliddontbreak
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
->
 > 3. **a doubt about whether one has performed one rakʿah or more in a prayer consisting of four rakʿahs**;
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
@@ -2931,18 +2831,6 @@ Related rulings linked: doubtinvalidthink
 > The following are doubts that invalidate prayers:
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
 >
 > 5. **a doubt about whether one has performed two or five rakʿahs**, or, two or more than five rakʿahs;
 >
@@ -2975,18 +2863,6 @@ Related rulings linked: doubtinvalidthink
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
->
 > 6. **a doubt about whether one has performed three or six rakʿahs**, or, three or more than six rakʿahs;
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
@@ -3017,18 +2893,6 @@ Related rulings linked: doubtinvalidthink
 > The following are doubts that invalidate prayers:
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
 >
 > 7. a doubt about the number of rakʿahs when one **does not know at all how many rakʿahs he has performed**;
 >
@@ -4097,18 +3961,6 @@ Related rulings linked: sahwmethod, doubtvaliddontbreak
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
->
 > 3. **a doubt about whether one has performed one rakʿah or more in a prayer consisting of four rakʿahs**;
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
@@ -4139,18 +3991,6 @@ Related rulings linked: doubtinvalidthink
 > The following are doubts that invalidate prayers:
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
 >
 > 5. **a doubt about whether one has performed two or five rakʿahs**, or, two or more than five rakʿahs;
 >
@@ -4183,18 +4023,6 @@ Related rulings linked: doubtinvalidthink
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
->
 > 6. **a doubt about whether one has performed three or six rakʿahs**, or, three or more than six rakʿahs;
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
@@ -4225,18 +4053,6 @@ Related rulings linked: doubtinvalidthink
 > The following are doubts that invalidate prayers:
 >
 > *Citation (doubtsinvalidating):* Islamic Laws (4th edition), Ruling 1151 · https://www.sistani.org/english/book/48/2251/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> جوشک نمازکوباطل کرتے ہیں وہ یہ ہیں :
-> ۱:) دورکعتی واجب نمازمثلاً نمازصبح اورنمازمسافر کی رکعتوں کی تعداد کے بارے میں شک۔البتہ نمازمستحب اورنمازاحتیاط کی رکعتوں کی تعداد کے بارے میں شک نماز کو باطل نہیں کرتا۔
-> ۲:)تین رکعتی نمازکی تعداد کے بارے میں شک۔
-> ۳:)چاررکعتی نمازمیں کوئی شک کرے کہ اس نے ایک رکعت پڑھی ہے یازیادہ پڑھی ہیں ۔
-> ۴:)چاررکعتی نمازمیں دوسرے سجدہ میں داخل ہونے سے پہلے نمازی شک کرے کہ اس نے دورکعتیں پڑھی ہیں یازیادہ پڑھی ہیں ۔
-> ۵:)دواورپانچ رکعتوں میں یادواورپانچ سے زیادہ رکعتوں میں شک کرے۔
-> ۶:)تین اورچھ رکعتوں میں یاتین اورچھ سے زیادہ رکعتوں میں شک کرے۔
-> ۷:) نماز کی رکعتوں میں شک کرنا جب کہ یہ نہ جانتا ہو کہ کتنی رکعتیں پڑھی ہیں ۔
-> ۸:)چاراورچھ رکعتوں کے درمیان شک یاچاراورچھ سے زیادہ رکعتوں کے درمیان شک،جس کی تفصیل آگے آئے گی۔
 >
 > 7. a doubt about the number of rakʿahs when one **does not know at all how many rakʿahs he has performed**;
 >
@@ -4420,10 +4236,6 @@ Related rulings linked: doubtinvalidthink
 >
 > *Citation (doubtaftersalam):* Islamic Laws (4th edition), Ruling 1165 · https://www.sistani.org/english/book/48/2253/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرنمازی سلام نمازکے بعدشک کرے کہ اس نے نمازصحیح طورپر پڑھی ہے یانہیں مثلاًشک کرے کہ رکوع اداکیاہے یانہیں یاچاررکعتی نمازکے سلام کے بعدشک کرے کہ چاررکعتیں پڑھی ہیں یاپانچ،تووہ اپنے شک کی پروانہ کرے لیکن اگر اسے دونوں طرف نمازکے باطل ہونے کاشک ہومثلاًچاررکعتی نمازکے سلام کے بعد شک کرے کہ تین رکعت پڑھی ہیں یاپانچ تواس کی نمازباطل ہے۔
->
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
 
@@ -4446,10 +4258,6 @@ Related rulings linked: doubtinvalidthink
 > However, if both sides of his doubt are such that each possibility would mean **his prayer is invalid** – for example, after the salām of a four rakʿah prayer he doubts whether he performed three or five rakʿahs, **his prayer is invalid**.
 >
 > *Citation (doubtaftersalam):* Islamic Laws (4th edition), Ruling 1165 · https://www.sistani.org/english/book/48/2253/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرنمازی سلام نمازکے بعدشک کرے کہ اس نے نمازصحیح طورپر پڑھی ہے یانہیں مثلاًشک کرے کہ رکوع اداکیاہے یانہیں یاچاررکعتی نمازکے سلام کے بعدشک کرے کہ چاررکعتیں پڑھی ہیں یاپانچ،تووہ اپنے شک کی پروانہ کرے لیکن اگر اسے دونوں طرف نمازکے باطل ہونے کاشک ہومثلاًچاررکعتی نمازکے سلام کے بعد شک کرے کہ تین رکعت پڑھی ہیں یاپانچ تواس کی نمازباطل ہے۔
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -4541,10 +4349,6 @@ Related rulings linked: doubtinvalidthink
 > If someone who doubts excessively doubts whether or not he has performed an obligatory component of the prayer, **he must assume he has performed it**. For example, if he doubts whether or not he has performed rukūʿ, he must assume he has performed rukūʿ. If he doubts whether or not he has performed an act that invalidates prayers – for example, he doubts whether he performed ṣubḥ prayers as a two rakʿah prayer or a three rakʿah prayer – **he must assume he has performed it** correctly.
 >
 > *Citation (excessiveact):* Islamic Laws (4th edition), Ruling 1171 · https://www.sistani.org/english/book/48/2255/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرکثیرالشک نمازکے اجزاء میں سے کسی جزکے انجام دینے کے بارے میں شک کرے تواسے یوں سمجھناچاہئے کہ اس جزکوانجام دے دیاہے۔ مثلاً اگر شک کرے کہ رکوع کیاہے یانہیں تواسے سمجھناچاہئے کہ رکوع کرلیاہے اوراگرکسی ایسی چیز کے بارے میں شک کرے جومبطل نمازہے مثلاً شک کرے کہ صبح کی نماز دورکعت پڑھی ہے یاتین رکعت تویہی سمجھے نمازٹھیک پڑھی ہے۔
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -4682,10 +4486,6 @@ Related rulings linked: doubtinvalidthink
 >
 > *Citation (doubtimam):* Islamic Laws (4th edition), Ruling 1178 · https://www.sistani.org/english/book/48/2256/
 >
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرامام جماعت نمازکی رکعتوں کی تعدادکے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یاچاررکعتیں اورمقتدی کویقین یاگمان ہوکہ چاررکعتیں پڑھی ہیں اوروہ یہ بات امام جماعت کے علم میں لے آئے کہ چار رکعتیں پڑھی ہیں توامام کوچاہئے کہ نمازکوتمام کرے اورنماز احتیاط کاپڑھناضروری نہیں اوراگر امام کو یقین یاگمان ہوکہ چند رکعتیں پڑھی ہیں اورمقتدی نمازکی رکعتوں کے بارے میں شک کرے تواسے چاہئے کہ اپنے شک کی پروا نہ کرے اور یہی حکم ہے دونوں کے لئے جب ہر ایک نماز کےافعال میں شک کرے جیسے سجدے کی تعداد میں شک کرنا۔
->
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
 
@@ -4705,10 +4505,6 @@ Related rulings linked: doubtinvalidthink
 > Similarly, if the imam is certain or supposes that he has performed a certain number of rakʿahs and a follower has a doubt about the number of rakʿahs, **the follower must dismiss his doubt**. The same applies with regard to a doubt that they may have about the acts of prayers, such as a doubt about the number of sajdahs performed.
 >
 > *Citation (doubtimam):* Islamic Laws (4th edition), Ruling 1178 · https://www.sistani.org/english/book/48/2256/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرامام جماعت نمازکی رکعتوں کی تعدادکے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یاچاررکعتیں اورمقتدی کویقین یاگمان ہوکہ چاررکعتیں پڑھی ہیں اوروہ یہ بات امام جماعت کے علم میں لے آئے کہ چار رکعتیں پڑھی ہیں توامام کوچاہئے کہ نمازکوتمام کرے اورنماز احتیاط کاپڑھناضروری نہیں اوراگر امام کو یقین یاگمان ہوکہ چند رکعتیں پڑھی ہیں اورمقتدی نمازکی رکعتوں کے بارے میں شک کرے تواسے چاہئے کہ اپنے شک کی پروا نہ کرے اور یہی حکم ہے دونوں کے لئے جب ہر ایک نماز کےافعال میں شک کرے جیسے سجدے کی تعداد میں شک کرنا۔
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -4747,10 +4543,6 @@ Related rulings linked: doubtinvalidthink
 > If a person has a doubt about the number of rakʿahs he has performed in a recommended prayer, in the event that the greater of the two numbers he is doubtful about would invalidate the prayer, **he must assume the lesser number is correct**. For example, in the nāfilah of ṣubḥ, if one doubts whether he has performed two rakʿahs or three rakʿahs, he must assume he has performed two rakʿahs. However, if the greater of the two numbers would not invalidate the prayer – for example, he doubts whether he has performed two rakʿahs or one rakʿah – then his prayer is valid whichever side of the doubt he acts upon.
 >
 > *Citation (doubtmustahabnumber):* Islamic Laws (4th edition), Ruling 1179 · https://www.sistani.org/english/book/48/2257/
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگرکوئی شخص مستحب نمازکی رکعتوں میں شک کرے اورشک عدد کی زیادتی کی طرف ہوجونمازکوباطل کرتی ہے تواسے چاہئے کہ یہ سمجھ لے کہ کم رکعتیں پڑھی ہیں مثلاًاگرصبح کی نافلہ میں شک کرے کہ دورکعتیں پڑھی ہیں یاتین تویہی سمجھے کہ دو پڑھی ہیں اوراگرتعدادکی زیادتی والاشک نمازکو باطل نہ کرے مثلاً اگرنمازی شک کرے کہ دورکعتیں پڑھی ہیں یاایک پڑھی ہے توشک کے جس طرف پربھی عمل کرے اس کی نماز صحیح ہے۔
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________

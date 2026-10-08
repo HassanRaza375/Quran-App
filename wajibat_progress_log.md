@@ -1076,3 +1076,44 @@ The helper now shows the ruling entry's own note under a quote, as the ruling ca
 - **Unit tests: 483 pass** (467 before): the mismatch suite (8) and the review/flag suite (8) are new. Lint is clean on every file touched.
 - **Browser, production build:** helper suite **90/90** at 1280, 768 and 390 px with the dev flag on (87 before plus the Issue 1154 note check at each width); **flag off 9/9** (all four topic pages show their rulings and no helper); regressions Taharat 37/37, Salat 35/35, offline/install 22/22, Phase 4a 34/34, P18 30/30.
 - **Source snapshot:** 0 problems after the treatise `persianSource` change.
+
+## Mismatch triage, Playwright, production guard, merge preparation (2026-10-08)
+
+Decisions B1–B4 are in `wajibat_decisions.md`.
+
+### Important: `main` already contains this work
+`main` and `origin/main` were already at `c0a2190` (the review-round commit) when this round started: `wajibat-module` had been fast-forward merged into `main` and pushed between sessions (the reflog shows `merge wajibat-module: Fast-forward`; it was not done in this round). So Phases 1–4 and the review round are **already on `main`**. The helpers are hidden there (no sign-offs), but the 526 pending mismatch rows were not triaged on `main` until this round's commit. Nothing in this round was merged or pushed to `main`.
+
+### B1. Safe-default triage (display only; nothing is accepted)
+Rows by status, of 551 flagged:
+
+| Status | Rows |
+|---|---|
+| `low-pending-review` (display unchanged) | 205 |
+| `hidden-pending-review` (Sistani, high: Urdu hidden, English shown with a note) | 145 |
+| `needs-human` (Khamenei, high, the Persian cannot decide; **shown as before**) | 118 |
+| `persian-decided-pending-review` (Khamenei, high: the version matching the Persian is shown) | 58 |
+| `decided` (already settled under R11) | 25 |
+
+- **Hidden now:** Sistani **145 Urdu texts** (241 Sistani Urdu texts remain shown); Khamenei **7 Urdu texts and 22 English texts**. Per-topic counts are in `wajibat_mismatch_report.md` ("What is hidden now"); the topics with most hidden Sistani Urdu are Doubts in prayer (22), Sajdat al-sahw (13) and the precautionary prayer (10).
+- **How Khamenei rows were decided:** each version's numbers and negations were compared with the Persian (Rules entries only). The version that matches is shown. If the English is the one that does not match but a guided-prayer step or a helper answer quotes it, the English was **not** hidden and the row is `needs-human` (16 rows); hiding it would have broken the step or the answer.
+- **`needs-human` (118 rows, 81 rulings, 64 with an English/Urdu difference)** are in `wajibat_needs_human.md`, **English/Urdu first, both texts side by side** (the Persian too where there is one). Reasons: no Persian to decide with (Q&A answers and the Urdu-only treatise): 50 rows; neither version matches the Persian: 52; the hold would break a step or helper quote: 16.
+- **How it works:** `triage_mismatch.py` sets the statuses; `holds.py` applies them when the data is generated; `build.py` generates twice (pass 1 full data for the comparison, pass 2 with the holds). A person's decisions are never overwritten. **Restoring a hidden text is a recorded decision** with reviewer and date: `python scripts/wajibat/decide_mismatch.py --ruling ID --status restored --reviewer "Name"`, then `build.py`.
+- **Display:** a held Sistani Urdu shows the existing "no official Urdu yet, so the English is shown" line plus the note that it is held for a person's check. A held Khamenei English shows its own notice ("an automated comparison found a difference… only the official Urdu is shown until a person has checked it"). Neither claims the other version is wrong.
+- **Tests:** the mismatch tests now include the triage rules (nothing auto-accepted, Sistani high rows hide the Urdu, one hold per ruling, the shipped data follows the holds, a restored row has no hold and a reviewer). Counts in the older dataset tests were made to follow the holds.
+
+### B2. Playwright
+Added as a devDependency (`playwright` ^1.64); after `npm install`, run `npx playwright install chromium` once. The review pack PDFs were regenerated with it. Documented in `scripts/wajibat/README.md`.
+
+### B3. Production guard
+`app/utils/wajibatBuildGuard.ts`, called from `nuxt.config.ts`: **a production build (`NODE_ENV=production` or `VERCEL_ENV=production`) now fails if `NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS` is on** (true/1/yes/on). Tested for real: `NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS=true npx nuxt build` stops with the error. Four unit tests cover the spellings, production without the flag, development, and that `nuxt.config.ts` calls it.
+
+### B4. Merge preparation
+See `wajibat_release_notes.md` and the plan given to the user. **Not merged**, as `main` already holds the earlier commits; only this round's new commit would go to `main`, after the user's go-ahead.
+
+### Checks
+- Unit tests: **see the final count in the last line of this section**. Lint is clean on every file touched.
+- Browser (production build): helper suite 90/90 (flag on); flag off: helpers hidden on all four topic pages; regressions Taharat 37/37, Salat 35/35, offline/install 22/22, Phase 4a 34/34, P18 30/30 (two assertions updated, because the English of Rules 388 is now held back); a Sistani held-Urdu check passes.
+- **One transient browser error seen once:** "Failed to fetch dynamically imported module" on one page load during the regression run (the chunk was present and served 200 afterwards; a rerun was clean). Logged with the transient `npm test` failure; investigate if it recurs.
+- Install size from `npm run size`: **5,445.42 KiB raw (2,734.53 KiB gzip)**, 240 precache files; ruling chunk 1,190.17 KiB (228.96 KiB gzip), down from 1,278.05 KiB because of the hidden texts.
+- **Unit tests: 492 pass** (483 before: 5 triage/hold tests and 4 build-guard tests are new).

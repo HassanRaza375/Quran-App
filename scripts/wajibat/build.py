@@ -11,8 +11,9 @@ STEPS = [
     ["gen_foundations.py", os.path.join(R, "foundations.ts")],
     ["gen_taharat.py", os.path.join(R, "taharat.ts"), os.path.join(P, "taharat.ts")],
     ["gen_salat.py", os.path.join(R, "salat.ts"), os.path.join(P, "salat.ts")],
-    ["gen_kqa.py", os.path.join(R, "salatQa.ts")],
+    ["gen_kqa.py", os.path.join(R, "salatQa.ts"), os.path.join(R, "sawmQa.ts")],
     ["gen_doubts.py", os.path.join(R, "doubts.ts")],
+    ["gen_sawm.py", os.path.join(R, "sawm.ts")],
     ["gen_glossary.py", os.path.join(DATA, "glossary.ts")],
     ["place_qa_ids.py"],
 ]

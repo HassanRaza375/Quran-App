@@ -48,7 +48,7 @@ export const WAJIBAT_CATEGORIES: WajibatCategory[] = [
     order: 4,
     phase: 5,
     summary: explain("Who must fast, what breaks the fast, qada and kaffarah, travel, and zakat al-fitrah."),
-    topicIds: [],
+    topicIds: ["sawmwho", "sawmexempt", "sawmniyyah", "sawmmubtilat", "sawmjanabah", "sawmtimes", "sawmkaffarah", "sawmonlyqada", "sawmqada", "sawmtravel", "sawmmonth", "sawmtypes", "zakatfitrah"],
   },
   {
     id: "khums",

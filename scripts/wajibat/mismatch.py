@@ -101,8 +101,11 @@ def main():
             if not ps or e["marjaId"] != "khamenei" or not ps["reference"].startswith("مسأله"):
                 continue
             nums = [int(x) for x in re.findall(r"\d+", ps["reference"].translate(DIGITS))]
+            # the Urdu edition's numbers can differ from the Persian's (align_rules.en_to_persian): use its own citation
+            us = e.get("urSource") or ps
+            unums = [int(x) for x in re.findall(r"\d+", us["reference"].translate(DIGITS))]
             fa = "\n".join(FA[n] for n in nums)
-            ur = "\n".join(UR[n][0] for n in nums)
+            ur = "\n".join(UR[n][0] for n in unums)
             en = e["text"]["en"] if e.get("excerpt") is None else None
             if en:
                 add(r["id"], "khamenei", "text", ("en", "fa"), ("en", en), ("fa", fa), e["source"]["reference"])

@@ -133,13 +133,14 @@ describe("Wajibat dataset integrity", () => {
 
   it("Khamenei's Rules entries: English from the 2023 Rules, official Urdu from book 197, checked against the Persian (R1, R6, R11)", () => {
     const entries = WAJIBAT_RULINGS.flatMap((r) => r.rulings).filter((m) => m.marjaId === "khamenei" && m.source.title === "The Rules on Prayer & Fasting 2023");
-    expect(entries.length).toBe(200);
+    // 200 in Phases 1-4 (salat) + 195 fasting rulings (787-981) in Phase 5
+    expect(entries.length).toBe(395);
     const withUrdu = entries.filter((e) => e.text.ur);
     const noUrdu = entries.filter((e) => !e.text.ur);
     // Without Urdu: the three R11 cases, plus Urdu held back by the mismatch triage (B1).
     const urduWithheld = noUrdu.filter((e) => !/held back/.test(e.urduNote ?? ""));
     const urduHeld = noUrdu.filter((e) => /held back/.test(e.urduNote ?? ""));
-    expect(withUrdu.length + urduHeld.length).toBe(197);
+    expect(withUrdu.length + urduHeld.length).toBe(392);
     for (const e of urduHeld) expect(e.urSource).toBeUndefined();
     for (const e of entries) {
       expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/241\?sn=\d+$/);
@@ -185,7 +186,8 @@ describe("Wajibat dataset integrity", () => {
   });
 
   it("Khamenei's supplementary Q&A salat entries: own Q numbers, compared with the 2023 Rules, his followers only (P13, R7)", () => {
-    const supp = WAJIBAT_RULINGS.filter((r) => r.supplementary);
+    // the salat chapter's Q&As (the fasting chapter's 41 are tested in wajibatSawm.test.ts)
+    const supp = WAJIBAT_RULINGS.filter((r) => r.supplementary && !r.topicId.startsWith("sawm"));
     expect(supp.length).toBe(61);
     expect(supp.filter((r) => r.rulings[0]!.text.ur).length).toBe(60);
     for (const r of supp) {

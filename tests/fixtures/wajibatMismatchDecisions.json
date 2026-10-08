@@ -675,6 +675,62 @@
   "note": "Known: this ruling's English or Urdu version was checked against the Persian original and withheld or trimmed (decision R11, rules_verdicts.py).",
   "status": "decided"
  },
+ "fitrahdeath|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahdependants|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "fitrahlate|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahless|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "fitrahnotdutiful|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahonesaa|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "fitrahprayer|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "fitrahrecipients|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahsayyid|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahsetaside|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahsoil|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahuse|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "fitrahwho|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
  "flowingwater|sistani|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
@@ -1283,6 +1339,158 @@
   "status": "low-pending-review"
  },
  "khqa723|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa741|khamenei|text|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa743|khamenei|text|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa744|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa749|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa749|khamenei|text|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa750|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa751|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa753|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa755|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa758|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa759|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa760|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa760|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa761|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa763|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa764|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa765|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa766|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa772|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa782|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa782|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa793|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa793|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa794|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa794|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa796|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa799|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa809|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa809|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa813|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa813|khamenei|text|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa831|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa833|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa834|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa836|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa839|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "khqa841|khamenei|question|en-ur": {
+  "note": "No Persian original to decide with (Q&A answer, or the Urdu-only treatise).",
+  "status": "needs-human"
+ },
+ "khqa844|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -1947,6 +2155,1176 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
+ "sawmabstain|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmbleeding|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmbleeding|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmbreastfeeding|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmburp|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmburp|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmconditions|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmconditions|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmconditions|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmcourtshipno|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdawninvestigate|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdawninvestigate|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdoctor|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdoctor|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdoctor|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdoubtday|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmdoubtday|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmdoubtday|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdoubtdone|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdoubtdone|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdustforgot|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdustforgot|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdustforgot|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmdustthin|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmeating|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmeating|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmfidyahwho|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmfidyahwho|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmforced|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmforced|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmforced|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmgargleunintended|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmgargleunintended|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmgargle|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmgargle|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmgargle|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmgirls|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmgirls|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmgirls|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmharamchildday|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmharmafter|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmhaydbefore|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmhaydbefore|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmhaydbefore|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmhaydfast|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmhaydfast|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmhaydforgot|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmhaydforgot|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmheadfell|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmheadfell|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmheadhalf|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmheadhalf|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawminjections|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawminjections|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawminjections|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentassigned|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintentbreak|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentbreak|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentbreak|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentbreak|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentcontinue|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentday|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintentforgot|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentforgot|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentforgot|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintentfree|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentfree|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentfree|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentfree|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentintoxicated|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintentional|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintentkind|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentkind|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentlatest|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintentnone|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintentother|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentother|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentother|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintentrecommended|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmintentrecommended|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmintentsleep|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmintentsleep|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmintercoursedoubt|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmintercourseforgot|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmintercoursepartial|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawminvoluntary|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawminvoluntary|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmistihadah|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmjunubdoubt|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubdoubt|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubforgot|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmjunubmake|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmjunubmake|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmjunubmake|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmjunubqada|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubsleepagain|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubsleepagain|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubsleepexpect|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubsleepexpect|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubsleepknow|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubsleepknow|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmjunubsleepknow|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmjunubsleepprobable|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmjunubsleepsecond|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmjunubsleepsecond|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmjunubsleepsecond|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmjunubsleepunmindful|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffable|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffable|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffasleep|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffburp|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffburp|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffburp|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffcompelother|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffcompeltraveller|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffcompelwife|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffdelay|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffignorance|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffignorance|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffignorance|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffjourney|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffjourney|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffjourney|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffmaghribword|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffmaghribword|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffmaghribword|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffmonthsexcuse|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffmonthsexcuse|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffmonthsstart|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffmonths|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffmonths|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmkaffmonths|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffsixty|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffsixty|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffsixty|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkafftypes|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffunlawful|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffunlawful|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffunlawful|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmkaffvow|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmkaffvow|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmkaffwhen|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkaffwhen|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmkafir|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmlist|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmlyingask|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmlyingbelief|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmakruh|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmmasturbation|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmmonthequipment|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthequipment|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthgovernment|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmmonthgovernment|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmmonthhakim|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthhakim|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthprisoner|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthshawwal|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthshawwal|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthways|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmonthways|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmucus|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmucus|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmmucus|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmobligatory|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmobligatory|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmold|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmold|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmonlyqadalist|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmonlyqadalist|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmonlyqadalist|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmpills|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmpills|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmprayerfirst|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmpregnantdelay|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmpregnantdelay|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmpregnant|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmpregnant|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmpregnant|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmqadaable|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadaable|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadaanother|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaanother|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadabreakafter|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmqadacount|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadacount|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadacount|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadacount|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmqadadeath|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadadeath|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadadelayed|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadadelayignorance|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadadelayignorance|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadadrunkany|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadadrunkany|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadadrunk|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadahayd|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmqadahayd|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmqadaillness|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadaillness|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaillness|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadainsane|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaintentionalmiss|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaintentionalmiss|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaintentionalmiss|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmqadaintentionalrepeat|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaintention|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadakafir|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaorder|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmqadaparentsother|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaparentspurpose|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadaparentspurpose|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmqadaparents|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaparents|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaparents|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmqadatravel|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadatravel|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaunconscious|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaunconscious|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaweak|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaweak|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmqadaweak|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmrecommendedqada|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmrecommendedqada|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmrecommended|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmrecommended|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmrecommended|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmrecommended|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmrequires|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmrequires|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmsickrecovers|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmsickrecovers|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmswallowedforgot|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmswallowed|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmswallowother|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtasting|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtasting|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmthirstextreme|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelallowed|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelallowed|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelarrive|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelarrive|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelassigned|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelassigned|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelassigned|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelassigned|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmtravelnofast|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmtravelplaces|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmtravelplaces|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmtravelsinchange|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmtravelsinchange|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmtravelunawareshari|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmtravelunawareshari|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelunawareshari|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sawmtravelunawareterms|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmtravelunawareterms|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmtravelunawareterms|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelunaware|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelunaware|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelunaware|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmtravelvow|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmtravelvow|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sawmtravelvow|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmvomitnight|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sawmvomitsick|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmvomit|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmvomit|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmwetdreamghusl|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmwetdreamghusl|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmwhonot|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmwhonot|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sawmwhonot|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
  "semen|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
@@ -2005,11 +3383,6 @@
  "stillplace|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
- },
- "stillplace|sistani|text|en-ur": {
-  "hold": "hide-ur",
-  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
-  "status": "hidden-pending-review"
  },
  "sunpurifies|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",

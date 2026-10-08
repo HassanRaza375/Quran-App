@@ -119,3 +119,7 @@ def condition_ur(page, ordinal_ur):
 # ---------- Khamenei Q&A, prayer chapter (second-priority source for salat, R6) ----------
 KH_EN_PRAYER = _qa_index("kh_en_prayer.txt", r"^Q ?(\d+)[:.]\s*", r"^A\s*:\s*")
 KH_UR_PRAYER = _qa_index("kh_ur_prayer.txt", r"^س ?(\d+)\s*:\s*", r"^ج\s*:\s*")
+# Fasting chapter (Phase 5): English Q 741-846 (sections sn 5292-5300, 5316), Urdu س 745-850 (sn 11424-11433). The pages hold the rest
+# of the book too; only the fasting questions are indexed. Numbers do not collide with the prayer chapter.
+KH_EN_PRAYER.update({n: v for n, v in _qa_index("kh_en_fasting.txt", r"^Q ?(\d+)[:.]\s*", r"^A\s*:\s*").items() if 741 <= n <= 846})
+KH_UR_PRAYER.update({n: v for n, v in _qa_index("kh_ur_fasting.txt", r"^س ?(\d+)\s*:\s*", r"^ج\s*:\s*").items() if 745 <= n <= 850})

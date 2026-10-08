@@ -94,7 +94,15 @@
         <p v-if="!rulings.length" class="text-medium-emphasis">
           This topic is an overview and has no rulings of its own. The rulings are in the related topics below.
         </p>
-        <div class="d-flex flex-column ga-4">
+        <!-- Nothing from this marja' has been added to this topic yet (e.g. zakāt al-fiṭrah for Khamenei):
+             one notice instead of a card per ruling. Never falls back to another marja' (decision P1). -->
+        <v-alert v-if="noEntriesForMarja" type="info" variant="tonal" density="compact" class="mb-1">
+          No rulings from {{ marja.name.en }} have been added to this topic yet. Please refer to his office.
+          <a :href="marja.officialSite" target="_blank" rel="noopener noreferrer" class="ms-1">
+            Official website <v-icon size="14" aria-hidden="true">mdi-open-in-new</v-icon>
+          </a>
+        </v-alert>
+        <div v-else class="d-flex flex-column ga-4">
           <RulingCard v-for="r in mainRulings" :id="r.id" :key="r.id" :ruling="r" :marja="marja" :lang="lang" />
         </div>
 
@@ -233,13 +241,21 @@ useSeoMeta({ description: () => topic.value?.summary.text.en });
 
 const rulings = computed(() => (topic.value ? rulingsFor(topic.value, marjaId.value) : []));
 const mainRulings = computed(() => rulings.value.filter((r) => !r.sensitive && !r.panel));
+// A marja' whose sources are in the app (not "pending-sources") but who has no entry for any ruling of this topic.
+const noEntriesForMarja = computed(
+  () =>
+    !!marja.value &&
+    marja.value.status !== "pending-sources" &&
+    rulings.value.length > 0 &&
+    rulings.value.every((r) => !getMarjaRuling(r, marja.value.id) && !r.seeAlso?.some((x) => x.marjaId === marja.value.id))
+);
 // Other collapsed panels (decision P8), each with a neutral heading and no app commentary.
 const panels = computed(() =>
   Object.entries(PANEL_META)
     .map(([id, meta]) => ({ id, ...meta, rulings: rulings.value.filter((r) => r.panel === id) }))
     .filter((p) => p.rulings.length)
 );
-const sensitiveRulings = computed(() => rulings.value.filter((r) => r.sensitive));
+const sensitiveRulings = computed(() => (noEntriesForMarja.value ? [] : rulings.value.filter((r) => r.sensitive)));
 
 // Only the chosen marja's procedures — never another marja's (decision P1).
 const procedures = computed(() =>

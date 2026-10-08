@@ -1172,3 +1172,145 @@ Decisions D1–D2 are in `wajibat_decisions.md`.
 - **Restoring** one is the same recorded-decision path (`--status restored`).
 - **`emitRouteChunkError` stays `"automatic"`**: no immediate reloads mid-reading.
 - **Checks:** unit tests **496 pass**; browser (production build): new held-pointer check **8/8** (all 8 rulings, English and Urdu mode, 1280 and 390 px, Sistani unaffected), guided prayers 15/15, flag-off 9/9, and the helper suite and the earlier suites (see below); install size **5,447.89 KiB raw (2,735.02 KiB gzip)**, ruling chunk 1,192.68 KiB.
+
+
+## Phase 5 — Sawm (fasting) and zakāt al-fiṭrah (2026-10-08)
+
+Working decisions E1–E9 are in `wajibat_decisions.md` ("Phase 5 working decisions"). **Not merged.** Everything is on `wajibat-module`.
+
+### What was built
+- **13 topics** in the Fasting category, **341 rulings**: Sistani **233** entries, Khamenei **195** entries from *The Rules on Prayer & Fasting 2023* (every ruling 787–981) and **41** Q&A supplementary entries (R7).
+- **Sistani:** *Islamic Laws* Chapter Four, Fasting, Rulings **1529–1718** (190) and zakāt al-fiṭrah **2003–2044** (42). Ruling 1662 is quoted as two verbatim excerpts, one per point. The chapter's one-line opening definition has footnote markers in the middle of the sentence, so it is not quoted.
+- **Khamenei:** all 195 rulings of the fasting chapter, each with the official Urdu (book 197) and the Persian original (book 180) read against it. His *iʿtikāf* rulings (982–1009) are left for later (E1).
+- **Urdu:** 178 of Sistani's 233 entries have Urdu in the dataset: the 7 revised (*) rulings have none, because the older Urdu edition lags (1537, 1542, 1562, 1584, 1694, 1699, 2016: each compared with the Urdu one by one, P6); the 2 excerpts of 1662 have none; and 48 more are held by the mismatch triage (below). Khamenei: 186 of 195 Rules entries and all 41 Q&As have Urdu in the data.
+
+| Topic | Rulings | Sistani | Khamenei (Rules) | Khamenei Q&A |
+|---|---|---|---|---|
+| Who must fast (`sawmwho`) | 6 | 3 | 5 | 0 |
+| Illness, harm, old age, pregnancy and breastfeeding (`sawmexempt`) | 20 | 10 | 11 | 7 |
+| The intention for the fast (`sawmniyyah`) | 23 | 18 | 17 | 1 |
+| What invalidates the fast (`sawmmubtilat`) | 75 | 50 | 47 | 13 |
+| Janābah, ḥayḍ and nifās and the fast (`sawmjanabah`) | 30 | 25 | 16 | 2 |
+| Dawn, maghrib and breaking the fast (`sawmtimes`) | 7 | 5 | 7 | 0 |
+| Kaffārah for breaking the fast (`sawmkaffarah`) | 39 | 28 | 22 | 5 |
+| When only qaḍāʾ is due (`sawmonlyqada`) | 8 | 4 | 5 | 1 |
+| Making up missed fasts (qaḍāʾ) and the fidyah (`sawmqada`) | 33 | 21 | 24 | 2 |
+| Fasting and travel (`sawmtravel`) | 21 | 11 | 18 | 1 |
+| Establishing the first of the month (`sawmmonth`) | 23 | 8 | 13 | 9 |
+| Obligatory, forbidden, disapproved and recommended fasts (`sawmtypes`) | 14 | 8 | 10 | 0 |
+| Zakāt al-fiṭrah (`zakatfitrah`) | 42 | 42 | 0 | 0 |
+| **Total** | **341** | **233** | **195** | **41** |
+
+- **Pairing.** Each ruling pairs a Sistani and a Khamenei ruling on the same point under a short app-written heading. Where only one book states a point, the other marja' sees "has not been added yet", or, where his book states it inside another ruling of the same topic, a pointer to it (`seeAlso`). The women-specific rulings (ḥayḍ, nifās, pregnancy, breastfeeding, girls who have just reached bulūgh) are collapsed under "Rulings specific to women" (Q8). Rulings where the two books clearly differ are flagged "maraji' differ": the intention when one forgets it is Ramadan, injections, immersing the head in water, remaining junub on purpose, the two months of consecutive fasting, several invalidators in one day, old age, a sick person who recovers during the day, and how the first of the month is established.
+- **Dawn and maghrib.** The "Dawn, maghrib and breaking the fast" topic shows today's dawn and maghrib exactly as the Prayer Times feature has them (nothing recomputed), with buttons to Prayer Times and to the Ramadan fasting log (Module 11). No second fasting log was built. The panel says the rulings below decide when the fast begins and ends.
+- **Qur'anic basis (R2).** 2:183 and 2:185 on "Who must fast"; 2:185 on the exemptions, travel and qaḍāʾ; 2:187 on dawn and maghrib and on what invalidates the fast. Each ayah's own words name fasting.
+- **Glossary:** 13 new terms from Sistani's glossary (ṣawm, kaffārah, fidyah, mudd, ṣāʿ, ifṭār, faqīr, rajāʾ, mā fī al-dhimmah, maghrib, ḥadd al-tarakhkhuṣ, nadhr, zakāt al-fiṭrah), cut verbatim by the generator.
+- **A topic where a marja' has nothing** shows one notice instead of a card per ruling. Today that is only zakāt al-fiṭrah for Khamenei (E3).
+- **Q&A supplementary entries (R7, P13).** 41 entries from the Fasting chapter of the Q&A book (English Q 741–846, Urdu س 745–850), each compared with the Rules ruling it agrees with and shown to Khamenei's followers only. All 102 supplementary entries (61 prayer + 41 fasting) were checked word for word against the live leader.ir pages: 0 mismatches. The 65 Q&As not added are listed at the end of this section.
+
+### Things found and fixed on the way
+1. **The Persian original numbers the fasting chapter differently** from the English and the official Urdu (E7): English 880 is Persian 902, and the Persian runs +1 from 881 to 900. Without this, the first build flagged 57 rows as "neither version matches the Persian"; after the fix 29 remained (the rest were comparisons against the wrong Persian ruling).
+2. **A footnote bug.** One footnote block holding two notes ("[1] … [2] …") was attached whole to the first ruling: Khamenei 879's Urdu carried the footnote of 883 (vow kaffārah). Fixed; no ruling of an earlier phase was affected.
+3. **False positives in the extractor** (the same kind as C2): the English glosses *mudd* as "750 gm." where the Persian and Urdu say only "one mudd" (weights in grams are now stripped); Persian نُه ("nine") was read as a negation; the numbers 60–90 and Persian ordinals 11–20 were missing. I first added Urdu اسی and ستر as 80 and 70, then took them out: they also mean "this very" and "covering", and they changed 56 rows of earlier rulings (all false flags).
+4. **One earlier display decision changed, and no other:** Sistani **Ruling 866** (moving vehicles, "ninety degrees" against the Urdu ۹۰): its Urdu had been held because the English word was not recognised as a number. The corrected check finds no difference, so its Urdu is shown again. No human decision was touched; I checked every earlier row against the committed decisions file before and after.
+
+### Mismatch triage of the new rulings (decision B1, applied automatically)
+Nothing was accepted. The safe default decided what is displayed:
+
+| | Rulings |
+|---|---|
+| **Sistani Urdu held** (`hidden-pending-review`): English shown with the Urdu notice | **48** |
+| **Khamenei, Persian decides** (`persian-decided-pending-review`) | **21**: the Urdu held for 9 (English shown), the English held for 12 (the official Urdu shown, with the notice) |
+| **Needs a person** (`needs-human`), shown as before | **13** Rules rulings (neither version matches the Persian, or the Persian has no counterpart for a number) and **13** Q&A answers (no Persian original) |
+| Low (`low-pending-review`), display unchanged | 59 Rules + 22 Q&A + 46 Sistani |
+
+Totals now: Sistani Urdu held for **193** rulings; Khamenei Urdu held for **18**, English held for **41**, pointer to his book for **8** (unchanged); `needs-human` **92 rows**. The new rows are listed in `wajibat_needs_human.md` (English/Urdu first) and `wajibat_mismatch_report.md`. **Most of the new Khamenei flags look like translation style** (an English "remains obligatory" against the Persian and Urdu "is not waived"; "allowed" against "no problem"); the check cannot tell that from a changed meaning, so the safe default hides one version until a person decides.
+
+### Not done / needs the user
+- **Zakāt al-fiṭrah for Khamenei:** no source found (E3). Do you have one?
+- **The 13 Khamenei rulings in the "match neither" class:** shown as before; D1 held the earlier 8 with a pointer to his book. Hold these the same way? (E9). They are `sawmdoubtday`, `sawmforced`, `sawmgirls`, `sawmintentrecommended`, `sawmjunubsleepsecond`, `sawmkaffvow`, `sawmqadaable`, `sawmqadacount`, `sawmqadaillness`, `sawmqadaparentspurpose`, `sawmrecommended`, `sawmtravelplaces`, `sawmtravelunawareshari`.
+- **iʿtikāf** (Sistani Chapter Five, Khamenei 982–1009): not in Sawm in the spec; suggest Phase 8.
+- **The 262 helper paths** are still unsigned, so the helpers stay hidden. Phase 5 adds no helper.
+- **Reviewer sign-off** of the new content: still "Not scholar-reviewed" on every page.
+- **Makarem Shirazi:** unchanged (no sources).
+
+### Checks
+- **Unit tests: 509 pass** (496 before). New `tests/wajibatSawm.test.ts` (13 tests): every Sistani ruling of 1529–1718 and 2003–2044 and every Khamenei ruling of 787–981 is quoted (1662 as two excerpts, nothing else twice); the Urdu and Persian numbers pair as designed (including 880 = Persian 902 and the 881–900 shift); Khamenei 879/883's Urdu footnotes sit on the right ruling; the seven revised (*) Sistani rulings have no Urdu; zakāt al-fiṭrah has 42 Sistani entries and none for Khamenei; every `seeAlso` target is in the same topic and has the marja's entry; "maraji' differ" only where both have an entry; women-specific rulings are collapsed; Qur'anic basis; search; and the 41 Q&A entries (own Q numbers, Urdu = English + 4, agreesWith a fasting Rule, hidden from Sistani). The older Khamenei-Rules test now expects 395 entries (200 + 195).
+- **Source snapshot:** 0 problems; every one of the 2,539 numbered quotes matches its official unit exactly. **102 supplementary Q&A entries** (61 prayer + 41 fasting) checked word for word against the live leader.ir pages: 0 mismatches.
+- **Lint** is clean on every file touched.
+- **Browser, Playwright against the production build:**
+  - **Phase 5 suite 372/372:** the category page lists 13 topics; every one of the 13 topics for both maraji', in English and Urdu, at 1280 and 390 px: the number of ruling cards equals what the dataset says that marja' should see, no horizontal overflow, the women's panel shows the right count, and no console or page errors; Khamenei sees his Q&A (for example Q 763 on injections) and Sistani does not; Khamenei's zakāt al-fiṭrah shows the single notice and no cards; the dawn and maghrib panel and its two links; Qur'anic basis cards; hub search finds zakāt al-fiṭrah.
+  - **Regression 401/401:** all 33 topics of the earlier categories for both maraji' (English at 1280, Urdu at 390): card counts, no overflow, helpers hidden, no errors, and a held ruling still shows only the pointer.
+  - **Flag on/off 8/8:** with `NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS=true` the doubts and wuḍūʾ helpers show for both maraji'; without it they stay hidden.
+  - I could not re-run my earlier browser scripts (they were not kept in the working folder), so the regression above is a fresh, broader equivalent; the 90-check helper suite was **not** re-run. The helpers are untouched and the unit tests that walk all 262 paths pass.
+  - One environmental message is ignored in the console check: the production build asks for `/_vercel/insights/script.js`, which only exists on Vercel.
+- **One earlier-topic display change from the new notice:** Khamenei's followers on the one-ruling *ahkam* topic now see "No rulings from Ayatollah Khamenei have been added to this topic yet" instead of one "has not been added yet" card. Same meaning, one element.
+- **Install size (`npm run size`, R5):** the install-time precache is **5,450.26 KiB raw (2,735.06 KiB gzip)**, 240 files: +2.4 KiB from 5,447.89, because the ruling data stays out of the precache by design (R8). The ruling chunk grew from 1,192.68 KiB (about 229 KiB gzip) to **1,774.71 KiB raw (334.97 KiB gzip)**; it is loaded when `/fiqh` is opened and cached at runtime.
+
+### The 65 Q&As of the Fasting chapter that were not added (E4)
+Not added in this pass, mostly because there is no single Rules ruling to cite as the one the answer agrees with, or because the answer covers several points. I did not check each of these for agreement, and none has been judged wrong. Say if you want any added.
+- Q 742: A pregnant woman fasted while she was breast-feeding her baby. When she delivered, the baby was
+- Q 745: My mother was ill for a period of almost 13 years and could not fast. I know for certain that w
+- Q 746: I did not fast after reaching the age of maturity until I was twelve years old, because I was p
+- Q 747: An ophthalmologist ordered me not to fast due to an eye disease. But, I did not pay attention t
+- Q 748: I wear medical glasses and at the present, my eyes are too weak. The doctors tell me that if I 
+- Q 752: I have kidney stones and the only way to prevent them from calcifying is to continuously consum
+- Q 762: There are certain medicines for feminine illnesses that are applied through the vagina. Does th
+- Q 767: A man has foreplay with his wife during the day in the month of Ramadan, does it invalidate his
+- Q 768: If one remains junub (because of some difficulty) until the morning adhān, can he/she fast the 
+- Q 770: Is it permissible for a junub person to perform the ghusl of janābah after sunrise and then per
+- Q 771: A person staying as a guest in his host’s house becomes junub at night during the month of Rama
+- Q 773: A person woke up before the morning adhān but did not realize that he was junub and went back t
+- Q 774: During the month of Ramadan, a person wakes up before morning adhān and realizes that he is jun
+- Q 775: During the month of Ramadan, a person doubts before morning adhān whether he is junub or not. T
+- Q 776: A person uses najis water to perform ghusl during the month of Ramadan. A week later, he rememb
+- Q 777: A person suffers from incontinence for a limited duration, i.e., it continues for an hour or mo
+- Q 778: A person sleeps prior to, or after, morning adhān. He becomes junub, realizing it after morning
+- Q 781: Someone masturbated although he knew that masturbation would invalidate the fast. Does he have 
+- Q 783: For a number of years, a person was in the habit of masturbating during the month of Ramadan an
+- Q 784: Is it permissible for a husband to masturbate using his wife’s hand?
+- Q 785: Is it allowed for a bachelor to masturbate if required by the doctor for a laboratory test of s
+- Q 786: Some medical centers require a man to masturbate for sperm tests to determine whether he can ha
+- Q 787: Is it permissible for a man to have sexual excitement through imagining his own wife or a non-m
+- Q 788: Someone at the beginning of ritual maturity fasts during the month of Ramadan, but masturbates 
+- Q 789: If someone who is fasting looks at a sexually arousing scene during the month of Ramadan and be
+- Q 791: Is it permissible to follow Sunnīs in their timings for breaking the fast while one attends pub
+- Q 792: When I was fasting, my mother forced me to eat and drink. Did it invalidate my fast?
+- Q 795: While suffering from a cold, some mucus gathered in my mouth and I swallowed it instead of spit
+- Q 797: Is it sufficient to give a needy person the money to buy one mudd (750 grams) of food instead o
+- Q 798: A person was appointed attorney to feed a group of needy persons. Can he take his wages for the
+- Q 800: A woman cannot fast due to illness. She cannot perform the qaḍā’ before the next Ramadan eithe
+- Q 801: A person was liable to perform the qaḍā’ of ten Ramadan fasts and he started them on the 21th 
+- Q 802: A woman was pregnant during two consecutive Ramadans and could not fast during those two years.
+- Q 804: Due to a journey made for an important religious mission, I became liable for the qaḍā’ of eig
+- Q 805: A person was hired to perform qaḍā’ fasts of the month of Ramadan for somebody else, and he br
+- Q 806: Some people could not fast due to their journey for religious missions during the month of Rama
+- Q 807: A person did not perform prayers or fast for about 10 years due to ignorance. Now he has repent
+- Q 808: Due to a lack of financial and physical power, I failed to perform obligatory kaffārah, i.e. to
+- Q 810: A person did not fast for 120 days. What must he do? Does he have to fast for 60 days for every
+- Q 811: I fasted for almost one month with the intention of carrying out the qaḍā’ of any fast that I 
+- Q 812: If a person, not knowing the number of fasts missed, performs fasts with the intention of perfo
+- Q 814: A person, at the outset of the age of shar‘ī puberty, is not able to fast due to physical weakn
+- Q 815: A person does not know the exact number of days he has failed to fast or how many days of praye
+- Q 816: Fasting in Ramadan, a person did not wake up one day to eat the meal taken before the dawn. The
+- Q 817: If one is not sure whether they have done the qaḍā’ of all missed fasts, what is their duty?
+- Q 818: A person did not fast on reaching shar‘ī puberty. He fasted for eleven days then broke the fast
+- Q 819: A physician told a patient that fasting is harmful for his health. However, after a few years, 
+- Q 820: If a woman’s menstrual cycle starts while she is fasting on a specific day that she had vowed t
+- Q 821: A person fasted from the first day of Ramadan until the twenty-seventh. On the morning of the t
+- Q 822: A person finished his fast in his hometown at maghrib time. Then on traveling to another city, 
+- Q 823: A martyr had made a will asking his friend to perform the qaḍā’ of some fasts on his behalf as
+- Q 824: I am obsessed by doubts — or to put it precisely I am obsessive — especially in religious matte
+- Q 825: Is the tradition of the Cloak [Kisā’], which is narrated by Faṭimah al-Zahrā (a.), a reliable 
+- Q 826: I have heard from scholars and other normal people that if a person performing a mustaḥabb fas
+- Q 827: There are certain supplications for the month of Ramadan each of which is specified for a day i
+- Q 828: Despite having intended to fast, a person did not rise to eat the prefast meal. Therefore he co
+- Q 829: If a person is on a retreat in Masjid al-Ḥarām in Mecca for i‘tikāf, what rule applies to his 
+- Q 830: As you know, one of the following three things occurs at the beginning or end of each month: Th
+- Q 835: What is meant by sameness of horizon?
+- Q 837: If the Islamic scholars of a city differ regarding the new crescent and one considers all of th
+- Q 838: A person sees the new crescent and knows that the city’s religious authority is not able to see
+- Q 842: Can the night of the full moon, which is the fourteenth night of the month, be taken as a relia
+- Q 843: Is watching out for the new moon a kifā’ī obligation or something to be done as an obligatory c
+- Q 845: If it is permissible to follow a government announcement regarding sighting the crescent and it
+- Q 846: Would you please tell us what your opinion is regarding i‘tikāf in masjids other than the four 

@@ -110,7 +110,7 @@ def S(n=None, *, intro=None, cut=None, urdu="auto", hukm=None, basis=None, note=
     if notes: r["note"] = " ".join(notes)
     return r
 
-from align_rules import en_to_fa, flat
+from align_rules import en_to_fa, en_to_persian, flat
 from rules_verdicts import VERDICTS, MERGES
 _FA, _UR, _FASEC = flat()
 
@@ -131,14 +131,18 @@ def _urdu_notes(ur, basis):
     return notes
 
 def _rules_pair(n):
-    """(persian numbers, urdu text, urdu citation, persian citation) for English ruling n, or None."""
+    """(persian numbers, urdu text, urdu citation, persian citation) for English ruling n, or None.
+    The Urdu edition follows the English order; the Persian original differs in one place (align_rules.en_to_persian)."""
     nums = MERGES.get(n) or ([en_to_fa(n)] if en_to_fa(n) else [])
     if not nums or any(m not in _UR for m in nums): return None
-    ur = "\n".join(_UR[m][0] for m in nums)
+    fnums = MERGES.get(n) or [en_to_persian(n)]
+    assert all(m in _FA for m in fnums), (n, fnums)
+    ur = chr(10).join(_UR[m][0] for m in nums)
     lab = "، ".join(str(m) for m in nums)
+    flab = "، ".join(str(m) for m in fnums)
     return (nums, nfc(ur),
             {"title": UR_RPF_BOOK, "reference": f"مسئلہ {lab}", "url": UR_RPF_URL.format(_UR[nums[0]][1])},
-            {"title": FA_RPF_BOOK, "reference": f"مسأله {lab}", "url": FA_RPF_URL.format(_FASEC[nums[0]])})
+            {"title": FA_RPF_BOOK, "reference": f"مسأله {flab}", "url": FA_RPF_URL.format(_FASEC[fnums[0]])})
 
 def K(n, *, cut=None, hukm=None, basis=None, note=None):
     """Khamenei entry from The Rules on Prayer & Fasting 2023. The English is quoted from that book;

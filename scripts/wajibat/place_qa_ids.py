@@ -8,7 +8,7 @@ from paths import DATA, TMP
 
 sys.stdout.reconfigure(encoding="utf-8")
 meta = json.load(open(os.path.join(TMP, "kqa_meta.json"), encoding="utf-8"))
-sal = "".join(open(os.path.join(DATA, "rulings", f), encoding="utf-8").read() for f in ("salat.ts", "doubts.ts"))
+sal = "".join(open(os.path.join(DATA, "rulings", f), encoding="utf-8").read() for f in ("salat.ts", "doubts.ts", "sawm.ts"))
 
 # Khamenei Rules number -> the salat ruling id that quotes it
 num2id = {}

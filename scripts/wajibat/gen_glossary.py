@@ -88,6 +88,20 @@ T=[("wajib","wājib","obligatory","واجب","واجب"),
 ("kathiralshakk","kathīr al‑shakk","excessive doubter","كثير الشك","کثیر الشک"),
 ("salatalihtiyat","ṣalāt al‑iḥtiyāṭ","the precautionary prayer","صلاة الاحتياط","نماز احتیاط"),
 ("sajdatalsahw","sajdatā al‑sahw","the two prostrations for inadvertence","سجدتا السهو","سجدۂ سہو"),
+# Phase 5: fasting and zakāt al-fiṭrah
+("sawm","ṣawm","fasting","صوم","روزہ"),
+("kaffarah","kaffārah","recompense","كفارة","کفارہ"),
+("fidyah","fidyah","under certain circumstances","فدية","فدیہ"),
+("mudd","mudd","approximately 750 grams","مد","مد"),
+("saa","ṣāʿ","2.823 kilograms","صاع","صاع"),
+("iftar","ifṭār","breaking a fast","إفطار","افطار"),
+("faqir","faqīr","expenses for one year","فقير","فقیر"),
+("rajaa","rajāʾ","desired by Allah","رجاء","رجاء"),
+("madhimmah","mā fī al‑dhimmah","with regard to a particular act","ما في الذمة","ما فی الذمہ"),
+("maghrib","maghrib","has passed overhead","مغرب","مغرب"),
+("hadd","ḥadd al‑tarakhkhuṣ","permitted limit","حد الترخص","حد ترخص"),
+("nadhr","nadhr","vow","نذر","نذر"),
+("zakatfitrah","zakāt al-fiṭrah","fiṭrah alms tax","زكاة الفطرة","زکوٰۃ فطرہ"),
 ]
 out=[]
 for id_,h,end,ar,ur in T:

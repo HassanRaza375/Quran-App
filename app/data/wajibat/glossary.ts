@@ -1013,5 +1013,187 @@ export const WAJIBAT_GLOSSARY: GlossaryTerm[] = [
       reference: "Glossary",
       url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
     }
+  },
+  {
+    id: "sawm",
+    term: "ṣawm",
+    arabic: "صوم",
+    urdu: "روزہ",
+    definition: {
+      en: "fasting"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "kaffarah",
+    term: "kaffārah",
+    arabic: "كفارة",
+    urdu: "کفارہ",
+    definition: {
+      en: "recompense"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "fidyah",
+    term: "fidyah",
+    arabic: "فدية",
+    urdu: "فدیہ",
+    definition: {
+      en: "compensative payment of one mudd (approximately 750 grams) of staple food to a poor person for a fast of the month of Ramadan that is missed under certain circumstances"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "mudd",
+    term: "mudd",
+    arabic: "مد",
+    urdu: "مد",
+    definition: {
+      en: "measure of weight equivalent to approximately 750 grams"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "saa",
+    term: "ṣāʿ",
+    arabic: "صاع",
+    urdu: "صاع",
+    definition: {
+      en: "measure of weight equivalent to 2.823 kilograms"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "iftar",
+    term: "ifṭār",
+    arabic: "إفطار",
+    urdu: "افطار",
+    definition: {
+      en: "breaking a fast"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "faqir",
+    term: "faqīr",
+    arabic: "فقير",
+    urdu: "فقیر",
+    definition: {
+      en: "(sing. of fuqarāʾ) a poor person, i.e. someone who does not possess the means to meet his and his family’s expenses for one year"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "rajaa",
+    term: "rajāʾ",
+    arabic: "رجاء",
+    urdu: "رجاء",
+    definition: {
+      en: "(shorter form of rajāʾ al-maṭlūbiyyah) intention to perform/avoid something in the hope that it is desired by Allah"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "madhimmah",
+    term: "mā fī al‑dhimmah",
+    arabic: "ما في الذمة",
+    urdu: "ما فی الذمہ",
+    definition: {
+      en: "intention to fulfil whatever one’s obligation happens to be with regard to a particular act"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "maghrib",
+    term: "maghrib",
+    arabic: "مغرب",
+    urdu: "مغرب",
+    definition: {
+      en: "the time shortly after sunset (ghurūb) when the redness of the sky in the east has passed overhead"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "hadd",
+    term: "ḥadd al‑tarakhkhuṣ",
+    arabic: "حد الترخص",
+    urdu: "حد ترخص",
+    definition: {
+      en: "permitted limit"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "nadhr",
+    term: "nadhr",
+    arabic: "نذر",
+    urdu: "نذر",
+    definition: {
+      en: "vow"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "zakatfitrah",
+    term: "zakāt al-fiṭrah",
+    arabic: "زكاة الفطرة",
+    urdu: "زکوٰۃ فطرہ",
+    definition: {
+      en: "fiṭrah alms tax"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
   }
 ];

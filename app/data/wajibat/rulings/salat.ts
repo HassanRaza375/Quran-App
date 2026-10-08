@@ -1632,7 +1632,8 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "The second condition: the place where obligatory prayers are performed must not move so vigorously that it would prevent the person from performing prayers from standing and performing rukūʿ and sujūd normally; in fact, based on obligatory precaution, the movement must not prevent his body from being steady. If one is compelled to perform prayers in such a place due to shortage of time or any other reason – for example, in certain types of cars or on a ship or train – he must remain still and face qibla as much as possible. If the vehicle moves away from the direction of qibla, he must turn and face the qibla again; and if it is not possible to face qibla precisely, he must try to ensure that the difference is less than ninety degrees; and if this is not possible, he must face qibla at least while performing takbīrat al‑iḥrām; and if even this is not possible, it is not necessary for him to face qibla."
+          en: "The second condition: the place where obligatory prayers are performed must not move so vigorously that it would prevent the person from performing prayers from standing and performing rukūʿ and sujūd normally; in fact, based on obligatory precaution, the movement must not prevent his body from being steady. If one is compelled to perform prayers in such a place due to shortage of time or any other reason – for example, in certain types of cars or on a ship or train – he must remain still and face qibla as much as possible. If the vehicle moves away from the direction of qibla, he must turn and face the qibla again; and if it is not possible to face qibla precisely, he must try to ensure that the difference is less than ninety degrees; and if this is not possible, he must face qibla at least while performing takbīrat al‑iḥrām; and if even this is not possible, it is not necessary for him to face qibla.",
+          ur: "(دوسری شرط:) ضروری ہے کہ نمازی کی جگہ واجب نمازوں میں ایسی نہ ہوکہ تیزحرکت نمازی کے کھڑے ہونے یارکوع اورسجود کرنے میں اختیاری طور سے مانع ہوبلکہ (احتیاط لازم کی بناپر)ضروری ہے کہ اس کے بدن کوساکن رکھنے میں بھی مانع نہ ہواور اگر وقت کی تنگی یاکسی اوروجہ سے ایسی جگہ مثلاً بس، ٹرک،کشتی یاریل گاڑی میں نماز پڑھنے پر مجبور ہو تو جس قدرممکن ہوبدن کے ٹھہراؤ اورقبلے کی سمت کاخیال رکھے اوراگر سواری قبلے سے کسی دوسری طرف مڑجائے تواپنامنہ قبلے کی جانب موڑدے اور اگر قبلہ کی رعایت پورے طور سے ممکن نہ ہو تو کوشش کرے کہ اس کا (قبلہ)سےانحراف (۹۰) درجہ سے کم ہو اور اگر یہ بھی ممکن نہ ہو تو صرف تکبیرۃ الاحرام کہتے وقت قبلہ کی رعایت کرے اور اگر یہ بھی ممکن نہ ہوتوقبلہ کی رعایت ضروری نہیں ہے۔"
         },
         basis: "fatwa",
         source: {
@@ -1640,9 +1641,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 866",
           url: "https://www.sistani.org/english/book/48/2224/"
         },
+        urSource: {
+          title: "توضیح المسائل",
+          reference: "مسئلہ (866)",
+          url: "https://www.sistani.org/urdu/book/61/3637/"
+        },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
-        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       },
       {
         marjaId: "khamenei",

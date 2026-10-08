@@ -17,6 +17,8 @@ def page_text(url):
     lang = "ur" if "/ur/" in url else "en"
     sn = re.search(r"sn=(\d+)", url).group(1)
     t = open(os.path.join(SRC, "live", f"{lang}_sn_{sn}.html"), encoding="utf-8", errors="replace").read()
+    # a parenthesised marker "(1)" between two words ("دن<sup>(1)</sup>کے") is a word break, not part of either word
+    t = re.sub(r"(?<=[^\W\d_])<sup>\s*\(\d+\)\s*</sup>(?=[^\W\d_])", " ", t)
     t = re.sub(r"<sup>.*?</sup>", "", t)                              # footnote markers
     t = re.sub(r"</?(span|strong|b|i|em|a|small|u)\b[^>]*>", "", t)  # inline tags: no space
     t = re.sub(r"<br\s*/?>", "\n", t)

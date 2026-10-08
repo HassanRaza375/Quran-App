@@ -14,6 +14,8 @@ import { SALAT_RULINGS } from "./rulings/salat";
 import { SALAT_PROCEDURES } from "./procedures/salat";
 import { SALAT_QA_RULINGS } from "./rulings/salatQa";
 import { DOUBTS_RULINGS } from "./rulings/doubts";
+import { SAWM_RULINGS } from "./rulings/sawm";
+import { SAWM_QA_RULINGS } from "./rulings/sawmQa";
 import { DECISION_TREES } from "./decisionTrees";
 import treeReviewsJson from "./treeReviews.json";
 
@@ -21,7 +23,7 @@ export * from "./types";
 export { MARAJI, getMarjaById, isMarjaId } from "./marja";
 export { WAJIBAT_CATEGORIES, WAJIBAT_TOPICS, WAJIBAT_GLOSSARY, WAJIBAT_RECITATIONS };
 
-export const WAJIBAT_RULINGS: Ruling[] = [...FOUNDATIONS_RULINGS, ...TAHARAT_RULINGS, ...SALAT_RULINGS, ...SALAT_QA_RULINGS, ...DOUBTS_RULINGS];
+export const WAJIBAT_RULINGS: Ruling[] = [...FOUNDATIONS_RULINGS, ...TAHARAT_RULINGS, ...SALAT_RULINGS, ...SALAT_QA_RULINGS, ...DOUBTS_RULINGS, ...SAWM_RULINGS, ...SAWM_QA_RULINGS];
 export const WAJIBAT_PROCEDURES: Procedure[] = [...TAHARAT_PROCEDURES, ...SALAT_PROCEDURES];
 
 export interface WajibatDataset {

@@ -1,28 +1,29 @@
-# Daily Fiqh (Wajibat), Phases 1–4: release note
+# Daily Fiqh (Wajibat), Phases 1–5: release note
 
 Module 18, at `/fiqh`. Fiqh Ja'fari, per-marja' sourced rulings, no account, no backend. Every ruling is quoted from the marja's own official text; the app writes no rulings and translates nothing.
 
 ## What is live
 
-- **33 topics in 3 categories** (Foundations 5, Ṭahārah 8, Ṣalāt 20), **487 rulings (756 per-marja' entries)**, 11 guided step-by-step prayers/ablutions, a glossary, search, bookmarks and offline use.
+- **46 topics in 4 categories** (Foundations 5, Ṭahārah 8, Ṣalāt 20, Ṣawm 13), **828 rulings (1,225 per-marja' entries)**, 11 guided step-by-step prayers/ablutions, a glossary, search, bookmarks and offline use.
+- **Phase 5, Fasting (on `wajibat-module`, not yet merged):** 13 topics and 341 rulings. Sistani's Chapter Four (Rulings 1529–1718) and zakāt al-fiṭrah (2003–2044); Khamenei's *Rules* 787–981 and 41 of his Q&A answers. The dawn and maghrib topic shows today's times from Prayer Times, with a link to the Ramadan fasting log. **Zakāt al-fiṭrah has no Khamenei ruling** (no official source found), so his followers see one notice there. Not included: iʿtikāf.
 - **Two maraji':** Sayyid Ali al-Sistani (*Islamic Laws*, 4th edition) and Ayatollah Khamenei (*The Rules on Prayer & Fasting* 2023, with his Q&A as supplementary entries and, for wuḍūʾ, his official Urdu treatise). A reader sees **only the chosen marja's** rulings. Makarem Shirazi has no content until his risala is supplied.
 - **English and Urdu.** Urdu appears only where the marja's own official Urdu book has the ruling.
-- Content: wuḍūʾ, ghusl, purity and impurity, the daily prayers and their conditions, the traveller's prayer, congregational prayer, prayer doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw and forgotten parts.
+- Content: wuḍūʾ, ghusl, purity and impurity, the daily prayers and their conditions, the traveller's prayer, congregational prayer, prayer doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw and forgotten parts; and, in Phase 5, the fast of Ramadan (who must fast, the intention, what invalidates it, janābah/ḥayḍ/nifās, kaffārah, qaḍāʾ and fidyah, travel, the first of the month, the kinds of fast) and zakāt al-fiṭrah.
 - **Every page says "Not scholar-reviewed".** Every quote is checked by tests against the official source text it was extracted from.
 
 ## What is not live
 
 - **The four decision helpers** (prayer doubts and wuḍūʾ, for each marja') are **hidden**. A helper appears only when a reviewer has signed off every one of its 262 paths in total (none is signed off yet). The review pack is in `review_pack/`. Topic pages are unaffected.
-- **Makarem Shirazi** and Phases 5–8 (Sawm and later), 10, and the tracker (Phase 9).
+- **Makarem Shirazi** and Phases 6–8 (Khums, Zakat, Hajj and later), 10, and the tracker (Phase 9). Iʿtikāf.
 
 ## Display holds from the automated mismatch check (decision B1)
 
 An automated comparison of every language version found differences in numbers or negation words. Until a person reviews each, a **safe default controls what is shown. Nothing is accepted by it.**
 
-- **Sistani:** for 146 rulings with a high-priority difference, the Urdu is hidden and the English is shown with a note. (Sistani's English 4th edition is the authoritative text.)
-- **Khamenei:** where the English and the Urdu differ from each other, the version that matches his Persian original is shown. 9 Urdu texts and 29 English texts are hidden on that basis. Where a held English text is quoted by a guided prayer step or a helper answer, the official Urdu is shown there instead, with a notice.
+- **Sistani:** for 193 rulings with a high-priority difference, the Urdu is hidden and the English is shown with a note (146 before Phase 5, 48 added by the fasting chapter, 1 lifted by the corrected check). (Sistani's English 4th edition is the authoritative text.)
+- **Khamenei:** where the English and the Urdu differ from each other, the version that matches his Persian original is shown. 18 Urdu texts and 41 English texts are hidden on that basis (9 + 9 and 29 + 12, the second figure from Phase 5). Where a held English text is quoted by a guided prayer step or a helper answer, the official Urdu is shown there instead, with a notice.
 - **8 rulings** where neither the English nor the Urdu matches the Persian (`ayatcauses`, `doubtkinds`, `fridaybest`, `maghribishatime`, `quransajdah`, `tashahhudforgot`, `turningface`, `zuhrasrtime`; Khamenei only) are **held for review**: the card shows no text, only a pointer to his own book (*The Rules on Prayer & Fasting 2023*, with the official link), until a person decides. Recorded as `held-pending-review` (20 rows). No guided prayer step or helper answer quotes any of them.
-- **50 rows** (50 Khamenei Q&A answers, English/Urdu differences with no Persian original to decide with) are still shown as before and listed side by side in `wajibat_needs_human.md` for a person.
+- **92 rows** (Khamenei Q&A answers with no Persian original to decide with, and, from Phase 5, 13 fasting rulings where neither version matches the Persian) are still shown as before and listed side by side in `wajibat_needs_human.md` for a person.
 - Restoring a hidden text is a recorded decision (`scripts/wajibat/decide_mismatch.py`), never a hand edit.
 
 ## Safeguards

@@ -1,5 +1,5 @@
 {
-  "_comment": "Word tables for the automated mismatch check (decision A1). Left out on purpose: 'one'/ایک/یک (mostly the pronoun or article, not a number), 'first'/پہلا/اول (mostly the adverb 'first, then'/'earlier'), and the Urdu plural-looking ordinals دوسرے/تیسرے/چوتھے (also 'others'). Persian نه is read as a negation, not as 'nine'. Numbers and ordinals are compared as multisets (order ignored); negations by count. Also left out: 'second'/دوسرا/دوسری (Urdu دوسری is usually 'the other'). 'both'/دونوں count as 2. References such as 'Ruling 413' / 'مسئلہ 413' are stripped before comparing; the Arabic yeh/kaf are folded to the Persian/Urdu forms; Persian negation also matches verb prefixes (نکردن, نبودن, ...). Persian دوم is left out too ('second' / 'other' are ambiguous). Persian footnote markers such as (1) are stripped before comparing (they are not numbers in the ruling). Persian bare footnote markers (a lone 1-2 digit number after a word, before punctuation, end of line or است/را/که/و) are stripped as well. List markers like '1- ' are stripped in every language. In Urdu, a 1-2 digit number followed by ۔ (a list marker such as '1۔ نیت؛ 2۔ قیام') is stripped anywhere in the text. For Persian the marker rule also covers a lone digit followed by a word that is not a unit (رکعت, سجده, روز, ...).",
+  "_comment": "Word tables for the automated mismatch check (decision A1). Left out on purpose: 'one'/ایک/یک (mostly the pronoun or article, not a number), 'first'/پہلا/اول (mostly the adverb 'first, then'/'earlier'), and the Urdu plural-looking ordinals دوسرے/تیسرے/چوتھے (also 'others'). Persian نه is read as a negation, not as 'nine'. Numbers and ordinals are compared as multisets (order ignored); negations by count. Also left out: 'second'/دوسرا/دوسری (Urdu دوسری is usually 'the other'). 'both'/دونوں count as 2. References such as 'Ruling 413' / 'مسئلہ 413' are stripped before comparing; the Arabic yeh/kaf are folded to the Persian/Urdu forms; Persian negation also matches verb prefixes (نکردن, نبودن, ...). Persian دوم is left out too ('second' / 'other' are ambiguous). Persian footnote markers such as (1) are stripped before comparing (they are not numbers in the ruling). Persian bare footnote markers (a lone 1-2 digit number after a word, before punctuation, end of line or است/را/که/و) are stripped as well. List markers like '1- ' are stripped in every language. In Urdu, a 1-2 digit number followed by ۔ (a list marker such as '1۔ نیت؛ 2۔ قیام') is stripped anywhere in the text. For Persian the marker rule also covers a lone digit followed by a word that is not a unit (رکعت, سجده, روز, ...). Weights written in grams ('750 gm.', '750 گرام') are stripped: the English edition glosses 'mudd' with its weight where the Persian and Urdu say only 'one mudd'. Persian نُه (with the damma) is read as 'nine'. Urdu اسی ('80' but also 'this very') and ستر ('70' but also 'covering') are left out.",
   "cardinals": {
     "en": {
       "two": 2,
@@ -27,7 +27,11 @@
       "sixteen": 16,
       "seventeen": 17,
       "eighteen": 18,
-      "nineteen": 19
+      "nineteen": 19,
+      "sixty": 60,
+      "seventy": 70,
+      "eighty": 80,
+      "ninety": 90
     },
     "ur": {
       "دو": 2,
@@ -53,7 +57,9 @@
       "سولہ": 16,
       "سترہ": 17,
       "اٹھارہ": 18,
-      "انیس": 19
+      "انیس": 19,
+      "ساٹھ": 60,
+      "نوے": 90
     },
     "fa": {
       "دو": 2,
@@ -78,7 +84,11 @@
       "هفده": 17,
       "هجده": 18,
       "نوزده": 19,
-      "سیصد": 300
+      "سیصد": 300,
+      "شصت": 60,
+      "هفتاد": 70,
+      "هشتاد": 80,
+      "نود": 90
     }
   },
   "ordinals": {
@@ -126,7 +136,17 @@
       "نهم": 9,
       "دهم": 10,
       "سی‌ام": 30,
-      "سیم": 30
+      "سیم": 30,
+      "یازدهم": 11,
+      "دوازدهم": 12,
+      "سیزدهم": 13,
+      "چهاردهم": 14,
+      "پانزدهم": 15,
+      "شانزدهم": 16,
+      "هفدهم": 17,
+      "هجدهم": 18,
+      "نوزدهم": 19,
+      "بیستم": 20
     }
   },
   "negations": {
@@ -169,13 +189,14 @@
   "negationPrefixes": {
     "fa": "^(نمی|نبود|نکرد|نداشت|نشد|نخواه|نباید|نیست|نیستند|ندارد|نکن|نشو|نگیر|نخوان|نگذار|نبیند|نشنود|نگوید|نخورد|نباش|نتوان|نیاید|نیامد|نرفت|نرس|نرو|نده|نپرد|نخورد|نشناس|نمود|ندان|نتوان|نفهم|نیاندازد|نماند|نرسد|نده[دن]|نیفتد|نبند|نیاور|نخوان|نگوی|نیندازد)"
   },
-  "referenceStrip": "(?:rulings?|issues?|questions?|q|مسئلہ|مسأله|مسائل|سوال|س)\\s*\\d+(?:\\s*(?:,|،|-|–|and|و|اور)\\s*\\d+)*",
+  "referenceStrip": "(?:rulings?|issues?|questions?|q|مسئلہ|مسأله|مسائل|سوال|س)\\s*\\d+(?:\\s*(?:,|،|-|–|and|و|اور)\\s*\\d+)*|\\d+\\s*(?:grams?|gm|gr|گرام|گرم)\\.?",
   "normalize": {
     "ي": "ی",
     "ك": "ک",
     "ى": "ی",
     "ە": "ہ",
-    "ۀ": "ہ"
+    "ۀ": "ہ",
+    "نُه": " 9 "
   },
   "stripByLang": {
     "fa": "\\(\\d+\\)|(?<=[^\\s\\d]) \\d{1,2}(?=\\s*(?:[،؛.:]|\n|$)| (?!(?:رکعت|سجده|روز|ماه|سال|درصد|بار|مرتبه|فرسخ|کیلومتر|متر))[آ-ی])",

@@ -556,4 +556,188 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     glossaryIds: ["rukn", "rakah"],
     lastSourceCheck: "2026-10-02",
   },
+  {
+    id: "sawmwho",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Who must fast", ur: "روزہ واجب ہونے اور صحیح ہونے کی شرائط" },
+    arabicTerm: "الصوم",
+    summary: explain(
+      "The conditions under which fasting in the month of Ramadan becomes obligatory, and how they apply to a child who reaches bulūgh, a girl who has just reached bulūgh, a sick person who recovers during the day and a disbeliever who becomes a Muslim."
+    ),
+    quranicBasis: [{ surahNumber: 2, ayahNumber: 183 }, { surahNumber: 2, ayahNumber: 185 }],
+    rulingIds: ["sawmconditions", "sawmwhonot", "sawmbulugh", "sawmgirls", "sawmkafir", "sawmsickrecovers"],
+    relatedTopicIds: ["sawmexempt", "sawmniyyah", "bulugh"],
+    glossaryIds: ["sawm", "baligh", "bulugh", "mukallaf"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmexempt",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Illness, harm, old age, pregnancy and breastfeeding", ur: "وہ لوگ جن پر روزہ واجب نہیں ہے" },
+    summary: explain(
+      "When fasting is not obligatory because it is harmful or very hard, and the fidyah and qaḍāʾ that follow for someone who is ill, elderly, pregnant or breastfeeding."
+    ),
+    quranicBasis: [{ surahNumber: 2, ayahNumber: 185 }],
+    rulingIds: ["sawmharm", "khqa751", "khqa753", "sawmdoctor", "khqa744", "khqa749", "khqa750", "sawmharmafter", "sawmthirst", "sawmthirstextreme", "sawmweakness", "sawmold", "sawmoldafter", "sawmpregnant", "khqa741", "sawmbreastfeeding", "khqa743", "sawmpregnantdelay", "sawmfidyahwho", "sawmfidyahamount"],
+    relatedTopicIds: ["sawmwho", "sawmqada"],
+    glossaryIds: ["sawm", "fidyah", "mudd", "qada"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmniyyah",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "The intention for the fast", ur: "نیت" },
+    arabicTerm: "نية الصوم",
+    summary: explain(
+      "What the intention for a fast is, the nights and times at which it may be made, specifying the kind of fast, and what follows when it is forgotten, delayed or doubted."
+    ),
+    rulingIds: ["sawmrequires", "sawmintentwhat", "sawmintentnight", "sawmintentlatest", "sawmintentkind", "sawmintentduty", "sawmintentother", "sawmintentsleep", "sawmintentnone", "sawmintentdeliberate", "sawmintentforgot", "sawmintentday", "sawmintentunconscious", "sawmintentintoxicated", "sawmintentassigned", "sawmintentfree", "sawmintentrecommended", "sawmdoubtday", "sawmdoubtdayfound", "sawmintentcontinue", "sawmintentreturn", "khqa754", "sawmintentbreak"],
+    relatedTopicIds: ["sawmwho", "sawmmubtilat"],
+    glossaryIds: ["niyyah", "sawm", "qada", "kaffarah", "nadhr", "rajaa", "madhimmah"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmmubtilat",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "What invalidates the fast", ur: "مبطلات روزہ" },
+    arabicTerm: "مفطرات الصوم",
+    summary: explain(
+      "Eating and drinking, sexual intercourse, discharging semen, ascribing falsehood to Allah and the Imams, thick dust and smoke, immersing the head in water, enema and vomiting: what each book says invalidates the fast, what it excuses, and the acts it disapproves of."
+    ),
+    quranicBasis: [{ surahNumber: 2, ayahNumber: 187 }],
+    rulingIds: ["sawmlist", "sawmeating", "sawmeatingdawn", "sawmeatingforgot", "sawminjections", "khqa763", "sawmspray", "khqa758", "sawmpills", "khqa764", "khqa765", "sawmsublingual", "sawmteeth", "khqa760", "sawmtoothpick", "sawmsaliva", "sawmmucus", "sawmbleeding", "khqa755", "khqa761", "sawmbleedingsaliva", "khqa759", "sawmtasting", "sawmintercourse", "sawmintercoursepartial", "sawmintercoursedoubt", "sawmintercourseforgot", "sawmmasturbation", "sawmcourtship", "sawmcourtshipno", "sawminvoluntary", "khqa782", "sawmwetdreamsleep", "sawmwetdreamwake", "sawmwetdreamurinate", "sawmwetdreamresidue", "sawmwetdreamghusl", "sawmlying", "sawmlyingreport", "sawmlyingbelief", "sawmlyingtrue", "sawmlyingfabricated", "sawmlyingask", "sawmlyingrepent", "sawmdust", "khqa796", "sawmdustthin", "sawmdustcare", "sawmsmoke", "khqa756", "khqa757", "sawmdustdoubt", "sawmdustforgot", "sawmhead", "sawmheadbody", "sawmheadhalf", "sawmheadhair", "sawmheaddoubt", "sawmheadfell", "sawmshower", "sawmenema", "sawmvomit", "sawmvomitnight", "sawmvomitsick", "sawmswallowed", "sawmswallowedforgot", "sawmburpcertain", "sawmburp", "sawmintentional", "khqa793", "sawmrepeat", "sawmforced", "sawmforcedplace", "sawmdoubtdone", "sawmmakruh"],
+    relatedTopicIds: ["sawmjanabah", "sawmkaffarah", "sawmonlyqada"],
+    glossaryIds: ["sawm", "mubtilat", "junub", "qada", "kaffarah"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmjanabah",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Janābah, ḥayḍ and nifās and the fast" },
+    summary: explain(
+      "Remaining in janābah, or in ḥayḍ or nifās, until the time of dawn: the ghusl and tayammum, sleeping while junub, forgetting the ghusl, and a woman's fast when her ḥayḍ or nifās begins or ends."
+    ),
+    rulingIds: ["sawmjunubonpurpose", "sawmjunubqada", "sawmjunubother", "sawmjunubtayammum", "sawmjunubforgot", "khqa779", "sawmjunubmake", "sawmjunubmaketayammum", "khqa772", "sawmjunubsleepknow", "sawmjunubsleepprobable", "sawmjunubsleepexpect", "sawmjunubsleepunmindful", "sawmjunubsleepagain", "sawmjunubsleepsecond", "sawmjunubfirstsleep", "sawmjunubdoubt", "sawmjunubwetdream", "sawmjunubwetdreamqada", "sawmhaydfast", "sawmhaydstops", "sawmhaydbegins", "sawmhaydbefore", "sawmhaydtayammum", "sawmhaydtime", "sawmhaydnear", "sawmhaydforgot", "sawmhaydnegligent", "sawmistihadah", "sawmcorpse"],
+    relatedTopicIds: ["sawmmubtilat", "ghusl", "haydistihadanifas", "tayammum"],
+    glossaryIds: ["junub", "janabah", "hayd", "nifas", "ghusl", "tayammum", "sawm"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmtimes",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Dawn, maghrib and breaking the fast" },
+    summary: explain(
+      "When the fast begins and ends: doubting the dawn, doubting maghrib, breaking the fast too early, and praying before breaking the fast. Today's dawn and maghrib times are shown from the app's Prayer Times feature."
+    ),
+    quranicBasis: [{ surahNumber: 2, ayahNumber: 187 }],
+    rulingIds: ["sawmdawndoubt", "sawmdawninvestigate", "sawmmaghribdoubt", "sawmmaghribwrong", "sawmmaghribcloud", "sawmprayerfirst", "sawmabstain"],
+    liveTool: "sawm",
+    relatedTopicIds: ["prayertimes", "sawmmubtilat"],
+    glossaryIds: ["sawm", "iftar", "maghrib", "qada"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmkaffarah",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Kaffārah for breaking the fast", ur: "عمداً افطار کرنے کا کفارہ" },
+    arabicTerm: "كفارة الصوم",
+    summary: explain(
+      "When kaffārah is due in addition to qaḍāʾ, the kinds of kaffārah and how to give them, and cases that affect it: several acts in a day, spouses, travelling after breaking the fast, and delay."
+    ),
+    rulingIds: ["sawmkaffwhen", "sawmkaffignorance", "khqa813", "sawmkaffharam", "sawmkafftypes", "sawmkaffunable", "sawmkaffable", "sawmkaffmonths", "sawmkaffmonthsstart", "sawmkaffmonthsbreak", "sawmkaffmonthsexcuse", "sawmkaffsixty", "sawmkaffsixtyhow", "sawmkaffpoor", "sawmkaffunlawful", "khqa780", "sawmkaffallah", "sawmkaffseveral", "khqa790", "sawmkaffthen", "sawmkaffmixed", "sawmkaffburp", "sawmkaffvow", "sawmkaffmaghribword", "sawmkaffjourney", "sawmkaffexcuse", "sawmkaffwrongday", "sawmkaffshawwal", "sawmkaffspouses", "khqa766", "sawmkaffcompelhusband", "sawmkaffcompelwife", "sawmkaffasleep", "sawmkaffcompelother", "sawmkaffcompeltraveller", "sawmkaffdelay", "sawmkaffnoadd", "sawmkaffqadaorder", "khqa803"],
+    relatedTopicIds: ["sawmonlyqada", "sawmqada"],
+    glossaryIds: ["kaffarah", "qada", "mudd", "faqir", "sawm"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmonlyqada",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "When only qaḍāʾ is due", ur: "وہ صورتیں جن میں روزے کی صرف قضا واجب ہے" },
+    summary: explain(
+      "Cases in which a fast must be made up but no kaffārah is due, including mistakes about dawn or maghrib and gargling."
+    ),
+    rulingIds: ["sawmonlyqadalist", "sawmonlyqadaforgot", "khqa769", "sawmonlyqadaallowed", "sawmgargle", "sawmgargleunintended", "sawmswallowother", "sawmgarglemuch"],
+    relatedTopicIds: ["sawmkaffarah", "sawmqada"],
+    glossaryIds: ["qada", "kaffarah", "sawm"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmqada",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Making up missed fasts (qaḍāʾ) and the fidyah", ur: "قضا روزے کے احکام" },
+    arabicTerm: "قضاء الصوم",
+    summary: explain(
+      "Who must make up missed fasts and who need not, when they must be made up, breaking a qaḍāʾ fast, and what the kaffārah of delay and the fidyah are, including a deceased parent's fasts."
+    ),
+    quranicBasis: [{ surahNumber: 2, ayahNumber: 185 }],
+    rulingIds: ["sawmqadainsane", "sawmqadakafir", "sawmqadaunconscious", "sawmqadadrunk", "sawmqadadrunkpart", "sawmqadadrunkany", "sawmqadahayd", "sawmqadadeath", "sawmqadacount", "sawmqadaorder", "sawmqadaintention", "sawmqadabreak", "sawmqadabreakafter", "sawmqadadead", "sawmqadaable", "sawmqadaillness", "sawmqadaanother", "sawmqadatravel", "sawmqadaweak", "sawmqadadelayed", "sawmqadashortage", "sawmqadaillnessyears", "sawmqadamudd", "sawmqadadelayyears", "khqa799", "sawmqadadelayamount", "sawmqadadelayignorance", "khqa809", "sawmqadaintentionalmiss", "sawmqadaintentionalrepeat", "sawmqadaparents", "sawmqadaparentspurpose", "sawmqadaparentsother"],
+    relatedTopicIds: ["sawmexempt", "sawmkaffarah"],
+    glossaryIds: ["qada", "fidyah", "kaffarah", "mudd", "faqir", "sawm"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmtravel",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Fasting and travel", ur: "مسافر کے روزے کے احکام" },
+    arabicTerm: "صوم المسافر",
+    summary: explain(
+      "Whether a traveller fasts, setting out or arriving during the day, vowed and recommended fasts on a journey, a journey of sin, and a traveller who did not know the ruling."
+    ),
+    quranicBasis: [{ surahNumber: 2, ayahNumber: 185 }],
+    rulingIds: ["sawmtravelnofast", "sawmtravelcannot", "sawmtravelallowed", "sawmtravelassigned", "sawmtravelvow", "sawmtravelrecommended", "sawmtravelmedina", "sawmtravelplaces", "sawmtravelsin", "sawmtravelsinchange", "sawmtravelsinafternoon", "sawmtravelunaware", "sawmtravelunawareterms", "sawmtravelunawareshari", "sawmtravelforgot", "sawmtraveldepart", "sawmtravelbreak", "khqa794", "sawmtravelarrive", "sawmtravelarriveafter", "sawmtravelfull"],
+    relatedTopicIds: ["travellerprayer", "sawmqada"],
+    glossaryIds: ["qasr", "tamam", "watan", "hadd", "nadhr", "sawm"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmmonth",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Establishing the first of the month", ur: "پہلی تاریخ ثابت ہونے کے طریقے" },
+    arabicTerm: "ثبوت الهلال",
+    summary: explain(
+      "How the first of a lunar month is established, such as by sighting the crescent, testimony, the passing of thirty days or a jurist's ruling, and what to do when it is doubtful whether it is Ramadan or Shawwāl."
+    ),
+    rulingIds: ["sawmmonthways", "khqa844", "sawmmonthevening", "sawmmonthequipment", "khqa831", "sawmmoonshape", "khqa841", "sawmmonthastronomers", "sawmmonthhakim", "khqa839", "sawmmonthhakimcountry", "khqa840", "sawmmonthhorizon", "khqa834", "khqa836", "sawmmonthgovernment", "sawmmonthmedia", "khqa832", "sawmmonthnotestablished", "khqa833", "sawmmonthshawwaldoubt", "sawmmonthshawwal", "sawmmonthprisoner"],
+    relatedTopicIds: ["sawmtimes", "sawmtypes"],
+    glossaryIds: ["sawm"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "sawmtypes",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Obligatory, forbidden, disapproved and recommended fasts", ur: "روزے کی قسمیں" },
+    summary: explain(
+      "The kinds of fast and which days or situations fall under each, a recommended fast while owing qaḍāʾ, and the rights of a husband or parents over a recommended fast."
+    ),
+    rulingIds: ["sawmkinds", "sawmobligatory", "sawmharam", "sawmharamother", "sawmharamwife", "sawmharamchild", "sawmharamchildday", "sawmdisapproved", "sawmrecommended", "sawmrecommendedbreak", "sawmrecommendedqada", "sawmrecommendedqadaunaware", "sawmrecommendedqadaunsure", "sawmrecommendedqadaforgot"],
+    relatedTopicIds: ["sawmniyyah", "sawmqada"],
+    glossaryIds: ["sawm", "wajib", "haram", "makruh", "mustahab", "qada"],
+    lastSourceCheck: "2026-10-08",
+  },
+  {
+    id: "zakatfitrah",
+    fiqh: "jafari",
+    categoryId: "sawm",
+    title: { en: "Zakāt al-fiṭrah", ur: "زکوٰۃ فطرہ" },
+    arabicTerm: "زكاة الفطرة",
+    summary: explain(
+      "Zakāt al-fiṭrah, given at the end of Ramadan: who must give it, for whom, to whom, in what, and when. Only Sistani's rulings are included for now: Khamenei's official books do not state them, so his followers are pointed to his office."
+    ),
+    rulingIds: ["fitrahwho", "fitrahpoor", "fitrahdependants", "fitrahdependanttown", "fitrahguestbefore", "fitrahguestafter", "fitrahinsane", "fitrahbeforesunset", "fitrahaftersunset", "fitrahconvert", "fitrahonesaa", "fitrahbirth", "fitrahmove", "fitrahother", "fitrahowngive", "fitrahsayyid", "fitrahbreastfed", "fitrahunlawful", "fitrahhired", "fitrahdeath", "fitrahrecipients", "fitrahchild", "fitrahnotdutiful", "fitrahsin", "fitrahless", "fitrahhalf", "fitrahmixed", "fitrahrelatives", "fitrahnotpoor", "fitrahclaim", "fitrahintention", "fitrahearly", "fitrahsoil", "fitrahdefective", "fitrahitems", "fitrahprayer", "fitrahsetaside", "fitrahlate", "fitrahuse", "fitrahworth", "fitrahperish", "fitrahtransfer"],
+    relatedTopicIds: ["sawmtypes"],
+    glossaryIds: ["zakatfitrah", "saa", "faqir", "sawm"],
+    lastSourceCheck: "2026-10-08",
+  },
 ];

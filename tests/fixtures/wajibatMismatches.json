@@ -2250,6 +2250,21 @@
    "key": "menopause|sistani|text|en-ur",
    "kinds": [
     {
+     "kind": "numbers",
+     "left": [
+      50,
+      50,
+      60,
+      60
+     ],
+     "right": [
+      50,
+      50,
+      60
+     ],
+     "severity": "low"
+    },
+    {
      "kind": "negation",
      "left": 2,
      "right": 3,
@@ -3172,25 +3187,6 @@
    "pair": "en-ur",
    "ref": "Ruling 821",
    "ruling": "silkmen",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "stillplace|sistani|text|en-ur",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      90
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "sistani",
-   "pair": "en-ur",
-   "ref": "Ruling 866",
-   "ruling": "stillplace",
    "severity": "high"
   },
   {
@@ -8721,7 +8717,10 @@
    "kinds": [
     {
      "kind": "numbers",
-     "left": [],
+     "left": [
+      90,
+      90
+     ],
      "right": [
       12,
       12,
@@ -8746,6 +8745,3892 @@
    "ref": "Ruling 1257",
    "ruling": "omittimeqibla",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmconditions|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 6,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "787.",
+   "ruling": "sawmconditions",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmwhonot|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "788.",
+   "ruling": "sawmwhonot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmgirls|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "790.",
+   "ruling": "sawmgirls",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkafir|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      8
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1545",
+   "ruling": "sawmkafir",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoctor|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1711",
+   "ruling": "sawmdoctor",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmharmafter|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1713",
+   "ruling": "sawmharmafter",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmthirstextreme|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1560",
+   "ruling": "sawmthirstextreme",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmpregnant|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1697",
+   "ruling": "sawmpregnant",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmpregnant|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "954.",
+   "ruling": "sawmpregnant",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmbreastfeeding|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1698",
+   "ruling": "sawmbreastfeeding",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmrequires|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "800.",
+   "ruling": "sawmrequires",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentlatest|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      8
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1531",
+   "ruling": "sawmintentlatest",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentkind|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "802.",
+   "ruling": "sawmintentkind",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentother|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1535",
+   "ruling": "sawmintentother",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentsleep|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "807.",
+   "ruling": "sawmintentsleep",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentnone|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      8
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1533",
+   "ruling": "sawmintentnone",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentforgot|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      1,
+      2,
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1540",
+   "ruling": "sawmintentforgot",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentday|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [
+      3
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1536",
+   "ruling": "sawmintentday",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentintoxicated|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1538",
+   "ruling": "sawmintentintoxicated",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentassigned|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      8
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1543",
+   "ruling": "sawmintentassigned",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentfree|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 6,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1544",
+   "ruling": "sawmintentfree",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentfree|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "812.",
+   "ruling": "sawmintentfree",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoubtday|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1547",
+   "ruling": "sawmdoubtday",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentcontinue|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1549",
+   "ruling": "sawmintentcontinue",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentbreak|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1550",
+   "ruling": "sawmintentbreak",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentbreak|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "816.",
+   "ruling": "sawmintentbreak",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmlist|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      8
+     ],
+     "right": [
+      1,
+      2,
+      3,
+      345,
+      4,
+      5,
+      6,
+      7,
+      8,
+      8
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1551",
+   "ruling": "sawmlist",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmeating|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "818.",
+   "ruling": "sawmeating",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawminjections|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 3,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "823.",
+   "ruling": "sawminjections",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmpills|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "825.",
+   "ruling": "sawmpills",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmmucus|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1559",
+   "ruling": "sawmmucus",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmucus|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "822.",
+   "ruling": "sawmmucus",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmbleeding|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "828.",
+   "ruling": "sawmbleeding",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtasting|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "830.",
+   "ruling": "sawmtasting",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintercoursepartial|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1564",
+   "ruling": "sawmintercoursepartial",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintercoursedoubt|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1549
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1565",
+   "ruling": "sawmintercoursedoubt",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintercourseforgot|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1566",
+   "ruling": "sawmintercourseforgot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmasturbation|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1551
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1567",
+   "ruling": "sawmmasturbation",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmcourtshipno|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1574",
+   "ruling": "sawmcourtshipno",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawminvoluntary|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "836.",
+   "ruling": "sawminvoluntary",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmwetdreamghusl|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "839.",
+   "ruling": "sawmwetdreamghusl",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmlyingbelief|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1577",
+   "ruling": "sawmlyingbelief",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmlyingask|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1580",
+   "ruling": "sawmlyingask",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmdustthin|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1583",
+   "ruling": "sawmdustthin",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmdustforgot|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1587",
+   "ruling": "sawmdustforgot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmdustforgot|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "866.",
+   "ruling": "sawmdustforgot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmheadhalf|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "869.",
+   "ruling": "sawmheadhalf",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmheadfell|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "872.",
+   "ruling": "sawmheadfell",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmvomit|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "855.",
+   "ruling": "sawmvomit",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmvomitnight|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1617",
+   "ruling": "sawmvomitnight",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmvomitsick|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1618",
+   "ruling": "sawmvomitsick",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmswallowed|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1619",
+   "ruling": "sawmswallowed",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmswallowedforgot|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1620",
+   "ruling": "sawmswallowedforgot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmburp|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "856.",
+   "ruling": "sawmburp",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentional|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1600
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 8,
+     "right": 6,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1623",
+   "ruling": "sawmintentional",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmforced|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      3
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1625",
+   "ruling": "sawmforced",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoubtdone|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "877.",
+   "ruling": "sawmdoubtdone",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmakruh|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1,
+      10,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1627",
+   "ruling": "sawmmakruh",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubqada|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1590",
+   "ruling": "sawmjunubqada",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubforgot|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      3,
+      3,
+      4
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1593",
+   "ruling": "sawmjunubforgot",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubmake|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1594",
+   "ruling": "sawmjunubmake",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubmake|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "848.",
+   "ruling": "sawmjunubmake",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepknow|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1596",
+   "ruling": "sawmjunubsleepknow",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepknow|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "844.",
+   "ruling": "sawmjunubsleepknow",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepprobable|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1597",
+   "ruling": "sawmjunubsleepprobable",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepexpect|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "841.",
+   "ruling": "sawmjunubsleepexpect",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepunmindful|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      100
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1599",
+   "ruling": "sawmjunubsleepunmindful",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepagain|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "843.",
+   "ruling": "sawmjunubsleepagain",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepsecond|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [
+      3
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1601",
+   "ruling": "sawmjunubsleepsecond",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubdoubt|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "846.",
+   "ruling": "sawmjunubdoubt",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmhaydfast|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "791.",
+   "ruling": "sawmhaydfast",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmhaydbefore|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1606",
+   "ruling": "sawmhaydbefore",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmhaydbefore|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "850.",
+   "ruling": "sawmhaydbefore",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmhaydforgot|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "853.",
+   "ruling": "sawmhaydforgot",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmistihadah|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      394
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1613",
+   "ruling": "sawmistihadah",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmdawninvestigate|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "905.",
+   "ruling": "sawmdawninvestigate",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmprayerfirst|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1718",
+   "ruling": "sawmprayerfirst",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmabstain|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10,
+      10,
+      5
+     ],
+     "right": [
+      1,
+      10,
+      10,
+      2,
+      3,
+      4,
+      5,
+      5
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1717",
+   "ruling": "sawmabstain",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffignorance|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1629",
+   "ruling": "sawmkaffignorance",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkafftypes|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      60
+     ],
+     "right": [
+      750
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1630",
+   "ruling": "sawmkafftypes",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffable|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "894.",
+   "ruling": "sawmkaffable",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmonths|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1631",
+   "ruling": "sawmkaffmonths",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmonths|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      29,
+      31
+     ],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      1
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "888.",
+   "ruling": "sawmkaffmonths",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmonthsstart|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1632",
+   "ruling": "sawmkaffmonthsstart",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmonthsexcuse|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "890.",
+   "ruling": "sawmkaffmonthsexcuse",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffsixty|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      2,
+      30,
+      30,
+      30,
+      60,
+      60,
+      60
+     ],
+     "right": [
+      2,
+      30,
+      30,
+      30,
+      60,
+      60
+     ],
+     "severity": "low"
+    },
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1655",
+   "ruling": "sawmkaffsixty",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffsixty|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      60,
+      60
+     ],
+     "right": [
+      2,
+      60,
+      60,
+      60
+     ],
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "895.",
+   "ruling": "sawmkaffsixty",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffunlawful|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      3,
+      60
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1635",
+   "ruling": "sawmkaffunlawful",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffunlawful|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      3,
+      3,
+      60,
+      60
+     ],
+     "right": [
+      3,
+      60,
+      60
+     ],
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "897.",
+   "ruling": "sawmkaffunlawful",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffburp|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1640",
+   "ruling": "sawmkaffburp",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffburp|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "882.",
+   "ruling": "sawmkaffburp",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmaghribword|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1642",
+   "ruling": "sawmkaffmaghribword",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmaghribword|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "884.",
+   "ruling": "sawmkaffmaghribword",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffjourney|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1643",
+   "ruling": "sawmkaffjourney",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffjourney|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "885.",
+   "ruling": "sawmkaffjourney",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffcompelwife|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1649",
+   "ruling": "sawmkaffcompelwife",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffasleep|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      100
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1650",
+   "ruling": "sawmkaffasleep",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffcompelother|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1651",
+   "ruling": "sawmkaffcompelother",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffcompeltraveller|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1652",
+   "ruling": "sawmkaffcompeltraveller",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffdelay|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1653",
+   "ruling": "sawmkaffdelay",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmonlyqadalist|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1,
+      10,
+      1549,
+      1601,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 14,
+     "right": 12,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1657",
+   "ruling": "sawmonlyqadalist",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmonlyqadalist|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "901.",
+   "ruling": "sawmonlyqadalist",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmgargle|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1660",
+   "ruling": "sawmgargle",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmgargle|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "911.",
+   "ruling": "sawmgargle",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmgargleunintended|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "910.",
+   "ruling": "sawmgargleunintended",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmswallowother|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1658",
+   "ruling": "sawmswallowother",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadainsane|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1663",
+   "ruling": "sawmqadainsane",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadakafir|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1664",
+   "ruling": "sawmqadakafir",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaunconscious|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "912.",
+   "ruling": "sawmqadaunconscious",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadrunk|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1665",
+   "ruling": "sawmqadadrunk",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadahayd|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "916.",
+   "ruling": "sawmqadahayd",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadeath|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "917.",
+   "ruling": "sawmqadadeath",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadacount|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      5,
+      6
+     ],
+     "right": [
+      5,
+      6
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      5,
+      6
+     ],
+     "right": [
+      5
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1666",
+   "ruling": "sawmqadacount",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadacount|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      5,
+      5,
+      6,
+      6
+     ],
+     "right": [
+      5,
+      5
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      10,
+      11,
+      5
+     ],
+     "right": [
+      10,
+      5
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "918.",
+   "ruling": "sawmqadacount",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaorder|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1667",
+   "ruling": "sawmqadaorder",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaintention|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1668",
+   "ruling": "sawmqadaintention",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadabreakafter|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10,
+      3
+     ],
+     "right": [
+      10
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1656",
+   "ruling": "sawmqadabreakafter",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaillness|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "924.",
+   "ruling": "sawmqadaillness",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaanother|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "925.",
+   "ruling": "sawmqadaanother",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadatravel|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "926.",
+   "ruling": "sawmqadatravel",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaweak|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "927.",
+   "ruling": "sawmqadaweak",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadelayed|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1674",
+   "ruling": "sawmqadadelayed",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaintentionalmiss|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      60
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1679",
+   "ruling": "sawmqadaintentionalmiss",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaintentionalmiss|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "929.",
+   "ruling": "sawmqadaintentionalmiss",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaintentionalrepeat|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1680",
+   "ruling": "sawmqadaintentionalrepeat",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaparents|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1370
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1681",
+   "ruling": "sawmqadaparents",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaparents|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "934.",
+   "ruling": "sawmqadaparents",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaparentsother|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1682",
+   "ruling": "sawmqadaparentsother",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelnofast|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1683",
+   "ruling": "sawmtravelnofast",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelallowed|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "936.",
+   "ruling": "sawmtravelallowed",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelassigned|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [
+      3
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1685",
+   "ruling": "sawmtravelassigned",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelassigned|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10
+     ],
+     "right": [
+      10,
+      10
+     ],
+     "severity": "low"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "942.",
+   "ruling": "sawmtravelassigned",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelvow|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1686",
+   "ruling": "sawmtravelvow",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelvow|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      10
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "943.",
+   "ruling": "sawmtravelvow",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelsinchange|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      413,
+      415
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "948.",
+   "ruling": "sawmtravelsinchange",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunaware|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "950.",
+   "ruling": "sawmtravelunaware",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunawareterms|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10
+     ],
+     "right": [
+      10,
+      10,
+      4
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "951.",
+   "ruling": "sawmtravelunawareterms",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunawareshari|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "952.",
+   "ruling": "sawmtravelunawareshari",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthways|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "961.",
+   "ruling": "sawmmonthways",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthequipment|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "963.",
+   "ruling": "sawmmonthequipment",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthhakim|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "967.",
+   "ruling": "sawmmonthhakim",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthgovernment|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "969.",
+   "ruling": "sawmmonthgovernment",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthshawwal|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "972.",
+   "ruling": "sawmmonthshawwal",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthprisoner|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 6,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1706",
+   "ruling": "sawmmonthprisoner",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmobligatory|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      10,
+      3,
+      7
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      3
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 3,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "975.",
+   "ruling": "sawmobligatory",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmharamchildday|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1710",
+   "ruling": "sawmharamchildday",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmrecommended|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      "12.6",
+      2
+     ],
+     "right": [
+      1,
+      10,
+      11,
+      12,
+      12,
+      13,
+      15,
+      17,
+      18,
+      2,
+      24,
+      27,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7,
+      8,
+      9
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      1,
+      1,
+      10,
+      13,
+      14,
+      15,
+      15,
+      17,
+      18,
+      24,
+      25,
+      27,
+      29,
+      3,
+      4,
+      7,
+      9,
+      9
+     ],
+     "right": [
+      10,
+      3,
+      4,
+      7,
+      9,
+      9
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 6,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1716",
+   "ruling": "sawmrecommended",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmrecommended|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [
+      10,
+      13,
+      14,
+      15
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "977.",
+   "ruling": "sawmrecommended",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmrecommendedqada|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "796.",
+   "ruling": "sawmrecommendedqada",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahwho|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2003",
+   "ruling": "fitrahwho",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahdependants|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2005",
+   "ruling": "fitrahdependants",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "fitrahonesaa|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      3
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2013",
+   "ruling": "fitrahonesaa",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "fitrahsayyid|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2018",
+   "ruling": "fitrahsayyid",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahdeath|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2022",
+   "ruling": "fitrahdeath",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahrecipients|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2023",
+   "ruling": "fitrahrecipients",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahnotdutiful|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2025",
+   "ruling": "fitrahnotdutiful",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahless|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      3
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2027",
+   "ruling": "fitrahless",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "fitrahsoil|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2035",
+   "ruling": "fitrahsoil",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahprayer|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2038",
+   "ruling": "fitrahprayer",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "fitrahsetaside|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2039",
+   "ruling": "fitrahsetaside",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahlate|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2040",
+   "ruling": "fitrahlate",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "fitrahuse|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2041",
+   "ruling": "fitrahuse",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa741|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 741",
+   "ruling": "khqa741",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa743|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 743",
+   "ruling": "khqa743",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa744|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 6,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 744",
+   "ruling": "khqa744",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa749|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 749",
+   "ruling": "khqa749",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "khqa749|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 749",
+   "ruling": "khqa749",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa750|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 750",
+   "ruling": "khqa750",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa751|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 751",
+   "ruling": "khqa751",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "khqa753|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 753",
+   "ruling": "khqa753",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa755|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 755",
+   "ruling": "khqa755",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa758|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 2,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 758",
+   "ruling": "khqa758",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa759|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 759",
+   "ruling": "khqa759",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa760|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 760",
+   "ruling": "khqa760",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa760|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 2,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 760",
+   "ruling": "khqa760",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa761|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 761",
+   "ruling": "khqa761",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa763|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 763",
+   "ruling": "khqa763",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa764|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 764",
+   "ruling": "khqa764",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "khqa765|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 765",
+   "ruling": "khqa765",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa782|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 782",
+   "ruling": "khqa782",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa782|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 782",
+   "ruling": "khqa782",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa793|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 793",
+   "ruling": "khqa793",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa793|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 793",
+   "ruling": "khqa793",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa796|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 796",
+   "ruling": "khqa796",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa772|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 772",
+   "ruling": "khqa772",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa766|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      2
+     ],
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 766",
+   "ruling": "khqa766",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa813|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 813",
+   "ruling": "khqa813",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "khqa813|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 813",
+   "ruling": "khqa813",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa794|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 794",
+   "ruling": "khqa794",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa794|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 794",
+   "ruling": "khqa794",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa799|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 799",
+   "ruling": "khqa799",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "khqa809|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 809",
+   "ruling": "khqa809",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa809|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 809",
+   "ruling": "khqa809",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa831|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 831",
+   "ruling": "khqa831",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa833|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 833",
+   "ruling": "khqa833",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa834|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 834",
+   "ruling": "khqa834",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "khqa836|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      29
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 836",
+   "ruling": "khqa836",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa839|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 839",
+   "ruling": "khqa839",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "khqa841|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [],
+     "right": [
+      30,
+      30
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 2,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 841",
+   "ruling": "khqa841",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "khqa844|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 844",
+   "ruling": "khqa844",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -11226,6 +15111,2340 @@
    "ref": "399.",
    "ruling": "sahwintentional",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmconditions|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "787.",
+   "ruling": "sawmconditions",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmconditions|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 6,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 789",
+   "ruling": "sawmconditions",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmwhonot|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "788.",
+   "ruling": "sawmwhonot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmwhonot|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 790",
+   "ruling": "sawmwhonot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmgirls|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      23,
+      8,
+      8,
+      9
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "790.",
+   "ruling": "sawmgirls",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmgirls|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      23,
+      8,
+      8,
+      9
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 792",
+   "ruling": "sawmgirls",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmsickrecovers|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "795.",
+   "ruling": "sawmsickrecovers",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmsickrecovers|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 797",
+   "ruling": "sawmsickrecovers",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoctor|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "794.",
+   "ruling": "sawmdoctor",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoctor|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 796",
+   "ruling": "sawmdoctor",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmold|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "958.",
+   "ruling": "sawmold",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmold|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 960",
+   "ruling": "sawmold",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmpregnant|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 956",
+   "ruling": "sawmpregnant",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmpregnantdelay|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "956.",
+   "ruling": "sawmpregnantdelay",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmpregnantdelay|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 958",
+   "ruling": "sawmpregnantdelay",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmfidyahwho|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "957.",
+   "ruling": "sawmfidyahwho",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmfidyahwho|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 959",
+   "ruling": "sawmfidyahwho",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmrequires|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 802",
+   "ruling": "sawmrequires",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentkind|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 804",
+   "ruling": "sawmintentkind",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentother|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "808.",
+   "ruling": "sawmintentother",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentother|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 810",
+   "ruling": "sawmintentother",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentsleep|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "807.",
+   "ruling": "sawmintentsleep",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentforgot|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "810.",
+   "ruling": "sawmintentforgot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentforgot|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 812",
+   "ruling": "sawmintentforgot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentfree|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "812.",
+   "ruling": "sawmintentfree",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentfree|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 814",
+   "ruling": "sawmintentfree",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentrecommended|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "813.",
+   "ruling": "sawmintentrecommended",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentrecommended|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 815",
+   "ruling": "sawmintentrecommended",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoubtday|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "804.",
+   "ruling": "sawmdoubtday",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoubtday|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 806",
+   "ruling": "sawmdoubtday",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentbreak|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "816.",
+   "ruling": "sawmintentbreak",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmintentbreak|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 818",
+   "ruling": "sawmintentbreak",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmeating|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 820",
+   "ruling": "sawmeating",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawminjections|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "823.",
+   "ruling": "sawminjections",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawminjections|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 825",
+   "ruling": "sawminjections",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmpills|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "825.",
+   "ruling": "sawmpills",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmmucus|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 824",
+   "ruling": "sawmmucus",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmbleeding|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "828.",
+   "ruling": "sawmbleeding",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtasting|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 832",
+   "ruling": "sawmtasting",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawminvoluntary|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 838",
+   "ruling": "sawminvoluntary",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmwetdreamghusl|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "839.",
+   "ruling": "sawmwetdreamghusl",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmdustforgot|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 868",
+   "ruling": "sawmdustforgot",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmheadhalf|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "869.",
+   "ruling": "sawmheadhalf",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmheadfell|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 874",
+   "ruling": "sawmheadfell",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmvomit|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 857",
+   "ruling": "sawmvomit",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmburp|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 858",
+   "ruling": "sawmburp",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmforced|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "876.",
+   "ruling": "sawmforced",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmforced|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 878",
+   "ruling": "sawmforced",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmdoubtdone|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "877.",
+   "ruling": "sawmdoubtdone",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubmake|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 850",
+   "ruling": "sawmjunubmake",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepknow|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "844.",
+   "ruling": "sawmjunubsleepknow",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepexpect|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "841.",
+   "ruling": "sawmjunubsleepexpect",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepagain|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "843.",
+   "ruling": "sawmjunubsleepagain",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepsecond|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2,
+      846
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "902.",
+   "ruling": "sawmjunubsleepsecond",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubsleepsecond|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2,
+      846
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 904",
+   "ruling": "sawmjunubsleepsecond",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmjunubdoubt|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "846.",
+   "ruling": "sawmjunubdoubt",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmhaydfast|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 793",
+   "ruling": "sawmhaydfast",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmhaydbefore|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "850.",
+   "ruling": "sawmhaydbefore",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmhaydforgot|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "853.",
+   "ruling": "sawmhaydforgot",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmdawninvestigate|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "905.",
+   "ruling": "sawmdawninvestigate",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffwhen|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "879.",
+   "ruling": "sawmkaffwhen",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffwhen|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 881",
+   "ruling": "sawmkaffwhen",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffignorance|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "880.",
+   "ruling": "sawmkaffignorance",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffignorance|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 902",
+   "ruling": "sawmkaffignorance",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffable|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 895",
+   "ruling": "sawmkaffable",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmonths|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      29,
+      31
+     ],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      1
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "888.",
+   "ruling": "sawmkaffmonths",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmonthsexcuse|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "890.",
+   "ruling": "sawmkaffmonthsexcuse",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffsixty|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2,
+      60,
+      60
+     ],
+     "right": [
+      2,
+      60,
+      60,
+      60
+     ],
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "895.",
+   "ruling": "sawmkaffsixty",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffunlawful|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      3,
+      60,
+      60
+     ],
+     "right": [
+      3,
+      3,
+      60,
+      60
+     ],
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 898",
+   "ruling": "sawmkaffunlawful",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffburp|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "882.",
+   "ruling": "sawmkaffburp",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffvow|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10,
+      3
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "883.",
+   "ruling": "sawmkaffvow",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffvow|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10,
+      3
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 884",
+   "ruling": "sawmkaffvow",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffmaghribword|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 885",
+   "ruling": "sawmkaffmaghribword",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmkaffjourney|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "885.",
+   "ruling": "sawmkaffjourney",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmonlyqadalist|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "901.",
+   "ruling": "sawmonlyqadalist",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmgargle|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 913",
+   "ruling": "sawmgargle",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmgargleunintended|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 912",
+   "ruling": "sawmgargleunintended",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaunconscious|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 914",
+   "ruling": "sawmqadaunconscious",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadrunkany|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "915.",
+   "ruling": "sawmqadadrunkany",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadrunkany|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 917",
+   "ruling": "sawmqadadrunkany",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadahayd|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 918",
+   "ruling": "sawmqadahayd",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadeath|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 919",
+   "ruling": "sawmqadadeath",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadacount|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      5,
+      5,
+      6,
+      6
+     ],
+     "right": [
+      20,
+      20,
+      5,
+      5,
+      6,
+      6
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      10,
+      11,
+      5
+     ],
+     "right": [
+      10,
+      11,
+      5,
+      5,
+      6
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "918.",
+   "ruling": "sawmqadacount",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadacount|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      5,
+      5
+     ],
+     "right": [
+      20,
+      20,
+      5,
+      5,
+      6,
+      6
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      10,
+      5
+     ],
+     "right": [
+      10,
+      11,
+      5,
+      5,
+      6
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 920",
+   "ruling": "sawmqadacount",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaable|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "923.",
+   "ruling": "sawmqadaable",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaable|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 925",
+   "ruling": "sawmqadaable",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaillness|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "924.",
+   "ruling": "sawmqadaillness",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaillness|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 926",
+   "ruling": "sawmqadaillness",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaanother|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "925.",
+   "ruling": "sawmqadaanother",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadatravel|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 928",
+   "ruling": "sawmqadatravel",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaweak|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "927.",
+   "ruling": "sawmqadaweak",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaweak|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 929",
+   "ruling": "sawmqadaweak",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadelayignorance|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "933.",
+   "ruling": "sawmqadadelayignorance",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadelayignorance|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 935",
+   "ruling": "sawmqadadelayignorance",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaintentionalmiss|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "929.",
+   "ruling": "sawmqadaintentionalmiss",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaparents|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 936",
+   "ruling": "sawmqadaparents",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaparentspurpose|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "935.",
+   "ruling": "sawmqadaparentspurpose",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadaparentspurpose|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 937",
+   "ruling": "sawmqadaparentspurpose",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelallowed|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 938",
+   "ruling": "sawmtravelallowed",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelassigned|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "942.",
+   "ruling": "sawmtravelassigned",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelassigned|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10,
+      10
+     ],
+     "right": [
+      10
+     ],
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 944",
+   "ruling": "sawmtravelassigned",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelvow|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      10
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "943.",
+   "ruling": "sawmtravelvow",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelplaces|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      4
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "944.",
+   "ruling": "sawmtravelplaces",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelplaces|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      4
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 946",
+   "ruling": "sawmtravelplaces",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelsinchange|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      413,
+      415
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "948.",
+   "ruling": "sawmtravelsinchange",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunaware|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "950.",
+   "ruling": "sawmtravelunaware",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunaware|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 952",
+   "ruling": "sawmtravelunaware",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunawareterms|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10
+     ],
+     "right": [
+      10,
+      4
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "951.",
+   "ruling": "sawmtravelunawareterms",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunawareterms|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10,
+      10,
+      4
+     ],
+     "right": [
+      10,
+      4
+     ],
+     "severity": "low"
+    },
+    {
+     "kind": "negation",
+     "left": 5,
+     "right": 4,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 953",
+   "ruling": "sawmtravelunawareterms",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunawareshari|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "952.",
+   "ruling": "sawmtravelunawareshari",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelunawareshari|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 954",
+   "ruling": "sawmtravelunawareshari",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelarrive|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "941.",
+   "ruling": "sawmtravelarrive",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmtravelarrive|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 943",
+   "ruling": "sawmtravelarrive",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthways|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "961.",
+   "ruling": "sawmmonthways",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthequipment|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 965",
+   "ruling": "sawmmonthequipment",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthhakim|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "967.",
+   "ruling": "sawmmonthhakim",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthgovernment|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 971",
+   "ruling": "sawmmonthgovernment",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmmonthshawwal|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 974",
+   "ruling": "sawmmonthshawwal",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmobligatory|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      10,
+      3,
+      7
+     ],
+     "right": [],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [],
+     "right": [
+      3
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 977",
+   "ruling": "sawmobligatory",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmrecommended|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      17,
+      18,
+      25,
+      27
+     ],
+     "right": [
+      17,
+      18,
+      25,
+      27,
+      5
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [
+      10,
+      13,
+      14,
+      15
+     ],
+     "right": [
+      13,
+      14,
+      15
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "977.",
+   "ruling": "sawmrecommended",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmrecommended|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      17,
+      18,
+      25,
+      27
+     ],
+     "right": [
+      17,
+      18,
+      25,
+      27,
+      5
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "ordinals",
+     "left": [],
+     "right": [
+      13,
+      14,
+      15
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "مسأله 979",
+   "ruling": "sawmrecommended",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sawmrecommendedqada|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "796.",
+   "ruling": "sawmrecommendedqada",
+   "severity": "low"
   },
   {
    "field": "text",

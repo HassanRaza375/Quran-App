@@ -1353,7 +1353,8 @@ responsive layout at 1280/768/390px) passed without defects.
 
 **Status: Phases 0–3 built (Phase 3 on branch `wajibat-module`, with the P12–P14 fixes and Khamenei's
 Q&A supplementary entries, P13). Phase 4a (doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw content) is built; Phase 4b (the decision helpers: prayer doubts and wuḍūʾ, for Sistani
-and Khamenei) is built and awaiting review. Phases 5–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
+and Khamenei) is built and merged, its four helpers hidden until a reviewer signs off every path. Phase 5 (Sawm: fasting and zakāt al-fiṭrah, 13 topics, 341 rulings)
+is built on `wajibat-module` and awaiting review. Phases 6–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
 `wajibat-fiqh-jafari-module.md`. Decisions and official sources: `wajibat_decisions.md`. Phase
 reports: `wajibat_progress_log.md`.
 
@@ -1399,6 +1400,12 @@ reuse Module 17's `AyahReferenceCard`, and Qur'an citation types come from
 `app/utils/quranReference.ts`. Do not build a second prayer-time, fasting-log, bookmark, audio or
 reminder system.
 
+Phase 5 reuses these: the fasting topic "Dawn, maghrib and breaking the fast" has `liveTool: "sawm"`, which shows
+today's Fajr and Maghrib from `usePrayerStore()` (nothing recomputed) with links to `/prayerTime` and to the Module 11
+Ramadan fasting log at `/ramadan` (no second log). A topic page shows one "No rulings from … have been added yet" notice
+instead of a card per ruling when the chosen marja' has no entry for any ruling of the topic (today: zakāt al-fiṭrah for
+Khamenei, and the one-ruling `ahkam` topic).
+
 ### Data model (as implemented — `app/data/wajibat/types.ts`)
 - `Marja { id: "sistani"|"khamenei"|"makarem", name, officialSite, status: "active"|"pending-sources", books[] }`.
   A `pending-sources` marja' is selectable, but may hold no rulings (the validator enforces this).
@@ -1406,7 +1413,7 @@ reminder system.
   There are 9 categories; the ones whose phase hasn't shipped have `topicIds: []`.
 - `WajibatTopic { id, fiqh, categoryId, title, arabicTerm?, summary, explanations?, quranicBasis?, quranicBasisNotes?, rulingIds, procedureIds?, relatedTopicIds?, glossaryIds?, liveTool?, sensitive?, reviewedBy?, lastSourceCheck }`.
   - `quranicBasisNotes` (P9): a one-line explanation on a basis ayah, with a verbatim tafsir quote and its source.
-  - `liveTool` shows live data from Module 5 (today's prayer times, a Qibla link). It never recomputes it.
+  - `liveTool` (`"prayertimes" | "qibla" | "sawm"`) shows live data from Module 5 (today's prayer times, a Qibla link, or today's dawn and maghrib for fasting). It never recomputes it.
 - `Ruling { id, topicId, subject, rulings: MarjaRuling[], differsBetweenMaraji?, status?: "disputed", sensitive?, panel?, recitationIds?, supplementary? }`.
   `sensitive` places the ruling in the collapsed women-specific panel.
   - `recitationIds` (P12): Arabic shown next to the ruling as a separate `Recitation { id, marjaId, arabic, transliteration?, source }`,

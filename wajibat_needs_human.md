@@ -2,7 +2,7 @@
 
 Rows the automatic triage could not decide (decision B1). **English/Urdu rows first.** Each is still displayed as before. For each, read the versions side by side, then record a decision with `python scripts/wajibat/decide_mismatch.py` (`accepted` = the versions say the same, `fix`, `withhold`, `restored`).
 
-**50 rulings** (50 with an English/Urdu difference).
+**77 rulings** (66 with an English/Urdu difference).
 
 ### `asphalt` (khamenei, Q 80)
 
@@ -373,6 +373,132 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 |---|---|
 | What are the conditions for the four-rak‘ah prayers to become obligatorily shortened on the traveler? | مسافر پر چار رکعتی نمازوں میں وجوب قصر کے شرائط کیا ہیں؟ |
 
+### `khqa741` (khamenei, Q 741)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 1 vs 0
+
+| English | Urdu |
+|---|---|
+| If she has reasonable grounds to fear that fasting would harm her baby, then, it is not obligatory for her to fast, otherwise she must fast. | اگر روزہ رکھنے کی وجہ سے ماں کو اپنے بچے کے لئے ضرر کاخوف ہواور اس کاخوف کسی عقلائی وجہ سے ہو تو اس پر روزہ ترک کرناواجب ہے ورنہ روزہ رکھنا واجب ہے۔ |
+
+### `khqa743` (khamenei, Q 743)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 1
+
+| English | Urdu |
+|---|---|
+| If there is fear of harm to your baby due to a decrease in the quantity of milk or its drying up caused by fasting, break the fast. And for every day you miss the fast, you have to give one mudd [750 grams] of food to the poor, in addition to performing the qaḍā’ of the missed fasts, later. | اگر روزوں کی وجہ سے دودھ خشک ہو جائے یا کم ہو جائے اور اس سے بچے کیلئے ضرر کا خوف ہو تو روزہ نہ رکھئے اور آپ کو ہر روزہ کے عوض ایک مد طعام فقیر کو دینا ہوگا اور بعد میں روزوں کی قضا کرنی پڑے گی۔ |
+
+### `khqa749` (khamenei, Q 749)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 1
+
+| English | Urdu |
+|---|---|
+| The criterion in determining the inability to fast, or whether fasting causes illness, or aggravates it, is the opinion of the fasting person himself. However, if he knows that fasting is harmful for him and he still decides to fast, it is ḥarām. | روزے کی بیماری یا اس کی شدت کا سبب بننے اور روزہ رکھنے کی قدرت نہ ہونے کا معیار خود روزہ دار کی اپنی تشخیص ہے لہذا اگر یہ علم ہو کہ روزہ نقصان دہ ہے، یا اس سے نقصان کا خوف ہو تو روزہ رکھنا حرام ہے۔ |
+
+### `khqa751` (khamenei, Q 751)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 1 vs 0
+
+| English | Urdu |
+|---|---|
+| Since some physicians are not aware of Islamic laws, should the patient obey a physician’s order if he forbids fasting? | اگر ڈاکٹر کسی شخص کو روزہ رکھنے سے منع کرے تو کیا اس کے قول پر عمل کیا جا سکتا ہے؟ جبکہ بعض ڈاکٹر شرعی مسائل سے ناواقف ہوتے ہیں؟ |
+
+### `khqa758` (khamenei, Q 758)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 2
+
+| English | Urdu |
+|---|---|
+| There is a medicine for asthma patients, which is in the form of a spray containing a vapor-borne powder which enters the patient’s lungs through the mouth providing him relief. At times, asthma patients need to use it several times a day. Is it permissible to fast while using such a spray? | جو افراد سانس کے شدید مریض ہیں ان کے لئے ایک طبی دوا (spray) موجود ہے جو شیشی میں سیال مادہ کی صورت میں ہوتی ہے کہ جسے منہ میں دبانے سے وہ سیال مادہ حلق کے ذریعہ سے مریض کے پھیپھڑوں تک منتقل ہو جاتا ہے جس سے سانس لینے میں آسانی ہو جاتی ہے۔ بعض اوقات تو مریض کو دن میں کئی کئی بار اس کی ضرورت محسوس ہوتی ہے اور بغیر اس کے یا تو وہ روزہ رکھ ہی نہیں سکتا یا روزہ رکھنا اس کے لئے بہت ہی مشکل ہے، کیا مریض کے لئے اس دوا (spray)کے استعمال کے ساتھ روزہ رکھنا جائز ہے؟ |
+
+### `khqa760` (khamenei, Q 760)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 2
+
+| English | Urdu |
+|---|---|
+| Once in the holy month of Ramadan, I forgot to brush my teeth, and some tiny bits of food remained in my mouth. I swallowed the bits unintentionally. Do I have to perform the qaḍā’ for that day’s fast? | میں نے ماہ رمضان کے ایام میں ایک دن روزے کے دوران اپنے دانتوں کو برش نہیں کیا، اور دانتوں میں پھنسے ہوئے غذا کے ذرات میں نے نگلے نہیں لیکن وہ خود بخود اندر چلے گئے تو کیا مجھے اس روزہ کی قضا کرنا پڑے گی؟ |
+
+### `khqa764` (khamenei, Q 764)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 1
+
+| English | Urdu |
+|---|---|
+| Is it permissible to take pills for high blood pressure during fasting? | کیا روزہ کی حالت میں بلڈ پریشر کی گولی (tablet)کھانا جائز ہے یا نہیں؟ |
+
+### `khqa793` (khamenei, Q 793)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 1
+
+| English | Urdu |
+|---|---|
+| If something is forced into the mouth of someone, or his head is forcibly submerged in water, does it invalidate the fast? If they are forced to break their fast, e.g. they are told you break your fast or you/your property will be harmed and they eat something in order to evade the danger, is their fast valid? | اگرزبردستی روزہ دار کے منہ میں کوئی چیز ڈال دی جائے یا اس کے سر کو پانی میں ڈبو دیا جائے تو کیا اس کا روزہ باطل ہے؟ اور اگر کوئی اسے مجبور کرے کہ اگر تم نے روزہ نہیں توڑا تو تمہیں یا تمہارے مال کو نقصان پہنچائیں گے، اور یہ اس نقصان سے بچنے کے لئے کچھ کھالے تو کیا اس کا روزہ صحیح ہے؟ |
+
+### `khqa809` (khamenei, Q 809)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 2 vs 0
+
+| English | Urdu |
+|---|---|
+| What is the duty of a person who did not know that performing qaḍā’ of missed fasts is required before the next Ramadan, and so did not do it? | اگر کوئی شخص اس بات سے جاہل ہونے کی وجہ سے کہ آنے والے ماہ رمضان تک روزوں کی قضا بجالانا ضروری ہے روزوں کی قضا کو مؤخر کردے تو اس کی شرعی ذمہ داری کیا ہے؟ |
+
+### `khqa813` (khamenei, Q 813)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur numbers **!**: [] vs [2]; en-ur negation: 2 vs 1
+
+| English | Urdu |
+|---|---|
+| If someone does something that invalidates his fast due to lack of knowledge about the shar‘ī rule, e.g., he does not know that taking medicine like taking food invalidates fasting and takes medicine in Ramadan month during the day, his fasting is void. He should perform its qaḍā’ but paying kaffārah is not required. | اگر شرعی حکم سے لاعلمی کی وجہ سے ایسا کام انجام دے جو روزے کو باطل کردیتاہے ۔ جیسے اگرنہ جانتا ہو کہ دو ا کھانا کھانے کی دیگر چیزوں کی مانند روزے کو باطل کردیتاہے اور ماہ رمضان کے دن میں دوا کھالے ۔ تو اس کا روزہ باطل ہے اور اس کی قضا ضروری ہے لیکن کفارہ واجب نہیں ہے۔ |
+
+### `khqa813` (khamenei, Q 813)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 1
+
+| English | Urdu |
+|---|---|
+| Due to ignorance of the rules, a person does something that invalidates his fast, should he only perform qaḍā’ of the fasting or should he pay the kaffārah as well? | اگر کوئی شخص مسئلہ سے واقف نہ ہونے کی بنا پر جان بوجھ کر روزہ باطل کرنے والا کام انجام دے تو کیا اس پر صرف قضا واجب ہے یاکفارہ بھی واجب ہے؟ |
+
+### `khqa834` (khamenei, Q 834)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur negation **!**: 0 vs 1
+
+| English | Urdu |
+|---|---|
+| Is the sameness of horizon considered to be a condition in regards to observing the crescent? | کیا رؤیت ہلال کے لئے اتحاد افق شرط ہے یا نہیں؟ |
+
+### `khqa836` (khamenei, Q 836)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur numbers **!**: [] vs [29]
+
+| English | Urdu |
+|---|---|
+| If the twenty-ninth day of the month is ‘Īd of Fiṭr in Tehran and Khorasan, is it permissible for the residents of areas like Bushehr to break their fast too, though the horizon of Tehran and Khorasan differs from the horizon of Bushehr? | اگر 29 تاریخ کو خراسان اور تہران میں عید ہو تو کیا بوشہر کے رہنے والوں کے لئے بھی افطار کر لینا جائز ہے جبکہ بوشہرکا افق خراسان اور تہران کے افق سے مختلف ہے؟ |
+
+### `khqa841` (khamenei, Q 841)
+
+*Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
+*Differences:* en-ur ordinals **!**: [] vs [30, 30]; en-ur negation **!**: 0 vs 2
+
+| English | Urdu |
+|---|---|
+| If on the evening of ‘Īd of Fiṭr, the moon appears as a very fine crescent having the same characteristic of the new crescent, does it mean that the next day is the first of Shawwāl and that the ‘Īd was declared by mistake? Is one required to perform qaḍā’ for the last day of Ramadan? | چاند کا باریک یا چھوٹا ہونا یا اس میں اول ماہ کی علامات کا موجود ہونا کیا اس بات کی نشانی ہے کہ گزشتہ شب چاند رات نہیں تھی، بلکہ گزشتہ ماہ کی تیسویں رات تھی، اوراگر کسی شخص کیلئے عید ثابت ہوجائے اور یوں اسے یقین ہوجائے کہ کل عید نہیں تھی تو کیا اس پر تیسویں رمضان کے روزے کی قضا واجب ہے؟ |
+
 ### `learningrulings` (khamenei, Q 6)
 
 *Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
@@ -418,6 +544,24 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 |---|---|
 | What should a person do in a place where he does not knows the direction of the qiblah for sure or with probability, i.e., all four directions enjoy equal chances to be that of the qiblah? | جس جگہ ہم جہت قبلہ کو نہ جانتے ہوں اور کسی جہت کا گمان بھی نہ ہو تو ایسی جگہ پر ہمیں کیا کرنا چاہیے یعنی کس سمت کی طرف رخ کرکے نماز پڑھیں ؟ |
 
+### `sawmqadacount` (khamenei, 918.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-ur numbers **!**: [5, 5, 6, 6] vs [5, 5]; en-ur ordinals **!**: [10, 11, 5] vs [10, 5]; en-ur negation: 5 vs 3; en-fa numbers **!**: [5, 5, 6, 6] vs [20, 20, 5, 5, 6, 6]; en-fa ordinals **!**: [10, 11, 5] vs [10, 11, 5, 5, 6]; en-fa negation: 5 vs 4; ur-fa numbers **!**: [5, 5] vs [20, 20, 5, 5, 6, 6]; ur-fa ordinals **!**: [10, 5] vs [10, 11, 5, 5, 6]; ur-fa negation: 3 vs 4
+
+| English | Urdu | Persian |
+|---|---|---|
+| A person who has not fasted several days of Ramadan due to an excuse but does not know how many fasts he has missed, then if he does not know its beginning, e.g. he does not know whether he went on a journey on the twenty-fifth of Ramadan, so that he missed six fasts, or it was on the twenty-sixth and he missed five days, he can make up for the smaller number of the days.<br>But if he knows when it started, for example, he knows that he started his journey on the fifth day of the month, but he does not know whether he returned at night before the tenth and he missed five days or he returned at night before the 11th and has missed six fasts, in this case, he must fast for the bigger number of days. | اگر کوئی شخص کسی عذر کی وجہ سے ماہ رمضان کے کچھ روزے نہ رکھے اور ان کی تعداد معلوم نہ ہو چنانچہ عذر کے آغاز کے بارے میں نہ جانتا ہو مثلاً ماہ رمضان کی پچیسویں تاریخ کو سفر کیا تھا تا کہ چھوٹ جانے والے روزوں کی تعداد چھے ہو یا چھبیسویں تاریخ کو سفر کیا تھا تا کہ تعداد پانچ ہو تو کم دنوں کی قضا کرسکتا ہے تاہم اگر عذر شروع ہونے کا وقت جانتا ہو مثلاً مہینے کی پانچویں تاریخ کو سفر کیا تھا لیکن دسویں کی رات کو واپس آیا تھا تا کہ چھوٹ جانے والے روزوں کی تعداد پانچ ہو یا گیارہویں کی رات کو واپس آیا تھا تا کہ چھے روزے چھوٹ گئے ہوں تو اس صورت میں احتیاط واجب یہ ہے کہ زیادہ دنوں کی قضا کرے۔ | کسی که چند روز از ماه رمضان را به خاطر عذری روزه نگرفته و تعداد آنها را نمی داند، چنانچه شروع عذر را نمی داند؛ مثلاً نمی داند بیست و پنجم ماه رمضان به سفر رفته تا روزه های فوت شده شش روز باشد یا بیست و ششم رفته تا پنج روز باشد، می تواند مقدار کمتر را قضا کند، اما در صورتی که زمان شروع عذر را می داند، مثلاً می داند روز پنجم ماه به سفر رفته ولی نمی داند شب دهم برگشته تا پنج روزه فوت شده باشد یا شب یازدهم برگشته تا شش روزه فوت شده باشد، در این صورت احتیاط واجب آن است که مقدار بیشتر را قضا کند. |
+
+### `sawmrecommended` (khamenei, 977.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-ur ordinals **!**: [10, 13, 14, 15] vs []; en-fa numbers **!**: [17, 18, 25, 27] vs [17, 18, 25, 27, 5]; en-fa ordinals **!**: [10, 13, 14, 15] vs [13, 14, 15]; ur-fa numbers **!**: [17, 18, 25, 27] vs [17, 18, 25, 27, 5]; ur-fa ordinals **!**: [] vs [13, 14, 15]
+
+| English | Urdu | Persian |
+|---|---|---|
+| Fasting is mustaḥabb on all days of the year (except forbidden and mustaḥabb fasts). But fasting on some days is strongly mustaḥabb; including:<br>1. The first and last Thursday every lunar month and the first Wednesday after the 10th day every lunar month;<br>2. 13th, 14th and 15th of every lunar month;<br>3. The months of Rajab and Sha‘bān (all or a part of them, even one day);<br>4. Birthday of the Holy Prophet, may God bless him and grant him peace (17 Rabī‘ al-Awwal);<br>5. ‘Īd of Mab‘ath (27 Rajab);<br>6. ‘Īd of al-Ghadīr (18 Dhul Hijjah);<br>7. Day of Dahwul Arḍ (25 Dhul Qa‘dah). | جن دنوں میں روزہ رکھنا حرام یا مکروہ ہے ان کے علاوہ پورے سال کے دنوں میں روزہ مستحب ہے لیکن بعض دنوں میں مستحب موکد ہے، منجملہ:<br>1۔ ہر مہینے کی پہلی اور آخری جمعرات اور ہر مہینے کے دوسرے عشرے کا پہلا بدھ؛<br>2۔ ہر مہینے کی تیرہویں، چودہویں اور پندرہویں تاریخ (ایام البیض)؛<br>3۔ ماہ رجب اور ماہ شعبان (پورا مہینہ یا بعض دن حتی ایک دن)؛<br>4۔ عید میلاد النبی صلی اللہ علیہ وآلہ وسلم (17 ربیع الاول)؛<br>5۔ عید مبعث (27 رجب)؛<br>6۔ عید غدیر (18 ذی الحجہ)؛<br>7۔ یوم دحوالارض (25 ذی القعدہ)؛ | روزه در تمام روزهای سال (جز روزه های حرام و مکروه) مستحب است؛ ولی روزه بعضی از روزها مستحب مؤکّد است؛ از جمله:<br><br>1. اولین و آخرین پنج شنبه هرماه و اولین چهارشنبه از دهه دوم هر ماه<br><br>2. سیزدهم، چهاردهم و پانزدهم هر ماه (ایّام البیض)<br><br>3. ماه رجب و شعبان (تمام یا بعضی از آن حتّی یک روز)<br><br>4. میلاد رسول اکرم صلی الله علیه وآله (17 ربیع الاوّل)<br><br>5. عید مبعث (27 رجب)<br><br>6. عید غدیر (18 ذی الحجه)<br><br>7. روز دحو الارض (25 ذی القعده) |
+
 ### `tayammuminvalidators` (khamenei, Q 200)
 
 *Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
@@ -453,3 +597,102 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 | English | Urdu |
 |---|---|
 | My feet are affected with paralysis and I walk with the help of medical shoes and crutches. It is not possible for me to take off the shoes for wuḍū’. Please explain my shar‘ī duty concerning the wiping of the feet. | میرے دونوں پاؤں مفلوج ہوچکے ہیں اور میں طبی جوتوں اور بیسا کھیوں کے ساتھ چلتاہوں ۔ وضو کرتے وقت کسی بھی صورت میں میرے لئے جوتوں کا اتارنا ممکن نہیں ہے لذا بتائیے پاؤں کے مسح کے سلسلے میں میری شرعی ذمہ داری کیا ہے ؟ |
+
+### `sawmdoubtday` (khamenei, 804.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa numbers **!**: [] vs [1]; en-fa negation: 5 vs 4; ur-fa numbers **!**: [] vs [1]; ur-fa negation: 5 vs 4
+
+| English | Urdu | Persian |
+|---|---|---|
+| On a day when it is not known whether it is the end of Sha‘bān or the first of Ramadan (which is called day of doubt*), fasting is not obligatory. If someone wants to fast on that day, he cannot intend fast of Ramadan, but he can intend the mustaḥabb fast of the end of Sha‘bān, a qaḍā’ fast or the like. If it turns out later that it was Ramadan, it is counted as Ramadan fast and is not necessary to make up for it as qaḍā’. If he comes to know it during the day, he must intend Ramadan fast immediately.<br>* If the crescent moon cannot be seen in the evening of the twenty-ninth day of the lunar month due to cloudy weather or some other reason, or there is a dispute about the sighting of the moon, that day is called day of doubt. Therefore, if there is a doubt whether it is the last day of Sha‘bān or the first of Ramadan, then it is counted as the last day of Sha‘bān and it is permissible to fast with the intention of a mustaḥabb or qaḍā’ fast. But it is forbidden to fast with the intention of fasting in the month of Ramadan. If one doubts whether it is the first day of Shawwāl or the last day of Ramadan, it is considered as the last day of Ramadan in which it is obligatory to fast. | جس دن کے بارے میں انسان کوعلم نہ ہو کہ ماہ شعبان کی آخری تاریخ ہے یا ماہ رمضان کی پہلی تاریخ ( اس کو یوم الشک بھی کہتے ہیں) تو اس دن روزہ رکھنا واجب نہیں ہے اور اگر اس دن روزہ رکھنا چاہے تو رمضان کے روزے کی نیت نہیں کرسکتا بلکہ شعبان کے آخری دن کے مستحب یا قضا روزے وغیرہ کی نیت کرسکتا ہے اور اگر بعد میں علم ہوجائے کہ ماہ رمضان تھا تو رمضان کا روزہ شمار ہوگا اور اس دن کی قضا لازم نہیں ہے اور اگر دن میں معلوم ہوجائے کہ ماہ رمضان ہے تو اسی وقت رمضان کے روزے کی نیت کرنا ضروری ہے۔<br>* ۔ جب کھبی بھی قمری مہینے کے انتیسویں دن کے غروب کے وقت موسم کے ابرآلود ہونے یا کسی اور وجہ سے چاند نظر نہ آئے یا رویت ہلال کے متعلق اختلاف ہوجائے تو وہ دن یوم الشک کہلاتا ہے۔ لہذا شک اگر ماہ شعبان کے آخری دن اور ماہ رمضان کی پہلی تاریخ کے مابین ہو تو شعبان کا آخری دن شمار ہوگا اور مستحب یا قضا روزے کی نیت سے اس دن کا روزہ رکھنا جائز ہے، تاہم ماہ رمضان کے روزے کی نیت سے روزہ رکھنا حرام ہے۔ لیکن اگر ماہ رمضان کے آخری دن اور ماہ شوال کی پہلی تاریخ کے مابین شک ہو تو ماہ رمضان کا آخری دن شمار ہوگا اور اس دن کا روزہ واجب ہے۔ | روزی که معلوم نیست آخر شعبان است یا اول ماه رمضان (که به آن یوم الشّک گفته می شود) 1 روزه اش واجب نیست و اگر کسی بخواهد در آن روز روزه بگیرد، نمی تواند نیت روزه رمضان کند، بلکه می تواند روزه مستحبی آخر شعبان یا روزه قضا و مانند آن را قصد کند و اگر بعداً معلوم شود که رمضان بوده، به عنوان روزه رمضان حساب می شود و قضای آن روز لازم نیست و اگر در بین روز بفهمد که ماه رمضان است، باید از همان لحظه، نیت روزه رمضان کند. |
+
+### `sawmforced` (khamenei, 876.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
+
+| English | Urdu | Persian |
+|---|---|---|
+| If a fasting person is forced to do one of the fast invalidators, such as someone’s telling him: “If you do not eat, your life is at risk or we damage your property”, and he eats himself to avoid harm, his fast is invalidated. | اگر روزہ دار کو روزہ باطل کرنے والے کسی کام پر مجبور کیا جائے مثلاً کہاجائے کہ اگر کھانا نہ کھایا تو توہم تمہیں جانی یا مالی نقصان پہنچائیں گے اور وہ نقصان سے بچنے کے لئے اپنےآپ غذا کھالے تو اس کا روزہ باطل ہوگا۔ | اگر روزه دار را مجبور کنند یکی از مبطلات روزه را انجام دهد، مانند اینکه به او بگویند: اگر غذا نخوری به جان یا مال تو صدمه می زنیم و او خودش برای جلوگیری از ضرر غذا بخورد، روزه اش باطل می شود. |
+
+### `sawmgirls` (khamenei, 790.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa numbers **!**: [23, 8, 8, 9] vs []; ur-fa numbers **!**: [23, 8, 8, 9] vs []; ur-fa negation: 2 vs 1
+
+| English | Urdu | Persian |
+|---|---|---|
+| It is obligatory for girls who have just reached bulūgh* to fast, and it is not permissible to break it simply because of hardship, physical weakness, or the like unless fasting is harmful to them or it is very difficult to bear it.<br>* According to the famous opinion, when she completes nine lunar years, i.e. equal to 8 solar year, 8 months and 23 days. | وہ بچی جو حال ہی میں بالغ ہوئی ہو واجب ہے کہ روزہ رکھے اور صرف دشواری اور جسمانی کمزوری کی وجہ سے روزے کو ترک کرنا جائز نہیں ہے مگر اس صورت میں کہ جب روزہ اس کے لئے مضر ہو یا اس کو تحمل کرنا زیادہ مشقت کا باعث ہو (تو واجب نہیں ہے)۔<br>* ۔ لڑکیوں میں بلوغت کی عمر نظر مشہور کی بنا پر قمری 9 سال کا مکمل ہونا ہے ( جو شمسی اور عیسوی اعتبار سے 8 سال، 8 مہینے اور23 دن کے برابر ہے)۔ | دخترانی که تازه به سن بلوغ 1 می رسند واجب است روزه بگیرند و ترک آن به صرف دشواری، ضعف جسمانی و مانند آن جایز نیست، مگر آنکه روزه برای آنها ضرر داشته یا تحمل آن با مشقت زیادی همراه باشد. |
+
+### `sawmintentrecommended` (khamenei, 813.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
+
+| English | Urdu | Persian |
+|---|---|---|
+| One may intend keeping a mustaḥabb fast any time during the day provided that till that time they have not committed any fast invalidator. | انسان جب چاہے مستحب روزے کی نیت کرسکتا ہے بشرطیکہ اس وقت تک روزے کو باطل کرنے والا کوئی کام انجام نہ دیا ہو۔ | روزه مستحبی را هر وقت از روز می توان نیت کرد، مشروط بر اینکه تا آن لحظه، کاری که موجب باطل شدن روزه است انجام نداده باشد. |
+
+### `sawmjunubsleepsecond` (khamenei, 902.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa numbers **!**: [] vs [2, 846]; ur-fa numbers **!**: [] vs [2, 846]
+
+| English | Urdu | Persian |
+|---|---|---|
+| During the night of Ramadan, if a junub person does not wake up from the second sleep until the morning adhān (the details are mentioned in issue 846), he is obligated only to make up for the fast as qaḍā’. Of course, until maghrib, he must refrain from doing things that invalidate the fast. | اگر کوئی شخص ماہ رمضان کی رات میں جنب ہوجائے اور اس تفصیل کے مطابق جو مسئلہ846 میں بیان کی گئی ہے اذان صبح تک دوسری نیند سے بیدار نہ ہو تو اس پر صرف قضا واجب ہے، البتہ مغرب تک روزے کو باطل کرنے والے کاموں سے پرہیز کرنا ضروری ہے۔ | اگر کسی در شب ماه رمضان جنب باشد و به تفصیلی که در مسالة 846 گفته شد تا اذان صبح از خواب دوّم بیدار نشود، فقط قضای روزه بر او واجب است، البته تا مغرب باید از انجام کارهایی که روزه را باطل می کند، خودداری کند. |
+
+### `sawmkaffvow` (khamenei, 883.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa numbers **!**: [10, 3] vs []; en-fa negation: 2 vs 1; ur-fa numbers **!**: [10, 3] vs []; ur-fa negation: 2 vs 1
+
+| English | Urdu | Persian |
+|---|---|---|
+| If someone makes a nadhr to fast on a certain day, if he intentionally does not fast on that day or invalidates his fast, he must pay kaffārah, i.e. to feed ten poor persons or give them clothes. In case that one is not able to do that, he must fast for three days. | اگر کوئی شخص نذر کرے کہ کسی مخصوص دن میں روزہ رکھے گا چنانچہ اس دن عمداً روزہ نہ رکھے یا اپنا روزہ باطل کرلے تو ضروری ہے کہ کفارہ دے۔<br>* ۔ نذر کا کفارہ یہ ہے کہ دس فقیروں کو کھانا کھالائے یا انہیں لباس پہنائے اور اس کام پر قدرت نہ رکھنے کی صورت میں تین دن روزہ رکھنا ہے۔ | اگر کسی نذر کند روز معینی را روزه بگیرد، چنانچه در آن روز عمداً روزه نگیرد یا روزه اش را باطل کند، باید کفاره 2 بدهد. |
+
+### `sawmqadaable` (khamenei, 923.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
+
+| English | Urdu | Persian |
+|---|---|---|
+| If somebody does not fast in Ramadan for an excuse (like an illness or a travel) but before the next Ramadan they become able to fast, they should make up for this missed fasts in qaḍā’. | اگر کسی نے کوئی عذر (مثلاً بیماری اور سفر) کی وجہ سے روزہ نہ رکھا ہو چنانچہ آئندہ رمضان سے پہلے عذر برطرف ہوجائے تو ضروری ہے کہ قضا کرے۔ | اگر انسان به دلیل عذر (مانند بیماری و مسافرت) روزه نگرفته است، اگر قبل از رمضان سال بعد عذر برطرف شود، باید آنها را قضا کند. |
+
+### `sawmqadaillness` (khamenei, 924.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa negation **!**: 2 vs 0; ur-fa negation **!**: 1 vs 0
+
+| English | Urdu | Persian |
+|---|---|---|
+| If someone does not fast in Ramadan due to being ill and their illness continues till the next Ramadan, they are not required to make up for these missed Ramadan fasts in qaḍā’ but they must give one mudd (750 gm.) food to the needy for each day. | اگر کسی نے بیماری کی وجہ سے ماہ رمضان کا روزہ نہ رکھا ہو چنانچہ آئندہ رمضان تک اس کی بیماری طول پکڑ لے تو روزوں کی قضا ساقط ہے اور ضروری ہے کہ ہر دن کے لئے ایک مد کھانا فقیر کو دے۔ | کسی که به خاطر بیماری روزه ماه رمضان را نگرفته، اگر بیماری اش تا ماه رمضان آینده ادامه یابد، قضای روزه ها از او ساقط می شود و باید برای هر روز یک مدّ طعام به فقیر بدهد. |
+
+### `sawmqadaparentspurpose` (khamenei, 935.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
+
+| English | Urdu | Persian |
+|---|---|---|
+| By obligatory caution, it is the eldest son's duty to make qaḍā’ of the fasts which his parents did not observe on purpose. | والدین نے جو روزے عمداً نہیں رکھے ہیں احتیاط واجب کی بناپر بڑے بیٹے پر واجب ہیں۔ | روزه هایی را که پدر یا مادر عمداً نگرفته اند، بنابر احتیاط واجب بر پسر بزرگ واجب است. |
+
+### `sawmtravelplaces` (khamenei, 944.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa numbers **!**: [4] vs []; ur-fa numbers **!**: [4] vs []
+
+| English | Urdu | Persian |
+|---|---|---|
+| The optional rule in the four places (Mecca, Medina, Hā'ir Hosseini and Masjid of Kūfah) does not include fasting. Therefore, in these places, a traveler can perform either complete or shortened prayer, but he cannot fast during the holy month of Ramadan. | چار مقامات (مکہ، مدینہ، روضہ امام حسین علیہ السلام اور مسجد کوفہ) میں اختیار کے حکم میں روزہ شامل نہیں ہے۔ بنابر این، ان مقامات پر مسافر کو نماز پوری یا قصر پڑھنے میں اختیار ہے لیکن ماہ رمضان کے روزے نہیں رکھ سکتا۔ | حکم تخییر در اماکن چهارگانه (مکه، مدینه، حائر حسینی و مسجد کوفه) شامل روزه نمی شود. بنابراین مسافر در این اماکن می تواند نماز را تمام یا قصر بخواند ولی نمی تواند روزه ماه مبارک رمضان را بگیرد. |
+
+### `sawmtravelunawareshari` (khamenei, 952.)
+
+*Why:* Neither the English nor the Urdu matches the Persian.  
+*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 2 vs 0
+
+| English | Urdu | Persian |
+|---|---|---|
+| If a traveler fasts due to lack of knowledge regarding the cases of the rule; for example, if he intends to go to a place which is actually the shar‘ī distance, but fasts as he does not know that it is the shar‘ī distance, his fast is invalid. | اگر کوئی مسافر موضوع (اپنا مخصوص مسئلہ) نہ جاننے کی وجہ سے روزہ رکھ لے مثلاً کسی جگہ جانے کا قصد کرے جو حقیقت میں مسافت شرعی کے برابر ہو لیکن مسافت کی مقدار معلوم نہ ہونے کی وجہ سے روزہ رکھ لے تو اس کا روزہ باطل ہے۔ | اگر مسافر به دلیل جهل به موضوع، روزه بگیرد؛ مانند اینکه رفتن به محلی را قصد کند که در واقع به اندازه مسافت شرعی است ولی به دلیل جهل به مقدار مسافت، روزه بگیرد، روزه اش باطل است. |

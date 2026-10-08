@@ -13,6 +13,7 @@ from picks import PICKS, UR
 
 sys.stdout.reconfigure(encoding="utf-8")
 OUT = sys.argv[1] if len(sys.argv) > 1 else None
+OUT_SAWM = sys.argv[2] if len(sys.argv) > 2 else None   # Phase 5: the fasting Q&A entries go to their own file
 nfc = lambda s: unicodedata.normalize("NFC", s).strip() if s else s
 EN_BOOK, UR_BOOK, RPF_BOOK = "Practical Laws of Islam", "استفتاآت کے جوابات", "The Rules on Prayer & Fasting 2023"
 EN_URL = "https://www.leader.ir/en/book/32/Practical-Laws-of-Islam?sn={}"
@@ -48,6 +49,21 @@ SUBJECT = {
     516: "What an excessive doubter does when a doubt arises", 517: "Doubting, years later, that past worship was valid",
     518: "Inadvertent mistakes in the prayer", 519: "A forgotten rakʿah remembered in the last rakʿah",
     520: "How many rakʿahs of ṣalāt al-iḥtiyāṭ are due", 521: "Mispronouncing a word of a dhikr, verse or qunūt",
+    # Phase 5: fasting
+    741: "A pregnant woman unsure whether fasting will harm the baby", 743: "A breastfeeding mother whose milk may dry up",
+    744: "A doctor who is not trustworthy", 749: "Parents who fast although it aggravates their illness", 750: "A doctor's order not to fast for life",
+    751: "Obeying a doctor's order not to fast", 753: "Diabetics and fasting", 754: "Deciding to break the fast, then changing one's mind",
+    755: "Bleeding in the mouth", 756: "Smoking while fasting", 757: "Tobacco placed under the tongue", 758: "An asthma spray",
+    759: "Bleeding gums and saliva", 760: "Swallowing food left between the teeth by mistake", 761: "Bleeding gums and pouring water over the head",
+    763: "Injections while fasting", 764: "Taking pills for high blood pressure", 765: "Taking tablets", 766: "Intercourse with one's wife in Ramadan",
+    769: "Fasting while junub without knowing the ruling", 772: "Becoming junub on purpose at night", 779: "Forgetting the ghusl of janābah",
+    780: "Breaking the fast by ḥarām means", 782: "An emission caused by excitement", 790: "Breaking the fast repeatedly in one day",
+    793: "Being forced to eat, or having one's head forced under water", 794: "Breaking the fast before the tarakhkhuṣ point", 796: "Dust at work",
+    799: "Qaḍāʾ delayed for several years", 803: "The order of qaḍāʾ and kaffārah", 809: "Not knowing that qaḍāʾ is due before the next Ramadan",
+    813: "Invalidating the fast out of ignorance of the ruling", 831: "Sighting the crescent through binoculars or a telescope",
+    832: "Radio and television announcements of Shawwāl", 833: "The first of Ramadan or Shawwāl not established", 834: "Sameness of horizon",
+    836: "Cities whose horizons differ", 839: "A mujtahid's own certainty of the new moon", 840: "A decree announcing ʿĪd",
+    841: "A very thin crescent on the evening of ʿĪd", 844: "How Ramadan begins and ends",
 }
 # Existing ids kept so saved bookmarks still resolve.
 KEEP_ID = {363: "qiblaeffortqa", 366: "qiblanomeansqa", 485: "rukusajdahdhikrqa"}
@@ -73,6 +89,7 @@ def qa_unit(q, lang):
         if q == 428: ea = ea.replace("during the prayer1,", "during the prayer,")  # <sup>1</sup> footnote marker
         return eq, ea
     uq, ua = split_qa(*U[q], "ج")
+    if q == 758: ua = ua.replace("دن(1) کے", "دن کے")   # footnote marker "(1)" (a superscript on the live page)
     return nfc(uq), nfc(ua)
 
 def infer_basis(t):
@@ -134,6 +151,9 @@ def ts(obj):
 
 from holds import apply_holds
 apply_holds(RULINGS)
+SAWM_TOPICS = {"sawmwho", "sawmexempt", "sawmniyyah", "sawmmubtilat", "sawmjanabah", "sawmtimes", "sawmkaffarah", "sawmonlyqada", "sawmqada", "sawmtravel", "sawmmonth", "sawmtypes", "zakatfitrah"}
+SALAT_RULINGS = [r for r in RULINGS if r["topicId"] not in SAWM_TOPICS]
+SAWM_RULINGS = [r for r in RULINGS if r["topicId"] in SAWM_TOPICS]
 if OUT:
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write("""// Salat — Khamenei's Q&A book as supplementary entries (decision P13 / rule R7).
@@ -147,8 +167,22 @@ if OUT:
 // wajibat_progress_log.md and not shown.
 import type { Ruling } from "../types";
 
-export const SALAT_QA_RULINGS: Ruling[] = """ + ts(RULINGS) + ";\n")
+export const SALAT_QA_RULINGS: Ruling[] = """ + ts(SALAT_RULINGS) + ";\n")
+if OUT_SAWM:
+    with open(OUT_SAWM, "w", encoding="utf-8", newline="\n") as f:
+        f.write("""// Sawm — Khamenei's Q&A book as supplementary entries (decision P13 / rule R7), Phase 5.
+//
+// GENERATED, do not hand-edit the quoted strings: every question/answer was copied by
+// script from leader.ir — English "Practical Laws of Islam" (book 32) and Urdu
+// "استفتاآت کے جوابات" (book 106), Fasting chapter (English Q 741-846, Urdu س 745-850) — and
+// checked against the live section pages (verify_live_qa.py). Each entry is shown only to
+// Khamenei's followers, only where it agrees with the cited ruling(s) of The Rules on Prayer
+// & Fasting 2023 (`supplementary.agreesWith`), and never as a translation of that ruling.
+import type { Ruling } from "../types";
 
+export const SAWM_QA_RULINGS: Ruling[] = """ + ts(SAWM_RULINGS) + ";\n")
+
+if OUT:
     json.dump({"differ": DIFFER, "ids": {r["id"]: (r["topicId"], [c["reference"] for c in r["supplementary"]["agreesWith"]]) for r in RULINGS}},
               open(os.path.join(TMP, "kqa_meta.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     from collections import Counter

@@ -70,9 +70,10 @@ def parse(path, rx):
                     rl[cur] += "\n" + piece
         notes = {}
         for _kind, raw in blocks(foot, persian):
-            mm = re.match(r"\[(\d+)\]\s*(.*)", block_text(raw), re.S)
-            if mm:
-                notes[int(mm.group(1))] = mm.group(2).strip()
+            # one footnote block can hold several notes ("[1] … [2] …"): split it on its own markers
+            parts = re.split(r"\[(\d+)\]", block_text(raw))
+            for i in range(1, len(parts), 2):
+                notes[int(parts[i])] = parts[i + 1].strip()
         for k, v in list(rl.items()):
             for mk in [int(x) for x in re.findall(r"\[(\d+)\]", v)]:
                 if mk in notes:
@@ -107,7 +108,24 @@ def en_to_fa(n):
         return n + 1
     if n <= 785:
         return n + 2
-    return None   # fasting chapter: no entry uses it yet
+    # Fasting chapter (Phase 5): the three editions list the same rulings in the same order, section
+    # by section (40 sections, the counts match); English 787-1009 = Persian/Urdu 789-1011.
+    if n <= 1009:
+        return n + 2
+    return None
+
+
+# The Persian original orders the fasting chapter slightly differently from the English and the official
+# Urdu (which follow each other, +2 throughout): English 880 (not knowing the shar'i ruling, so qaḍāʾ
+# without kaffārah) is Persian 902 (it opens the Persian "only qaḍāʾ" section), so the Persian numbers
+# run +1 from English 881 to 900 and +2 again from 901. Found by reading the sections side by side
+# (Phase 5); every pair is also checked by content (the mismatch check).
+def en_to_persian(n):
+    if n == 880:
+        return 902
+    if 881 <= n <= 900:
+        return n + 1
+    return en_to_fa(n)
 
 
 if __name__ == "__main__":

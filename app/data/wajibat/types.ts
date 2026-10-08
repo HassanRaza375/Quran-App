@@ -93,7 +93,7 @@ export interface WajibatTopic {
   relatedTopicIds?: string[];
   glossaryIds?: string[];
   /** Live data from another app module shown on the topic page, never recomputed here (spec §6.3). */
-  liveTool?: "prayertimes" | "qibla";
+  liveTool?: "prayertimes" | "qibla" | "sawm";
   sensitive?: boolean;
   /** Only if a real reviewer exists (Q10). */
   reviewedBy?: { name: string; date: string };

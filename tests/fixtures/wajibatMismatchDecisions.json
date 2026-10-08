@@ -90,16 +90,24 @@
   "status": "needs-human"
  },
  "ayatcauses|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "ayatcauses|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "ayatcauses|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "ayatcauses|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -323,16 +331,28 @@
   "status": "hidden-pending-review"
  },
  "doubtkinds|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "doubtkinds|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "doubtkinds|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "doubtknowsnextstage|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -743,16 +763,28 @@
   "status": "persian-decided-pending-review"
  },
  "fridaybest|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "fridaybest|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "fridaybest|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "fridaybest|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -1281,16 +1313,28 @@
   "status": "needs-human"
  },
  "maghribishatime|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "maghribishatime|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "maghribishatime|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "maghribishatime|sistani|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -1689,16 +1733,28 @@
   "status": "low-pending-review"
  },
  "quransajdah|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "quransajdah|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "quransajdah|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "quransajdah|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -2007,12 +2063,20 @@
   "status": "persian-decided-pending-review"
  },
  "tashahhudforgot|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "tashahhudforgot|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "tashahhudforgot|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -2139,12 +2203,20 @@
   "status": "low-pending-review"
  },
  "turningface|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "turningface|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "turningface|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -2285,16 +2357,24 @@
   "status": "hidden-pending-review"
  },
  "zuhrasrtime|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "zuhrasrtime|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "zuhrasrtime|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-08",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian; shown as a pointer to his own book until a person decides (2026-10-08 instruction).",
+  "reviewer": "Claude (safe default, instructed by the project owner)",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "zuhrasrtime|sistani|text|en-ur": {
   "hold": "hide-ur",

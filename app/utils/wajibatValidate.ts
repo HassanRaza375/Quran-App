@@ -243,6 +243,7 @@ export const validateWajibatDataset = (
       if (!ruling) push(label, `rulingId references unknown ruling "${s.rulingId}"`);
       else if (!entry) push(label, `ruling "${s.rulingId}" has no entry for ${p.marjaId}`);
       else {
+        if (entry.referToRisala !== undefined) push(label, `step quotes "${s.rulingId}", which is held for review and not shown (decision B1)`);
         // Withheld English (R11, B1) or no English (P19): the step must carry a verbatim Urdu excerpt to show instead.
         if ((entry.englishWithheld !== undefined || entry.urduOnly) && !s.instruction.ur?.trim()) push(label, `step quotes the English of "${s.rulingId}", which is withheld or does not exist, and has no Urdu excerpt to show instead (decisions R11, P19, B1)`);
         if (!s.instruction.en?.trim() || !entry.text.en.includes(s.instruction.en)) push(label, "instruction is not a verbatim excerpt of the cited ruling");
@@ -312,6 +313,7 @@ export const validateWajibatDataset = (
         for (const q of oc.quotes) {
           const e = entryOf(q.rulingId);
           if (!e) { push(label, `quote cites ruling "${q.rulingId}", which has no entry for ${tr.marjaId} (never another marja')`); continue; }
+          if (e.referToRisala !== undefined) push(label, `quote cites "${q.rulingId}", which is held for review and not shown (decision B1)`);
           const hidden = e.englishWithheld !== undefined || e.urduOnly;
           if (hidden && q.lang !== "ur") push(label, `"${q.rulingId}" has no shown English (decisions R11, P19): quote the Urdu`);
           if (!q.text.trim() || !nfc(e.text[q.lang] ?? "").includes(nfc(q.text))) push(label, `quote is not a verbatim part of ${tr.marjaId}'s ${q.lang} text of "${q.rulingId}"`);

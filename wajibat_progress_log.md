@@ -1161,3 +1161,14 @@ Totals now: **Sistani Urdu hidden 146 rulings (240 Sistani Urdu texts remain); K
 - Unit tests **495 pass** (492 before). Lint clean on the files touched.
 - Browser (production build): helper suite **90/90**, flag-off 9/9, held-English guided prayers **15/15** (3 widths, English and Urdu mode), regressions Taharat 37/37, Salat 35/35, offline/install 22/22, Phase 4a 34/34, P18 30/30.
 - Install size (`npm run size`): **5,447.11 KiB raw (2,734.49 KiB gzip)**; ruling chunk 1,190.62 KiB (228.7 KiB gzip).
+
+## The 20 "match neither" rows held for review (2026-10-08)
+
+Decisions D1–D2 are in `wajibat_decisions.md`.
+- **The 20 rows were 8 rulings, all Khamenei's** (none is Sistani's, so no Sistani Urdu was newly held): `ayatcauses`, `doubtkinds`, `fridaybest`, `maghribishatime`, `quransajdah`, `tashahhudforgot`, `turningface`, `zuhrasrtime`. Neither his English nor his Urdu matches the Persian on a number or a negation.
+- **Recorded** with `decide_mismatch.py` (new: `--status held-pending-review --hold refer`, repeated `--key`), reviewer and date in `wajibatMismatchDecisions.json`. The triage never overwrites it.
+- **Display:** a held ruling's card shows no English or Urdu, only: *held for review… please read it in his own book: The Rules on Prayer & Fasting 2023, issue N, official text* (with the official link). New entry field `referToRisala` (`holds.py`). The validator refuses a step or helper quote of a held ruling; none quotes any of them (checked by tests).
+- **Counts now:** `held-pending-review` 20 rows (8 rulings); `needs-human` **50 rows** (all Khamenei Q&A answers with no Persian original). Holds: Sistani Urdu hidden 146; Khamenei Urdu hidden 9, English held 29, pointer 8.
+- **Restoring** one is the same recorded-decision path (`--status restored`).
+- **`emitRouteChunkError` stays `"automatic"`**: no immediate reloads mid-reading.
+- **Checks:** unit tests **496 pass**; browser (production build): new held-pointer check **8/8** (all 8 rulings, English and Urdu mode, 1280 and 390 px, Sistani unaffected), guided prayers 15/15, flag-off 9/9, and the helper suite and the earlier suites (see below); install size **5,447.89 KiB raw (2,735.02 KiB gzip)**, ruling chunk 1,192.68 KiB.

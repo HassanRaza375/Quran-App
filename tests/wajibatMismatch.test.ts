@@ -11,7 +11,7 @@ import { compareVersions, signals } from "../app/utils/wajibatMismatch";
 import fixture from "./fixtures/wajibatMismatches.json";
 import decisions from "./fixtures/wajibatMismatchDecisions.json";
 
-const STATUSES = new Set(["pending", "accepted", "fix", "withhold", "decided", "restored", "needs-human", "low-pending-review", "hidden-pending-review", "persian-decided-pending-review"]);
+const STATUSES = new Set(["pending", "accepted", "fix", "withhold", "decided", "restored", "needs-human", "low-pending-review", "hidden-pending-review", "persian-decided-pending-review", "held-pending-review"]);
 type Row = { key: string; pair: string; severity: string; kinds: { kind: string; severity: string; left: unknown; right: unknown }[] };
 const rows = fixture.mismatches as Row[];
 
@@ -84,12 +84,13 @@ describe("mismatch report over the whole dataset", () => {
 describe("safe-default triage and display holds (decision B1)", () => {
   type Dec = { status: string; hold?: string; note?: string };
   const dec = decisions as Record<string, Dec>;
-  const HOLD = new Set(["hidden-pending-review", "persian-decided-pending-review"]);
+  const HOLD = new Set(["hidden-pending-review", "persian-decided-pending-review", "held-pending-review"]);
   const held = Object.entries(dec).filter(([, d]) => HOLD.has(d.status));
 
   it("the triage accepts nothing: every automatic status is a hold, a needs-human, or a low-pending-review", () => {
     for (const [k, d] of Object.entries(dec)) {
       if (["hidden-pending-review", "persian-decided-pending-review"].includes(d.status)) expect(["hide-ur", "hide-en"], k).toContain(d.hold);
+      else if (d.status === "held-pending-review") expect(d.hold, k).toBe("refer");
       else expect(d.hold, `${k} has a hold but status ${d.status}`).toBeUndefined();
     }
     expect(Object.values(dec).filter((d) => d.status === "pending").length).toBe(0);
@@ -125,6 +126,8 @@ describe("safe-default triage and display holds (decision B1)", () => {
         expect(e.text.ur, k).toBeUndefined();
         expect(e.urSource, k).toBeUndefined();
         expect(e.urduNote, k).toMatch(/held back/);
+      } else if (d.hold === "refer") {
+        expect(e.referToRisala, k).toMatch(/^Held for review/);
       } else {
         expect(e.englishWithheld, k).toMatch(/^Held for review/);
         expect(e.text.ur, k).toBeTruthy();
@@ -164,5 +167,20 @@ describe("safe-default triage and display holds (decision B1)", () => {
         if (nd.outcome?.kind === "ruling")
           for (const q of nd.outcome.quotes)
             if (eight.includes(q.rulingId) && t.marjaId === "khamenei") expect(q.lang, `${t.id}/${nd.id}`).toBe("ur");
+  });
+
+  it("held-pending-review (a recorded decision) points to his book: the eight rulings where neither version matches the Persian", () => {
+    const refer = [...new Set(held.filter(([, d]) => d.hold === "refer").map(([k]) => k.split("|")[0]))].sort();
+    expect(refer).toEqual(["ayatcauses", "doubtkinds", "fridaybest", "maghribishatime", "quransajdah", "tashahhudforgot", "turningface", "zuhrasrtime"]);
+    for (const [k, d] of held.filter(([, x]) => x.hold === "refer")) {
+      expect((d as { reviewer?: string }).reviewer, k).toBeTruthy();
+      const e = getMarjaRuling(getRulingById(k.split("|")[0])!, "khamenei")!;
+      expect(e.referToRisala, k).toBeTruthy();
+      expect(e.source.url, k).toMatch(/^https:\/\/www\.leader\.ir\//);
+    }
+    // nothing quotes a held ruling: no step, no helper answer
+    for (const p of WAJIBAT_DATASET.procedures) for (const st of p.steps) expect(refer, `${p.id}/${st.id}`).not.toContain(st.rulingId);
+    for (const t of WAJIBAT_DATASET.decisionTrees)
+      for (const nd of t.nodes) if (nd.outcome?.kind === "ruling") for (const q of nd.outcome.quotes) expect(refer, `${t.id}/${nd.id}`).not.toContain(q.rulingId);
   });
 });

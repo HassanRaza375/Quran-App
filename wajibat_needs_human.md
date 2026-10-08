@@ -2,7 +2,7 @@
 
 Rows the automatic triage could not decide (decision B1). **English/Urdu rows first.** Each is still displayed as before. For each, read the versions side by side, then record a decision with `python scripts/wajibat/decide_mismatch.py` (`accepted` = the versions say the same, `fix`, `withhold`, `restored`).
 
-**58 rulings** (54 with an English/Urdu difference).
+**50 rulings** (50 with an English/Urdu difference).
 
 ### `asphalt` (khamenei, Q 80)
 
@@ -40,15 +40,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 |---|---|
 | In view of the use of brushes in painting and sketching, and considering that good quality brushes are imported from non-Islamic countries and are often made of pig’s hair and are accessible to all, especially in cultural and propagational centers, what is the legal rule regarding using such brushes? | پینٹنگ اور تصویریں بنانے میں بالوں والے برش سے استفادہ کیا جاتاہے۔ انکی بہترین قسم عام طور پر سور کے بالوں سے بنی ہوئی ہوتی ہے اور غیر اسلامی ملکوں سے منگوائی جاتی ہے ایسے برش ہر جگہ خاص طور سے ایڈورٹائزنگ کے اور ثقافتی مراکز میں استعمال کئے جاتے ہیں۔ اس قسم کے برش کے استعمال کے سلسلے میں شرعی حکم کیا ہے؟ |
 
-### `doubtkinds` (khamenei, 346.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur numbers **!**: [3, 50, 50] vs [2, 2, 3]; en-ur negation **!**: 0 vs 1; en-fa numbers **!**: [3, 50, 50] vs [3]; ur-fa numbers **!**: [2, 2, 3] vs [3]; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| There are three types of doubt* in prayer:<br>a. Doubt about prayer itself,<br>b. Doubt about a part of prayer,<br>c. Doubt about prayer’s rak‘ah.<br>* Here by doubt we mean probability of fifty percent. If it is more than fifty percent, it is called ẓan with different rules. | نماز میں شک کی تین قسمیں ہیں:<br>1۔ خود نماز میں شک؛<br>2۔ نماز کے اجزاء میں شک؛<br>3۔ نماز کی رکعتوں میں شک؛<br>* ۔ شک سے مراد دو یا دو سے زائد چیزوں کے مابین مساوی طور پر تردید کا شکار ہونا ہے اس طرح کہ کوئی ایک بھی کسی دوسرے پر ترجیح نہ رکھتا ہو اور اگر ایک طرف دوسرے پر کوئی رجحان یا برتری رکھتا ہو تو برتری رکھنے والا طرف ظن (گمان) اور کمزور طرف وہم کہلاتا ہے۔ | شک 1 در نماز بر سه قسم است:<br><br>‌أ. شک در اصل نماز؛<br><br>‌ب. شک در اجزای نماز؛<br><br>‌ج. شک در رکعات نماز؛ |
-
 ### `followingthealam` (khamenei, Q 16)
 
 *Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
@@ -57,15 +48,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 | English | Urdu |
 |---|---|
 | Is it required to follow only the most learned marji‘? And what is the criterion of being the most learned? | کیا مرجع تقلید کا اعلم ہونا شرط ہے یا نہیں ؟ نیز اعلمیت کا معیار کیا ہے ؟ |
-
-### `fridaybest` (khamenei, 764.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur numbers **!**: [4, 5, 5125] vs [1, 2, 2, 3, 4, 4, 5, "5/125", 5125]; en-ur negation **!**: 1 vs 0; en-fa numbers **!**: [4, 5, 5125] vs [4, 5]; en-fa negation **!**: 1 vs 0; ur-fa numbers **!**: [1, 2, 2, 3, 4, 4, 5, "5/125", 5125] vs [4, 5]
-
-| English | Urdu | Persian |
-|---|---|---|
-| The required term for a Friday prayer to be valid are as follows:<br>1. It should be in congregation;<br>2. There must be five person, Imam and four ma‘mūms;<br>3. observing all requirements for a congregational prayer, like valid connection among imam and ma‘mūms;<br>4. The distance between this Friday prayer and the nearest one should not be less than 5125 meter (one farsakh). | نماز جمعہ کی شرائط مندرجہ ذیل ہیں :<br>1 ۔ جماعت کے ساتھ ہو۔<br>2 ۔ کم از کم پانچ افراد ہوں(ایک امام اور چار ماموم)<br>3 ۔ نماز جماعت کی تمام شرائط کی رعایت کرنا مثلاً صفوں کا متصل ہونا۔<br>4 ۔ دو نماز جمعہ کے درمیان کم از کم ایک فرسخ فاصلہ ہو۔<br>* ۔ ایک فرسخ تقریباً 5125 میٹر (5/125 کلو میٹر) ہوتا ہے۔ | شرایط صحت نماز جمعه، عبارت است از:<br><br>1. به جماعت برگزار شدن؛<br><br>2. نمازگزاران حداقل پنج نفر باشند؛ (یک نفر امام و چهار نفر مأموم)<br><br>3. رعایت تمام شرایطی که در نماز جماعت معتبر است، مانند اتصال صفوف؛<br><br>4. حداقل وجود یک فرسخ 1 فاصله با نماز جمعه مجاور. |
 
 ### `ghusleventduring` (khamenei, Q 184)
 
@@ -400,15 +382,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 |---|---|
 | If his carelessness in learning religious rules leads to forsaking an obligation or committing a ḥarām action, he will be a sinner. | اگر شرعی مسائل کا نہ سیکھنا کسی واجب کے چھوٹ جانے یا فعل حرام کے ارتکاب کا سبب بنے تو گناہگار ہے ۔ |
 
-### `maghribishatime` (khamenei, 13.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur numbers **!**: [2, 2, 2] vs [2, 2, 3]; en-fa numbers **!**: [2, 2, 2] vs [3]; ur-fa numbers **!**: [2, 2, 3] vs [3]
-
-| English | Urdu | Persian |
-|---|---|---|
-| Both maghrib and ‘ishā’ prayers have special and common times. A few minutes — enough to perform it — after maghrib is special for maghrib prayer. A few minutes — enough to perform it — before shar‘ī midnight is special to ‘ishā’ prayer. The gap between these two special times is common time for both. | نماز مغرب و عشاء کےلئے مخصوص اور مشترک وقت ہے۔ نماز مغرب کا مخصوص وقت مغرب کی ابتدا سے اس وقت تک ہے جس میں تین رکعت نماز پڑھ سکیں۔ نماز عشاء کا مخصوص وقت آدھی رات ہونے سے پہلے اتنا وقت ہو جس میں فقط نماز عشاء پڑھ سکیں۔ ان دونوں کا درمیانی وقت دونوں نمازوں کا مشترکہ وقت ہے۔ | هر یک از نماز مغرب و عشا وقت مخصوص و مشترک دارند؛ وقت مخصوص نماز مغرب از اول مغرب تا هنگامی است که به اندازۀ خواندن سه رکعت از مغرب بگذرد و وقت مخصوص نماز عشا هنگامی است که به اندازۀ خواندن نماز عشا تا نصف شب وقت مانده باشد و فاصلۀ بین وقت مخصوص نماز مغرب و وقت مخصوص نماز عشا، وقت مشترک نماز مغرب و نماز عشا می باشد. |
-
 ### `personsrejecting` (khamenei, Q 335)
 
 *Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
@@ -445,15 +418,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 |---|---|
 | What should a person do in a place where he does not knows the direction of the qiblah for sure or with probability, i.e., all four directions enjoy equal chances to be that of the qiblah? | جس جگہ ہم جہت قبلہ کو نہ جانتے ہوں اور کسی جہت کا گمان بھی نہ ہو تو ایسی جگہ پر ہمیں کیا کرنا چاہیے یعنی کس سمت کی طرف رخ کرکے نماز پڑھیں ؟ |
 
-### `quransajdah` (khamenei, 281.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur numbers **!**: [15, 19, 32, 37, 4, 41, 53, 62, 96] vs [19, 4]; en-fa numbers **!**: [15, 19, 32, 37, 4, 41, 53, 62, 96] vs [4]; ur-fa numbers **!**: [19, 4] vs [4]
-
-| English | Urdu | Persian |
-|---|---|---|
-| In each of the four chapters of the holy Qur’an — chapter al-Sajdah, chapter Fuṣṣilat, chapter al-Najm, and chapter al-‘Alaq — there is a verse of obligatory sajdah. If you recite the whole verse or listen to it, you are immediately required to make sajdah. if you forget to perform it, you should do so when you remember.*<br><br>* The verses of obligatory sajdah are 32:15, 41:37, 53:62, and 96:19. | چار سوروں سورہ سجدہ (الم تنزیل)، فصلت (حم سجدہ)، نجم اور علق میں سے ہر ایک میں واجب سجدے کی ایک آیت ہے جسےاگر انسان پڑھے یا سنے تو اس کے ختم ہونے کے فوراً بعد سجدہ کرنا ضروری ہے اور اگرسجدہ کرنا بھول جائے تو جب بھی یاد آئے سجدے کو انجام دے۔<br>* سجدے والی آیات: 1۔ سورہ سجدہ، آیت 15۔ 2۔ سورہ فصلت، آیت37۔ 3۔ سورہ نجم، آیت62۔ 4۔ سورہ علق، آیت19 | در هریک از چهار سوره سجده (الم تنزیل)، فصلت (حم سجده)، نجم و علق ، یک آیه سجده واجب وجود دارد که اگر انسان آن را بخواند یا به آن گوش دهد، باید پس از پایان آیه فوراً سجده کند و اگر فراموش کند، هر وقت یادش آمد باید سجده را انجام دهد. 1 |
-
 ### `tayammuminvalidators` (khamenei, Q 200)
 
 *Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
@@ -489,39 +453,3 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 | English | Urdu |
 |---|---|
 | My feet are affected with paralysis and I walk with the help of medical shoes and crutches. It is not possible for me to take off the shoes for wuḍū’. Please explain my shar‘ī duty concerning the wiping of the feet. | میرے دونوں پاؤں مفلوج ہوچکے ہیں اور میں طبی جوتوں اور بیسا کھیوں کے ساتھ چلتاہوں ۔ وضو کرتے وقت کسی بھی صورت میں میرے لئے جوتوں کا اتارنا ممکن نہیں ہے لذا بتائیے پاؤں کے مسح کے سلسلے میں میری شرعی ذمہ داری کیا ہے ؟ |
-
-### `ayatcauses` (khamenei, 660.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 2 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| Āyāt prayer becomes obligatory for one of the following four reasons:<br>1. Solar eclipse, even if only a very small part of sun is not visible;<br>2. lunar eclipse, even if only a very small part of moon is not visible;<br>3. Earthquake;<br>4. Any abnormal event in the sky that causes fear to most of the people, such as black and red winds and lightning. | نماز آیات مندرجہ ذیل چار میں سے کسی ایک کے سبب واجب ہوتی ہے؛<br>1۔ کسوف (سورج گرہن) اگر چہ کچھ حصے کو ہی گرہن لگے۔<br>2۔ خسوف (چاند گرہن) اگرچہ کچھ حصے کو ہی گرہن لگے۔<br>3۔ زلزلہ<br>4۔ ہر غیر معمولی حادثہ جس کے باعث لوگوں کی اکثریت خوف میں مبتلا ہوجائے مثلاً سیاہ و سرخ آندھی اور بجلی کی کڑک۔ | نماز آیات با وجود یکی از چهار سبب زیر واجب می شود:<br><br>1. کسوف (خورشید گرفتگی) اگرچه مقدار کمی از آن گرفته باشد؛<br><br>2. خسوف (ماه گرفتگی) اگرچه مقدار کمی از آن گرفته باشد؛<br><br>3. زلزله؛<br><br>4. هر حادثه غیر عادی آسمانی که باعث ترس بیشتر مردم شود، مانند بادهای سیاه و سرخ و صاعقه. |
-
-### `tashahhudforgot` (khamenei, 292.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| A person who forgets tashahhud and stands up for the third rak‘ah, if he remembers that he has not recited tashahhud before going to rukū‘, he has to sit, recite tashahhud, stand up again, say tasbīḥ of the third rak‘ah, and finish the prayer. Then, based on mustaḥabb caution, he performs two sahw sajdah because of his wrongly standing. | اگر تشہد پڑھنا بھول جائے اور تیسری رکعت کے لئے کھڑا ہوجائے لیکن رکوع سے پہلے یاد آئے تو بیٹھ جائے اور تشہد پڑھے اور دوبارہ کھڑے ہوکر تیسری رکعت کی تسبیحات کو دوبارہ پڑھے اور نماز جاری رکھے اور نماز کے بعد بے جا قیام کے لئے احتیاط مستحب کی بناپر دو سجدہ سہو بجالائے۔ | اگر تشهد را فراموش کند و برای رکعت سوم بایستد ولی پیش از رکوع یادش بیاید، باید بنشیند و تشهد را بگوید و دوباره بایستد و تسبیحات رکعت سوم را مجدداً بگوید و نماز را ادامه دهد و پس از نماز برای ایستادن بی جا، بنابر احتیاط مستحب دو سجده سهو به جا آورد. |
-
-### `turningface` (khamenei, 325.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [] vs [2]; ur-fa numbers **!**: [] vs [2]
-
-| English | Urdu | Persian |
-|---|---|---|
-| If a person intentionally turns his face or his body from the qiblah so that he can see the right or left easily, his prayer is invalidated. If a person does so unintentionally, by obligatory caution, his prayer becomes invalidated. However, if a person turns his face a little to each side, his prayer is not invalidated. | اگر جان بوجھ کر قبلے سے اس حد تک اپنا بدن یا رخ پھیرے کہ دائیں اور بائیں طرف آسانی سے دیکھ سکتا ہو تو نماز باطل ہے اور اگر بھول کربھی ایسا کرے تو احتیاط واجب کی بناپر نماز باطل ہے لیکن اگر چہرے کو ایک طرف تھوڑا پھیرے تو نماز باطل نہیں ہے۔ | اگر عمداً صورت یا بدن خود را از قبله برگرداند، به طوری که بتواند سمت راست و چپ خود را به آسانی ببیند، نمازش باطل است و اگر سهواً هم این کار را بکند، بنابر احتیاط واجب نماز باطل است ولی اگر اندکی صورت را به یکی از دو طرف برگرداند، نمازش باطل نمی شود. |
-
-### `zuhrasrtime` (khamenei, 8.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [2, 2, 2] vs []; ur-fa numbers **!**: [2] vs []
-
-| English | Urdu | Persian |
-|---|---|---|
-| Both ẓuhr and ‘aṣr prayers have special and common times. A few minutes — enough to say it — after shar‘ī noon is special for ẓuhr prayer. A few minutes — enough to perform it — before sunset is special to ‘aṣr prayer. The gap between these two special times is common time for both. | نماز ظہر اور عصر میں سے ہر ایک کے لئے مخصوص اور مشترک وقت ہے۔ نماز ظہر کا مخصوص وقت ابتدائے ظہر سے لے کر اتنا وقت گزرنے تک ہے کہ جس میں نماز ظہر پڑھ سکیں اور نماز عصر کا مخصوص وقت غروب آفتاب سے پہلے اتنا وقت ہے کہ جس میں فقط نماز عصر پڑھ سکیں۔ ان دونوں کا درمیانی وقت نماز ظہر و عصر کا مشترک وقت ہے۔ | نماز ظهر و عصر هر کدام وقت مخصوص و مشترک دارند؛ وقت مخصوص نماز ظهر از اول ظهر است تا هنگامی که به اندازۀ خواندن نماز ظهر از اول ظهر گذشته باشد و وقت مخصوص نماز عصر موقعی است که به اندازۀ خواندن نماز عصر به غروب آفتاب وقت مانده باشد و فاصله بین وقت مخصوص نماز ظهر و وقت مخصوص نماز عصر، وقت مشترک نماز ظهر و نماز عصر است. |

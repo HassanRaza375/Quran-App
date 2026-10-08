@@ -39,7 +39,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 347",
           url: "https://www.leader.ir/fa/book/180/1?sn=30805"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     seeAlso: [

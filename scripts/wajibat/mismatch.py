@@ -163,6 +163,7 @@ def write_report(rows, dec, compared, data, texts):
          "- Left out on purpose (too ambiguous): 'one'/ایک, 'first'/پہلا/اول, 'second'/دوسرا/دوسری. Tables: `app/utils/wajibatMismatchWords.json`.", "",
          "## Rows by status", "", "| Status | Rows | What it means |", "|---|---|---|"]
     meaning = {
+        "held-pending-review": "Recorded decision (decide_mismatch.py): neither version matches the Persian, so the ruling shows a pointer to his own book until a person decides.",
         "hidden-pending-review": "Sistani, high: the Urdu is hidden, the English shown with a note (the English 4th edition wins, P6).",
         "persian-decided-pending-review": "Khamenei, high: the version that matches the Persian is shown, the other hidden.",
         "needs-human": "Khamenei, high, where the Persian cannot decide (both or neither match, no Persian, or the hold would break a guided-prayer step or helper quote). **Shown as before.** See `wajibat_needs_human.md`.",
@@ -174,21 +175,21 @@ def write_report(rows, dec, compared, data, texts):
         L.append(f"| `{st}` | {n} | {meaning.get(st, '')} |")
     L += ["", "## What is hidden now (display holds)", "",
           "Held texts are not displayed; `WAJIBAT_HOLDS=0` generates the full data. **Restoring one is a recorded decision** (`python scripts/wajibat/decide_mismatch.py ...`), never a hand edit.", "",
-          "| Marja' | Urdu texts hidden (rulings) | English texts hidden (rulings) |", "|---|---|---|"]
+          "| Marja' | Urdu texts hidden (rulings) | English texts hidden (rulings) | Held, pointer to his book (rulings) |", "|---|---|---|---|"]
     for m in ("sistani", "khamenei"):
-        L.append(f"| {m} | {len(hid.get((m, 'hide-ur'), ()))} | {len(hid.get((m, 'hide-en'), ()))} |")
-    L += ["", "| Topic | Sistani: Urdu hidden | Khamenei: Urdu hidden | Khamenei: English hidden |", "|---|---|---|---|"]
+        L.append(f"| {m} | {len(hid.get((m, 'hide-ur'), ()))} | {len(hid.get((m, 'hide-en'), ()))} | {len(hid.get((m, 'refer'), ()))} |")
+    L += ["", "| Topic | Sistani: Urdu hidden | Khamenei: Urdu hidden | Khamenei: English hidden | Khamenei: held (pointer) |", "|---|---|---|---|---|"]
     for tp in sorted(per_topic, key=lambda t: -sum(per_topic[t].values())):
         c = per_topic[tp]
-        L.append(f"| {topic_title.get(tp, tp)} (`{tp}`) | {c[('sistani','hide-ur')]} | {c[('khamenei','hide-ur')]} | {c[('khamenei','hide-en')]} |")
+        L.append(f"| {topic_title.get(tp, tp)} (`{tp}`) | {c[('sistani','hide-ur')]} | {c[('khamenei','hide-ur')]} | {c[('khamenei','hide-en')]} | {c[('khamenei','refer')]} |")
     L += ["", "### Held rulings", "", "| Ruling | Marja' | Hidden | Why |", "|---|---|---|---|"]
     seen = set()
     for r in sorted(rows, key=lambda r: (r["marja"], r["ruling"])):
         d = dec[r["key"]]
         k = (r["ruling"], r["marja"])
-        if d.get("hold") and k not in seen and d["status"] in ("hidden-pending-review", "persian-decided-pending-review"):
+        if d.get("hold") and k not in seen and d["status"] in ("hidden-pending-review", "persian-decided-pending-review", "held-pending-review"):
             seen.add(k)
-            L.append(f"| `{r['ruling']}` | {r['marja']} | {'Urdu' if d['hold']=='hide-ur' else 'English'} | {cell(d['note'])} |")
+            L.append(f"| `{r['ruling']}` | {r['marja']} | { {'hide-ur': 'Urdu', 'hide-en': 'English', 'refer': 'both (pointer to his book)'}[d['hold']] } | {cell(d['note'])} |")
     nh = [r for r in rows if dec[r["key"]]["status"] == "needs-human"]
     L += ["", "## Needs a person", "", f"**{status.get('needs-human', 0)} rows.** Side by side in `wajibat_needs_human.md` (English/Urdu rows first). These are still **displayed as before**.", ""]
     L += ["| Ruling | Marja' | Pair | Where | Differences (left vs right) | Why |", "|---|---|---|---|---|---|"]

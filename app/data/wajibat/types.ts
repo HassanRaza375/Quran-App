@@ -139,6 +139,10 @@ export interface MarjaRuling {
    * `text.en` stays in the data for audit but is never displayed, the official Urdu (which matches
    * the Persian) is shown in every language mode, and the app never translates it itself.
    * The value is the audit reason (data/log only, not shown). */
+  /** Decision B1 follow-up: this ruling is held for review (an automated comparison found a difference
+   * that the Persian original did not settle). Neither language is shown; the card points to the
+   * marja's own book instead. Set only by a recorded decision (`held-pending-review`). */
+  referToRisala?: string;
   englishWithheld?: string;
   /** Where the Persian original of this ruling was read to compare the English and Urdu editions
    * (decision R11). Metadata only: the Persian text itself is never displayed. */

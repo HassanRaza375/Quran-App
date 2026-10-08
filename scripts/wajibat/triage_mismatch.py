@@ -80,7 +80,7 @@ def summarise(rows, dec, data):
     hid = defaultdict(set)   # (marja, kind) -> {(ruling)}
     for r in rows:
         d = dec[r["key"]]
-        if d.get("hold") and d["status"] in {"hidden-pending-review", "persian-decided-pending-review"}:
+        if d.get("hold") and d["status"] in {"hidden-pending-review", "persian-decided-pending-review", "held-pending-review"}:
             hid[(r["marja"], d["hold"])].add(r["ruling"])
     per_topic = defaultdict(Counter)
     for (marja, hold), rids in hid.items():

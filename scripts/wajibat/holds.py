@@ -8,8 +8,9 @@ import json, os
 from paths import REPO
 
 DECISIONS = os.path.join(REPO, "tests", "fixtures", "wajibatMismatchDecisions.json")
-HOLD_STATUSES = {"hidden-pending-review", "persian-decided-pending-review"}
+HOLD_STATUSES = {"hidden-pending-review", "persian-decided-pending-review", "held-pending-review"}
 HELD_UR_NOTE = "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+HELD_REFER_NOTE = "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
 HELD_EN_REASON = "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
 
 
@@ -38,6 +39,8 @@ def apply_holds(rulings):
                 (e.get("question") or {}).pop("ur", None)
                 e.pop("urSource", None)
                 e["urduNote"] = HELD_UR_NOTE
+            elif h == "refer":
+                e["referToRisala"] = HELD_REFER_NOTE
             elif h == "hide-en":
                 assert e["text"].get("ur"), ("cannot hold the English of a ruling that has no Urdu", r["id"])
                 e["englishWithheld"] = HELD_EN_REASON
@@ -73,3 +76,4 @@ def apply_holds_procs(procs, rulings=()):
                 i = ur.find(a); j = ur.find(b, i)
                 assert i >= 0 and j >= 0, ("Urdu excerpt phrases not found", s["rulingId"])
                 s["instruction"]["ur"] = ur[i:j + len(b)]
+            assert h != "refer", ("a ruling held for review is used by a guided prayer step", s["rulingId"])

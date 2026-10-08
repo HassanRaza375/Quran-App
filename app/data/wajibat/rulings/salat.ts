@@ -187,7 +187,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 8",
           url: "https://www.leader.ir/fa/book/180/1?sn=30760"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -241,7 +242,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 13",
           url: "https://www.leader.ir/fa/book/180/1?sn=30761"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -4571,7 +4573,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 282",
           url: "https://www.leader.ir/fa/book/180/1?sn=30795"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -4673,7 +4676,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30796"
         },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -5150,7 +5154,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30804"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -7223,7 +7228,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 662",
           url: "https://www.leader.ir/fa/book/180/1?sn=30858"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -7556,7 +7562,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 766",
           url: "https://www.leader.ir/fa/book/180/1?sn=30877"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },

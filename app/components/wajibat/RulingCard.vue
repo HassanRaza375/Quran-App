@@ -18,6 +18,20 @@
         </a>
       </v-alert>
 
+      <!-- Decision B1 follow-up: held for review: neither version is shown; point to his own book. -->
+      <v-alert v-else-if="entry.referToRisala" type="warning" variant="tonal" density="compact" class="mb-1" icon="mdi-book-open-variant">
+        <p class="mb-1">
+          This ruling is held for review: an automated comparison found a difference between its versions that the
+          Persian original did not settle, so it is not shown until a person has checked it.
+        </p>
+        <p class="mb-0">
+          Please read it in {{ marja.name.en }}'s own book: <em>{{ entry.source.title }}</em>, {{ entry.source.reference }}
+          <a :href="entry.source.url" target="_blank" rel="noopener noreferrer" class="ms-1">
+            official text <v-icon size="14" aria-hidden="true">mdi-open-in-new</v-icon>
+          </a>
+        </p>
+      </v-alert>
+
       <template v-else>
         <div class="d-flex flex-wrap ga-2 mb-3">
           <HukmBadge v-if="entry.hukm" :hukm="entry.hukm" />

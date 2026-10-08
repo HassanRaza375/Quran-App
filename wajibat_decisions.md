@@ -114,6 +114,13 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | C3 | Chunk-load errors | Enable Nuxt's automatic reload on chunk-load errors (`emitRouteChunkError: "automatic"`); note it in the progress log. |
 | C4 | Vercel | The user confirms the env var is not set for Production. After C1–C3 pass: show the final merge summary, then fast-forward `main`. |
 
+## Answered questions (2026-10-08, sixth round)
+
+| # | Topic | Decision |
+|---|---|---|
+| D1 | The 20 "match neither" rows | Apply the safe default and record them as `held-pending-review` through `decide_mismatch.py`: **Sistani:** hold the Urdu, show the English with the Urdu notice; **Khamenei:** show the "refer to his risala" pointer for that ruling until a person decides. (All 20 rows turned out to be Khamenei's, 8 rulings; none is Sistani's.) Rebuild, re-run the browser suites, update the release note, commit and push to `wajibat-module`. |
+| D2 | Chunk reload | Keep `emitRouteChunkError: "automatic"`: no immediate reloads mid-reading (`"automatic-immediate"` stays off). |
+
 ## Phase 0 findings (2026-09-25)
 
 - **Q5 UI kit: Vuetify 3.** `package.json` has `vuetify` + `vite-plugin-vuetify` and no shadcn-vue,

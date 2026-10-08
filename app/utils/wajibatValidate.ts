@@ -243,7 +243,8 @@ export const validateWajibatDataset = (
       if (!ruling) push(label, `rulingId references unknown ruling "${s.rulingId}"`);
       else if (!entry) push(label, `ruling "${s.rulingId}" has no entry for ${p.marjaId}`);
       else {
-        if (entry.englishWithheld !== undefined || entry.urduOnly) push(label, `step quotes the English of "${s.rulingId}", which is withheld or does not exist (decisions R11, P19)`);
+        // Withheld English (R11, B1) or no English (P19): the step must carry a verbatim Urdu excerpt to show instead.
+        if ((entry.englishWithheld !== undefined || entry.urduOnly) && !s.instruction.ur?.trim()) push(label, `step quotes the English of "${s.rulingId}", which is withheld or does not exist, and has no Urdu excerpt to show instead (decisions R11, P19, B1)`);
         if (!s.instruction.en?.trim() || !entry.text.en.includes(s.instruction.en)) push(label, "instruction is not a verbatim excerpt of the cited ruling");
         if (s.instruction.ur && !(entry.text.ur ?? "").includes(s.instruction.ur)) push(label, "Urdu instruction is not a verbatim excerpt of the cited ruling");
       }

@@ -2,7 +2,7 @@
 
 Rows the automatic triage could not decide (decision B1). **English/Urdu rows first.** Each is still displayed as before. For each, read the versions side by side, then record a decision with `python scripts/wajibat/decide_mismatch.py` (`accepted` = the versions say the same, `fix`, `withhold`, `restored`).
 
-**81 rulings** (64 with an English/Urdu difference).
+**58 rulings** (54 with an English/Urdu difference).
 
 ### `asphalt` (khamenei, Q 80)
 
@@ -40,77 +40,14 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 |---|---|
 | In view of the use of brushes in painting and sketching, and considering that good quality brushes are imported from non-Islamic countries and are often made of pig’s hair and are accessible to all, especially in cultural and propagational centers, what is the legal rule regarding using such brushes? | پینٹنگ اور تصویریں بنانے میں بالوں والے برش سے استفادہ کیا جاتاہے۔ انکی بہترین قسم عام طور پر سور کے بالوں سے بنی ہوئی ہوتی ہے اور غیر اسلامی ملکوں سے منگوائی جاتی ہے ایسے برش ہر جگہ خاص طور سے ایڈورٹائزنگ کے اور ثقافتی مراکز میں استعمال کئے جاتے ہیں۔ اس قسم کے برش کے استعمال کے سلسلے میں شرعی حکم کیا ہے؟ |
 
-### `doubtaftersalaminvalid` (khamenei, 376.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur numbers **!**: [2, 3, 5] vs [2, 3, 4, 5]; en-fa numbers **!**: [2, 3, 5] vs [2, 3, 4, 5]
-
-| English | Urdu | Persian |
-|---|---|---|
-| The prayer is invalid if one doubts about the number of rak‘ah of his prayer after salām of the prayer but both sides of the doubt cause the prayer to be invalid. For example, if, after salām of a four-rak‘ah prayer, he doubts whether he prayed three rak‘ah or five rak‘ah, the prayer is invalid. | اگر نماز کے سلام کے بعد رکعتوں کی تعداد کے بارے میں شک کرے لیکن شک کی دو نوں طرف نماز باطل ہوتی ہو مثلاً چار رکعتی نماز کے سلام کے بعد شک کرے کہ تین رکعتیں پڑھی ہیں یا پانچ تو نماز باطل ہے۔ | اگر پس از سلام نماز در رکعات نماز شک کند؛ ولی هر دو طرف شک، موجب بطلان نماز باشد؛ مانند اینکه پس از سلام نماز چهار رکعتی شک کند که سه رکعت خوانده یا پنج رکعت، نماز باطل است. |
-
-### `doubtimam` (khamenei, 378.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur numbers **!**: [3, 4, 4, 4, 50] vs [3, 4, 4, 4]; en-fa numbers **!**: [3, 4, 4, 4, 50] vs [3, 4, 4, 4]
-
-| English | Urdu | Persian |
-|---|---|---|
-| If an imam of congregation doubts the number of rak‘ah; for example, if he doubts whether he prayed three rak‘ah or four rak‘ah, if the ma‘mūm is sure or thinks that more probably he prayed four rak‘ah and informs the imam that he has prayed four rak‘ah, the imam must finish the prayer and it is not necessary to perform the caution prayer. Also, if the imam is certain or thinks that more than fifty percent he has prayed a certain number of rak‘ah and the ma‘mūm doubts about the number of rak‘ah of the prayer, he should not pay attention to his doubt. | اگر امام جماعت رکعتوں کی تعداد کے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار، چنانچہ ماموم کو یقین یا گمان ہو کہ چار رکعتیں پڑھی ہیں اور یہ بات امام کے علم میں لائے کہ چار رکعتیں پڑھی ہیں تو امام کو چاہئے نماز کو تمام کرے اور نماز احتیاط پڑھنا لازم نہیں ہے۔ اسی طرح اگر امام کو رکعتوں کی تعداد کے بارے میں یقین یا گمان ہو اور ماموم کو رکعتوں کی تعداد کے بارے میں شک ہوجائے تو اپنے شک کی پروا نہ کرے۔ | اگر امام جماعت در شماره رکعت ها شک کند؛ مانند اینکه شک کند که سه رکعت خوانده یا چهار رکعت، چنانچه مأموم، یقین یا گمان داشته باشد که چهار رکعت خوانده و به امام بفهماند که چهار رکعت خوانده است، امام باید نماز را تمام کند و خواندن نماز احتیاط لازم نیست. همچنین اگر امام یقین یا گمان داشته باشد که چند رکعت خوانده است و مأموم در شماره رکعت های نماز شک کند نباید به شک خود اعتنا کند. |
-
 ### `doubtkinds` (khamenei, 346.)
 
 *Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur numbers **!**: [3, 50, 50] vs [2, 2, 3]; en-ur negation **!**: 0 vs 1; en-fa numbers **!**: [3, 50, 50] vs [1, 3]; ur-fa numbers **!**: [2, 2, 3] vs [1, 3]; ur-fa negation **!**: 1 vs 0
+*Differences:* en-ur numbers **!**: [3, 50, 50] vs [2, 2, 3]; en-ur negation **!**: 0 vs 1; en-fa numbers **!**: [3, 50, 50] vs [3]; ur-fa numbers **!**: [2, 2, 3] vs [3]; ur-fa negation **!**: 1 vs 0
 
 | English | Urdu | Persian |
 |---|---|---|
 | There are three types of doubt* in prayer:<br>a. Doubt about prayer itself,<br>b. Doubt about a part of prayer,<br>c. Doubt about prayer’s rak‘ah.<br>* Here by doubt we mean probability of fifty percent. If it is more than fifty percent, it is called ẓan with different rules. | نماز میں شک کی تین قسمیں ہیں:<br>1۔ خود نماز میں شک؛<br>2۔ نماز کے اجزاء میں شک؛<br>3۔ نماز کی رکعتوں میں شک؛<br>* ۔ شک سے مراد دو یا دو سے زائد چیزوں کے مابین مساوی طور پر تردید کا شکار ہونا ہے اس طرح کہ کوئی ایک بھی کسی دوسرے پر ترجیح نہ رکھتا ہو اور اگر ایک طرف دوسرے پر کوئی رجحان یا برتری رکھتا ہو تو برتری رکھنے والا طرف ظن (گمان) اور کمزور طرف وہم کہلاتا ہے۔ | شک 1 در نماز بر سه قسم است:<br><br>‌أ. شک در اصل نماز؛<br><br>‌ب. شک در اجزای نماز؛<br><br>‌ج. شک در رکعات نماز؛ |
-
-### `doubtprayeritself` (khamenei, 347.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur numbers **!**: [50, 50] vs []; en-fa numbers **!**: [50, 50] vs []
-
-| English | Urdu | Persian |
-|---|---|---|
-| If, after the prayer’s time, one doubts whether he has performed it or not, or thinks (more than fifty percent) that he has not performed, it is not necessary to perform it. However, if before the end of prayer’s time, he doubts whether he has performed the prayer or not, he should pray. Rather, if one thinks (i.e. more than fifty percent) that he has performed it, he should pray. | اگر وقت گزرنے کے بعد شک کرے کہ نماز پڑھی ہے یا نہیں یا گمان کرے کہ نہیں پڑھی ہے تو نماز پڑھنا لازم نہیں لیکن اگر وقت ختم ہونے سے پہلے شک کرے کہ نماز پڑھی ہے یا نہیں تو ضروری ہے نماز پڑھے بلکہ نماز پڑھنے کا گمان ہوجائے تو بھی پڑھے۔ | اگر بعد از گذشتن وقت نماز، شک کند که نماز خوانده یا نه، یا گمان کند که نخوانده، لازم نیست نماز را بخواند. اما اگر پیش از پایان وقت نماز، شک کند که نماز خوانده یا نه، باید نماز را بخواند بلکه در صورت گمان به خواندن نیز باید آن را بخواند. |
-
-### `doubtrepeated` (khamenei, 358.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur numbers **!**: [2] vs []; en-ur negation: 2 vs 3; en-fa numbers **!**: [2] vs []; en-fa negation: 2 vs 1
-
-| English | Urdu | Persian |
-|---|---|---|
-| If one doubts about one of the parts of the prayer before starting the next part and performs it, then it turns out that he has performed it twice, if that part is not a rukn of prayer, his prayer is not void. | اگر نماز کے کسی جزء میں شک کرے جبکہ بعد کے جزء میں داخل نہ ہوا ہو اور اس کو انجام دے تاہم بعد میں یاد آئے کہ اس جزء کو دوبار انجام دیا ہے چنانچہ وہ جزء ارکان نماز میں سے نہ ہو تو نماز باطل نہیں ہے۔ | اگر در یکی از اجزای نماز پیش از وارد شدن به جزء بعدی، شک کند و آن را انجام دهد، سپس معلوم شود که آن را دوبار به جا آورده، چنانچه آن جزء از ارکان نماز نباشد، نمازش باطل نیست. |
-
-### `doubtsdismissedlist` (khamenei, 373.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur negation **!**: 0 vs 1; en-fa negation **!**: 0 vs 1
-
-| English | Urdu | Persian |
-|---|---|---|
-| Doubts which are invalid and should be ignored are as follows:<br>1. Doubt about an act after passing its due place,<br>2. Doubt after salām of prayer.<br>3. Doubt after the time of prayer has already passed.<br>4. Doubt by an imam (one who leads the prayer) or a ma‘mūm (the follower of an imam in congregational prayer),<br>5. Doubt of a person who doubts too much,<br>6. Doubt which arises in a mustaḥabb prayers. | وہ شکوک جن کی پروا نہیں کرنی چاہئے، مندرجہ ذیل ہیں:<br>1۔ اس چیز کے بارے میں شک کہ جس کا موقع گزر گیا ہو؛<br>2۔ سلام کے بعد شک؛<br>3۔ نماز کا وقت گزرجانے کے بعد شک؛<br>4۔ امام اور ماموم کا شک؛<br>5۔ کثیر الشک کا شک؛<br>6۔ مستحب نمازوں میں شک؛ | شک هایی که اعتبار ندارند و نباید به آنها اعتنا کرد از این قرار است:<br><br>1. شک در چیزی که محل آن گذشته است؛<br><br>2. شک بعد از سلام؛<br><br>3. شک بعد از وقت نماز؛<br><br>4. شک امام و مأموم؛<br><br>5. شک کثیر الشک؛<br><br>6. شک در نمازهای مستحبی. |
-
-### `doubtsupposition` (khamenei, 368.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur numbers **!**: [3, 4, 50] vs [3, 4]; en-fa numbers **!**: [3, 4, 50] vs [3, 4]
-
-| English | Urdu | Persian |
-|---|---|---|
-| The probability of more than fifty percent regarding number of rak‘ah in a prayer is just like the `certainty`. For example, when one doubts as to whether they have finished three or four rak‘ah, in case that the probability of one of the choices seems more, one should act accordingly and the prayer is alright. | نماز کی رکعتوں کے بارے میں گمان کا حکم یقین کی طرح ہے یعنی جب تین یا چار رکعت پڑھنے میں شک ہوجائے اور کسی ایک طرف زیادہ گمان ہوجائے تو اسی کے مطابق عمل کرے اور نماز صحیح ہے۔ | حکم «گمان» در رکعت های نماز، مانند یقین است. یعنی هنگامی که مردّد می شود که مثلاً سه رکعت خوانده یا چهار رکعت، اگر گمانش به یک طرف بیشتر است باید مطابق آن عمل کند و نمازش صحیح است. |
-
-### `excessiveact` (khamenei, 380.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur numbers **!**: [2, 2] vs []; en-fa numbers **!**: [2, 2] vs []; en-fa negation: 3 vs 2
-
-| English | Urdu | Persian |
-|---|---|---|
-| 'A person who doubts too much' must assume the occurrence of the act about which he doubts if performing it does not invalidate his prayer. For example, if a person doubts whether he has performed sajdah or not, he should assume that he has performed it.<br>If doing it invalidates prayer, he must assume that he has not performed it, like if he doubts whether he has performed one rukū‘ or two, he should posit that he has performed one rukū‘ because making two rukū‘ invalidates prayer. | اگر کثیر الشک کسی عمل کے بجالانے کے بارے میں شک کرے چنانچہ اس عمل کو انجام دینے سے نماز باطل نہ ہوتی ہو تو یوں سمجھنا چاہئے کہ اسے انجام دیا ہے مثلاً شک کرے کہ سجدہ بجالایا ہے یا نہیں تو سمجھے کہ سجدہ بجالاچکا ہے اور اگر اس کو انجام دینے سے نماز باطل ہوتی ہو تو سمجھے کہ وہ کام انجام نہیں دیا ہے مثلاً شک کرے کہ ایک رکوع کیا ہے یا زیادہ تو چونکہ رکوع زیادہ ہونے سے نماز باطل ہوتی جاتی ہے لہذا یوں سمجھے کہ ایک رکوع کیا ہے۔ | کثیر الشک، اگر در به جا آوردن کاری شک کند، در صورتی که انجام آن کار نماز را باطل نمی کند، باید بنا بگذارد که آن را به جا آورده است؛ مانند اینکه شک کند که سجده کرده است یا نه، باید بنا بگذارد که سجده کرده است و چنانچه انجام آن کار نماز را باطل می کند، باید بنا بگذارد که آن را انجام نداده است؛ مانند اینکه شک کند که یک رکوع کرده یا بیشتر، چون زیاد شدن رکوع، نماز را باطل می کند، باید بنا بگذارد که یک رکوع کرده است. |
 
 ### `followingthealam` (khamenei, Q 16)
 
@@ -124,7 +61,7 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 ### `fridaybest` (khamenei, 764.)
 
 *Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur numbers **!**: [4, 5, 5125] vs [1, 2, 2, 3, 4, 4, 5, "5/125", 5125]; en-ur negation **!**: 1 vs 0; en-fa numbers **!**: [4, 5, 5125] vs [1, 4, 5]; en-fa negation **!**: 1 vs 0; ur-fa numbers **!**: [1, 2, 2, 3, 4, 4, 5, "5/125", 5125] vs [1, 4, 5]
+*Differences:* en-ur numbers **!**: [4, 5, 5125] vs [1, 2, 2, 3, 4, 4, 5, "5/125", 5125]; en-ur negation **!**: 1 vs 0; en-fa numbers **!**: [4, 5, 5125] vs [4, 5]; en-fa negation **!**: 1 vs 0; ur-fa numbers **!**: [1, 2, 2, 3, 4, 4, 5, "5/125", 5125] vs [4, 5]
 
 | English | Urdu | Persian |
 |---|---|---|
@@ -439,7 +376,7 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 ### `khqa638` (khamenei, Q 638)
 
 *Why:* No Persian original to decide with (Q&A answer, or the Urdu-only treatise).  
-*Differences:* en-ur numbers **!**: [10, 4, 4, 8, 8] vs [10, 2, 4, 4, 4, 8, 8, 8, 8]; en-ur negation: 11 vs 10
+*Differences:* en-ur numbers **!**: [10, 4, 4, 8, 8] vs [10, 2, 4, 4, 8, 8, 8, 8]; en-ur negation: 11 vs 10
 
 | English | Urdu |
 |---|---|
@@ -471,24 +408,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 | English | Urdu | Persian |
 |---|---|---|
 | Both maghrib and ‘ishā’ prayers have special and common times. A few minutes — enough to perform it — after maghrib is special for maghrib prayer. A few minutes — enough to perform it — before shar‘ī midnight is special to ‘ishā’ prayer. The gap between these two special times is common time for both. | نماز مغرب و عشاء کےلئے مخصوص اور مشترک وقت ہے۔ نماز مغرب کا مخصوص وقت مغرب کی ابتدا سے اس وقت تک ہے جس میں تین رکعت نماز پڑھ سکیں۔ نماز عشاء کا مخصوص وقت آدھی رات ہونے سے پہلے اتنا وقت ہو جس میں فقط نماز عشاء پڑھ سکیں۔ ان دونوں کا درمیانی وقت دونوں نمازوں کا مشترکہ وقت ہے۔ | هر یک از نماز مغرب و عشا وقت مخصوص و مشترک دارند؛ وقت مخصوص نماز مغرب از اول مغرب تا هنگامی است که به اندازۀ خواندن سه رکعت از مغرب بگذرد و وقت مخصوص نماز عشا هنگامی است که به اندازۀ خواندن نماز عشا تا نصف شب وقت مانده باشد و فاصلۀ بین وقت مخصوص نماز مغرب و وقت مخصوص نماز عشا، وقت مشترک نماز مغرب و نماز عشا می باشد. |
-
-### `mubtilatlist` (khamenei, 322.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur negation **!**: 0 vs 1; en-fa numbers **!**: [] vs [1]; ur-fa numbers **!**: [] vs [1]; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| The prayer is invalidated in the following cases:<br>1. When one of the conditions of prayer ceases to exist during prayer;<br>2. When wuḍū’ or ghusl is invalidated;<br>3. To turn away from the qiblah;<br>4. Talking;<br>5. Laughing;<br>6. Weeping;<br>7. When the form of the prayer is disrupted;<br>8. Eating and drinking;<br>9. Doubts which invalidate the prayer;<br>10. To repeat a foundational element or to neglect it;<br>11. Saying āmīn after chapter al-Fātiḥah;<br>12. Placing one hand on the other in a certain manner which is called takattuf. | مبطلات نماز درج ذیل ہیں :<br>1۔ ان شرائط میں سے کسی کا مفقود ہونا جن کی نماز میں رعایت کرنا ضروری ہے۔<br><br>2۔ وضو یا غسل کا باطل ہونا۔<br><br>3۔ قبلے سے رخ پھیرنا<br><br>4۔ بات کرنا<br><br>5۔ ہنسنا<br><br>6۔ رونا<br><br>7۔ نماز کی شکل باقی نہ رہنا<br><br>8۔ کھانا اور پینا<br><br>9۔ وہ شک جو نماز کو باطل کرتا ہے<br><br>10۔ ارکان نماز کو کم کرنا اور بڑھانا<br><br>11۔ الحمد کے بعد آمین کہنا<br><br>12۔ پیٹ پر ہاتھوں کو باندھنا (تکتف)<br>* ۔ شکیات نماز میں بیان کئے جائیں گے۔ | مبطلات نماز عبارتند از:<br><br>1. از بین رفتن یکی از شرایطی که باید در حال نماز رعایت شود؛<br><br>2. باطل شدن وضو یا غسل؛<br><br>3. رو گرداندن از قبله؛<br><br>4. حرف زدن؛<br><br>5. خندیدن؛<br><br>6. گریه کردن؛<br><br>7. به هم خوردن صورت نماز؛<br><br>8. خوردن و آشامیدن؛<br><br>9. شک هایی که نماز را باطل می کند؛ 1<br><br>10. کم و زیاد کردن ارکان نماز؛<br><br>11. آمین گفتن بعد از حمد؛<br><br>12. روی هم گذاشتن دست ها در جلوی بدن (تکتف). |
-
-### `obligatoryprayers` (khamenei, 1.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur negation **!**: 0 vs 1; en-fa numbers **!**: [] vs [1]; ur-fa numbers **!**: [] vs [1]; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| Obligatory prayers are as follows:<br>1. Daily prayers;<br>2. Prayer of ṭawāf which is said after obligatory tawāf around Ka‘bah;<br>3. Āyāt prayer which is performed due to natural phenomena such as a lunar/solar eclipse, earthquake, etc.<br>4. Mayyit prayer which is performed on the corpse of a deceased Muslim<br>5. Qaḍā’ prayers of one's father and, by obligatory caution, of the mother as well; to be performed by the eldest son.<br>6. The prayer which becomes obligatory due to nadhr (reciprocal vow), ‘ahd (covenant), qasam (oath), or through being hired to preform it. | واجب نمازیں درج ذیل ہیں؛<br>1۔ یومیہ نمازیں<br>2۔ نماز طواف جو خانہ کعبہ کے واجب طواف کے بعد ادا کی جاتی ہے۔<br>3۔ نماز آیات جو سورج گرہن، چاند گرہن، زلزلہ وغیرہ کے وقت ادا کی جاتی ہے۔<br>4۔ نماز میت جو دنیا سے رخصت ہونے والے مسلمان کے جنازے پر پڑھی جاتی ہے۔<br>5۔ باپ کی قضا نماز اور احتیاط واجب کی بناپر ماں کی قضا نماز جو بڑے بیٹے پر واجب ہے۔<br>6۔ وہ نماز جو عہد، نذر، قسم یا اجارہ کی وجہ سے واجب ہوتی ہے۔<br>* درحقیقت (ان مواقع پر) مستحب نماز واجب میں نہیں بدلتی بلکہ نذر، عہد، قسم اور اجارہ پر عمل کرنا واجب ہوتا ہے۔ | نمازهای واجب عبارت است از:<br><br>1. نمازهای یومیه؛<br><br>2. نماز طواف که پس از طواف واجب خانۀ کعبه خوانده می‌ شود؛<br><br>3. نماز آیات که هنگام خورشید گرفتگی، ماه گرفتگی، زلزله و مانند آنها خوانده می‌ شود؛<br><br>4. نماز میت که بر بدن مسلمانی که از دنیا رفته، خوانده می‌ شود؛<br><br>5. نماز قضای پدر و بنابر احتیاط واجب مادر که بر پسر بزرگ‌ واجب است؛<br><br>6. نمازی که به واسطه عهد، نذر، قسم و یا به واسطۀ اجاره، واجب (1) است خوانده شود. |
 
 ### `personsrejecting` (khamenei, Q 335)
 
@@ -529,7 +448,7 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 ### `quransajdah` (khamenei, 281.)
 
 *Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-ur numbers **!**: [15, 19, 32, 37, 4, 41, 53, 62, 96] vs [1, 15, 19, 2, 3, 37, 4, 4, 62]; en-fa numbers **!**: [15, 19, 32, 37, 4, 41, 53, 62, 96] vs [1, 4]; ur-fa numbers **!**: [1, 15, 19, 2, 3, 37, 4, 4, 62] vs [1, 4]
+*Differences:* en-ur numbers **!**: [15, 19, 32, 37, 4, 41, 53, 62, 96] vs [19, 4]; en-fa numbers **!**: [15, 19, 32, 37, 4, 41, 53, 62, 96] vs [4]; ur-fa numbers **!**: [19, 4] vs [4]
 
 | English | Urdu | Persian |
 |---|---|---|
@@ -543,15 +462,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 | English | Urdu |
 |---|---|
 | When a junub person performs a valid tayammum as a substitute for the ghusl of janābah and a wuḍū’ invalidator occurs later, then as long as the excuse of performing tayammum instead of ghusl is existing it is of obligatory caution for him to perform tayammum instead of ghusl for every act that requires being in a state of purity and then to do wuḍū’, as well,. If he is excused from wuḍū’, he is to perform another tayammum instead of wuḍū’. | جب مجنب شخص غسل جنابت کے بدلے صحیح تیمم کر لے اور اس تیمم کے بعد اگر اس سے حدث اصغر سرزد ہو جائے تو جب تک تیمم کو جائز قرا ردینے والا شرعی عذر باقی ہے بنابر احتیاط واجب جن اعمال میں طہارت شرط ہے ان کیلئے غسل کے بدلے تیمم کرے اور پھر وضو بھی کرے اور اگر وضو بھی نہ کرسکتاہو تو ایک دوسرا تیمم وضو کے بدلے کرے۔ |
-
-### `thirdfourthrakah` (khamenei, 184.)
-
-*Why:* The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically.  
-*Differences:* en-ur numbers **!**: [3, 4] vs [3]; en-fa numbers **!**: [3, 4] vs [3]
-
-| English | Urdu | Persian |
-|---|---|---|
-| It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once. However, according to mustaḥabb caution, it is said three times. Of course, instead of this dhikr, which is called the four tasbīḥ, one may recite chapter al-Fātiḥah. | نماز کی تیسری اور چوتھی رکعت میں ایک دفعہ سبحان الله والحمدلله ولا الله الاالله والله اکبر پڑھنا کافی ہے اگرچہ احتیاط مستحب یہ ہے کہ تین دفعہ پڑھا جائے البتہ اس ذکر (جس کو تسبیحات اربعہ کہتے ہیں) کے بجائے سورہ حمد بھی پڑھ سکتے ہیں۔ | در رکعت سوم و چهارم نمازها گفتن یک بار «سبحان الله و الحمدلله و لااله الاالله و الله اکبر» کافی است؛ هرچند احتیاط مستحب آن است که سه مرتبه گفته شود. البته می توان به جای این ذکر (که تسبیحات اربعه نامیده می شود)، سوره حمد خواند. |
 
 ### `wuduimmersive` (khamenei, Q 102)
 
@@ -589,114 +499,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 |---|---|---|
 | Āyāt prayer becomes obligatory for one of the following four reasons:<br>1. Solar eclipse, even if only a very small part of sun is not visible;<br>2. lunar eclipse, even if only a very small part of moon is not visible;<br>3. Earthquake;<br>4. Any abnormal event in the sky that causes fear to most of the people, such as black and red winds and lightning. | نماز آیات مندرجہ ذیل چار میں سے کسی ایک کے سبب واجب ہوتی ہے؛<br>1۔ کسوف (سورج گرہن) اگر چہ کچھ حصے کو ہی گرہن لگے۔<br>2۔ خسوف (چاند گرہن) اگرچہ کچھ حصے کو ہی گرہن لگے۔<br>3۔ زلزلہ<br>4۔ ہر غیر معمولی حادثہ جس کے باعث لوگوں کی اکثریت خوف میں مبتلا ہوجائے مثلاً سیاہ و سرخ آندھی اور بجلی کی کڑک۔ | نماز آیات با وجود یکی از چهار سبب زیر واجب می شود:<br><br>1. کسوف (خورشید گرفتگی) اگرچه مقدار کمی از آن گرفته باشد؛<br><br>2. خسوف (ماه گرفتگی) اگرچه مقدار کمی از آن گرفته باشد؛<br><br>3. زلزله؛<br><br>4. هر حادثه غیر عادی آسمانی که باعث ترس بیشتر مردم شود، مانند بادهای سیاه و سرخ و صاعقه. |
 
-### `clothingconditions` (khamenei, 56.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 4 vs 0; ur-fa negation **!**: 4 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| The clothes of a praying person should be:<br>1. pure;<br>2. permissible to use;<br>3. not a part of an animal of not-ritually slaughtered;<br>4. not a part of an animal of ḥarām meat;<br>5. for men, not to be golden;<br>6. for men, not to made from silk only. | نمازی کے لباس کی شرائط درج ذیل ہیں:<br>1۔ پاک ہو؛<br>2۔ مباح ہو؛<br>3۔ مردار کے اجزاء سے نہ بنا ہو؛<br>4۔ حرام گوشت حیوان کے اجزاء سے نہ بنا ہو؛<br>5۔ مرد کا لباس سونے کا نہ ہو؛<br>6۔ مرد کا لباس خالص ریشم کا نہ ہو؛ | لباس نمازگزار باید دارای شرایط زیر باشد:<br><br>1. پاک باشد؛<br><br>2. مباح باشد؛<br><br>3. از اجزای مردار نباشد؛<br><br>4. از اجزای حیوان حرام گوشت نباشد؛<br><br>5. لباس مرد از طلا نباشد؛<br><br>6. لباس مرد از ابریشم خالص نباشد. |
-
-### `dailyrakat` (khamenei, 3.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [17, 2, 3, 4, 4, 4] vs [2, 3, 4, 4, 4]; ur-fa numbers **!**: [17, 2, 3, 4, 4, 4] vs [2, 3, 4, 4, 4]
-
-| English | Urdu | Persian |
-|---|---|---|
-| The daily prayers consist of 17 rak‘ah which are made up of the following:<br>1. Fajr prayer (two rak‘ah)<br>2. Ẓuhr prayer (four rak‘ah)<br>3. ‘Aṣr prayer (four rak‘ah)<br>4. Maghrib prayer (three rak‘ah)<br>5. ‘ishā’ prayer (four rak‘ah) | یومیہ واجب نمازیں 17 رکعت ہیں جوکہ درج ذیل ہیں؛<br>نماز صبح (دو رکعت)<br>نماز ظہر (چار رکعت)<br>نماز عصر (چار رکعت)<br>نماز مغرب (تین رکعت)<br>نماز عشاء (چار رکعت) | نمازهای واجب شبانه‌روز هفده رکعت است که عبارت‌ اند از:<br><br>* نماز صبح (دو رکعت)<br><br>* نماز ظهر (چهار رکعت)<br><br>* نماز عصر (چهار رکعت)<br><br>* نماز مغرب (سه رکعت)<br><br>* نماز عشاء (چهار رکعت). |
-
-### `excessiveprayer` (khamenei, 382.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [] vs [1, 2]; ur-fa numbers **!**: [] vs [1, 2]
-
-| English | Urdu | Persian |
-|---|---|---|
-| The one, who doubts too much in a special prayer, like in loud prayers*, if he doubts in another prayer, such as in a whispering prayer**, he should act according to the rule of doubt.<br><br>* Jahr prayers, i.e. those in which chapter al-Fātiḥah and the second chapter are recited aloud.<br><br>** Ikhfāt prayers, i.e. those in which chapter al-Fātiḥah and the second chapter are recited whispering. | جو شخص کسی مخصوص نماز مثلاً جہریہ نمازوں میں زیادہ شک کرتا ہو اگر دوسری نماز مثلاً اخفاتی نماز میں شک کرے تو اس شک کے حکم پر عمل کرے۔ | کسی که در نماز مخصوصی؛ مانند نمازهای جهریّه 1 زیاد شک می کند، اگر در نماز دیگری مانند نماز اخفاتی 2 شک کند، باید به دستور شک رفتار کند. |
-
-### `followerahead` (khamenei, 717.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [1, 2, 3, 4] vs []; en-fa negation: 8 vs 2; ur-fa numbers **!**: [1, 2, 3, 4] vs []; ur-fa negation: 5 vs 2
-
-| English | Urdu | Persian |
-|---|---|---|
-| The followings terms should be observed in congregational prayer:<br>1- A ma‘mūm should not stand in front of the imam. Rather, it is an obligatory caution to stand a little behind.<br>2- The imam’s place should not be higher than that of ma‘mūms. Of course, a little difference, less than one handspan, is no problem.<br>3- There should not be a long gap between the imam and the ma‘mūm nor among different rows.<br>4- There should not be a barrier, like a wall or a curtain, between the imam and the ma‘mūm nor among the rows. However, putting a curtain or the like between the rows of men and women is no problem. | نماز جماعت میں مندرجہ ذیل شرائط کا خیال رکھنا ضروری ہے :<br>1 ۔ مقتدی امام سے آگے کھڑ انہ ہو اور احتیاط واجب یہ ہے کہ امام سے تھوڑا پیچھے کھڑا ہو۔<br>2 ۔ امام کی جگہ مقتدی کی جگہ سے بلند نہ ہو البتہ تھوڑی بلند ہونا (ایک بالشت سے کم) اشکال نہیں رکھتا۔<br>3 ۔ امام اور مقتدی اور اسی طرح صفوں کے درمیان زیادہ فاصلہ نہ ہو۔<br>4 ۔ امام اور مقتدی کے درمیان اور اسی طرح صفوں کے درمیان دیوار یا پردہ جیسی کوئی چیز حائل نہ ہو، البتہ مردوں اور عورتوں کی صف کے درمیان پردہ حائل ہونا کوئی اشکال نہیں رکھتا۔ | در نماز جماعت، شرایط زیر باید مراعات شود:<br><br>1. مأموم جلوتر از امام نایستد و احتیاط واجب آن است کمی عقب تر بایستد.<br><br>2. مکان امام از مکان مأمومین بالاتر نباشد، البته اختلاف کم (کمتر از یک وجب) اشکال ندارد.<br><br>3. فاصلة میان امام و مأموم، همچنین فاصله بین صف ها زیاد نباشد.<br><br>4. بین امام و مأموم، همچنین بین صف ها چیزی مانند دیوار یا پرده مانع نباشد ولی نصب پرده و مانند آن بین صف مردان و زنان اشکال ندارد. |
-
-### `fridayprayer` (khamenei, 762.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [] vs [1]; ur-fa numbers **!**: [] vs [1]
-
-| English | Urdu | Persian |
-|---|---|---|
-| The Friday prayer which replaces the ẓuhr prayer on Fridays is a takhyīrī (optionally incumbent) obligation* at the present time, i.e. during the occultation of Imam Mahdi (a). However, at a time when a just Islamic government is ruling in Iran, the mustaḥabb caution is not to miss it if possible.<br>* Takhyīrī obligation means that the person is allowed to offer either the Friday prayer or ẓuhr prayer. | موجودہ زمانے (زمانہ غیبت امام عجل اللہ فرجہ الشریف) میں نماز جمعہ پڑھنا کہ جو جمعے کے روز نماز ظہر کے جگہ پڑھی جاتی ہے، واجب تخییری ہے اور احتیاط مستحب یہ ہے کہ آج کے دور میں کہ جب ایران میں اسلامی عادل حکومت قائم ہے حتی الامکان نماز جمعہ کو ترک نہ کیا جائے۔<br>* ۔ واجب تخییری سے مراد یہ ہے کہ مکلف کو روز جمعہ کے ظہر کے وقت واجب فریضے کی ادائیگی میں نماز جمعہ یا نماز ظہر پڑھنے کے مابین اختیار حاصل ہے کہ کسی ایک کو واجب کی نیت سے پڑھے۔ | نماز جمعه که در روز جمعه به جای نماز ظهر خوانده می شود، در عصر حاضر (زمان غیبت امام عجل الله تعالی فرجه الشریف) واجب تخییری 1 است و احتیاط مستحب آن است که در این زمان که حکومت عدل اسلامی در ایران برقرار است حتی المقدور نماز جمعه ترک نشود. |
-
-### `impureunaware` (khamenei, 59.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| If a person does not know that his body or clothes are najis and realizes it after the prayer, his prayer is valid, but if he knew before the prayer that his body or clothes were najis, then forgot and performed the prayer with it, his prayer is invalid. | جو شخص نہیں جانتا کہ اس کا بدن یا لباس نجس ہے اور نماز کے بعد معلوم ہوجائے تو اس کی نماز صحیح ہے لیکن اگر پہلے سے اس کے نجس ہونے کا علم تھامگر بھول کر اس کے ساتھ نماز پڑھی ہو تو اس کی نماز باطل ہے۔ | اگر نداند که بدن یا لباسش نجس است و بعد از نماز بفهمد، نمازش صحیح است ولی اگر قبلاً نجاست آن را می دانسته و فراموش کرده و با آن نماز خوانده است، نمازش باطل است. |
-
-### `muwalat` (khamenei, 303.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 2 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| The praying person should perform the acts of the prayer successively, meaning that he should not leave a lengthy unusual gap between the acts of prayer, such as rukū‘, sajdah and tashahhud. Therefore, if a person leaves a lengthy break between the acts of prayer so that, according to an onlooker, it seems like he is not praying, the prayer is void. | نماز پڑھنےوالے کو چاہئے کہ نماز کے اجزاء مثلا ًرکوع، سجدہ اور تشہد وغیرہ کو پے در پے بجالائے اور ان کے درمیان طویل اور غیرمعمولی فاصلہ نہ ڈالے۔ اس عمل کو موالات کہتے ہیں۔ بنابرایں اگر نماز کے اجزاء کے درمیان اتنا فاصلہ ڈالے کہ دیکھنے والے کی نظر میں نماز کی حالت سے خارج ہوجائے تو نماز باطل ہے۔ | نمازگزار باید اجزای نماز، مانند رکوع، سجده، تشهد و غیر اینها را پیدرپی به جا آورد و بین آنها فاصله طولانی و غیر متعارف نیندازد، به این امر موالات گفته می شود. بنابراین اگر بین اجزای نماز به قدری فاصله شود که در نظر بیننده از حالت نماز خواندن خارج شود، نماز باطل است. |
-
-### `prayingearly` (khamenei, 16.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| It is mustaḥabb that one offers prayers at the beginning of their times as Islamic instructions advise it with emphasis. If a person cannot offer a prayer at the beginning of its time, then the closest to this time you offer, the better unless it is better to delay it for a reason, such as when a person wants to perform the prayer in congregation. | مستحب ہے کہ انسان نماز کو اول وقت میں پڑھے۔ اس کے بارے میں اسلامی دستورات میں تاکید کے ساتھ سفارش کی گئی ہے اور اگر اول وقت میں نہ پڑھ سکے تو اول وقت سے جتنا نزدیک پڑھ سکے بہتر ہے مگر یہ کہ تاخیر سے پڑھنا کسی لحاظ سے بہتر ہو مثلا جماعت کے ساتھ نماز پڑھنا چاہے۔ | مستحب است انسان نماز را در اول وقت بخواند، در دستورهای اسلامی در این مورد سفارش مؤکّدی شده است و اگر نتواند در اول وقت نماز بخواند، هرچه نزدیکتر به اول وقت باشد، بهتر است، مگر آنکه تأخیر نماز از جهتی بهتر باشد، مانند اینکه بخواهد آن را به جماعت بخواند. |
-
-### `qasrdistancestart` (khamenei, 411.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [] vs [1]; en-fa negation **!**: 1 vs 0; ur-fa numbers **!**: [] vs [1]; ur-fa negation **!**: 2 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| The criterion for calculating the shar‘ī distance is the distance between the end of the city of departure and the beginning of the city of destination*; whether the city is large or not.<br>* i.e. from the last houses in the city of departure till the first houses of the city of destination. | مسافت شرعی کو حساب کرنے کا معیار جس شہر سے سفر شروع کررہا ہے اس کے آخر سے لے کر جس شہر کی طرف سفر کررہا ہے اس کی ابتدا تک کا فاصلہ ہے اس میں کوئی فرق نہیں کہ شہر بڑا ہو یا نہ ہو۔<br>* ۔ یعنی جس شہر سے سفر شروع کررہا ہے اس کے آخری گھروں سے منزل مقصود والے شہر کے ابتدائی گھروں تک کا فاصلہ حساب کیا جائے گا۔ | ملاک محاسبه مسافت شرعی فاصله بین آخر شهر مبدأ و ابتدای شهر مقصد است؛ 1 خواه شهر جزو بلاد کبیره باشد خواه نباشد. |
-
-### `qasrignorance` (khamenei, 604.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa numbers **!**: [] vs [1]; en-fa negation: 4 vs 2; ur-fa numbers **!**: [] vs [1]
-
-| English | Urdu | Persian |
-|---|---|---|
-| A traveler who does not know that the prayer is short while traveling, and performs complete prayer contrary to his duty while he is qāṣir* ignorant, then after understanding the ruling, he does not need to repeat the prayer.<br>* It means that he does not know the ruling nor aware of his ignorance. | جو مسافر نہ جانتا ہو کہ سفر میں نماز قصر ہوتی ہے اور اپنے وظیفے کے برعکس نماز کو پوری پڑھتا ہو چنانچہ جاہل قاصر ہو تو حکم کو جاننے کے بعد نماز کو دوبارہ یا قضا کرنا لازمی نہیں ہے۔ | مسافری که نمی داند نماز در سفر قصر است و بر خلاف وظیفه اش نماز را تمام می خواند، در صورتی که جاهل قاصر باشد 1 ، پس از فهمیدن حکم، لازم نیست نماز را اعاده یا قضا کند. |
-
-### `qasrjob` (khamenei, 478.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| One of the conditions for shortening the prayer while traveling is that the trip is not for work, so if the trip is for work, whether travel constitute the work, such as driving or piloting, or whether traveling is a preliminary to the job, such as the travel of a doctor or a teacher who travels for his job, prayer is complete during that trip and fasting is correct. | سفر میں نماز قصر ہونے کی شرائط میں سے ایک یہ ہے کہ سفر اس کا پیشہ نہ ہو ، بنابرایں اگر کسی شخص کا پیشہ سفر ہو چاہے اس کے پیشے کا وجود سفر سےہو (یعنی سفر اس کی درآمد کا ذریعہ ہو) مثلاً ڈرائیور اور پائلٹ یا سفر اس کے پیشے کا مقدمہ(ضروری تمہید) ہو مثلاً ڈاکٹر یا معلم جو اپنے پیشے کے لئے سفر کرتے ہیں، اس سفر میں نماز پوری ہوگی اور روزہ صحیح ہے۔ | از شرایط قصر نماز در سفر آن است که سفر شغل نباشد، بنابراین اگر سفر شغل باشد؛ خواه قوام شغل به سفر کردن باشد، مانند رانندگی یا خلبانی و خواه سفر کردن مقدمة شغل باشد، مانند سفر پزشک یا معلمی که برای شغلش سفر می کند، نماز در آن سفر تمام و روزه صحیح است. |
-
-### `sajdahheight` (khamenei, 258.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| The place where a person puts his forehead for sajdah should not be more than four joined fingers lower or higher than the place where he places his knees and the tips of his toes. | سجدے کی حالت میں پیشانی کی جگہ گھٹنوں اور پاوں کی انگلیوں کی جگہ سے چار ملی ہوئی انگلیوں کی مقدار سے نیچی یا بلند نہیں ہونا چاہئے۔ | در حال سجده باید جای پیشانی از جای زانوها و سرانگشتان پا، بالاتر یا پایین تر از چهار انگشت بسته نباشد. |
-
 ### `tashahhudforgot` (khamenei, 292.)
 
 *Why:* Neither the English nor the Urdu matches the Persian.  
@@ -714,15 +516,6 @@ Rows the automatic triage could not decide (decision B1). **English/Urdu rows fi
 | English | Urdu | Persian |
 |---|---|---|
 | If a person intentionally turns his face or his body from the qiblah so that he can see the right or left easily, his prayer is invalidated. If a person does so unintentionally, by obligatory caution, his prayer becomes invalidated. However, if a person turns his face a little to each side, his prayer is not invalidated. | اگر جان بوجھ کر قبلے سے اس حد تک اپنا بدن یا رخ پھیرے کہ دائیں اور بائیں طرف آسانی سے دیکھ سکتا ہو تو نماز باطل ہے اور اگر بھول کربھی ایسا کرے تو احتیاط واجب کی بناپر نماز باطل ہے لیکن اگر چہرے کو ایک طرف تھوڑا پھیرے تو نماز باطل نہیں ہے۔ | اگر عمداً صورت یا بدن خود را از قبله برگرداند، به طوری که بتواند سمت راست و چپ خود را به آسانی ببیند، نمازش باطل است و اگر سهواً هم این کار را بکند، بنابر احتیاط واجب نماز باطل است ولی اگر اندکی صورت را به یکی از دو طرف برگرداند، نمازش باطل نمی شود. |
-
-### `usurpedclothing` (khamenei, 78.)
-
-*Why:* Neither the English nor the Urdu matches the Persian.  
-*Differences:* en-fa negation **!**: 1 vs 0; ur-fa negation **!**: 1 vs 0
-
-| English | Urdu | Persian |
-|---|---|---|
-| The clothes of the praying person should be permissible (they should not be usurped). | نماز پڑھنے والے کا لباس مباح ہو یعنی غصبی نہ ہو۔ | لباس نمازگزار باید مباح باشد؛ یعنی غصبی نباشد. |
 
 ### `zuhrasrtime` (khamenei, 8.)
 

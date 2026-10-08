@@ -6,6 +6,13 @@ assertNoUnreviewedHelpersInProduction(process.env);
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  experimental: {
+    // A tab opened before a deploy still points at the old hashed chunks. With "automatic", a failed
+    // route-chunk load while navigating reloads the page once (Nuxt's chunk-reload plugin, with its
+    // own loop guard) instead of leaving an error. Nuxt 4's default is already "automatic"; it is set
+    // explicitly so the behaviour is deliberate and tested (tests/wajibatBuildGuard.test.ts).
+    emitRouteChunkError: "automatic",
+  },
   app: {
     head: {
       title: "Quran App",

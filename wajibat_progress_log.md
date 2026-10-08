@@ -1117,3 +1117,47 @@ See `wajibat_release_notes.md` and the plan given to the user. **Not merged**, a
 - **One transient browser error seen once:** "Failed to fetch dynamically imported module" on one page load during the regression run (the chunk was present and served 200 afterwards; a rerun was clean). Logged with the transient `npm test` failure; investigate if it recurs.
 - Install size from `npm run size`: **5,445.42 KiB raw (2,734.53 KiB gzip)**, 240 precache files; ruling chunk 1,190.17 KiB (228.96 KiB gzip), down from 1,278.05 KiB because of the hidden texts.
 - **Unit tests: 492 pass** (483 before: 5 triage/hold tests and 4 build-guard tests are new).
+
+## Pre-merge blocker: held English in steps and helper answers; extractor; chunk reload (2026-10-08)
+
+Decisions C1–C4 are in `wajibat_decisions.md`.
+
+### C1. The 16 `needs-human` rows (8 rulings)
+The 16 rows were **8 rulings** (two rows each, English/Persian and English/Urdu), all Khamenei's, where the Urdu matches the Persian and the English does not, and the English was quoted by something:
+
+| | Rulings |
+|---|---|
+| **Helper answers (7)** | `doubtprayeritself`, `doubtimam`, `doubtsdismissedlist`, `doubtrepeated`, `doubtaftersalaminvalid`, `doubtsupposition`, `excessiveact` (9 answer screens in Khamenei's doubts helper) |
+| **Guided-prayer steps (1 ruling, 3 steps)** | `thirdfourthrakah` (the third and fourth rakʿah dhikr) in Khamenei's maghrib (step 19) and ẓuhr (steps 19 and 26) prayers |
+
+In all eight the Urdu matches the Persian, so none needed the "refer to his risala" pointer.
+- **Helper answers** now quote the official Urdu of those rulings (verbatim cuts, with Urdu answer phrases highlighted). The helper shows a notice that the English is held for a person's check and the Urdu is shown meanwhile.
+- **Guided-prayer steps** carry a verbatim Urdu excerpt of the same ruling, which the step shows (English and Urdu mode alike) with the same notice and its citation.
+- **Wording:** I did not use the P19 label "no official English translation", because an official English text exists; the notice says the English is held until a person has checked it. The pattern is the P19 one.
+- **Safety:** a hold on English that a step or helper answer quotes now fails the build unless an Urdu counterpart is registered (`holds.py`: `HELD_EN_STEP_CUTS`, `HELD_EN_TREE_URDU`); the helper generator refuses to quote withheld English, and the validator requires an Urdu excerpt on any step whose English is withheld.
+- **Tests:** a step on held English carries a verbatim Urdu excerpt; helper answers on the eight rulings quote Urdu; browser: `verify10` (guided prayers, English and Urdu mode at 1280, 768, 390 px) 15/15; the helper suite (90/90) and the earlier suites pass.
+
+### C2. The 52 "match neither" rows were mostly extraction, not errors
+Causes found, all on the comparison side (the rulings were not wrong):
+- **Persian footnote markers read as numbers**: "(1)" and bare "1" after a word ("واجب 1 است", "جهریّه 1 زیاد").
+- **List markers not stripped**: English "1- ", Urdu inline "1۔ نیت؛ 2۔ قیام".
+- **Persian negations not recognised**: verb forms such as نباشد, نداند, نتواند.
+- **Number words missing**: Persian هفده, Urdu سترہ, English eighteen/seventeen.
+
+After fixing the extractor (shared word tables; the TypeScript twin follows; parity test passes): **"match neither" 52 rows → 20 rows**; `needs-human` 118 → **70 rows (58 items)**: 50 with no Persian to compare, 20 where neither version matches. The remaining 20 look like real differences or translation style (for example English "either side" against Persian "دو طرف"); they stay for a person.
+
+**Display decisions that changed because of the extractor fix** (compared with the committed triage; nothing else changed without a recorded reason):
+- **English restored (2):** `elevencomponents` and `rukns` (Khamenei): their English had been hidden because the Persian list numbers were misread; both versions now match the Persian, so no hold.
+- **Held version flipped (1):** `goldjewellerymen` (Khamenei): the English was shown and the Urdu hidden; now the Urdu matches the Persian and the English does not (a negation), so the **English is held and the Urdu shown**.
+- **New holds from the corrected comparison (4):** `followerahead`, `mubtilatlist`, `obligatoryprayers` (Khamenei, Urdu hidden: the Persian decides; they were `needs-human`), and `adhanwording` (**Sistani**, Urdu hidden: the Urdu lacks the iqamah count that the English 4th edition has, which is a real difference).
+- **Plus the 8 rulings of C1** (English held, Urdu shown).
+
+Totals now: **Sistani Urdu hidden 146 rulings (240 Sistani Urdu texts remain); Khamenei Urdu hidden 9, English held 29**; hold rulings 184 (was 174).
+
+### C3. Chunk-load errors
+`emitRouteChunkError: "automatic"` is now set explicitly in `nuxt.config.ts` (Nuxt 4.2.2). A failed route-chunk load during navigation after a deploy reloads the page instead of showing an error. (Nuxt 4's default is already "automatic"; it is explicit so the behaviour is deliberate, and a test checks it.) It covers navigation errors; a chunk that fails during the very first page load of an old tab is not a route-navigation error, and "automatic-immediate" would be the setting that reloads on those too (not enabled; ask if you want it).
+
+### C4. Checks
+- Unit tests **495 pass** (492 before). Lint clean on the files touched.
+- Browser (production build): helper suite **90/90**, flag-off 9/9, held-English guided prayers **15/15** (3 widths, English and Urdu mode), regressions Taharat 37/37, Salat 35/35, offline/install 22/22, Phase 4a 34/34, P18 30/30.
+- Install size (`npm run size`): **5,447.11 KiB raw (2,734.49 KiB gzip)**; ruling chunk 1,190.62 KiB (228.7 KiB gzip).

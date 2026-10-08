@@ -106,13 +106,9 @@ How to review: for each path, read the questions and the answers chosen, then re
 
 **Outcome:**
 
-> However, if before the end of prayer’s time, he doubts whether he has performed the prayer or not, **he should pray**. Rather, if one thinks (i.e. more than fifty percent) that he has performed it, **he should pray**.
+> لیکن اگر وقت ختم ہونے سے پہلے شک کرے کہ نماز پڑھی ہے یا نہیں تو **ضروری ہے نماز پڑھے** بلکہ نماز پڑھنے کا گمان ہوجائے تو بھی پڑھے۔
 >
-> *Citation (doubtprayeritself):* The Rules on Prayer & Fasting 2023, 347. · https://www.leader.ir/en/book/241?sn=32527
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگر وقت گزرنے کے بعد شک کرے کہ نماز پڑھی ہے یا نہیں یا گمان کرے کہ نہیں پڑھی ہے تو نماز پڑھنا لازم نہیں لیکن اگر وقت ختم ہونے سے پہلے شک کرے کہ نماز پڑھی ہے یا نہیں تو ضروری ہے نماز پڑھے بلکہ نماز پڑھنے کا گمان ہوجائے تو بھی پڑھے۔
+> *Citation (doubtprayeritself):* The Rules on Prayer & Fasting 2023, 347. (Urdu: نماز اور روزه کی احکام, مسئلہ 348) · https://www.leader.ir/en/book/241?sn=32527
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -130,13 +126,9 @@ How to review: for each path, read the questions and the answers chosen, then re
 
 **Outcome:**
 
-> If, after the prayer’s time, one doubts whether he has performed it or not, or thinks (more than fifty percent) that he has not performed, **it is not necessary to perform it**.
+> اگر وقت گزرنے کے بعد شک کرے کہ نماز پڑھی ہے یا نہیں یا گمان کرے کہ نہیں پڑھی ہے تو **نماز پڑھنا لازم نہیں**
 >
-> *Citation (doubtprayeritself):* The Rules on Prayer & Fasting 2023, 347. · https://www.leader.ir/en/book/241?sn=32527
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگر وقت گزرنے کے بعد شک کرے کہ نماز پڑھی ہے یا نہیں یا گمان کرے کہ نہیں پڑھی ہے تو نماز پڑھنا لازم نہیں لیکن اگر وقت ختم ہونے سے پہلے شک کرے کہ نماز پڑھی ہے یا نہیں تو ضروری ہے نماز پڑھے بلکہ نماز پڑھنے کا گمان ہوجائے تو بھی پڑھے۔
+> *Citation (doubtprayeritself):* The Rules on Prayer & Fasting 2023, 347. (Urdu: نماز اور روزه کی احکام, مسئلہ 348) · https://www.leader.ir/en/book/241?sn=32527
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -154,23 +146,13 @@ How to review: for each path, read the questions and the answers chosen, then re
 
 **Outcome:**
 
-> Doubts which are invalid and should be ignored are as follows:
->
-> *Citation (doubtsdismissedlist):* The Rules on Prayer & Fasting 2023, 373. · https://www.leader.ir/en/book/241?sn=32533
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
 > وہ شکوک جن کی پروا نہیں کرنی چاہئے، مندرجہ ذیل ہیں:
-> 1۔ اس چیز کے بارے میں شک کہ جس کا موقع گزر گیا ہو؛
-> 2۔ سلام کے بعد شک؛
-> 3۔ نماز کا وقت گزرجانے کے بعد شک؛
-> 4۔ امام اور ماموم کا شک؛
-> 5۔ کثیر الشک کا شک؛
-> 6۔ مستحب نمازوں میں شک؛
 >
-> 3. **Doubt after the time of prayer has already passed.**
+> *Citation (doubtsdismissedlist):* The Rules on Prayer & Fasting 2023, 373. (Urdu: نماز اور روزه کی احکام, مسئلہ 374) · https://www.leader.ir/en/book/241?sn=32533
 >
-> *Citation (doubtsdismissedlist):* The Rules on Prayer & Fasting 2023, 373. · https://www.leader.ir/en/book/241?sn=32533
+> 3۔ **نماز کا وقت گزرجانے کے بعد شک**؛
+>
+> *Citation (doubtsdismissedlist):* The Rules on Prayer & Fasting 2023, 373. (Urdu: نماز اور روزه کی احکام, مسئلہ 374) · https://www.leader.ir/en/book/241?sn=32533
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -594,13 +576,9 @@ Related rulings linked: doubtremembermissing
 
 **Outcome:**
 
-> If one doubts about one of the parts of the prayer before starting the next part and performs it, then it turns out that he has performed it twice, if that part is not a rukn of prayer, **his prayer is not void**.
+> اگر نماز کے کسی جزء میں شک کرے جبکہ بعد کے جزء میں داخل نہ ہوا ہو اور اس کو انجام دے تاہم بعد میں یاد آئے کہ اس جزء کو دوبار انجام دیا ہے چنانچہ وہ جزء ارکان نماز میں سے نہ ہو تو **نماز باطل نہیں ہے**۔
 >
-> *Citation (doubtrepeated):* The Rules on Prayer & Fasting 2023, 358. · https://www.leader.ir/en/book/241?sn=32528
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگر نماز کے کسی جزء میں شک کرے جبکہ بعد کے جزء میں داخل نہ ہوا ہو اور اس کو انجام دے تاہم بعد میں یاد آئے کہ اس جزء کو دوبار انجام دیا ہے چنانچہ وہ جزء ارکان نماز میں سے نہ ہو تو نماز باطل نہیں ہے۔
+> *Citation (doubtrepeated):* The Rules on Prayer & Fasting 2023, 358. (Urdu: نماز اور روزه کی احکام, مسئلہ 359) · https://www.leader.ir/en/book/241?sn=32528
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -746,13 +724,9 @@ Related rulings linked: doubtinvalidthink
 >
 > اگر نماز کی رکعتوں کی تعداد میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار تو پہلے تھوڑی دیر غور کرنا چاہئےاگر کسی طرف یقین یا گمان ہوجائے تو اسی کے مطابق نماز کو جاری رکھے اور نماز صحیح ہے اور اگر کسی طرف یقین یا گمان نہ ہو تو ان احکام کے مطابق عمل کرے جو بعد میں بیان کئے جائیں گے۔
 >
-> The probability of more than fifty percent regarding number of rak‘ah in a prayer is just like the `certainty`. For example, when one doubts as to whether they have finished three or four rak‘ah, in case that the probability of one of the choices seems more, one should act accordingly and the prayer is alright.
->
-> *Citation (doubtsupposition):* The Rules on Prayer & Fasting 2023, 368. · https://www.leader.ir/en/book/241?sn=32531
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
 > نماز کی رکعتوں کے بارے میں گمان کا حکم یقین کی طرح ہے یعنی جب تین یا چار رکعت پڑھنے میں شک ہوجائے اور کسی ایک طرف زیادہ گمان ہوجائے تو اسی کے مطابق عمل کرے اور نماز صحیح ہے۔
+>
+> *Citation (doubtsupposition):* The Rules on Prayer & Fasting 2023, 368. (Urdu: نماز اور روزه کی احکام, مسئلہ 369) · https://www.leader.ir/en/book/241?sn=32531
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -2107,13 +2081,9 @@ Related rulings linked: doubtinvalidthink
 
 **Outcome:**
 
-> The prayer is invalid if one doubts about the number of rak‘ah of his prayer after salām of the prayer but both sides of the doubt cause the prayer to be invalid. For example, if, after salām of a four-rak‘ah prayer, he doubts whether he prayed three rak‘ah or five rak‘ah, **the prayer is invalid**.
+> اگر نماز کے سلام کے بعد رکعتوں کی تعداد کے بارے میں شک کرے لیکن شک کی دو نوں طرف نماز باطل ہوتی ہو مثلاً چار رکعتی نماز کے سلام کے بعد شک کرے کہ تین رکعتیں پڑھی ہیں یا پانچ **تو نماز باطل ہے**۔
 >
-> *Citation (doubtaftersalaminvalid):* The Rules on Prayer & Fasting 2023, 376. · https://www.leader.ir/en/book/241?sn=32535
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگر نماز کے سلام کے بعد رکعتوں کی تعداد کے بارے میں شک کرے لیکن شک کی دو نوں طرف نماز باطل ہوتی ہو مثلاً چار رکعتی نماز کے سلام کے بعد شک کرے کہ تین رکعتیں پڑھی ہیں یا پانچ تو نماز باطل ہے۔
+> *Citation (doubtaftersalaminvalid):* The Rules on Prayer & Fasting 2023, 376. (Urdu: نماز اور روزه کی احکام, مسئلہ 377) · https://www.leader.ir/en/book/241?sn=32535
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -2157,14 +2127,9 @@ Related rulings linked: doubtinvalidthink
 >
 > جو شخص معمولاً ایک نماز میں تین مرتبہ شک کرتا ہو یا معمولاً مسلسل تین نمازوں میں کم از کم ایک مرتبہ شک کرتا ہو، اگر زیادہ شک کرنے کہ وجہ ڈر یا غصہ یا پریشانی کا باعث بننے والا کوئی سانحہ نہ ہو تو ایسا شخص کثیر الشک ہے اور اپنے شک کی پروا نہ کرے۔
 >
-> 'A person who doubts too much' **must assume the occurrence of the act about which he doubts** if performing it does not invalidate his prayer. For example, if a person doubts whether he has performed sajdah or not, he should assume that he has performed it.
-> If doing it invalidates prayer, he must assume that he has not performed it, like if he doubts whether he has performed one rukū‘ or two, he should posit that he has performed one rukū‘ because making two rukū‘ invalidates prayer.
+> اگر کثیر الشک کسی عمل کے بجالانے کے بارے میں شک کرے چنانچہ اس عمل کو انجام دینے سے نماز باطل نہ ہوتی ہو تو **یوں سمجھنا چاہئے کہ اسے انجام دیا ہے** مثلاً شک کرے کہ سجدہ بجالایا ہے یا نہیں تو سمجھے کہ سجدہ بجالاچکا ہے اور اگر اس کو انجام دینے سے نماز باطل ہوتی ہو تو سمجھے کہ وہ کام انجام نہیں دیا ہے مثلاً شک کرے کہ ایک رکوع کیا ہے یا زیادہ تو چونکہ رکوع زیادہ ہونے سے نماز باطل ہوتی جاتی ہے لہذا یوں سمجھے کہ ایک رکوع کیا ہے۔
 >
-> *Citation (excessiveact):* The Rules on Prayer & Fasting 2023, 380. · https://www.leader.ir/en/book/241?sn=32538
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگر کثیر الشک کسی عمل کے بجالانے کے بارے میں شک کرے چنانچہ اس عمل کو انجام دینے سے نماز باطل نہ ہوتی ہو تو یوں سمجھنا چاہئے کہ اسے انجام دیا ہے مثلاً شک کرے کہ سجدہ بجالایا ہے یا نہیں تو سمجھے کہ سجدہ بجالاچکا ہے اور اگر اس کو انجام دینے سے نماز باطل ہوتی ہو تو سمجھے کہ وہ کام انجام نہیں دیا ہے مثلاً شک کرے کہ ایک رکوع کیا ہے یا زیادہ تو چونکہ رکوع زیادہ ہونے سے نماز باطل ہوتی جاتی ہے لہذا یوں سمجھے کہ ایک رکوع کیا ہے۔
+> *Citation (excessiveact):* The Rules on Prayer & Fasting 2023, 380. (Urdu: نماز اور روزه کی احکام, مسئلہ 381) · https://www.leader.ir/en/book/241?sn=32538
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -2269,13 +2234,9 @@ Related rulings linked: doubtinvalidthink
 
 **Outcome:**
 
-> If an imam of congregation doubts the number of rak‘ah; for example, if he doubts whether he prayed three rak‘ah or four rak‘ah, if the ma‘mūm is sure or thinks that more probably he prayed four rak‘ah and informs the imam that he has prayed four rak‘ah, the imam must finish the prayer and **it is not necessary to perform the caution prayer**.
+> اگر امام جماعت رکعتوں کی تعداد کے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار، چنانچہ ماموم کو یقین یا گمان ہو کہ چار رکعتیں پڑھی ہیں اور یہ بات امام کے علم میں لائے کہ چار رکعتیں پڑھی ہیں تو امام کو چاہئے نماز کو تمام کرے اور **نماز احتیاط پڑھنا لازم نہیں ہے**۔
 >
-> *Citation (doubtimam):* The Rules on Prayer & Fasting 2023, 378. · https://www.leader.ir/en/book/241?sn=32537
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگر امام جماعت رکعتوں کی تعداد کے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار، چنانچہ ماموم کو یقین یا گمان ہو کہ چار رکعتیں پڑھی ہیں اور یہ بات امام کے علم میں لائے کہ چار رکعتیں پڑھی ہیں تو امام کو چاہئے نماز کو تمام کرے اور نماز احتیاط پڑھنا لازم نہیں ہے۔ اسی طرح اگر امام کو رکعتوں کی تعداد کے بارے میں یقین یا گمان ہو اور ماموم کو رکعتوں کی تعداد کے بارے میں شک ہوجائے تو اپنے شک کی پروا نہ کرے۔
+> *Citation (doubtimam):* The Rules on Prayer & Fasting 2023, 378. (Urdu: نماز اور روزه کی احکام, مسئلہ 379) · https://www.leader.ir/en/book/241?sn=32537
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________
@@ -2293,13 +2254,9 @@ Related rulings linked: doubtinvalidthink
 
 **Outcome:**
 
-> Also, if the imam is certain or thinks that more than fifty percent he has prayed a certain number of rak‘ah and the ma‘mūm doubts about the number of rak‘ah of the prayer, **he should not pay attention to his doubt**.
+> اسی طرح اگر امام کو رکعتوں کی تعداد کے بارے میں یقین یا گمان ہو اور ماموم کو رکعتوں کی تعداد کے بارے میں شک ہوجائے تو **اپنے شک کی پروا نہ کرے**۔
 >
-> *Citation (doubtimam):* The Rules on Prayer & Fasting 2023, 378. · https://www.leader.ir/en/book/241?sn=32537
->
-> *Official Urdu of the same ruling (for the Urdu reader; the helper shows the English quote):*
->
-> اگر امام جماعت رکعتوں کی تعداد کے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار، چنانچہ ماموم کو یقین یا گمان ہو کہ چار رکعتیں پڑھی ہیں اور یہ بات امام کے علم میں لائے کہ چار رکعتیں پڑھی ہیں تو امام کو چاہئے نماز کو تمام کرے اور نماز احتیاط پڑھنا لازم نہیں ہے۔ اسی طرح اگر امام کو رکعتوں کی تعداد کے بارے میں یقین یا گمان ہو اور ماموم کو رکعتوں کی تعداد کے بارے میں شک ہوجائے تو اپنے شک کی پروا نہ کرے۔
+> *Citation (doubtimam):* The Rules on Prayer & Fasting 2023, 378. (Urdu: نماز اور روزه کی احکام, مسئلہ 379) · https://www.leader.ir/en/book/241?sn=32537
 >
 
 ☐ OK   ☐ Changes needed   Notes: ______________________________________________

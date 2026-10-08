@@ -99,7 +99,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 348",
           url: "https://www.leader.ir/fa/book/180/1?sn=30806"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -349,7 +350,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 369",
           url: "https://www.leader.ir/fa/book/180/1?sn=30810"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -778,7 +780,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 374",
           url: "https://www.leader.ir/fa/book/180/1?sn=30812"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -1309,7 +1312,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 359",
           url: "https://www.leader.ir/fa/book/180/1?sn=30807"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     seeAlso: [
@@ -1503,7 +1507,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 377",
           url: "https://www.leader.ir/fa/book/180/1?sn=30814"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     seeAlso: [
@@ -1694,7 +1699,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 381",
           url: "https://www.leader.ir/fa/book/180/1?sn=30817"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -2018,7 +2024,8 @@ export const DOUBTS_RULINGS: Ruling[] = [
           reference: "مسأله 379",
           url: "https://www.leader.ir/fa/book/180/1?sn=30816"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },

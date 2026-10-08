@@ -2338,12 +2338,12 @@ export const DECISION_TREES: DecisionTree[] = [
           quotes: [
             {
               rulingId: "doubtprayeritself",
-              text: "However, if before the end of prayer’s time, he doubts whether he has performed the prayer or not, he should pray. Rather, if one thinks (i.e. more than fifty percent) that he has performed it, he should pray.",
-              lang: "en"
+              text: "لیکن اگر وقت ختم ہونے سے پہلے شک کرے کہ نماز پڑھی ہے یا نہیں تو ضروری ہے نماز پڑھے بلکہ نماز پڑھنے کا گمان ہوجائے تو بھی پڑھے۔",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "he should pray"
+            "ضروری ہے نماز پڑھے"
           ]
         }
       },
@@ -2354,12 +2354,12 @@ export const DECISION_TREES: DecisionTree[] = [
           quotes: [
             {
               rulingId: "doubtprayeritself",
-              text: "If, after the prayer’s time, one doubts whether he has performed it or not, or thinks (more than fifty percent) that he has not performed, it is not necessary to perform it.",
-              lang: "en"
+              text: "اگر وقت گزرنے کے بعد شک کرے کہ نماز پڑھی ہے یا نہیں یا گمان کرے کہ نہیں پڑھی ہے تو نماز پڑھنا لازم نہیں",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "it is not necessary to perform it"
+            "نماز پڑھنا لازم نہیں"
           ]
         }
       },
@@ -2370,17 +2370,17 @@ export const DECISION_TREES: DecisionTree[] = [
           quotes: [
             {
               rulingId: "doubtsdismissedlist",
-              text: "Doubts which are invalid and should be ignored are as follows:",
-              lang: "en"
+              text: "وہ شکوک جن کی پروا نہیں کرنی چاہئے، مندرجہ ذیل ہیں:",
+              lang: "ur"
             },
             {
               rulingId: "doubtsdismissedlist",
-              text: "3. Doubt after the time of prayer has already passed.",
-              lang: "en"
+              text: "3۔ نماز کا وقت گزرجانے کے بعد شک؛",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "Doubt after the time of prayer has already passed."
+            "نماز کا وقت گزرجانے کے بعد شک"
           ]
         }
       },
@@ -2881,12 +2881,12 @@ export const DECISION_TREES: DecisionTree[] = [
           quotes: [
             {
               rulingId: "doubtrepeated",
-              text: "If one doubts about one of the parts of the prayer before starting the next part and performs it, then it turns out that he has performed it twice, if that part is not a rukn of prayer, his prayer is not void.",
-              lang: "en"
+              text: "اگر نماز کے کسی جزء میں شک کرے جبکہ بعد کے جزء میں داخل نہ ہوا ہو اور اس کو انجام دے تاہم بعد میں یاد آئے کہ اس جزء کو دوبار انجام دیا ہے چنانچہ وہ جزء ارکان نماز میں سے نہ ہو تو نماز باطل نہیں ہے۔",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "his prayer is not void"
+            "نماز باطل نہیں ہے"
           ]
         }
       },
@@ -3021,12 +3021,12 @@ export const DECISION_TREES: DecisionTree[] = [
           quotes: [
             {
               rulingId: "doubtaftersalaminvalid",
-              text: "The prayer is invalid if one doubts about the number of rak‘ah of his prayer after salām of the prayer but both sides of the doubt cause the prayer to be invalid. For example, if, after salām of a four-rak‘ah prayer, he doubts whether he prayed three rak‘ah or five rak‘ah, the prayer is invalid.",
-              lang: "en"
+              text: "اگر نماز کے سلام کے بعد رکعتوں کی تعداد کے بارے میں شک کرے لیکن شک کی دو نوں طرف نماز باطل ہوتی ہو مثلاً چار رکعتی نماز کے سلام کے بعد شک کرے کہ تین رکعتیں پڑھی ہیں یا پانچ تو نماز باطل ہے۔",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "the prayer is invalid"
+            "تو نماز باطل ہے"
           ]
         }
       },
@@ -3101,12 +3101,12 @@ export const DECISION_TREES: DecisionTree[] = [
             },
             {
               rulingId: "excessiveact",
-              text: "'A person who doubts too much' must assume the occurrence of the act about which he doubts if performing it does not invalidate his prayer. For example, if a person doubts whether he has performed sajdah or not, he should assume that he has performed it.\nIf doing it invalidates prayer, he must assume that he has not performed it, like if he doubts whether he has performed one rukū‘ or two, he should posit that he has performed one rukū‘ because making two rukū‘ invalidates prayer.",
-              lang: "en"
+              text: "اگر کثیر الشک کسی عمل کے بجالانے کے بارے میں شک کرے چنانچہ اس عمل کو انجام دینے سے نماز باطل نہ ہوتی ہو تو یوں سمجھنا چاہئے کہ اسے انجام دیا ہے مثلاً شک کرے کہ سجدہ بجالایا ہے یا نہیں تو سمجھے کہ سجدہ بجالاچکا ہے اور اگر اس کو انجام دینے سے نماز باطل ہوتی ہو تو سمجھے کہ وہ کام انجام نہیں دیا ہے مثلاً شک کرے کہ ایک رکوع کیا ہے یا زیادہ تو چونکہ رکوع زیادہ ہونے سے نماز باطل ہوتی جاتی ہے لہذا یوں سمجھے کہ ایک رکوع کیا ہے۔",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "must assume the occurrence of the act about which he doubts"
+            "یوں سمجھنا چاہئے کہ اسے انجام دیا ہے"
           ]
         }
       },
@@ -3197,12 +3197,12 @@ export const DECISION_TREES: DecisionTree[] = [
           quotes: [
             {
               rulingId: "doubtimam",
-              text: "If an imam of congregation doubts the number of rak‘ah; for example, if he doubts whether he prayed three rak‘ah or four rak‘ah, if the ma‘mūm is sure or thinks that more probably he prayed four rak‘ah and informs the imam that he has prayed four rak‘ah, the imam must finish the prayer and it is not necessary to perform the caution prayer.",
-              lang: "en"
+              text: "اگر امام جماعت رکعتوں کی تعداد کے بارے میں شک کرے مثلاً شک کرے کہ تین رکعتیں پڑھی ہیں یا چار، چنانچہ ماموم کو یقین یا گمان ہو کہ چار رکعتیں پڑھی ہیں اور یہ بات امام کے علم میں لائے کہ چار رکعتیں پڑھی ہیں تو امام کو چاہئے نماز کو تمام کرے اور نماز احتیاط پڑھنا لازم نہیں ہے۔",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "it is not necessary to perform the caution prayer"
+            "نماز احتیاط پڑھنا لازم نہیں ہے"
           ]
         }
       },
@@ -3213,12 +3213,12 @@ export const DECISION_TREES: DecisionTree[] = [
           quotes: [
             {
               rulingId: "doubtimam",
-              text: "Also, if the imam is certain or thinks that more than fifty percent he has prayed a certain number of rak‘ah and the ma‘mūm doubts about the number of rak‘ah of the prayer, he should not pay attention to his doubt.",
-              lang: "en"
+              text: "اسی طرح اگر امام کو رکعتوں کی تعداد کے بارے میں یقین یا گمان ہو اور ماموم کو رکعتوں کی تعداد کے بارے میں شک ہوجائے تو اپنے شک کی پروا نہ کرے۔",
+              lang: "ur"
             }
           ],
           verdictPhrases: [
-            "he should not pay attention to his doubt"
+            "اپنے شک کی پروا نہ کرے"
           ]
         }
       },
@@ -3488,8 +3488,8 @@ export const DECISION_TREES: DecisionTree[] = [
             },
             {
               rulingId: "doubtsupposition",
-              text: "The probability of more than fifty percent regarding number of rak‘ah in a prayer is just like the `certainty`. For example, when one doubts as to whether they have finished three or four rak‘ah, in case that the probability of one of the choices seems more, one should act accordingly and the prayer is alright.",
-              lang: "en"
+              text: "نماز کی رکعتوں کے بارے میں گمان کا حکم یقین کی طرح ہے یعنی جب تین یا چار رکعت پڑھنے میں شک ہوجائے اور کسی ایک طرف زیادہ گمان ہوجائے تو اسی کے مطابق عمل کرے اور نماز صحیح ہے۔",
+              lang: "ur"
             }
           ],
           verdictPhrases: [

@@ -19,9 +19,9 @@ Module 18, at `/fiqh`. Fiqh Ja'fari, per-marja' sourced rulings, no account, no 
 
 An automated comparison of every language version found differences in numbers or negation words. Until a person reviews each, a **safe default controls what is shown. Nothing is accepted by it.**
 
-- **Sistani:** for 145 rulings with a high-priority difference, the Urdu is hidden and the English is shown with a note. (Sistani's English 4th edition is the authoritative text.)
-- **Khamenei:** where the English and the Urdu differ from each other, the version that matches his Persian original is shown. 7 Urdu texts and 22 English texts are hidden on that basis.
-- **118 rows** (81 rulings) could not be decided by the Persian; they are shown as before and listed side by side in `wajibat_needs_human.md` for a person.
+- **Sistani:** for 146 rulings with a high-priority difference, the Urdu is hidden and the English is shown with a note. (Sistani's English 4th edition is the authoritative text.)
+- **Khamenei:** where the English and the Urdu differ from each other, the version that matches his Persian original is shown. 9 Urdu texts and 29 English texts are hidden on that basis. Where a held English text is quoted by a guided prayer step or a helper answer, the official Urdu is shown there instead, with a notice.
+- **70 rows** (58 items) could not be decided by the Persian; they are shown as before and listed side by side in `wajibat_needs_human.md` for a person (English/Urdu rows first).
 - Restoring a hidden text is a recorded decision (`scripts/wajibat/decide_mismatch.py`), never a hand edit.
 
 ## Safeguards

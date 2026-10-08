@@ -50,6 +50,9 @@ class Tree:
 
     def q(self, rid, start, end=None, lang="en"):
         """A quote: a verbatim part of this marja's entry in ruling `rid`."""
+        e = entry(rid, self.marja)
+        if lang == "en" and (e.get("englishWithheld") is not None or e.get("urduOnly")):
+            bad(f"quote of {rid}: its English is withheld or held back (R11, P19, B1); quote the Urdu (lang='ur')")
         return {"rulingId": rid, "text": cut(text_of(rid, self.marja, lang), start, end), "lang": lang}
 
     def _phrase_ok(self, rid, phrase, lang):

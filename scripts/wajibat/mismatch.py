@@ -19,7 +19,7 @@ WORDS = json.load(open(os.path.join(REPO, "app", "utils", "wajibatMismatchWords.
 nfc = lambda s: unicodedata.normalize("NFC", s)
 DIGITS = str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩", "01234567890123456789")
 TOKEN = re.compile(r"\d+(?:[.,/]\d+)?(?:st|nd|rd|th)?|[^\W\d_]+(?:[-’'][^\W\d_]+)*")
-LIST_NO = re.compile(r"^\s*(?:\(?\d+[.)۔:]|\(?[a-zA-Z][.)])\s+", re.M)
+LIST_NO = re.compile(r"^\s*(?:\(?\d+[.)۔:\-–]|\(?[a-zA-Z][.)])\s+", re.M)
 
 
 def tokens(text, lang):
@@ -28,6 +28,7 @@ def tokens(text, lang):
     for a, b in WORDS["normalize"].items(): t = t.replace(a, b)
     t = re.sub(r"\[\d+\]", " ", t)
     t = re.sub(WORDS["referenceStrip"], " ", t, flags=re.I)
+    if lang in WORDS["stripByLang"]: t = re.sub(WORDS["stripByLang"][lang], " ", t)
     t = t.replace("سی‌ام", "سیم").replace("‌", " ")
     return TOKEN.findall(t)
 

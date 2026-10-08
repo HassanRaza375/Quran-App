@@ -19,6 +19,10 @@ describe("unreviewed-helpers build guard", () => {
     expect(() => assertNoUnreviewedHelpersInProduction({ NODE_ENV: "development", [SHOW_UNREVIEWED_ENV]: "true" })).not.toThrow();
     expect(showUnreviewedHelpersRequested({ [SHOW_UNREVIEWED_ENV]: "true" })).toBe(true);
   });
+  it("reloads on a route-chunk load error after a deploy (emitRouteChunkError: automatic)", () => {
+    const cfg = readFileSync("nuxt.config.ts", "utf8");
+    expect(cfg).toMatch(/emitRouteChunkError:\s*"automatic"/);
+  });
   it("is wired into nuxt.config.ts, so `nuxt build` runs it", () => {
     const cfg = readFileSync("nuxt.config.ts", "utf8");
     expect(cfg).toMatch(/assertNoUnreviewedHelpersInProduction\(process\.env\)/);

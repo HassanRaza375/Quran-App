@@ -1623,7 +1623,8 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "Rakʿah 3 · Al-tasbīḥāt al-arbaʿah (or al-Ḥamd), quietly"
         },
         instruction: {
-          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once."
+          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once.",
+          ur: "نماز کی تیسری اور چوتھی رکعت میں ایک دفعہ سبحان الله والحمدلله ولا الله الاالله والله اکبر پڑھنا کافی ہے"
         },
         rulingId: "thirdfourthrakah",
         hukm: "wajib",
@@ -1979,7 +1980,8 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "Rakʿah 3 · Al-tasbīḥāt al-arbaʿah (or al-Ḥamd), quietly"
         },
         instruction: {
-          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once."
+          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once.",
+          ur: "نماز کی تیسری اور چوتھی رکعت میں ایک دفعہ سبحان الله والحمدلله ولا الله الاالله والله اکبر پڑھنا کافی ہے"
         },
         rulingId: "thirdfourthrakah",
         hukm: "wajib",
@@ -2068,7 +2070,8 @@ export const SALAT_PROCEDURES: Procedure[] = [
           en: "Rakʿah 4 · Al-tasbīḥāt al-arbaʿah (or al-Ḥamd), quietly"
         },
         instruction: {
-          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once."
+          en: "It is enough in the 3rd and 4th rak‘ah of the prayer to say Subḥānallāhi wal ḥamdu lillhāhi wa lā ilḥā illallāu wallāhu akbar once.",
+          ur: "نماز کی تیسری اور چوتھی رکعت میں ایک دفعہ سبحان الله والحمدلله ولا الله الاالله والله اکبر پڑھنا کافی ہے"
         },
         rulingId: "thirdfourthrakah",
         hukm: "wajib",

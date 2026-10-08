@@ -39,8 +39,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Obligatory prayers are as follows:\n1. Daily prayers;\n2. Prayer of ṭawāf which is said after obligatory tawāf around Ka‘bah;\n3. Āyāt prayer which is performed due to natural phenomena such as a lunar/solar eclipse, earthquake, etc.\n4. Mayyit prayer which is performed on the corpse of a deceased Muslim\n5. Qaḍā’ prayers of one's father and, by obligatory caution, of the mother as well; to be performed by the eldest son.\n6. The prayer which becomes obligatory due to nadhr (reciprocal vow), ‘ahd (covenant), qasam (oath), or through being hired to preform it.",
-          ur: "واجب نمازیں درج ذیل ہیں؛\n1۔ یومیہ نمازیں\n2۔ نماز طواف جو خانہ کعبہ کے واجب طواف کے بعد ادا کی جاتی ہے۔\n3۔ نماز آیات جو سورج گرہن، چاند گرہن، زلزلہ وغیرہ کے وقت ادا کی جاتی ہے۔\n4۔ نماز میت جو دنیا سے رخصت ہونے والے مسلمان کے جنازے پر پڑھی جاتی ہے۔\n5۔ باپ کی قضا نماز اور احتیاط واجب کی بناپر ماں کی قضا نماز جو بڑے بیٹے پر واجب ہے۔\n6۔ وہ نماز جو عہد، نذر، قسم یا اجارہ کی وجہ سے واجب ہوتی ہے۔\n* درحقیقت (ان مواقع پر) مستحب نماز واجب میں نہیں بدلتی بلکہ نذر، عہد، قسم اور اجارہ پر عمل کرنا واجب ہوتا ہے۔"
+          en: "Obligatory prayers are as follows:\n1. Daily prayers;\n2. Prayer of ṭawāf which is said after obligatory tawāf around Ka‘bah;\n3. Āyāt prayer which is performed due to natural phenomena such as a lunar/solar eclipse, earthquake, etc.\n4. Mayyit prayer which is performed on the corpse of a deceased Muslim\n5. Qaḍā’ prayers of one's father and, by obligatory caution, of the mother as well; to be performed by the eldest son.\n6. The prayer which becomes obligatory due to nadhr (reciprocal vow), ‘ahd (covenant), qasam (oath), or through being hired to preform it."
         },
         basis: "fatwa",
         source: {
@@ -48,18 +47,14 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "1.",
           url: "https://www.leader.ir/en/book/241?sn=32480"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 1",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31066"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 1",
           url: "https://www.leader.ir/fa/book/180/1?sn=30757"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -1441,13 +1436,19 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "Wearing a gold chain, gold ring, as well as a gold wrist watch is forbidden for men even for a short period, such as the moment of reading the marriage contract, even for a purpose other than using it as an adornment and hidden from the sight of people. By obligatory caution, prayer performed with them is invalid."
+          en: "Wearing a gold chain, gold ring, as well as a gold wrist watch is forbidden for men even for a short period, such as the moment of reading the marriage contract, even for a purpose other than using it as an adornment and hidden from the sight of people. By obligatory caution, prayer performed with them is invalid.",
+          ur: "مرد کے لئے سونے کی زنجیر، انگوٹھی اور ہاتھ کی گھڑی استعمال کرنا حرام ہے اگرچہ زینت کی نیت کے بغیر اور دوسروں کی نظروں سے مخفی اور مختصر مدت مثلا ًنکاح کے وقت ہی کیوں نہ ہو اور احتیاط واجب کی بناپر اس کے ساتھ نماز بھی باطل ہے۔"
         },
         basis: "fatwa",
         source: {
           title: "The Rules on Prayer & Fasting 2023",
           reference: "90.",
           url: "https://www.leader.ir/en/book/241?sn=32496"
+        },
+        urSource: {
+          title: "نماز اور روزه کی احکام",
+          reference: "مسئلہ 91",
+          url: "https://www.leader.ir/ur/book/197/1?sn=31082"
         },
         persianSource: {
           title: "رساله نماز و روزه",
@@ -1456,7 +1457,7 @@ export const SALAT_RULINGS: Ruling[] = [
         },
         verification: "A",
         note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
-        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -2021,8 +2022,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "sistani",
         format: "issue",
         text: {
-          en: "Adhān consists of the following eighteen sentences:\nIqāmah consists of the following seventeen sentences:",
-          ur: "اذان اٹھارہ جملوں پرمشتمل ہے:\nاَللہُ اَکْبَرُ اَللہُ اَکْبَرُ اَللہُ اَکْبَرُ اَللہُ اَکْبَرُ\nاَشْھَدُ اَنْ لَّااِلٰہَ اِلَّا اللہُ اَشْھَدُ اَنْ لَّااِلٰہَ اِلَّا اللہُ\nاَشْھَدُاَنَّ مُحَمَّدًارَّسُوْلُ اللہِ اَشْھَدُاَنَّ مُحَمَّدًارَّسُوْلُ اللہِ"
+          en: "Adhān consists of the following eighteen sentences:\nIqāmah consists of the following seventeen sentences:"
         },
         basis: "fatwa",
         source: {
@@ -2030,12 +2030,8 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "Ruling 904",
           url: "https://www.sistani.org/english/book/48/2228/"
         },
-        urSource: {
-          title: "توضیح المسائل",
-          reference: "مسئلہ (904)",
-          url: "https://www.sistani.org/urdu/book/61/3637/"
-        },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       },
       {
         marjaId: "khamenei",
@@ -2267,8 +2263,7 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 139",
           url: "https://www.leader.ir/fa/book/180/1?sn=30787"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ]
   },
@@ -2318,8 +2313,7 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "مسأله 141",
           url: "https://www.leader.ir/fa/book/180/1?sn=30787"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ]
   },
@@ -3298,7 +3292,8 @@ export const SALAT_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/180/1?sn=30791"
         },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ]
   },
@@ -5089,8 +5084,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The prayer is invalidated in the following cases:\n1. When one of the conditions of prayer ceases to exist during prayer;\n2. When wuḍū’ or ghusl is invalidated;\n3. To turn away from the qiblah;\n4. Talking;\n5. Laughing;\n6. Weeping;\n7. When the form of the prayer is disrupted;\n8. Eating and drinking;\n9. Doubts which invalidate the prayer;\n10. To repeat a foundational element or to neglect it;\n11. Saying āmīn after chapter al-Fātiḥah;\n12. Placing one hand on the other in a certain manner which is called takattuf.",
-          ur: "مبطلات نماز درج ذیل ہیں :\n1۔ ان شرائط میں سے کسی کا مفقود ہونا جن کی نماز میں رعایت کرنا ضروری ہے۔\n\n2۔ وضو یا غسل کا باطل ہونا۔\n\n3۔ قبلے سے رخ پھیرنا\n\n4۔ بات کرنا\n\n5۔ ہنسنا\n\n6۔ رونا\n\n7۔ نماز کی شکل باقی نہ رہنا\n\n8۔ کھانا اور پینا\n\n9۔ وہ شک جو نماز کو باطل کرتا ہے\n\n10۔ ارکان نماز کو کم کرنا اور بڑھانا\n\n11۔ الحمد کے بعد آمین کہنا\n\n12۔ پیٹ پر ہاتھوں کو باندھنا (تکتف)\n* ۔ شکیات نماز میں بیان کئے جائیں گے۔"
+          en: "The prayer is invalidated in the following cases:\n1. When one of the conditions of prayer ceases to exist during prayer;\n2. When wuḍū’ or ghusl is invalidated;\n3. To turn away from the qiblah;\n4. Talking;\n5. Laughing;\n6. Weeping;\n7. When the form of the prayer is disrupted;\n8. Eating and drinking;\n9. Doubts which invalidate the prayer;\n10. To repeat a foundational element or to neglect it;\n11. Saying āmīn after chapter al-Fātiḥah;\n12. Placing one hand on the other in a certain manner which is called takattuf."
         },
         basis: "fatwa",
         source: {
@@ -5098,17 +5092,13 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "322.",
           url: "https://www.leader.ir/en/book/241?sn=32525"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 323",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31173"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 323",
           url: "https://www.leader.ir/fa/book/180/1?sn=30804"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },
@@ -7113,8 +7103,7 @@ export const SALAT_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "issue",
         text: {
-          en: "The followings terms should be observed in congregational prayer:\n1- A ma‘mūm should not stand in front of the imam. Rather, it is an obligatory caution to stand a little behind.\n2- The imam’s place should not be higher than that of ma‘mūms. Of course, a little difference, less than one handspan, is no problem.\n3- There should not be a long gap between the imam and the ma‘mūm nor among different rows.\n4- There should not be a barrier, like a wall or a curtain, between the imam and the ma‘mūm nor among the rows. However, putting a curtain or the like between the rows of men and women is no problem.",
-          ur: "نماز جماعت میں مندرجہ ذیل شرائط کا خیال رکھنا ضروری ہے :\n1 ۔ مقتدی امام سے آگے کھڑ انہ ہو اور احتیاط واجب یہ ہے کہ امام سے تھوڑا پیچھے کھڑا ہو۔\n2 ۔ امام کی جگہ مقتدی کی جگہ سے بلند نہ ہو البتہ تھوڑی بلند ہونا (ایک بالشت سے کم) اشکال نہیں رکھتا۔\n3 ۔ امام اور مقتدی اور اسی طرح صفوں کے درمیان زیادہ فاصلہ نہ ہو۔\n4 ۔ امام اور مقتدی کے درمیان اور اسی طرح صفوں کے درمیان دیوار یا پردہ جیسی کوئی چیز حائل نہ ہو، البتہ مردوں اور عورتوں کی صف کے درمیان پردہ حائل ہونا کوئی اشکال نہیں رکھتا۔"
+          en: "The followings terms should be observed in congregational prayer:\n1- A ma‘mūm should not stand in front of the imam. Rather, it is an obligatory caution to stand a little behind.\n2- The imam’s place should not be higher than that of ma‘mūms. Of course, a little difference, less than one handspan, is no problem.\n3- There should not be a long gap between the imam and the ma‘mūm nor among different rows.\n4- There should not be a barrier, like a wall or a curtain, between the imam and the ma‘mūm nor among the rows. However, putting a curtain or the like between the rows of men and women is no problem."
         },
         basis: "fatwa",
         source: {
@@ -7122,18 +7111,14 @@ export const SALAT_RULINGS: Ruling[] = [
           reference: "717.",
           url: "https://www.leader.ir/en/book/241?sn=32590"
         },
-        urSource: {
-          title: "نماز اور روزه کی احکام",
-          reference: "مسئلہ 719",
-          url: "https://www.leader.ir/ur/book/197/1?sn=31237"
-        },
         persianSource: {
           title: "رساله نماز و روزه",
           reference: "مسأله 719",
           url: "https://www.leader.ir/fa/book/180/1?sn=30867"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ]
   },

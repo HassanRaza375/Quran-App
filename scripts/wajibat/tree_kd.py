@@ -32,9 +32,9 @@ def build():
         ("Yes, its time has ended, and I doubt whether I prayed it", "kdp2", [("doubtprayeritself", "after the prayer’s time, one doubts whether he has performed it or not")]),
         ("Yes, its time has ended, and I doubt whether I prayed it correctly", "kdp3", [("doubtsdismissedlist", "Doubt after the time of prayer has already passed.")]),
     ], NS)
-    OUT("kdp1", [t.q("doubtprayeritself", "However, if before the end", None)], ["he should pray"])
-    OUT("kdp2", [t.q("doubtprayeritself", "If, after the prayer’s time", "it is not necessary to perform it.")], ["it is not necessary to perform it"])
-    OUT("kdp3", [t.q("doubtsdismissedlist", "Doubts which are invalid and should be ignored are as follows:", "should be ignored are as follows:"), t.q("doubtsdismissedlist", "3. Doubt after the time of prayer", "already passed.")], ["Doubt after the time of prayer has already passed."])
+    OUT("kdp1", [t.q("doubtprayeritself", "لیکن اگر وقت ختم ہونے سے پہلے", None, UR)], ["ضروری ہے نماز پڑھے"])
+    OUT("kdp2", [t.q("doubtprayeritself", "اگر وقت گزرنے کے بعد", "نماز پڑھنا لازم نہیں", UR)], ["نماز پڑھنا لازم نہیں"])
+    OUT("kdp3", [t.q("doubtsdismissedlist", "وہ شکوک جن کی پروا نہیں کرنی چاہئے، مندرجہ ذیل ہیں:", "مندرجہ ذیل ہیں:", UR), t.q("doubtsdismissedlist", "3۔ نماز کا وقت گزرجانے کے بعد شک؛", "شک؛", UR)], ["نماز کا وقت گزرجانے کے بعد شک"])
 
     # ---- a part of the prayer ----
     Q("kdact", "Which part of the prayer is it?", [
@@ -77,7 +77,7 @@ def build():
         ("I performed the part because of a doubt, and it turned out I had done it twice", "kdl2", [("doubtrepeated", "it turns out that he has performed it twice")]),
     ], NS)
     OUT("kdl1", [t.q("doubtremembermissing", "FULL", None)], ["he should perform it"])
-    OUT("kdl2", [t.q("doubtrepeated", "FULL", None)], ["his prayer is not void"])
+    OUT("kdl2", [t.q("doubtrepeated", "FULL", None, UR)], ["نماز باطل نہیں ہے"])
 
     # ---- the salam ----
     Q("kdsalam", "Are you engaged in taʿqīb or another prayer, or has something interrupted the prayer (such as turning away from the qiblah)?", [
@@ -93,7 +93,7 @@ def build():
         ("No, neither possibility is the correct number (for example three or five rakʿahs after a four-rakʿah prayer)", "kda4", [("doubtaftersalaminvalid", "both sides of the doubt cause the prayer to be invalid")]),
     ], NS)
     OUT("kda3", [t.q("doubtaftersalam", "FULL", None)], ["he should not pay attention to his doubt"])
-    OUT("kda4", [t.q("doubtaftersalaminvalid", "FULL", None)], ["the prayer is invalid"])
+    OUT("kda4", [t.q("doubtaftersalaminvalid", "FULL", None, UR)], ["تو نماز باطل ہے"])
 
     # ---- doubting too much ----
     Q("kdexcess", "What is your situation?", [
@@ -101,7 +101,7 @@ def build():
         ("I doubt too much only about one part, only in one kind of prayer, or only in one place", "kdx2", [("excessivepart", "doubts too much about only one part of prayer"), ("excessiveprayer", "doubts too much in a special prayer"), ("excessiveplace", "doubts too much in a special place")]),
         ("I am not sure whether I have become a person who doubts too much", "kdx3", [("excessiveunsure", "does not know whether he has become")]),
     ], NS)
-    OUT("kdx1", [t.q("excessivedoubter", "FULL", None), t.q("excessiveact", "FULL", None)], ["must assume the occurrence of the act about which he doubts"])
+    OUT("kdx1", [t.q("excessivedoubter", "FULL", None), t.q("excessiveact", "FULL", None, UR)], ["یوں سمجھنا چاہئے کہ اسے انجام دیا ہے"])
     OUT("kdx2", [t.q("excessivepart", "FULL", None), t.q("excessiveprayer", "FULL", None), t.q("excessiveplace", "FULL", None)], ["he should act according to the duties of ordinary people"])
     OUT("kdx3", [t.q("excessiveunsure", "FULL", None)], ["is not ruled as such a person and must act in accordance with the rule of doubt"])
 
@@ -110,8 +110,8 @@ def build():
         ("I am the imam, and a follower is sure (or thinks it more probable) it is the fourth rakʿah and tells me so", "kdm1", [("doubtimam", "the imam must finish the prayer")]),
         ("I am a follower, and the imam is sure (or thinks it more probable) of the number of rakʿahs", "kdm2", [("doubtimam", "he should not pay attention to his doubt")]),
     ], NS)
-    OUT("kdm1", [t.q("doubtimam", "If an imam of congregation", "caution prayer.")], ["it is not necessary to perform the caution prayer"])
-    OUT("kdm2", [t.q("doubtimam", "Also, if the imam is certain", None)], ["he should not pay attention to his doubt"])
+    OUT("kdm1", [t.q("doubtimam", "اگر امام جماعت", "لازم نہیں ہے۔", UR)], ["نماز احتیاط پڑھنا لازم نہیں ہے"])
+    OUT("kdm2", [t.q("doubtimam", "اسی طرح اگر امام", None, UR)], ["اپنے شک کی پروا نہ کرے"])
 
     # ---- recommended prayers ----
     Q("kdmust", "What is the doubt about?", [
@@ -137,7 +137,7 @@ def build():
         ("Both are equally likely (fifty-fifty)", "kdnum", [("doubtrakahhow", "if it remains fifty-fifty, one should act according to the following rulings")]),
         ("First I leaned one way, and now both seem equal", "kdnum", [("doubtsuppositionchange", "then both sides becomes equal in his opinion, he must act according to the rule of doubt")]),
     ], NS)
-    OUT("kdl3", [t.q("doubtrakahhow", "FULL", None), t.q("doubtsupposition", "FULL", None)], ["one should complete the prayer according to it and the prayer is alright"])
+    OUT("kdl3", [t.q("doubtrakahhow", "FULL", None), t.q("doubtsupposition", "FULL", None, UR)], ["one should complete the prayer according to it and the prayer is alright"])
 
     INV7 = "if one of these three doubts arises before finishing the second sajdah, the prayer is void"
     Q("kdnum", "Which numbers of rakʿahs are you unsure between?", [

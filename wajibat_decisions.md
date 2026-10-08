@@ -105,6 +105,15 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | B3 | Production guard | A check (test or build-time failure) that **fails a production build if `NUXT_PUBLIC_WAJIBAT_SHOW_UNREVIEWED_HELPERS` is true.** The setting must never be on in Vercel's production settings. |
 | B4 | Merge to `main` | After B1–B3, **prepare** a merge of `wajibat-module` into `main` (helpers hidden, all checks green, a short release note of what is live). **Show the plan and wait for the user's go-ahead before merging.** Phase 5 (Sawm) starts after the merge. |
 
+## Answered questions (2026-10-08, fifth round: blocker before merge)
+
+| # | Topic | Decision |
+|---|---|---|
+| C1 | Held English quoted by guided-prayer steps and helper answers | For each such step or answer: if the **Urdu matches the Persian**, show the Urdu there with a label (the P19 pattern); if neither matches, show the "refer to his risala" pointer instead of a quote. Report how many were steps and how many helper answers, and re-run the guided-prayer browser checks. |
+| C2 | The "match neither" rows | Check whether they come from Persian number extraction (Persian/Arabic-Indic digits, numbers as words, ordinals) rather than real errors; fix the extractor if so, re-run, report the new counts. **Do not change any display decision without telling the user.** |
+| C3 | Chunk-load errors | Enable Nuxt's automatic reload on chunk-load errors (`emitRouteChunkError: "automatic"`); note it in the progress log. |
+| C4 | Vercel | The user confirms the env var is not set for Production. After C1–C3 pass: show the final merge summary, then fast-forward `main`. |
+
 ## Phase 0 findings (2026-09-25)
 
 - **Q5 UI kit: Vuetify 3.** `package.json` has `vuetify` + `vite-plugin-vuetify` and no shadcn-vue,

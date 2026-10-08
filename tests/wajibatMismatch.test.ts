@@ -6,7 +6,7 @@
 //  - every reported mismatch to have a decision entry with a valid status (a new, unlisted mismatch fails).
 // "pending" is a valid status: the report lists them for a person to decide.
 import { describe, expect, it } from "vitest";
-import { WAJIBAT_RULINGS, getMarjaRuling, getRulingById } from "../app/data/wajibat";
+import { WAJIBAT_DATASET, WAJIBAT_RULINGS, getMarjaRuling, getRulingById } from "../app/data/wajibat";
 import { compareVersions, signals } from "../app/utils/wajibatMismatch";
 import fixture from "./fixtures/wajibatMismatches.json";
 import decisions from "./fixtures/wajibatMismatchDecisions.json";
@@ -139,5 +139,30 @@ describe("safe-default triage and display holds (decision B1)", () => {
       expect((d as { reviewer?: string }).reviewer, k).toBeTruthy();
     }
   });
-});
 
+  it("a guided-prayer step on a ruling whose English is held back shows a verbatim Urdu excerpt of that ruling instead", () => {
+    let n = 0;
+    for (const p of WAJIBAT_DATASET.procedures)
+      for (const st of p.steps) {
+        const e = getMarjaRuling(getRulingById(st.rulingId)!, p.marjaId)!;
+        if (e.englishWithheld === undefined) continue;
+        n += 1;
+        expect(st.instruction.ur, `${p.id}/${st.id}`).toBeTruthy();
+        expect(e.text.ur, `${p.id}/${st.id}`).toContain(st.instruction.ur!);
+      }
+    expect(n).toBeGreaterThan(0); // the third and fourth rakʿah dhikr of Khamenei's zuhr and maghrib prayers
+  });
+
+  it("a helper answer on a ruling whose English is held back quotes the Urdu (the eight rulings of the former quoted-English rows)", () => {
+    const eight = ["doubtaftersalaminvalid", "doubtimam", "doubtprayeritself", "doubtrepeated", "doubtsdismissedlist", "doubtsupposition", "excessiveact", "thirdfourthrakah"];
+    for (const rid of eight) {
+      const e = getMarjaRuling(getRulingById(rid)!, "khamenei")!;
+      expect(e.englishWithheld, rid).toMatch(/^Held for review/);
+    }
+    for (const t of WAJIBAT_DATASET.decisionTrees)
+      for (const nd of t.nodes)
+        if (nd.outcome?.kind === "ruling")
+          for (const q of nd.outcome.quotes)
+            if (eight.includes(q.rulingId) && t.marjaId === "khamenei") expect(q.lang, `${t.id}/${nd.id}`).toBe("ur");
+  });
+});

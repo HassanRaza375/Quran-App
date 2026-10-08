@@ -17,15 +17,17 @@ const DIGITS: Record<string, string> = {};
 "۰۱۲۳۴۵۶۷۸۹".split("").forEach((c, i) => (DIGITS[c] = String(i)));
 "٠١٢٣٤٥٦٧٨٩".split("").forEach((c, i) => (DIGITS[c] = String(i)));
 const TOKEN = /\d+(?:[.,/]\d+)?(?:st|nd|rd|th)?|\p{L}+(?:[-’']\p{L}+)*/gu;
-const LIST_NO = /^\s*(?:\(?\d+[.)۔:]|\(?[a-zA-Z][.)])\s+/gm;
+const LIST_NO = /^\s*(?:\(?\d+[.)۔:\-–]|\(?[a-zA-Z][.)])\s+/gm;
 const REF = new RegExp(WORDS.referenceStrip, "gi");
 const NFC = (s: string) => s.normalize("NFC");
 
-const tokens = (text: string): string[] => {
+const tokens = (text: string, lang: MismatchLang): string[] => {
   let t = NFC(text).replace(/[۰-۹٠-٩]/g, (c) => DIGITS[c]).toLowerCase();
   t = t.replace(LIST_NO, "");
   for (const [a, b] of Object.entries(WORDS.normalize)) t = t.split(a).join(b);
   t = t.replace(/\[\d+\]/g, " ").replace(REF, " ");
+  const extra = (WORDS.stripByLang as Record<string, string>)[lang];
+  if (extra) t = t.replace(new RegExp(extra, "g"), " ");
   t = t.split("سی‌ام").join("سیم").split("‌").join(" ");
   return t.match(TOKEN) ?? [];
 };
@@ -42,7 +44,7 @@ export const signals = (text: string, lang: MismatchLang) => {
   const O = WORDS.ordinals[lang] as Record<string, number>;
   const N = new Set(WORDS.negations[lang]);
   const NP = (WORDS.negationPrefixes as Record<string, string>)[lang];
-  for (const tok of tokens(text)) {
+  for (const tok of tokens(text, lang)) {
     const m = /^(\d+(?:[.,/]\d+)?)(st|nd|rd|th)?$/.exec(tok);
     if (m) {
       const v: number | string = /^\d+$/.test(m[1]) ? parseInt(m[1], 10) : m[1];

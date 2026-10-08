@@ -372,7 +372,7 @@ HDR = """// GENERATED from the official texts, do not hand-edit the quoted strin
 // recommended / unspecified precaution) — never inferred beyond them (R3).
 """
 from holds import apply_holds, apply_holds_procs
-apply_holds(RULINGS); apply_holds_procs(PROCS)
+apply_holds(RULINGS); apply_holds_procs(PROCS, RULINGS)
 with open(OUT_RULINGS, "w", encoding="utf-8", newline="\n") as f:
     f.write("// Taharat (§6.2) rulings — Phase 2.\n//\n" + HDR + 'import type { Ruling } from "../types";\n\nexport const TAHARAT_RULINGS: Ruling[] = ' + ts(RULINGS) + ";\n")
 with open(OUT_PROCS, "w", encoding="utf-8", newline="\n") as f:

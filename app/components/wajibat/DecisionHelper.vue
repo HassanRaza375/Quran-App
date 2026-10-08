@@ -50,6 +50,10 @@
               {{ marja.name.en }}'s own risala ({{ quoteMeta(q).source.title }}) or ask his office through
               <a :href="marja.officialSite" target="_blank" rel="noopener noreferrer">his official website</a>.
             </p>
+            <p v-else-if="firstOf(i) && quoteMeta(q).englishHeld" class="withheld-notice text-body-2 mb-2" role="note">
+              <v-icon size="16" aria-hidden="true">mdi-translate</v-icon>
+              An automated comparison found a difference between the official English of this ruling and the Persian original, so the official Urdu (which matches the Persian) is shown until a person has checked it. The app does not translate rulings itself.
+            </p>
             <p v-else-if="firstOf(i) && quoteMeta(q).englishWithheld" class="withheld-notice text-body-2 mb-2" role="note">
               <v-icon size="16" aria-hidden="true">mdi-translate</v-icon>
               The official English of this ruling differs from the Persian original, so the official Urdu (which matches the Persian) is shown.
@@ -143,6 +147,7 @@ const quoteMeta = (q) => {
     verification: e.verification,
     urduOnly: !!e.urduOnly,
     englishWithheld: e.englishWithheld !== undefined,
+    englishHeld: /^Held for review/.test(e.englishWithheld ?? ""),
     note: e.urduOnly ? undefined : e.note, // the Urdu-only label is already shown above
   };
 };

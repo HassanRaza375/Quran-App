@@ -416,6 +416,6 @@ describe("validateWajibatDataset catches broken data", () => {
     const step = data.procedures.find((p) => p.marjaId === "khamenei")!.steps[0]!;
     const target = getMarjaRuling(data.rulings.find((x) => x.id === step.rulingId)!, "khamenei")!;
     target.englishWithheld = "x";
-    expect(messages(data).some((m) => m.includes("which is withheld or does not exist (decisions R11, P19)"))).toBe(true);
+    expect(messages(data).some((m) => m.includes("has no Urdu excerpt to show instead"))).toBe(true);
   });
 });

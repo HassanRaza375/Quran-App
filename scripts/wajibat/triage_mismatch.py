@@ -61,8 +61,9 @@ def triage(rows, dec, data, trees):
             if ur_bad and not en_bad:
                 verdict, hold, note = "persian-decided-pending-review", "hide-ur", "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden."
             elif en_bad and not ur_bad:
-                if (rid, marja) in step_use or (rid, marja) in tree_en:
-                    note = "The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer, so it was not hidden automatically."
+                from holds import HELD_EN_STEP_CUTS, HELD_EN_TREE_URDU
+                if ((rid, marja) in step_use and rid not in HELD_EN_STEP_CUTS) or ((rid, marja) in tree_en and rid not in HELD_EN_TREE_URDU):
+                    note = "The Urdu matches the Persian and the English does not, but the English is quoted by a guided-prayer step or a helper answer that has no Urdu counterpart yet, so it was not hidden automatically."
                 else:
                     verdict, hold, note = "persian-decided-pending-review", "hide-en", "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden."
             elif en_bad and ur_bad:

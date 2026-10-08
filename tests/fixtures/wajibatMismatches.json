@@ -3344,11 +3344,34 @@
   },
   {
    "field": "text",
+   "key": "adhanwording|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      17,
+      18
+     ],
+     "right": [
+      18
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 904",
+   "ruling": "adhanwording",
+   "severity": "high"
+  },
+  {
+   "field": "text",
    "key": "adhanwording|khamenei|text|en-ur",
    "kinds": [
     {
      "kind": "numbers",
      "left": [
+      18,
       2,
       2,
       2,
@@ -3363,6 +3386,7 @@
       4
      ],
      "right": [
+      18,
       2,
       2,
       2,
@@ -3463,37 +3487,6 @@
   },
   {
    "field": "text",
-   "key": "elevencomponents|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [
-      11
-     ],
-     "right": [
-      10,
-      11,
-      11,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "138.",
-   "ruling": "elevencomponents",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "rukns|sistani|text|en-ur",
    "kinds": [
     {
@@ -3520,31 +3513,6 @@
    "marja": "sistani",
    "pair": "en-ur",
    "ref": "Ruling 928",
-   "ruling": "rukns",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "rukns|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [
-      2
-     ],
-     "right": [
-      2,
-      2,
-      3,
-      4,
-      5
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "140.",
    "ruling": "rukns",
    "severity": "high"
   },
@@ -4310,15 +4278,8 @@
       96
      ],
      "right": [
-      1,
-      15,
       19,
-      2,
-      3,
-      37,
-      4,
-      4,
-      62
+      4
      ],
      "severity": "high"
     }
@@ -5202,6 +5163,17 @@
    "key": "followerahead|khamenei|text|en-ur",
    "kinds": [
     {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "severity": "high"
+    },
+    {
      "kind": "negation",
      "left": 8,
      "right": 5,
@@ -5212,7 +5184,7 @@
    "pair": "en-ur",
    "ref": "717.",
    "ruling": "followerahead",
-   "severity": "low"
+   "severity": "high"
   },
   {
    "field": "text",
@@ -6067,7 +6039,6 @@
      "right": [
       10,
       2,
-      4,
       4,
       4,
       8,
@@ -8778,35 +8749,8 @@
   },
   {
    "field": "text",
-   "key": "obligatoryprayers|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "1.",
-   "ruling": "obligatoryprayers",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "obligatoryprayers|khamenei|text|ur-fa",
    "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    },
     {
      "kind": "negation",
      "left": 1,
@@ -8818,66 +8762,6 @@
    "pair": "ur-fa",
    "ref": "مسأله 1",
    "ruling": "obligatoryprayers",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "dailyrakat|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [
-      17,
-      2,
-      3,
-      4,
-      4,
-      4
-     ],
-     "right": [
-      2,
-      3,
-      4,
-      4,
-      4
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "3.",
-   "ruling": "dailyrakat",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "dailyrakat|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [
-      17,
-      2,
-      3,
-      4,
-      4,
-      4
-     ],
-     "right": [
-      2,
-      3,
-      4,
-      4,
-      4
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 3",
-   "ruling": "dailyrakat",
    "severity": "high"
   },
   {
@@ -8992,9 +8876,7 @@
      "left": [
       10
      ],
-     "right": [
-      1
-     ],
+     "right": [],
      "severity": "high"
     }
    ],
@@ -9002,40 +8884,6 @@
    "pair": "ur-fa",
    "ref": "مسأله 4",
    "ruling": "fajrtime",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "prayingearly|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "16.",
-   "ruling": "prayingearly",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "prayingearly|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 16",
-   "ruling": "prayingearly",
    "severity": "high"
   },
   {
@@ -9049,9 +8897,7 @@
       28,
       7
      ],
-     "right": [
-      1
-     ],
+     "right": [],
      "severity": "high"
     },
     {
@@ -9127,114 +8973,12 @@
   },
   {
    "field": "text",
-   "key": "clothingconditions|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 4,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "56.",
-   "ruling": "clothingconditions",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "clothingconditions|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 4,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 57",
-   "ruling": "clothingconditions",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "impureunaware|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "59.",
-   "ruling": "impureunaware",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "impureunaware|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 60",
-   "ruling": "impureunaware",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "usurpedclothing|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "78.",
-   "ruling": "usurpedclothing",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "usurpedclothing|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 79",
-   "ruling": "usurpedclothing",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "nonslaughtered|khamenei|text|en-fa",
    "kinds": [
     {
      "kind": "negation",
      "left": 2,
-     "right": 1,
+     "right": 3,
      "severity": "low"
     }
    ],
@@ -9246,20 +8990,20 @@
   },
   {
    "field": "text",
-   "key": "nonslaughtered|khamenei|text|ur-fa",
+   "key": "goldjewellerymen|khamenei|text|en-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 3,
+     "left": 0,
      "right": 1,
-     "severity": "low"
+     "severity": "high"
     }
    ],
    "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 83",
-   "ruling": "nonslaughtered",
-   "severity": "low"
+   "pair": "en-fa",
+   "ref": "90.",
+   "ruling": "goldjewellerymen",
+   "severity": "high"
   },
   {
    "field": "text",
@@ -9268,15 +9012,15 @@
     {
      "kind": "negation",
      "left": 2,
-     "right": 0,
-     "severity": "high"
+     "right": 1,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "ur-fa",
    "ref": "مسأله 91",
    "ruling": "goldjewellerymen",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -9366,6 +9110,7 @@
     {
      "kind": "numbers",
      "left": [
+      18,
       2,
       2,
       2,
@@ -9380,6 +9125,7 @@
       4
      ],
      "right": [
+      18,
       2,
       2,
       2,
@@ -9413,101 +9159,6 @@
    "pair": "en-fa",
    "ref": "130.",
    "ruling": "adhanwording",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "elevencomponents|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [
-      11
-     ],
-     "right": [
-      10,
-      11,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "138.",
-   "ruling": "elevencomponents",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "elevencomponents|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [
-      10,
-      11,
-      11,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-     ],
-     "right": [
-      10,
-      11,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-     ],
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 139",
-   "ruling": "elevencomponents",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "rukns|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [
-      2
-     ],
-     "right": [
-      2,
-      2,
-      3,
-      4,
-      5
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "140.",
-   "ruling": "rukns",
    "severity": "high"
   },
   {
@@ -9548,18 +9199,18 @@
   },
   {
    "field": "text",
-   "key": "qiyamstill|khamenei|text|ur-fa",
+   "key": "qiyamstill|khamenei|text|en-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 3,
-     "right": 2,
+     "left": 2,
+     "right": 3,
      "severity": "low"
     }
    ],
    "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 154",
+   "pair": "en-fa",
+   "ref": "153.",
    "ruling": "qiyamstill",
    "severity": "low"
   },
@@ -9612,12 +9263,6 @@
      ],
      "right": [],
      "severity": "high"
-    },
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
     }
    ],
    "marja": "khamenei",
@@ -9625,23 +9270,6 @@
    "ref": "197.",
    "ruling": "aloudmistake",
    "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "aloudmistake|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 198",
-   "ruling": "aloudmistake",
-   "severity": "low"
   },
   {
    "field": "text",
@@ -9752,40 +9380,6 @@
   },
   {
    "field": "text",
-   "key": "sajdahheight|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "258.",
-   "ruling": "sajdahheight",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "sajdahheight|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 259",
-   "ruling": "sajdahheight",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "turbahpure|khamenei|text|en-fa",
    "kinds": [
     {
@@ -9853,7 +9447,6 @@
       96
      ],
      "right": [
-      1,
       4
      ],
      "severity": "high"
@@ -9872,18 +9465,10 @@
     {
      "kind": "numbers",
      "left": [
-      1,
-      15,
       19,
-      2,
-      3,
-      37,
-      4,
-      4,
-      62
+      4
      ],
      "right": [
-      1,
       4
      ],
      "severity": "high"
@@ -9997,64 +9582,20 @@
     {
      "kind": "negation",
      "left": 2,
-     "right": 0,
-     "severity": "high"
+     "right": 1,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "303.",
    "ruling": "muwalat",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "muwalat|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 304",
-   "ruling": "muwalat",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "mubtilatlist|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "322.",
-   "ruling": "mubtilatlist",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
    "key": "mubtilatlist|khamenei|text|ur-fa",
    "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    },
     {
      "kind": "negation",
      "left": 1,
@@ -10176,53 +9717,19 @@
   },
   {
    "field": "text",
-   "key": "amin|khamenei|text|ur-fa",
+   "key": "amin|khamenei|text|en-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 4,
-     "right": 3,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 344",
-   "ruling": "amin",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "breakingnecessity|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
+     "left": 3,
+     "right": 4,
      "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
-   "ref": "345.",
-   "ruling": "breakingnecessity",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "breakingnecessity|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 346",
-   "ruling": "breakingnecessity",
+   "ref": "343.",
+   "ruling": "amin",
    "severity": "low"
   },
   {
@@ -10266,53 +9773,20 @@
   },
   {
    "field": "text",
-   "key": "qasrdistancestart|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    },
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "411.",
-   "ruling": "qasrdistancestart",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "qasrdistancestart|khamenei|text|ur-fa",
    "kinds": [
     {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    },
-    {
      "kind": "negation",
      "left": 2,
-     "right": 0,
-     "severity": "high"
+     "right": 1,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "ur-fa",
    "ref": "مسأله 412",
    "ruling": "qasrdistancestart",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -10363,40 +9837,6 @@
    "ref": "465.",
    "ruling": "qasrleisure",
    "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "qasrjob|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "478.",
-   "ruling": "qasrjob",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "qasrjob|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 0,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 479",
-   "ruling": "qasrjob",
-   "severity": "high"
   },
   {
    "field": "text",
@@ -10514,14 +9954,6 @@
    "key": "qasrignorance|khamenei|text|en-fa",
    "kinds": [
     {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    },
-    {
      "kind": "negation",
      "left": 4,
      "right": 2,
@@ -10532,26 +9964,7 @@
    "pair": "en-fa",
    "ref": "604.",
    "ruling": "qasrignorance",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "qasrignorance|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 606",
-   "ruling": "qasrignorance",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -10705,20 +10118,9 @@
    "key": "followerahead|khamenei|text|en-fa",
    "kinds": [
     {
-     "kind": "numbers",
-     "left": [
-      1,
-      2,
-      3,
-      4
-     ],
-     "right": [],
-     "severity": "high"
-    },
-    {
      "kind": "negation",
      "left": 8,
-     "right": 2,
+     "right": 5,
      "severity": "low"
     }
    ],
@@ -10726,7 +10128,7 @@
    "pair": "en-fa",
    "ref": "717.",
    "ruling": "followerahead",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -10742,12 +10144,6 @@
      ],
      "right": [],
      "severity": "high"
-    },
-    {
-     "kind": "negation",
-     "left": 5,
-     "right": 2,
-     "severity": "low"
     }
    ],
    "marja": "khamenei",
@@ -10792,44 +10188,6 @@
   },
   {
    "field": "text",
-   "key": "fridayprayer|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "762.",
-   "ruling": "fridayprayer",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "fridayprayer|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1
-     ],
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 764",
-   "ruling": "fridayprayer",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "fridaybest|khamenei|text|en-fa",
    "kinds": [
     {
@@ -10840,7 +10198,6 @@
       5125
      ],
      "right": [
-      1,
       4,
       5
      ],
@@ -10877,7 +10234,6 @@
       5125
      ],
      "right": [
-      1,
       4,
       5
      ],
@@ -10902,7 +10258,6 @@
       50
      ],
      "right": [
-      1,
       3
      ],
      "severity": "high"
@@ -10926,7 +10281,6 @@
       3
      ],
      "right": [
-      1,
       3
      ],
      "severity": "high"
@@ -10996,12 +10350,6 @@
       4
      ],
      "severity": "low"
-    },
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
     }
    ],
    "marja": "khamenei",
@@ -11044,12 +10392,6 @@
       4
      ],
      "severity": "low"
-    },
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
     }
    ],
    "marja": "khamenei",
@@ -11085,18 +10427,18 @@
   },
   {
    "field": "text",
-   "key": "doubtrakahhow|khamenei|text|en-fa",
+   "key": "doubtrakahhow|khamenei|text|ur-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 2,
-     "right": 1,
+     "left": 1,
+     "right": 2,
      "severity": "low"
     }
    ],
    "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "360.",
+   "pair": "ur-fa",
+   "ref": "مسأله 361",
    "ruling": "doubtrakahhow",
    "severity": "low"
   },
@@ -11122,8 +10464,6 @@
       60
      ],
      "right": [
-      1,
-      2,
       2,
       2,
       2,
@@ -11227,8 +10567,6 @@
       5
      ],
      "right": [
-      1,
-      2,
       2,
       2,
       2,
@@ -11256,14 +10594,14 @@
       5,
       5
      ],
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "ur-fa",
    "ref": "مسأله 365",
    "ruling": "doubtsvalid",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -11402,12 +10740,6 @@
      ],
      "right": [],
      "severity": "high"
-    },
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
     }
    ],
    "marja": "khamenei",
@@ -11423,7 +10755,7 @@
     {
      "kind": "negation",
      "left": 3,
-     "right": 1,
+     "right": 2,
      "severity": "low"
     }
    ],
@@ -11440,7 +10772,7 @@
     {
      "kind": "negation",
      "left": 4,
-     "right": 2,
+     "right": 3,
      "severity": "low"
     }
    ],
@@ -11457,7 +10789,7 @@
     {
      "kind": "negation",
      "left": 4,
-     "right": 2,
+     "right": 3,
      "severity": "low"
     }
    ],
@@ -11555,40 +10887,6 @@
   },
   {
    "field": "text",
-   "key": "excessivedoubter|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "379.",
-   "ruling": "excessivedoubter",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "excessivedoubter|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 1,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 380",
-   "ruling": "excessivedoubter",
-   "severity": "low"
-  },
-  {
-   "field": "text",
    "key": "excessiveact|khamenei|text|en-fa",
    "kinds": [
     {
@@ -11632,43 +10930,37 @@
   },
   {
    "field": "text",
-   "key": "excessiveprayer|khamenei|text|en-fa",
+   "key": "excessiveunsure|khamenei|text|en-fa",
    "kinds": [
     {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1,
-      2
-     ],
-     "severity": "high"
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
-   "ref": "382.",
-   "ruling": "excessiveprayer",
-   "severity": "high"
+   "ref": "384.",
+   "ruling": "excessiveunsure",
+   "severity": "low"
   },
   {
    "field": "text",
-   "key": "excessiveprayer|khamenei|text|ur-fa",
+   "key": "excessiveunsure|khamenei|text|ur-fa",
    "kinds": [
     {
-     "kind": "numbers",
-     "left": [],
-     "right": [
-      1,
-      2
-     ],
-     "severity": "high"
+     "kind": "negation",
+     "left": 4,
+     "right": 5,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "ur-fa",
-   "ref": "مسأله 383",
-   "ruling": "excessiveprayer",
-   "severity": "high"
+   "ref": "مسأله 385",
+   "ruling": "excessiveunsure",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -11925,7 +11217,7 @@
     {
      "kind": "negation",
      "left": 2,
-     "right": 1,
+     "right": 3,
      "severity": "low"
     }
    ],
@@ -11934,23 +11226,6 @@
    "ref": "399.",
    "ruling": "sahwintentional",
    "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "sahwintentional|khamenei|text|ur-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 3,
-     "right": 1,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "ur-fa",
-   "ref": "مسأله 400",
-   "ruling": "sahwintentional",
-   "severity": "low"
   },
   {
    "field": "text",

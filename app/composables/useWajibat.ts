@@ -3,7 +3,9 @@
 import {
   MARAJI,
   WAJIBAT_CATEGORIES,
-  WAJIBAT_DATASET,
+  WAJIBAT_GLOSSARY,
+  WAJIBAT_TOPICS,
+  WAJIBAT_RULING_INDEX,
   getCategoryById,
   getGlossaryTermById,
   getMarjaById,
@@ -13,7 +15,9 @@ import {
   getTopicById,
   isRulingVisibleFor,
   TREE_REVIEWS,
-} from "~/data/wajibat";
+  loadCategory as loadCategoryChunk,
+  loadAllCategories as loadAllChunks,
+} from "~/data/wajibat/runtime";
 import type { MarjaId, Ruling, WajibatTopic } from "~/data/wajibat/types";
 import { searchWajibat } from "~/utils/wajibatSearch";
 import { isHelperVisible } from "~/utils/wajibatReview";
@@ -25,6 +29,13 @@ export const useWajibat = () => {
   // See useFiqhOfflineCache.ts for why this can't just be a passive
   // service-worker runtimeCaching rule.
   if (import.meta.client) ensureWajibatDataCached();
+
+  // Loading a category's chunk also writes it into the offline cache (R8), once it has arrived.
+  const loadCategory = async (categoryId: string) => {
+    await loadCategoryChunk(categoryId);
+    if (import.meta.client) ensureWajibatDataCached();
+  };
+  const loadAllCategories = () => loadAllChunks();
 
   const categories = [...WAJIBAT_CATEGORIES].sort((a, b) => a.order - b.order);
 
@@ -47,12 +58,16 @@ export const useWajibat = () => {
       .filter((t) => !!t && !!marjaId && t.marjaId === marjaId && isHelperVisible(t, TREE_REVIEWS, dev));
   };
 
-  const search = (query: string, marjaId?: MarjaId | null) => searchWajibat(WAJIBAT_DATASET, query, marjaId);
+  // Search runs over the one-line ruling index: no category chunk is needed to search.
+  const search = (query: string, marjaId?: MarjaId | null) =>
+    searchWajibat({ topics: WAJIBAT_TOPICS, rulings: WAJIBAT_RULING_INDEX, glossary: WAJIBAT_GLOSSARY }, query, marjaId);
 
   return {
     maraji: MARAJI,
     categories,
-    glossary: WAJIBAT_DATASET.glossary,
+    glossary: WAJIBAT_GLOSSARY,
+    loadCategory,
+    loadAllCategories,
     getCategoryById,
     getTopicById,
     getGlossaryTermById,

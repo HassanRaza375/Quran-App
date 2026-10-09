@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { getMarjaById } from "~/data/wajibat";
+import { getMarjaById } from "~/data/wajibat/runtime";
 
 const route = useRoute();
 const { marjaId } = useFiqhPrefs();

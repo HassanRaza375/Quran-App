@@ -2220,12 +2220,20 @@
   "status": "low-pending-review"
  },
  "sawmdoubtday|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmdoubtday|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmdoubtday|sistani|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2274,12 +2282,20 @@
   "status": "low-pending-review"
  },
  "sawmforced|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmforced|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmforced|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -2307,16 +2323,24 @@
   "status": "low-pending-review"
  },
  "sawmgirls|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmgirls|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "sawmgirls|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmharamchildday|sistani|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2491,12 +2515,20 @@
   "status": "low-pending-review"
  },
  "sawmintentrecommended|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmintentrecommended|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmintentsleep|khamenei|text|en-fa": {
   "hold": "hide-en",
@@ -2601,12 +2633,20 @@
   "status": "hidden-pending-review"
  },
  "sawmjunubsleepsecond|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmjunubsleepsecond|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmjunubsleepsecond|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -2766,12 +2806,20 @@
   "status": "hidden-pending-review"
  },
  "sawmkaffvow|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmkaffvow|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmkaffwhen|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2935,12 +2983,20 @@
   "status": "hidden-pending-review"
  },
  "sawmqadaable|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadaable|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadaanother|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2956,16 +3012,28 @@
   "status": "hidden-pending-review"
  },
  "sawmqadacount|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadacount|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadacount|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadacount|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -3015,16 +3083,24 @@
   "status": "persian-decided-pending-review"
  },
  "sawmqadaillness|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadaillness|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "sawmqadaillness|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadainsane|sistani|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3065,12 +3141,20 @@
   "status": "low-pending-review"
  },
  "sawmqadaparentspurpose|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadaparentspurpose|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmqadaparents|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3122,16 +3206,28 @@
   "status": "low-pending-review"
  },
  "sawmrecommended|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmrecommended|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmrecommended|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmrecommended|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -3219,12 +3315,20 @@
   "status": "hidden-pending-review"
  },
  "sawmtravelplaces|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmtravelplaces|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmtravelsinchange|khamenei|text|en-fa": {
   "hold": "hide-en",
@@ -3237,16 +3341,24 @@
   "status": "persian-decided-pending-review"
  },
  "sawmtravelunawareshari|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmtravelunawareshari|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "sawmtravelunawareshari|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Neither the English nor the Urdu matches the Persian (Phase 5 review, decision F2): held with a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sawmtravelunawareterms|khamenei|text|en-fa": {
   "hold": "hide-en",

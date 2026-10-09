@@ -57,4 +57,6 @@ run([PY, "gen_helpers.py"], env=env)
 dump()
 # Snapshot of every quote's source unit, read from the downloaded pages (never from the dataset).
 run([PY, "snapshot.py", FIXTURE], env=env)
+# One-line index of every ruling for search and links (the app loads ruling text per category).
+run([PY, "gen_index.py"], env=env)
 print("done — now run `npm test`")

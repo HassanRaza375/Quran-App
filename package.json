@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
     "test": "vitest run",
-    "size": "node scripts/measure-install-size.mjs"
+    "size": "node scripts/measure-install-size.mjs",
+    "test:e2e:wajibat": "node tests/e2e/wajibat/run.mjs"
   },
   "dependencies": {
     "@fontsource/noto-nastaliq-urdu": "^5.3.0",

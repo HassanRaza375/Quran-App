@@ -121,6 +121,17 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | D1 | The 20 "match neither" rows | Apply the safe default and record them as `held-pending-review` through `decide_mismatch.py`: **Sistani:** hold the Urdu, show the English with the Urdu notice; **Khamenei:** show the "refer to his risala" pointer for that ruling until a person decides. (All 20 rows turned out to be Khamenei's, 8 rulings; none is Sistani's.) Rebuild, re-run the browser suites, update the release note, commit and push to `wajibat-module`. |
 | D2 | Chunk reload | Keep `emitRouteChunkError: "automatic"`: no immediate reloads mid-reading (`"automatic-immediate"` stays off). |
 
+## Answered questions (2026-10-09, seventh round: Phase 5 approved)
+
+| # | Topic | Decision |
+|---|---|---|
+| F1 | Zakāt al-fiṭrah (Khamenei) | **Keep the notice.** During Phase 6, search his Persian Q&A on leader.ir and the zakāt chapter of his Urdu Q&A book. If it is found only in Persian, the notice stays (the app writes no translation). |
+| F2 | The 13 "neither matches the Persian" Khamenei fasting rulings | **Hold them with the pointer to his book**, same as the earlier 8 (D1), recorded via `decide_mismatch.py` as `held-pending-review` (`--hold refer`): `sawmdoubtday`, `sawmforced`, `sawmgirls`, `sawmintentrecommended`, `sawmjunubsleepsecond`, `sawmkaffvow`, `sawmqadaable`, `sawmqadacount`, `sawmqadaillness`, `sawmqadaparentspurpose`, `sawmrecommended`, `sawmtravelplaces`, `sawmtravelunawareshari`. Only their high-priority rows are held (28 rows); their low rows keep `low-pending-review`. Reviewer on record: Syed Hassan Raza. |
+| F3 | Iʿtikāf | Phase 8, low priority. |
+| F4 | The 65 Q&A answers not added | **Skip.** From now on add a Q&A answer only when it covers a point his Rules do not. |
+| F5 | Browser suites in the repo | Commit all browser check suites to `tests/e2e/wajibat/` with one command against a production build: `npm run test:e2e:wajibat`. Re-run the helper suite and every earlier suite from the repo and report. |
+| F6 | Per-category data chunks | Split the ruling data so each `/fiqh` category loads its own chunk instead of one ~1.8 MB file; keep "Save all for offline" working for all categories; verify offline behaviour again and report chunk sizes per category. |
+
 ## Phase 5 working decisions (2026-10-08): made while building, please confirm
 
 Phase 5 started on the user's word ("start Phase 5 (Sawm)") after the Phase 4 merge preparation. These were my calls; each is a default that can be reversed.

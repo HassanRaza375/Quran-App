@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { MARAJI } from "~/data/wajibat";
+import { MARAJI } from "~/data/wajibat/runtime";
 
 const props = defineProps({
   initial: { type: String, default: null },

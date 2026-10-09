@@ -31,7 +31,7 @@
 <script setup>
 import HukmBadge from "~/components/wajibat/HukmBadge.vue";
 import SourceLine from "~/components/wajibat/SourceLine.vue";
-import { getRecitationById } from "~/data/wajibat";
+import { getRecitationById } from "~/data/wajibat/runtime";
 
 const props = defineProps({
   step: { type: Object, required: true },

@@ -49,7 +49,7 @@
 
 <script setup>
 import ProcedureStepBody from "~/components/wajibat/ProcedureStepBody.vue";
-import { getMarjaRuling, getRulingById } from "~/data/wajibat";
+import { getMarjaRuling, getRulingById } from "~/data/wajibat/runtime";
 
 const props = defineProps({
   procedure: { type: Object, required: true },

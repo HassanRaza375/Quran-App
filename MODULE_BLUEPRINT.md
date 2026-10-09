@@ -1400,6 +1400,17 @@ reuse Module 17's `AyahReferenceCard`, and Qur'an citation types come from
 `app/utils/quranReference.ts`. Do not build a second prayer-time, fasting-log, bookmark, audio or
 reminder system.
 
+**Data loading (Phase 5 follow-up).** `app/data/wajibat/index.ts` is the full synchronous dataset, for the unit tests and the
+generator scripts only. The app imports `app/data/wajibat/runtime.ts`: a small core (categories, topics, glossary, the
+one-line `rulingIndex.ts` used by search) plus one lazily loaded chunk per category (`chunks/<category>.ts` ->
+`wajibat-data-<category>-<hash>.js`, cut by `manualChunks` in `nuxt.config.ts`; each holds that category's rulings,
+procedures, recitations and helpers). A topic page runs `await loadCategory(id)` last in its setup, so the chunk is
+loaded before it renders on the server and the client. Every cross-reference (`seeAlso`, procedure steps, helper quotes)
+stays inside one category (`tests/wajibatChunks.test.ts` enforces it). All `wajibat-data-*` chunks are kept out of the
+install-time precache and written to the `wajibat-data-cache` by `useFiqhOfflineCache.ts`: a visit caches the core and
+that category; "Save all for offline" loads every category, caches all five chunks and records the build id. The browser
+suites are in `tests/e2e/wajibat/` (`npm run test:e2e:wajibat`).
+
 Phase 5 reuses these: the fasting topic "Dawn, maghrib and breaking the fast" has `liveTool: "sawm"`, which shows
 today's Fajr and Maghrib from `usePrayerStore()` (nothing recomputed) with links to `/prayerTime` and to the Module 11
 Ramadan fasting log at `/ramadan` (no second log). A topic page shows one "No rulings from … have been added yet" notice

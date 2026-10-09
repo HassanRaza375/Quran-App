@@ -19,7 +19,7 @@ Every ruling text in `app/data/wajibat/rulings/*.ts`, `procedures/*.ts` and `glo
 | `app/data/wajibat/rulings/sawm.ts` | `gen_sawm.py` (Phase 5): fasting and zakāt al-fiṭrah, Sistani 1529–1718 and 2003–2044, Khamenei's Rules 787–981 |
 | `app/data/wajibat/rulings/doubts.ts` | `gen_doubts.py`: doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw (Phase 4a) |
 | `app/data/wajibat/glossary.ts` | `gen_glossary.py` |
-| `app/data/wajibat/decisionTrees.ts` | `gen_helpers.py` (Phase 4b): the four decision helpers, authored as data in `tree_sd.py` (Sistani doubts), `tree_kd.py` (Khamenei doubts) and `tree_w.py` (wuḍūʾ, both), using `helpers_dsl.py`. Every quote is cut verbatim from the dataset dump and every option's `basedOn` phrase is checked against the marja's text; the generator reports all authoring errors at once. |
+| `app/data/wajibat/decisionTrees/<category>.ts`, `decisionTrees.ts` | `gen_helpers.py` (Phase 4b; one file per category, `decisionTrees.ts` aggregates them for tests and scripts): the four decision helpers, authored as data in `tree_sd.py` (Sistani doubts), `tree_kd.py` (Khamenei doubts) and `tree_w.py` (wuḍūʾ, both), using `helpers_dsl.py`. Every quote is cut verbatim from the dataset dump and every option's `basedOn` phrase is checked against the marja's text; the generator reports all authoring errors at once. |
 | `scripts/wajibat/treatise.py` | not a generator: reads Khamenei's Urdu treatise (*Aḥkām-e Āmūzishī*, lesson 16) for the Urdu-only wuḍūʾ entries `gen_taharat.py` uses (P19) |
 | `tests/fixtures/wajibatSourceSnapshot.json` | `snapshot.py`: the source unit of every quote, read from the downloaded pages |
 | `app/data/wajibat/topics.ts`, `categories.ts`, `recitations.ts`, `marja.ts` | **authored** (app-written summaries). Exceptions: `gen_doubts.py` keeps its topics' `rulingIds` in sync, and `place_qa_ids.py` places the Q&A ids. |
@@ -97,6 +97,7 @@ To check the supplementary Q&A entries word for word against the cited leader.ir
 | `verify_live_qa.py` | Q&A entries vs the live leader.ir pages |
 | `align_rules.py` | Aligns Khamenei's *Rules* across the Persian original (book 180), the official Urdu (197) and the English (241); English-to-Persian numbering |
 | `rules_verdicts.py` | The R11 verdicts: where the English or Urdu differs from the Persian, which one is withheld, and why |
+| `gen_index.py` | Writes `app/data/wajibat/rulingIndex.ts`, one line per ruling (id, topic, subject), so search and links need no category chunk. `build.py` runs it last. |
 | `gen_sawm.py` | Phase 5: every ruling of the two Sistani ranges and Khamenei's 787–981, paired by point (`R()`), with the `see_also` pointers and the women-specific (`sensitive`) flags. It also keeps each Sawm topic's `rulingIds` in step. |
 | `align_rules.en_to_persian` | English → Persian ruling number. The official Urdu follows the English order (+2 in the fasting chapter); the Persian original puts English 880 at 902 and runs +1 from 881 to 900 |
 | `review_rules.py`, `fa_view.py` | Print the three editions side by side for review (not part of the build) |

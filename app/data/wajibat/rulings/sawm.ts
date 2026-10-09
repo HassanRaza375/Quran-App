@@ -162,7 +162,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 792",
           url: "https://www.leader.ir/fa/book/180/1?sn=30885"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     sensitive: true
@@ -1556,7 +1557,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 815",
           url: "https://www.leader.ir/fa/book/180/1?sn=30889"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -1610,7 +1612,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 806",
           url: "https://www.leader.ir/fa/book/180/1?sn=30887"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -4390,7 +4393,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 878",
           url: "https://www.leader.ir/fa/book/180/1?sn=30901"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -5101,7 +5105,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 904",
           url: "https://www.leader.ir/fa/book/180/1?sn=30905"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -6845,7 +6850,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 884",
           url: "https://www.leader.ir/fa/book/180/1?sn=30903"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -7993,7 +7999,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 920",
           url: "https://www.leader.ir/fa/book/180/1?sn=30906"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -8264,7 +8271,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 925",
           url: "https://www.leader.ir/fa/book/180/1?sn=30906"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -8319,7 +8327,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 926",
           url: "https://www.leader.ir/fa/book/180/1?sn=30906"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -8896,7 +8905,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 937",
           url: "https://www.leader.ir/fa/book/180/1?sn=30908"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -9296,7 +9306,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 946",
           url: "https://www.leader.ir/fa/book/180/1?sn=30909"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -9523,7 +9534,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 954",
           url: "https://www.leader.ir/fa/book/180/1?sn=30910"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -10755,7 +10767,8 @@ export const SAWM_RULINGS: Ruling[] = [
           reference: "مسأله 979",
           url: "https://www.leader.ir/fa/book/180/1?sn=30913"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },

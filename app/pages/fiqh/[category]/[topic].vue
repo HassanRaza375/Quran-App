@@ -216,12 +216,12 @@ import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
 import ProcedureStepper from "~/components/wajibat/ProcedureStepper.vue";
 import DecisionHelper from "~/components/wajibat/DecisionHelper.vue";
 import LiveToolPanel from "~/components/wajibat/LiveToolPanel.vue";
-import { getProcedureById } from "~/data/wajibat";
+import { getProcedureById } from "~/data/wajibat/runtime";
 import { PANEL_META } from "~/utils/wajibatLabels";
 
 const route = useRoute();
 useUrduFont();
-const { getCategoryById, getTopicById, getGlossaryTermById, getMarjaById, getMarjaRuling, rulingsFor, helpersFor } = useWajibat();
+const { getCategoryById, getTopicById, getGlossaryTermById, getMarjaById, getMarjaRuling, rulingsFor, helpersFor, loadCategory } = useWajibat();
 const { marjaId, lang, loaded, load } = useFiqhPrefs();
 const { load: loadBookmarks, has, toggle } = useBookmarks();
 onMounted(() => {
@@ -317,6 +317,10 @@ watch(
     document.querySelector(route.hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 );
+
+// This category's data chunk (rulings, procedures, recitations, helpers) loads before the page renders,
+// on the server and on the client. Last on purpose: nothing above may run after an await.
+await loadCategory(String(route.params.category));
 </script>
 
 <style scoped>

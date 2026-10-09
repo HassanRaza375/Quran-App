@@ -127,7 +127,7 @@
 import HukmBadge from "~/components/wajibat/HukmBadge.vue";
 import BasisBadge from "~/components/wajibat/BasisBadge.vue";
 import SourceLine from "~/components/wajibat/SourceLine.vue";
-import { getMarjaRuling, getRecitationById, getRulingById } from "~/data/wajibat";
+import { getMarjaRuling, getRecitationById, getRulingById } from "~/data/wajibat/runtime";
 import { URDU_EDITION_LAG_NOTICE } from "~/utils/wajibatLabels";
 
 const props = defineProps({

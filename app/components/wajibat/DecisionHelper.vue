@@ -99,7 +99,7 @@
 
 <script setup>
 import SourceLine from "~/components/wajibat/SourceLine.vue";
-import { getRulingById, getMarjaRuling } from "~/data/wajibat";
+import { getRulingById, getMarjaRuling } from "~/data/wajibat/runtime";
 
 const props = defineProps({
   tree: { type: Object, required: true },

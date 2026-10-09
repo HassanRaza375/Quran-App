@@ -1314,3 +1314,54 @@ Not added in this pass, mostly because there is no single Rules ruling to cite a
 - Q 843: Is watching out for the new moon a kifā’ī obligation or something to be done as an obligatory c
 - Q 845: If it is permissible to follow a government announcement regarding sighting the crescent and it
 - Q 846: Would you please tell us what your opinion is regarding i‘tikāf in masjids other than the four 
+
+
+## Phase 5 approved: holds, browser suites in the repo, per-category data chunks (2026-10-09)
+
+Decisions F1–F6 are in `wajibat_decisions.md`. Phase 5 itself is unchanged except for the 13 holds below. Everything is on `wajibat-module`; **not merged**.
+
+### 1–4. Decisions recorded
+- **F1** zakāt al-fiṭrah (Khamenei): the notice stays; Phase 6 searches his Persian Q&A on leader.ir and the zakāt chapter of his Urdu Q&A book.
+- **F2** the 13 "neither matches the Persian" fasting rulings are **held with the pointer to his book**, recorded with `decide_mismatch.py` (`held-pending-review`, `--hold refer`, reviewer Syed Hassan Raza). Only their high-priority rows (28) are held; their 3 low rows were put back to `low-pending-review`, because the held rule is "high rows only" (a test enforces it). The ruling card shows no text, only the pointer to the *Rules* ruling. Totals now: **21 rulings held with a pointer** (8 + 13); `held-pending-review` 48 rows; `needs-human` **64 rows** (Khamenei Q&A answers with no Persian original); Sistani Urdu held 193; Khamenei Urdu held 18, English held 41. No step or helper answer quotes a held ruling (a test checks it).
+- **F3** iʿtikāf: Phase 8, low priority. **F4** the 65 unadded Q&A answers: skipped; from now on only Q&A answers that cover a point his Rules do not.
+
+### 5. Browser suites are in the repo: `npm run test:e2e:wajibat`
+- `tests/e2e/wajibat/` holds seven suites and a runner (`run.mjs`): it builds the app (unless `--skip-build`), starts the production server twice (helpers hidden on one port; the dev flag on another, for the helper walk only), runs the suites, prints the results and the chunk sizes, and stops the servers. `--suite a,b` runs some. Expected counts come from the app's own data, never from numbers typed into the tests. See `tests/e2e/wajibat/README.md`.
+- **Honest note:** my earlier browser scripts (the 90-check helper suite, Taharat 37, Salat 35, offline 22, Phase 4a 34, P18 30, guided prayers 15, held-pointer 8 and flag checks) were never committed; they lived only in my temporary working folder and are no longer there, so I could not re-run them. I wrote **new, broader suites for the same areas** instead and ran them from the repo. They do not reproduce the old check counts one for one.
+- **Results from the repo (one run against one production build): 2,812 checks, 0 failed.**
+
+| Suite | Checks | What it covers |
+|---|---|---|
+| `categories` | 769 | all 46 topics, both maraji', English at 1280 px and Urdu at 390 px: card counts, women's panel, "nothing yet" notice, overflow, helpers hidden, no errors; hub and category pages (replaces the Taharat, Salat and Phase 4a/P18 page checks) |
+| `sawm` | 17 | Phase 5 specifics |
+| `holds` | 95 | all 21 pointer rulings, held Sistani Urdu, held Khamenei English, nothing leaking to the other marja' |
+| `guided` | 383 | every step of all 11 guided prayers and ablutions, held-English steps shown in Urdu |
+| `helpers` | 1,530 | **all 262 paths of the 4 helpers** walked through the UI (138 + 81 + 26 + 17): "I'm not sure" on every question, every answer verbatim or a pointer, hidden with the flag off |
+| `chunks` | 7 | which data chunk each page downloads |
+| `offline` | 11 | see below |
+
+  Two failures in my own first runs of the suites were mistakes in the tests, fixed before the final run: a regular expression whose backslashes my shell had stripped, and a check that looked for the women's-panel cards before the panel was opened.
+
+### 6. Data split per category
+- **What changed.** The app no longer imports the whole dataset. `app/data/wajibat/runtime.ts` holds a small core (categories, topics, glossary, a one-line index of every ruling for search) and loads each category's rulings, procedures, recitations and helpers from its own chunk, on demand. `index.ts` stays the full dataset for the unit tests and the generators only. A topic page loads its category's chunk before it renders, on the server and in the browser. The hub search runs on the ruling index, so it needs no category chunk.
+- **Generated:** `decisionTrees/<category>.ts` (written by `gen_helpers.py`) and `rulingIndex.ts` (new `gen_index.py`); `build.py` runs both. Nothing is hand-edited.
+- **Chunk sizes, per category** (from the build; the unsplit file was 1,774.71 KiB raw / 334.97 KiB gzip):
+
+| Chunk | Raw KiB | Gzip KiB |
+|---|---|---|
+| core (always) | 148.93 | 34.70 |
+| Foundations | 36.21 | 10.44 |
+| Ṭahārah (with the wuḍūʾ helpers and 5 ablution guides) | 294.90 | 65.96 |
+| Ṣalāt (rulings, doubts, Q&A, guided prayers, recitations, doubts helpers) | 813.67 | 143.10 |
+| Ṣawm (with Khamenei's Q&A) | 568.02 | 102.76 |
+| all five | 1,861.73 | 357.0 |
+
+  A visit downloads the core plus one category: at most **962.6 KiB raw (177.8 KiB gzip)** for Ṣalāt, **717 KiB** for Ṣawm, **443 KiB** for Ṭahārah, 185 KiB for Foundations; the hub alone loads only the core. The sum is 87 KiB larger than the single file because each chunk repeats a little module overhead.
+- **Install-time download** (`npm run size`): 5,452.07 KiB raw (2,736.26 KiB gzip), +1.8 KiB. The data chunks stay out of the precache by design (R8).
+- **Offline ("Save all for offline"), checked in the browser:**
+  - visiting one category caches the core and that category only (Sawm: `core, sawm`);
+  - the hub button loads every category, caches **all five chunks** and records the build id and chunk URLs; after a reload the hub shows "Saved for offline" again; a copy from an older build does not count;
+  - older copies of a chunk are pruned only when the same chunk exists under a new hash, so opening one category never deletes another's cache;
+  - with the network cut, in a second tab that has loaded only the core, one topic of **each of the four categories renders its cards from the cache**, and search works.
+- **Known limit, unchanged:** the app shell itself is not precached for a hard navigation, so offline reading means moving around inside an open app (as before). A fresh tab opened while offline still fails to load.
+- **Tests:** 513 unit tests pass (509 before). New `tests/wajibatChunks.test.ts`: the four chunks together hold exactly the full dataset; every ruling, procedure and helper sits in the chunk of its topic's category; every cross-reference (`seeAlso`, procedure steps, helper quotes, topic ruling lists) stays inside one chunk; the ruling index matches the data and gives the same search results as the full data.

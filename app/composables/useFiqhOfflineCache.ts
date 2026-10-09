@@ -1,48 +1,53 @@
-// Install-size follow-up (decisions R5/R8): the Wajibat ruling/procedure
-// text (`wajibat-data` chunk, see nuxt.config.ts) is deliberately excluded
-// from the PWA's install-time precache, and cached at runtime instead.
+// Install-size follow-up (decisions R5/R8): the Wajibat data chunks (`wajibat-data-*`: a small core
+// plus one chunk per category, see nuxt.config.ts and app/data/wajibat/runtime.ts) are deliberately
+// excluded from the PWA's install-time precache and cached at runtime instead.
 //
-// This does NOT rely on the service worker passively intercepting the
-// chunk's own fetch — verified in a real browser (Playwright) that Nuxt's
-// SSR-injected <link rel="modulepreload"> for this chunk is NOT caught by
-// the SW's fetch event in Chromium, so that passive approach silently never
-// cached anything. Instead, any /fiqh page that loads this module (every one
-// does, via useWajibat()) explicitly writes it into Cache Storage itself,
-// the same way regardless of how the browser originally fetched it.
-const CACHE_NAME = "wajibat-data-cache";
-const CHUNK_RE = /\/wajibat-data-.*\.js$/;
+// This does NOT rely on the service worker passively intercepting a chunk's own fetch: verified in a
+// real browser (Playwright) that Nuxt's SSR-injected <link rel="modulepreload"> is NOT caught by the
+// SW's fetch event in Chromium, so that approach silently never cached anything. Instead every /fiqh
+// page explicitly writes the chunks it has loaded into Cache Storage itself, and "Save all for
+// offline" on the hub loads every category first and then does the same, so a reader who opens one
+// category offline finds that category (and the core) there, and one who pressed the button finds all.
+import { loadedChunkUrls } from "~/data/wajibat/runtime";
 
-const findChunkUrls = (): string[] => {
-  if (typeof document === "undefined" || typeof performance === "undefined") return [];
-  const fromPerf = performance.getEntriesByType("resource").map((e) => e.name);
-  const fromScripts = Array.from(document.scripts).map((s) => s.src);
-  return [...new Set([...fromPerf, ...fromScripts])].filter((u) => CHUNK_RE.test(u));
+const CACHE_NAME = "wajibat-data-cache";
+const MARKER = "/__wajibat-offline-saved__";
+const NAME_RE = /\/(wajibat-data-[a-z]+)-[^/]+\.js$/;
+
+/** Chunk files of this build that have been loaded in this tab. */
+const currentUrls = (): string[] => {
+  const fromRuntime = loadedChunkUrls().filter((u) => NAME_RE.test(u));
+  if (fromRuntime.length || typeof performance === "undefined") return fromRuntime;
+  return [...new Set(performance.getEntriesByType("resource").map((e) => e.name))].filter((u) => NAME_RE.test(u));
 };
 
-/** True only when *this build's* chunk is cached — a copy from an earlier build (stale ruling
- * text, different content hash) doesn't count. */
-export const isWajibatDataCached = async (): Promise<boolean> => {
+const markerRequest = () => new Request(new URL(MARKER, location.origin).href);
+
+/** True only when every chunk of *this build* was saved by "Save all for offline" (a copy from an
+ * earlier build does not count: the marker records the build id and the exact chunk URLs). */
+export const isWajibatDataCached = async (buildId: string): Promise<boolean> => {
   if (typeof caches === "undefined") return false;
   try {
     const cache = await caches.open(CACHE_NAME);
-    const urls = findChunkUrls();
-    if (!urls.length) return (await cache.keys()).length > 0;
-    for (const url of urls) if (!(await cache.match(url))) return false;
+    const res = await cache.match(markerRequest());
+    if (!res) return false;
+    const saved = (await res.json()) as { buildId: string; urls: string[] };
+    if (saved.buildId !== buildId || !saved.urls.length) return false;
+    for (const url of saved.urls) if (!(await cache.match(url))) return false;
     return true;
   } catch {
     return false;
   }
 };
 
-/** Best-effort, idempotent: fetches and caches the chunk if it isn't already, then drops copies
- * left by earlier builds. The chunk's filename carries a content hash (nuxt.config.ts), so a
- * corrected ruling ships under a new URL; pruning keeps the old text from lingering in storage. */
+/** Best-effort, idempotent: caches the chunks loaded so far, then drops older builds' copies of the
+ * same chunks. A chunk's filename carries a content hash, so a corrected ruling ships under a new URL;
+ * pruning keeps the old text from lingering. Chunks not loaded in this tab are left alone. */
 export const ensureWajibatDataCached = async (): Promise<boolean> => {
   if (typeof caches === "undefined") return false;
   try {
     const cache = await caches.open(CACHE_NAME);
-    const urls = findChunkUrls();
-    if (!urls.length) return (await cache.keys()).length > 0;
+    const urls = currentUrls();
     let ok = true;
     for (const url of urls) {
       if (await cache.match(url)) continue;
@@ -51,10 +56,27 @@ export const ensureWajibatDataCached = async (): Promise<boolean> => {
       else ok = false;
     }
     if (ok) {
-      const current = new Set(urls);
-      for (const req of await cache.keys()) if (!current.has(req.url)) await cache.delete(req);
+      const nameOf = (u: string) => NAME_RE.exec(u)?.[1];
+      const live = new Map(urls.map((u) => [nameOf(u), u]));
+      for (const req of await cache.keys()) {
+        const n = nameOf(req.url);
+        if (n && live.has(n) && live.get(n) !== req.url) await cache.delete(req);
+      }
     }
     return ok;
+  } catch {
+    return false;
+  }
+};
+
+/** "Save all for offline": loads every category's chunk, caches them all, and records what was saved. */
+export const saveAllWajibatOffline = async (loadAll: () => Promise<void>, buildId: string): Promise<boolean> => {
+  try {
+    await loadAll();
+    if (!(await ensureWajibatDataCached())) return false;
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(markerRequest(), new Response(JSON.stringify({ buildId, urls: currentUrls() }), { headers: { "content-type": "application/json" } }));
+    return true;
   } catch {
     return false;
   }

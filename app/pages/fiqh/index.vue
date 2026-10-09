@@ -125,7 +125,7 @@ import FiqhNotices from "~/components/wajibat/FiqhNotices.vue";
 import MarjaPicker from "~/components/wajibat/MarjaPicker.vue";
 import MarjaChip from "~/components/wajibat/MarjaChip.vue";
 import FiqhDisclaimer from "~/components/wajibat/FiqhDisclaimer.vue";
-import { ensureWajibatDataCached, isWajibatDataCached } from "~/composables/useFiqhOfflineCache";
+import { isWajibatDataCached, saveAllWajibatOffline } from "~/composables/useFiqhOfflineCache";
 
 useHead({ title: "Daily Fiqh (Wajibat)" });
 useSeoMeta({
@@ -133,7 +133,8 @@ useSeoMeta({
 });
 
 useUrduFont();
-const { categories, search, getCategoryById, getTopicById, getMarjaById } = useWajibat();
+const { categories, search, getCategoryById, getTopicById, getMarjaById, loadAllCategories } = useWajibat();
+const buildId = useRuntimeConfig().app.buildId;
 const { marjaId, loaded, load } = useFiqhPrefs();
 
 // Install-size follow-up (decisions R5/R8): see useFiqhOfflineCache.ts for
@@ -157,12 +158,12 @@ const checkOffline = async () => {
     offlineState.value = "unsupported";
     return;
   }
-  offlineState.value = (await isWajibatDataCached()) ? "saved" : "unknown";
+  offlineState.value = (await isWajibatDataCached(buildId)) ? "saved" : "unknown";
 };
 
 const saveOffline = async () => {
   offlineState.value = "saving";
-  offlineState.value = (await ensureWajibatDataCached()) ? "saved" : "error";
+  offlineState.value = (await saveAllWajibatOffline(loadAllCategories, buildId)) ? "saved" : "error";
 };
 
 onMounted(() => {

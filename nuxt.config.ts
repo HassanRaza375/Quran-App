@@ -70,15 +70,23 @@ export default defineNuxtConfig({
       build: {
         rollupOptions: {
           output: {
+            // One chunk per Daily Fiqh category (loaded on demand by app/data/wajibat/runtime.ts) plus a
+            // small "core" (categories, topics, glossary, the ruling index). All are named wajibat-data-*.
             manualChunks(id) {
-              if (id.replace(/\\/g, "/").includes("/data/wajibat/")) return "wajibat-data";
+              const p = id.replace(/\\/g, "/");
+              if (!p.includes("/data/wajibat/")) return;
+              if (/\/(chunks\/foundations|rulings\/foundations)\./.test(p)) return "wajibat-data-foundations";
+              if (/\/(chunks\/taharat|rulings\/taharat|procedures\/taharat|decisionTrees\/taharat)\./.test(p)) return "wajibat-data-taharat";
+              if (/\/(chunks\/salat|rulings\/(salat|salatQa|doubts)|procedures\/salat|recitations|decisionTrees\/salat)\./.test(p)) return "wajibat-data-salat";
+              if (/\/(chunks\/sawm|rulings\/(sawm|sawmQa))\./.test(p)) return "wajibat-data-sawm";
+              return "wajibat-data-core";
             },
             // Nuxt's own default chunkFileNames is "_nuxt/[hash].js" (no
             // [name]), so without this the manualChunks grouping above still
             // lands in its own file, just under an indistinguishable hash —
             // this is what lets the PWA config (below) target it by name.
             chunkFileNames: (chunkInfo) =>
-              chunkInfo.name === "wajibat-data" ? "_nuxt/wajibat-data-[hash].js" : "_nuxt/[hash].js",
+              chunkInfo.name.startsWith("wajibat-data-") ? "_nuxt/[name]-[hash].js" : "_nuxt/[hash].js",
           },
         },
       },
@@ -147,7 +155,7 @@ export default defineNuxtConfig({
           options: {
             cacheName: "wajibat-data-cache",
             expiration: {
-              maxEntries: 10,
+              maxEntries: 20,
               maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year; content is versioned by its build hash
             },
             cacheableResponse: { statuses: [0, 200] },

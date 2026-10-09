@@ -290,3 +290,11 @@ export interface GlossaryTerm {
   /** The book the definition is taken from; absent = app-written explanation. */
   source?: SourceCitation;
 }
+
+/** What one category's lazily loaded data chunk holds (see runtime.ts). */
+export interface CategoryData {
+  rulings: Ruling[];
+  procedures: Procedure[];
+  recitations: Recitation[];
+  decisionTrees: DecisionTree[];
+}

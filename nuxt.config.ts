@@ -79,6 +79,8 @@ export default defineNuxtConfig({
               if (/\/(chunks\/taharat|rulings\/taharat|procedures\/taharat|decisionTrees\/taharat)\./.test(p)) return "wajibat-data-taharat";
               if (/\/(chunks\/salat|rulings\/(salat|salatQa|doubts)|procedures\/salat|recitations|decisionTrees\/salat)\./.test(p)) return "wajibat-data-salat";
               if (/\/(chunks\/sawm|rulings\/(sawm|sawmQa))\./.test(p)) return "wajibat-data-sawm";
+              if (/\/(chunks\/khums|rulings\/khums)\./.test(p)) return "wajibat-data-khums";
+              if (/\/(chunks\/zakat|rulings\/zakat)\./.test(p)) return "wajibat-data-zakat";
               return "wajibat-data-core";
             },
             // Nuxt's own default chunkFileNames is "_nuxt/[hash].js" (no

@@ -102,6 +102,16 @@ T=[("wajib","wājib","obligatory","واجب","واجب"),
 ("hadd","ḥadd al‑tarakhkhuṣ","permitted limit","حد الترخص","حد ترخص"),
 ("nadhr","nadhr","vow","نذر","نذر"),
 ("zakatfitrah","zakāt al-fiṭrah","fiṭrah alms tax","زكاة الفطرة","زکوٰۃ فطرہ"),
+# Phase 6: khums and zakat
+("khums","khums","the one-fifth tax","الخمس","خمس"),
+("zakat","zakat","alms tax","الزكاة","زکوٰۃ"),
+("nisab","niṣāb","taxable limit","نصاب","نصاب"),
+("nukhud","nukhud","equivalent to 0.192 grams","نخود","نخود"),
+("miskin","miskīn","(faqīr)","مسكين","مسکین"),
+("sayyid","sayyid","Prophet Muḥammad (Ṣ)","سيد","سید"),
+("sahmimam","sahm al‑imām","the Imam (ʿA)","سهم الإمام","سہم امام"),
+("sahmsadat","sahm al‑sādāt","for sayyids","سهم السادة","سہم سادات"),
+("mashhur","mashhūr","held by most jurists","مشهور","مشہور"),
 ]
 out=[]
 for id_,h,end,ar,ur in T:

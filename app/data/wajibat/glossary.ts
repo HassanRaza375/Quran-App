@@ -1195,5 +1195,131 @@ export const WAJIBAT_GLOSSARY: GlossaryTerm[] = [
       reference: "Glossary",
       url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
     }
+  },
+  {
+    id: "khums",
+    term: "khums",
+    arabic: "الخمس",
+    urdu: "خمس",
+    definition: {
+      en: "the one-fifth tax"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "zakat",
+    term: "zakat",
+    arabic: "الزكاة",
+    urdu: "زکوٰۃ",
+    definition: {
+      en: "alms tax"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "nisab",
+    term: "niṣāb",
+    arabic: "نصاب",
+    urdu: "نصاب",
+    definition: {
+      en: "taxable limit"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "nukhud",
+    term: "nukhud",
+    arabic: "نخود",
+    urdu: "نخود",
+    definition: {
+      en: "measure of weight equivalent to 0.192 grams"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "miskin",
+    term: "miskīn",
+    arabic: "مسكين",
+    urdu: "مسکین",
+    definition: {
+      en: "a needy person; someone whose living conditions are worse than that of a poor person (faqīr)"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "sayyid",
+    term: "sayyid",
+    arabic: "سيد",
+    urdu: "سید",
+    definition: {
+      en: "(sing. of sādāt) a male descendant of Hāshim, the great grandfather of Prophet Muḥammad (Ṣ)"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "sahmimam",
+    term: "sahm al‑imām",
+    arabic: "سهم الإمام",
+    urdu: "سہم امام",
+    definition: {
+      en: "the portion of khums for the Imam (ʿA)"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "sahmsadat",
+    term: "sahm al‑sādāt",
+    arabic: "سهم السادة",
+    urdu: "سہم سادات",
+    definition: {
+      en: "the portion of khums for sayyids"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
+  },
+  {
+    id: "mashhur",
+    term: "mashhūr",
+    arabic: "مشهور",
+    urdu: "مشہور",
+    definition: {
+      en: "opinion held by most jurists"
+    },
+    source: {
+      title: "Islamic Laws (4th edition)",
+      reference: "Glossary",
+      url: "https://www.sistani.org/files-new/book-pdf/english-islamic-laws-4th-edition.pdf"
+    }
   }
 ];

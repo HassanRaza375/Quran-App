@@ -17,6 +17,7 @@ Every ruling text in `app/data/wajibat/rulings/*.ts`, `procedures/*.ts` and `glo
 | `app/data/wajibat/rulings/salatQa.ts` | `gen_kqa.py`: Khamenei's Q&A book as supplementary entries (P13/R7) |
 | `app/data/wajibat/rulings/sawmQa.ts` | `gen_kqa.py` (second output): the fasting chapter of Khamenei's Q&A book as supplementary entries (Phase 5) |
 | `app/data/wajibat/rulings/sawm.ts` | `gen_sawm.py` (Phase 5): fasting and zakāt al-fiṭrah, Sistani 1529–1718 and 2003–2044, Khamenei's Rules 787–981 |
+| `app/data/wajibat/rulings/khums.ts`, `zakat.ts` | `gen_khums.py` (Phase 6): Sistani Khums 1768–1866 and Zakat 1871–2002 (plus the unnumbered business-goods passage), with Khamenei's *The Rulings of Khums* Q&A (paired by number, or stand-alone with `audience`) |
 | `app/data/wajibat/rulings/doubts.ts` | `gen_doubts.py`: doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw (Phase 4a) |
 | `app/data/wajibat/glossary.ts` | `gen_glossary.py` |
 | `app/data/wajibat/decisionTrees/<category>.ts`, `decisionTrees.ts` | `gen_helpers.py` (Phase 4b; one file per category, `decisionTrees.ts` aggregates them for tests and scripts): the four decision helpers, authored as data in `tree_sd.py` (Sistani doubts), `tree_kd.py` (Khamenei doubts) and `tree_w.py` (wuḍūʾ, both), using `helpers_dsl.py`. Every quote is cut verbatim from the dataset dump and every option's `basedOn` phrase is checked against the marja's text; the generator reports all authoring errors at once. |
@@ -89,6 +90,7 @@ To check the supplementary Q&A entries word for word against the cited leader.ir
 | `paths.py` | Locations: `.cache/` (sources), `.cache/_build/` (scratch), the app's data folder |
 | `src.py` | Indexes Sistani's English and Urdu rulings by number, and Khamenei's Q&A by number |
 | `kh_rpf.py` | Indexes Khamenei's *Rules on Prayer & Fasting 2023* by ruling number |
+| `kh_khums.py` | Indexes Khamenei's *The Rulings of Khums* by question number in the English, official Urdu and Persian editions (crawled with `crawl_book.py`); decides which questions parse cleanly. `kh_fitr.py` reads his older zakāt al-fiṭrah Q&A; it is not used (no citable page, decision H8). |
 | `entries.py` | Shared builders `S()` (Sistani), `K()` (Khamenei), `R()` (one ruling, per marja'), `finalize()`, `ts()`. Rulings withheld from display (`HIDDEN_RPF`, e.g. P15) live here with their reasons. |
 | `qa_sections.py`, `picks.py` | Section map of the Q&A book; the Q&As compared with the *Rules*, with the agree/differ verdicts |
 | `place_qa_ids.py` | Puts each Q&A id after the *Rules* ruling it was compared with |
@@ -99,6 +101,7 @@ To check the supplementary Q&A entries word for word against the cited leader.ir
 | `rules_verdicts.py` | The R11 verdicts: where the English or Urdu differs from the Persian, which one is withheld, and why |
 | `gen_index.py` | Writes `app/data/wajibat/rulingIndex.ts`, one line per ruling (id, topic, subject), so search and links need no category chunk. `build.py` runs it last. |
 | `gen_sawm.py` | Phase 5: every ruling of the two Sistani ranges and Khamenei's 787–981, paired by point (`R()`), with the `see_also` pointers and the women-specific (`sensitive`) flags. It also keeps each Sawm topic's `rulingIds` in step. |
+| `gen_khums.py` | Phase 6: every Sistani ruling of the Khums and Zakat chapters, the `PAIR` table (Khamenei question ↔ Sistani ruling, read by a person), the `STAR` table (revised rulings compared with the Urdu), and Khamenei's stand-alone questions. Two outputs: `khums.ts`, `zakat.ts`. |
 | `align_rules.en_to_persian` | English → Persian ruling number. The official Urdu follows the English order (+2 in the fasting chapter); the Persian original puts English 880 at 902 and runs +1 from 881 to 900 |
 | `review_rules.py`, `fa_view.py` | Print the three editions side by side for review (not part of the build) |
 

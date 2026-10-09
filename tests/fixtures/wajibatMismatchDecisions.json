@@ -1494,6 +1494,2518 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
+ "kq100|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq100|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq101|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq101|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq102|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq102|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq104|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq104|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq105|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq105|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq105|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq105|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq106|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq106|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq108|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq108|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq109|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq109|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq109|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq109|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq111|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq111|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq112|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq112|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq112|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq112|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq113|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq113|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq113|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq113|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq113|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq114|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq114|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq114|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq116|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq116|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq116|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq116|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq116|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq118|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq118|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq119|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq119|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq119|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq119|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq119|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq11|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq11|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq11|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq120|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq120|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq120|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq120|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq120|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq121|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq121|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq121|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq122|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq122|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq122|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq122|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq122|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq124|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq124|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq126|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq126|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq127|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq127|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq128|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq128|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq129|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq129|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq12|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq12|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq130|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq131|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq131|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq131|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq133|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq133|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq134|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq134|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq135|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq135|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq135|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq136|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq136|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq139|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq139|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq139|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq139|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq13|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq13|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq140|khamenei|text|en-fa": {
+  "note": "The English does not match the Persian, but there is no official Urdu to show instead, so the English was not hidden automatically.",
+  "status": "needs-human"
+ },
+ "kq141|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq141|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq142|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq142|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq142|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq142|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq142|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq144|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq144|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq144|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq144|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq144|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq145|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq145|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq145|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq145|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq147|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq147|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq14|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq14|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq14|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq150|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq150|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq150|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq150|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq152|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq152|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq153|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq153|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq153|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq153|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq154|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq154|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq156|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq156|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq158|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq158|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq159|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq159|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq15|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq15|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq15|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq15|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq162|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq162|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq163|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq163|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq163|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq165|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq165|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq165|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq165|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq165|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq167|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq167|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq167|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq167|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq168|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq168|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq169|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq169|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq169|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq16|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq16|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq170|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq170|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq170|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq170|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq170|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq170|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq171|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq171|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq171|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq172|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq172|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq172|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq172|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq176|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq176|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq176|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq176|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq177|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq177|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq177|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq177|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq177|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq177|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq178|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq178|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq179|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq179|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq179|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq179|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq17|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq17|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq180|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq180|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq180|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq182|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq182|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq182|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq182|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq183|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq183|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq183|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq184|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq184|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq184|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq184|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq184|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq184|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq186|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq186|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq188|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq188|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq18|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq18|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq190|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq190|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq191|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq191|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq191|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq192|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq192|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq192|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq194|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq194|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq195|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq195|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq197|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq197|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq19|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq19|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq200|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq200|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq202|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq202|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq204|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq204|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq204|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq204|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq20|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq20|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq20|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq20|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq20|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq211|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq211|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq214|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq214|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq215|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq215|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq215|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq215|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq219|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq219|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq21|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq21|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq220|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq220|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq222|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq222|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq222|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq223|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq223|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq224|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq224|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq224|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq224|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq225|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq225|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq225|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq229|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq229|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq229|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq229|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq229|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq22|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq22|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq22|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq233|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq233|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq233|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq233|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq233|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq234|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq234|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq235|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq235|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq235|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq235|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq236|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq236|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq236|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq236|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq237|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq237|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq239|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq239|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq239|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq241|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq241|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq241|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq241|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq242|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq242|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq242|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq243|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq243|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq244|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq244|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq244|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq244|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq245|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq245|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq245|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq248|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq248|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq249|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq249|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq24|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq24|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq24|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq250|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq250|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq250|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq250|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq251|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq251|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq252|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq252|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq252|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq253|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq253|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq253|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq253|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq254|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq254|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq254|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq254|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq254|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq257|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq257|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq258|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq258|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq259|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq259|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq25|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq25|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq260|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq260|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq261|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq261|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq261|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq261|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq262|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq262|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq262|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq264|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq264|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq264|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq264|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq264|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq265|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq265|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq265|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq266|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq266|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq267|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq267|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq269|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq269|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq271|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq271|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq271|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq271|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq271|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq272|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq272|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq274|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq274|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq275|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq275|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq277|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq277|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq279|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq279|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq27|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq27|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq282|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq282|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq282|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq283|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq283|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq284|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq284|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq285|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq285|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq285|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq285|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq285|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq286|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq286|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq286|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq286|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq287|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq287|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq287|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq288|khamenei|question|en-fa": {
+  "note": "The English does not match the Persian, but there is no official Urdu to show instead, so the English was not hidden automatically.",
+  "status": "needs-human"
+ },
+ "kq288|khamenei|text|en-fa": {
+  "note": "The English does not match the Persian, but there is no official Urdu to show instead, so the English was not hidden automatically.",
+  "status": "needs-human"
+ },
+ "kq289|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq289|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq289|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq289|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq28|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq28|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq290|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq290|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq291|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq291|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq292|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq292|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq292|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq293|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq293|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq293|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq293|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq294|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq294|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq294|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq295|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq295|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq295|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq295|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq297|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq297|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq29|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq29|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq29|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq2|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq2|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq300|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq300|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq300|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq300|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq304|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq304|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq308|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq308|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq308|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq308|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq314|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq314|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq31|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq31|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq31|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq31|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq31|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq35|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq35|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq35|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq36|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq36|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq38|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq38|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq38|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq38|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq38|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq38|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq39|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq39|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq39|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq3|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq3|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq3|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq3|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq40|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq40|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq40|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq40|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq43|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq43|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq46|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq46|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq46|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq46|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq46|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq48|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq48|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq48|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq48|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq51|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq51|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq51|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq54|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq54|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq54|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq54|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq58|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq58|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq60|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq60|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq61|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq61|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq62|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq62|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq63|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq63|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq64|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq64|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq66|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq66|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq66|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq66|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq68|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq68|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq6|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq6|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq71|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq71|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq73|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq73|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq73|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq73|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq73|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq74|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq74|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq75|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq75|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq75|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq75|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq76|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq76|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq78|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq78|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq78|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq78|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq81|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq81|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq81|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq81|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq81|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq81|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq82|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq82|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq82|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq83|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq83|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq83|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq83|khamenei|text|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq83|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq84|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq84|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq84|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq84|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq85|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq85|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq85|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq85|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq88|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq88|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq89|khamenei|question|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq89|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq89|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq89|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq90|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq90|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq92|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq92|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq93|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq93|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq93|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq94|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq94|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq94|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq94|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq96|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq96|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq96|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq96|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq96|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq97|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq97|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq97|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq97|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq98|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq98|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq9|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq9|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq9|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "kq9|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
  "kurrdefinition|sistani|text|en-ur": {
   "hold": "hide-ur",
   "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
@@ -3474,6 +5986,308 @@
   "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
   "status": "hidden-pending-review"
  },
+ "sk1768|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1769|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1771|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1772|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1773|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sk1773|khamenei|question|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sk1773|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1773|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1781|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1784|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1784|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1784|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1784|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1785|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1787|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1789|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1790|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1793|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1793|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1793|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1793|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1793|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1794|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1794|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1794|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1799|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1804|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1805|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1806|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1807|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1809|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1810|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1810|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1811|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1812|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1814|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1814|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "sk1814|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1816|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1818|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1820|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1821|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1822|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1823|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1826|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1828|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1830|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1830|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1830|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1831|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1832|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1833|khamenei|question|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sk1833|khamenei|question|en-ur": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sk1833|khamenei|text|en-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sk1833|khamenei|text|ur-fa": {
+  "note": "Neither the English nor the Urdu matches the Persian.",
+  "status": "needs-human"
+ },
+ "sk1835|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1836|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1838|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1844|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1849|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1851|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1852|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1855|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1856|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "sk1857|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1858|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1859|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1863|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "sk1864|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
  "speaking|khamenei|text|en-ur": {
   "hold": "hide-ur",
   "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
@@ -3837,6 +6651,271 @@
   "status": "hidden-pending-review"
  },
  "wuduwhenwajib|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1871|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1876|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1877|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1880|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1886|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1891|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1892|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1893|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1894|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1895|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1896|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1901|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1904|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1906|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1908|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1910|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1912|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1913|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1915|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1917|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1918|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1923|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1925|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1926|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1927|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1928|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1929|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1931|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1932|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1937|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1938|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1939|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1940|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1942|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1944|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1946|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1947|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1949|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1951|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1953|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1960|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1961|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1964|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1968|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1969|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1970|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1972|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1974|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1977|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1979|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1983|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1985|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1989|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1992|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1993|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1996|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk1999|sistani|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
+  "status": "hidden-pending-review"
+ },
+ "zk2002|sistani|text|en-ur": {
   "hold": "hide-ur",
   "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
   "status": "hidden-pending-review"

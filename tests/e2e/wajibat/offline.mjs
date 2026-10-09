@@ -37,7 +37,7 @@ export default async function run({ browser, data }) {
   await button.click();
   await page.getByRole("button", { name: /Saved for offline/ }).waitFor({ timeout: 30000 });
   const all = (await cachedChunks(page)).join();
-  t.ok(all === "core,foundations,salat,sawm,taharat", `Save all caches all five chunks (got ${all})`);
+  t.ok(all === "core,foundations,khums,salat,sawm,taharat,zakat", `Save all caches all seven chunks (got ${all})`);
 
   await page.reload({ waitUntil: "networkidle" });
   await page.waitForTimeout(500);
@@ -53,11 +53,13 @@ export default async function run({ browser, data }) {
   await reader.waitForSelector(".v-text-field input");
   await ctx.setOffline(true);
   for (const cat of CATEGORIES) {
-    const topic = data.topics.find((x) => x.categoryId === cat && expectedTopic(data, x, "khamenei").hasAny);
+    // Khamenei has no zakat entries (decision G4): that category shows its one notice instead of cards
+    const topic = data.topics.find((x) => x.categoryId === cat && expectedTopic(data, x, "khamenei").hasAny) ?? data.topics.find((x) => x.categoryId === cat);
     try {
       await reader.click(`a[href='/fiqh/${cat}']`);
       await reader.click(`a[href='/fiqh/${cat}/${topic.id}']`);
-      await reader.waitForSelector(".ruling-card", { timeout: 15000 });
+      await reader.waitForSelector(expectedTopic(data, topic, "khamenei").empty ? ".v-alert:has-text('No rulings from')" : ".ruling-card", { timeout: 15000 });
+      await reader.waitForTimeout(500);
       const cards = await reader.$$eval(".ruling-card", (e) => e.length);
       t.ok(cards === expectedTopic(data, topic, "khamenei").main, `offline: ${cat}/${topic.id} renders ${cards} cards`);
     } catch (e) {

@@ -33,6 +33,8 @@ const LOADERS: Record<string, Loader> = {
   taharat: () => import("./chunks/taharat"),
   salat: () => import("./chunks/salat"),
   sawm: () => import("./chunks/sawm"),
+  khums: () => import("./chunks/khums"),
+  zakat: () => import("./chunks/zakat"),
 };
 
 const rulings = new Map<string, Ruling>();

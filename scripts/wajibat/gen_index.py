@@ -9,7 +9,9 @@ rows = []
 for r in data["rulings"]:
     row = {"id": r["id"], "topicId": r["topicId"], "subject": r["subject"]}
     if r.get("supplementary"):
-        row["supplementaryMarja"] = r["supplementary"]["marjaId"]
+        row["audienceMarja"] = r["supplementary"]["marjaId"]
+    elif r.get("audience"):
+        row["audienceMarja"] = r["audience"]
     rows.append(row)
 body = json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
 body = body.replace("},{", "}," + LF + "  {").replace("[{", "[" + LF + "  {").replace("}]", "}" + LF + "]")
@@ -18,7 +20,7 @@ open(os.path.join(DATA, "rulingIndex.ts"), "w", encoding="utf-8", newline=LF).wr
     + "// One line per ruling, so search and links need no category chunk." + LF + LF
     + "export interface RulingIndexEntry {" + LF
     + "  id: string;" + LF + "  topicId: string;" + LF + "  subject: { en: string; ur?: string };" + LF
-    + "  /** Set for a marja's supplementary Q&A entry (shown to his followers only). */" + LF
-    + '  supplementaryMarja?: "sistani" | "khamenei" | "makarem";' + LF + "}" + LF + LF
+    + "  /** Set when the ruling belongs to one marja' only (a supplementary Q&A entry, or his own point): shown to his followers only. */" + LF
+    + '  audienceMarja?: "sistani" | "khamenei" | "makarem";' + LF + "}" + LF + LF
     + "export const WAJIBAT_RULING_INDEX: RulingIndexEntry[] = " + body + ";" + LF)
 print("ruling index:", len(rows))

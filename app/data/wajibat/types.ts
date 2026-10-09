@@ -94,6 +94,8 @@ export interface WajibatTopic {
   glossaryIds?: string[];
   /** Live data from another app module shown on the topic page, never recomputed here (spec §6.3). */
   liveTool?: "prayertimes" | "qibla" | "sawm";
+  /** Phase 6 (decision G3): the page tells the reader where to pay by pointing to his marja's official website only; the app gives no bank details, representatives or addresses. */
+  payLink?: boolean;
   sensitive?: boolean;
   /** Only if a real reviewer exists (Q10). */
   reviewedBy?: { name: string; date: string };
@@ -185,6 +187,11 @@ export interface Ruling {
    * ruling(s) it was compared with. `agreesWith` cites those rulings; a Q&A that differs from
    * them is not added at all. */
   supplementary?: { marjaId: MarjaId; agreesWith: SourceCitation[] };
+  /** Phase 6: a point that only this marja's own book states, with no counterpart in the other's
+   * (for example Khamenei's Q&A in *The Rulings of Khums*). It holds his entry only and is shown to
+   * his followers only: other maraji' never see it, not even as "not added yet". Unlike a
+   * `supplementary` entry it is his primary text, so it needs no ruling to agree with. */
+  audience?: MarjaId;
   /** For a marja' with no entry in this ruling whose own book states the same point inside
    * another ruling of the same topic: the UI points there instead of showing "not added yet".
    * Used only where that other entry really covers this point (Phase 4a). */

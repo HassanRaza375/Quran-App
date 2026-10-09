@@ -1354,7 +1354,7 @@ responsive layout at 1280/768/390px) passed without defects.
 **Status: Phases 0–3 built (Phase 3 on branch `wajibat-module`, with the P12–P14 fixes and Khamenei's
 Q&A supplementary entries, P13). Phase 4a (doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw content) is built; Phase 4b (the decision helpers: prayer doubts and wuḍūʾ, for Sistani
 and Khamenei) is built and merged, its four helpers hidden until a reviewer signs off every path. Phase 5 (Sawm: fasting and zakāt al-fiṭrah, 13 topics, 341 rulings)
-is built on `wajibat-module` and awaiting review. Phases 6–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
+was merged. Phase 6 (Khums and Zakat: 21 topics, 527 rulings; Sistani chapters in full, Khamenei's *Rulings of Khums* Q&A; no calculator, paying topics link only to the marja's official site) is built on `wajibat-module` and awaiting review. Phases 7–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
 `wajibat-fiqh-jafari-module.md`. Decisions and official sources: `wajibat_decisions.md`. Phase
 reports: `wajibat_progress_log.md`.
 
@@ -1441,6 +1441,9 @@ Khamenei, and the one-ruling `ahkam` topic).
   - `supplementary: { marjaId, agreesWith: SourceCitation[] }` (P13/R7): one marja's own Q&A answer, added only where it agrees
     with the cited rulings of his main book. Shown only to his followers (topic page, search and coverage all filter it), so
     no other marja' ever sees a "not added yet" gap for it.
+  - `audience?: MarjaId` (Phase 6): a point stated by one marja' only (a Q&A with no ruling in another marja's book to agree with), exactly one
+    entry for that marja'. Shown only to his followers like `supplementary`, but it needs no agreeing ruling; it cannot be `differsBetweenMaraji`.
+  - `WajibatTopic.payLink?: boolean` (Phase 6): the topic page adds a "Where and how to pay" card linking only to the chosen marja's own site.
 - `MarjaRuling { marjaId, format: "issue"|"qa", question?, text: {en, ur?}, hukm?, basis, excerpt?, source, urSource?, verification: "A"|"B"|"D", arabicInSource?, urduNote?, urduEditionLag?, note? }`:
   - `hukm` is set only when the source states it.
   - `urSource` carries the Urdu book's **own** number, because the Urdu and English books number rulings differently.

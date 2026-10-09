@@ -20,6 +20,7 @@ It prints a pass/fail line per suite and the size of every data chunk, and exits
 |---|---|
 | `categories` | Every topic of every category, both maraji', English at 1280 px and Urdu at 390 px: the right ruling cards, the women's panel count, the single "nothing yet" notice, no horizontal overflow, helpers hidden, no console or page errors; the hub and the category pages. |
 | `sawm` | Phase 5: fasting texts, Khamenei's Q&A entries (and Sistani not seeing them), zakāt al-fiṭrah notice, the dawn and maghrib panel and its links, Qur'anic basis cards, search. |
+| `khums` | Phase 6: the "Where and how to pay" card (the marja's own site only, on the three paying topics only), Khamenei-only questions shown to his followers and not to Sistani's, a zakat ruling quoted on the page, the zakāt al-fiṭrah notice. |
 | `holds` | Display holds from the mismatch triage (B1): a held ruling shows only the pointer to his book; held Sistani Urdu shows the notice and the English; held Khamenei English shows the official Urdu; nothing leaks to the other marja'. |
 | `guided` | The step-by-step prayers and ablutions: every step of every procedure shows its quoted instruction (or the Urdu excerpt where his English is held); the stepper. |
 | `helpers` | The four decision helpers: **every path of every tree** is walked through the UI (262 paths); each question offers "I'm not sure"; each answer is the verbatim quote or a risala pointer; marja's name, "Not scholar-reviewed", Start over; hidden when the flag is off. |

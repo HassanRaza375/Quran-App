@@ -59,7 +59,7 @@ export const WAJIBAT_CATEGORIES: WajibatCategory[] = [
     order: 5,
     phase: 6,
     summary: explain("What khums is due on, the khums year, and how it is divided and paid."),
-    topicIds: [],
+    topicIds: ["khumsitems", "khumsunpaid", "khumscapital", "khumsmaunah", "khumsexpenses", "khumsexempt", "khumsyear", "khumsmined", "khumstreasure", "khumsmixed", "khumsgems", "khumsspoils", "khumsdistribution", "khumsmisc"],
   },
   {
     id: "zakat",
@@ -70,7 +70,7 @@ export const WAJIBAT_CATEGORIES: WajibatCategory[] = [
     order: 6,
     phase: 6,
     summary: explain("The items zakat is due on, their nisab and rates, and its recipients."),
-    topicIds: [],
+    topicIds: ["zakatconditions", "zakatcrops", "zakatgoldsilver", "zakatlivestock", "zakatbusiness", "zakatrecipients", "zakatgiving"],
   },
   {
     id: "hajj",

@@ -14,6 +14,7 @@ STEPS = [
     ["gen_kqa.py", os.path.join(R, "salatQa.ts"), os.path.join(R, "sawmQa.ts")],
     ["gen_doubts.py", os.path.join(R, "doubts.ts")],
     ["gen_sawm.py", os.path.join(R, "sawm.ts")],
+    ["gen_khums.py", os.path.join(R, "khums.ts"), os.path.join(R, "zakat.ts")],
     ["gen_glossary.py", os.path.join(DATA, "glossary.ts")],
     ["place_qa_ids.py"],
 ]

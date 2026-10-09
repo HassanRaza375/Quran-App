@@ -26,7 +26,7 @@ export const computeCoverage = (data: WajibatDataset, marjaIds: MarjaId[]): Topi
       // Another marja's supplementary Q&A entries (P13 / R7) are not gaps for this one.
       // Nor is a point his book states inside another ruling of the topic (seeAlso).
       const own = rulings.filter(
-        (r) => (!r.supplementary || r.supplementary.marjaId === marjaId) && !(r.seeAlso ?? []).some((s) => s.marjaId === marjaId)
+        (r) => (!r.supplementary || r.supplementary.marjaId === marjaId) && (!r.audience || r.audience === marjaId) && !(r.seeAlso ?? []).some((s) => s.marjaId === marjaId)
       );
       const row: TopicCoverage = {
         topicId: topic.id,

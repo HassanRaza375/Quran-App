@@ -1365,3 +1365,35 @@ Decisions F1–F6 are in `wajibat_decisions.md`. Phase 5 itself is unchanged exc
   - with the network cut, in a second tab that has loaded only the core, one topic of **each of the four categories renders its cards from the cache**, and search works.
 - **Known limit, unchanged:** the app shell itself is not precached for a hard navigation, so offline reading means moving around inside an open app (as before). A fresh tab opened while offline still fails to load.
 - **Tests:** 513 unit tests pass (509 before). New `tests/wajibatChunks.test.ts`: the four chunks together hold exactly the full dataset; every ruling, procedure and helper sits in the chunk of its topic's category; every cross-reference (`seeAlso`, procedure steps, helper quotes, topic ruling lists) stays inside one chunk; the ruling index matches the data and gives the same search results as the full data.
+
+## Phase 6 — Khums and Zakat (2026-10-09)
+
+Rules for the phase are G1–G6 and working decisions H1–H9 in `wajibat_decisions.md`.
+
+### What was built
+- **Khums: 14 topics, 394 rulings.** Sistani's Chapter on Khums (Rulings 1768–1866, 99) and Khamenei's Q&A book *The Rulings of Khums* (305 questions, English, official Urdu and the Persian original, numbered alike). 10 questions are paired with the Sistani ruling they answer; 295 stand alone with the new `audience: "khamenei"` field.
+- **Zakat: 7 topics, 133 rulings.** Sistani only: Rulings 1871–2002 and the unnumbered business-goods passage (4th ed., page 2323). **No Khamenei zakat entries** (G4, below). Zakāt al-fiṭrah stays in Fasting.
+- **"Where and how to pay" card** on the three topics about paying: the marja's own official website, nothing else (G3). No calculator (G1). Amounts are quoted as the text states them, nothing converted (G2).
+- Glossary: khums, zakat, niṣāb, nukhud, miskīn, sayyid, sahm al-imām, sahm al-sādāt, mashhūr (cut from Sistani's own glossary).
+- A topic whose rulings are all for another marja' (`khumsmisc` for Sistani) now shows the single "no rulings yet" notice, not "this topic is an overview".
+
+### Source checks
+- Every ruling number 1768–1866 and 1871–2002 is present exactly once (unit test). Revised (*) rulings were compared with the Urdu one by one: 1772, 1782 and 1939 match; 1798, 1803, 1810, 1861 and 1865 lag the English, so their Urdu is not shown.
+- **Left out because the source text is unclear:** Khamenei Q 26, 56, 57, 70, 72, 164, 205, 206 (an answer printed under another question or mixed with one). Q 256 is not in the English edition. About 275 unnumbered statements of the book are not Q&A and are not included.
+- Khamenei's Urdu is shown only where the Urdu parse is clean; otherwise a note says only the English is shown (R1).
+
+### Zakāt al-fiṭrah for Khamenei (G4): not found, notice stays
+The English and Urdu editions of his older Q&A book do contain a zakāt al-fiṭrah section (questions 225–248, read through leader.ir's contents endpoint), but I found no public page URL for them, so no entry can be cited. I tried the book page with the section number under every book id I could reach; every try returned "Page not found", and then leader.ir stopped answering altogether, so the result is **inconclusive**. Nothing was added; `kh_fitr.py` and the `PAIR` plan are kept for a retry when the site is reachable. His Persian Q&A was not translated (R9/G4).
+
+### Mismatch triage (G5)
+1,553 flagged (was 897), 0 pending. The standing safe default was applied automatically: Sistani Urdu hidden 244 (was 193), Khamenei Urdu hidden 45 (18), English hidden 97 (41), held with the pointer 21 (unchanged). `needs-human` is 289 rows (167 rulings; was 64 rows): **103 new rulings fall in "neither version matches the Persian"** and are shown as before, not held, because the pointer hold was your decision for the earlier rows only (question H9). On a sample they are mostly translation style: the Persian "خمس ندارد" ("has no khums") is "is exempt from Khums" in English, which the checker cannot match. Fixture for the TypeScript twin updated: its test now treats a hold on either field of a ruling as hiding both.
+
+### Data chunks (KiB raw / gzip)
+core 215.38 / 47.96, Foundations 36.21 / 10.44, Ṭahārah 294.90 / 65.96, Ṣalāt 813.67 / 143.10, Ṣawm 568.02 / 102.76, **Khums 572.26 / 114.05, Zakat 156.58 / 31.14**. Largest page load: Ṣalāt + core = 1,029 KiB raw (Khums + core 788 KiB). "Save all for offline" saves all seven chunks.
+
+### Tests
+- Unit: 523 pass (513 before): new `tests/wajibatKhumsZakat.test.ts` (10), chunk and mismatch tests updated.
+- Browser (`npm run test:e2e:wajibat`): new `khums` suite (34); `categories` now walks 6 categories (1,108); `chunks` and `offline` expect seven chunks, and the offline test expects the single notice for Khamenei in Zakat. **Final full run from the repo: 3,187 checks passed, 0 failed** (categories 1,108, sawm 17, khums 34, holds 95, guided 383, helpers 1,530, chunks 7, offline 13). Install-time precache 5,452.28 KiB (was 5,452.07; the data chunks stay out of it).
+
+### Logged separately (G6): not part of Phase 6
+A brand-new browser tab opened while offline fails, because the app shell is not cached for hard navigations. This is an **app-wide PWA problem** (the `navigateFallback: "/"` is set but the shell is not served for a navigation request offline). To be fixed as its own task; nothing in Module 18 depends on it.

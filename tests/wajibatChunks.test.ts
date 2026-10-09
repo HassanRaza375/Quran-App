@@ -7,10 +7,12 @@ import { DATA as foundations } from "../app/data/wajibat/chunks/foundations";
 import { DATA as taharat } from "../app/data/wajibat/chunks/taharat";
 import { DATA as salat } from "../app/data/wajibat/chunks/salat";
 import { DATA as sawm } from "../app/data/wajibat/chunks/sawm";
+import { DATA as khums } from "../app/data/wajibat/chunks/khums";
+import { DATA as zakat } from "../app/data/wajibat/chunks/zakat";
 import { WAJIBAT_RULING_INDEX } from "../app/data/wajibat/rulingIndex";
 import { searchWajibat } from "../app/utils/wajibatSearch";
 
-const CHUNKS = { foundations, taharat, salat, sawm } as const;
+const CHUNKS = { foundations, taharat, salat, sawm, khums, zakat } as const;
 const topicCategory = new Map(WAJIBAT_DATASET.topics.map((t) => [t.id, t.categoryId]));
 
 describe("per-category data chunks", () => {
@@ -50,7 +52,7 @@ describe("per-category data chunks", () => {
       expect(x.id).toBe(r.id);
       expect(x.topicId).toBe(r.topicId);
       expect(x.subject).toEqual(r.subject);
-      expect(x.supplementaryMarja).toBe(r.supplementary?.marjaId);
+      expect(x.audienceMarja).toBe(r.supplementary?.marjaId ?? r.audience);
     }
     const data = { topics: WAJIBAT_DATASET.topics, glossary: WAJIBAT_DATASET.glossary };
     for (const q of ["kaffārah", "wuḍūʾ", "fiṭrah", "qunut", "doubt", "تقلید"]) {

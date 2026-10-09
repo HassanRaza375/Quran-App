@@ -1,10 +1,11 @@
-# Daily Fiqh (Wajibat), Phases 1–5: release note
+# Daily Fiqh (Wajibat), Phases 1–6: release note
 
 Module 18, at `/fiqh`. Fiqh Ja'fari, per-marja' sourced rulings, no account, no backend. Every ruling is quoted from the marja's own official text; the app writes no rulings and translates nothing.
 
 ## What is live
 
 - **46 topics in 4 categories** (Foundations 5, Ṭahārah 8, Ṣalāt 20, Ṣawm 13), **828 rulings (1,225 per-marja' entries)**, 11 guided step-by-step prayers/ablutions, a glossary, search, bookmarks and offline use.
+- **Phase 6, Khums and Zakat (on `wajibat-module`, not yet merged):** 21 topics and 527 rulings. Sistani's Khums (1768–1866) and Zakat (1871–2002) chapters, and Khamenei's *The Rulings of Khums* (305 questions; questions only he answers are shown to his followers only). No calculator; amounts are quoted as written. The paying topics link only to the marja's own official website. **Khamenei has no zakat entries** (his zakāt chapter was not found in English or Urdu), so his followers see one notice there; the same for zakāt al-fiṭrah. 103 of his new khums answers differ from the Persian in both editions and are shown with a note in `wajibat_needs_human.md`; a person should decide whether to hold them.
 - **Phase 5, Fasting (on `wajibat-module`, not yet merged):** 13 topics and 341 rulings. Sistani's Chapter Four (Rulings 1529–1718) and zakāt al-fiṭrah (2003–2044); Khamenei's *Rules* 787–981 and 41 of his Q&A answers. The dawn and maghrib topic shows today's times from Prayer Times, with a link to the Ramadan fasting log. **Zakāt al-fiṭrah has no Khamenei ruling** (no official source found), so his followers see one notice there. Not included: iʿtikāf.
 - **Data loading:** each `/fiqh` category now loads its own data chunk (plus a small core) instead of one file: Foundations 36 KiB, Ṭahārah 295 KiB, Ṣalāt 814 KiB, Ṣawm 568 KiB, core 149 KiB (raw; 10, 66, 143, 103 and 35 KiB gzip). The largest page load is 962 KiB raw (Ṣalāt + core), down from 1,775 KiB. "Save all for offline" saves all five.
 - **Two maraji':** Sayyid Ali al-Sistani (*Islamic Laws*, 4th edition) and Ayatollah Khamenei (*The Rules on Prayer & Fasting* 2023, with his Q&A as supplementary entries and, for wuḍūʾ, his official Urdu treatise). A reader sees **only the chosen marja's** rulings. Makarem Shirazi has no content until his risala is supplied.

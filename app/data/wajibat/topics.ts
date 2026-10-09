@@ -740,4 +740,285 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     glossaryIds: ["zakatfitrah", "saa", "faqir", "sawm"],
     lastSourceCheck: "2026-10-08",
   },
+  {
+    id: "khumsitems",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "What khums is due on" },
+    arabicTerm: "الخمس",
+    summary: explain(
+      "The things khums is due on, surplus income from earnings, property acquired without earning it, a minor's profit, and who pays when living expenses are paid by someone else."
+    ),
+    rulingIds: ["sk1768", "sk1769", "sk1770", "sk1774", "sk1775", "sk1776", "sk1810", "kq241", "kq242", "kq243"],
+    relatedTopicIds: ["khumsmaunah", "khumsexempt", "khumsyear"],
+    glossaryIds: ["khums", "mashhur"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsunpaid",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Property on which khums has not been paid" },
+    summary: explain(
+      "Buying, receiving or using property on which khums has not been paid, doubting whether it was paid, and khums that has been unpaid for years."
+    ),
+    rulingIds: ["sk1777", "sk1778", "sk1779", "sk1780", "sk1781", "sk1811", "sk1812", "sk1813", "sk1814", "kq252", "kq253", "kq254", "kq293", "kq294", "kq295"],
+    relatedTopicIds: ["khumsyear", "khumsmisc"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumscapital",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Capital, trade and business property" },
+    summary: explain(
+      "Working and fixed capital, trade goods, tools, land, shares, deposits and loans, and what happens to their value during the khums year."
+    ),
+    rulingIds: ["sk1785", "sk1786", "sk1787", "sk1788", "sk1789", "sk1790", "sk1791", "kq1", "kq2", "kq3", "kq4", "kq5", "kq6", "kq7", "kq8", "kq9", "kq10", "kq11", "kq12", "kq13", "kq14", "kq15", "kq16", "kq17", "kq18", "kq19", "kq20", "kq21", "kq22", "kq23", "kq24", "kq25", "kq27", "kq28", "kq29", "kq30", "kq31", "kq32", "kq33", "kq34", "kq35", "kq36", "kq37", "kq38", "kq39", "kq40", "kq41", "kq42", "kq43", "kq44", "kq45", "kq46", "kq47", "kq48", "kq49", "kq50", "kq51", "kq52", "kq53", "kq54", "kq55", "kq58", "kq59", "kq60", "kq61", "kq62", "kq63", "kq64", "kq65", "kq66", "kq67", "kq68", "kq69", "kq71", "kq73", "kq74", "kq75", "kq76", "kq77", "kq78"],
+    relatedTopicIds: ["khumsmaunah", "khumsexpenses", "khumsyear"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsmaunah",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Living expenses (maʾūnah)" },
+    arabicTerm: "المؤونة",
+    summary: explain(
+      "What counts as the year's living expenses, such as the home, furniture, clothing, gifts, a daughter's trousseau, and what is left over at the year's end."
+    ),
+    rulingIds: ["sk1773", "sk1792", "sk1793", "sk1794", "sk1795", "sk1796", "sk1797", "sk1798", "sk1799", "kq84", "kq85", "kq86", "kq87", "kq88", "kq89", "kq90", "kq91", "kq92", "kq93", "kq94", "kq95", "kq96", "kq97", "kq98", "kq99", "kq100", "kq101", "kq102", "kq103", "kq104", "kq105", "kq106", "kq108", "kq109", "kq111", "kq112", "kq113", "kq114", "kq116", "kq117", "kq118", "kq119", "kq120", "kq121", "kq122", "kq123", "kq124", "kq125", "kq126", "kq127", "kq128", "kq129", "kq130", "kq131", "kq132", "kq133", "kq134", "kq135", "kq136", "kq137", "kq138", "kq139", "kq140", "kq141", "kq142", "kq143", "kq144"],
+    relatedTopicIds: ["khumsexpenses", "khumscapital", "khumsexempt"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsexpenses",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Expenses of earning, debts and savings" },
+    summary: explain(
+      "Expenses of earning an income, taxes, borrowing and repaying, losses, and how balances in an account are treated."
+    ),
+    rulingIds: ["sk1800", "sk1801", "sk1802", "sk1803", "sk1804", "kq145", "kq146", "kq147", "kq148", "kq149", "kq150", "kq151", "kq152", "kq153", "kq154", "kq155", "kq156", "kq157", "kq158", "kq159", "kq160", "kq161", "kq162", "kq163", "kq165", "kq166", "kq167", "kq168", "kq169", "kq170", "kq171", "kq172", "kq173", "kq174", "kq175", "kq176", "kq177", "kq178", "kq179", "kq180", "kq181", "kq182", "kq183", "kq184"],
+    relatedTopicIds: ["khumsmaunah", "khumscapital", "khumsyear"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsexempt",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Property and income not subject to khums" },
+    summary: explain(
+      "Dowry, inherited property, maintenance, blood money, endowments, pensions, bonuses and insurance payments, and what each marja' says about them."
+    ),
+    rulingIds: ["sk1771", "sk1772", "kq185", "kq186", "kq187", "kq188", "kq189", "kq190", "kq191", "kq192", "kq193", "kq194", "kq195", "kq196", "kq197", "kq198", "kq199", "kq200", "kq201", "kq202", "kq203", "kq204", "kq207", "kq208", "kq209", "kq210", "kq211", "kq212", "kq213", "kq214", "kq215", "kq216", "kq217", "kq218", "kq219", "kq220", "kq221", "kq222", "kq223"],
+    relatedTopicIds: ["khumsitems", "khumsmaunah"],
+    glossaryIds: ["khums", "mashhur"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsyear",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "The khums year, calculation and payment" },
+    summary: explain(
+      "Setting the khums year, when to calculate and pay, paying early or late, in instalments, and paying with another's permission."
+    ),
+    rulingIds: ["sk1782", "sk1783", "sk1784", "sk1805", "sk1806", "sk1807", "sk1808", "sk1809", "kq224", "kq225", "kq226", "kq228", "kq229", "kq230", "kq231", "kq232", "kq233", "kq234", "kq235", "kq236", "kq237", "kq239", "kq244", "kq245", "kq246", "kq247", "kq248", "kq249", "kq250", "kq251", "kq257", "kq258", "kq259", "kq260", "kq261", "kq262", "kq263", "kq264", "kq265", "kq266", "kq267", "kq268", "kq269", "kq270", "kq271"],
+    relatedTopicIds: ["khumsunpaid", "khumscapital", "khumsdistribution"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsmined",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Mined products" },
+    summary: explain(
+      "Gold, silver, oil, salt and other mined products: when khums is due and the niṣāb, as the text states it."
+    ),
+    rulingIds: ["sk1815", "sk1816", "sk1817", "sk1818", "sk1819", "sk1820", "sk1821", "sk1822", "kq83"],
+    relatedTopicIds: ["khumstreasure", "khumsgems"],
+    glossaryIds: ["khums", "nisab"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumstreasure",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Treasure troves" },
+    summary: explain(
+      "What a treasure trove is, where and by whom it may be found, and the niṣāb, as the text states it."
+    ),
+    rulingIds: ["sk1823", "sk1824", "sk1825", "sk1826", "sk1827", "sk1828", "sk1829"],
+    relatedTopicIds: ["khumsmined", "khumsgems"],
+    glossaryIds: ["khums", "nisab"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsmixed",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Lawful property mixed with unlawful" },
+    summary: explain(
+      "What to do when ḥarām property has become mixed with ḥalāl property, according to what is known about the quantity and the owner."
+    ),
+    rulingIds: ["sk1830", "sk1831", "sk1832", "sk1833", "sk1834", "sk1835", "kq81", "kq82"],
+    relatedTopicIds: ["khumsunpaid"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsgems",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Gems from the sea" },
+    summary: explain(
+      "Pearls, corals and other gems brought out by diving, and the amount from which khums is due, as the text states it."
+    ),
+    rulingIds: ["sk1836", "sk1837", "sk1838", "sk1839", "sk1840", "sk1841", "sk1842", "sk1843", "sk1844"],
+    relatedTopicIds: ["khumsmined", "khumstreasure"],
+    glossaryIds: ["khums", "nukhud"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsspoils",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Spoils of war and other property" },
+    summary: explain(
+      "Spoils of war, property of a ḥarbī disbeliever or a nāṣibī, and land a dhimmī buys from a Muslim."
+    ),
+    quranicBasis: [{ surahNumber: 8, ayahNumber: 41 }],
+    rulingIds: ["sk1845", "sk1846", "sk1847", "sk1848", "sk1849", "sk1850"],
+    relatedTopicIds: ["khumsmixed"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsdistribution",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "How khums is divided and to whom it may be given" },
+    summary: explain(
+      "The share of the sayyids and the share of the Imam (ʿA), who may receive khums, how much, and the role of the marja'. Where and how to pay is not given by this app: it only points to your marja's official website."
+    ),
+    rulingIds: ["sk1851", "sk1852", "sk1853", "sk1854", "sk1855", "sk1856", "sk1857", "sk1858", "sk1859", "sk1860", "sk1861", "sk1862", "sk1863", "sk1864", "sk1865", "sk1866", "kq272", "kq273", "kq274", "kq275", "kq276", "kq277", "kq278", "kq279", "kq280", "kq281", "kq282", "kq283", "kq284", "kq285", "kq286", "kq287", "kq288"],
+    payLink: true,
+    relatedTopicIds: ["khumsyear", "khumsmisc"],
+    glossaryIds: ["khums", "sahmsadat", "sahmimam", "sayyid"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "khumsmisc",
+    fiqh: "jafari",
+    categoryId: "khums",
+    title: { en: "Heirs, partners and other issues" },
+    summary: explain(
+      "Khums owed by someone who has died, dealing with those who do not pay khums, partners, forgiving khums, and paying on another's behalf."
+    ),
+    rulingIds: ["kq289", "kq290", "kq291", "kq292", "kq297", "kq298", "kq299", "kq300", "kq301", "kq302", "kq303", "kq304", "kq305", "kq306", "kq307", "kq308", "kq309", "kq310", "kq311", "kq312", "kq313", "kq314"],
+    relatedTopicIds: ["khumsunpaid", "khumsdistribution"],
+    glossaryIds: ["khums"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "zakatconditions",
+    fiqh: "jafari",
+    categoryId: "zakat",
+    title: { en: "What zakat is due on and its conditions", ur: "زکوٰۃ واجب ہونے کی شرائط" },
+    arabicTerm: "الزكاة",
+    summary: explain(
+      "The ten things zakat is due on, the taxable limit (niṣāb), and the conditions that must hold: ownership, sanity and bulūgh, and the time of ownership."
+    ),
+    rulingIds: ["zk1871", "zk1872", "zk1873", "zk1874", "zk1875", "zk1876", "zk1877", "zk1878", "zk1879"],
+    relatedTopicIds: ["zakatcrops", "zakatgoldsilver", "zakatlivestock"],
+    glossaryIds: ["zakat", "nisab"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "zakatcrops",
+    fiqh: "jafari",
+    categoryId: "zakat",
+    title: { en: "Wheat, barley, dates and raisins" },
+    summary: explain(
+      "The niṣāb of wheat, barley, dates and raisins, the rate by the kind of irrigation, expenses, and when and how the zakat is given."
+    ),
+    rulingIds: ["zk1880", "zk1881", "zk1882", "zk1883", "zk1884", "zk1885", "zk1886", "zk1887", "zk1888", "zk1889", "zk1890", "zk1891", "zk1892", "zk1893", "zk1894", "zk1895", "zk1896", "zk1897", "zk1898", "zk1899", "zk1900", "zk1901", "zk1902", "zk1903", "zk1904", "zk1905", "zk1906", "zk1907", "zk1908", "zk1909", "zk1910", "zk1911"],
+    relatedTopicIds: ["zakatconditions", "zakatgiving"],
+    glossaryIds: ["zakat", "nisab", "saa"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "zakatgoldsilver",
+    fiqh: "jafari",
+    categoryId: "zakat",
+    title: { en: "Gold and silver", ur: "سونے کا نصاب" },
+    summary: explain(
+      "The niṣābs of gold and of silver, minted coins and ornaments, and the eleven months of ownership. The text's own amounts are shown; the app converts nothing."
+    ),
+    rulingIds: ["zk1912", "zk1913", "zk1914", "zk1915", "zk1916", "zk1917", "zk1918", "zk1919", "zk1920", "zk1921", "zk1922"],
+    relatedTopicIds: ["zakatconditions", "zakatbusiness"],
+    glossaryIds: ["zakat", "nisab", "nukhud"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "zakatlivestock",
+    fiqh: "jafari",
+    categoryId: "zakat",
+    title: { en: "Camels, cows and sheep" },
+    summary: explain(
+      "The niṣābs of camels, cows and sheep and the zakat on each, grazing for the year, and the animal that is given."
+    ),
+    rulingIds: ["zk1923", "zk1924", "zk1925", "zk1926", "zk1927", "zk1928", "zk1929", "zk1930", "zk1931", "zk1932", "zk1933", "zk1934", "zk1935", "zk1936", "zk1937", "zk1938", "zk1939"],
+    relatedTopicIds: ["zakatconditions", "zakatgiving"],
+    glossaryIds: ["zakat", "nisab"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "zakatbusiness",
+    fiqh: "jafari",
+    categoryId: "zakat",
+    title: { en: "Business goods" },
+    summary: explain(
+      "Zakat on goods kept for business and profit, the conditions, and the rate, as the text states them."
+    ),
+    rulingIds: ["zkbusiness"],
+    relatedTopicIds: ["zakatgoldsilver"],
+    glossaryIds: ["zakat", "nisab"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "zakatrecipients",
+    fiqh: "jafari",
+    categoryId: "zakat",
+    title: { en: "Who may receive zakat" },
+    summary: explain(
+      "The eight ways zakat can be spent: the poor, the needy, debtors, the stranded traveller and others, and who may not receive it. Where and how to pay is not given by this app: it only points to your marja's official website."
+    ),
+    quranicBasis: [{ surahNumber: 9, ayahNumber: 60 }],
+    rulingIds: ["zk1940", "zk1941", "zk1942", "zk1943", "zk1944", "zk1945", "zk1946", "zk1947", "zk1948", "zk1949", "zk1950", "zk1951", "zk1952", "zk1953", "zk1954", "zk1955", "zk1956", "zk1957", "zk1958", "zk1959", "zk1960", "zk1961", "zk1962", "zk1963", "zk1964", "zk1965", "zk1966", "zk1967", "zk1968", "zk1969", "zk1970"],
+    payLink: true,
+    relatedTopicIds: ["zakatgiving", "zakatfitrah"],
+    glossaryIds: ["zakat", "faqir", "miskin", "sayyid"],
+    lastSourceCheck: "2026-10-09",
+  },
+  {
+    id: "zakatgiving",
+    fiqh: "jafari",
+    categoryId: "zakat",
+    title: { en: "Giving zakat: intention, setting aside and transfer" },
+    summary: explain(
+      "The intention for giving zakat, setting it aside, when to give it, what happens if it perishes, taking it to another town, and the other debts of a person who dies."
+    ),
+    rulingIds: ["zk1971", "zk1972", "zk1973", "zk1974", "zk1975", "zk1976", "zk1977", "zk1978", "zk1979", "zk1980", "zk1981", "zk1982", "zk1983", "zk1984", "zk1985", "zk1986", "zk1987", "zk1988", "zk1989", "zk1990", "zk1991", "zk1992", "zk1993", "zk1994", "zk1995", "zk1996", "zk1997", "zk1998", "zk1999", "zk2000", "zk2001", "zk2002"],
+    payLink: true,
+    relatedTopicIds: ["zakatrecipients", "zakatfitrah"],
+    glossaryIds: ["zakat", "niyyah"],
+    lastSourceCheck: "2026-10-09",
+  },
 ];

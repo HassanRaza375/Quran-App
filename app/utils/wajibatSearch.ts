@@ -11,7 +11,9 @@ export interface SearchableRuling {
   topicId: string;
   subject: { en: string; ur?: string };
   supplementary?: { marjaId: MarjaId };
-  supplementaryMarja?: MarjaId;
+  audience?: MarjaId;
+  /** On a ruling-index entry: the marja' it is shown to when it belongs to one marja' only. */
+  audienceMarja?: MarjaId;
 }
 
 export interface SearchableData<R extends SearchableRuling = SearchableRuling> {
@@ -40,6 +42,9 @@ export const normalizeWajibatText = (s: string): string =>
     .replace(/\s+/g, " ")
     .trim();
 
+/** The one marja' a ruling is shown to (a supplementary Q&A entry, or his own point), or undefined. */
+const ownerOf = (r: SearchableRuling) => r.supplementary?.marjaId ?? r.audience ?? r.audienceMarja;
+
 const matches = (query: string, ...fields: (string | undefined)[]) =>
   fields.some((f) => f !== undefined && normalizeWajibatText(f).includes(query));
 
@@ -50,7 +55,7 @@ export const searchWajibat = <R extends SearchableRuling>(data: SearchableData<R
 
   return {
     topics: data.topics.filter((t) => matches(q, t.title.en, t.title.ur, t.arabicTerm, t.summary.text.en)),
-    rulings: data.rulings.filter((r) => ((r.supplementary?.marjaId ?? r.supplementaryMarja) === undefined || (r.supplementary?.marjaId ?? r.supplementaryMarja) === marjaId) && matches(q, r.subject.en, r.subject.ur)),
+    rulings: data.rulings.filter((r) => (ownerOf(r) === undefined || ownerOf(r) === marjaId) && matches(q, r.subject.en, r.subject.ur)),
     glossary: data.glossary.filter((g) => matches(q, g.term, g.arabic, g.urdu, g.definition.en, g.definition.ur)),
   };
 };

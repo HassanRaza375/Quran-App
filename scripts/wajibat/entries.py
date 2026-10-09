@@ -62,7 +62,7 @@ def _norm_ws(s):
 
 def intro_en(page, a, b):
     """Verbatim excerpt of an unnumbered section intro on an English page."""
-    return _cut(_norm_ws(_read(os.path.join(HERE, "en", f"p{page}.txt"))), a, b, f"intro {page}")
+    return _cut(_norm_ws(re.sub(r"\[\d+\]", "", _read(os.path.join(HERE, "en", f"p{page}.txt")))), a, b, f"intro {page}")   # footnote markers are not part of the text
 
 def intro_ur(page, a, b):
     return _cut(_norm_ws(_read(os.path.join(HERE, "ur", f"u{page}.txt"))), a, b, f"intro ur {page}")
@@ -184,13 +184,46 @@ def K(n, *, cut=None, hukm=None, basis=None, note=None):
     if notes: r["note"] = " ".join(notes)
     return r
 
+# ---- Khamenei, "The Rulings of Khums" (Phase 6): a Q&A book numbered 1-314 in the English (book 256),
+# the official Urdu (245) and the Persian original (215); see kh_khums.py. The Persian decides (R11). ----
+KUMS_BOOK, KUMS_UR_BOOK, KUMS_FA_BOOK = "The Rulings of Khums", "احکام خمس", "احکام خمس"
+KUMS_URL = "https://www.leader.ir/en/book/261?sn={}"
+KUMS_UR_URL = "https://www.leader.ir/ur/book/257?sn={}"
+KUMS_FA_URL = "https://www.leader.ir/fa/book/238?sn={}"
+KUMS_NO_URDU = "The official Urdu edition has no usable counterpart to this question, so only the English is shown (decision R1)."
+
+def KK(n, *, note=None, basis=None):
+    """Khamenei's question n of The Rulings of Khums, with the official Urdu (same number) and the Persian original."""
+    import kh_khums as kk
+    assert kk.usable(n) and n in kk.FA, ("question not usable", n)
+    q, a = nfc(kk.unit("en", n, "question")), nfc(kk.unit("en", n, "text"))
+    r = {"marjaId": "khamenei", "format": "qa", "question": {"en": q}, "text": {"en": a}}
+    uq, ua = kk.unit("ur", n, "question"), kk.unit("ur", n, "text")
+    has_ur = kk.usable(n, "ur")
+    if has_ur:
+        r["question"]["ur"], r["text"]["ur"] = nfc(uq), nfc(ua)
+    b = basis or infer_basis(a)
+    r["basis"] = b
+    r["source"] = {"title": KUMS_BOOK, "reference": f"Q {n}", "url": KUMS_URL.format(kk.EN[n]["sn"])}
+    if has_ur:
+        r["urSource"] = {"title": KUMS_UR_BOOK, "reference": f"س {n}", "url": KUMS_UR_URL.format(kk.UR[n]["sn"])}
+    r["persianSource"] = {"title": KUMS_FA_BOOK, "reference": f"سؤال {n}", "url": KUMS_FA_URL.format(kk.FA[n]["sn"])}
+    r["verification"] = "A"
+    if not has_ur:
+        r["urduNote"] = KUMS_NO_URDU
+    notes = ([note] if note else []) + ([x for x in [auto_note(a, b)] if x])
+    if notes:
+        r["note"] = " ".join(notes)
+    return r
+
 RULINGS = []
-def R(id_, topic, subject, *entries, differs=False, sensitive=False, see_also=None):
+def R(id_, topic, subject, *entries, differs=False, sensitive=False, see_also=None, audience=None):
     """see_also: {marjaId: rulingId} — for a marja' with no entry here whose book states this
     point inside that other ruling (same topic); the UI points there instead of "not added yet"."""
     r = {"id": id_, "topicId": topic, "subject": {"en": subject}, "rulings": [e for e in entries if e]}
     if differs: r["differsBetweenMaraji"] = True
     if sensitive: r["sensitive"] = True
+    if audience: r["audience"] = audience
     if see_also: r["seeAlso"] = [{"marjaId": m, "rulingId": rid} for m, rid in see_also.items()]
     RULINGS.append(r)
 

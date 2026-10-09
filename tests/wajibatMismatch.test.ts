@@ -58,7 +58,13 @@ describe("mismatch report over the whole dataset", () => {
     const ts = computeEnUr();
     // Rows whose Urdu is held back (decision B1) cannot be recomputed from the shipped data: the Urdu is not in it.
     const dec = decisions as Record<string, { status: string; hold?: string }>;
-    const heldUrdu = (k: string) => ["hidden-pending-review", "persian-decided-pending-review"].includes(dec[k]?.status) && dec[k]?.hold === "hide-ur";
+    // The hold hides the Urdu of the whole ruling entry (question and text), so any field's hold covers both fields.
+    const urduHeldRulings = new Set(
+      Object.keys(dec)
+        .filter((k) => ["hidden-pending-review", "persian-decided-pending-review"].includes(dec[k]?.status) && dec[k]?.hold === "hide-ur")
+        .map((k) => k.split("|").slice(0, 2).join("|")),
+    );
+    const heldUrdu = (k: string) => urduHeldRulings.has(k.split("|").slice(0, 2).join("|"));
     const py = Object.fromEntries(rows.filter((r) => r.pair === "en-ur" && !heldUrdu(r.key)).map((r) => [r.key, r.kinds]));
     expect(Object.keys(ts).sort()).toEqual(Object.keys(py).sort());
     for (const k of Object.keys(ts)) expect(JSON.parse(JSON.stringify(ts[k]))).toEqual(py[k]);

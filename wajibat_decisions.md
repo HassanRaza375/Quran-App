@@ -132,6 +132,31 @@ Spec: `wajibat-fiqh-jafari-module.md`. If this file and the spec disagree, **thi
 | F5 | Browser suites in the repo | Commit all browser check suites to `tests/e2e/wajibat/` with one command against a production build: `npm run test:e2e:wajibat`. Re-run the helper suite and every earlier suite from the repo and report. |
 | F6 | Per-category data chunks | Split the ruling data so each `/fiqh` category loads its own chunk instead of one ~1.8 MB file; keep "Save all for offline" working for all categories; verify offline behaviour again and report chunk sizes per category. |
 
+## Answered questions (2026-10-09, eighth round: Phase 6 rules)
+
+| # | Topic | Decision |
+|---|---|---|
+| G1 | No calculator | **No khums calculator in this phase.** Content only. |
+| G2 | Amounts exactly as stated | Nisab, rates and weights are shown **exactly as the marja's text states them**. No app-made conversions to grams, tola, rupees or any currency. |
+| G3 | Where and how to pay | For Sahm-e-Imam, Sahm-e-Sadat and zakāt: **link only to each marja's official office or website.** No bank details, representatives or addresses from third-party sources. |
+| G4 | Khamenei's zakāt al-fiṭrah | Search for his rulings as part of Phase 6 (the Persian Q&A on leader.ir, the zakāt chapter of his Urdu Q&A book). **If found only in Persian, the notice stays** (no translation by the app). |
+| G5 | Rules | Same source, mismatch-triage and hold rules as Phases 2–5. Run the full e2e suite from the repo at the end. |
+| G6 | Logged separately, not part of Phase 6 | A brand-new tab opened while offline fails, because the app shell is not cached for hard navigations: an **app-wide PWA issue, to be fixed as its own task.** |
+
+## Phase 6 working decisions (2026-10-09): made while building, please confirm
+
+| # | Topic | What was done |
+|---|---|---|
+| H1 | Scope | **Sistani:** *Islamic Laws* Khums, Rulings 1768-1866 (99), and Zakat, Rulings 1871-2002 (132) plus one unnumbered passage of the 4th edition on business goods (page 2323). **Khamenei:** his Q&A book *The Rulings of Khums* (leader.ir; English, official Urdu and the Persian original, numbered 1-314 alike), 305 questions. His *Rules* have no khums chapter. Every Sistani ruling of both ranges is quoted once. |
+| H2 | Topics | 14 in Khums, 7 in Zakat (zakāt al-fiṭrah stays in Fasting). Topics follow the sections of the book; each Khamenei question sits in the topic of the Sistani ruling it answers. |
+| H3 | New `audience` field | A Khamenei question with no Sistani ruling to pair with (295 of the 305) is stored as its own ruling with `audience: "khamenei"`: shown to his followers only, needs no agreeing ruling, and Sistani's followers never see it. (`supplementary` is still used for Q&A that agree with a Rules ruling, R7.) The validator, search, coverage and index understand it. |
+| H4 | Pairing | 10 questions are paired with the Sistani ruling they answer by number (`PAIR` in `gen_khums.py`), read by a person against both texts. All other questions stand alone. The three editions pair by question number; the Persian decides when they differ (R11). |
+| H5 | Revised (*) rulings | The 8 starred Sistani rulings were compared with the Urdu one by one (P6): 1772, 1782 and 1939 match; 1798, 1803, 1810, 1861 and 1865 lag the English, so their Urdu is not shown. |
+| H6 | Left out | 8 Khamenei questions whose text in the source is unclear (an answer printed under another question or mixed with one): 26, 56, 57, 70, 72, 164, 205, 206. Q 256 is not in the English edition. The book's unnumbered statements (about 275) are not Q&A entries and are not included. They can be added later. |
+| H7 | Payment | Topics about paying (`khumsdistribution`, `zakatrecipients`, `zakatgiving`) get a "Where and how to pay" card (`payLink`) that links to the chosen marja's official website and nothing else (G3). |
+| H8 | Zakāt al-fiṭrah (G4) | **Not resolved.** The English and Urdu editions of his Q&A (questions 225-248 of the older book, reachable only through leader.ir's contents endpoint) have no page I could cite, and leader.ir stopped answering during the search, so the book/page URLs could not be confirmed. No Khamenei fiṭrah entry was added (it could not be cited). The notice stays. To retry when the site is reachable. |
+| H9 | Triage | The standing safe default (B1) was applied automatically. The 103 new rows that fall in "neither version matches the Persian" are **shown as before** (`needs-human`), not held with the pointer, because that hold was your decision for the earlier rows only. Most look like translation style (the Persian "has no khums" is English "is exempt from Khums"), which the checker cannot see. **Question:** hold them with the pointer, or leave them? |
+
 ## Phase 5 working decisions (2026-10-08): made while building, please confirm
 
 Phase 5 started on the user's word ("start Phase 5 (Sawm)") after the Phase 4 merge preparation. These were my calls; each is a default that can be reversed.

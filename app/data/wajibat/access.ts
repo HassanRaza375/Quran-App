@@ -10,4 +10,4 @@ export const getMarjaRuling = (ruling: Ruling, marjaId: MarjaId): MarjaRuling | 
 /** Whether a ruling is shown to followers of `marjaId`. Supplementary Q&A entries (P13 / R7)
  * belong to one marja' and are hidden from everyone else — never shown as "not added yet". */
 export const isRulingVisibleFor = (ruling: Ruling, marjaId: MarjaId | null | undefined): boolean =>
-  !ruling.supplementary || ruling.supplementary.marjaId === marjaId;
+  (!ruling.supplementary || ruling.supplementary.marjaId === marjaId) && (!ruling.audience || ruling.audience === marjaId);

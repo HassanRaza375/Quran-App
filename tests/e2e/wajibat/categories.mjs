@@ -39,6 +39,7 @@ export default async function run({ browser, data }) {
   await page.goto(`${BASES.off}/fiqh`, { waitUntil: "networkidle" });
   const hub = await page.textContent("body");
   t.ok(/Fasting/.test(hub) && /13 topics/.test(hub), "hub lists Fasting with 13 topics");
+  t.ok(/Khums/.test(hub) && /14 topics/.test(hub) && /Zakat/.test(hub) && /7 topics/.test(hub), "hub lists Khums (14 topics) and Zakat (7 topics)");
   for (const cat of CATEGORIES) {
     await page.goto(`${BASES.off}/fiqh/${cat}`, { waitUntil: "networkidle" });
     const links = await page.$$eval(`a[href^='/fiqh/${cat}/']`, (as) => new Set(as.map((a) => a.getAttribute("href"))).size);

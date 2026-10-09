@@ -66,13 +66,14 @@ export const squash = (s) => (s ?? "").replace(/\s+/g, " ").trim();
 /** What a marja's follower should see of a topic: the cards and the women's panel count, and whether he has anything at all. */
 export const expectedTopic = (data, topic, marja) => {
   const byId = new Map(data.rulings.map((r) => [r.id, r]));
-  const rs = topic.rulingIds.map((id) => byId.get(id)).filter((r) => r && (!r.supplementary || r.supplementary.marjaId === marja));
+  const rs = topic.rulingIds.map((id) => byId.get(id)).filter((r) => r && (!r.supplementary || r.supplementary.marjaId === marja) && (!r.audience || r.audience === marja));
   const hasAny = rs.some((r) => r.rulings.some((e) => e.marjaId === marja) || (r.seeAlso || []).some((s) => s.marjaId === marja));
   const main = rs.filter((r) => !r.sensitive && !r.panel).length;
-  return { rulings: rs, hasAny, empty: rs.length > 0 && !hasAny, main: rs.length && !hasAny ? 0 : main, sensitive: rs.filter((r) => r.sensitive).length };
+  const empty = (rs.length > 0 || topic.rulingIds.length > 0) && !hasAny;
+  return { rulings: rs, hasAny, empty, main: empty ? 0 : main, sensitive: rs.filter((r) => r.sensitive).length };
 };
 
-export const CATEGORIES = ["foundations", "taharat", "salat", "sawm"];
+export const CATEGORIES = ["foundations", "taharat", "salat", "sawm", "khums", "zakat"];
 
 /** The text of one ruling card by id; a women-specific ruling sits in a collapsed panel, which is opened first. */
 export const cardText = async (page, id) => {

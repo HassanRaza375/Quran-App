@@ -2007,6 +2007,217 @@
    "url": "https://www.leader.ir/ur/book/106/1?sn=11433",
    "sha256": "7165f9c64d2f2b43fe1d35b2c402a44924dc48dfaf84c96b69a3af29dad74a80",
    "fetched": "2026-10-08"
+  },
+  {
+   "path": "en/p2305.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2305/",
+   "sha256": "2d4dba9fbf5afded72a0112b13b87b19032e960494477225f20582646c3038ab",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2306.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2306/",
+   "sha256": "9209b2c7ed7ee455a6c63585aa16f2de9648f92b7fd312f04767eb208f7eabec",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2307.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2307/",
+   "sha256": "add2750a0ed98bdb82a3daa3fa2fe815bf3af602af68911540670f7cd31c27be",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2308.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2308/",
+   "sha256": "e36c7fe99f299e273521d51ddb62f41a533eda347a6032ac1f3e1ab4b3801966",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2309.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2309/",
+   "sha256": "fa48f4ff592378cf85bbec8dd22b6c709d0be7eb2a15000fab97d81a1f2b6504",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2310.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2310/",
+   "sha256": "b19d45143939711e57379d06bf2d3a4c249321f370b943c6cd7c365329d49451",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2311.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2311/",
+   "sha256": "8635cedbce832fc95584ac35b275113597db6c12c9e0e73b93ecba2cb6abb6c0",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2312.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2312/",
+   "sha256": "e1ced2223a7ffa358e7fca537d132cc2001113bd530fe4e7ff6e6343a5a50705",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2313.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2313/",
+   "sha256": "b9c7b895b4f2987929d790495d048c2d7dc55e55196a20ec1d5e6e10b941e02a",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2314.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2314/",
+   "sha256": "0c56473312500cdd9f07181ffbbb6397d45f8f6e80674507557806905e1e91b3",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2315.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2315/",
+   "sha256": "66811e342b4b2941e2970cfe8807c9080fd83c78329f1526e9cea448679fb0b1",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2316.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2316/",
+   "sha256": "ac588f166417131a986fa223c38a6909c6edcf1b0dbbcc94cf24727487d03b3a",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2317.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2317/",
+   "sha256": "e87da78d61a1d078478825bbf603264ddad3aa1568ba4f9ed4ba1677b1dda1e9",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2318.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2318/",
+   "sha256": "c8a6f100324f345398bf6abfdaf09396dad189c549e01e2b193cb47cf6254611",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2319.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2319/",
+   "sha256": "cdbf5bac61587bb6defbc088fba0f28c567d3b23d7eed29d181ad44f734bb09c",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2320.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2320/",
+   "sha256": "f64cbaf001fdb74a626d5e1cf05636dc4bdac8cc623e0b51110c64a33a95f396",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2321.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2321/",
+   "sha256": "bb686eb7695e357650c6a00ca5cc317538cb374b4924cb34679474cb3e7b65bd",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2322.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2322/",
+   "sha256": "d85d562c7147efaa8b8b67aaddb4c4844770e557cb2e893647817ba5180a85d9",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2323.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2323/",
+   "sha256": "ac1ae2d151f401d59a35061eae1c1f9e1a7eda4514aff3a28b26d3221b7b59ee",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2324.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2324/",
+   "sha256": "95134a1faa6a18e6d735f16485907c6a090fef4e05d525644998af7adabe4567",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2325.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2325/",
+   "sha256": "e97ef03ce2e564084b7f32f160a1d03d4d887f307f8089b9922e1e7641f25a7e",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2326.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2326/",
+   "sha256": "27f7a58924cc0bde5d360a2f40d12dd8478a04ea2bda904512f7e5701167e804",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p2327.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/2327/",
+   "sha256": "7f1b03160740d4e8526847bdc796e745bdbb37029db3a1445f01fe4b97adeff3",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "en/p8299.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/english/book/48/8299/",
+   "sha256": "48f3552fa21b0c716a5b9c350792a7e0b05ca723f457722a18976878aaf690bb",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "ur/u3645.txt",
+   "method": "page",
+   "url": "https://www.sistani.org/urdu/book/61/3645/",
+   "sha256": "1c3df33c82cf1f00899af0e68de73f53be3aec9c4c7aaa05ab3dfa5d0c454dc4",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "khums_en.json",
+   "method": "leader-tree",
+   "catid": 261,
+   "roots": [
+    0
+   ],
+   "book": "The Rulings of Khums (English)",
+   "url": "https://www.leader.ir/en/book/261",
+   "sha256": "8c66e36a1d86dc20e96bd4fef1e826ff25cefd071c7e2cda564962e3ac7a39ba",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "ur_books/khums_ur.json",
+   "method": "leader-tree",
+   "catid": 257,
+   "roots": [
+    0
+   ],
+   "book": "احکام خمس (official Urdu edition)",
+   "url": "https://www.leader.ir/ur/book/257",
+   "sha256": "6f098b297f22db15b02d6e2d97aea88197db54ad21b532191350651f99349e6b",
+   "fetched": "2026-10-09"
+  },
+  {
+   "path": "fa/khums_fa.json",
+   "method": "leader-tree",
+   "catid": 238,
+   "roots": [
+    0
+   ],
+   "book": "احکام خمس (Persian original; used only to decide show/hide, never displayed)",
+   "url": "https://www.leader.ir/fa/book/238",
+   "sha256": "a234dfb828b0263049627d7c3c4fe6991a2e8a93126ce0af02ad313836c2fa32",
+   "fetched": "2026-10-09"
   }
  ]
 }

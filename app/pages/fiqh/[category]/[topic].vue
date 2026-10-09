@@ -91,7 +91,7 @@
       </v-card>
 
       <template v-else>
-        <p v-if="!rulings.length" class="text-medium-emphasis">
+        <p v-if="!rulings.length && !topic.rulingIds.length" class="text-medium-emphasis">
           This topic is an overview and has no rulings of its own. The rulings are in the related topics below.
         </p>
         <!-- Nothing from this marja' has been added to this topic yet (e.g. zakāt al-fiṭrah for Khamenei):
@@ -136,6 +136,21 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </template>
+    </section>
+
+    <!-- 3b. Where and how to pay (decision G3): a link to the chosen marja's own official website only. No
+         bank details, representatives or addresses from any other source are shown or stored by the app. -->
+    <section v-if="marja && topic.payLink" class="mb-6" aria-labelledby="sec-pay">
+      <h2 id="sec-pay" class="text-h6 mb-2">Where and how to pay</h2>
+      <v-card variant="outlined" rounded="lg" class="pa-4">
+        <p class="mb-2">
+          This app does not collect or hold payments and does not list offices, representatives or bank accounts.
+          For where and how to pay, please see {{ marja.name.en }}'s own official website.
+        </p>
+        <a :href="marja.officialSite" target="_blank" rel="noopener noreferrer">
+          {{ marja.officialSite.replace(/^https?:\/\//, "") }} <v-icon size="14" aria-hidden="true">mdi-open-in-new</v-icon>
+        </a>
+      </v-card>
     </section>
 
     <!-- 4. Step-by-step (the chosen marja's procedures only) -->
@@ -246,7 +261,7 @@ const noEntriesForMarja = computed(
   () =>
     !!marja.value &&
     marja.value.status !== "pending-sources" &&
-    rulings.value.length > 0 &&
+    (rulings.value.length > 0 || (topic.value?.rulingIds.length ?? 0) > 0) &&
     rulings.value.every((r) => !getMarjaRuling(r, marja.value.id) && !r.seeAlso?.some((x) => x.marjaId === marja.value.id))
 );
 // Other collapsed panels (decision P8), each with a neutral heading and no app commentary.

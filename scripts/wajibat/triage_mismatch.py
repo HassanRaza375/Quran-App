@@ -49,7 +49,7 @@ def triage(rows, dec, data, trees):
             continue
         e = entry.get((rid, marja), {})
         ps = e.get("persianSource") or {}
-        has_fa = ps.get("reference", "").startswith("مسأله")
+        has_fa = ps.get("reference", "").startswith(("مسأله", "سؤال"))   # the Rules of prayer & fasting; the Rulings of Khums
         verdict, note, hold = "needs-human", "", None
         if not has_fa:
             note = "No Persian original to decide with (Q&A answer, or the Urdu-only treatise)."
@@ -60,6 +60,8 @@ def triage(rows, dec, data, trees):
             ur_bad = any(r["pair"] == "ur-fa" for r in high)
             if ur_bad and not en_bad:
                 verdict, hold, note = "persian-decided-pending-review", "hide-ur", "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden."
+            elif en_bad and not ur_bad and not (e.get("text") or {}).get("ur"):
+                note = "The English does not match the Persian, but there is no official Urdu to show instead, so the English was not hidden automatically."
             elif en_bad and not ur_bad:
                 from holds import HELD_EN_STEP_CUTS, HELD_EN_TREE_URDU
                 if ((rid, marja) in step_use and rid not in HELD_EN_STEP_CUTS) or ((rid, marja) in tree_en and rid not in HELD_EN_TREE_URDU):

@@ -44,7 +44,7 @@ export const useWajibat = () => {
       .map((id) => getTopicById(id))
       .filter((t): t is WajibatTopic => !!t);
 
-  /** A topic's rulings as followers of `marjaId` see them (other maraji' supplementary Q&A hidden). */
+  /** A topic's rulings as followers of `marjaId` see them (other maraji' supplementary Q&A and own-point entries hidden). */
   const rulingsFor = (topic: WajibatTopic, marjaId?: MarjaId | null): Ruling[] =>
     topic.rulingIds
       .map((id) => getRulingById(id))

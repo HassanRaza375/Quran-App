@@ -111,6 +111,23 @@ def main():
                 add(r["id"], "khamenei", "text", ("en", "fa"), ("en", en), ("fa", fa), e["source"]["reference"])
             add(r["id"], "khamenei", "text", ("ur", "fa"), ("ur", ur), ("fa", fa), ps["reference"])
 
+    # ---- Persian: Khamenei's Rulings of Khums (question-and-answer book, same numbers in the three editions) ----
+    import kh_khums
+    for r in data["rulings"]:
+        for e in r["rulings"]:
+            ps = e.get("persianSource")
+            if not ps or e["marjaId"] != "khamenei" or not ps["reference"].startswith("سؤال"):
+                continue
+            n = int(re.findall(r"\d+", ps["reference"].translate(DIGITS))[0])
+            fa, ur = kh_khums.FA[n], kh_khums.UR.get(n)
+            for field, key in (("question", "q"), ("text", "a")):
+                en = (e.get(field) or {}).get("en")
+                if en:
+                    add(r["id"], "khamenei", field, ("en", "fa"), ("en", en), ("fa", fa[key]), e["source"]["reference"])
+                u = (e.get(field) or {}).get("ur")
+                if u:
+                    add(r["id"], "khamenei", field, ("ur", "fa"), ("ur", u), ("fa", fa[key]), ps["reference"])
+
     # ---- Persian treatise against the four Urdu treatise entries ----
     import treatise
     fa_nodes = {n["id"]: n for n in json.load(open(os.path.join(SRC, "fa", "risala_amuzeshi_fa_tahara.json"), encoding="utf-8"))}

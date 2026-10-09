@@ -199,6 +199,13 @@ export const validateWajibatDataset = (
       else if (!target.rulings.some((m) => m.marjaId === s.marjaId)) push(r.id, `seeAlso target "${s.rulingId}" has no entry for ${s.marjaId}`);
     }
 
+    // Phase 6: a point only one marja's book states (`audience`): exactly his entry, nothing else.
+    if (r.audience) {
+      if (r.rulings.length !== 1 || r.rulings[0]?.marjaId !== r.audience) push(r.id, "an audience ruling holds exactly one entry, for its own marja'");
+      if (r.differsBetweenMaraji) push(r.id, "an audience ruling has one marja' only, so it cannot be differsBetweenMaraji");
+      if (r.supplementary) push(r.id, "a ruling is either supplementary or audience, not both");
+    }
+
     // Decision P13 / rule R7: a supplementary Q&A entry is one marja's own, compared with (and
     // agreeing with) cited rulings of his — never another marja's, never a gap for anyone else.
     if (r.supplementary) {

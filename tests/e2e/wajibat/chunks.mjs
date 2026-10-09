@@ -16,7 +16,7 @@ export const chunkSizes = () => {
 export default async function run({ browser }) {
   const t = checker("chunks");
   const sizes = chunkSizes();
-  t.ok(sizes.map((s) => s.name).join() === "core,foundations,salat,sawm,taharat", `five data chunks (core + 4 categories): ${sizes.map((s) => s.name)}`);
+  t.ok(sizes.map((s) => s.name).join() === "core,foundations,khums,salat,sawm,taharat,zakat", `seven data chunks (core + 6 categories): ${sizes.map((s) => s.name)}`);
   const visit = async (steps) => {
     const ctx = await newContext(browser, { marja: "sistani" });
     const page = await ctx.newPage();

@@ -12,7 +12,7 @@ import { chunkSizes } from "./chunks.mjs";
 const args = process.argv.slice(2);
 const skipBuild = args.includes("--skip-build");
 const only = (args.includes("--suite") ? args[args.indexOf("--suite") + 1] ?? "" : "").split(",").filter(Boolean);
-const SUITES = ["categories", "sawm", "holds", "guided", "helpers", "chunks", "offline"];
+const SUITES = ["categories", "sawm", "khums", "holds", "guided", "helpers", "chunks", "offline"];
 
 if (!skipBuild || !fs.existsSync(path.join(REPO, ".output", "server", "index.mjs"))) {
   console.log("Building the app (npm run build)...");

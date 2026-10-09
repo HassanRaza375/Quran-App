@@ -216,6 +216,31 @@ def KK(n, *, note=None, basis=None):
         r["note"] = " ".join(notes)
     return r
 
+def KS(i):
+    """One unnumbered statement of The Rulings of Khums (a rule the book's Q&A follow): the English, and the Urdu and
+    Persian editions only where all three were lined up with each other (kh_stm.py). Cited by section and paragraph."""
+    import kh_stm as ks
+    e = ks.EN[i]
+    a = nfc(e["text"])
+    r = {"marjaId": "khamenei", "format": "issue", "text": {"en": a}}
+    b = infer_basis(a)
+    r["basis"] = b
+    r["source"] = {"title": KUMS_BOOK, "reference": ks.ref("en", e), "url": KUMS_URL.format(e["sn"])}
+    if i in ks.TRIPLE:
+        u, f = ks.TRIPLE[i]
+        r["text"]["ur"] = nfc(ks.UR[u]["text"])
+        r["urSource"] = {"title": KUMS_UR_BOOK, "reference": ks.ref("ur", ks.UR[u]), "url": KUMS_UR_URL.format(ks.UR[u]["sn"])}
+        r["persianSource"] = {"title": KUMS_FA_BOOK, "reference": ks.ref("fa", ks.FA[f]), "url": KUMS_FA_URL.format(ks.FA[f]["sn"])}
+    else:
+        r["urduNote"] = KUMS_STM_UNMATCHED
+    r["verification"] = "A"
+    n = auto_note(a, b)
+    if n:
+        r["note"] = n
+    return r
+
+KUMS_STM_UNMATCHED = "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+
 RULINGS = []
 def R(id_, topic, subject, *entries, differs=False, sensitive=False, see_also=None, audience=None):
     """see_also: {marjaId: rulingId} — for a marja' with no entry here whose book states this

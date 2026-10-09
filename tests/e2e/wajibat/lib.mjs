@@ -1,5 +1,4 @@
 // Shared helpers for the Daily Fiqh browser suites (run with `npm run test:e2e:wajibat`).
-import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";

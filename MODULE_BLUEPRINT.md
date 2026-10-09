@@ -1354,7 +1354,7 @@ responsive layout at 1280/768/390px) passed without defects.
 **Status: Phases 0–3 built (Phase 3 on branch `wajibat-module`, with the P12–P14 fixes and Khamenei's
 Q&A supplementary entries, P13). Phase 4a (doubts, ṣalāt al-iḥtiyāṭ, sajdat al-sahw content) is built; Phase 4b (the decision helpers: prayer doubts and wuḍūʾ, for Sistani
 and Khamenei) is built and merged, its four helpers hidden until a reviewer signs off every path. Phase 5 (Sawm: fasting and zakāt al-fiṭrah, 13 topics, 341 rulings)
-was merged. Phase 6 (Khums and Zakat: 21 topics, 527 rulings; Sistani chapters in full, Khamenei's *Rulings of Khums* Q&A; no calculator, paying topics link only to the marja's official site) is built on `wajibat-module` and awaiting review. Phases 7–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
+was merged. Phase 6 (Khums and Zakat: 21 topics, 605 rulings; Sistani chapters in full, Khamenei's *Rulings of Khums* Q&A and its 78 rule paragraphs; no calculator, paying topics link only to the marja's official site) is built on `wajibat-module` and awaiting review. Phases 7–8 and 10 are pending; Phase 9 (tracker) is deferred.** Spec:
 `wajibat-fiqh-jafari-module.md`. Decisions and official sources: `wajibat_decisions.md`. Phase
 reports: `wajibat_progress_log.md`.
 

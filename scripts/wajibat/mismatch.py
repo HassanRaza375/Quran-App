@@ -128,6 +128,18 @@ def main():
                 if u:
                     add(r["id"], "khamenei", field, ("ur", "fa"), ("ur", u), ("fa", fa[key]), ps["reference"])
 
+    # ---- Persian: Khamenei's Rulings of Khums, unnumbered statements (cited by section and paragraph) ----
+    import kh_stm
+    for r in data["rulings"]:
+        for e in r["rulings"]:
+            ps = e.get("persianSource")
+            if not ps or e["marjaId"] != "khamenei" or not ps["reference"].startswith("بند"):
+                continue
+            fa = kh_stm.lookup("fa", ps["reference"])
+            add(r["id"], "khamenei", "text", ("en", "fa"), ("en", e["text"]["en"]), ("fa", fa), e["source"]["reference"])
+            if e["text"].get("ur"):
+                add(r["id"], "khamenei", "text", ("ur", "fa"), ("ur", e["text"]["ur"]), ("fa", fa), ps["reference"])
+
     # ---- Persian treatise against the four Urdu treatise entries ----
     import treatise
     fa_nodes = {n["id"]: n for n in json.load(open(os.path.join(SRC, "fa", "risala_amuzeshi_fa_tahara.json"), encoding="utf-8"))}

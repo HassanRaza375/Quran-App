@@ -230,6 +230,192 @@ export const KHUMS_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "ks1",
+    topicId: "khumsitems",
+    subject: {
+      en: "The Instances of Obligation (Wujūb) of Khums, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Khums is obligatory on seven things:\nSurplus Income from Earnings and Gains\nHalāl Property Mixed with Harām Property\nMined Products\nTreasure Troves\nGemstones Obtained through Sea Diving\nThe Spoils of War\nThe land that the dhimmī kāfir buys from a Muslim."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, The Instances of Obligation (Wujūb) of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35612"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks2",
+    topicId: "khumsitems",
+    subject: {
+      en: "Surplus Income from Earnings and Gains, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Whenever a Mukallaf earns property through economic activities such as trade, industry, agriculture, receiving salaries and wages, renting property, and the like, he must pay Khums on the amount exceeding his own and his family’s living expenses at the end of the Khums year."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Surplus Income from Earnings and Gains",
+          url: "https://www.leader.ir/en/book/261?sn=35613"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks3",
+    topicId: "khumsitems",
+    subject: {
+      en: "Surplus Income from Earnings and Gains, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Expenditures beyond what is customary and necessary, in a way that is not considered part of one's living expenses (ma’ūnah), do not exempt one from paying Khums, so Khums must be paid for such expenses.",
+          ur: "اگر مکلف اقتصادی فعالیتوں مثلا تجارت، صنعت، زراعت، ملازمت، مزدوری اور مکان کا کرایہ وغیرہ سے مال حاصل کرے تو سال خمسی[1] کے اختتام پر اپنے اور اپنے زیرکفالت افراد کے اخراجات سے بچنے والی مقدار کا خمس ادا کرنا چاہئے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Surplus Income from Earnings and Gains",
+          url: "https://www.leader.ir/en/book/261?sn=35613"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 1، منفعت کسب",
+          url: "https://www.leader.ir/ur/book/257?sn=34677"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 1، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks4",
+    topicId: "khumsitems",
+    subject: {
+      en: "Surplus Income from Earnings and Gains, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a part of the income is temporarily inaccessible, such as through lending, Khums on it becomes obligatory at the end of the Khums year; however, payment can be delayed until it is received.",
+          ur: "اگر درامد کا کچھ مقدار وقتی طور پر دسترس سے باہر ہوجائے مثلا قرض دے تو سال خمسی پہنچنے پر اس کا خمس ادا کرنا واجب ہے البتہ ملنے تک اس کی ادائیگی موخر کرسکتے ہیں۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Surplus Income from Earnings and Gains",
+          url: "https://www.leader.ir/en/book/261?sn=35613"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 3، منفعت کسب",
+          url: "https://www.leader.ir/ur/book/257?sn=34677"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 3، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks5",
+    topicId: "khumsitems",
+    subject: {
+      en: "Surplus Income from Earnings and Gains, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Khums on non-cash income is calculated based on its value at the end of the Khums year."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Surplus Income from Earnings and Gains",
+          url: "https://www.leader.ir/en/book/261?sn=35613"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 4، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks6",
+    topicId: "khumsitems",
+    subject: {
+      en: "Surplus Income from Earnings and Gains, paragraph 5"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The term annual expenses includes, in addition to what one spends to earn income, all shar‘ī expenses customary and appropriate to one's social status.",
+          ur: "سال کے اخراجات سے مراد کسب مال کے لئے ہونے والے اخراجات کے علاوہ وہ تمام شرعی اخراجات ہیں جو انسان کی حیثیت کے مطابق اور متعارف حد میں ہوں۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 5, Surplus Income from Earnings and Gains",
+          url: "https://www.leader.ir/en/book/261?sn=35613"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 5، منفعت کسب",
+          url: "https://www.leader.ir/ur/book/257?sn=34677"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 5، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
     id: "kq241",
     topicId: "khumsitems",
     subject: {
@@ -342,7 +528,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 243",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -815,7 +1002,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 293",
           url: "https://www.leader.ir/fa/book/238?sn=32298"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -893,7 +1081,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 295",
           url: "https://www.leader.ir/fa/book/238?sn=32298"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -1092,6 +1281,488 @@ export const KHUMS_RULINGS: Ruling[] = [
         verification: "A"
       }
     ]
+  },
+  {
+    id: "ks7",
+    topicId: "khumscapital",
+    subject: {
+      en: "Capital, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Capital is of two types:"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35614"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 6، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks8",
+    topicId: "khumscapital",
+    subject: {
+      en: "Capital, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Merchandise, Māl al-Tījārah, or Variable Capital: This capital includes circulating cash, shop goods, factory products, agricultural products, etc."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35614"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks9",
+    topicId: "khumscapital",
+    subject: {
+      en: "Capital, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If this type of capital is acquired from income, its Khums must be paid based on its value at the market rate on the first due date of the Khums year after purchase. Thereafter, if its value increases in the subsequent Khums year, after deducting inflation, Khums must be paid on it if it has a buyer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35614"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks10",
+    topicId: "khumscapital",
+    subject: {
+      en: "Capital, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Fixed Capital: This includes commercial property, agricultural land, production and business tools (even cooling and heating equipment), vehicles for transporting goods or passengers, and the like."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35614"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 9، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks11",
+    topicId: "khumscapital",
+    subject: {
+      en: "Capital, paragraph 5"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If this type of capital is acquired from income, its Khums must be paid based on its value at the market rate on the first due date of the Khums year after purchase. After that, Khums will not be required if it is not sold. The increase in its value after the sale, after deducting inflation, is considered part of the income for the year of sale. If several years have passed since the purchase of the capital and Khums has not been paid on it, it must be paid, including inflation.",
+          ur: "اگر سرمایہ خریدنے کے بعد کئی سال گزرجائیں اور اس کا خمس ادا نہ کرے تو افراط زر کے ساتھ اس کا خمس ادا کرنا چاہئے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 5, Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35614"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 4، سرمایہ",
+          url: "https://www.leader.ir/ur/book/257?sn=34678"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 10، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks12",
+    topicId: "khumscapital",
+    subject: {
+      en: "Capital, paragraph 6"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The discussion of living expenses (ma’ūnah) of business, which are considered as ruined (talaf) ones, such as advertising costs, wages of employees, utility bills, and the deduction of debts for these expenses and capital, is presented in the chapter on Khums Exemptions."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 6, Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35614"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 11، سرمايه",
+          url: "https://www.leader.ir/fa/book/238?sn=32279"
+        },
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks13",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If capital (tools and property) is bought in installments, Khums must be paid each Khums year on the amount for which installments have been paid, based on the market rate. For example, if a quarter of the installments has been paid, Khums must be paid on a quarter of the current market price at the end of Khums year."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks14",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If the capital is such that paying Khums on it would leave an insufficient amount to cover living expenses (ma’ūnah) or if it is uncertain whether it would suffice, Khums on it is not obligatory, even if the Mukallaf can pay it in installments.",
+          ur: "سرمایہ یعنی جائیداد یا آلات کو اگر قسطوں میں خریدیں تو ہر سال خمسی کے آغاز پر اس کی اتنی مقدار کا خمس ادا کیا جائے جس کی قسط ادا کی جاچکی ہے مثلا ایک چوتھائی قسط ادا کی جاچکی ہے تو سال خمسی کے موقع پر ایک چوتھائی کا اس دن کی قیمت کے مطابق خمس ادا کیا جائے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 1، مستقل اور ثابت سرمایہ",
+          url: "https://www.leader.ir/ur/book/257?sn=34680"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 1، سرمایه ثابت",
+          url: "https://www.leader.ir/fa/book/238?sn=32281"
+        },
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks15",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Generally speaking, when repaying debts, creditors are entitled to demand compensation for the reduced value of money due to inflation, except in specific cases, such as house mortgages, where the implicit understanding might be that no adjustment for inflation will be made.",
+          ur: "اگر سرمایہ اتنی مقدار میں ہو کہ خمس ادا کرنے کی صورت میں باقی ماندہ مقدار زندگی کے اخراجات پورا کرنے کے لئے کافی نہ ہو یا کافی ہونے میں شک ہو تو اس پر خمس واجب نہیں ہے اگرچہ مکلف اقساط کی شکل میں خمس ادا کرسکتا ہو۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 2، مستقل اور ثابت سرمایہ",
+          url: "https://www.leader.ir/ur/book/257?sn=34680"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 2، سرمایه ثابت",
+          url: "https://www.leader.ir/fa/book/238?sn=32281"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks16",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Property that has already been subjected to Khums or acquired through non-Khums-liable means, such as gifts or inheritance, and has appreciated falls into one of the following categories:"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks17",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 5"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "a. If the property has been utilized as living expenses (muʼūnah), the added value is not subject to Khums.\n\nb. If the property was purchased with the intention of preserving the value of money and not for trade, the added value before sale is not subject to Khums. However, after the sale, the amount exceeding inflation is considered part of the income for that year.\n\nc. If the property is fixed capital (like business tools), the ruling is the same as in the second category.\n\nd. If the property is working capital, the added value at the end of each Khums year, based on its market value after deducting inflation, is subject to Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 5, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks18",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 6"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If shares are purchased with earned income, either to preserve the value of money or to utilize their annual dividends, Khums is obligatory on their market value at the end of the first Khums year. Thereafter, as long as the shares are not sold, they are not subject to Khums. However, upon sale, the increase in value—after deducting inflation—will be considered part of the income for the year of sale. If this amount is not spent on living expenses (ma’ūnah) by the end of the Khums year, it becomes subject to Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 6, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks19",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 7"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If shares are purchased with price appreciation and profit-making intention, Khums is obligatory on their market value at the end of the first Khums year. Subsequently, at the end of each Khums year, the increase in their value—after deducting the inflation rate—must be calculated, and Khums must be paid on it.",
+          ur: "اگر آمدنی سے شیئر خریدا جائے تاکہ پیسے کی قدر برقرار رکھیں یا اس کی سالانہ منفعت سے استفادہ کیا جائے تو اولین سال خمسی کے موقع پر اس کی موجودہ قیمت پر خمس واجب ہے اور کے بعد جب تک فروخت نہ کیا جائے خمس نہیں ہے اور فروخت کرنے کے بعد قیمت میں ہونے والا اضافہ افراط زر کو منہا کرنے کے بعد اس سال کی آمدنی کا حصہ شمار ہوگا اور سال کے آخر تک اخراجات میں استعمال نہ کیا جائے تو خمس لگے گا۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 7, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 9، مستقل اور ثابت سرمایہ",
+          url: "https://www.leader.ir/ur/book/257?sn=34680"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 9، سرمایه ثابت",
+          url: "https://www.leader.ir/fa/book/238?sn=32281"
+        },
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks20",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 8"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If someone sells goods or agricultural products on credit with the payment due after the Khums year, the cash price at the time of the transaction is considered part of the income for the year of the sale, and the profit from the installment sale is considered income for the year it is received."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 8, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks21",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 9"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Delayed salaries and overtime payments that are not collectible at the end of the Khums year are considered income for the year they are received. Khums is not obligatory if they are spent on living expenses (ma’ūnah) by the end of that year. However, if they are collectible by the end of the Khums year, Khums on such amounts is obligatory, even if they have not yet been received."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 9, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks22",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 10"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Lending one’s income to individuals or banks does not exempt it from Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 10, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks23",
+    topicId: "khumscapital",
+    subject: {
+      en: "Fixed Capital, paragraph 11"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Khums is only obligatory for individuals (not for legal entities, such as governments, institutions, or banks. Therefore, the legal entitiesʼ income without individual owners is not subject to Khums. Calculating and paying Khums on the respective income shares is obligatory if the income has one or more individual owners."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 11, Fixed Capital",
+          url: "https://www.leader.ir/en/book/261?sn=35616"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
   },
   {
     id: "kq1",
@@ -1435,7 +2106,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 9",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -1513,7 +2185,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 11",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -1552,7 +2225,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 12",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -1591,8 +2265,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 13",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -1687,12 +2360,10 @@ export const KHUMS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "qa",
         question: {
-          en: "I own a house with installment loans and a commercial property where I conduct my business. I have set a Khums year for myself to fulfill my religious obligation. I hope you exempt me from paying Khums on the house, but I can pay Khums on the commercial property in installments.",
-          ur: "میرے پاس ایک گھر ہے جس کی قیمت قسطوں میں ادا کرتا ہوں اور تجارتی دوکان بھی ہے جہاں تجارت کرتا ہوں اور شرعی وظیفے پر عمل کرنے کے لئے اپنے لئے سال خمسی معین کررکھا ہے۔ امید کرتا ہوں کہ مجھے گھر کا خمس ادا کرنے سے بری الذمہ قرار دیں گے البتہ دوکان کا خمس قسط وار ادا کرسکتا ہوں۔"
+          en: "I own a house with installment loans and a commercial property where I conduct my business. I have set a Khums year for myself to fulfill my religious obligation. I hope you exempt me from paying Khums on the house, but I can pay Khums on the commercial property in installments."
         },
         text: {
-          en: "The house in which you reside is exempt from Khums. However, paying Khums on the commercial property is obligatory unless doing so prevents you from covering your living expenses (ma’ūnah) in a manner consistent with your customary status.",
-          ur: "جس گھر میں رہتے ہیں اس کا خمس نہیں ہے البتہ دوکان کا خمس ادا کرنا واجب ہے سوائے اس صورت کے کہ خمس ادا کرنے کی صورت میں باقی ماندہ مقدار اپنی شان کے مطابق زندگی گزارنے کے لئے کافی نہ ہو۔"
+          en: "The house in which you reside is exempt from Khums. However, paying Khums on the commercial property is obligatory unless doing so prevents you from covering your living expenses (ma’ūnah) in a manner consistent with your customary status."
         },
         basis: "fatwa",
         source: {
@@ -1700,18 +2371,13 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "Q 16",
           url: "https://www.leader.ir/en/book/261?sn=35616"
         },
-        urSource: {
-          title: "احکام خمس",
-          reference: "س 16",
-          url: "https://www.leader.ir/ur/book/257?sn=34680"
-        },
         persianSource: {
           title: "احکام خمس",
           reference: "سؤال 16",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
         verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     audience: "khamenei"
@@ -1823,7 +2489,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 19",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -1862,7 +2529,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 20",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -1934,7 +2602,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 22",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -2130,7 +2799,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 28",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -2247,7 +2917,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 31",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -2515,7 +3186,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 38",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -2554,7 +3226,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 39",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -2593,7 +3266,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 40",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -2828,7 +3502,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 46",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -2906,7 +3581,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 48",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -3371,7 +4047,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 62",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -3522,7 +4199,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 66",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -3561,7 +4239,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 67",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     audience: "khamenei"
@@ -3711,7 +4390,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 73",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -3900,7 +4580,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 78",
           url: "https://www.leader.ir/fa/book/238?sn=32281"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -4046,8 +4727,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 107",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ]
   },
@@ -4105,8 +4785,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 115",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ]
   },
@@ -4253,6 +4932,442 @@ export const KHUMS_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "ks33",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Living Expenses (Ma’ūnah), paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Living expenses (ma’ūnah) are divided into two categories:"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Living Expenses (Ma’ūnah)",
+          url: "https://www.leader.ir/en/book/261?sn=35632"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks34",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Expenses related to one's sustenance and dependents are exempt from Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks35",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Ma’ūnah are categorized into three types:"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks36",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The criterion for consumable items to be considered living expenses (ma’ūnah) or to be exempt from Khums is their customary use during the year.",
+          ur: "اگر سال کے دوران اپنی آمدنی سے تحفہ دیا جائے اور سال خمسی کے بعد اس کو واپس لیا جائے تو واپس ملتے ہی اس کا خمس ادا کرنا چاہئے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 11، زندگی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34686"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 4، دستۀ سوم",
+          url: "https://www.leader.ir/fa/book/238?sn=32288"
+        },
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks37",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The criterion for exemption from Khums on current living expenses (ma’ūnah) is that they must be compatible with one’s customary social status and not involve extravagance (isrāf).",
+          ur: "وہ سامان جن کی ضرورت نہیں یا اسراف اور فضول خرچی شمار ہوتے ہیں نیز حرام چیزیں خریدنے میں ہونے والے اخراجات مثلا مردانہ سونے کی انگوٹھی، لہو و لعب اور جوئے کے آلات وغیرہ مئونہ اور اخراجات کا حصہ نہیں ہیں اور ان پر خمس ادا کرنا چاہئے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 13، زندگی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34686"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 6، دستۀ سوم",
+          url: "https://www.leader.ir/fa/book/238?sn=32288"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks38",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 5"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A gift is considered part of living expenses (ma’ūnah) if it does not exceed the giver's social status. However, if the gift exceeds the giver's customary social status, Khums must be paid on the portion that exceeds this limit.",
+          ur: "جو شخص اپنے اور گھر والوں پر زندگی سخت کرتے ہوئے اپنی شان سے کم خرچ کرتا ہے، اس کے لئے جائز نہیں ہے کہ بچت شدہ مقدار کو اخراجات کا حصہ شمار کرے اور خمس نہ نکالے (یعنی خمس نکالنا چاہئے۔)"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 5, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 14، زندگی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34686"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 7، دستۀ سوم",
+          url: "https://www.leader.ir/fa/book/238?sn=32288"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks39",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 6"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a gift or souvenir is not delivered before the end of the Khums year, it is not considered living expenses (ma’ūnah), and Khums must be paid for it.",
+          ur: "اگر مستقبل میں ضروری سامان کو قبل از وقت خریدنا متعارف اور مقدار بھی اپنی اجتماعی حیثیت کے مطابق ہے تو اخراجات کے حکم میں ہے اور خمس نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 6, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 15، زندگی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34686"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 8، دستۀ سوم",
+          url: "https://www.leader.ir/fa/book/238?sn=32288"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks40",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 7"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "An item that is not needed, is considered extravagant or wasteful, or is used to purchase prohibited goods—such as a gold ring for men, musical instruments for frivolous purposes, gambling tools, and the like—is not regarded as living expenses (ma’ūnah) and is subject to Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 7, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks41",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 8"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If someone imposes an undue hardship on himself or his family by spending less than what is customary and appropriate to his social status, he should not consider the saved amount as part of living expenses (ma’ūnah). Therefore, he must pay Khums on these saved amounts."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 8, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks42",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 9"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If acquiring future necessities of life is customary and their quantity is compatible with one’s social status, they are considered living expenses (ma’ūnah) and exempt from Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 9, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks43",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 10"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a father purchases a house or a plot of land for his children's future, and it is customary for him to provide housing, and he cannot do so when the need arises, the property is exempt from Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 10, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks44",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 11"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "When the necessities for life are no longer needed or used after some time, they are not subject to Khums if this occurs after the end of the Khums year. However, if these necessities become unnecessary before the end of the first Khums year, Khums must be paid on their value at that year-end.",
+          ur: "اگر کوئی چیز کچھ عرصے تک ضروریات کا حصہ ہونے کے بعد اس کی ضرورت ختم ہوجائے تو چنانچہ سال خمسی گزرنے کے بعد ضرورت ختم ہوجائے تو خمس تعلق نہیں رکھتا ہے لیکن اولین سال خمسی سے پہلے اس کی ضرورت ختم ہوجائے تو سال خمسی کے موقع پر اس کی قیمت کے مطابق خمس نکالے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 11, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 17، زندگی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34686"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 10، دستۀ سوم",
+          url: "https://www.leader.ir/fa/book/238?sn=32288"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks45",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 12"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Converting one ma’ūnah into another ma’ūnah does not make it subject to Khums.",
+          ur: "اگر سال خمسی کے بعد مصارف زندگی فروخت کئے جائیں تو اس سے ملنے والے پیسے پر خمس نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 12, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 18، زندگی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34686"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 12، دستۀ سوم",
+          url: "https://www.leader.ir/fa/book/238?sn=32288"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks46",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 13"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If ma’ūnah (necessary items for living) is sold after the Khums year, the proceeds are not subject to Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 13, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks47",
+    topicId: "khumsmaunah",
+    subject: {
+      en: "Ma’ūnah for Livelihood and Living, paragraph 14"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Savings are absolutely subject to Khums unless they are used for necessary living expenses (ma’ūnah) within five days after the Khums year-end. However, if you set aside a certain amount for unforeseen needs and ensure that the remaining funds [after paying Khums] are insufficient to alleviate your concern, the saved amount is exempt from Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 14, Ma’ūnah for Livelihood and Living",
+          url: "https://www.leader.ir/en/book/261?sn=35633"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
     id: "kq84",
     topicId: "khumsmaunah",
     subject: {
@@ -4325,8 +5440,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 85",
           url: "https://www.leader.ir/fa/book/238?sn=32286"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -4443,8 +5557,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 88",
           url: "https://www.leader.ir/fa/book/238?sn=32286"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -4751,7 +5864,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 96",
           url: "https://www.leader.ir/fa/book/238?sn=32287"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -4790,7 +5904,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 97",
           url: "https://www.leader.ir/fa/book/238?sn=32287"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -4829,7 +5944,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 98",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -4907,8 +6023,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 100",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -4987,7 +6102,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 102",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -5104,7 +6220,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 105",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -5215,7 +6332,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 109",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -5254,7 +6372,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 111",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     audience: "khamenei"
@@ -5270,10 +6389,12 @@ export const KHUMS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "qa",
         question: {
-          en: "If some pieces of a 40-piece set of dishes are used, does this suffice to exempt the entire set from Khums?"
+          en: "If some pieces of a 40-piece set of dishes are used, does this suffice to exempt the entire set from Khums?",
+          ur: "اگر برتن کے سیٹ میں سے کچھ استعمال ہوجائیں تو خمس ساقط ہونے کے لئے یہی کافی ہے؟"
         },
         text: {
-          en: "The criterion for exempting household items from Khums is whether they are deemed necessary according to one’s customary social status, even if they are not used throughout the year."
+          en: "The criterion for exempting household items from Khums is whether they are deemed necessary according to one’s customary social status, even if they are not used throughout the year.",
+          ur: "گھریلو سامان پر خمس واجب نہ ہونے کا معیار یہ ہے کہ انسان کی حیثیت کے مطابق زندگی کی ضروریات صدق کرے اگرچہ پورے سال کے دوران استعمال نہ کیا جائے۔"
         },
         basis: "fatwa",
         source: {
@@ -5281,13 +6402,18 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "Q 112",
           url: "https://www.leader.ir/en/book/261?sn=35633"
         },
+        urSource: {
+          title: "احکام خمس",
+          reference: "س 112",
+          url: "https://www.leader.ir/ur/book/257?sn=34686"
+        },
         persianSource: {
           title: "احکام خمس",
           reference: "سؤال 112",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
         verification: "A",
-        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -5326,8 +6452,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 113",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -5366,7 +6491,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 114",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     audience: "khamenei"
@@ -5534,12 +6660,10 @@ export const KHUMS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "qa",
         question: {
-          en: "Does saving income for necessary expenses, such as living expenses (ma’ūnah), dowry, medical treatment, etc., fall under Khums?",
-          ur: "کیا ضروری اخراجات مثلا گھریلو مصارف، جہیز اور میڈیکل کے لئے بچت پر خمس ہے یا نہیں؟"
+          en: "Does saving income for necessary expenses, such as living expenses (ma’ūnah), dowry, medical treatment, etc., fall under Khums?"
         },
         text: {
-          en: "In general, savings are subject to Khums. However, if you set aside a certain amount for unforeseen needs and ensure that the remaining funds [after paying Khums] are insufficient to alleviate your concern, the saved amount is exempt from Khums.",
-          ur: "مجموعی طور پر بچت پر خمس لگتا ہے البتہ ہنگامی حالات کے لئے بچت کرنے والے پیسے پر چنانچہ خمس نکالنے کے بعد بقیہ رقم کافی نہیں ہوتی اور انسان کی پریشانی باقی رہتی ہے تو خمس نہیں ہے۔"
+          en: "In general, savings are subject to Khums. However, if you set aside a certain amount for unforeseen needs and ensure that the remaining funds [after paying Khums] are insufficient to alleviate your concern, the saved amount is exempt from Khums."
         },
         basis: "fatwa",
         source: {
@@ -5547,17 +6671,13 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "Q 120",
           url: "https://www.leader.ir/en/book/261?sn=35633"
         },
-        urSource: {
-          title: "احکام خمس",
-          reference: "س 120",
-          url: "https://www.leader.ir/ur/book/257?sn=34686"
-        },
         persianSource: {
           title: "احکام خمس",
           reference: "سؤال 120",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     audience: "khamenei"
@@ -5596,7 +6716,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 121",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -5635,7 +6756,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 122",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -5713,8 +6835,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 124",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -5792,8 +6913,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 126",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -5832,7 +6952,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 127",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -5999,12 +7120,10 @@ export const KHUMS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "qa",
         question: {
-          en: "I sold my residential house, where I lived for several years, and used the money as working capital for business. Is this capital exempt from Khums?",
-          ur: "میں نے اپنا رہائشی گھر فروخت کرکے اس کا پیسہ سرمایہ زیرگردش میں تبدیل کردیا تاکہ کما سکوں تو اس زیرگردش سرمایے پر خمس واجب ہے؟"
+          en: "I sold my residential house, where I lived for several years, and used the money as working capital for business. Is this capital exempt from Khums?"
         },
         text: {
-          en: "The proceeds from selling living expenses (ma’ūnah) of previous years, which are no longer considered as living expenses, are exempt from Khums, even if used as working capital. However, any increase in the value of this capital, after deducting inflation, is subject to Khums at the end of each Khums year.",
-          ur: "گذشتہ سالوں کی ضروریات جو ضروریات ہونے سے خارج ہوگئی ہیں، اس کے پیسے پر خمس نہیں ہے اگرچہ زیرگردش سرمایہ بنائےا لبتہ اس صورت میں اس کی قیمت میں ہونے والے اضافے کا افراط زر کو منہا کرنے کے بعدہر سال خمسی پر خمس ادا کرنا واجب ہے۔"
+          en: "The proceeds from selling living expenses (ma’ūnah) of previous years, which are no longer considered as living expenses, are exempt from Khums, even if used as working capital. However, any increase in the value of this capital, after deducting inflation, is subject to Khums at the end of each Khums year."
         },
         basis: "fatwa",
         source: {
@@ -6012,17 +7131,13 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "Q 132",
           url: "https://www.leader.ir/en/book/261?sn=35633"
         },
-        urSource: {
-          title: "احکام خمس",
-          reference: "س 132",
-          url: "https://www.leader.ir/ur/book/257?sn=34686"
-        },
         persianSource: {
           title: "احکام خمس",
           reference: "سؤال 132",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     audience: "khamenei"
@@ -6061,8 +7176,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 133",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -6102,8 +7216,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
       }
     ],
     audience: "khamenei"
@@ -6298,7 +7411,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 139",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -6370,8 +7484,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 141",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -6466,12 +7579,10 @@ export const KHUMS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "qa",
         question: {
-          en: "I bought a plot of land two years ago to build a house. If I save money from my daily expenses for construction purposes while currently living in a rented house, is this saving subject to Khums at the end of the Khums year?",
-          ur: "دوسال ہوئے ہیں کہ گھر بنانے کے لئے زمین کا قطعہ خریدا ہےچونکہ کرایے کے گھر میں رہتا ہوں لہذا اگر روزمرہ کے اخراجات سے کچھ پیسے گھر بنانے کے لئے بچت کروں تو سال کے اختتام پر خمس تعلق رکھتا ہے یا نہیں؟"
+          en: "I bought a plot of land two years ago to build a house. If I save money from my daily expenses for construction purposes while currently living in a rented house, is this saving subject to Khums at the end of the Khums year?"
         },
         text: {
-          en: "If you buy the required construction materials before the Khums year-end, your savings are exempt from Khums.",
-          ur: "اگر سال خمسی پہنچنے سے پہلے تعمیراتی سامان خریدے تو خمس نہیں ہے۔"
+          en: "If you buy the required construction materials before the Khums year-end, your savings are exempt from Khums."
         },
         basis: "fatwa",
         source: {
@@ -6479,17 +7590,13 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "Q 144",
           url: "https://www.leader.ir/en/book/261?sn=35633"
         },
-        urSource: {
-          title: "احکام خمس",
-          reference: "س 144",
-          url: "https://www.leader.ir/ur/book/257?sn=34686"
-        },
         persianSource: {
           title: "احکام خمس",
           reference: "سؤال 144",
           url: "https://www.leader.ir/fa/book/238?sn=32288"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     audience: "khamenei"
@@ -6637,6 +7744,451 @@ export const KHUMS_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "ks48",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Some of the income spent for earning profits, which is not replaced—such as transportation costs, employee wages, shop rent, utility bills, and taxes—are considered ruined/loss (talaf) and are not subject to Khums. If these expenses are covered from non-income sources, they are deducted from the profits of the same year."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks50",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Additionally, the debts pertaining to living expenses (ma’ūnah), which are incurred during the current year, after earning the first income of the year, are allowed to be deducted from that income without the need for repayment. However, the debts that were incurred before earning the first income of the year, such as loans or credit purchases for living expenses, by obligatory caution (al‑iḥtiyāṭ al‑wājib), are not eligible for deduction or exemption from income.",
+          ur: "نوٹ: سال خمسی پہنچنے کے بعد پانچ دن تک زندگی کے مصارف اور قرضہ جات کی بابت ادائیگی جائز ہے۔ اگر سال کے اختتام تک کاروبارکے اخراجات کی بابت قرضہ ادا نہ کرے تو صرف اس صورت میں آمدنی سے منہا کرسکتا ہے کہ وہ قرضہ اسی آمدنی کے حصول سے مربوط ہو بنابراین اگر مثلا تجارت سے مربوط قرضہ ہے جبکہ سال کی آمدنی ملازمت سے حاصل ہوئی ہے تو اس قرضے کو ملازمت سے ملنے والی آمدنی سے منہا نہیں کرسکتا ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 4، آمدنی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34692"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 5، مؤونه کسب درآمد",
+          url: "https://www.leader.ir/fa/book/238?sn=32289"
+        },
+        verification: "A",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks51",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The amounts spent from non-Khums-liable funds, such as gifts, inheritance, or Khums-paid money, after earning the first income of the year, are also allowed to be subtracted from the current year's income for such purposes."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks52",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 5"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The living expenses (ma’ūnah) and their related debts are allowed to be paid within five days after the Khums year-end [to be considered part of the current year’s living expenses]. Unpaid debts related to earning income are allowed to be deducted or excluded from this income only if they directly pertain to the same income source. Therefore, if a debt is related to, for example, business, but the year's income is from a salaried job, this debt is not allowed to be deducted or excluded from the income of the salaried job year."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 5, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks53",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 6"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "However, if, shortly after the Khums year-end, a mukallaf pays his debts from the same year's income, the amount of the debt customarily considered part of the year's expenses is allowed to be excluded from the remaining income of that year. Otherwise, any remaining unused income is subject to Khums.",
+          ur: "نوٹ: اگر کوئی مکلف سال خمسی گزرنے کے مختصر مدت کے بعد اپنے قرضے کی اتنی مقدار اس سال کی آمدنی سے ادا کرنا چاہے جو عرفا سال کے اخراجات میں خرچ کرنا شمار کیا جاتا ہے تو اس سال کی باقی ماندہ آمدنی سے قرضے کی مقدار کو منہا کرسکتا ہے اس صورت کے علاوہ باقی بچنے والی پوری آمدنی پر خمس ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 6, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 5، آمدنی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34692"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 6، مؤونه کسب درآمد",
+          url: "https://www.leader.ir/fa/book/238?sn=32289"
+        },
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks54",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 7"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Expenses related to a business can be deducted and exempted from the annual income, including obligations that are due but have not yet been paid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 7, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks55",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 8"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Income on which Khums has already been paid is not subject to Khums again.",
+          ur: "اگر آمدنی کا ایک مرتبہ خمس ادا کیا گیا ہے تو دوبارہ اس پر خمس تعلق نہیں رکھتا ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 8, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 7، آمدنی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34692"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 10، مؤونه کسب درآمد",
+          url: "https://www.leader.ir/fa/book/238?sn=32289"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks56",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 9"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Business tools on which Khums has already been paid are not subject to further Khums unless sold. After the sale, the proceeds—after deducting the original Khums-paid value and its inflation—are treated as income for the year of sale.",
+          ur: "وہ آلات کسب جن کا خمس ادا کیا گیا ہے، جب تک فروخت نہ کیے جائیں، خمس تعلق نہیں رکھتا ہے اور فروخت کرنے کی صورت میں اس کی قیمت خمس ادا کردہ قیمت اور افراط زر کو منہا کرنے کے بعد سال کی آمدنی شمار ہوگی۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 9, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 8، آمدنی کے اخراجات",
+          url: "https://www.leader.ir/ur/book/257?sn=34692"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 11، مؤونه کسب درآمد",
+          url: "https://www.leader.ir/fa/book/238?sn=32289"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks57",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 10"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "At the end of each Khums year, the value of merchandise (māl al-tijārah) must be assessed. After deducting the original Khums-paid capital and its inflation-adjusted value, Khums is obligatory on any added value, provided the merchandise has a buyer."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 10, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks58",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 11"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If property subject to Khums is mixed with property that is not subject to Khums in a single account, as long as the Khums-liable property remains present in the account, any withdrawal made for spending on living expenses (ma’ūnah) — whether done intentionally or unintentionally — will be deducted from the Khums-liable portion. Consequently, the property not subject to Khums will remain preserved."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 11, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks59",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 12"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "At the end of the Khums year, losses incurred on capital—such as depreciation, a decline in the value of tools, or damage—are deducted from the income."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 12, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks60",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 13"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In this regard, unlike living expenses (maʻūnah), it does not matter whether the loss occurred on capital before or after earning the first income."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 13, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks61",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 14"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In general, any property, goods, or money given to a mukallaf, which the mukallaf would not have a rightful claim to if it were not given, is not subject to Khums. This includes gifts, government subsidies, bank prizes, and stipends, as well as pensions paid by the Foundation of Martyrs and Veterans Affairs to disabled veterans, former prisoners of war, and the esteemed families of martyrs. However, the recommended precaution (al‑iḥtiyāṭ al‑mustaḥabb) is that, if any of these exceed the annual expenses, Khums should be paid on the surplus."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 14, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks62",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 15"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If gifted items not kept with the intent of trade are sold, paying Khums on them is not obligatory, even if their value has increased."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 15, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks63",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 16"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "However, if the gifted property is used as capital for trade and sold, the sale price—after deducting its original value and inflation adjustment—will, by obligatory caution (al‑iḥtiyāṭ al‑wājib), be considered income for the year of sale. If it is not spent on living expenses (ma’ūnah) by the end of the year, Khums must be paid on the surplus."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 16, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks64",
+    topicId: "khumsexpenses",
+    subject: {
+      en: "Living Expenses (Ma’ūnah) for Earning Income, paragraph 17"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Paying Khums on bonuses and rewards is not obligatory."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 17, Living Expenses (Ma’ūnah) for Earning Income",
+          url: "https://www.leader.ir/en/book/261?sn=35634"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
     id: "kq145",
     topicId: "khumsexpenses",
     subject: {
@@ -6647,12 +8199,10 @@ export const KHUMS_RULINGS: Ruling[] = [
         marjaId: "khamenei",
         format: "qa",
         question: {
-          en: "I spent a significant amount on decorating and designing my shop. Is this decoration subject to Khums?",
-          ur: "میں نے دوکان کی ڈیکوریشن اور سجاوٹ کے لئے کئی لاکھ خرچ کیے ہیں۔ ان پر خمس ہے یا نہیں؟"
+          en: "I spent a significant amount on decorating and designing my shop. Is this decoration subject to Khums?"
         },
         text: {
-          en: "In general, if the decoration increases the value of the shop, or is tradeable, it is subject to Khums. Otherwise, it is considered a loss/ruined (talaf) and exempt from Khums.",
-          ur: "مجموعی طور پر اگر اس طرح خرچہ کیا گیا ہے کہ دوکان اور محل تجارت کی ارزش اور قیمت میں اضافہ ہوا ہے یا فروخت اور منتقل کرنے کے قابل ہے تو خمس ہے ورنہ تلف ہونے کے حکم ہے اور خمس نہیں ہے۔"
+          en: "In general, if the decoration increases the value of the shop, or is tradeable, it is subject to Khums. Otherwise, it is considered a loss/ruined (talaf) and exempt from Khums."
         },
         basis: "fatwa",
         source: {
@@ -6660,17 +8210,13 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "Q 145",
           url: "https://www.leader.ir/en/book/261?sn=35634"
         },
-        urSource: {
-          title: "احکام خمس",
-          reference: "س 145",
-          url: "https://www.leader.ir/ur/book/257?sn=34692"
-        },
         persianSource: {
           title: "احکام خمس",
           reference: "سؤال 145",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
       }
     ],
     audience: "khamenei"
@@ -6866,7 +8412,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 150",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -6983,8 +8530,7 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 153",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A",
-        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+        verification: "A"
       }
     ],
     audience: "khamenei"
@@ -7095,7 +8641,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 156",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -7593,7 +9140,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 170",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -7673,7 +9221,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 172",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -7868,7 +9417,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 177",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -7973,7 +9523,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 180",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -8051,7 +9602,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 182",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -8090,7 +9642,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 183",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -8129,7 +9682,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 184",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -8193,6 +9747,57 @@ export const KHUMS_RULINGS: Ruling[] = [
         note: "Marked * (revised) in the 4th edition. The Urdu text was compared and matches in substance."
       }
     ]
+  },
+  {
+    id: "ks65",
+    topicId: "khumsexempt",
+    subject: {
+      en: "Maintenance (Nafaqah), paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Is maintenance (nafaqah) received by a wife from her husband, a child from his father, or parents from their children subject to Khums?"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Maintenance (Nafaqah)",
+          url: "https://www.leader.ir/en/book/261?sn=35635"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks67",
+    topicId: "khumsexempt",
+    subject: {
+      en: "Inheritance, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Inheritance and proceeds from its sale are not subject to Khums, even if the value appreciates. However, if the inherited property is used for investment, it is considered part of the year's income. If this income is not spent on living expenses (ma’ūnah) by the end of the Khums year, the obligatory caution (al‑iḥtiyāṭ al‑wājib) is that it is obligatory to pay Khums on the added value after selling the property and deducting inflation."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Inheritance",
+          url: "https://www.leader.ir/en/book/261?sn=35636"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ],
+    audience: "khamenei"
   },
   {
     id: "kq185",
@@ -8424,7 +10029,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 190",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -8502,7 +10108,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 192",
           url: "https://www.leader.ir/fa/book/238?sn=32289"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -9429,7 +11036,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 218",
           url: "https://www.leader.ir/fa/book/238?sn=32295"
         },
-        verification: "A"
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
       }
     ],
     audience: "khamenei"
@@ -9587,7 +11195,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 222",
           url: "https://www.leader.ir/fa/book/238?sn=32295"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -9926,6 +11535,206 @@ export const KHUMS_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "ks68",
+    topicId: "khumsyear",
+    subject: {
+      en: "Calculation and Payment of Khums, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The calculation of Khums is an obligation due to something else (al-wujūb al- ghairī), rather than being an obligation due to itself (al-wujūb al-nafsī). The subsequent rulings will clarify the implications of this type of obligation."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Calculation and Payment of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35641"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks69",
+    topicId: "khumsyear",
+    subject: {
+      en: "Calculation and Payment of Khums, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Point 2: A person familiar with the Khums rulings may personally calculate the amount of Khums and pay it to the authority in charge of Khums (walī al-amr of Khums) or his authorized attorney."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Calculation and Payment of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35641"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks70",
+    topicId: "khumsyear",
+    subject: {
+      en: "Calculation and Payment of Khums, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Anyone earning an income, even if it is small, is obligated to determine a Khums year and calculate his annual income. If any portion of the income remains unused by the end of the year, paying Khums on the surplus is obligatory."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Calculation and Payment of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35641"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 3، محاسبه و پرداخت خمس",
+          url: "https://www.leader.ir/fa/book/238?sn=32296"
+        },
+        verification: "A",
+        urduNote: "The Urdu text of this ruling is held back until a person has checked it against the English (the automated comparison found a difference in numbers or negation)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks71",
+    topicId: "khumsyear",
+    subject: {
+      en: "Calculation and Payment of Khums, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If there is an interval between the end of the Khums year and the first income earned in the new year, the start of the new Khums year can be designated as the date when the first income was received.",
+          ur: "اگر سال خمسی کے بعد جدید سال میں اولین آمدنی ملنے تک فاصلہ آجائے تو نئے سال خمسی کو اولین آمدنی ملنے کی تاریخ سے قرار دے سکتے ہیں۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Calculation and Payment of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35641"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 4، خمس کو حساب اور ادا کرنے کا طریقہ",
+          url: "https://www.leader.ir/ur/book/257?sn=34699"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 4، محاسبه و پرداخت خمس",
+          url: "https://www.leader.ir/fa/book/238?sn=32296"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks72",
+    topicId: "khumsyear",
+    subject: {
+      en: "Calculation and Payment of Khums, paragraph 5"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If someone has multiple income streams—such as rental income, trading, and farming—and each business or activity has separate accounts for capital, income, and expense, the profit for each activity must be calculated separately at the end of the Khums year. Losses in one activity cannot be offset against the profits in another. However, if all activities share a single income, expenses, and capital account, the total combined profit is calculated at the end of the Khums year, and Khums must be paid on the surplus amount.",
+          ur: "نکتہ: جس شخص کی کمائی کے کئی ذریعے ہوں مثلا گھر کا کرایہ لیتا ہے اور خرید و فروخت اور زراعت کا کام بھی کرتا ہے چنانچہ ہر شعبے کا سرمایہ اور حساب کتاب علیحدہ ہے تو اسی شعبے کے سال خمسی کے اختتام پر خمس حساب کرکے ادا کرے ۔اگر کسی شعبے میں نقصان ہوجائے تو دوسرے شعبے سے اس کی تلافی نہیں کرسکتا ہے اور اگر سب شعبوں کا حساب کتاب ایک ہی کاؤنٹر پر ہوتا ہے توسب کو سال کے آخر میں ایک ساتھ حساب کرے اور اضافی آمدنی پر خمس ادا کرے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 5, Calculation and Payment of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35641"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 5، خمس کو حساب اور ادا کرنے کا طریقہ",
+          url: "https://www.leader.ir/ur/book/257?sn=34699"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 5، محاسبه و پرداخت خمس",
+          url: "https://www.leader.ir/fa/book/238?sn=32296"
+        },
+        verification: "A"
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks73",
+    topicId: "khumsyear",
+    subject: {
+      en: "Calculation and Payment of Khums, paragraph 6"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person who has a Khums year purchases a residential property or any other item considered part of his essential living expenses (maʻūnah) using earnings but is not sure whether the purchase was made during the year or after the end of the year and before paying Khums, he is not obligated to pay Khums on that purchase."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 6, Calculation and Payment of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35641"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks74",
+    topicId: "khumsyear",
+    subject: {
+      en: "Calculation and Payment of Khums, paragraph 7"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Merely being unable to pay Khums or finding it difficult to do so does not exempt someone from this obligation. If Khums is obligatory for a person, it must be paid under any circumstances. However, if he cannot pay his Khums immediately, he should pay it gradually and according to his financial capacity at the earliest opportunity."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 7, Calculation and Payment of Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35641"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
     id: "kq224",
     topicId: "khumsyear",
     subject: {
@@ -9992,7 +11801,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 225",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10109,7 +11919,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 229",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10265,7 +12076,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 233",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10344,7 +12156,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 235",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10502,7 +12315,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 244",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10541,7 +12355,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 245",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10658,7 +12473,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 248",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10769,7 +12585,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 251",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10886,7 +12703,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 259",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -10925,7 +12743,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 260",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -11123,7 +12942,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 265",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -11202,7 +13022,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 267",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -11352,7 +13173,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 271",
           url: "https://www.leader.ir/fa/book/238?sn=32296"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -11587,6 +13409,117 @@ export const KHUMS_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "ks24",
+    topicId: "khumsmined",
+    subject: {
+      en: "Mined Products, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If something is extracted from a mine and the value of the extracted material, after deducting extraction and refinement costs, equals the price of 15 mithqāl (a unit of mass equal to 4.25 grams) of gold, Khums must be paid. If it is less, no Khums is obligatory."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Mined Products",
+          url: "https://www.leader.ir/en/book/261?sn=35624"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks25",
+    topicId: "khumsmined",
+    subject: {
+      en: "Mined Products, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "The obligation applies whether the mine is underground or on the surface and whether it is located on a private estate or land without an owner."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Mined Products",
+          url: "https://www.leader.ir/en/book/261?sn=35624"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks26",
+    topicId: "khumsmined",
+    subject: {
+      en: "Mined Products, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If two or more people extract from a mine, after deducting extraction and refinement costs, each individual must pay Khums on his share, providing that this share meets the minimum amount liable for payment.",
+          ur: "اگر معدنیات نکالا جائے چنانچہ نکالنے اور صفائی کے اخراجات کو کم کرنے کے بعد اس کی قیمت پندرہ مثقال[1] سونے کے برابر ہے تو اس کا خمس ادا کرنا واجب ہے اور اگر اس سے کم ہے تو خمس نہیں ہے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Mined Products",
+          url: "https://www.leader.ir/en/book/261?sn=35624"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 1، معدن",
+          url: "https://www.leader.ir/ur/book/257?sn=34682"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 1، معدن",
+          url: "https://www.leader.ir/fa/book/238?sn=32283"
+        },
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks27",
+    topicId: "khumsmined",
+    subject: {
+      en: "Mined Products, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "It is to be noted that when the conditions above are met, Khums on mined products must be paid immediately and is not connected to the individual's Khums year."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Mined Products",
+          url: "https://www.leader.ir/en/book/261?sn=35624"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
     id: "kq83",
     topicId: "khumsmined",
     subject: {
@@ -11621,7 +13554,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/238?sn=32283"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording. Part of this ruling is stated as a recommended precaution; see the wording.",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -11824,6 +13758,56 @@ export const KHUMS_RULINGS: Ruling[] = [
         note: "Part of this ruling is stated as an obligatory precaution; see the wording."
       }
     ]
+  },
+  {
+    id: "ks28",
+    topicId: "khumstreasure",
+    subject: {
+      en: "Treasure Troves, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If someone discovers what is considered a treasure according to the common view and the value of the treasure equals 20 dīnārs of gold or 200 dirhams of silver, Khums must be paid immediately, regardless of the Khums year. However, specific laws may apply regarding found treasures, and if regulations exist, they must be followed."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Treasure Troves",
+          url: "https://www.leader.ir/en/book/261?sn=35625"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks29",
+    topicId: "khumstreasure",
+    subject: {
+      en: "Treasure Troves, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If no specific regulations apply, the treasure belongs to the finder, who must pay Khums unless it is found on property acquired through legal means (e.g., purchase or gift (hibah)). In such cases, if the treasure might belong to a previous owner, the finder must attempt to trace the owner. If it does not belong to the immediate previous owner, it should be presented to the owner before them, continuing this process until no known owner is identified or ownership by a previous owner is no longer deemed probable. In such a case, the treasure becomes the finder's property, who must pay Khums."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Treasure Troves",
+          url: "https://www.leader.ir/en/book/261?sn=35625"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
   },
   {
     id: "sk1836",
@@ -12075,6 +14059,83 @@ export const KHUMS_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "ks30",
+    topicId: "khumsgems",
+    subject: {
+      en: "Treasure Troves, paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If a person dives into the sea and extracts gemstones such as pearls or coral—typically obtained by diving—Khums becomes obligatory if their value reaches 81 grams of gold or more after deducting the extraction costs. This ruling applies regardless of whether the extracted items are of one or multiple types or obtained in one session or over several closely spaced sessions. The obligatory precaution (iḥtiyāṭ wājib) is that large rivers such as the Nile, Euphrates, or Karun should also be considered equivalent to the sea for this ruling."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, Treasure Troves",
+          url: "https://www.leader.ir/en/book/261?sn=35625"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks31",
+    topicId: "khumsgems",
+    subject: {
+      en: "Treasure Troves, paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If gemstones are extracted from the water using tools without diving, and their value, after deducting costs, reaches eighteen nukhuds (3.456 grams), the obligatory precaution (iḥtiyāṭ wājib) is that Khums must be paid."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, Treasure Troves",
+          url: "https://www.leader.ir/en/book/261?sn=35625"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1).",
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks32",
+    topicId: "khumsgems",
+    subject: {
+      en: "Treasure Troves, paragraph 5"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "If gemstones naturally emerge from the water and are collected from the surface or the shore, they are not subject to Khums. However, if such collection is part of one’s professional activity, the gemstones are considered income from business and subject to business income rulings."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 5, Treasure Troves",
+          url: "https://www.leader.ir/en/book/261?sn=35625"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
     id: "sk1830",
     topicId: "khumsmixed",
     subject: {
@@ -12233,7 +14294,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/238?sn=32282"
         },
         verification: "A",
-        note: "Part of this ruling is stated as an obligatory precaution; see the wording."
+        note: "Part of this ruling is stated as an obligatory precaution; see the wording.",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ]
   },
@@ -12360,7 +14422,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           url: "https://www.leader.ir/fa/book/238?sn=32282"
         },
         verification: "A",
-        note: "Part of this ruling is stated as a recommended precaution; see the wording."
+        note: "Part of this ruling is stated as a recommended precaution; see the wording.",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -12982,6 +15045,117 @@ export const KHUMS_RULINGS: Ruling[] = [
     ]
   },
   {
+    id: "ks75",
+    topicId: "khumsdistribution",
+    subject: {
+      en: "The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn), paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Khums consists of two equal portions: one portion is designated for the Imam’s share (sahm al‑Imām (‘a)), and the other portion is allocated for the sayyids’ share (sahm al‑sādāt). The areas in which Khums is spent will be elaborated upon subsequently; however, it is to be noted that, generally speaking, khums should be submitted to the office of the religious authority (marja‘) or his authorized representative."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn)",
+          url: "https://www.leader.ir/en/book/261?sn=35642"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks76",
+    topicId: "khumsdistribution",
+    subject: {
+      en: "The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn), paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Khums must be delivered to the authority (marja‘) in charge of khums (walī amr of khums), even if through an intermediary, and a receipt stamped with his seal should be obtained. In this regard, there is no distinction between the share of the Imam (a.) and the sayyids’ share."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn)",
+          url: "https://www.leader.ir/en/book/261?sn=35642"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks77",
+    topicId: "khumsdistribution",
+    subject: {
+      en: "The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn), paragraph 3"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "In general, the allocation of khums—whether from the sayyids’ share or the share of the Imam (‘a)—must be conducted with the permission of the authority (marjaʿ) in charge of khums (walī amr of khums)."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 3, The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn)",
+          url: "https://www.leader.ir/en/book/261?sn=35642"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks78",
+    topicId: "khumsdistribution",
+    subject: {
+      en: "The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn), paragraph 4"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "A Mukallaf (a person obliged to fulfill religious duties) cannot pay any part of his khums to his dependents, such as parents, grandparents, children, or grandchildren, whom you must provide their maintenance.",
+          ur: "خمس دو مساوی حصوں سے تشکیل پاتا ہے ایک حصہ مال امام اور دوسرا مال سادات۔ کلی طور پر خمس مرجع تقلید کے دفتر یا اس کے وکیل کو دینا چاہئے۔"
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 4, The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn)",
+          url: "https://www.leader.ir/en/book/261?sn=35642"
+        },
+        urSource: {
+          title: "احکام خمس",
+          reference: "فقرہ 1، خمس کے مصارف اور مستحقین",
+          url: "https://www.leader.ir/ur/book/257?sn=34700"
+        },
+        persianSource: {
+          title: "احکام خمس",
+          reference: "بند 1، مصارف خمس و مستحقين آن",
+          url: "https://www.leader.ir/fa/book/238?sn=32297"
+        },
+        verification: "A",
+        englishWithheld: "Held for review: the automated comparison found a difference in numbers or negation between the English and the Persian original; the Urdu, which matches the Persian, is shown until a person has checked it."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
     id: "kq272",
     topicId: "khumsdistribution",
     subject: {
@@ -13272,7 +15446,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 279",
           url: "https://www.leader.ir/fa/book/238?sn=32297"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -13389,7 +15564,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 282",
           url: "https://www.leader.ir/fa/book/238?sn=32297"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -13461,7 +15637,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 284",
           url: "https://www.leader.ir/fa/book/238?sn=32297"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -13500,7 +15677,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 285",
           url: "https://www.leader.ir/fa/book/238?sn=32297"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -13539,7 +15717,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 286",
           url: "https://www.leader.ir/fa/book/238?sn=32297"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -13578,7 +15757,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 287",
           url: "https://www.leader.ir/fa/book/238?sn=32297"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -13612,6 +15792,56 @@ export const KHUMS_RULINGS: Ruling[] = [
         },
         verification: "A",
         urduNote: "The official Urdu edition has no usable counterpart to this question, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks79",
+    topicId: "khumsmisc",
+    subject: {
+      en: "Miscellaneous Issues Related to Khums, paragraph 1"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Socializing with someone who does not pay Khums is permissible as long as it does not imply approval of his action. However, if the conditions for forbidding evil (al‑amr bil‑maʿrūf) are met, one must forbid them from neglecting this obligation, even if this necessitates temporarily avoiding interaction with them.\n\nUsing the property of someone who neglects to pay Khums is permissible, even if one is sure that the property being used is subject to Khums.\n\nIf the head of a household does not pay Khums, although they are sinning, it is still permissible for family members to use his property."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 1, Miscellaneous Issues Related to Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35643"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
+      }
+    ],
+    audience: "khamenei"
+  },
+  {
+    id: "ks80",
+    topicId: "khumsmisc",
+    subject: {
+      en: "Miscellaneous Issues Related to Khums, paragraph 2"
+    },
+    rulings: [
+      {
+        marjaId: "khamenei",
+        format: "issue",
+        text: {
+          en: "Buying, selling, conducting transactions, and entering into partnerships with someone who does not pay Khums is permissible and valid. However, performing enjoining good (al‑amr bil‑maʿrūf) and forbidding evil (al‑nahy ʿan al‑munkar) is obligatory when the required conditions for this obligation are met."
+        },
+        basis: "fatwa",
+        source: {
+          title: "The Rulings of Khums",
+          reference: "Para. 2, Miscellaneous Issues Related to Khums",
+          url: "https://www.leader.ir/en/book/261?sn=35643"
+        },
+        verification: "A",
+        urduNote: "This paragraph is printed in the official Urdu and Persian editions too, but it could not be lined up with the English one with certainty, so only the English is shown (decision R1)."
       }
     ],
     audience: "khamenei"
@@ -13690,7 +15920,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 290",
           url: "https://www.leader.ir/fa/book/238?sn=32298"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -13926,7 +16157,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 300",
           url: "https://www.leader.ir/fa/book/238?sn=32298"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -14082,7 +16314,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 304",
           url: "https://www.leader.ir/fa/book/238?sn=32298"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"
@@ -14238,7 +16471,8 @@ export const KHUMS_RULINGS: Ruling[] = [
           reference: "سؤال 308",
           url: "https://www.leader.ir/fa/book/238?sn=32298"
         },
-        verification: "A"
+        verification: "A",
+        referToRisala: "Held for review: an automated comparison found a difference in numbers or negation between the versions of this ruling that the Persian original did not settle. It is not shown until a person has checked it; please read it in the marja's own book."
       }
     ],
     audience: "khamenei"

@@ -10564,7 +10564,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 4,
+     "left": 6,
      "right": 1,
      "severity": "low"
     }
@@ -11014,7 +11014,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 3,
+     "left": 4,
      "right": 2,
      "severity": "low"
     }
@@ -11089,28 +11089,11 @@
   },
   {
    "field": "text",
-   "key": "sawmqadatravel|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "926.",
-   "ruling": "sawmqadatravel",
-   "severity": "low"
-  },
-  {
-   "field": "text",
    "key": "sawmqadaweak|khamenei|text|en-ur",
    "kinds": [
     {
      "kind": "negation",
-     "left": 3,
+     "left": 4,
      "right": 5,
      "severity": "low"
     }
@@ -11136,6 +11119,23 @@
    "pair": "en-ur",
    "ref": "Ruling 1674",
    "ruling": "sawmqadadelayed",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sawmqadadelayignorance|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "933.",
+   "ruling": "sawmqadadelayignorance",
    "severity": "low"
   },
   {
@@ -11789,6 +11789,23 @@
    "ref": "Ruling 2013",
    "ruling": "fitrahonesaa",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "fitrahowngive|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 2017",
+   "ruling": "fitrahowngive",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -12475,7 +12492,7 @@
     {
      "kind": "negation",
      "left": 1,
-     "right": 2,
+     "right": 3,
      "severity": "low"
     }
    ],
@@ -12695,6 +12712,40 @@
    "ref": "Q 240",
    "ruling": "sk1810",
    "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks3|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 2, Surplus Income from Earnings and Gains",
+   "ruling": "ks3",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks5|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 4, Surplus Income from Earnings and Gains",
+   "ruling": "ks5",
+   "severity": "high"
   },
   {
    "field": "text",
@@ -13046,6 +13097,127 @@
    "severity": "low"
   },
   {
+   "field": "text",
+   "key": "ks7|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 1, Capital",
+   "ruling": "ks7",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks10|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 2,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 4, Capital",
+   "ruling": "ks10",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks11|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 5, Capital",
+   "ruling": "ks11",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks12|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 6, Capital",
+   "ruling": "ks12",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks14|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 2, Fixed Capital",
+   "ruling": "ks14",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks15|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 3, Fixed Capital",
+   "ruling": "ks15",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks19|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 3,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 7, Fixed Capital",
+   "ruling": "ks19",
+   "severity": "high"
+  },
+  {
    "field": "question",
    "key": "kq2|khamenei|question|en-ur",
    "kinds": [
@@ -13158,16 +13330,16 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 2,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
    "ref": "Q 13",
    "ruling": "kq13",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "question",
@@ -13180,12 +13352,6 @@
       2
      ],
      "severity": "high"
-    },
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 3,
-     "severity": "low"
     }
    ],
    "marja": "khamenei",
@@ -13234,8 +13400,25 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 16",
+   "ruling": "kq16",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "kq16|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
      "severity": "high"
     }
    ],
@@ -13641,6 +13824,23 @@
    "severity": "high"
   },
   {
+   "field": "text",
+   "key": "kq54|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 54",
+   "ruling": "kq54",
+   "severity": "low"
+  },
+  {
    "field": "question",
    "key": "kq54|khamenei|question|en-ur",
    "kinds": [
@@ -13744,6 +13944,40 @@
    "pair": "en-ur",
    "ref": "Q 66",
    "ruling": "kq66",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "kq67|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 67",
+   "ruling": "kq67",
+   "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "kq67|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 67",
+   "ruling": "kq67",
    "severity": "high"
   },
   {
@@ -13874,8 +14108,8 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "sk1773|khamenei|text|en-ur",
+   "field": "question",
+   "key": "sk1793|khamenei|question|en-ur",
    "kinds": [
     {
      "kind": "negation",
@@ -13886,26 +14120,9 @@
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 110",
-   "ruling": "sk1773",
-   "severity": "low"
-  },
-  {
-   "field": "question",
-   "key": "sk1793|khamenei|question|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 2,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
    "ref": "Q 107",
    "ruling": "sk1793",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -13926,23 +14143,6 @@
   },
   {
    "field": "text",
-   "key": "sk1794|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 115",
-   "ruling": "sk1794",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "sk1799|sistani|text|en-ur",
    "kinds": [
     {
@@ -13960,19 +14160,70 @@
   },
   {
    "field": "text",
-   "key": "kq84|khamenei|text|en-ur",
+   "key": "ks36|khamenei|text|en-ur",
    "kinds": [
     {
      "kind": "negation",
      "left": 1,
-     "right": 3,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 3, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks36",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks38|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
      "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 84",
-   "ruling": "kq84",
+   "ref": "Para. 5, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks38",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks39|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 6, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks39",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks44|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 11, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks44",
    "severity": "low"
   },
   {
@@ -13991,23 +14242,6 @@
    "ref": "Q 84",
    "ruling": "kq84",
    "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "kq85|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 85",
-   "ruling": "kq85",
-   "severity": "high"
   },
   {
    "field": "question",
@@ -14032,23 +14266,6 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
-     "right": 2,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 88",
-   "ruling": "kq88",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq89|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
      "left": 1,
      "right": 2,
      "severity": "low"
@@ -14056,8 +14273,8 @@
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 89",
-   "ruling": "kq89",
+   "ref": "Q 88",
+   "ruling": "kq88",
    "severity": "low"
   },
   {
@@ -14112,40 +14329,6 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq93|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 3,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 93",
-   "ruling": "kq93",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "kq94|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 94",
-   "ruling": "kq94",
-   "severity": "low"
-  },
-  {
    "field": "question",
    "key": "kq94|khamenei|question|en-ur",
    "kinds": [
@@ -14168,7 +14351,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 1,
+     "left": 2,
      "right": 3,
      "severity": "low"
     }
@@ -14198,23 +14381,6 @@
   },
   {
    "field": "text",
-   "key": "kq100|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 100",
-   "ruling": "kq100",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "kq101|khamenei|text|en-ur",
    "kinds": [
     {
@@ -14229,6 +14395,23 @@
    "ref": "Q 101",
    "ruling": "kq101",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "kq102|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 102",
+   "ruling": "kq102",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -14248,21 +14431,21 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq105|khamenei|text|en-ur",
+   "field": "question",
+   "key": "kq105|khamenei|question|en-ur",
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 2,
      "right": 1,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
    "ref": "Q 105",
    "ruling": "kq105",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "question",
@@ -14279,6 +14462,23 @@
    "pair": "en-ur",
    "ref": "Q 108",
    "ruling": "kq108",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "kq111|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 111",
+   "ruling": "kq111",
    "severity": "high"
   },
   {
@@ -14309,29 +14509,18 @@
      ],
      "right": [],
      "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
    "ref": "Q 112",
    "ruling": "kq112",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq113|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 113",
-   "ruling": "kq113",
    "severity": "high"
   },
   {
@@ -14357,7 +14546,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 2,
+     "left": 4,
      "right": 3,
      "severity": "low"
     }
@@ -14369,21 +14558,21 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq116|khamenei|text|en-ur",
+   "field": "question",
+   "key": "kq114|khamenei|question|en-ur",
    "kinds": [
     {
      "kind": "negation",
      "left": 1,
-     "right": 2,
-     "severity": "low"
+     "right": 0,
+     "severity": "high"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 116",
-   "ruling": "kq116",
-   "severity": "low"
+   "ref": "Q 114",
+   "ruling": "kq114",
+   "severity": "high"
   },
   {
    "field": "question",
@@ -14420,23 +14609,6 @@
    "severity": "high"
   },
   {
-   "field": "text",
-   "key": "kq119|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 119",
-   "ruling": "kq119",
-   "severity": "low"
-  },
-  {
    "field": "question",
    "key": "kq119|khamenei|question|en-ur",
    "kinds": [
@@ -14470,16 +14642,16 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 2,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
    "ref": "Q 120",
    "ruling": "kq120",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "question",
@@ -14518,23 +14690,6 @@
    "severity": "high"
   },
   {
-   "field": "text",
-   "key": "kq122|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 122",
-   "ruling": "kq122",
-   "severity": "high"
-  },
-  {
    "field": "question",
    "key": "kq122|khamenei|question|en-ur",
    "kinds": [
@@ -14554,42 +14709,8 @@
    "severity": "high"
   },
   {
-   "field": "text",
-   "key": "kq124|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 124",
-   "ruling": "kq124",
-   "severity": "high"
-  },
-  {
    "field": "question",
    "key": "kq126|khamenei|question|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 126",
-   "ruling": "kq126",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq128|khamenei|text|en-ur",
    "kinds": [
     {
      "kind": "negation",
@@ -14600,8 +14721,8 @@
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 128",
-   "ruling": "kq128",
+   "ref": "Q 126",
+   "ruling": "kq126",
    "severity": "low"
   },
   {
@@ -14627,7 +14748,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 1,
+     "left": 2,
      "right": 3,
      "severity": "low"
     }
@@ -14640,36 +14761,36 @@
   },
   {
    "field": "text",
-   "key": "kq133|khamenei|text|en-ur",
+   "key": "kq132|khamenei|text|en-ur",
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 2,
      "right": 1,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 133",
-   "ruling": "kq133",
-   "severity": "high"
+   "ref": "Q 132",
+   "ruling": "kq132",
+   "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq134|khamenei|text|en-ur",
+   "field": "question",
+   "key": "kq132|khamenei|question|en-ur",
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
-     "right": 1,
+     "left": 1,
+     "right": 0,
      "severity": "high"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 134",
-   "ruling": "kq134",
+   "ref": "Q 132",
+   "ruling": "kq132",
    "severity": "high"
   },
   {
@@ -14725,23 +14846,6 @@
   },
   {
    "field": "text",
-   "key": "kq141|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 141",
-   "ruling": "kq141",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "kq142|khamenei|text|en-ur",
    "kinds": [
     {
@@ -14772,23 +14876,6 @@
    "pair": "en-ur",
    "ref": "Q 142",
    "ruling": "kq142",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq144|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 144",
-   "ruling": "kq144",
    "severity": "high"
   },
   {
@@ -14835,20 +14922,45 @@
   },
   {
    "field": "text",
-   "key": "kq145|khamenei|text|en-ur",
+   "key": "ks50|khamenei|text|en-ur",
    "kinds": [
     {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      5
+     ],
      "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 145",
-   "ruling": "kq145",
+   "ref": "Para. 3, Living Expenses (Ma’ūnah) for Earning Income",
+   "ruling": "ks50",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks56|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 9, Living Expenses (Ma’ūnah) for Earning Income",
+   "ruling": "ks56",
+   "severity": "low"
   },
   {
    "field": "question",
@@ -14888,54 +15000,20 @@
   },
   {
    "field": "text",
-   "key": "kq152|khamenei|text|en-ur",
+   "key": "kq148|khamenei|text|en-ur",
    "kinds": [
     {
      "kind": "negation",
-     "left": 1,
-     "right": 2,
+     "left": 2,
+     "right": 1,
      "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-ur",
-   "ref": "Q 152",
-   "ruling": "kq152",
+   "ref": "Q 148",
+   "ruling": "kq148",
    "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "kq153|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 153",
-   "ruling": "kq153",
-   "severity": "high"
-  },
-  {
-   "field": "question",
-   "key": "kq153|khamenei|question|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 153",
-   "ruling": "kq153",
-   "severity": "high"
   },
   {
    "field": "text",
@@ -15617,23 +15695,6 @@
   },
   {
    "field": "text",
-   "key": "kq214|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 214",
-   "ruling": "kq214",
-   "severity": "low"
-  },
-  {
-   "field": "text",
    "key": "kq215|khamenei|text|en-ur",
    "kinds": [
     {
@@ -15664,6 +15725,23 @@
    "pair": "en-ur",
    "ref": "Q 215",
    "ruling": "kq215",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "kq218|khamenei|question|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Q 218",
+   "ruling": "kq218",
    "severity": "high"
   },
   {
@@ -15722,23 +15800,6 @@
    "ref": "Q 222",
    "ruling": "kq222",
    "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "sk1784|khamenei|text|en-ur",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-ur",
-   "ref": "Q 238",
-   "ruling": "sk1784",
-   "severity": "low"
   },
   {
    "field": "question",
@@ -15824,6 +15885,23 @@
    "ref": "Ruling 1809",
    "ruling": "sk1809",
    "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks70|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 3, Calculation and Payment of Khums",
+   "ruling": "ks70",
+   "severity": "high"
   },
   {
    "field": "text",
@@ -16240,7 +16318,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 2,
+     "left": 3,
      "right": 4,
      "severity": "low"
     }
@@ -16342,6 +16420,33 @@
    "ref": "Ruling 1822",
    "ruling": "sk1822",
    "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks26|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [
+      15
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 3, Mined Products",
+   "ruling": "ks26",
+   "severity": "high"
   },
   {
    "field": "text",
@@ -16861,6 +16966,31 @@
    "severity": "high"
   },
   {
+   "field": "text",
+   "key": "ks78|khamenei|text|en-ur",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-ur",
+   "ref": "Para. 4, The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn)",
+   "ruling": "ks78",
+   "severity": "high"
+  },
+  {
    "field": "question",
    "key": "kq272|khamenei|question|en-ur",
    "kinds": [
@@ -17208,7 +17338,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 1,
+     "left": 2,
      "right": 3,
      "severity": "low"
     }
@@ -17217,6 +17347,23 @@
    "pair": "en-ur",
    "ref": "Ruling 1877",
    "ruling": "zk1877",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "zk1879|sistani|text|en-ur",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "sistani",
+   "pair": "en-ur",
+   "ref": "Ruling 1879",
+   "ruling": "zk1879",
    "severity": "low"
   },
   {
@@ -18302,7 +18449,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 4,
+     "left": 5,
      "right": 2,
      "severity": "low"
     }
@@ -22698,6 +22845,23 @@
   },
   {
    "field": "text",
+   "key": "sawmqadatravel|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "926.",
+   "ruling": "sawmqadatravel",
+   "severity": "low"
+  },
+  {
+   "field": "text",
    "key": "sawmqadatravel|khamenei|text|ur-fa",
    "kinds": [
     {
@@ -22711,23 +22875,6 @@
    "pair": "ur-fa",
    "ref": "مسأله 928",
    "ruling": "sawmqadatravel",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "sawmqadaweak|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 3,
-     "right": 4,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "927.",
-   "ruling": "sawmqadaweak",
    "severity": "low"
   },
   {
@@ -22753,7 +22900,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 2,
+     "left": 3,
      "right": 1,
      "severity": "low"
     }
@@ -23967,16 +24114,16 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 2,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "Q 13",
    "ruling": "kq13",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "question",
@@ -23989,6 +24136,12 @@
       2
      ],
      "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 4,
+     "right": 3,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
@@ -24003,8 +24156,8 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 3,
-     "right": 2,
+     "left": 4,
+     "right": 3,
      "severity": "low"
     }
    ],
@@ -24049,21 +24202,38 @@
    "severity": "low"
   },
   {
+   "field": "question",
+   "key": "kq16|khamenei|question|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "سؤال 16",
+   "ruling": "kq16",
+   "severity": "high"
+  },
+  {
    "field": "text",
    "key": "kq16|khamenei|text|en-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 2,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "Q 16",
    "ruling": "kq16",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "question",
@@ -25006,23 +25176,6 @@
   },
   {
    "field": "text",
-   "key": "kq54|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 54",
-   "ruling": "kq54",
-   "severity": "low"
-  },
-  {
-   "field": "text",
    "key": "kq54|khamenei|text|ur-fa",
    "kinds": [
     {
@@ -25230,6 +25383,40 @@
    "ref": "Q 66",
    "ruling": "kq66",
    "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "kq67|khamenei|question|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 67",
+   "ruling": "kq67",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "kq67|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 67",
+   "ruling": "kq67",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -25561,16 +25748,16 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
+     "left": 1,
+     "right": 2,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "Q 110",
    "ruling": "sk1773",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "question",
@@ -25578,16 +25765,33 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
+     "left": 1,
+     "right": 2,
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "ur-fa",
    "ref": "سؤال 110",
    "ruling": "sk1773",
-   "severity": "high"
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "sk1773|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 110",
+   "ruling": "sk1773",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -25605,23 +25809,6 @@
    "ref": "سؤال 110",
    "ruling": "sk1773",
    "severity": "low"
-  },
-  {
-   "field": "question",
-   "key": "sk1793|khamenei|question|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 107",
-   "ruling": "sk1793",
-   "severity": "high"
   },
   {
    "field": "question",
@@ -25675,23 +25862,6 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "sk1794|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 115",
-   "ruling": "sk1794",
-   "severity": "high"
-  },
-  {
    "field": "question",
    "key": "kq84|khamenei|question|ur-fa",
    "kinds": [
@@ -25705,23 +25875,6 @@
    "marja": "khamenei",
    "pair": "ur-fa",
    "ref": "سؤال 84",
-   "ruling": "kq84",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "kq84|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 3,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 84",
    "ruling": "kq84",
    "severity": "low"
   },
@@ -25744,41 +25897,7 @@
   },
   {
    "field": "text",
-   "key": "kq85|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 85",
-   "ruling": "kq85",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "kq88|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 2,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 88",
-   "ruling": "kq88",
-   "severity": "high"
-  },
-  {
-   "field": "question",
-   "key": "kq89|khamenei|question|en-fa",
    "kinds": [
     {
      "kind": "negation",
@@ -25789,13 +25908,13 @@
    ],
    "marja": "khamenei",
    "pair": "en-fa",
-   "ref": "Q 89",
-   "ruling": "kq89",
+   "ref": "Q 88",
+   "ruling": "kq88",
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq89|khamenei|text|en-fa",
+   "field": "question",
+   "key": "kq89|khamenei|question|en-fa",
    "kinds": [
     {
      "kind": "negation",
@@ -25850,7 +25969,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 2,
+     "left": 3,
      "right": 4,
      "severity": "low"
     }
@@ -25894,6 +26013,23 @@
    "ref": "Q 94",
    "ruling": "kq94",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "kq94|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 94",
+   "ruling": "kq94",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -25943,7 +26079,7 @@
     },
     {
      "kind": "negation",
-     "left": 1,
+     "left": 2,
      "right": 3,
      "severity": "low"
     }
@@ -26097,23 +26233,6 @@
   },
   {
    "field": "text",
-   "key": "kq100|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 100",
-   "ruling": "kq100",
-   "severity": "high"
-  },
-  {
-   "field": "text",
    "key": "kq101|khamenei|text|en-fa",
    "kinds": [
     {
@@ -26165,6 +26284,23 @@
   },
   {
    "field": "text",
+   "key": "kq102|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 102",
+   "ruling": "kq102",
+   "severity": "low"
+  },
+  {
+   "field": "text",
    "key": "kq104|khamenei|text|en-fa",
    "kinds": [
     {
@@ -26186,7 +26322,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 1,
+     "left": 2,
      "right": 0,
      "severity": "high"
     }
@@ -26211,23 +26347,6 @@
    "marja": "khamenei",
    "pair": "ur-fa",
    "ref": "سؤال 105",
-   "ruling": "kq105",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq105|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 105",
    "ruling": "kq105",
    "severity": "high"
   },
@@ -26367,6 +26486,23 @@
    "severity": "low"
   },
   {
+   "field": "question",
+   "key": "kq111|khamenei|question|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 111",
+   "ruling": "kq111",
+   "severity": "high"
+  },
+  {
    "field": "text",
    "key": "kq111|khamenei|text|en-fa",
    "kinds": [
@@ -26399,6 +26535,23 @@
    "ref": "سؤال 111",
    "ruling": "kq111",
    "severity": "low"
+  },
+  {
+   "field": "question",
+   "key": "kq112|khamenei|question|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 112",
+   "ruling": "kq112",
+   "severity": "high"
   },
   {
    "field": "question",
@@ -26471,38 +26624,21 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq113|khamenei|text|en-fa",
+   "field": "question",
+   "key": "kq114|khamenei|question|en-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
-     "right": 1,
+     "left": 1,
+     "right": 0,
      "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 113",
-   "ruling": "kq113",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq114|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 2,
-     "right": 4,
-     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "Q 114",
    "ruling": "kq114",
-   "severity": "low"
+   "severity": "high"
   },
   {
    "field": "text",
@@ -26552,23 +26688,6 @@
    "marja": "khamenei",
    "pair": "ur-fa",
    "ref": "سؤال 116",
-   "ruling": "kq116",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "kq116|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 116",
    "ruling": "kq116",
    "severity": "low"
   },
@@ -26623,7 +26742,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 1,
+     "left": 2,
      "right": 4,
      "severity": "low"
     }
@@ -26674,16 +26793,16 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 3,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "Q 120",
    "ruling": "kq120",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -26799,55 +26918,21 @@
    "severity": "high"
   },
   {
-   "field": "text",
-   "key": "kq122|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 122",
-   "ruling": "kq122",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq124|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 124",
-   "ruling": "kq124",
-   "severity": "high"
-  },
-  {
    "field": "question",
-   "key": "kq126|khamenei|question|en-fa",
+   "key": "kq126|khamenei|question|ur-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 2,
      "right": 1,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 126",
+   "pair": "ur-fa",
+   "ref": "سؤال 126",
    "ruling": "kq126",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -26884,23 +26969,6 @@
    "severity": "high"
   },
   {
-   "field": "text",
-   "key": "kq128|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 128",
-   "ruling": "kq128",
-   "severity": "low"
-  },
-  {
    "field": "question",
    "key": "kq129|khamenei|question|en-fa",
    "kinds": [
@@ -26923,7 +26991,7 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 2,
+     "left": 3,
      "right": 4,
      "severity": "low"
     }
@@ -26932,23 +27000,6 @@
    "pair": "en-fa",
    "ref": "Q 130",
    "ruling": "kq130",
-   "severity": "low"
-  },
-  {
-   "field": "text",
-   "key": "kq131|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 131",
-   "ruling": "kq131",
    "severity": "low"
   },
   {
@@ -26969,8 +27020,8 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq133|khamenei|text|en-fa",
+   "field": "question",
+   "key": "kq132|khamenei|question|ur-fa",
    "kinds": [
     {
      "kind": "negation",
@@ -26980,27 +27031,27 @@
     }
    ],
    "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 133",
-   "ruling": "kq133",
+   "pair": "ur-fa",
+   "ref": "سؤال 132",
+   "ruling": "kq132",
    "severity": "high"
   },
   {
    "field": "text",
-   "key": "kq134|khamenei|text|en-fa",
+   "key": "kq132|khamenei|text|en-fa",
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 2,
      "right": 1,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
-   "ref": "Q 134",
-   "ruling": "kq134",
-   "severity": "high"
+   "ref": "Q 132",
+   "ruling": "kq132",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -27126,33 +27177,16 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 2,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "Q 140",
    "ruling": "kq140",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq141|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 141",
-   "ruling": "kq141",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "question",
@@ -27236,16 +27270,16 @@
    "kinds": [
     {
      "kind": "negation",
-     "left": 0,
+     "left": 1,
      "right": 3,
-     "severity": "high"
+     "severity": "low"
     }
    ],
    "marja": "khamenei",
    "pair": "en-fa",
    "ref": "Q 144",
    "ruling": "kq144",
-   "severity": "high"
+   "severity": "low"
   },
   {
    "field": "text",
@@ -27282,23 +27316,6 @@
    "severity": "high"
   },
   {
-   "field": "text",
-   "key": "kq145|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 145",
-   "ruling": "kq145",
-   "severity": "high"
-  },
-  {
    "field": "question",
    "key": "kq147|khamenei|question|en-fa",
    "kinds": [
@@ -27316,6 +27333,23 @@
    "ref": "Q 147",
    "ruling": "kq147",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "kq148|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 148",
+   "ruling": "kq148",
+   "severity": "low"
   },
   {
    "field": "question",
@@ -27401,57 +27435,6 @@
    "pair": "ur-fa",
    "ref": "سؤال 150",
    "ruling": "kq150",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq152|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 152",
-   "ruling": "kq152",
-   "severity": "low"
-  },
-  {
-   "field": "question",
-   "key": "kq153|khamenei|question|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 153",
-   "ruling": "kq153",
-   "severity": "high"
-  },
-  {
-   "field": "text",
-   "key": "kq153|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 0,
-     "right": 1,
-     "severity": "high"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 153",
-   "ruling": "kq153",
    "severity": "high"
   },
   {
@@ -28745,23 +28728,6 @@
    "severity": "low"
   },
   {
-   "field": "text",
-   "key": "kq214|khamenei|text|en-fa",
-   "kinds": [
-    {
-     "kind": "negation",
-     "left": 1,
-     "right": 2,
-     "severity": "low"
-    }
-   ],
-   "marja": "khamenei",
-   "pair": "en-fa",
-   "ref": "Q 214",
-   "ruling": "kq214",
-   "severity": "low"
-  },
-  {
    "field": "question",
    "key": "kq215|khamenei|question|en-fa",
    "kinds": [
@@ -28793,6 +28759,23 @@
    "pair": "en-fa",
    "ref": "Q 215",
    "ruling": "kq215",
+   "severity": "high"
+  },
+  {
+   "field": "question",
+   "key": "kq218|khamenei|question|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 218",
+   "ruling": "kq218",
    "severity": "high"
   },
   {
@@ -28925,6 +28908,23 @@
    "ref": "Q 238",
    "ruling": "sk1784",
    "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "sk1784|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Q 238",
+   "ruling": "sk1784",
+   "severity": "low"
   },
   {
    "field": "text",
@@ -30037,7 +30037,7 @@
     },
     {
      "kind": "negation",
-     "left": 2,
+     "left": 3,
      "right": 5,
      "severity": "low"
     }
@@ -31214,6 +31214,403 @@
    "pair": "en-fa",
    "ref": "Q 314",
    "ruling": "kq314",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks3|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 2, Surplus Income from Earnings and Gains",
+   "ruling": "ks3",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks5|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 4، سرمايه",
+   "ruling": "ks5",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks7|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 6، سرمايه",
+   "ruling": "ks7",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks10|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 9، سرمايه",
+   "ruling": "ks10",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks11|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 3,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 10، سرمايه",
+   "ruling": "ks11",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks12|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 11، سرمايه",
+   "ruling": "ks12",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks14|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [],
+     "right": [
+      4,
+      4
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 2, Fixed Capital",
+   "ruling": "ks14",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks14|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "ordinals",
+     "left": [],
+     "right": [
+      4,
+      4
+     ],
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 1، سرمایه ثابت",
+   "ruling": "ks14",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks15|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 3, Fixed Capital",
+   "ruling": "ks15",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks19|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 3,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 7, Fixed Capital",
+   "ruling": "ks19",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks36|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 3, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks36",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks38|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 5, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks38",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks39|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 6, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks39",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks44|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 2,
+     "right": 1,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 11, Ma’ūnah for Livelihood and Living",
+   "ruling": "ks44",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks50|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      5
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 3,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 3, Living Expenses (Ma’ūnah) for Earning Income",
+   "ruling": "ks50",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks53|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 6, Living Expenses (Ma’ūnah) for Earning Income",
+   "ruling": "ks53",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks53|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 6، مؤونه کسب درآمد",
+   "ruling": "ks53",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks56|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 2,
+     "severity": "low"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 9, Living Expenses (Ma’ūnah) for Earning Income",
+   "ruling": "ks56",
+   "severity": "low"
+  },
+  {
+   "field": "text",
+   "key": "ks70|khamenei|text|ur-fa",
+   "kinds": [
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "ur-fa",
+   "ref": "بند 3، محاسبه و پرداخت خمس",
+   "ruling": "ks70",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks26|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [
+      2
+     ],
+     "right": [
+      15
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 0,
+     "right": 1,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 3, Mined Products",
+   "ruling": "ks26",
+   "severity": "high"
+  },
+  {
+   "field": "text",
+   "key": "ks78|khamenei|text|en-fa",
+   "kinds": [
+    {
+     "kind": "numbers",
+     "left": [],
+     "right": [
+      2
+     ],
+     "severity": "high"
+    },
+    {
+     "kind": "negation",
+     "left": 1,
+     "right": 0,
+     "severity": "high"
+    }
+   ],
+   "marja": "khamenei",
+   "pair": "en-fa",
+   "ref": "Para. 4, The Areas in Which Khums Is Spent and the Individuals Entitled to It (Mustaḥiqqūn)",
+   "ruling": "ks78",
    "severity": "high"
   },
   {

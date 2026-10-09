@@ -30,7 +30,10 @@ def numbered_unit(r, e, lang, field):
     src = e["source"] if lang == "en" else e.get("urSource")
     n, t = num(src["reference"]), src["title"]
     if t in ("The Rulings of Khums", "احکام خمس") and e["marjaId"] == "khamenei":     # Khamenei's Rulings of Khums (Phase 6)
-        import kh_khums
+        import kh_khums, kh_stm
+        if not src["reference"].startswith(("Q", "س")):      # an unnumbered statement, cited by section and paragraph
+            u = kh_stm.lookup(lang, src["reference"])
+            return nfc(u) if u else None
         return nfc(kh_khums.unit(lang, n, field))
     if t == "نماز اور روزه کی احکام":   # Khamenei's official Urdu Rules: «مسئلہ 466» or a merge «مسئلہ 508، 509»
         nums = [int(x.translate(TR)) for x in re.findall(r"[0-9۰-۹]+", src["reference"])]

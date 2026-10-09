@@ -603,6 +603,19 @@ def sis(n):
     star = STAR.get(n)
     return S(n, urdu=star) if star else S(n)
 
+# ---- the book's unnumbered statements (kh_stm.py), each in the topic of its section ----
+import kh_stm
+STM_TOPIC = {35612: "khumsitems", 35613: "khumsitems", 35614: "khumscapital", 35616: "khumscapital", 35624: "khumsmined",
+             35628: "khumsmined", 35625: "khumstreasure", 35629: "khumstreasure", 35630: "khumsgems", 35632: "khumsmaunah",
+             35633: "khumsmaunah", 35634: "khumsexpenses", 35635: "khumsexempt", 35636: "khumsexempt", 35641: "khumsyear",
+             35642: "khumsdistribution", 35643: "khumsmisc"}
+def stm_topic(i):
+    e = kh_stm.EN[i]
+    return "khumsgems" if e["sn"] == 35625 and re.search(r"gemstone|pearl|coral", e["text"]) else STM_TOPIC[e["sn"]]
+STM_ADDED = [i for i, e in enumerate(kh_stm.EN) if not kh_stm.fragment(e)]
+STM_LEFT = [i for i, e in enumerate(kh_stm.EN) if kh_stm.fragment(e)]
+assert all(kh_stm.EN[i]["sn"] in STM_TOPIC for i in STM_ADDED)
+
 used_q = set()
 def khums_topic(topic, s_list, q_list):
     qs = [q for q in q_list if q not in LEFT_OUT and q in kh_khums.EN]
@@ -614,6 +627,10 @@ def khums_topic(topic, s_list, q_list):
             R(f"sk{n}", topic, S_SUBJ[n], sis(n), KK(q))
         else:
             R(f"sk{n}", topic, S_SUBJ[n], sis(n))
+    for i in STM_ADDED:
+        if stm_topic(i) == topic:
+            e = kh_stm.EN[i]
+            R(f"ks{i + 1}", topic, f"{e['title']}, paragraph {e['para']}", KS(i), audience="khamenei")
     for q in qs:
         if q in used_q:
             continue
@@ -645,6 +662,7 @@ for q in used_q:
     assert q in Q_SUBJ, ("no heading for question", q)
 for n in set(sum([s for s, _ in KHUMS.values()], []) + sum(ZAKAT.values(), [])):
     assert n in S_SUBJ, ("no heading for ruling", n)
+print("statements:", len(STM_ADDED), "with Urdu+Persian:", sum(1 for i in STM_ADDED if i in kh_stm.TRIPLE), "left out (a Q/A fragment):", STM_LEFT)
 print("khums rulings:", n_khums, "zakat rulings:", len(RULINGS) - n_khums,
       "| Khamenei questions placed:", len(used_q), "left out (unclear in the source):", LEFT_OUT, "| not in the English edition:", MISSING_EN)
 

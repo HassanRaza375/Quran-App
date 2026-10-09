@@ -91,6 +91,7 @@ To check the supplementary Q&A entries word for word against the cited leader.ir
 | `src.py` | Indexes Sistani's English and Urdu rulings by number, and Khamenei's Q&A by number |
 | `kh_rpf.py` | Indexes Khamenei's *Rules on Prayer & Fasting 2023* by ruling number |
 | `kh_khums.py` | Indexes Khamenei's *The Rulings of Khums* by question number in the English, official Urdu and Persian editions (crawled with `crawl_book.py`); decides which questions parse cleanly. `kh_fitr.py` reads his older zakāt al-fiṭrah Q&A; it is not used (no citable page, decision H8). |
+| `kh_stm.py` | The unnumbered rule paragraphs of *The Rulings of Khums*: extracts them from the three editions and lines them up section by section (Persian ↔ Urdu by shared vocabulary, English ↔ Persian by length and numbers). Only a paragraph all three editions confirm is paired; the rest stay English only. Citations are "Para. n, section" (Urdu فقرہ, Persian بند). |
 | `entries.py` | Shared builders `S()` (Sistani), `K()` (Khamenei), `R()` (one ruling, per marja'), `finalize()`, `ts()`. Rulings withheld from display (`HIDDEN_RPF`, e.g. P15) live here with their reasons. |
 | `qa_sections.py`, `picks.py` | Section map of the Q&A book; the Q&As compared with the *Rules*, with the agree/differ verdicts |
 | `place_qa_ids.py` | Puts each Q&A id after the *Rules* ruling it was compared with |

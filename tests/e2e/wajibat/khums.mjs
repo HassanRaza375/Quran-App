@@ -1,7 +1,7 @@
 // Phase 6 (Khums and Zakat): the "Where and how to pay" card links only to the chosen marja's own site and
 // appears only on the paying topics; a question only Khamenei answers is shown to his followers and to no one
 // else; amounts are on the page exactly as the data has them; the zakāt al-fiṭrah notice stays for Khamenei.
-import { BASES, checker, cardText, gotoTopic, newContext, squash } from "./lib.mjs";
+import { BASES, checker, gotoTopic, newContext, squash } from "./lib.mjs";
 
 const SITES = { sistani: "sistani.org", khamenei: "leader.ir" };
 const PAY = [["khums", "khumsdistribution"], ["zakat", "zakatrecipients"], ["zakat", "zakatgiving"]];

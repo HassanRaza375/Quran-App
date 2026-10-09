@@ -49,7 +49,7 @@ def triage(rows, dec, data, trees):
             continue
         e = entry.get((rid, marja), {})
         ps = e.get("persianSource") or {}
-        has_fa = ps.get("reference", "").startswith(("مسأله", "سؤال"))   # the Rules of prayer & fasting; the Rulings of Khums
+        has_fa = ps.get("reference", "").startswith(("مسأله", "سؤال", "بند"))   # the Rules of prayer & fasting; the Rulings of Khums
         verdict, note, hold = "needs-human", "", None
         if not has_fa:
             note = "No Persian original to decide with (Q&A answer, or the Urdu-only treatise)."

@@ -177,12 +177,15 @@ describe("safe-default triage and display holds (decision B1)", () => {
 
   it("held-pending-review (a recorded decision) points to his book: the rulings where neither version matches the Persian", () => {
     const refer = [...new Set(held.filter(([, d]) => d.hold === "refer").map(([k]) => k.split("|")[0]))].sort();
-    // the earlier eight (decision D1) plus the thirteen fasting rulings of Phase 5 (decision F2)
-    expect(refer).toEqual(
+    // the earlier eight (decision D1), the thirteen fasting rulings of Phase 5 (decision F2), and the Khums rulings of Phase 6
+    // where neither version matches the Persian after the exemption wording was counted as negation (decision H10)
+    const earlier = refer.filter((id) => !/^(kq|ks|sk)\d+$/.test(id));
+    expect(refer.length - earlier.length).toBeGreaterThan(60);
+    expect(
       ["ayatcauses", "doubtkinds", "fridaybest", "maghribishatime", "quransajdah", "tashahhudforgot", "turningface", "zuhrasrtime",
         "sawmdoubtday", "sawmforced", "sawmgirls", "sawmintentrecommended", "sawmjunubsleepsecond", "sawmkaffvow", "sawmqadaable", "sawmqadacount",
         "sawmqadaillness", "sawmqadaparentspurpose", "sawmrecommended", "sawmtravelplaces", "sawmtravelunawareshari"].sort()
-    );
+    ).toEqual(earlier);
     for (const [k, d] of held.filter(([, x]) => x.hold === "refer")) {
       expect((d as { reviewer?: string }).reviewer, k).toBeTruthy();
       const e = getMarjaRuling(getRulingById(k.split("|")[0])!, "khamenei")!;

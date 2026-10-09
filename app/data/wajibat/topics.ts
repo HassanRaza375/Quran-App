@@ -749,7 +749,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "The things khums is due on, surplus income from earnings, property acquired without earning it, a minor's profit, and who pays when living expenses are paid by someone else."
     ),
-    rulingIds: ["sk1768", "sk1769", "sk1770", "sk1774", "sk1775", "sk1776", "sk1810", "kq241", "kq242", "kq243"],
+    rulingIds: ["sk1768", "sk1769", "sk1770", "sk1774", "sk1775", "sk1776", "sk1810", "ks1", "ks2", "ks3", "ks4", "ks5", "ks6", "kq241", "kq242", "kq243"],
     relatedTopicIds: ["khumsmaunah", "khumsexempt", "khumsyear"],
     glossaryIds: ["khums", "mashhur"],
     lastSourceCheck: "2026-10-09",
@@ -775,7 +775,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Working and fixed capital, trade goods, tools, land, shares, deposits and loans, and what happens to their value during the khums year."
     ),
-    rulingIds: ["sk1785", "sk1786", "sk1787", "sk1788", "sk1789", "sk1790", "sk1791", "kq1", "kq2", "kq3", "kq4", "kq5", "kq6", "kq7", "kq8", "kq9", "kq10", "kq11", "kq12", "kq13", "kq14", "kq15", "kq16", "kq17", "kq18", "kq19", "kq20", "kq21", "kq22", "kq23", "kq24", "kq25", "kq27", "kq28", "kq29", "kq30", "kq31", "kq32", "kq33", "kq34", "kq35", "kq36", "kq37", "kq38", "kq39", "kq40", "kq41", "kq42", "kq43", "kq44", "kq45", "kq46", "kq47", "kq48", "kq49", "kq50", "kq51", "kq52", "kq53", "kq54", "kq55", "kq58", "kq59", "kq60", "kq61", "kq62", "kq63", "kq64", "kq65", "kq66", "kq67", "kq68", "kq69", "kq71", "kq73", "kq74", "kq75", "kq76", "kq77", "kq78"],
+    rulingIds: ["sk1785", "sk1786", "sk1787", "sk1788", "sk1789", "sk1790", "sk1791", "ks7", "ks8", "ks9", "ks10", "ks11", "ks12", "ks13", "ks14", "ks15", "ks16", "ks17", "ks18", "ks19", "ks20", "ks21", "ks22", "ks23", "kq1", "kq2", "kq3", "kq4", "kq5", "kq6", "kq7", "kq8", "kq9", "kq10", "kq11", "kq12", "kq13", "kq14", "kq15", "kq16", "kq17", "kq18", "kq19", "kq20", "kq21", "kq22", "kq23", "kq24", "kq25", "kq27", "kq28", "kq29", "kq30", "kq31", "kq32", "kq33", "kq34", "kq35", "kq36", "kq37", "kq38", "kq39", "kq40", "kq41", "kq42", "kq43", "kq44", "kq45", "kq46", "kq47", "kq48", "kq49", "kq50", "kq51", "kq52", "kq53", "kq54", "kq55", "kq58", "kq59", "kq60", "kq61", "kq62", "kq63", "kq64", "kq65", "kq66", "kq67", "kq68", "kq69", "kq71", "kq73", "kq74", "kq75", "kq76", "kq77", "kq78"],
     relatedTopicIds: ["khumsmaunah", "khumsexpenses", "khumsyear"],
     glossaryIds: ["khums"],
     lastSourceCheck: "2026-10-09",
@@ -789,7 +789,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "What counts as the year's living expenses, such as the home, furniture, clothing, gifts, a daughter's trousseau, and what is left over at the year's end."
     ),
-    rulingIds: ["sk1773", "sk1792", "sk1793", "sk1794", "sk1795", "sk1796", "sk1797", "sk1798", "sk1799", "kq84", "kq85", "kq86", "kq87", "kq88", "kq89", "kq90", "kq91", "kq92", "kq93", "kq94", "kq95", "kq96", "kq97", "kq98", "kq99", "kq100", "kq101", "kq102", "kq103", "kq104", "kq105", "kq106", "kq108", "kq109", "kq111", "kq112", "kq113", "kq114", "kq116", "kq117", "kq118", "kq119", "kq120", "kq121", "kq122", "kq123", "kq124", "kq125", "kq126", "kq127", "kq128", "kq129", "kq130", "kq131", "kq132", "kq133", "kq134", "kq135", "kq136", "kq137", "kq138", "kq139", "kq140", "kq141", "kq142", "kq143", "kq144"],
+    rulingIds: ["sk1773", "sk1792", "sk1793", "sk1794", "sk1795", "sk1796", "sk1797", "sk1798", "sk1799", "ks33", "ks34", "ks35", "ks36", "ks37", "ks38", "ks39", "ks40", "ks41", "ks42", "ks43", "ks44", "ks45", "ks46", "ks47", "kq84", "kq85", "kq86", "kq87", "kq88", "kq89", "kq90", "kq91", "kq92", "kq93", "kq94", "kq95", "kq96", "kq97", "kq98", "kq99", "kq100", "kq101", "kq102", "kq103", "kq104", "kq105", "kq106", "kq108", "kq109", "kq111", "kq112", "kq113", "kq114", "kq116", "kq117", "kq118", "kq119", "kq120", "kq121", "kq122", "kq123", "kq124", "kq125", "kq126", "kq127", "kq128", "kq129", "kq130", "kq131", "kq132", "kq133", "kq134", "kq135", "kq136", "kq137", "kq138", "kq139", "kq140", "kq141", "kq142", "kq143", "kq144"],
     relatedTopicIds: ["khumsexpenses", "khumscapital", "khumsexempt"],
     glossaryIds: ["khums"],
     lastSourceCheck: "2026-10-09",
@@ -802,7 +802,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Expenses of earning an income, taxes, borrowing and repaying, losses, and how balances in an account are treated."
     ),
-    rulingIds: ["sk1800", "sk1801", "sk1802", "sk1803", "sk1804", "kq145", "kq146", "kq147", "kq148", "kq149", "kq150", "kq151", "kq152", "kq153", "kq154", "kq155", "kq156", "kq157", "kq158", "kq159", "kq160", "kq161", "kq162", "kq163", "kq165", "kq166", "kq167", "kq168", "kq169", "kq170", "kq171", "kq172", "kq173", "kq174", "kq175", "kq176", "kq177", "kq178", "kq179", "kq180", "kq181", "kq182", "kq183", "kq184"],
+    rulingIds: ["sk1800", "sk1801", "sk1802", "sk1803", "sk1804", "ks48", "ks50", "ks51", "ks52", "ks53", "ks54", "ks55", "ks56", "ks57", "ks58", "ks59", "ks60", "ks61", "ks62", "ks63", "ks64", "kq145", "kq146", "kq147", "kq148", "kq149", "kq150", "kq151", "kq152", "kq153", "kq154", "kq155", "kq156", "kq157", "kq158", "kq159", "kq160", "kq161", "kq162", "kq163", "kq165", "kq166", "kq167", "kq168", "kq169", "kq170", "kq171", "kq172", "kq173", "kq174", "kq175", "kq176", "kq177", "kq178", "kq179", "kq180", "kq181", "kq182", "kq183", "kq184"],
     relatedTopicIds: ["khumsmaunah", "khumscapital", "khumsyear"],
     glossaryIds: ["khums"],
     lastSourceCheck: "2026-10-09",
@@ -815,7 +815,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Dowry, inherited property, maintenance, blood money, endowments, pensions, bonuses and insurance payments, and what each marja' says about them."
     ),
-    rulingIds: ["sk1771", "sk1772", "kq185", "kq186", "kq187", "kq188", "kq189", "kq190", "kq191", "kq192", "kq193", "kq194", "kq195", "kq196", "kq197", "kq198", "kq199", "kq200", "kq201", "kq202", "kq203", "kq204", "kq207", "kq208", "kq209", "kq210", "kq211", "kq212", "kq213", "kq214", "kq215", "kq216", "kq217", "kq218", "kq219", "kq220", "kq221", "kq222", "kq223"],
+    rulingIds: ["sk1771", "sk1772", "ks65", "ks67", "kq185", "kq186", "kq187", "kq188", "kq189", "kq190", "kq191", "kq192", "kq193", "kq194", "kq195", "kq196", "kq197", "kq198", "kq199", "kq200", "kq201", "kq202", "kq203", "kq204", "kq207", "kq208", "kq209", "kq210", "kq211", "kq212", "kq213", "kq214", "kq215", "kq216", "kq217", "kq218", "kq219", "kq220", "kq221", "kq222", "kq223"],
     relatedTopicIds: ["khumsitems", "khumsmaunah"],
     glossaryIds: ["khums", "mashhur"],
     lastSourceCheck: "2026-10-09",
@@ -828,7 +828,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Setting the khums year, when to calculate and pay, paying early or late, in instalments, and paying with another's permission."
     ),
-    rulingIds: ["sk1782", "sk1783", "sk1784", "sk1805", "sk1806", "sk1807", "sk1808", "sk1809", "kq224", "kq225", "kq226", "kq228", "kq229", "kq230", "kq231", "kq232", "kq233", "kq234", "kq235", "kq236", "kq237", "kq239", "kq244", "kq245", "kq246", "kq247", "kq248", "kq249", "kq250", "kq251", "kq257", "kq258", "kq259", "kq260", "kq261", "kq262", "kq263", "kq264", "kq265", "kq266", "kq267", "kq268", "kq269", "kq270", "kq271"],
+    rulingIds: ["sk1782", "sk1783", "sk1784", "sk1805", "sk1806", "sk1807", "sk1808", "sk1809", "ks68", "ks69", "ks70", "ks71", "ks72", "ks73", "ks74", "kq224", "kq225", "kq226", "kq228", "kq229", "kq230", "kq231", "kq232", "kq233", "kq234", "kq235", "kq236", "kq237", "kq239", "kq244", "kq245", "kq246", "kq247", "kq248", "kq249", "kq250", "kq251", "kq257", "kq258", "kq259", "kq260", "kq261", "kq262", "kq263", "kq264", "kq265", "kq266", "kq267", "kq268", "kq269", "kq270", "kq271"],
     relatedTopicIds: ["khumsunpaid", "khumscapital", "khumsdistribution"],
     glossaryIds: ["khums"],
     lastSourceCheck: "2026-10-09",
@@ -841,7 +841,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Gold, silver, oil, salt and other mined products: when khums is due and the niṣāb, as the text states it."
     ),
-    rulingIds: ["sk1815", "sk1816", "sk1817", "sk1818", "sk1819", "sk1820", "sk1821", "sk1822", "kq83"],
+    rulingIds: ["sk1815", "sk1816", "sk1817", "sk1818", "sk1819", "sk1820", "sk1821", "sk1822", "ks24", "ks25", "ks26", "ks27", "kq83"],
     relatedTopicIds: ["khumstreasure", "khumsgems"],
     glossaryIds: ["khums", "nisab"],
     lastSourceCheck: "2026-10-09",
@@ -854,7 +854,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "What a treasure trove is, where and by whom it may be found, and the niṣāb, as the text states it."
     ),
-    rulingIds: ["sk1823", "sk1824", "sk1825", "sk1826", "sk1827", "sk1828", "sk1829"],
+    rulingIds: ["sk1823", "sk1824", "sk1825", "sk1826", "sk1827", "sk1828", "sk1829", "ks28", "ks29"],
     relatedTopicIds: ["khumsmined", "khumsgems"],
     glossaryIds: ["khums", "nisab"],
     lastSourceCheck: "2026-10-09",
@@ -880,7 +880,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Pearls, corals and other gems brought out by diving, and the amount from which khums is due, as the text states it."
     ),
-    rulingIds: ["sk1836", "sk1837", "sk1838", "sk1839", "sk1840", "sk1841", "sk1842", "sk1843", "sk1844"],
+    rulingIds: ["sk1836", "sk1837", "sk1838", "sk1839", "sk1840", "sk1841", "sk1842", "sk1843", "sk1844", "ks30", "ks31", "ks32"],
     relatedTopicIds: ["khumsmined", "khumstreasure"],
     glossaryIds: ["khums", "nukhud"],
     lastSourceCheck: "2026-10-09",
@@ -907,7 +907,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "The share of the sayyids and the share of the Imam (ʿA), who may receive khums, how much, and the role of the marja'. Where and how to pay is not given by this app: it only points to your marja's official website."
     ),
-    rulingIds: ["sk1851", "sk1852", "sk1853", "sk1854", "sk1855", "sk1856", "sk1857", "sk1858", "sk1859", "sk1860", "sk1861", "sk1862", "sk1863", "sk1864", "sk1865", "sk1866", "kq272", "kq273", "kq274", "kq275", "kq276", "kq277", "kq278", "kq279", "kq280", "kq281", "kq282", "kq283", "kq284", "kq285", "kq286", "kq287", "kq288"],
+    rulingIds: ["sk1851", "sk1852", "sk1853", "sk1854", "sk1855", "sk1856", "sk1857", "sk1858", "sk1859", "sk1860", "sk1861", "sk1862", "sk1863", "sk1864", "sk1865", "sk1866", "ks75", "ks76", "ks77", "ks78", "kq272", "kq273", "kq274", "kq275", "kq276", "kq277", "kq278", "kq279", "kq280", "kq281", "kq282", "kq283", "kq284", "kq285", "kq286", "kq287", "kq288"],
     payLink: true,
     relatedTopicIds: ["khumsyear", "khumsmisc"],
     glossaryIds: ["khums", "sahmsadat", "sahmimam", "sayyid"],
@@ -921,7 +921,7 @@ export const WAJIBAT_TOPICS: WajibatTopic[] = [
     summary: explain(
       "Khums owed by someone who has died, dealing with those who do not pay khums, partners, forgiving khums, and paying on another's behalf."
     ),
-    rulingIds: ["kq289", "kq290", "kq291", "kq292", "kq297", "kq298", "kq299", "kq300", "kq301", "kq302", "kq303", "kq304", "kq305", "kq306", "kq307", "kq308", "kq309", "kq310", "kq311", "kq312", "kq313", "kq314"],
+    rulingIds: ["ks79", "ks80", "kq289", "kq290", "kq291", "kq292", "kq297", "kq298", "kq299", "kq300", "kq301", "kq302", "kq303", "kq304", "kq305", "kq306", "kq307", "kq308", "kq309", "kq310", "kq311", "kq312", "kq313", "kq314"],
     relatedTopicIds: ["khumsunpaid", "khumsdistribution"],
     glossaryIds: ["khums"],
     lastSourceCheck: "2026-10-09",

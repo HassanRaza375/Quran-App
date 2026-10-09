@@ -6,7 +6,7 @@ export default async function run({ browser, data }) {
   const t = checker("holds");
   const topicOf = new Map(data.topics.flatMap((tp) => tp.rulingIds.map((id) => [id, tp])));
   const pointer = data.rulings.filter((r) => r.rulings.some((e) => e.marjaId === "khamenei" && e.referToRisala));
-  t.ok(pointer.length === 21, `21 rulings held with a pointer (got ${pointer.length})`);
+  t.ok(pointer.length === 92, `92 rulings held with a pointer (21 earlier + 71 of Khums) (got ${pointer.length})`);
   const kh = await newContext(browser, { marja: "khamenei" });
   const si = await newContext(browser, { marja: "sistani" });
   const [pk, ps] = [await kh.newPage(), await si.newPage()];

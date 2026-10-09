@@ -702,6 +702,10 @@
   "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
   "status": "hidden-pending-review"
  },
+ "fitrahowngive|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
  "fitrahprayer|sistani|text|en-ur": {
   "hold": "hide-ur",
   "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
@@ -1494,16 +1498,6 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "kq100|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq100|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
  "kq101|khamenei|text|en-fa": {
   "hold": "hide-en",
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
@@ -1515,12 +1509,28 @@
   "status": "persian-decided-pending-review"
  },
  "kq102|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq102|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "kq102|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq102|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq104|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -1531,20 +1541,24 @@
   "status": "low-pending-review"
  },
  "kq105|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "kq105|khamenei|question|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq105|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq105|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq105|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq106|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -1565,12 +1579,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq109|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq109|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq109|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -1580,6 +1602,16 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
+ "kq111|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq111|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
  "kq111|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
@@ -1588,15 +1620,29 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
+ "kq112|khamenei|question|en-fa": {
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
  "kq112|khamenei|question|en-ur": {
-  "hold": "hide-ur",
-  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
-  "status": "persian-decided-pending-review"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq112|khamenei|question|ur-fa": {
-  "hold": "hide-ur",
-  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
-  "status": "persian-decided-pending-review"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq112|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -1618,19 +1664,15 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "kq113|khamenei|text|en-fa": {
+ "kq114|khamenei|question|en-fa": {
   "hold": "hide-en",
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
   "status": "persian-decided-pending-review"
  },
- "kq113|khamenei|text|en-ur": {
+ "kq114|khamenei|question|en-ur": {
   "hold": "hide-en",
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
   "status": "persian-decided-pending-review"
- },
- "kq114|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
  },
  "kq114|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -1651,14 +1693,6 @@
   "status": "persian-decided-pending-review"
  },
  "kq116|khamenei|question|ur-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq116|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq116|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -1686,113 +1720,123 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "kq119|khamenei|text|en-ur": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
  "kq119|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq11|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq11|khamenei|question|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq11|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq120|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
  },
  "kq120|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
  },
  "kq120|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq120|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq120|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq121|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq121|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq121|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq122|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq122|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq122|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq122|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq122|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq124|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq124|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq126|khamenei|question|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq126|khamenei|question|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq126|khamenei|question|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq127|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq127|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq128|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq128|khamenei|text|en-ur": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq129|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -1805,18 +1849,22 @@
   "status": "persian-decided-pending-review"
  },
  "kq12|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq12|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq130|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq131|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -1828,25 +1876,23 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "kq133|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+ "kq132|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
   "status": "persian-decided-pending-review"
  },
- "kq133|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+ "kq132|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
   "status": "persian-decided-pending-review"
  },
- "kq134|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+ "kq132|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
- "kq134|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+ "kq132|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq135|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -1869,44 +1915,48 @@
   "status": "low-pending-review"
  },
  "kq139|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq139|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq139|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq139|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq13|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq13|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq140|khamenei|text|en-fa": {
-  "note": "The English does not match the Persian, but there is no official Urdu to show instead, so the English was not hidden automatically.",
-  "status": "needs-human"
- },
- "kq141|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq141|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq142|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -1931,40 +1981,32 @@
   "status": "low-pending-review"
  },
  "kq144|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
  },
  "kq144|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
  },
  "kq144|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq144|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq144|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq145|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
  },
  "kq145|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq145|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq145|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
  },
  "kq147|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -1975,6 +2017,14 @@
   "hold": "hide-en",
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
   "status": "persian-decided-pending-review"
+ },
+ "kq148|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq148|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq14|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -1991,48 +2041,36 @@
   "status": "low-pending-review"
  },
  "kq150|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq150|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq150|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq150|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
- },
- "kq152|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq152|khamenei|text|en-ur": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq153|khamenei|question|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq153|khamenei|question|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq153|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq153|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq154|khamenei|text|en-ur": {
   "hold": "hide-ur",
@@ -2045,12 +2083,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq156|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq156|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq158|khamenei|text|en-fa": {
   "hold": "hide-en",
@@ -2170,39 +2216,71 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "kq16|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+ "kq16|khamenei|question|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
   "status": "persian-decided-pending-review"
+ },
+ "kq16|khamenei|question|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq16|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq16|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq170|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq170|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq170|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq170|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq170|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq170|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq171|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -2219,20 +2297,36 @@
   "status": "low-pending-review"
  },
  "kq172|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq172|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq172|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq172|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq176|khamenei|question|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2251,28 +2345,48 @@
   "status": "low-pending-review"
  },
  "kq177|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq177|khamenei|question|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq177|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq177|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq177|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq177|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq178|khamenei|question|en-ur": {
   "hold": "hide-ur",
@@ -2315,68 +2429,132 @@
   "status": "persian-decided-pending-review"
  },
  "kq180|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq180|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq180|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq182|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq182|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq182|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq182|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq183|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq183|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq183|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq184|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq184|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq184|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq184|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq184|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq184|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq186|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2407,12 +2585,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq190|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq190|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq191|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2427,16 +2613,28 @@
   "status": "low-pending-review"
  },
  "kq192|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq192|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq192|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq194|khamenei|question|en-ur": {
   "hold": "hide-ur",
@@ -2469,12 +2667,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq19|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq19|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq200|khamenei|question|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2509,16 +2715,28 @@
   "status": "low-pending-review"
  },
  "kq20|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq20|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq20|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq20|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2533,14 +2751,6 @@
   "status": "low-pending-review"
  },
  "kq211|khamenei|text|ur-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq214|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq214|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -2560,6 +2770,16 @@
   "status": "persian-decided-pending-review"
  },
  "kq215|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq218|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq218|khamenei|question|en-ur": {
   "hold": "hide-en",
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
   "status": "persian-decided-pending-review"
@@ -2595,16 +2815,28 @@
   "status": "persian-decided-pending-review"
  },
  "kq222|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq222|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq222|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq223|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2635,64 +2867,120 @@
   "status": "persian-decided-pending-review"
  },
  "kq225|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq225|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq225|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq229|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq229|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq229|khamenei|question|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq229|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq229|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq22|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq22|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq22|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq233|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq233|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq233|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq233|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq233|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2709,12 +2997,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq235|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq235|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq235|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2795,48 +3091,88 @@
   "status": "low-pending-review"
  },
  "kq243|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq243|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq244|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq244|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq244|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq244|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq245|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq245|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq245|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq248|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq248|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq249|khamenei|question|en-ur": {
   "hold": "hide-ur",
@@ -2877,12 +3213,20 @@
   "status": "low-pending-review"
  },
  "kq251|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq251|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq252|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -2953,12 +3297,20 @@
   "status": "low-pending-review"
  },
  "kq259|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq259|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq25|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -2971,12 +3323,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq260|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq260|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq261|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -3035,16 +3395,28 @@
   "status": "low-pending-review"
  },
  "kq265|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq265|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq265|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq266|khamenei|text|en-fa": {
   "hold": "hide-en",
@@ -3057,12 +3429,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq267|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq267|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq269|khamenei|question|en-ur": {
   "hold": "hide-ur",
@@ -3075,24 +3455,40 @@
   "status": "persian-decided-pending-review"
  },
  "kq271|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq271|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq271|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq271|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq271|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq272|khamenei|question|en-ur": {
   "hold": "hide-ur",
@@ -3135,12 +3531,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq279|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq279|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq27|khamenei|question|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3151,16 +3555,24 @@
   "status": "low-pending-review"
  },
  "kq282|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq282|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq282|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq283|khamenei|question|en-ur": {
   "hold": "hide-ur",
@@ -3173,60 +3585,112 @@
   "status": "persian-decided-pending-review"
  },
  "kq284|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq284|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq285|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq285|khamenei|question|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq285|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq285|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq285|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq286|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq286|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq286|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq286|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq287|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq287|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq287|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq288|khamenei|question|en-fa": {
   "note": "The English does not match the Persian, but there is no official Urdu to show instead, so the English was not hidden automatically.",
@@ -3257,20 +3721,36 @@
   "status": "persian-decided-pending-review"
  },
  "kq28|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq28|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq290|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq290|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq291|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3295,12 +3775,20 @@
   "status": "low-pending-review"
  },
  "kq293|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq293|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq293|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3331,12 +3819,20 @@
   "status": "low-pending-review"
  },
  "kq295|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq295|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq297|khamenei|text|en-fa": {
   "hold": "hide-en",
@@ -3379,28 +3875,52 @@
   "status": "low-pending-review"
  },
  "kq300|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq300|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq304|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq304|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq308|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq308|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq308|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3421,16 +3941,28 @@
   "status": "persian-decided-pending-review"
  },
  "kq31|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq31|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq31|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq31|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3465,40 +3997,76 @@
   "status": "persian-decided-pending-review"
  },
  "kq38|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq38|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq38|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq38|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq38|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq38|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq39|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq39|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq39|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq3|khamenei|question|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3519,20 +4087,36 @@
   "status": "persian-decided-pending-review"
  },
  "kq40|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq40|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq40|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq40|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq43|khamenei|text|en-fa": {
   "hold": "hide-en",
@@ -3545,12 +4129,20 @@
   "status": "persian-decided-pending-review"
  },
  "kq46|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq46|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq46|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3565,12 +4157,20 @@
   "status": "low-pending-review"
  },
  "kq48|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq48|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq48|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3604,7 +4204,7 @@
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
   "status": "persian-decided-pending-review"
  },
- "kq54|khamenei|text|en-fa": {
+ "kq54|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -3639,12 +4239,20 @@
   "status": "low-pending-review"
  },
  "kq62|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq62|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq63|khamenei|question|en-fa": {
   "hold": "hide-en",
@@ -3667,20 +4275,54 @@
   "status": "persian-decided-pending-review"
  },
  "kq66|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq66|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq66|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq66|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "kq67|khamenei|question|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq67|khamenei|question|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "kq67|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "kq67|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq68|khamenei|text|en-ur": {
   "hold": "hide-ur",
@@ -3711,24 +4353,44 @@
   "status": "low-pending-review"
  },
  "kq73|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq73|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq73|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq73|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq73|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq74|khamenei|question|en-ur": {
   "hold": "hide-ur",
@@ -3765,20 +4427,36 @@
   "status": "low-pending-review"
  },
  "kq78|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq78|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq78|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq78|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq81|khamenei|question|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -3809,50 +4487,70 @@
   "status": "persian-decided-pending-review"
  },
  "kq82|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq82|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq82|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq83|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq83|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq83|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq83|khamenei|text|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq83|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq84|khamenei|question|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq84|khamenei|question|ur-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq84|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq84|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -3864,39 +4562,19 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "kq85|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "kq85|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
  "kq88|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq88|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "kq89|khamenei|question|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq89|khamenei|question|en-ur": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq89|khamenei|text|en-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "kq89|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -3920,10 +4598,6 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "kq93|khamenei|text|en-ur": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
  "kq93|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
@@ -3938,7 +4612,7 @@
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
   "status": "persian-decided-pending-review"
  },
- "kq94|khamenei|text|en-ur": {
+ "kq94|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -3947,64 +4621,318 @@
   "status": "low-pending-review"
  },
  "kq96|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq96|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq96|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq96|khamenei|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
  "kq96|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq97|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq97|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq97|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq97|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq98|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq98|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq9|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq9|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq9|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "kq9|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "ks10|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks10|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks11|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks11|khamenei|text|ur-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks12|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks12|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks14|khamenei|text|en-fa": {
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "ks14|khamenei|text|en-ur": {
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "ks14|khamenei|text|ur-fa": {
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "ks15|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks15|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks19|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks19|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks26|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks26|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks36|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks36|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks38|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks38|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks39|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks39|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks3|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks3|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks44|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks44|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks50|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks50|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks53|khamenei|text|en-fa": {
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "ks53|khamenei|text|ur-fa": {
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
+ },
+ "ks56|khamenei|text|en-fa": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks56|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "ks5|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks5|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks70|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks70|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks78|khamenei|text|en-fa": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks78|khamenei|text|en-ur": {
+  "hold": "hide-en",
+  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks7|khamenei|text|en-ur": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
+ },
+ "ks7|khamenei|text|ur-fa": {
+  "hold": "hide-ur",
+  "note": "The English matches the Persian in numbers and negation; the Urdu does not, so the Urdu is hidden.",
+  "status": "persian-decided-pending-review"
  },
  "kurrdefinition|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -5568,6 +6496,10 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
+ "sawmqadadelayignorance|khamenei|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
  "sawmqadadelayignorance|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
@@ -5681,7 +6613,7 @@
   "note": "Sistani: the English 4th edition wins (P6); the Urdu is hidden until a person checks it.",
   "status": "hidden-pending-review"
  },
- "sawmqadatravel|khamenei|text|en-ur": {
+ "sawmqadatravel|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -5694,10 +6626,6 @@
   "status": "low-pending-review"
  },
  "sawmqadaunconscious|khamenei|text|ur-fa": {
-  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
-  "status": "low-pending-review"
- },
- "sawmqadaweak|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -6005,14 +6933,14 @@
   "status": "low-pending-review"
  },
  "sk1773|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "sk1773|khamenei|question|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
- "sk1773|khamenei|text|en-ur": {
+ "sk1773|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -6034,7 +6962,7 @@
   "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
   "status": "persian-decided-pending-review"
  },
- "sk1784|khamenei|text|en-ur": {
+ "sk1784|khamenei|text|en-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
@@ -6060,15 +6988,9 @@
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },
- "sk1793|khamenei|question|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
  "sk1793|khamenei|question|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
  },
  "sk1793|khamenei|question|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -6081,16 +7003,6 @@
  "sk1793|khamenei|text|ur-fa": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
- },
- "sk1794|khamenei|text|en-fa": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
- },
- "sk1794|khamenei|text|en-ur": {
-  "hold": "hide-en",
-  "note": "The Urdu matches the Persian in numbers and negation; the English does not, so the English is hidden.",
-  "status": "persian-decided-pending-review"
  },
  "sk1794|sistani|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
@@ -6208,20 +7120,36 @@
   "status": "hidden-pending-review"
  },
  "sk1833|khamenei|question|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sk1833|khamenei|question|en-ur": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sk1833|khamenei|text|en-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sk1833|khamenei|text|ur-fa": {
-  "note": "Neither the English nor the Urdu matches the Persian.",
-  "status": "needs-human"
+  "date": "2026-10-09",
+  "hold": "refer",
+  "note": "Held for review (user decision, Phase 6 round 2): neither the English nor the Urdu matches the Persian after the exemption-wording extension; the card shows a pointer to his book until a person decides.",
+  "reviewer": "Syed Hassan Raza",
+  "status": "held-pending-review",
+  "was": "needs-human"
  },
  "sk1835|sistani|text|en-ur": {
   "hold": "hide-ur",
@@ -6665,6 +7593,10 @@
   "status": "low-pending-review"
  },
  "zk1877|sistani|text|en-ur": {
+  "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
+  "status": "low-pending-review"
+ },
+ "zk1879|sistani|text|en-ur": {
   "note": "Same values or same presence of negation, different count; shown as is until reviewed.",
   "status": "low-pending-review"
  },

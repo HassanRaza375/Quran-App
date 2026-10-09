@@ -44,20 +44,38 @@ describe("Phase 6: Khums and Zakat topics", () => {
 describe("Phase 6: Khamenei's Rulings of Khums", () => {
   const entries = inTopics(KHUMS.topicIds).flatMap((r) => r.rulings.filter((e) => e.marjaId === "khamenei").map((e) => ({ r, e })));
 
-  it("cites every entry as 'Q n' of The Rulings of Khums, once, with the Persian original", () => {
-    const refs = entries.map(({ e }) => num(e.source.reference));
+  const qa = entries.filter(({ e }) => /^Q \d+$/.test(e.source.reference));
+  const statements = entries.filter(({ e }) => !/^Q \d+$/.test(e.source.reference));
+
+  it("cites every Q&A entry as 'Q n' of The Rulings of Khums, once, with the Persian original", () => {
+    const refs = qa.map(({ e }) => num(e.source.reference));
     expect(new Set(refs).size).toBe(refs.length);
-    for (const { e } of entries) {
+    for (const { e } of qa) {
       expect(e.source.title).toBe("The Rulings of Khums");
-      expect(e.source.reference).toMatch(/^Q \d+$/);
       expect(e.persianSource?.reference).toBe(`سؤال ${num(e.source.reference)}`);
       expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\//);
     }
-    expect(refs.length).toBeGreaterThan(290);
+    expect(refs.length).toBe(305);
   });
 
-  it("pairs the official Urdu by the same question number", () => {
-    for (const { e } of entries) if (e.urSource) expect(num(e.urSource.reference)).toBe(num(e.source.reference));
+  it("pairs the official Urdu of a Q&A entry by the same question number", () => {
+    for (const { e } of qa) if (e.urSource) expect(num(e.urSource.reference)).toBe(num(e.source.reference));
+  });
+
+  it("adds the book's unnumbered statements, cited by section and paragraph, and pairs Urdu and Persian only when all three editions line up", () => {
+    expect(statements.length).toBe(78);
+    let triple = 0;
+    for (const { e } of statements) {
+      expect(e.source.reference).toMatch(/^Para\. \d+, /);
+      expect(e.source.url).toMatch(/^https:\/\/www\.leader\.ir\/en\/book\/261\?sn=\d+$/);
+      if (e.urSource) expect(e.persianSource, e.source.reference).toBeTruthy(); // an Urdu text is never shown without its Persian check
+      if (e.persianSource) {
+        triple++; // all three editions lined up (the Urdu may then be hidden by a display hold)
+        expect(e.persianSource.reference).toMatch(/^بند \d+، /);
+        if (e.urSource) expect(e.urSource.reference).toMatch(/^فقرہ \d+، /);
+      } else expect(e.urduNote).toMatch(/only the English is shown/);
+    }
+    expect(triple).toBe(26);
   });
 
   it("shows a question only he answers to his followers alone", () => {

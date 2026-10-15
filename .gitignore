@@ -29,3 +29,10 @@ scripts/wajibat/__pycache__/
 
 # review pack: the HTML is an intermediate for the PDF
 review_pack/*.html
+
+# Rebuild (revamp-quran/): build output and test artefacts
+revamp-quran/.output/
+revamp-quran/.nuxt/
+revamp-quran/.data/
+revamp-quran/playwright-report/
+revamp-quran/test-results/

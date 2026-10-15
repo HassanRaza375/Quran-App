@@ -2,5 +2,6 @@
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
-  // Your custom configs here
+  // The rebuild lives in its own folder with its own toolchain; the legacy app must not lint it.
+  { ignores: ['revamp-quran/**'] },
 )

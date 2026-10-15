@@ -164,7 +164,7 @@ app/
 - **Reciter selection is resolved by name, not URL.** A picked reciter's audio URL only makes sense
   for the surah it was picked on; every consumer re-resolves the correct URL for the *current* surah
   by matching the reciter's name against that surah's own audio list.
-- **Fiqh-aware content, not fiqh-primary.** Sunni/Jaʿfari is a user setting (`prayer.fiqh`), not a
+- **Fiqh-aware content, not fiqh-primary.** Sunni/Jaʿfari is a user setting (`prayerFiqh`, a raw string), not a
   build-time app identity — prayer calculation, the Islamic-events dataset, and (eventually) tafsir
   selection all filter/tag by it rather than hard-coding one tradition as default.
 

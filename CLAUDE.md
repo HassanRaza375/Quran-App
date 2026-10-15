@@ -73,7 +73,7 @@ dev server and driving the feature in a real browser instead.
   player is mounted once, in the layout). Always pass `{type, surahNo, title, subtitle}` into
   `play()`. Reciter URLs are resolved by matching reciter *name* against the current surah's own
   audio list, not stored/reused directly — a reciter's URL from one surah doesn't apply to another.
-- **Fiqh-awareness**: Sunni/Jaʿfari (`prayer.fiqh`) is a user setting, not a build-time identity.
+- **Fiqh-awareness**: Sunni/Jaʿfari (localStorage key `prayerFiqh`, a raw string `sunni` | `jafari`, not JSON) is a user setting, not a build-time identity.
   Prayer calculation and the Islamic-events dataset (`app/utils/`) both filter by it — new
   fiqh-sensitive content should follow the same filter-by-setting pattern, not hard-code one
   tradition.

@@ -9,5 +9,7 @@ export default defineConfig({
   },
   test: {
     include: ["tests/**/*.test.ts"],
+    // The rebuild (revamp-quran/) has its own Vitest setup.
+    exclude: ["revamp-quran/**", "node_modules/**"],
   },
 });
